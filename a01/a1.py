@@ -58,9 +58,15 @@ def main(url):
 
         try:
             r = requests.get(uri)
-            if 'content-type' in r.headers and r.headers['content-type'] == 'application/pdf':
+            if 'Content-Type' in r.headers and r.headers['Content-Type'] == 'application/pdf':
                 if r.status_code == 200:
-                    all_links.append((uri, r.headers['content-length']))
+                    # ensure server provides Content-Length
+                    try:
+                        all_links.append((uri, r.headers['Content-Length']))
+                    except KeyError:
+                        # make Content-Length unknown
+                        r.headers['Content-Length'] = '???'
+                        all_links.append((uri, r.headers['Content-Length']))
         except requests.exceptions.SSLError:
             print('Couldn\'t open: %s. URL requires authentication.' % uri)
         except requests.exceptions.ConnectionError:
@@ -73,8 +79,12 @@ def main(url):
     all_links = list(pdf_links)
     if len(all_links) > 0:
         for i in range(len(pdf_links)):
-            print('%s, File Size: %s bytes' % (all_links[i][0],
-                                              locale.format("%d", int(all_links[i][1]), grouping=True)))
+            if all_links[i][1] == '???':
+                # don't format Content-Lenght
+                print('%s, File Size: %s bytes' % (all_links[i][0], all_links[i][1]))
+            else:
+                print('%s, File Size: %s bytes' % (all_links[i][0],
+                                                  locale.format("%d", int(all_links[i][1]), grouping=True)))
     else:
         print('No PDFs links for above URI.')
 
