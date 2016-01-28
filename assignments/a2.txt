@@ -1,0 +1,51 @@
+CS 432/532 Introduction to Web Science
+Spring 2016
+http://phonedude.github.io/cs532-s16/
+
+Assignment #2
+Due: 11:59pm 2016-02-11
+
+1.  Write a Python program that extracts 1000 unique links from
+Twitter.  You might want to take a look at:
+
+http://thomassileo.com/blog/2013/01/25/using-twitter-rest-api-v1-dot-1-with-python/
+
+But there are many other similar resources available on the web.  Note
+that only Twitter API 1.1 is currently available; version 1 code will
+no longer work.
+
+Also note that you need to verify that the final target URI (i.e., the
+one that responds with a 200) is unique.  You could have many different
+shortened URIs for www.cnn.com (t.co, bit.ly, goo.gl, etc.).
+
+You might want to use the search feature to find URIs, or you can
+pull them from the feed of someone famous (e.g., Tim O'Reilly).
+
+Hold on to this collection -- we'll use it later throughout the semester.
+
+2.  Download the TimeMaps for each of the target URIs.  We'll use the ODU 
+Memento Aggregator, so for example:
+
+URI-R = http://www.cs.odu.edu/
+
+URI-T = http://mementoproxy.cs.odu.edu/aggr/timemap/link/1/http://www.cs.odu.edu/
+
+Create a histogram* of URIs vs. number of Mementos (as computed from
+the TimeMaps).  For example, 100 URIs with 0 Mementos, 300 URIs
+with 1 Memento, 400 URIs with 2 Mementos, etc.
+
+* = https://en.wikipedia.org/wiki/Histogram
+
+3.  Estimate the age of each of the 1000 URIs using the "Carbon Date" tool:
+
+http://ws-dl.blogspot.com/2014/11/2014-11-14-carbon-dating-web-version-20.html
+
+Note: you'll should download the library and run it locally; don't
+try to use the web service.
+
+For URIs that have > 0 Mementos and an estimated creation date,
+create a graph with age (in days) on one axis and number of mementos
+on the other.  
+
+Not all URIs will have Mementos, and not all URIs will have an estimated
+creation date.  State how many fall into either categories. 
