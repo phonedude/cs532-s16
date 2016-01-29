@@ -1,0 +1,199 @@
+Part 1:
+C:\Users\John>curl -i -X POST -d "name=John" http://www.example.com
+HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Cache-Control: max-age=604800
+Content-Type: text/html
+Date: Wed, 27 Jan 2016 22:01:29 GMT
+Etag: "359670651"
+Expires: Wed, 03 Feb 2016 22:01:29 GMT
+Last-Modified: Fri, 09 Aug 2013 23:54:35 GMT
+Server: EOS (lax004/45C0)
+Content-Length: 1270
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif
+;
+
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 50px;
+        background-color: #fff;
+        border-radius: 1em;
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        body {
+            background-color: #fff;
+        }
+        div {
+            width: auto;
+            margin: 0 auto;
+            border-radius: 0;
+            padding: 1em;
+        }
+    }
+    </style>
+</head>
+
+<body>
+<div>
+    <h1>Example Domain</h1>
+    <p>This domain is established to be used for illustrative examples in docume
+nts. You may use this
+    domain in examples without prior coordination or asking for permission.</p>
+    <p><a href="http://www.iana.org/domains/example">More information...</a></p>
+
+</div>
+</body>
+</html>
+
+
+
+Part 2
+#author John Crouch, 00570132
+from bs4 import BeautifulSoup
+import urllib2
+import sys
+#grabs the website url
+url = sys.argv[1]
+# print temp
+def findPDF(temp):
+	y = []
+	request = urllib2.Request(temp)
+	# print request
+	# request.add_header('User-agent', 'Mozilla 5.10')
+	try:
+		response = urllib2.urlopen(request)
+	except urllib2.URLError, e: #HTTPError, e:
+		print e.reason
+	except ValueError:
+		return y
+	
+	x = []
+	s = BeautifulSoup(response.read())
+	response.close()
+	for links in s.find_all('a'):
+		x.append(links.get('href'))
+	
+	#while loop runs through the list of links
+	#grabs any of type pdf
+	i = 0
+	while i < len(x):
+		t = x[i]
+		# print t
+		if t == "/":
+			break
+		a = len(t)
+		b = a - 5
+		a = a - 4 
+		try:
+			req = urllib2.Request(t)
+			r = urllib2.urlopen(req)
+			if r.geturl() == url:
+				i = i + 1
+				t = x[i]
+				# print t
+				req = urllib2.Request(t)
+				r = urllib2.urlopen(req)
+		except urllib2.URLError, e: 
+			print e.reason
+		except urllib2.HTTPError, e:
+			print e.reason
+		except ValueError:
+			pass
+		# if "http:" in t:
+		if "/" in t:
+			if t == url:
+				return y
+			if t == temp:
+				return y
+			# if r.getcode() > 200:
+				# print r.getcode()
+				# print t
+			if "pdf" in r.geturl():
+				# r = urllib2.urlopen(t)
+				# print r.getcode()
+				c = t + '   Size: ', len(r.read())
+				y.append(c)
+			elif "pdf" in t:
+				# r = urllib2.urlopen(t)
+				# print r.getcode()
+				c = t + '   Size: ', len(r.read())
+				y.append(c)
+			elif t[b:] == ".html":
+				pass
+			else :
+				# print t
+				y = y + findPDF(t)
+		else:
+			break
+		i = i + 1
+	return y
+
+z = findPDF(url)
+for d in z:
+	print d
+
+1)
+C:\Users\John\Documents\ODU\Spring 2016\CS 432 (Web Science)\Assignment_1_JAC>py
+thon Assignment_1.py http://www.cs.odu.edu/~mln/teaching/cs532-s16/test/pdfs.htm
+l
+(u'http://www.cs.odu.edu/~mln/pubs/ht-2015/hypertext-2015-temporal-violations.pd
+f   Size: ', 2184076)
+(u'http://www.cs.odu.edu/~mln/pubs/tpdl-2015/tpdl-2015-annotations.pdf   Size: '
+, 622981)
+(u'http://arxiv.org/pdf/1512.06195   Size: ', 1748961)
+(u'http://www.cs.odu.edu/~mln/pubs/tpdl-2015/tpdl-2015-off-topic.pdf   Size: ',
+4308768)
+(u'http://www.cs.odu.edu/~mln/pubs/tpdl-2015/tpdl-2015-stories.pdf   Size: ', 12
+74604)
+(u'http://www.cs.odu.edu/~mln/pubs/tpdl-2015/tpdl-2015-profiling.pdf   Size: ',
+639001)
+(u'http://bit.ly/1ZDatNK   Size: ', 720476)
+(u'http://www.cs.odu.edu/~mln/pubs/jcdl-2015/jcdl-2015-mink.pdf   Size: ', 12546
+05)
+(u'http://www.cs.odu.edu/~mln/pubs/jcdl-2015/jcdl-2015-arabic-sites.pdf   Size:
+', 709420)
+(u'http://www.cs.odu.edu/~mln/pubs/jcdl-2015/jcdl-2015-dictionary.pdf   Size: ',
+ 2350603)
+
+
+2)
+C:\Users\John\Documents\ODU\Spring 2016\CS 432 (Web Science)\Assignment_1_JAC>py
+thon Assignment_1.py http://www.cs.odu.edu
+(For some reason I can only get my program to work, even partially for required website)
+
+
+3)
+C:\Users\John\Documents\ODU\Spring 2016\CS 432 (Web Science)\Assignment_1_JAC>py
+thon Assignment_1.py http://www.odu.edu/life/parking-and-transportation/parking/
+map
+(Unsure why it didn't work on the pdfs for this page.)
+
+
+Part 3
+IN:P, M, O 
+SCC:C, G, B, A
+OUT:H, D
+TENDRILS: I, K, L
+TUBES:N, J
+DISCONNECTED: E, F
+	
