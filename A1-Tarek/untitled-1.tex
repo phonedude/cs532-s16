@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[procnames]{listings}
+\usepackage{color}
+\title{Assignment 1}
+\date{2016-01-27}
+\author{Tarek Fouda}
+
+\begin{document}
+  \maketitle
+\section{Introduction}
+This report mainly discusses my approach and how I implemented and solved each of the three problems assigned to me. I will be discussing every problem in a different section. This assignment is due Thursday 01/28/2016.
+
+\section{Problem 1- cURL}
+
+\subsection{Subsection}
+
+Structuring a document is easy!
+
+\subsubsection{Subsubsection}
+
+More text.
+
+\paragraph{Paragraph}
+
+Some more text.
+
+\subparagraph{Subparagraph}
+
+Even more text.
+
+\section{Problem number 2 - Python}
+\paragraph{}
+In this problem, it was required to implement a python program that takes a web page such as \href{url}{http://www.cs.odu.edu/~mln/teaching/cs532-s16/test/pdfs.html} and print out all the linksand urls in this web page that are PDFs only!
+Iimplemented a python code that takes this webpage from a user and lists all the links that exist in this specific website, but I misunderstood the requirement of this problem and instead of listing all the links that are PDFs, I listed all the URLs and then imported the FPDF library in python to write all the links in a PDF.
+\ newpage
+\begin{lstlisting}
+import urllib2
+import BeautifulSoup
+import sys
+import re
+from fpdf import FPDF
+print "Please enter the website"
+var = raw_input()
+print var
+#def process(var):
+ #  website=urllib2.urlopen(var)
+  # html=website.read()
+   #links= re.findall("((http|ftp)s>://.*?)",html)
+   #print links
+def extractingUrls(var):
+	
+    print "hi"
+    if var[0:4]!="http":
+        var="http://" + var
+    f=(urllib2.urlopen(var)).read()
+    k=re.findall('(src|href)="(\S+)"',f)	
+    k=set(k)
+    print "The Links are:"
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font('Arial', 'B', 10)	
+    for x in k:
+        if len(x[1])>2:
+            print x[1]
+            #response = urllib2.urlopen(var)
+            #print response.info()
+            #print "The size is: ", response.code
+            pdf.write(16,x[1]+'and the size of this link equals ' ,'10')
+            pdf.write(16,'\n','10')
+    pdf.output('tuto1.pdf', 'F')			
+extractingUrls(var)
+\end{lstlisting}
+
+\end{document}
