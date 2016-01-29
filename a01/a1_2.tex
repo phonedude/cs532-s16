@@ -64,41 +64,69 @@
 57	 \hspace*{5mm}        \hspace*{10mm}\# print(uri)\\
 58	 \hspace*{5mm}\\
 59	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{try}:\\
-60	 \hspace*{5mm}            \hspace*{15mm}r = requests.get(uri)\\
-61	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{if} 'content-type' in r.headers and r.headers['content-type'] == 'application/pdf':\\
+60	 \hspace*{5mm}            \hspace*{15mm}r = requests.head(uri)\\
+61	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{if} 'Content-Type' in r.headers and r.headers['Content-Type'] == 'application/pdf':\\
 62	 \hspace*{5mm}                \hspace*{20mm}\textcolor{blue}{if} r.status\_code == 200:\\
-63	 \hspace*{5mm}                    \hspace*{25mm}all\_links.append((uri, r.headers['content-length']))\\
-64	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{except} requests.exceptions.SSLError:\\
-65	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{print}('\textcolor{red}{Couldn$\backslash$'t open: \%s. URL requires authentication}.' \% uri)\\
-66	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{except} requests.exceptions.ConnectionError:\\
-67	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{print}('\textcolor{red}{Couldn$\backslash$'t open: \%s. Connection refused}.' \% uri)\\
-68	 \hspace*{5mm}\\
-69	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('$\backslash$n$\backslash$nList of all PDFs Links:')\\
-70	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('-' * len('List of all PDFs Links'))\\
-71	 \hspace*{5mm}\\
-72	 \hspace*{5mm}    \hspace*{5mm}pdf\_links = set(all\_links)\\
-73	 \hspace*{5mm}    \hspace*{5mm}all\_links = list(pdf\_links)\\
-74	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{if} len(all\_links) $>$ 0:\\
-75	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{for} i in range(len(pdf\_links)):\\
-76	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{print}('\%s, File Size: \%s bytes' \% (all\_links[i][0],\\
-77	 \hspace*{5mm}                                              \hspace*{57.5mm}locale.format("\%d", int(all\_links[i][1]), grouping=True)))\\
-78	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{else}:\\
-79	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{print}('No PDFs links for above URI.')\\
-80	 \hspace*{5mm}\\
-81	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('$\backslash$nEnd Time:  \hspace*{2.5mm}\%s' \% strftime("\%a,  \hspace*{2.5mm}\%b \%d, \%Y at \%H:\%M:\%S", localtime()))\\
-82	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('Execution Time: \%.2f seconds' \% (time()-start))\\
-83	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{return}\\
-84	 \hspace*{5mm}\\
-85	 \hspace*{5mm}\textcolor{blue}{if} \_\_name\_\_ == '\_\_main\_\_':\\
-86	 \hspace*{5mm}    \hspace*{5mm}\# checks for argument\\
-87	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{if} len(sys.argv) $!$= 2:\\
-88	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{print}('\textcolor{red}{Please, provide url$\backslash$nUsage: python3 a1.py [url]}')\\
-89	 \hspace*{5mm}        \hspace*{10mm}sys.exit(-1)\\
-90	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{if} not validators.url(sys.argv[1]):\\
-91	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{print}('\textcolor{red}{URL is invalid, please correct url and try again}')\\
-92	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{sys.exit}(1)\\
-93	 \hspace*{5mm}\\
-94	 \hspace*{5mm}    \hspace*{5mm}\# call main\\
-95	 \hspace*{5mm}    \hspace*{5mm}main(sys.argv[1])\\
-96	 \hspace*{5mm}\\
-97	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{sys.exit}(0)\\
+63	 \hspace*{5mm}                    \hspace*{25mm}\# ensure server provides Content-Length\\
+64	 \hspace*{5mm}                    \hspace*{25mm}\textcolor{blue}{try}:\\
+65	 \hspace*{5mm}                        \hspace*{30mm}all\_links.append((uri, r.headers['Content-Length']))\\
+66	 \hspace*{5mm}                    \hspace*{25mm}\textcolor{blue}{except} KeyError:\\
+67	 \hspace*{5mm}                        \hspace*{30mm}\# make Content-Length unknown\\
+68	 \hspace*{5mm}                        \hspace*{30mm}r.headers['Content-Length'] = '???'\\
+69	 \hspace*{5mm}                        \hspace*{30mm}all\_links.append((uri, r.headers['Content-Length']))\\
+70	 \hspace*{5mm}                \hspace*{20mm}\textcolor{blue}{elif} 'location' in r.headers and (r.status\_code == 301 or r.status\_code == 302):\\
+71	 \hspace*{5mm}                    \hspace*{25mm}counter = 1\\
+72	 \hspace*{5mm}                    \hspace*{25mm}\textcolor{blue}{while} counter $<$ 7:\\
+73	 \hspace*{5mm}                        \hspace*{30mm}uri = r.headers['location']\\
+74	 \hspace*{5mm}                        \hspace*{30mm}r = requests.head(r.headers['location'])\\
+75	 \hspace*{5mm}                        \hspace*{30mm}\textcolor{blue}{if} 'location' in r.headers and (r.status\_code == 301 or r.status\_code == 302):\\
+76	 \hspace*{5mm}                            \hspace*{35mm}counter += 1\\
+77	 \hspace*{5mm}                        \hspace*{30mm}\textcolor{blue}{elif} r.status\_code == 200:\\
+78	 \hspace*{5mm}                            \hspace*{35mm}\# ensure server provides Content-Length\\
+79	 \hspace*{5mm}                            \hspace*{35mm}\textcolor{blue}{try}:\\
+80	 \hspace*{5mm}                                \hspace*{40mm}all\_links.append((uri, r.headers['Content-Length']))\\
+81	 \hspace*{5mm}                            \hspace*{35mm}e\textcolor{blue}{except} KeyError:\\
+82	 \hspace*{5mm}                                \hspace*{40mm}\# make Content-Length unknown\\
+83	 \hspace*{5mm}                                \hspace*{40mm}r.headers['Content-Length'] = '???'\\
+84	 \hspace*{5mm}                                \hspace*{40mm}all\_links.append((uri, r.headers['Content-Length']))\\
+85	 \hspace*{5mm}                        \hspace*{30mm}\textcolor{blue}{else}:\\
+86	 \hspace*{5mm}                            \hspace*{35mm}break\\
+87	 \hspace*{5mm}\\
+88	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{except} requests.exceptions.SSLError:\\
+89	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{print}('\textcolor{red}{Couldn$\backslash$'t open: \%s. URL requires authentication}.' \% uri)\\
+90	 \hspace*{5mm}        \hspace*{10mm}except requests.exceptions.ConnectionError:\\
+91	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{print}('\textcolor{red}{Couldn$\backslash$'t open: \%s. Connection refused}.' \% uri)\\
+92	 \hspace*{5mm}\\
+93	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('$\backslash$n$\backslash$nList of all PDFs Links:')\\
+94	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('-' * len('List of all PDFs Links'))\\
+95	 \hspace*{5mm}\\
+96	 \hspace*{5mm}    \hspace*{5mm}pdf\_links = set(all\_links)\\
+97	 \hspace*{5mm}    \hspace*{5mm}all\_links = list(pdf\_links)\\
+98	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{if} len(all\_links) $>$ 0:\\
+99	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{for} i in range(len(pdf\_links)):\\
+100	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{if} all\_links[i][1] == '???':\\
+101	 \hspace*{5mm}                \hspace*{20mm}\# don't format Content-Lenght\\
+102	 \hspace*{5mm}                \hspace*{20mm}\textcolor{blue}{print}('\%s, File Size: \%s bytes' \% (all\_links[i][0], all\_links[i][1]))\\
+103	 \hspace*{5mm}            \hspace*{15mm}\textcolor{blue}{else}:\\
+104	 \hspace*{5mm}                \hspace*{20mm}\textcolor{blue}{print}('\%s, File Size: \%s bytes' \% (all\_links[i][0],\\
+105	 \hspace*{5mm}                                                  \hspace*{62.5mm}locale.format("\%d", int(all\_links[i][1]), grouping=True)))\\
+106	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{else}:\\
+107	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{print}('No PDFs links for above URI.')\\
+108	 \hspace*{5mm}\\
+109	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('$\backslash$nEnd Time:  \hspace*{2.5mm}\%s' \% strftime("\%a,  \hspace*{2.5mm}\%b \%d, \%Y at \%H:\%M:\%S", localtime()))\\
+110	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{print}('Execution Time: \%.2f seconds' \% (time()-start))\\
+111	 \hspace*{5mm}    \hspace*{5mm}return\\
+112	 \hspace*{5mm}\\
+113	 \hspace*{5mm}\textcolor{blue}{if} \_\_name\_\_ == '\_\_main\_\_':\\
+114	 \hspace*{5mm}    \hspace*{5mm}\# checks for argument\\
+115	 \hspace*{5mm}    \hspace*{5mm}if len(sys.argv) $!$= 2:\\
+116	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{print}('\textcolor{red}{Please, provide url$\backslash$nUsage: python3 a1.py [url]}')\\
+117	 \hspace*{5mm}        \hspace*{10mm}sys.exit(-1)\\
+118	 \hspace*{5mm}    \hspace*{5mm}\textcolor{blue}{if} not validators.url(sys.argv[1]):\\
+119	 \hspace*{5mm}        \hspace*{10mm}\textcolor{blue}{print}('\textcolor{blue}{URL is invalid, please correct url and try again}')\\
+120	 \hspace*{5mm}        \hspace*{10mm}sys.exit(1)\\
+121	 \hspace*{5mm}\\
+122	 \hspace*{5mm}    \hspace*{5mm}\# call main\\
+123	 \hspace*{5mm}    \hspace*{5mm}main(sys.argv[1])\\
+124	 \hspace*{5mm}\\
+125	 \hspace*{5mm}    \hspace*{5mm}sys.exit(0)\\

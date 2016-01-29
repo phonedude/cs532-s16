@@ -146,7 +146,7 @@
 %----------------------------------------------------------------------------------------
 %	EMBEDDED FILE
 %----------------------------------------------------------------------------------------
-\embeddedfile{a1py}{../a1.py}
+\embeddedfile{a1py}{../a1_v1.1.py}
 \embeddedfile{a1html}{../a1.html}
 \embeddedfile{a1php}{../a1.php}
 %----------------------------------------------------------------------------------------
@@ -229,28 +229,33 @@ Write a Python program that:
      needs to be: \\
      http://www.cs.odu.edu/~mln/teaching/cs532-s16/test/pdfs.html\\
 \\
-Python program below (\textbf{\textit{a1.py}}) is attached to this file:\\
+Python program below (\textbf{\textit{a1\_v1.1.py}}) is attached to this file:\\
 \import{./}{a1_2.tex}
 \end{enumerate}
-\vspace*{5mm}
+In the previous version of \textit{a1.py} line \textbf{60} had the statement $r = requests.get(uri)$. This was causing object $r$ to behave as web-browser deal with re-direction. All URIs were getting STATUS 200 regardless if the URI was getting re-directed. Figure 2 shows all resources pointing to a PDF application, including the ones with STATUS CODE 301 or 302. After correcting line \textbf{60} with the statement $r = requests.get(uri)$ the code was able to obtain all redirect, but after running code for required URI: url{http://www.cs.odu.edu/~mln/teaching/cs532-s16/test/pdfs.htm}, the number of resources appeared to change. See figure 1.\\
+\\
 Below is the result of testing \textit{a1.py} on 3 different URIs: \\
 \begin{figure}[!htb]
-\caption{Test of \textit{a1.py} at \url{http://www.cs.odu.edu/\string~mln/teaching/cs532-s16/test/pdfs.html} }
-\hspace*{-10mm}\includegraphics[scale=.5]{images/cs-532S16_pdf.png}
+\caption{Test of \textit{a1\_v1.1.py} at \url{http://www.cs.odu.edu/\string~mln/teaching/cs532-s16/test/pdfs.html} with updated code}
+\hspace*{-10mm}\includegraphics[scale=.5]{images/cs-532S16_pdf_New.png}
 \end{figure}
 \newpage
+\begin{figure}[!htb]
+\caption{Test of \textit{a1.py} at \url{http://www.cs.odu.edu/\string~mln/teaching/cs532-s16/test/pdfs.html} with original code}
+\hspace*{-10mm}\includegraphics[scale=.5]{images/cs-532S16_pdf.png}
+\end{figure}
 \begin{figure}[!htb]
 \caption{Test of \textit{a1.py} at \url{http://www.cs.odu.edu/} }
 \hspace*{-10mm}\includegraphics[scale=.5]{images/cs_odu_pdf.png}
 \end{figure}
 
-\vspace*{10mm}
-\begin{figure}[!htb]
+\newpage
+\begin{figure}[!h]
 \caption{Test of \textit{a1.py} at \url{http://www.vbschools.com/curriculum/gifted/} }
 \hspace*{-10mm}\includegraphics[scale=.5]{images/vs_schools_gifted_pdf.png}
 \end{figure}
 \end{homeworkProblem}
-\pagebreak
+\newpage
 %----------------------------------------------------------------------------------------
 %	Question 3
 %----------------------------------------------------------------------------------------
