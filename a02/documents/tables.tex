@@ -55,7 +55,7 @@ No-URI & Mementos\\
 \begin{table}[!htbp]
 	\caption{Age and Memento Data for 1000 URIs Extracted from Twitter} \label{tab:table2}
 	\small
-	\center
+	\begin{center}
 	\vspace{-5mm}
 	\begin{minipage}{0.25\textwidth}
 		\begin{tabular}{|l | l|}
@@ -222,23 +222,23 @@ No-URI & Mementos\\
 			\hline
 		\end{tabular}
 	\end{minipage}	
-	\caption*{\scriptsize Histogram data was generated on 02/04/2016 utilizing timeMaps from
-	\url{http://mementoproxy.cs.odu.edu/aggr/timemap/link/1/} concatenated to the URIs contained in the
-	 attached file \textit{linkfiles.txt}. Any particular tuple (No-URI, Memento) represents number of
-	 URIs that have a specific number of mementos. For example the first tuple translate that from our 1,000 URIs sample 850 of them had 0 mementos. }
+	\caption*{\scriptsize The Age in days for all URIs were calculated on 02/05/2016 utilizing the Carbon-Dating tool found at 
+	\url{http://ws-dl.blogspot.com/2014/11/2014-11-14-carbon-dating-web-version-20.html }. The same methodology utilized on Table \ref{tab:table2}
+	 to find mementos count was utilize here to find Mementos Qty.}
+	 \end{center}
 \end{table}
 %----------------------------------------------------------------------------------------
 %	Table 3
 %----------------------------------------------------------------------------------------
 \newpage
 \begin{table}[!htbp]
-	\caption{Data Grouped by Age and Memento from Table-\ref{tab:table2} \label{tab:table3}}
+	\caption{Data Grouped by Age and Memento from Table \ref{tab:table2} \label{tab:table3}}
 	\small
 	\center
 	\begin{minipage}{0.4\textwidth}
 		\begin{tabular}{|l | l| l|}
 			\hline
-			\multicolumn{1}{|p{10mm}|}{\centering Age\\(days)} & \multicolumn{1}{p{15mm}|}{\centering Memento\\Qty} & \multicolumn{1}{|p{10mm}|}{Freq}\\
+			\multicolumn{1}{|p{10mm}|}{\centering Age\\(days)} & \multicolumn{1}{p{15mm}|}{\centering Memento\\Qty} & \multicolumn{1}{|p{10mm}|}{\centering Freq}\\
 			\hline
 			2 & 1 & 12\\
 			2 & 2 & 8\\
@@ -283,7 +283,7 @@ No-URI & Mementos\\
 	\begin{minipage}{0.4\textwidth}
 		\begin{tabular}{|l | l| l|}
 			\hline
-			\multicolumn{1}{|p{10mm}|}{\centering Age\\(days)} & \multicolumn{1}{p{15mm}|}{\centering Memento\\Qty} & \multicolumn{1}{p{10mm}|}{Freq}\\
+			\multicolumn{1}{|p{10mm}|}{\centering Age\\(days)} & \multicolumn{1}{p{15mm}|}{\centering Memento\\Qty} & \multicolumn{1}{p{10mm}|}{\centering Freq}\\
 			\hline	
 			568 & 3 & 1\\
 			614 & 6 & 1\\			
@@ -324,5 +324,7 @@ No-URI & Mementos\\
 			& &\\
 			\hline
 		\end{tabular}
-	\end{minipage}			
+	\end{minipage}	
+	\caption*{\scriptsize Same data set that resulted in generating the data for Table \ref{tab:table2} was utilized to generate values for this
+	table. The grouping of (Age, Memento Qty) from Table \ref{tab:table2} added a new column: Freq.}
 \end{table}

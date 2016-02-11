@@ -213,6 +213,9 @@
 \embeddedfile{Links}{../linkfiles.txt}
 \embeddedfile{Mementos}{../MementosURI.py}
 \embeddedfile{Histogram}{../histogram.r}
+\embeddedfile{URIage}{../AgeURI.py}
+\embeddedfile{AgeMemntoPlot}{../ageplot.R}
+\embeddedfile{AgeMementoPlotSize}{../ageplotsize.R}
 %----------------------------------------------------------------------------------------
 %	START OF DOCUMENT
 %----------------------------------------------------------------------------------------
@@ -240,11 +243,11 @@
 %----------------------------------------------------------------------------------------
 \section{Preface} % Custom section title
 \vspace*{10pt} % Question
-Since the course material will become more complex as the semester progresses, and looking that many solutions to new problems can be built on previous ones, I decided to create a library to access and re-utilize code.\\
+Since the course material will become more complex as the semester progresses, and knowing that many solutions to new problems can be built on previous ones, I decided to create a library to access and re-utilize code.\\
 
-Some of these functions can be really small (4-7 lines), however they solve a specific problem that is better to separate from the rest of the code.\\
+Some of these functions can be really small (4-7 lines), however they solve a specific problem, so it is better to separate them from the rest of the code.\\
 
-The location, interaction and functionality of this library, and the directory structure for this assignment is presented in more detail in the README file within the same folder hierarchic where this file was found.
+The location, interaction and functionality of this library, and the directory structure for this assignment are presented in more detail in the README file within the same folder hierarchy where this file was found.
 
 %----------------------------------------------------------------------------------------
 %	Problem 1
@@ -270,7 +273,7 @@ shortened URIs for www.cnn.com (t.co, bit.ly, goo.gl, etc.).\\
 \caption{Flowchart diagram for \textit{TwitterURI.py}}\label{fig:0}
 \center
 \includegraphics[scale=.5]{images/createlinks.pdf}
-\caption*{\scriptsize \textit{\textbf{TwitterURI.py}} is the Python program solution for problem 1. \textbf{Keywords} is a text file document which contains subject of interest, such as baseball, \enquote{Dominican, Republic}, etc..; \textbf{TwitterSeach} is an API that provides a set of tweets from Twitter given a particular key word; \textbf{Extract URI} filters any URI within the tweet; \textbf{URI set} is a unique collection of URIs; \textbf{Get keywords} just get the next keyword from the text file; and finally \textbf{\textit{linkfiles.txt}} is a collection of 1000 unique URIs.}
+\caption*{\scriptsize \textit{\textbf{TwitterURI.py}} is the Python program solution for problem 1. \textbf{keywords} is a text file document which contains subject of interest, such as baseball, \enquote{Dominican, Republic}, etc.; \textbf{TwitterSeach} is an API that provides a set of tweets from Twitter given a particular keyword; \textbf{Extract URI} filters any URI within the tweet; \textbf{URI set} is a unique collection of URIs; \textbf{Get Keyword} gets the next keyword from the text file; and finally \textbf{\textit{linkfiles.txt}} is a collection of 1000 unique URIs.}
 \end{figure}
 Since we do not know the number of tweets returned from a particular keyword search,  a file was created (\textit{keywords.txt}) as input for \textit{\textbf{TwitterURI.py}} (lines 70-75). Then, the API \textbf{TwitterSeach} in line (28-34) is used, which returns $n$ number of tweets. From the tweet object we can extract the URI using regular expression (line 44):\\
 \begin{lstlisting}[style=nonumbers]
@@ -287,10 +290,10 @@ The extracted URI is validated and placed in a set: \textit{all\_links\_set} lin
 \end{lstlisting}
 The last line of the portion code above uses a function \textit{AddURI} imported from the self developed library \textit{WEBlib.py} (a collection of functions that may have use for future applications). The function takes as a parameter a set object and a string (uri). \textit{AddURI} takes care of all details regarding request response, connection timeouts, resource redirects, etc. ONLY if final URI provides a response 200 it gets added to the set.\\
 
-Finally, if the set size is not greater or not equal than 1000 we continue to get more keywords and repeat the process, otherwise the deliverable (1000 unique URIs) is written in \textit{linkfiles.txt}.
+Finally, if the set size is not greater than or not equal to 1000, we continue to get more keywords and repeat the process, otherwise the deliverable (1000 unique URIs) is written in \textit{linkfiles.txt}.
 \subsection{1.2 Solution}
 See attached embedded file: \textbf{\textit{linkfiles.txt}}\\
-Below complete code \textit{\textbf{TwitterURI.py}} which is also attached to this document.
+Below is the entire code \textit{\textbf{TwitterURI.py}}, which is also attached to this document.
 \import{./}{TwitterURI.tex}
 \end{homeworkProblem}
 
@@ -312,9 +315,9 @@ with 1 Memento, 400 URIs with 2 Mementos, etc.\\
 * = https://en.wikipedia.org/wiki/Histogram\\
 
 \subsection{2.1 Approach}
-A Python code $<\textbf{\textit{MementosURI.py}}>$ was developed to generate the histogram data, and the Histogram Graph (Figure-\ref{fig:1}) was generated using R-code $<histogram.r>$. Both files are attached to this document. Since we will be using the data collected later on in the course, a folder \textbf{a2/mementodata} was created to hold all TimeMaps all URIs in the sample contained in $<linkfiles.txt>$ (solution to problem 1).\\
+A Python code $<\textbf{\textit{MementosURI.py}}>$ was developed to generate the histogram data, and the Histogram Graph (Figure \ref{fig:1}) was generated using R-code $<histogram.r>$. Both files are attached to this document. Since we will be using the data collected later on in the course, a folder \textbf{a2/mementodata} was created to hold all TimeMaps for URIs included in $<linkfiles.txt>$ (solution to problem 1).\\
 
-URIs in $<linkfiles.txt>$ are written sequentially and only separated by a new-line character (`$\backslash$n'). In order to make the distinction to which memento belongs to any particular URI the following file name format was established:
+URIs in $<linkfiles.txt>$ are written sequentially and only separated by a new-line character (`$\backslash$n'). In order to make a relation TimeMap-URI, the following file name format was established:
 $$date\_created.relative\_position$$
 For example if file \textit{20160204.21} is located in folder \textbf{a2/mementodata}, then it references the TimeMap for URI located in position 21 out of 1000 in file  $<linkfiles.txt>$. If \textit{20160204.1} is not found in the directory, then there is no TimeMap for the first URI in $<linkfiles.txt>$.\\
 
@@ -347,7 +350,9 @@ Given the schema to solve Problem 2, below is the pseudo-code used for its imple
 \vspace{5mm}
 The python implementation found in $<\textbf{\textit{MementosURI.py}}>$ and pseudo-code above  are very similar, and straightforward if we remove all exception handling required for the implementation. The input file $I$ is used to get the number of URIs in our sample $S$ (1000). $O$ is the output file where histogram data will be saved. $D$ contains all file names that have TimeMaps. Array $A$ contains the data that will be written as a tuple in $O$. $A$ starts as an empty array, so ONLY the indexes with values will be saved. \\
 
-Then, the only worth to explain is how find to value of index $i$ or the number of mementos in any particular file. This is performed by the function \textit{GetNumberMementos(filename)} located in our developed library \textit{WEBlib.py}:
+Different from the pseudo-code will be using instead of an array $A$ a dictionary object \cite{Lutz} in the Python implementation.\\
+
+Then, the only worthwhile explanation is how to find the value of index $i$ or the number of mementos in any particular file. This is performed by the function \textit{GetNumberMementos(filename)} located in our developed library \textit{WEBlib.py}:
 \begin{lstlisting}[style=nonumbers]
 def GetNumberMementos(filename):
     """
@@ -360,14 +365,14 @@ def GetNumberMementos(filename):
     return len(re.findall(r'rel=\"memento\"', text))
 \end{lstlisting}
 \vspace{5mm}
-As we may notice, function \textit{GetNumberMementos()} simple takes as an argument a file name. It opens the file for reading and it uses regular expression to count and return the number of rel=\"memento\" occurrences in the file.
+As we may notice, function \textit{GetNumberMementos()} simple takes as an argument a file name. It opens the file for reading and it uses regular expression to count and return the number of rel=\enquote{memento} occurrences in the file.
 
 \newpage
 \subsection{2.2 Solution}
 \begin{figure}[!h]
 \caption{Memento Histogram for 1000 URIs Extracted from Twitter}\label{fig:1}
 \includegraphics[scale=.5]{images/memHist.pdf}
-\caption*{\scriptsize The y-axis or Number of URIs is in a log scale.  The data used to plot this histogram is contained in Table-\ref{tab:table1}. The histogram resembles characteristics of a log curve (80/20) values. In our case 860 URIs out of a 1,000 had 0 mementos. At the end tail of the histogram we can notice that the memento counts gets higher as the number of URIs get smaller.}
+\caption*{\scriptsize The y-axis or Number of URIs is in a log scale.  The data used to plot this histogram is contained in Table \ref{tab:table1}. The histogram resembles characteristics of a log curve (80/20) values. In our case 860 URIs out of a 1,000 had 0 mementos. At the tail end of the histogram we can notice that the memento counts gets higher as the number of URIs get smaller.}
 \end{figure}
 
 \end{homeworkProblem}
@@ -389,21 +394,47 @@ on the other.  \\
 
 Not all URIs will have Mementos, and not all URIs will have an estimated
 creation date.  State how many fall into either categories.\\
-\subsection{2.1 Approach}
+\subsection{3.1 Approach}
+We will be using the same nomenclature file schema to associate the Carbon Date data with an URI's age. However, the Carbon Date files will be stored in a different directory: \textbf{a2/uriagedata}. Similar to problem 2 approach, python was used to generate the data, and R was utilized to create the graphs.\\
 
-\subsection{3.2 Solution}
+Shown below is a flowchart diagram for a python program used to generate the data:
+
+%
+%                  AgeURI.py Flow Chart
+%
+
 \begin{figure}[!h]
-\caption{Age-Memento Graph}\label{fig:2}
-\includegraphics[scale=.5]{images/original-age-memento.pdf}
-\caption*{\scriptsize The x-axis and y-axis are in a log scale.  The data used to plot this graph is contained in Table-\ref{tab:table2}. Number of plotting points do not correspond to number of data set in Table-\ref{tab:table2} due to tuple value repetition with different URIs . It is difficult to appreciate on this graph, but repeating plots with a darker plotting point.}
+\caption{Flowchart diagram for \textit{AgeURI.py}}\label{fig:3}
+\center
+\includegraphics[scale=.5]{images/carbondate.pdf}
+\caption*{\scriptsize \textit{\textbf{AgeURI.py}} is the Python implementation for problem 3. The section in the diagram labeled \textbf{Carbon-Date URI} takes all URIs generated to solve problem 1 and uses the \textbf{Carbon Date Tool} obtained from \url{http://ws-dl.blogspot.com/2014/11/2014-11-14-carbon-dating-web-version-20.html}. The HTTP request output is saved into \textbf{uriagedata} directory. This directory is labeled in the diagram \textbf{CD Data Files}. The remaining part of the flowchart explains that \textbf{CD Data Files} result gets merged with the result from data file solution from problem 2 (\textbf{Get Memento URI count} to produce our deliverable: \textbf{age-memento-data.txt} file.}
 \end{figure}
+%
+\newpage
+\subsection{3.2 Solution Part-1}
+\begin{figure}[!h]
+\caption{Age-Memento Graph}\label{fig:4}
+\includegraphics[scale=.5]{images/original-age-memento.pdf}
+\caption*{\scriptsize The x-axis and y-axis are in a log scale.  The data used to plot this graph is contained in Table \ref{tab:table2}. Number of plotting points do not correspond to number of data set in Table \ref{tab:table2} due to tuple value repetition with different URIs. It is difficult to appreciate repeating plots with darker plotting points on this graph. Then, it is a need to capture plot point repetition: Figure \ref{fig:5}.}
+\end{figure}
+From the graph above we can notice a relationship between an URI's age and its Mementos count. In general, the younger the URI the less count of mementos it has, and vice versa. Figure \ref{fig:5} captures much better this inference, since the plot density is more representative. 
 
 \newpage
 \begin{figure}[!h]
-\caption{Age-Memento Graph with Various Plot Size}\label{fig:2}
+\caption{Age-Memento Graph with Various Plot Size}\label{fig:5}
 \includegraphics[scale=.5]{images/update-age-memento.pdf}
-\caption*{\scriptsize The x-axis and y-axis are in a log scale.  The data used to plot this graph is contained in Table-\ref{tab:table3}. Number of plotting points do not correspond to number of data set in Table-\ref{tab:table3}. It is difficult to appreciate on this graph, but repeating plots with a darker plotting point.}
+\caption*{\scriptsize The x-axis and y-axis are in a log scale.  The data used to plot this graph is contained in Table \ref{tab:table3}. The plot point size corresponds to column labeled \textit{Freq} from the same table utilizing the formula: $log\ Freq/2 + 1$. The larger the plot point size, the greater the number of occurrences for any particular data set.}
 \end{figure}
+%
+The analysis of Figure \ref{fig:5} is similar to Figure \ref{fig:4}. In general, the younger the URI the less count of mementos it has, and vice versa. However, the plotting is more representative of its data. For example, we can appreciate that a great deal of pages 2 days old have 1 memento. This information is not capture on Figure \ref{fig:4}.
+%
+\subsection{3.3 Solution Part-2}
+Not all URIs will have Mementos, and not all URIs will have an estimated creation date. \textit{\textbf{AgeURI.py}} calculated this information:\\
+
+Out of 1000 URIs 382 or 38.20\% have no estimated creation date.\\
+Out of 1000 URIs 860 or 86.00\% have no mementos.\\
+
+Additionally, the number of URIs with an estimated creation date and a memento is 140 or 14.00\%.
 \end{homeworkProblem}
 
 %----------------------------------------------------------------------------------------
@@ -416,9 +447,9 @@ creation date.  State how many fall into either categories.\\
 %----------------------------------------------------------------------------------------
 \newpage
 \begin{thebibliography}{9}
-\bibitem{Manual -- curl usage explained} 
-Graph structure in the web. (n.d.) Retrieved January 23, 2016, from \url{http://curl.haxx.se/docs/manual.html}
-\bibitem{Graph structure in the web}
-Graph structure in the web. (n.d.) Retrieved January 23, 2016, from \url{http://http://www9.org/w9cdrom/160/160.html}
+\bibitem{Lutz} 
+Lutz, Mark (2013). List and Dictionaries. \textit{Learning Python} (5th ed.). (pp. 262-263). Sebastopol, CA: O'Reilly Media.
+%\bibitem{Graph structure in the web}
+%Graph structure in the web. (n.d.) Retrieved January 23, 2016, from \url{http://%http://www9.org/w9cdrom/160/160.html}
 \end{thebibliography}
 \end{document}
