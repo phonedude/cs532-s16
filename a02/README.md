@@ -16,6 +16,19 @@ cs532_pvargas_hw2.pdf
 
 ![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a02/documents/images/a2folder.png)
 
+## a2/documents
+
+Contains all latex files and images to produce gradable pdf document
+
+## a2/mementodata
+
+Data to solve problem 2. Folder contains all data files rendered by ODU Memento Aggregator for URIs obtained to solution of problem 1:
+http://mementoproxy.cs.odu.edu/aggr/timemap/link/1/URI
+
+## a2/uriagedat
+
+
+
 </content>
-  <tabTrigger>readme</tabTrigger>
+  <tabTrigger></tabTrigger>
 </snippet>
