@@ -15,6 +15,7 @@ cs532_pvargas_hw2.pdf
 ## File Structure
 
 ![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a02/documents/images/a2folder.png)
+
 </content>
   <tabTrigger>readme</tabTrigger>
 </snippet>
