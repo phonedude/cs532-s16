@@ -1,6 +1,6 @@
 <snippet>
   <content>
-# A2 Webscience CS-532
+# A2 Web Science CS-532
 
 This folder and subfolders contain submission files required for assignment 2.
 
