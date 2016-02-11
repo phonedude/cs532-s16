@@ -14,24 +14,7 @@ cs532_pvargas_hw2.pdf
 
 ## File Structure
 
-+ cs532-s16
-|___ a01 A1 submissions
-|
-|___ a02 A2 submissions
-    +
-    |
-    + documents +
-    |            |
-    |            + images +
-    |                    |
-    |                    createlinks.pkd
-    |                    memHist.pdf
-    |                    orignal-age-memento.pdf
-    |                    update-age-memento.pdf
-    + mementodata +
-                 |
-                  
-                
+![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a02/documents/images/a2folder.png)
 </content>
   <tabTrigger>readme</tabTrigger>
 </snippet>
