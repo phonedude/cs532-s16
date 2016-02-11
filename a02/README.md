@@ -22,12 +22,12 @@ Contains all latex files and images to produce gradable pdf document
 
 ## a2/mementodata
 
-Data to solve problem 2. Folder contains all data files rendered by ODU Memento Aggregator for URIs obtained to solution of problem 1:
+Data folder to solve problem 2. Folder contains all data files rendered by ODU Memento Aggregator for URIs obtained to solution of problem 1:
 http://mementoproxy.cs.odu.edu/aggr/timemap/link/1/URI
 
-## a2/uriagedat
+## a2/uriagedata
 
-
+Data folder to solve problem 3.
 
 </content>
   <tabTrigger></tabTrigger>
