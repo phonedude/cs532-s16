@@ -2,7 +2,7 @@
   <content>
 # A2 Webscience CS-532
 
-Takes a text file as input to be formatted to an output file readable to LaTex
+This folder and subfolders contain submission files required for assignment 2.
 
 ## Due Date
 
