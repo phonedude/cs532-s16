@@ -149,10 +149,10 @@ def get_oauth():
 def find_uris(uris):
 	with open('output', 'a') as outfile:
 		for search_item in SEARCH_ITEMS:
-			result = requests.get(SEARCH_URI + search_item + '&filter%3Alinks&count=10000', auth=oauth)
+			result = requests.get(SEARCH_URI + search_item + '&filter%3Alinks&count=1000', auth=oauth)
 			for status in result.json()['statuses']:
 				for url in status['entities']['urls']:
-					if len(uris) == 10000:
+					if len(uris) == 1000:
 						return
 					if 'expanded_url' in url:
 						try:
