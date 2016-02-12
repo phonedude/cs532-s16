@@ -372,7 +372,7 @@ As we may notice, function \textit{GetNumberMementos()} simple takes as an argum
 \begin{figure}[!h]
 \caption{Memento Histogram for 1000 URIs Extracted from Twitter}\label{fig:1}
 \includegraphics[scale=.5]{images/memHist.pdf}
-\caption*{\scriptsize The y-axis or Number of URIs is in a log scale.  The data used to plot this histogram is contained in Table \ref{tab:table1}. The histogram resembles characteristics of a log curve (80/20) values. In our case 860 URIs out of a 1,000 had 0 mementos. At the tail end of the histogram we can notice that the memento counts gets higher as the number of URIs get smaller.}
+\caption*{\scriptsize The y-axis or Number of URIs is in a log scale.  The data used to plot this histogram is contained in Table \ref{tab:table1}. The histogram resembles characteristics of a power-law distribution: (80/20) values. In our case 860 URIs out of a 1,000 had 0 mementos. At the tail end of the histogram we can notice that the memento counts gets higher as the number of URIs get smaller.}
 \end{figure}
 
 \end{homeworkProblem}
@@ -417,7 +417,7 @@ Shown below is a flowchart diagram for a python program used to generate the dat
 \includegraphics[scale=.5]{images/original-age-memento.pdf}
 \caption*{\scriptsize The x-axis and y-axis are in a log scale.  The data used to plot this graph is contained in Table \ref{tab:table2}. Number of plotting points do not correspond to number of data set in Table \ref{tab:table2} due to tuple value repetition with different URIs. It is difficult to appreciate repeating plots with darker plotting points on this graph. Then, it is a need to capture plot point repetition: Figure \ref{fig:5}.}
 \end{figure}
-From the graph above we can notice a relationship between an URI's age and its Mementos count. In general, the younger the URI the less count of mementos it has, and vice versa. Figure \ref{fig:5} captures much better this inference, since the plot density is more representative. 
+From the graph above we can notice a relationship between an URI's age and its Mementos count. In general, the younger the URI the less count of mementos it has, and vice versa. Figure \ref{fig:5} captures much better this inference, since the plot density is more representative of the collected data. 
 
 \newpage
 \begin{figure}[!h]
