@@ -1,0 +1,30 @@
+\section{Problem 1}
+
+\subsection{Question}
+\vspace*{10pt}
+1.  Write a Python program that extracts 1000 unique links from
+Twitter.  You might want to take a look at:\\
+\\
+http://thomassileo.com/blog/2013/01/25/using-twitter-rest-api-v1-dot-1-with-python/\\
+\\
+But there are many other similar resources available on the web.  Note
+that only Twitter API 1.1 is currently available; version 1 code will
+no longer work.\\
+\\
+Also note that you need to verify that the final target URI (i.e., the
+one that responds with a 200) is unique.  You could have many different
+shortened URIs for www.cnn.com (t.co, bit.ly, goo.gl, etc.).\\
+\\
+You might want to use the search feature to find URIs, or you can
+pull them from the feed of someone famous (e.g., Tim O'Reilly).\\
+Hold on to this collection -- we'll use it later throughout the semester.
+
+\subsection{Answer}
+\vspace{5mm}
+Using the python module requests made this task a breeze as well as the initial code provided by Thomas Sileo's blog post.
+\vspace{2mm}
+\lstinputlisting[language=Python, caption=urifinder.py, label=listing:urifinder]{q1/urifinder.py}
+\vspace{1mm}
+The script was run multiple times to get the desired 1000 unique URIs. It would end prematurely at times, so the data set was initialized with the data of the previous run and then passed on to the {\tt find\_uris} function to preserve work performed.
+\vspace{5mm}
+\lstinputlisting[caption=Sample of 1000 Links, linerange=01-20]{q1/output.txt}
