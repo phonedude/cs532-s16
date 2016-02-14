@@ -1,14 +1,13 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
 from bs4 import BeautifulSoup
-import urllib
+import urllib.request as ur
 
 
 
 def getLinks(arg):
 	f = open ("output_file.txt", "a")
-	url = urllib.urlopen(arg)
+	url = ur.urlopen(arg) 
 	htmlPage = url.read()
 	f.write(url.geturl())
 	url.close()
