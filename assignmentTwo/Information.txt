@@ -1,0 +1,116 @@
+Information for Assignment Two-----
+
+Application Name: URLGrabber
+
+Website: 
+
+
+CONSUMER_KEY: zN
+
+CONSUMER_SECRET:
+
+
+
+time map - from and until have archives---
+
+
+
+def setup_oauth():
+    """Authorize your app via identifier."""
+    # Request token
+    oauth = OAuth1(CONSUMER_KEY, client_secret=CONSUMER_SECRET)
+    r = requests.post(url=REQUEST_TOKEN_URL, auth=oauth)
+    credentials = parse_qs(r.content)
+
+    resource_owner_key = credentials.get('oauth_token')[0]
+    resource_owner_secret = credentials.get('oauth_token_secret')[0]
+
+    # Authorize
+    authorize_url = AUTHORIZE_URL + resource_owner_key
+    print 'Please go here and authorize: ' + authorize_url
+
+    verifier = raw_input('Please input the verifier: ')
+    oauth = OAuth1(CONSUMER_KEY,
+                   client_secret=CONSUMER_SECRET,
+                   resource_owner_key=resource_owner_key,
+                   resource_owner_secret=resource_owner_secret,
+                   verifier=verifier)
+
+    # Finally, Obtain the Access Token
+    r = requests.post(url=ACCESS_TOKEN_URL, auth=oauth)
+    credentials = parse_qs(r.content)
+    token = credentials.get('oauth_token')[0]
+    secret = credentials.get('oauth_token_secret')[0]
+
+    return token, secret
+
+
+def get_oauth():
+    oauth = OAuth1(CONSUMER_KEY,
+                client_secret=CONSUMER_SECRET,
+                resource_owner_key=OAUTH_TOKEN,
+                resource_owner_secret=OAUTH_TOKEN_SECRET)
+    return oauthl
+
+
+
+
+
+
+t = Twitter(
+    auth=OAuth(OAUTH_TOKEN, OAUTH_TOKEN_SECRET, CONSUMER_SECRET, CONSUMER_KEY))
+
+t.statuses.home_timeline()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What looks wrong with this?
+I am getting an error message saying 'indices must be an int - not a string'
+
+for i in xrange(1,len(x)): 
+     print x[i]['entities']['urls']['url']
+
+
+it works without the last ['url']
+
+		  
+		  
+		  
+		  
+		  
+		  write a program to weed out duplicates
+		  note to self: start w/ 10,000
+		  print out response code ::::
+
+
+
+
+assignment 3: use phantomJS to extract the HTML (Don't do it the dumb way)
