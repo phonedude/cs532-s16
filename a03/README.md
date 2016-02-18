@@ -14,20 +14,16 @@ cs532_pvargas_hw3.pdf
 
 ## File Structure
 
-![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a02/documents/images/a2folder.png)
+![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a02/documents/images/a3folder.png)
 
 ## a3/documents
 
 Contains all latex files and images to produce gradable pdf document
 
-## a2/mementodata
+## a3/query-work-files
 
-Data folder to solve problem 2. Folder contains all data files rendered by ODU Memento Aggregator for URIs obtained to solution of problem 1:
-http://mementoproxy.cs.odu.edu/aggr/timemap/link/1/URI
+Data folder contains all processed files to solve problems 2 and 3.
 
-## a2/uriagedata
-
-Data folder to solve problem 3.
 
 </content>
   <tabTrigger></tabTrigger>
