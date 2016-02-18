@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="iso-8859-1"/>
+		<title>Mécénat et appel aux dons du musée La piscine de Roubaix</title>
+<meta name="description" content="Participez à l'avenir du musée de l'art et de l'industrie de Roubaix (La Piscine de Roubaix) en faisant vos dons pour la réalisation des projets de votre musée !" />
+<meta name="robots" content="index, follow"/> 
+
+		<style type="text/css">
+		body,td,th {
+	font-family: Arial;
+}
+        </style>
+			<meta name="viewport" content="initial-scale=1.0">
+<link href="favicon.ico"  rel="shortcut icon" type="image/x-icon" /> 
+<link rel="stylesheet" href="/ressources/css/thickbox.css" />
+<link rel="stylesheet" href="/ressources/20121001/css/fancybox/jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" href="css/style.css" media="screen" />
+<link rel="stylesheet" href="/ressources/v2.0.3/css/styleiecheck.css" media="screen" />
+<script src="/ressources/20121001/js/jquery.min.js"></script>
+<link href="http://www.mapiscinederoubaix.fr/ressources/css/formulaire_style.css" rel="stylesheet" type="text/css" />
+<link href="http://www.mapiscinederoubaix.fr/ressources/css/jquery/jquery.ui.1822.css" rel="stylesheet" type="text/css" />
+<link rel="alternate" type="application/rss+xml" title="Actualités de mapiscinederoubaix.fr" href="http://www.mapiscinederoubaix.fr/rss.xml"/><script type="text/javascript" src="http://www.mapiscinederoubaix.fr/ressources/js/newsletter.js"></script>
+<script type="text/javascript" src="http://www.mapiscinederoubaix.fr/ressources/js/jquery/jquery.ui.1822.js"></script>
+<script type="text/javascript" src="http://www.mapiscinederoubaix.fr/ressources/js/datepicker/ui.datepicker-fr.js"></script>
+<script type="text/javascript" src="http://www.mapiscinederoubaix.fr/ressources/js/datepicker/jquery.datepicker.js"></script>
+<script type="text/javascript" src="http://www.mapiscinederoubaix.fr/ressources/js/formulaire.js"></script>
+<script type="text/javascript">
+
+    $('document').ready(function() {
+        var aLink = $('<a>').attr('href', 'ressources/ajax/paquet_telecom.php')
+                            .css('color', '#cccccc')
+                            .html('En&nbsp;savoir&nbsp;plus');
+
+        if (jQuery().fancybox) {
+            aLink = aLink.fancybox({
+                autoSize : true,
+                type : 'iframe'
+            });
+        } else {
+            aLink = aLink.attr('target', '_BLANK');
+        }
+
+        if (window.parent.length == 0 || window.parent == window) {
+            $('<div>')
+                .attr('id', 'paquet_telecom_bandeau')
+                .css('z-index', 1000)
+                .css('display', 'block')
+                .css('position', 'relative')
+                .css('top', 0)
+                .css('left', 0)
+                .css('width', '100%')
+                .css('min-height', '20px')
+                .css('font-size', '12px')
+                .css('text-align', 'center')
+                .css('background', '#2c333b')
+                .css('opacity', '0.9')
+                .css('color', 'white')
+                .css('padding', '3px 50px 3px 0')
+                .css('-webkit-box-sizing', 'border-box')
+                .css('-moz-box-sizing', 'border-box')
+                .css('box-sizing', 'border-box')
+                .append('En continuant à naviguer sur ce site, vous acceptez l\'utilisation de cookies pour disposer de services adaptés à vos centres d\'intérêts. ',
+                    aLink,
+                    $('<span>').addClass('paquet_telecom_croix')
+                               .css('position', 'absolute')
+                               .css('display', 'block')
+                               .css('cursor', 'pointer')
+                               .css('margin-right', '10px')
+                               .css('border', '1px solid #fff')
+                               .css('padding', '0 5px')
+                               .css('top', '2px')
+                               .css('right', '10px')
+                               .css('font-size', '14px')
+                               .attr('title', 'Fermer cet avertissement')
+                               .text('X')
+                ).prependTo($('body'));
+        }
+
+        $('.paquet_telecom_croix').click(function() {
+            // Création d'un objet date
+            var date = new Date();
+            // Positionnement de la date dans 1 ans
+            date.setTime(date.getTime()+(365 * 24 * 60 * 60 * 1000));
+            document.cookie = 'paquet_telecom=1; expires=' + date.toGMTString() + '; path=/';
+            $('#paquet_telecom_bandeau').hide();
+        });
+    });
+    
+</script>
+<link rel="stylesheet" href="css/css_actualites.css" media="screen" />
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/style_ie.css" media="screen" />
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="/ressources/rwd.v1.1/js/respond.min.js"></script>
+<![endif]-->
+        <script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$("input.calendrierAvecMenu").datepicker( "option", "yearRange", "-116:+10" );
+			});
+        </script>
+	</head>
+	<body>
+		
+		<section id="container">
+			<header>
+
+	<div class="nav_mobile"><a class="nav"><span>Navigation</span></a></div>
+	
+	
+	<section>
+
+	<div class="top_bar_mobile"><div class='top_bar'><ul><li class="firstLi"><a href="/">Accueil</a></li><li class="firstLi"><a href="musee-et-extension.php">Le musée et son extension</a></li><li class="firstLi"><a href="projets-a-financer.php">Les projets à financer</a></li><li class="firstLi sous_menu"><a class="selected" href="don.php">Je fais un don</a><ul class="dropdown"><li class="sousLi particulier"><a class="selected" href="don.php">Particulier</a></li><li class="sousLi professionnel"><a class="selected" href="don.php">professionnel</a></li></ul><li class="firstLi"><a href="actualites_al.html">Actualités</a></li><li class="firstLi"><a href="remerciements_cl3.html">Remerciements</a></li><li class="firstLi"><a href="livre-d-or_cl1.html">Livre d'or</a></li><li class="firstLi"><a href="contact.php">Contact</a></li></ul></div></div>
+		    	<a href="/" class="logo"><img src="gifs/logo.png"></a>
+
+		<nav class="menu"><ul><li class="firstLi ML_box"><a href="http://www.mapiscinederoubaix.fr/42Bis/ajax/mentions_legales_box.php">Mentions légales</a></li></ul></nav>		
+		<div class="objectif">
+
+            
+            	<div class="progress-bar">
+                    <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
+                	<canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
+                <p data-val="43" class="valProgress"></p>
+              </div>
+            
+
+			
+			
+		<div class="bloc1">	
+			<span class="titre-objectif">Objectif</span>
+			<span class="don-objectif">200 000 €</span>
+		</div>	
+		
+		<div class="bloc2">	
+			<span class="nombre-donateur">206 donateurs*</span>
+			<span class="deadline"> Fin de la campagne : <span>31 mars 2016</span></span>	
+			<a class="btn-don" href="don.php">Je fais un don</a>
+		</div>
+			
+
+		</div>
+		
+	
+
+    </section>
+	
+
+
+</header>
+	<ul class="bxslider">
+  <li><img class="slide" src="gifs/001.jpg" alt="" /></li>
+
+</ul>
+			<section class="content">
+				<div class="colonne_centre page_contact">
+				<div class="centrage">
+					<nav id="fil_ariane"><strong>Vous &ecirc;tes ici :</strong> <a href="/">Accueil</a> &gt; Je fais un don</nav>					<h1>Je fais un don</h1>
+					<div class="block_contact">
+						<div class="formulaire_contact" id="particulierForm">
+							
+
+<form id="formulaire_3" onsubmit="return App.validate(this);" enctype="application/x-www-form-urlencoded" class="generateur" action="/don.php" method="post">
+<div class="form_left" id="field_16">
+<h2>Je suis un particulier</h2>
+<font face="Courier New"><span style="font-size: 12px;"><h3>Mon don :</h3></span></font>
+Je fais un don pour soutenir le musée La Piscine dans son extension. Je suis intéressé(e) de préférence par :
+<div class="divGenerateur"><label for="field_64" class="optional">&nbsp;</label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_64" id="field_64-les-salles-du-groupe-de-roubaix" value="les salles du Groupe de Roubaix" class="" />les salles du Groupe de Roubaix</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_64" id="field_64-les-ateliers-jeune-public" value="les ateliers jeune public" class="" />les ateliers jeune public</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_64" id="field_64-le-patio-de-sculptures" value="le patio de sculptures" class="" />le patio de sculptures</label></li></ul><div></div><span class="validation"></span></div>
+<span class="titre">Je fais un don de la somme de : <span></span></span>
+<span class="titre">Montant libre :</span>
+<p>
+<input type="text" name="field_28" id="field_28" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<div class="sommes" id="field_47">
+<div class="divGenerateur"><label for="field_46" class="optional">&nbsp;</label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-20-euros" value="20 euros" class="" />20 euros</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-50-euros" value="50 euros" class="" />50 euros</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-200-euros" value="200 euros" class="" />200 euros</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-300-euros" value="300 euros" class="" />300 euros</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-500-euros" value="500 euros" class="" />500 euros</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-1000-euros" value="1000 euros" class="" />1000 euros</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_46" id="field_46-1500-euros" value="1500 euros" class="" />1500 euros</label></li></ul><div></div><span class="validation"></span></div>
+</div>
+<div id="field_50">
+<div class="divGenerateur"><label for="field_70" class="required">Je souhaite un reçu fiscal (à partir de 100 euros) afin de bénéficier d'une économie d'impôt en qualité de : <span class="required">*</span></label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_70" id="field_70-particulier-soumis-a-l-irpp-66--de-reduction-dans-la-limite-de-20--de-mon-revenu-imposable" value="Particulier soumis à l'IRPP 66% de réduction dans la limite de 20% de mon revenu imposable" class="" />Particulier soumis à l'IRPP 66% de réduction dans la limite de 20% de mon revenu imposable</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_70" id="field_70-particulier-soumis-a-l-isf-75--de-reduction-dans-la-limite-de-50-000-euros" value="Particulier soumis à l'ISF 75% de réduction dans la limite de 50 000 euros" class="" />Particulier soumis à l'ISF 75% de réduction dans la limite de 50 000 euros</label></li></ul><div></div><span class="validation"></span></div>
+Quelque soit le mode de paiement, pour chaque don inférieur à 100 euros, vous recevrez un accusé de réception qui vous servira de justificatif. Au-delà de 100 euros, vous recevrez un certificat CERFA.<br>
+</div>
+<span class="montant_don">Montant du don en Euros : <span id="montant">0</span></span>
+<p>
+<input type="hidden" name="field_52" value="" class="" id="field_52" /><span class="validation"></span></p>
+<span class="montant_redu_fiscale">Montant du don après réduction fiscale : <span id="montant_fiscal">0</span></span>
+<div><font face="Courier New"><span style="font-size: 12px;"><span class="commentaire">Réduction fiscale valable uniquement pour les foyers fiscaux français. 66 % de la somme viennent en réduction de votre impôt sur le revenu (dans la limite de 20% du revenu imposable)</span></span></font></div><div style="font-family: 'Courier New'; font-size: 12px;"><br></div>
+</div>
+<div class="form_right" id="field_18">
+<h2>Mes coordonnées</h2>
+<p><label for="field_1" class="required">Nom : <span class="required">*</span></label>
+
+<input type="text" name="field_1" id="field_1" value="" class="" size="30" maxlength="100" /><span class="validation"></span></p>
+<p><label for="field_20" class="required">Prénom : <span class="required">*</span></label>
+
+<input type="text" name="field_20" id="field_20" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_200" class="optional">Date de naissance (facultatif) :</label>
+
+<input type="text" name="field_200" id="field_200" value="" autocomplete="off" class="calendrierAvecMenu" size="10" maxlength="" /><span class="validation"></span></p>
+<p><label for="field_4" class="required">E-mail : <span class="required">*</span></label>
+
+<input type="text" name="field_4" id="field_4" value="" class="" size="30" maxlength="100" /><span class="validation"></span></p>
+<p><label for="field_12" class="required">Adresse : <span class="required">*</span></label>
+
+<input type="text" name="field_12" id="field_12" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_14" class="required">Code postal : <span class="required">*</span></label>
+
+<input type="text" name="field_14" id="field_14" value="" class="" size="10" maxlength="5" /><span class="validation"></span></p>
+<p><label for="field_13" class="required">Ville : <span class="required">*</span></label>
+
+<input type="text" name="field_13" id="field_13" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_61" class="optional">Tel fixe (facultatif) :</label>
+
+<input type="text" name="field_61" id="field_61" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_62" class="optional">Tel portable (facultatif) :</label>
+
+<input type="text" name="field_62" id="field_62" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_34" class="required">Pays : <span class="required">*</span></label>
+
+<select name="field_34" id="field_34" class="champ_pays noDefaultValue">
+    <option value="FRANCE" label="FRANCE">FRANCE</option>
+    <option value="BELGIQUE" label="BELGIQUE">BELGIQUE</option>
+    <option value="" label=""></option>
+    <option value="AFGHANISTAN" label="AFGHANISTAN">AFGHANISTAN</option>
+    <option value="AFRIQUE DU SUD" label="AFRIQUE DU SUD">AFRIQUE DU SUD</option>
+    <option value="ALASKA" label="ALASKA">ALASKA</option>
+    <option value="ALBANIE" label="ALBANIE">ALBANIE</option>
+    <option value="ÀLE CLIPPERTON" label="ÀLE CLIPPERTON">ÀLE CLIPPERTON</option>
+    <option value="ALGERIE" label="ALGERIE">ALGERIE</option>
+    <option value="ALLEMAGNE" label="ALLEMAGNE">ALLEMAGNE</option>
+    <option value="ANDORRE" label="ANDORRE">ANDORRE</option>
+    <option value="ANGOLA" label="ANGOLA">ANGOLA</option>
+    <option value="ANGUILLA" label="ANGUILLA">ANGUILLA</option>
+    <option value="ANTIGUA-ET-BARBUDA" label="ANTIGUA-ET-BARBUDA">ANTIGUA-ET-BARBUDA</option>
+    <option value="ANTILLES NEERLANDAISES" label="ANTILLES NEERLANDAISES">ANTILLES NEERLANDAISES</option>
+    <option value="ARABIE SAOUDITE" label="ARABIE SAOUDITE">ARABIE SAOUDITE</option>
+    <option value="ARGENTINE" label="ARGENTINE">ARGENTINE</option>
+    <option value="ARMENIE" label="ARMENIE">ARMENIE</option>
+    <option value="ARUBA" label="ARUBA">ARUBA</option>
+    <option value="AUSTRALIE" label="AUSTRALIE">AUSTRALIE</option>
+    <option value="AUTRICHE" label="AUTRICHE">AUTRICHE</option>
+    <option value="AZERBAIDJAN" label="AZERBAIDJAN">AZERBAIDJAN</option>
+    <option value="BAHAMAS" label="BAHAMAS">BAHAMAS</option>
+    <option value="BAHREIN" label="BAHREIN">BAHREIN</option>
+    <option value="BANGLADESH" label="BANGLADESH">BANGLADESH</option>
+    <option value="BARBADE" label="BARBADE">BARBADE</option>
+    <option value="BELIZE" label="BELIZE">BELIZE</option>
+    <option value="BENIN" label="BENIN">BENIN</option>
+    <option value="BERMUDES" label="BERMUDES">BERMUDES</option>
+    <option value="BHOUTAN" label="BHOUTAN">BHOUTAN</option>
+    <option value="BIELORUSSIE" label="BIELORUSSIE">BIELORUSSIE</option>
+    <option value="BIRMANIE" label="BIRMANIE">BIRMANIE</option>
+    <option value="BOLIVIE" label="BOLIVIE">BOLIVIE</option>
+    <option value="BOSNIE-HERZEGOVINE" label="BOSNIE-HERZEGOVINE">BOSNIE-HERZEGOVINE</option>
+    <option value="BOTSWANA" label="BOTSWANA">BOTSWANA</option>
+    <option value="BOUVET (ILE)" label="BOUVET (ILE)">BOUVET (ILE)</option>
+    <option value="BRESIL" label="BRESIL">BRESIL</option>
+    <option value="BRUNEI" label="BRUNEI">BRUNEI</option>
+    <option value="BULGARIE" label="BULGARIE">BULGARIE</option>
+    <option value="BURKINA" label="BURKINA">BURKINA</option>
+    <option value="BURUNDI" label="BURUNDI">BURUNDI</option>
+    <option value="CAIMANES (ILES)" label="CAIMANES (ILES)">CAIMANES (ILES)</option>
+    <option value="CAMBODGE" label="CAMBODGE">CAMBODGE</option>
+    <option value="CAMEROUN" label="CAMEROUN">CAMEROUN</option>
+    <option value="CAMEROUN ET TOGO" label="CAMEROUN ET TOGO">CAMEROUN ET TOGO</option>
+    <option value="CANADA" label="CANADA">CANADA</option>
+    <option value="CANARIES (ILES)" label="CANARIES (ILES)">CANARIES (ILES)</option>
+    <option value="CAP-VERT" label="CAP-VERT">CAP-VERT</option>
+    <option value="CENTRAFRICAINE (REPUBLIQUE)" label="CENTRAFRICAINE (REPUBLIQUE)">CENTRAFRICAINE (REPUBLIQUE)</option>
+    <option value="CHILI" label="CHILI">CHILI</option>
+    <option value="CHINE" label="CHINE">CHINE</option>
+    <option value="CHRISTMAS (ILE)" label="CHRISTMAS (ILE)">CHRISTMAS (ILE)</option>
+    <option value="CHYPRE" label="CHYPRE">CHYPRE</option>
+    <option value="COCOS ou KEELING (ILES)" label="COCOS ou KEELING (ILES)">COCOS ou KEELING (ILES)</option>
+    <option value="COLOMBIE" label="COLOMBIE">COLOMBIE</option>
+    <option value="COMORES" label="COMORES">COMORES</option>
+    <option value="CONGO" label="CONGO">CONGO</option>
+    <option value="CONGO (REPUBLIQUE DEMOCRATIQUE)" label="CONGO (REPUBLIQUE DEMOCRATIQUE)">CONGO (REPUBLIQUE DEMOCRATIQUE)</option>
+    <option value="COOK (ILES)" label="COOK (ILES)">COOK (ILES)</option>
+    <option value="COREE" label="COREE">COREE</option>
+    <option value="COREE (REPUBLIQUE DE)" label="COREE (REPUBLIQUE DE)">COREE (REPUBLIQUE DE)</option>
+    <option value="COREE (REPUBLIQUE POPULAIRE DEMOCRATIQUE DE)" label="COREE (REPUBLIQUE POPULAIRE DEMOCRATIQUE DE)">COREE (REPUBLIQUE POPULAIRE DEMOCRATIQUE DE)</option>
+    <option value="COSTA RICA" label="COSTA RICA">COSTA RICA</option>
+    <option value="COTE D'IVOIRE" label="COTE D'IVOIRE">COTE D'IVOIRE</option>
+    <option value="CROATIE" label="CROATIE">CROATIE</option>
+    <option value="CUBA" label="CUBA">CUBA</option>
+    <option value="DANEMARK" label="DANEMARK">DANEMARK</option>
+    <option value="DJIBOUTI" label="DJIBOUTI">DJIBOUTI</option>
+    <option value="DOMINICAINE (REPUBLIQUE)" label="DOMINICAINE (REPUBLIQUE)">DOMINICAINE (REPUBLIQUE)</option>
+    <option value="DOMINIQUE" label="DOMINIQUE">DOMINIQUE</option>
+    <option value="EGYPTE" label="EGYPTE">EGYPTE</option>
+    <option value="EL SALVADOR" label="EL SALVADOR">EL SALVADOR</option>
+    <option value="EMIRATS ARABES UNIS" label="EMIRATS ARABES UNIS">EMIRATS ARABES UNIS</option>
+    <option value="EQUATEUR" label="EQUATEUR">EQUATEUR</option>
+    <option value="ERYTHREE" label="ERYTHREE">ERYTHREE</option>
+    <option value="ESPAGNE" label="ESPAGNE">ESPAGNE</option>
+    <option value="ESTONIE" label="ESTONIE">ESTONIE</option>
+    <option value="ETATS MALAIS NON FEDERES" label="ETATS MALAIS NON FEDERES">ETATS MALAIS NON FEDERES</option>
+    <option value="ETATS-UNIS" label="ETATS-UNIS">ETATS-UNIS</option>
+    <option value="ETHIOPIE" label="ETHIOPIE">ETHIOPIE</option>
+    <option value="EX-REPUBLIQUE YOUGOSLAVE DE MACEDOINE" label="EX-REPUBLIQUE YOUGOSLAVE DE MACEDOINE">EX-REPUBLIQUE YOUGOSLAVE DE MACEDOINE</option>
+    <option value="FEROE (ILES)" label="FEROE (ILES)">FEROE (ILES)</option>
+    <option value="FIDJI" label="FIDJI">FIDJI</option>
+    <option value="FINLANDE" label="FINLANDE">FINLANDE</option>
+    <option value="GABON" label="GABON">GABON</option>
+    <option value="GAMBIE" label="GAMBIE">GAMBIE</option>
+    <option value="GEORGIE" label="GEORGIE">GEORGIE</option>
+    <option value="GEORGIE DU SUD ET LES ILES SANDWICH DU SUD" label="GEORGIE DU SUD ET LES ILES SANDWICH DU SUD">GEORGIE DU SUD ET LES ILES SANDWICH DU SUD</option>
+    <option value="GHANA" label="GHANA">GHANA</option>
+    <option value="GIBRALTAR" label="GIBRALTAR">GIBRALTAR</option>
+    <option value="GOA" label="GOA">GOA</option>
+    <option value="GRECE" label="GRECE">GRECE</option>
+    <option value="GRENADE" label="GRENADE">GRENADE</option>
+    <option value="GROENLAND" label="GROENLAND">GROENLAND</option>
+    <option value="GUADELOUPE" label="GUADELOUPE">GUADELOUPE</option>
+    <option value="GUAM" label="GUAM">GUAM</option>
+    <option value="GUATEMALA" label="GUATEMALA">GUATEMALA</option>
+    <option value="GUERNESEY" label="GUERNESEY">GUERNESEY</option>
+    <option value="GUINEE" label="GUINEE">GUINEE</option>
+    <option value="GUINEE EQUATORIALE" label="GUINEE EQUATORIALE">GUINEE EQUATORIALE</option>
+    <option value="GUINEE-BISSAU" label="GUINEE-BISSAU">GUINEE-BISSAU</option>
+    <option value="GUYANA" label="GUYANA">GUYANA</option>
+    <option value="GUYANE" label="GUYANE">GUYANE</option>
+    <option value="HAITI" label="HAITI">HAITI</option>
+    <option value="HAWAII (ILES)" label="HAWAII (ILES)">HAWAII (ILES)</option>
+    <option value="HEARD ET MACDONALD (ILES)" label="HEARD ET MACDONALD (ILES)">HEARD ET MACDONALD (ILES)</option>
+    <option value="HONDURAS" label="HONDURAS">HONDURAS</option>
+    <option value="HONG-KONG" label="HONG-KONG">HONG-KONG</option>
+    <option value="HONGRIE" label="HONGRIE">HONGRIE</option>
+    <option value="ILES PORTUGAISES DE L'OCEAN INDIEN" label="ILES PORTUGAISES DE L'OCEAN INDIEN">ILES PORTUGAISES DE L'OCEAN INDIEN</option>
+    <option value="INDE" label="INDE">INDE</option>
+    <option value="INDONESIE" label="INDONESIE">INDONESIE</option>
+    <option value="IRAN" label="IRAN">IRAN</option>
+    <option value="IRAQ" label="IRAQ">IRAQ</option>
+    <option value="IRLANDE, ou EIRE" label="IRLANDE, ou EIRE">IRLANDE, ou EIRE</option>
+    <option value="ISLANDE" label="ISLANDE">ISLANDE</option>
+    <option value="ISRAEL" label="ISRAEL">ISRAEL</option>
+    <option value="ITALIE" label="ITALIE">ITALIE</option>
+    <option value="JAMAIQUE" label="JAMAIQUE">JAMAIQUE</option>
+    <option value="JAPON" label="JAPON">JAPON</option>
+    <option value="JERSEY" label="JERSEY">JERSEY</option>
+    <option value="JORDANIE" label="JORDANIE">JORDANIE</option>
+    <option value="KAMTCHATKA" label="KAMTCHATKA">KAMTCHATKA</option>
+    <option value="KAZAKHSTAN" label="KAZAKHSTAN">KAZAKHSTAN</option>
+    <option value="KENYA" label="KENYA">KENYA</option>
+    <option value="KIRGHIZISTAN" label="KIRGHIZISTAN">KIRGHIZISTAN</option>
+    <option value="KIRIBATI" label="KIRIBATI">KIRIBATI</option>
+    <option value="KOWEIT" label="KOWEIT">KOWEIT</option>
+    <option value="LA REUNION" label="LA REUNION">LA REUNION</option>
+    <option value="LABRADOR" label="LABRADOR">LABRADOR</option>
+    <option value="LAOS" label="LAOS">LAOS</option>
+    <option value="LESOTHO" label="LESOTHO">LESOTHO</option>
+    <option value="LETTONIE" label="LETTONIE">LETTONIE</option>
+    <option value="LIBAN" label="LIBAN">LIBAN</option>
+    <option value="LIBERIA" label="LIBERIA">LIBERIA</option>
+    <option value="LIBYE" label="LIBYE">LIBYE</option>
+    <option value="LIECHTENSTEIN" label="LIECHTENSTEIN">LIECHTENSTEIN</option>
+    <option value="LITUANIE" label="LITUANIE">LITUANIE</option>
+    <option value="LUXEMBOURG" label="LUXEMBOURG">LUXEMBOURG</option>
+    <option value="MACAO" label="MACAO">MACAO</option>
+    <option value="MADAGASCAR" label="MADAGASCAR">MADAGASCAR</option>
+    <option value="MALAISIE" label="MALAISIE">MALAISIE</option>
+    <option value="MALAWI" label="MALAWI">MALAWI</option>
+    <option value="MALDIVES" label="MALDIVES">MALDIVES</option>
+    <option value="MALI" label="MALI">MALI</option>
+    <option value="MALOUINES, OU FALKLAND (ILES)" label="MALOUINES, OU FALKLAND (ILES)">MALOUINES, OU FALKLAND (ILES)</option>
+    <option value="MALTE" label="MALTE">MALTE</option>
+    <option value="MAN (ILE)" label="MAN (ILE)">MAN (ILE)</option>
+    <option value="MANDCHOURIE" label="MANDCHOURIE">MANDCHOURIE</option>
+    <option value="MARIANNES DU NORD (ILES)" label="MARIANNES DU NORD (ILES)">MARIANNES DU NORD (ILES)</option>
+    <option value="MAROC" label="MAROC">MAROC</option>
+    <option value="MARSHALL (ILES)" label="MARSHALL (ILES)">MARSHALL (ILES)</option>
+    <option value="MARTINIQUE" label="MARTINIQUE">MARTINIQUE</option>
+    <option value="MAURICE" label="MAURICE">MAURICE</option>
+    <option value="MAURITANIE" label="MAURITANIE">MAURITANIE</option>
+    <option value="MAYOTTE" label="MAYOTTE">MAYOTTE</option>
+    <option value="MEXIQUE" label="MEXIQUE">MEXIQUE</option>
+    <option value="MICRONESIE (ETATS FEDERES DE)" label="MICRONESIE (ETATS FEDERES DE)">MICRONESIE (ETATS FEDERES DE)</option>
+    <option value="MOLDAVIE" label="MOLDAVIE">MOLDAVIE</option>
+    <option value="MONACO" label="MONACO">MONACO</option>
+    <option value="MONGOLIE" label="MONGOLIE">MONGOLIE</option>
+    <option value="MONTENEGRO" label="MONTENEGRO">MONTENEGRO</option>
+    <option value="MONTSERRAT" label="MONTSERRAT">MONTSERRAT</option>
+    <option value="MOZAMBIQUE" label="MOZAMBIQUE">MOZAMBIQUE</option>
+    <option value="NAMIBIE" label="NAMIBIE">NAMIBIE</option>
+    <option value="NAURU" label="NAURU">NAURU</option>
+    <option value="NEPAL" label="NEPAL">NEPAL</option>
+    <option value="NICARAGUA" label="NICARAGUA">NICARAGUA</option>
+    <option value="NIGER" label="NIGER">NIGER</option>
+    <option value="NIGERIA" label="NIGERIA">NIGERIA</option>
+    <option value="NIUE" label="NIUE">NIUE</option>
+    <option value="NORFOLK (ILE)" label="NORFOLK (ILE)">NORFOLK (ILE)</option>
+    <option value="NORVEGE" label="NORVEGE">NORVEGE</option>
+    <option value="NOUVELLE-CALEDONIE" label="NOUVELLE-CALEDONIE">NOUVELLE-CALEDONIE</option>
+    <option value="NOUVELLE-ZELANDE" label="NOUVELLE-ZELANDE">NOUVELLE-ZELANDE</option>
+    <option value="OCEAN INDIEN (TERRITOIRE BRITANNIQUE DE L')" label="OCEAN INDIEN (TERRITOIRE BRITANNIQUE DE L')">OCEAN INDIEN (TERRITOIRE BRITANNIQUE DE L')</option>
+    <option value="OMAN" label="OMAN">OMAN</option>
+    <option value="OUGANDA" label="OUGANDA">OUGANDA</option>
+    <option value="OUZBEKISTAN" label="OUZBEKISTAN">OUZBEKISTAN</option>
+    <option value="PAKISTAN" label="PAKISTAN">PAKISTAN</option>
+    <option value="PALAOS (ILES)" label="PALAOS (ILES)">PALAOS (ILES)</option>
+    <option value="PALESTINE" label="PALESTINE">PALESTINE</option>
+    <option value="PANAMA" label="PANAMA">PANAMA</option>
+    <option value="PAPOUASIE-NOUVELLE-GUINEE" label="PAPOUASIE-NOUVELLE-GUINEE">PAPOUASIE-NOUVELLE-GUINEE</option>
+    <option value="PARAGUAY" label="PARAGUAY">PARAGUAY</option>
+    <option value="PAYS-BAS" label="PAYS-BAS">PAYS-BAS</option>
+    <option value="PEROU" label="PEROU">PEROU</option>
+    <option value="PHILIPPINES" label="PHILIPPINES">PHILIPPINES</option>
+    <option value="PITCAIRN (ILE)" label="PITCAIRN (ILE)">PITCAIRN (ILE)</option>
+    <option value="POLOGNE" label="POLOGNE">POLOGNE</option>
+    <option value="POLYNESIE FRANCAISE" label="POLYNESIE FRANCAISE">POLYNESIE FRANCAISE</option>
+    <option value="PORTO RICO" label="PORTO RICO">PORTO RICO</option>
+    <option value="PORTUGAL" label="PORTUGAL">PORTUGAL</option>
+    <option value="POSSESSIONS BRITANNIQUES AU PROCHE-ORIENT" label="POSSESSIONS BRITANNIQUES AU PROCHE-ORIENT">POSSESSIONS BRITANNIQUES AU PROCHE-ORIENT</option>
+    <option value="PRESIDES" label="PRESIDES">PRESIDES</option>
+    <option value="PROVINCES ESPAGNOLES D'AFRIQUE" label="PROVINCES ESPAGNOLES D'AFRIQUE">PROVINCES ESPAGNOLES D'AFRIQUE</option>
+    <option value="QATAR" label="QATAR">QATAR</option>
+    <option value="REPUBLIQUE DEMOCRATIQUE ALLEMANDE" label="REPUBLIQUE DEMOCRATIQUE ALLEMANDE">REPUBLIQUE DEMOCRATIQUE ALLEMANDE</option>
+    <option value="REPUBLIQUE FEDERALE D'ALLEMAGNE" label="REPUBLIQUE FEDERALE D'ALLEMAGNE">REPUBLIQUE FEDERALE D'ALLEMAGNE</option>
+    <option value="ROUMANIE" label="ROUMANIE">ROUMANIE</option>
+    <option value="ROYAUME-UNI" label="ROYAUME-UNI">ROYAUME-UNI</option>
+    <option value="RUSSIE" label="RUSSIE">RUSSIE</option>
+    <option value="RWANDA" label="RWANDA">RWANDA</option>
+    <option value="SAHARA OCCIDENTAL" label="SAHARA OCCIDENTAL">SAHARA OCCIDENTAL</option>
+    <option value="SAINT-BARTHELEMY" label="SAINT-BARTHELEMY">SAINT-BARTHELEMY</option>
+    <option value="SAINT-CHRISTOPHE-ET-NIEVES" label="SAINT-CHRISTOPHE-ET-NIEVES">SAINT-CHRISTOPHE-ET-NIEVES</option>
+    <option value="SAINTE-HELENE" label="SAINTE-HELENE">SAINTE-HELENE</option>
+    <option value="SAINTE-LUCIE" label="SAINTE-LUCIE">SAINTE-LUCIE</option>
+    <option value="SAINT-MARIN" label="SAINT-MARIN">SAINT-MARIN</option>
+    <option value="SAINT-MARTIN" label="SAINT-MARTIN">SAINT-MARTIN</option>
+    <option value="SAINT-PIERRE-ET-MIQUELON" label="SAINT-PIERRE-ET-MIQUELON">SAINT-PIERRE-ET-MIQUELON</option>
+    <option value="SAINT-VINCENT-ET-LES GRENADINES" label="SAINT-VINCENT-ET-LES GRENADINES">SAINT-VINCENT-ET-LES GRENADINES</option>
+    <option value="SALOMON (ILES)" label="SALOMON (ILES)">SALOMON (ILES)</option>
+    <option value="SAMOA AMERICAINES" label="SAMOA AMERICAINES">SAMOA AMERICAINES</option>
+    <option value="SAMOA OCCIDENTALES" label="SAMOA OCCIDENTALES">SAMOA OCCIDENTALES</option>
+    <option value="SAO TOME-ET-PRINCIPE" label="SAO TOME-ET-PRINCIPE">SAO TOME-ET-PRINCIPE</option>
+    <option value="SENEGAL" label="SENEGAL">SENEGAL</option>
+    <option value="SERBIE" label="SERBIE">SERBIE</option>
+    <option value="SEYCHELLES" label="SEYCHELLES">SEYCHELLES</option>
+    <option value="SIBERIE" label="SIBERIE">SIBERIE</option>
+    <option value="SIERRA LEONE" label="SIERRA LEONE">SIERRA LEONE</option>
+    <option value="SINGAPOUR" label="SINGAPOUR">SINGAPOUR</option>
+    <option value="SLOVAQUIE" label="SLOVAQUIE">SLOVAQUIE</option>
+    <option value="SLOVENIE" label="SLOVENIE">SLOVENIE</option>
+    <option value="SOMALIE" label="SOMALIE">SOMALIE</option>
+    <option value="SOUDAN" label="SOUDAN">SOUDAN</option>
+    <option value="SOUDAN ANGLO-EGYPTIEN, KENYA, OUGANDA" label="SOUDAN ANGLO-EGYPTIEN, KENYA, OUGANDA">SOUDAN ANGLO-EGYPTIEN, KENYA, OUGANDA</option>
+    <option value="SRI LANKA" label="SRI LANKA">SRI LANKA</option>
+    <option value="SUEDE" label="SUEDE">SUEDE</option>
+    <option value="SUISSE" label="SUISSE">SUISSE</option>
+    <option value="SURINAME" label="SURINAME">SURINAME</option>
+    <option value="SVALBARD et ILE JAN MAYEN" label="SVALBARD et ILE JAN MAYEN">SVALBARD et ILE JAN MAYEN</option>
+    <option value="SWAZILAND" label="SWAZILAND">SWAZILAND</option>
+    <option value="SYRIE" label="SYRIE">SYRIE</option>
+    <option value="TADJIKISTAN" label="TADJIKISTAN">TADJIKISTAN</option>
+    <option value="TAIWAN" label="TAIWAN">TAIWAN</option>
+    <option value="TANGER" label="TANGER">TANGER</option>
+    <option value="TANZANIE" label="TANZANIE">TANZANIE</option>
+    <option value="TCHAD" label="TCHAD">TCHAD</option>
+    <option value="TCHECOSLOVAQUIE" label="TCHECOSLOVAQUIE">TCHECOSLOVAQUIE</option>
+    <option value="TCHEQUE (REPUBLIQUE)" label="TCHEQUE (REPUBLIQUE)">TCHEQUE (REPUBLIQUE)</option>
+    <option value="TERR. DES ETATS-UNIS D'AMERIQUE EN AMERIQUE" label="TERR. DES ETATS-UNIS D'AMERIQUE EN AMERIQUE">TERR. DES ETATS-UNIS D'AMERIQUE EN AMERIQUE</option>
+    <option value="TERR. DES ETATS-UNIS D'AMERIQUE EN OCEANIE" label="TERR. DES ETATS-UNIS D'AMERIQUE EN OCEANIE">TERR. DES ETATS-UNIS D'AMERIQUE EN OCEANIE</option>
+    <option value="TERR. DU ROYAUME-UNI DANS L'ATLANTIQUE SUD" label="TERR. DU ROYAUME-UNI DANS L'ATLANTIQUE SUD">TERR. DU ROYAUME-UNI DANS L'ATLANTIQUE SUD</option>
+    <option value="TERRE-NEUVE" label="TERRE-NEUVE">TERRE-NEUVE</option>
+    <option value="TERRES AUSTRALES FRANCAISES" label="TERRES AUSTRALES FRANCAISES">TERRES AUSTRALES FRANCAISES</option>
+    <option value="TERRITOIRE DES PAYS-BAS" label="TERRITOIRE DES PAYS-BAS">TERRITOIRE DES PAYS-BAS</option>
+    <option value="TERRITOIRES DU ROYAUME-UNI AUX ANTILLES" label="TERRITOIRES DU ROYAUME-UNI AUX ANTILLES">TERRITOIRES DU ROYAUME-UNI AUX ANTILLES</option>
+    <option value="THAILANDE" label="THAILANDE">THAILANDE</option>
+    <option value="TIMOR ORIENTAL" label="TIMOR ORIENTAL">TIMOR ORIENTAL</option>
+    <option value="TOGO" label="TOGO">TOGO</option>
+    <option value="TOKELAU" label="TOKELAU">TOKELAU</option>
+    <option value="TONGA" label="TONGA">TONGA</option>
+    <option value="TRINITE-ET-TOBAGO" label="TRINITE-ET-TOBAGO">TRINITE-ET-TOBAGO</option>
+    <option value="TUNISIE" label="TUNISIE">TUNISIE</option>
+    <option value="TURKESTAN RUSSE" label="TURKESTAN RUSSE">TURKESTAN RUSSE</option>
+    <option value="TURKMENISTAN" label="TURKMENISTAN">TURKMENISTAN</option>
+    <option value="TURKS ET CAIQUES (ILES)" label="TURKS ET CAIQUES (ILES)">TURKS ET CAIQUES (ILES)</option>
+    <option value="TURQUIE" label="TURQUIE">TURQUIE</option>
+    <option value="TURQUIE D'EUROPE" label="TURQUIE D'EUROPE">TURQUIE D'EUROPE</option>
+    <option value="TUVALU" label="TUVALU">TUVALU</option>
+    <option value="UKRAINE" label="UKRAINE">UKRAINE</option>
+    <option value="URUGUAY" label="URUGUAY">URUGUAY</option>
+    <option value="VANUATU" label="VANUATU">VANUATU</option>
+    <option value="VATICAN, ou SAINT-SIEGE" label="VATICAN, ou SAINT-SIEGE">VATICAN, ou SAINT-SIEGE</option>
+    <option value="VENEZUELA" label="VENEZUELA">VENEZUELA</option>
+    <option value="VIERGES BRITANNIQUES (ILES)" label="VIERGES BRITANNIQUES (ILES)">VIERGES BRITANNIQUES (ILES)</option>
+    <option value="VIERGES DES ETATS-UNIS (ILES)" label="VIERGES DES ETATS-UNIS (ILES)">VIERGES DES ETATS-UNIS (ILES)</option>
+    <option value="VIET NAM" label="VIET NAM">VIET NAM</option>
+    <option value="VIET NAM DU NORD" label="VIET NAM DU NORD">VIET NAM DU NORD</option>
+    <option value="VIET NAM DU SUD" label="VIET NAM DU SUD">VIET NAM DU SUD</option>
+    <option value="WALLIS-ET-FUTUNA" label="WALLIS-ET-FUTUNA">WALLIS-ET-FUTUNA</option>
+    <option value="YEMEN" label="YEMEN">YEMEN</option>
+    <option value="YEMEN (REPUBLIQUE ARABE DU)" label="YEMEN (REPUBLIQUE ARABE DU)">YEMEN (REPUBLIQUE ARABE DU)</option>
+    <option value="YEMEN DEMOCRATIQUE" label="YEMEN DEMOCRATIQUE">YEMEN DEMOCRATIQUE</option>
+    <option value="ZAMBIE" label="ZAMBIE">ZAMBIE</option>
+    <option value="ZANZIBAR" label="ZANZIBAR">ZANZIBAR</option>
+    <option value="ZIMBABWE" label="ZIMBABWE">ZIMBABWE</option>
+</select><span class="validation"></span></p>
+<span class="obligatoire">* Champs obligatoires (ces informations sont indispensables pour bénéficier de votre réduction fiscale)</span>
+</div>
+<div id="field_71">
+<div class="divGenerateur"><label for="field_73" class="required">Mon mode paiement : <span class="required">*</span></label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_73" id="field_73-j-effectue-mon-don-par-carte-bancaire--visa--carte-bleue--mastercard--e-card-" value="J'effectue mon don par carte bancaire (Visa, Carte bleue, Mastercard, E-card)" class="" />J'effectue mon don par carte bancaire (Visa, Carte bleue, Mastercard, E-card)</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_73" id="field_73-j-effectue-mon-don-par-cheque" value="J'effectue mon don par chèque" class="" />J'effectue mon don par chèque</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_73" id="field_73-j-effectue-mon-don-par-virement-bancaire" value="J'effectue mon don par virement bancaire" class="" />J'effectue mon don par virement bancaire</label></li></ul><div></div><span class="validation"></span></div>
+</div>
+<div class="remerciement" id="field_21">
+<h2>A propos de moi, je souhaite :</h2>
+<div id="field_58">
+<div class="divGenerateur"><label for="field_36" class="required">&nbsp; <span class="required">*</span></label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_36" id="field_36-garder-l-anonymat-" value="Garder l'anonymat." checked="checked" class="" />Garder l'anonymat.</label></li>
+<li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="radio" name="field_36" id="field_36-etre-cite--parmi-les-mecenes-sur-les-supports-dedies-a-cette-campagne-et-selon-les-modalites-definies-par-le-musee-" value="Etre cité* parmi les mécènes sur les supports dédiés à cette campagne et selon les modalités définies par le musée." class="" />Etre cité* parmi les mécènes sur les supports dédiés à cette campagne et selon les modalités définies par le musée.</label></li></ul><div></div><span class="validation"></span></div>
+</div>
+<p class="submit">
+<input type="submit" name="input_submit3" id="field_5" value="Valider mon don" class="" /><span class="validation"></span></p>
+<span class="commentaire">*En application des articles 39 et suivants de la loi du 6 janvier 1978 modifiée, vous bénéficiez d'un droit d?accès et de rectification aux informations qui vous concernent ainsi qu'un droit de suppression de ces mêmes données. Si vous souhaitez exercer ce droit et obtenir communication des informations vous concernant, veuillez vous adresser au musée.</span>
+</div>
+
+<input type="hidden" name="field_64_hidden" value="" id="field_64_hidden" />
+
+<input type="hidden" name="field_46_hidden" value="" id="field_46_hidden" />
+
+<input type="hidden" name="field_70_hidden" value="" id="field_70_hidden" />
+
+<input type="hidden" name="field_73_hidden" value="" id="field_73_hidden" />
+
+<input type="hidden" name="field_36_hidden" value="" id="field_36_hidden" />
+<div class="divGenerateurRequired"><span class="required">*</span>&nbsp;Champs requis</div></form><script type="text/javascript">var Forms = Forms || { };
+Forms.language = 'fr';
+Forms.pays = 'FRANCE';
+Forms.formulaire_3 = { };
+Forms.formulaire_3.field_28 = [ { name: 'Zend_Validate_Float', parameters: {} } ];
+Forms.formulaire_3.field_70 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_1 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_20 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_4 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} }, { name: 'Zend_Validate_EmailAddress', parameters: {} } ];
+Forms.formulaire_3.field_12 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_14 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} }, { name: 'Zend_Validate_Digits', parameters: {} } ];
+Forms.formulaire_3.field_13 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_34 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_73 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_3.field_36 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+</script>                            						  </div>
+                               <p><strong>La Piscine vous remercie de votre soutien :</strong></p>
+                               
+                               <p>Tous nos donateurs seront remerciés nominativement, sauf demande contraire - sur le site internet dédié à la campagne jusqu'au 29 février puis sur le site de La Piscine jusqu'à la fin des travaux.</p>
+                               
+                               <p><strong>Pour tout don de 20 euros ou plus</strong> (soit 6 euros&nbsp;après réduction fiscale), vous recevrez une carte postale et un badge « La Piscine, Mon musée ».</p>
+                               
+                               <p><strong>Pour tout don de 50&nbsp;euros&nbsp;ou plus</strong> (soit 17 euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge « La Piscine, Mon musée » et une entrée au musée.</p>
+                               
+                               <p><strong>Pour tout don de 100&nbsp;euros&nbsp;ou plus</strong> (soit 34&nbsp;euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge « La Piscine, Mon musée », une entrée au musée et votre nom sera inscrit dans le hall du musée pendant la durée des travaux.</p>
+                               
+                               <p><strong>Pour tout don de 200&nbsp;euros&nbsp;ou plus</strong> (soit 68 euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge et un autocollant « La Piscine, Mon musée », une entrée au musée, un catalogue Roubaix Oh quelle Ville et votre nom sera inscrit dans le hall du musée pendant la durée des travaux.</p>
+                               
+                               <p><strong>Pour tout don de 300&nbsp;euros&nbsp;ou plus</strong> (soit 102&nbsp;euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge et un autocollant « La Piscine, Mon musée », une entrée duo, un catalogue Roubaix Oh quelle Ville et votre nom sera inscrit dans le hall du musée pendant la durée des travaux.</p>
+                               
+                               <p><strong>Pour tout don de 500? ou plus</strong> (soit 170&nbsp;euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge et un autocollant « La Piscine, Mon musée », une entrée duo, un catalogue Roubaix Oh quelle Ville et un catalogue du musée. Votre nom sera également inscrit dans le hall du musée pendant la durée des travaux.&nbsp;</p>
+                               
+                               <p><strong>Pour tout don de 1000&nbsp;euros&nbsp;ou plus</strong> (soit 340&nbsp;euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge et un autocollant « La Piscine, Mon musée », trois entrées duo au musée, un catalogue Roubaix Oh quelle Ville et un catalogue du musée. Votre nom sera également inscrit dans le hall du musée pendant la durée des travaux.&nbsp;</p>
+                               
+                               <p><strong>Pour tout don de 1500&nbsp;euros&nbsp;ou plus</strong> (soit 510&nbsp;euros&nbsp;après réduction fiscale), vous recevrez une carte postale, un badge et un autocollant « La Piscine, Mon musée », trois entrées duo au musée, un catalogue Roubaix Oh quelle Ville, un catalogue du musée et une invitation VIP à l'inauguration. Votre nom sera également inscrit dans le hall du musée pendant la durée des travaux.&nbsp;</p>
+                               
+                               
+                               <p>Pour les dons supérieurs à 2000&nbsp;euros&nbsp;des dispositifs de remerciements spécifiques ont été imaginés. Pour en savoir plus, <a class="contreparties" href="gifs/contreparties.pdf" target="_blank">cliquez ici</a>
+       						
+					<div class="formulaire_contact" id="professionnelForm">
+                    	
+
+<form id="formulaire_5" onsubmit="return App.validate(this);" enctype="application/x-www-form-urlencoded" class="generateur" action="/don.php" method="post">
+<div class="form_right" id="field_18">
+<h2>Vous êtes une entreprise ?</h2>
+<div id="field_33">
+<p><label for="field_1" class="required">Nom et prénom : <span class="required">*</span></label>
+
+<input type="text" name="field_1" id="field_1" value="" class="" size="30" maxlength="100" /><span class="validation"></span></p>
+<p><label for="field_20" class="optional">Fonction :</label>
+
+<input type="text" name="field_20" id="field_20" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_26" class="required">Dénomination de l'entreprise : <span class="required">*</span></label>
+
+<input type="text" name="field_26" id="field_26" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_12" class="required">Adresse : <span class="required">*</span></label>
+
+<input type="text" name="field_12" id="field_12" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_14" class="required">Code postal : <span class="required">*</span></label>
+
+<input type="text" name="field_14" id="field_14" value="" class="" size="10" maxlength="5" /><span class="validation"></span></p>
+<p><label for="field_27" class="required">Ville : <span class="required">*</span></label>
+
+<input type="text" name="field_27" id="field_27" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_3" class="required">Tel fixe : <span class="required">*</span></label>
+
+<input type="text" name="field_3" id="field_3" value="" class="" size="30" maxlength="100" /><span class="validation"></span></p>
+<p><label for="field_23" class="optional">Tel portable :</label>
+
+<input type="text" name="field_23" id="field_23" value="" class="" size="30" maxlength="150" /><span class="validation"></span></p>
+<p><label for="field_4" class="required">Adresse e-mail <span class="required">*</span></label>
+
+<input type="text" name="field_4" id="field_4" value="" class="" size="30" maxlength="100" /><span class="validation"></span></p>
+<div class="form_left" id="field_16">
+<div class="divGenerateur"><label for="field_24" class="optional">&nbsp;</label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="checkbox" name="field_24[]" id="field_24-je-souhaite-etre-contacte-pour-un-rendez-vous" value="Je souhaite être contacté pour un rendez-vous" class="" />Je souhaite être contacté pour un rendez-vous</label></li></ul><div></div><span class="validation"></span></div>
+<div class="divGenerateur"><label for="field_25" class="optional">&nbsp;</label>
+
+<ul><li><label style="white-space: nowrap;" class="noFloatingLabel"><input type="checkbox" name="field_25[]" id="field_25-je-souhaite-recevoir-un-dossier" value="Je souhaite recevoir un dossier" class="" />Je souhaite recevoir un dossier</label></li></ul><div></div><span class="validation"></span></div>
+</div>
+<p class="submit">
+<input type="submit" name="input_submit5" id="field_5" value="Validation" class="" /><span class="validation"></span></p>
+</div>
+<div id="field_28">
+<span class="commentaire">Afin de faire un don au titre du mécénat et bénéficier des 60% de déduction sur l'IS dans la limite de 0,5% du CA et des contreparties matérielles adaptées (mises à disposition d'espaces, événements de relations publiques, communication, une plaque nominative ou cartel, une soirée privée?).</span>
+</div>
+</div>
+
+<input type="hidden" name="field_24_hidden" value="" id="field_24_hidden" />
+
+<input type="hidden" name="field_25_hidden" value="" id="field_25_hidden" />
+<div class="divGenerateurRequired"><span class="required">*</span>&nbsp;Champs requis</div></form><script type="text/javascript">var Forms = Forms || { };
+Forms.language = 'fr';
+Forms.pays = 'FRANCE';
+Forms.formulaire_5 = { };
+Forms.formulaire_5.field_1 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_5.field_26 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_5.field_12 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_5.field_14 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} }, { name: 'Zend_Validate_Digits', parameters: {} } ];
+Forms.formulaire_5.field_27 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} } ];
+Forms.formulaire_5.field_3 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} }, { name: 'My_Zend_Validate_Telephone', parameters: {} } ];
+Forms.formulaire_5.field_4 = [ { name: 'Zend_Validate_NotEmpty', parameters: {} }, { name: 'Zend_Validate_EmailAddress', parameters: {} } ];
+</script>	
+					</div>	
+						
+					</div>
+				</div>
+				</div>
+				<div class="clear_both no_mobile"></div>
+			</section>
+			<footer>
+	<section>
+		<div class="adresse_footer">
+			<div class="logo_global">
+				
+				<a class="laville" href="http://www.ville-roubaix.fr/" target="_blank"><img src="gifs/logo_ville.png"></a>
+                <a class="ministere" href="http://www.culturecommunication.gouv.fr/" target="_blank"><img src="gifs/ministere.png"></a>
+                <a class="region" href="http://www.nordpasdecalais.fr/jcms/c_5001/accueil" target="_blank"><img src="gifs/region.png"></a>
+                <a class="mel" href="http://www.lillemetropole.fr/sites/lmcu/mel.html" target="_blank"><img src="gifs/mel.png"></a>
+                <a class="mecene" href="#"><img src="gifs/mecene.png" target="_blank"></a>
+                <a class="amis" href="https://fr-fr.facebook.com/museepiscine" target="_blank"><img src="gifs/amis.png"></a>
+                <a class="roubaix" href="http://www.roubaix-lapiscine.com/" target="_blank"><img src="gifs/roubaix.png"></a>
+			</div>
+            
+            
+           <div class="bloc_info1"> 
+              <div class="adresse_global">
+                  <span class="adresse">BP 60429 <span>59058 Roubaix Cedex </span></span>	
+                  <span class="phone">0800 5 59100</span>
+              </div>
+              <div class="icon_social">
+                  <a class="icon_facebook" href="https://www.facebook.com/museepiscine?_rdr=p" target="_blank"><img src="gifs/icon_facebook.png" alt=""></a>
+                  <a class="icon_twitter" href="https://twitter.com/museelapiscine" target="_blank"><img src="gifs/icon_twitter.png" alt="" ></a>
+                  <a class="icon_instagram" href="https://instagram.com/museelapiscine/" target="_blank"><img src="gifs/icon_instagram.png" alt=""></a>
+              </div>
+           </div> 
+            
+			
+		</div>
+        
+        <div class="bloc_info2">
+        <div class="centrage_footer"> 
+          <a class="credit" href="credit.php" data-fancybox-type="iframe" rel="lightbox2">crédits</a>
+          <a class="ML_box no_desktop" href="/42Bis/ajax/mentions_legales_box.php" data-fancybox-type="iframe">Mentions légales</a>
+          <div class="navigation no_mobile">Plan du site</div>
+        </div>
+	   </div>
+	   
+
+				
+	</section>
+</footer>
+
+<div id="navigation_frame">
+	<div class="lien_footer">
+		<a class="logo_footer" href="/"></a>
+		<ul><li class="firstLi"><a href="/">Accueil</a></li><li class="firstLi"><a href="musee-et-extension.php">Le musée et son extension</a></li><li class="firstLi"><a href="projets-a-financer.php">Les projets à financer</a></li><li class="firstLi"><a class="selected" href="don.php">Je fais un don</a></li><li class="sousLi particulier"><a class="selected" href="don.php">Particulier</a></li><li class="sousLi professionnel"><a class="selected" href="don.php">professionnel</a></li></ul><ul><li class="firstLi"><a href="actualites_al.html">Actualités</a></li><li class="firstLi"><a href="remerciements_cl3.html">Remerciements</a></li><li class="firstLi"><a href="livre-d-or_cl1.html">Livre d'or</a></li><li class="firstLi"><a href="contact.php">Contact</a></li></ul><ul><li class="firstLi ML_box"><a href="http://www.mapiscinederoubaix.fr/42Bis/ajax/mentions_legales_box.php">Mentions légales</a></li><li class="firstLi"><a id="NL_box" data-fancybox-type="iframe" href="/ressources/ajax/newsletter_box.php">S'inscrire à la lettre d'information</a></li></ul>	</div>
+	<div class="close"></div>
+</div>
+
+<div class="black"></div>
+
+<span class="top_site_mobile">c</span>
+			<div class="ref_close">
+	<span class="plus_ref">&nbsp;</span>
+	<p class="contenu_ref"></p>
+</div>
+		</section>
+		<section id="IEcheck"></section>
+		<script src="/ressources/rwd.v1.1/js/outils.js"></script>
+<script src="/ressources/20121001/js/jquery.fancybox.js"></script>
+<script src="/ressources/v2.0.3/js/jquery.bxslider.min.js"></script>
+<script src="js/scripts.js?201601131"></script>
+		<script>
+			$(document).ready(function() {
+				if (window.location.href.indexOf("don.php?particulier") > -1) {
+					$("html, body").animate({scrollTop: $('#particulierForm').offset().top }, 300);
+				}else if (window.location.href.indexOf("don.php?professionnel") > -1) {
+					$("html, body").animate({scrollTop: $('#professionnelForm').offset().top }, 300);
+				}
+				var taille_ecran = $(window).width();
+				if(taille_ecran>=480){
+					var left = $('.form_left').height();
+					var right = $('.form_right').height();
+					if(right > left){
+						$('.form_left').height(right);
+					}else{
+						$('.form_right').height(left);
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

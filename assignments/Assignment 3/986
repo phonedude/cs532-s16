@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		
+        <title>
+            Job Opportunities
+        </title>
+		
+			<link href="https://www.healthcaresource.com/slhn/style.css" rel="stylesheet" type="text/css" />
+			<link href="https://www.healthcaresource.com/slhn/style_JobSearch.css" rel="stylesheet" type="text/css" />
+		
+
+		<script type="text/javascript">
+    	/* keeps popup on top */
+	  	function checkPopup()
+	  	{
+	    	try
+	    	{
+	      		if (newwindow != null && !newwindow.closed)
+	      		{
+		      		newwindow.focus();
+	      		}
+	    	}
+	    	catch(e)
+	    	{
+  	
+    		}
+	  	}
+  		</script>
+    </head>
+    <body  onfocus="checkPopup();" >
+        <div id="popupMessage" style="display: none;">
+            <p>
+                It has been determined that you are currently running a &quot;Popup Blocker&quot;. In order to continue, please <strong>allow</strong> this site from within your &quot;Popup
+                Blocker&quot; preferences.
+            </p>
+        </div>
+<script type="text/javascript">
+	function toggleElement(element)
+	{
+		if(document.getElementById(element).style.display == 'none')
+		{
+	   		document.getElementById(element).style.display = '';
+	 	}
+	 	else if(document.getElementById(element).style.display != 'none')
+		{
+	   		document.getElementById(element).style.display = 'none';
+	 	}
+	}
+</script>
+<script type="text/javascript" src="/documents/siteManager/mx/js/xmlhttprequest.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+  var URL_PATH = "index.cfm";
+  var XHR = getHTTPObject();
+  
+  var sURL = "";
+
+  /* called to begin XMLHTTPRequest activity */
+  function XHR_ClearSession()
+  {  	
+  	XHR.open("POST", URL_PATH, true);
+		XHR.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+		XHR.onreadystatechange = handleXHR_ClearSession;
+ 		XHR.send("fuseaction=login.logout");
+  }
+ 
+  /* used to output data received via ajax */
+  function handleXHR_ClearSession()
+  {
+    if (XHR.readyState == 4 && XHR.status == 200)
+    {
+    	/* handle popup new window */
+      newwindow = open(sURL+"&blnNewWindowStart=true","newwin", "scrollbars=yes,toolbar=no,directories=no,menubar=no,resizable=yes,status=yes,width=660,height=500,left=10,top=10");
+	
+	    try
+	    {
+	      var obj = newwindow.name;
+        document.getElementById('popupMessage').style.display = "none";
+	    }
+	    catch(e)
+	    {    	
+        if (newwindow != null && !newwindow.closed)
+	      {
+	        newwindow.focus();
+	      }
+	      document.getElementById('popupMessage').style.display = "block";
+	    }
+    }
+  }
+
+  /* begin application */
+  function openit(URL)
+  {		
+  	  sURL = URL;
+  	
+  	  //remote call to login.logout
+      XHR_ClearSession();
+  } 
+  
+  /* send to friend */
+  function new_window(url)
+  {
+    link = window.open(url,"Link","toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=1,width=660,height=400,left=20,top=40");
+  }
+  
+//]]>
+</script>
+
+<div id="jobDetails">
+  <div class="navBar">
+	  <form action="?fuseaction=home.main">
+		  <input type="submit" name="submit" value="New Search">
+      <input type="button" VALUE="Return To Jobs" onClick="history.back()">
+		</form>
+	</div>
+
+  
+
+  <div class="sendJobToFriend">
+	  <a class="bannertext" href="#" onclick="new_window('?fuseaction=search.jobDetails&template=dsp_email_job.cfm&cJobId=100105538')">
+		  Send this job to a friend
+		</a>
+  </div>
+
+  <table>
+    <tr class="banner">
+      <td colspan="2" nowrap="nowrap">
+      	<div class="jobTitle" style="color: #FFFFFF">SUP-NURSING I</div>
+			</td>
+	  </tr>
+          <tr>
+      <td class="formOffsetColor" width="25%">Facility:</td>
+      <td class="form">Deer Valley Med Center, , </td>
+    </tr>
+    
+    <tr>
+      <td class="formOffsetColor">Job Category:</td>
+      <td class="form">Management</td>
+    </tr>
+     <tr>
+      <td class="formOffsetColor">Department:</td>
+      <td class="form">RAD Interventional</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Schedule:</td>
+      <td class="form">Full-time</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Shift:</td>
+      <td class="form">Days</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Hours:</td>
+      <td class="form">varied</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Hours/PP:</td>
+      <td class="form">72</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Req #:</td>
+      <td class="form">57573</td>
+    </tr>
+    
+    <tr>
+		  <td class="formOffsetColor" valign="top">Job Details:</td>
+      <td class="form">
+        <ul>
+		    
+			    <li><H5 style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-STYLE: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 12.0pt"><FONT size=3>POSITION SUMMARY<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></SPAN></H5>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Supervises, assesses, plans, coordinates facilitates, and evaluates patient care and staff development; determines and maintains unit or program needs and standards (using nursing process and evidence –based information).<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Assumes responsibility and accountability for incorporating the vision, values, mission, and critical goals of the organization into their job performance.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Assists the Clinical Director, in the management of the unit's assigned staff and patient population.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>May provide direct patient care according to needs of the unit/program and collaborates with physicians in executing the medical plan of care.<o:p></o:p></SPAN></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 12pt">POSITION QUALIFICATIONS<o:p></o:p></SPAN></B></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 12pt"><o:p>&nbsp;</o:p></SPAN></B></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">EDUCATION:</SPAN></B><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt"><SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN style="COLOR: black; mso-themecolor: text1">Bachelor of Science degree in Nursing.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Legally licensed to work as a registered nurse in the State of Arizona.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Certification in BLS for healthcare workers.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>May require additional certification in specialty areas.<o:p></o:p></SPAN></SPAN></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt; mso-themecolor: text1"><o:p>&nbsp;</o:p></SPAN></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">EXPERIENCE:</SPAN></B><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt"> <SPAN style="mso-spacerun: yes">&nbsp;</SPAN><SPAN style="COLOR: black; mso-themecolor: text1">2 years RN<o:p></o:p></SPAN></SPAN></P>  <P mce_keep="true">&nbsp;</P> <P></li>
+		    
+				</ul>
+	    </td>
+    </tr>
+    
+  </table>
+  <br />
+<div class="content applyLinks" id="applyLinks_1" style="text-align:center;">
+            
+            
+			<span class="bannertext" onclick="toggleElement('applyLinks_1'); toggleElement('externalApplyConfirm_1');">
+				External Applicant Click here to apply<br />
+			</span>
+            <br />
+            
+            <span class="bannertext" onclick="toggleElement('applyLinks_1'); toggleElement('internalApplyConfirm_1');">
+                Current Employees Click here to apply
+            </span>
+			<br />
+        </div>
+        <div class="applicantShield" id="externalApplyConfirm_1" style="display:none;">
+            <h1 class="confirmBanner banner">External Application Confirm</h1>
+            <div class="messageContainer">
+                <p>Are you sure you want to continue as an <strong>EXTERNAL</strong> applicant?</p>
+                <div class="buttonContainer">
+                	<div class="button banner"  style="margin-right:20px;" onclick="javascript:openit('?fuseaction=apply.login&template=dsp_apply_login.cfm&cJobId=100105538');toggleElement('applyLinks_1'); toggleElement('externalApplyConfirm_1');">
+                        Yes
+                    </div>
+					<div class="button banner" onclick="toggleElement('applyLinks_1'); toggleElement('externalApplyConfirm_1');">
+                        No
+                    </div>
+                    <br style="clear:both;" />
+                </div>
+            </div>
+        </div>
+        <div class="applicantShield" id="internalApplyConfirm_1" style="display:none;">
+            <h1 class="confirmBanner banner">Internal Application Confirm</h1>
+            <div class="messageContainer">
+                <p>Are you sure you want to continue as an <strong>INTERNAL</strong> applicant?</p>
+                <div class="buttonContainer">
+                    <div class="button banner" style="margin-right:20px;" onclick="javascript:openit('https://www.healthcaresource.com/slhn_i/index.cfm?fuseaction=apply.login&template=dsp_apply_login.cfm&cJobId=100105538');toggleElement('applyLinks_1'); toggleElement('internalApplyConfirm_1');">
+                        Yes
+                    </div>
+                    <div class="button banner" onclick="toggleElement('applyLinks_1'); toggleElement('internalApplyConfirm_1');">
+                        No
+                    </div>
+                    <br style="clear:both;" />
+                </div>
+            </div>
+        </div>
+	
+<br />
+
+
+<div class="navBar">
+  <form action="?fuseaction=home.main">
+	  <input type="submit" name="submit" value="New Search">
+    <input type="button" VALUE="Return To Jobs" onClick="history.back()">
+	</form>
+</div>
+
+
+
+  <a class="back_to_top" href="#" onclick="self.scrollTo(0,0)">back to top</a>
+
+</div>
+</form>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	Account Executive - Martinburg, WV
+</title><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link href="/HHStyles.css" rel="Stylesheet" type="text/css" /><link href="http://www.fulltimegigs.com/wp-content/themes/canvas5/style.css" rel="Stylesheet" type="text/css" /><link href="http://www.fulltimegigs.com/wp-content/themes/canvas5/css/layout.css" rel="Stylesheet" type="text/css" /><link href="http://www.fulltimegigs.com/wp-content/themes/fulltimegigs.com/style.css?ver=3.5.1" rel="Stylesheet" type="text/css" /><link rel="stylesheet" href="http://www.fulltimegigs.com/wp-content/plugins/mailchimp-for-wp/assets/css/checkbox.min.css?ver=2.2" type="text/css" media="all" /><link rel="stylesheet" href="http://www.fulltimegigs.com/wp-content/plugins/mailchimp-for-wp/assets/css/form.min.css?ver=2.2" type="text/css" media="all" /><link rel="stylesheet" href="http://www.fulltimegigs.com/wp-content/themes/fulltimegigs.com/style.css?ver=3.9.3" type="text/css" media="all" />
+<!-- Google Webfonts -->
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:r,i,b,bi|Raleway:100" rel="stylesheet" type="text/css" /><link href="/HHStylesCustom.css" rel="Stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="/ie8.css" />
+    <![endif]-->
+    
+    <script type="text/javascript" src="/js/html5.js"></script>
+    <meta content="initial-scale=1.0; maximum-scale=1.0; user-scalable=yes" name="viewport" />
+    
+    <script type="text/javascript">
+        var _active_page = "job_seekers";
+    </script>
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="Account_Executive_J2313226.aspx" />
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write('<script type="text/javascript" src="/js/jquery.min.js"></' + 'script>');
+        }
+    </script>
+    <script src="../js/Highlight.js" type="text/javascript"></script>
+
+
+    <script language="javascript" type="text/javascript">
+
+        jQuery(document).ready(function () {
+            if (document.getElementById("uxKeywords") != null)
+                var keywords = document.getElementById("uxKeywords").value.split(",");
+            jQuery.each(keywords, function (i) {
+                var keyword = keywords[i];
+                var wordsOnly = (keyword.indexOf(".") == -1 && keyword.indexOf("#") == -1 && keyword.indexOf("+") == -1 && keyword.indexOf("*") == -1);
+                jQuery("#dvSearchDetailContainer").highlight(jQuery.trim(keyword.replace("\*", "")), { wordsOnly: wordsOnly });
+            });
+        });
+
+        function ShowSendForm() {
+            if (document.getElementById('dvSendToFriend').style.display == 'none')
+                document.getElementById('dvSendToFriend').style.display = '';
+            else
+                document.getElementById('dvSendToFriend').style.display = 'none';
+        }
+
+        function RefreshImage(valImageId) {
+            var objImage = document.images[valImageId];
+            if (objImage == undefined) {
+                return;
+            }
+            var now = new Date();
+            objImage.src = objImage.src.split('?')[0] + '?x=' + now.toUTCString();
+        }
+
+        function SendEmail() {
+            var frm = document.getElementById("form1");
+            if (CheckForm()) {
+                jQuery.post("/JobSeeker/Handlers/SendToFriend.ashx", { FromEmail: frm.ctl00$ContentPlaceHolder1$txtFromEmail.value, ToEmail: frm.ctl00$ContentPlaceHolder1$txtToEmail.value, Subject: frm.ctl00$ContentPlaceHolder1$txtSubject.value, Message: frm.ctl00$ContentPlaceHolder1$txtBody.value, Captcha: frm.ctl00$ContentPlaceHolder1$txtTuring.value },
+				    function (data) {
+				        if (data.toLowerCase() == "sent") {
+				            alert("Your email has been sent.");
+				            ShowSendForm();
+				        }
+				        else
+				            alert("The following error occurred trying to send your email.\n" + data);
+				    });
+            }
+        }
+
+
+        function stringIsEmail(elementValue) {
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            return emailPattern.test(elementValue);
+        }
+
+
+        function CheckForm() {
+            var frmSendToFriend = document.getElementById("form1");
+            var prefix = "ctl00$ContentPlaceHolder1$";
+
+            if (!stringIsEmail(frmSendToFriend.elements[prefix + "txtFromEmail"].value)) {
+                alert("Please provide a valid to address.");
+                frmSendToFriend.elements[prefix + "txtFromEmail"].focus();
+                return false;
+            }
+
+            if (!stringIsEmail(frmSendToFriend.elements[prefix + "txtToEmail"].value)) {
+                alert("Please provide a valid to address.");
+                frmSendToFriend.elements[prefix + "txtToEmail"].focus();
+                return false;
+            }
+
+            if (frmSendToFriend.elements[prefix + "txtSubject"].value == "") {
+                alert("Please provide a subject.");
+                frmSendToFriend.elements[prefix + "txtSubject"].focus();
+                return false;
+            }
+
+            if (frmSendToFriend.elements[prefix + "txtBody"].value == "") {
+                alert("Please provide a message.");
+                frmSendToFriend.elements[prefix + "txtBody"].focus();
+                return false;
+            }
+
+            if (frmSendToFriend.elements[prefix + "txtTuring"].value == "") {
+                alert("Invalid verification code.");
+                frmSendToFriend.elements[prefix + "txtTuring"].focus();
+                return false;
+            }
+            return true;
+        }    
+    </script>	
+
+    <script type="text/javascript" src="http://www.fulltimegigs.com/wp-content/themes/canvas5/includes/js/third-party.js?ver=3.5.1"></script>
+    
+    <script type="text/javascript">
+/* <![CDATA[ */
+var woo_localized_data = {"select_a_page":"Select a page:"};
+/* ]]> */
+</script>
+    
+    
+    <script type="text/javascript" src="http://www.fulltimegigs.com/wp-content/themes/canvas5/includes/js/general.js?ver=3.5.1"></script>
+    
+    
+    
+    <link rel="icon" href="http://www.fulltimegigs.com/wp-content/uploads/2013/04/FulltimeGIGS-favicon.ico" type="image/x-icon" /><link rel="icon" href="http://www.fulltimegigs.com/wp-content/uploads/2013/04/FulltimeGIGS-favicon.ico" type="image/x-icon" /> 
+
+<script type="text/javascript">
+    (function(w,d,t,u,n,e,p){
+        w[n] = w[n] || function(){
+            (w[n].e = w[n].e || []).push(Array.prototype.slice.call(arguments));
+        },w[n].t = 1 * new Date();
+        e = d.createElement(t); e.async = 1; e.src = u;
+        p = d.getElementsByTagName(t)[0]; p.parentNode.insertBefore(e,p);
+    })(window,document,'script','//analytics.recruitics.com/analytics.js','recruitics');
+    recruitics('create','RX-000520-2');
+</script>
+    
+<meta name="description" content="fulltimeGiGS" /><script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35606753-1']);
+  _gaq.push(['_setDomainName', 'fulltimegigs.com']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script><meta name="title" content="Account Executive - Martinburg, WV" /><meta name="og:description" content="Job Description/Responsibilities: &amp;nbsp; Ensures growth of sales of MRO/Industrial product base, identifies and develops new prospects and grows business to contribute to the achievement of corporate sales goals. &amp;nbsp;You must have:  Experience selling Industrial/MRO products such as power transmission, bearing, safety, electro/mechanical, hose, gasket, and fluid power products or allied industry products. Excellent networking, prospecting and closing skills. Ability to handle customers’ on-site inquiries, recommending better applications, design &amp;amp; product improvements. You are an active member and participant in business organizations and networking events within the community. Ability to learn and sell new products Responsibilities:  Achieve sales and profit goals by developing existing customers, opening new business, and customer retention Conduct sales and service activities, develop strong customer relationships, identify product applications, and introduce new products and services Prepare quotations and proposals follow up and negotiate terms, and close transactions Position Requirements:  &amp;nbsp;2&amp;#43; years business to business industrial / MRO sales experience Proven experience in developing new business, building repeat business, and managing a sales area " property="og:description" /><meta name="og:image" content="https://secure.topechelon.com/agency_logos/GA76.gif" property="og:image" /><meta name="og:title" content="Account Executive - Martinburg, WV" property="og:title" /><meta name="og:url" content="Account_Executive_J2313226.aspx" property="og:url" /></head> 
+<body class="page page-id-45 page-template-default logged-in admin-bar chrome two-col-left width-990 two-col-left-990 customize-support">
+
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"BFXzi1a4ZP00Oa", domain:"fulltimegigs.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=BFXzi1a4ZP00Oa" style="display:none" height="1" width="1" alt="" /></noscript>
+<!-- End Alexa Certify Javascript -->
+
+
+
+<div id="wrapper"> 
+
+        
+
+
+        
+    <div id="header" class="col-full">
+    
+    <div id="topRightwrapper"> <div id="topRight">  <a id="login" href="http://jobs.fulltimegigs.com/jobseeker/profile.aspx"> </a>Offering Full-Time <br>and Contract Jobs <br> </div> </div>
+        
+               
+        <div id="logo">
+        <a href="http://www.fulltimegigs.com/" title="Just another WordPress site"><img src="http://www.fulltimegigs.com/wp-content/uploads/2013/01/logo.png" alt="fulltimeGiGs.com"></a>
+<span class="site-title"><a href="http://www.fulltimegigs.com/">fulltimeGiGs.com</a></span>
+<span class="site-description">Great Jobs * Talented People – Search jobs &amp; find your next career here!</span>
+        </div><!-- /#logo -->
+          
+        <h3 class="nav-toggle icon"><a href="#navigation">Navigation</a></h3>
+          
+                
+        
+       
+    </div><!-- /#header -->
+  
+
+<div class="nav-wrap"><div id="navigation" class="col-full">
+        <ul id="main-nav" class="nav fl"><li id="menu-item-125" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-125"><a title="job search" href="http://www.fulltimegigs.com/">job search</a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a title="employer services" href="http://www.fulltimegigs.com/employer-home/">employer services</a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11"><a title="fulltimeGiGs blog" href="http://www.fulltimegigs.com/blog/">blog</a></li>
+<li id="menu-item-947" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-947"><a href="http://www.fulltimegigs.com/job-seeker-faq/">job seeker FAQ</a></li>
+</ul>
+</div><!-- /#navigation -->
+</div>
+     <div id="orangeBar">
+        <div id="orangeBarTagLine">Find your perfect career</div>
+        <div id="orangeBarButtons">
+                <div id="buttons">
+                <span class="btnleft"><a id="searchjobs" href="http://jobs.fulltimegigs.com/jobseeker/Search.aspx">&nbsp;</a></span>  
+                <div class="white">or</div> 
+                <span class="btnright"> <a id="submitresume" href="http://jobs.fulltimegigs.com/jobseeker/profile.aspx">&nbsp;</a> </span>   <br>
+            </div>
+            <div id="featuredJobsLink"><a href="http://jobs.fulltimegigs.com/jobseeker/SearchResults.aspx?featured=1&amp;runsearch=1">Featured Jobs</a></div>
+           
+            
+        </div>
+        
+       <div id="socialwrapper"> 
+
+        <div id="socialmedia"> 
+
+            Love fulltimeGiGS? <br> Connect with us! <br />
+
+            <a target="_blank" href="https://www.facebook.com/Fulltimegigs"><img src="http://www.fulltimegigs.com/wp-content/uploads/2013/01/facebook.png"></a>
+
+            <a target="_blank" href="http://www.linkedin.com/company/2926339?trk=company_search"><img src="http://www.fulltimegigs.com/wp-content/uploads/2013/01/linkedin.png"></a>
+
+            <a target="_blank" href="https://twitter.com/FulltimeGigs"><img src="http://www.fulltimegigs.com/wp-content/uploads/2013/01/twitter.png"></a>
+
+            <a target="_blank" href="https://plus.google.com/+Fulltimegigs"><img src="http://www.fulltimegigs.com/wp-content/uploads/2014/05/googleplus-ftg.png"></a> 
+
+        </div>
+
+    </div>
+    </div>
+       
+    <!-- #content Starts -->
+        <div id="content" class="col-full">
+    
+        <div id="main-sidebar-container">    
+
+            <!-- #main Starts -->
+                        <div id="main">                     
+<div class="post-45 page type-page status-publish hentry">
+    <div class="entry">
+<form method="post" action="Detail.aspx?jid=02313226&amp;utm_source=CareerArc&amp;utm_medium=subscription&amp;utm_campaign=CareerArc" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ5NDEzNzM2NQ9kFgJmD2QWBGYPZBYCAhEPZBYCAgEPFgIeBFRleHQFPzxsaW5rIHJlbD0iY2Fub25pY2FsIiBocmVmPSJBY2NvdW50X0V4ZWN1dGl2ZV9KMjMxMzIyNi5hc3B4IiAvPmQCAQ9kFgICAQ9kFhwCAQ8PFgQfAAUJVmlldyBKb2JzHgdWaXNpYmxlaGRkAgkPDxYCHwAFEUFjY291bnQgRXhlY3V0aXZlZGQCCg8WAh8BaGQCCw8PFgIeC05hdmlnYXRlVXJsBSZ+L0pvYlNlZWtlci9Qcm9maWxlLmFzcHg/am9iaWQ9MjMxMzIyNmRkAgwPZBYCAgEPDxYCHwAFDk1hcnRpbmJ1cmcsIFdWZGQCDQ9kFgICAQ8PFgIfAAURJDQwLDAwMCAtICQ4MCwwMDBkZAIODxYCHwFoFgICAQ8PFgIfAGVkZAIPD2QWAgIBDw8WAh8ABQtEaXJlY3QgSGlyZWRkAhAPFgIfAWgWAgIBDw8WAh8AZWRkAhEPZBYCAgEPDxYCHwAFDEphbiAyMCwgMjAxNmRkAhIPZBYCAgEPDxYCHwAFBzIzMTMyMjZkZAITDw8WAh8ABcILSm9iIERlc2NyaXB0aW9uL1Jlc3BvbnNpYmlsaXRpZXM6PGJyPiAmbmJzcDs8YnI+IEVuc3VyZXMgZ3Jvd3RoIG9mIHNhbGVzIG9mIE1STy9JbmR1c3RyaWFsIHByb2R1Y3QgYmFzZSwgaWRlbnRpZmllcyBhbmQgZGV2ZWxvcHMgbmV3IHByb3NwZWN0cyBhbmQgZ3Jvd3MgYnVzaW5lc3MgdG8gY29udHJpYnV0ZSB0byB0aGUgYWNoaWV2ZW1lbnQgb2YgY29ycG9yYXRlIHNhbGVzIGdvYWxzLjxicj4gPHN0cm9uZz4mbmJzcDtZb3UgbXVzdCBoYXZlOjwvc3Ryb25nPiA8dWw+IDxsaT5FeHBlcmllbmNlIHNlbGxpbmcgSW5kdXN0cmlhbC9NUk8gcHJvZHVjdHMgc3VjaCBhcyBwb3dlciB0cmFuc21pc3Npb24sIGJlYXJpbmcsIHNhZmV0eSwgZWxlY3Ryby9tZWNoYW5pY2FsLCBob3NlLCBnYXNrZXQsIGFuZCBmbHVpZCBwb3dlciBwcm9kdWN0cyBvciBhbGxpZWQgaW5kdXN0cnkgcHJvZHVjdHMuIDwvbGk+PGxpPkV4Y2VsbGVudCBuZXR3b3JraW5nLCBwcm9zcGVjdGluZyBhbmQgY2xvc2luZyBza2lsbHMuIDwvbGk+PGxpPkFiaWxpdHkgdG8gaGFuZGxlIGN1c3RvbWVyc+KAmSBvbi1zaXRlIGlucXVpcmllcywgcmVjb21tZW5kaW5nIGJldHRlciBhcHBsaWNhdGlvbnMsIGRlc2lnbiAmYW1wOyBwcm9kdWN0IGltcHJvdmVtZW50cy4gPC9saT48bGk+WW91IGFyZSBhbiBhY3RpdmUgbWVtYmVyIGFuZCBwYXJ0aWNpcGFudCBpbiBidXNpbmVzcyBvcmdhbml6YXRpb25zIGFuZCBuZXR3b3JraW5nIGV2ZW50cyB3aXRoaW4gdGhlIGNvbW11bml0eS4gPC9saT48bGk+QWJpbGl0eSB0byBsZWFybiBhbmQgc2VsbCBuZXcgcHJvZHVjdHM8L2xpPjwvdWw+IDxzdHJvbmc+UmVzcG9uc2liaWxpdGllczo8L3N0cm9uZz4gPHVsPiA8bGk+QWNoaWV2ZSBzYWxlcyBhbmQgcHJvZml0IGdvYWxzIGJ5IGRldmVsb3BpbmcgZXhpc3RpbmcgY3VzdG9tZXJzLCBvcGVuaW5nIG5ldyBidXNpbmVzcywgYW5kIGN1c3RvbWVyIHJldGVudGlvbiA8L2xpPjxsaT5Db25kdWN0IHNhbGVzIGFuZCBzZXJ2aWNlIGFjdGl2aXRpZXMsIGRldmVsb3Agc3Ryb25nIGN1c3RvbWVyIHJlbGF0aW9uc2hpcHMsIGlkZW50aWZ5IHByb2R1Y3QgYXBwbGljYXRpb25zLCBhbmQgaW50cm9kdWNlIG5ldyBwcm9kdWN0cyBhbmQgc2VydmljZXMgPC9saT48bGk+UHJlcGFyZSBxdW90YXRpb25zIGFuZCBwcm9wb3NhbHMgZm9sbG93IHVwIGFuZCBuZWdvdGlhdGUgdGVybXMsIGFuZCBjbG9zZSB0cmFuc2FjdGlvbnM8L2xpPjwvdWw+IDxzdHJvbmc+UG9zaXRpb24gUmVxdWlyZW1lbnRzOjwvc3Ryb25nPiA8dWw+IDxsaT4mbmJzcDsyJiM0MzsgeWVhcnMgYnVzaW5lc3MgdG8gYnVzaW5lc3MgaW5kdXN0cmlhbCAvIE1STyBzYWxlcyBleHBlcmllbmNlIDwvbGk+PGxpPlByb3ZlbiBleHBlcmllbmNlIGluIGRldmVsb3BpbmcgbmV3IGJ1c2luZXNzLCBidWlsZGluZyByZXBlYXQgYnVzaW5lc3MsIGFuZCBtYW5hZ2luZyBhIHNhbGVzIGFyZWE8L2xpPjwvdWw+IGRkAhQPDxYCHwIFJn4vSm9iU2Vla2VyL1Byb2ZpbGUuYXNweD9qb2JpZD0yMzEzMjI2ZGQCFQ8PFgQfAAUJVmlldyBKb2JzHwFoZGRk5xltDGl2y0EV5vNtaaNpru8QoZ0=" />
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAZVhbxFdsZHLsQzADjivMz99pH/WZ1fMvI0zZGU+evpQyw4mJ8AAatAOtgA1NU/hET7fRSwQZVllwMkwuSY74tRPKrXiAc1hQexUJe7W+CAQAUe5iLna/rcj0Qcwk1eFJg7izCVWD53BnaPwZRGkMcPQ7/IwA==" />
+            <div id="dvHookCntr">
+                    <h1 style="margin-bottom:0px;padding-bottom:0px">Job Seekers</h1>
+                    <div class="pad">
+                        
+
+<input type="hidden" id="uxKeywords" value=""/>
+<div id="dvSearchDetailContainer">
+    <span id="ContentPlaceHolder1_lblError"><b><font color="Red"></font></b></span>
+	<div id="dvBackToJobsTop">
+		
+	</div>
+
+        <div id="dvSendToFriend" style="display:none;">
+            <table class="tbSendToAFriend">
+                <tr>
+                  <td>Your Email<br />
+                    <input name="ctl00$ContentPlaceHolder1$txtFromEmail" type="text" maxlength="100" id="ContentPlaceHolder1_txtFromEmail" /></td>
+                  <td>Friend's Email<br />
+                    <input name="ctl00$ContentPlaceHolder1$txtToEmail" type="text" maxlength="100" id="ContentPlaceHolder1_txtToEmail" /></td>
+                  </tr>
+                <tr>
+                  <td colspan="2">Subject<br />
+                    <input name="ctl00$ContentPlaceHolder1$txtSubject" type="text" value="Job Listing on fulltimeGiGS" maxlength="100" id="ContentPlaceHolder1_txtSubject" /></td>
+                  </tr>
+                <tr>
+                  <td colspan="2">Your Email<br />
+                    <textarea name="ctl00$ContentPlaceHolder1$txtBody" rows="4" cols="20" id="ContentPlaceHolder1_txtBody" style="width:95%;height:100px;">
+I thought you might be interested in the Account Executive job listed at fulltimeGiGS.  Just copy and paste the following link into your browser: http://jobs.fulltimegigs.com/JobSeeker/Detail.aspx?jid=02313226&amp;utm_source=CareerArc&amp;utm_medium=subscription&amp;utm_campaign=CareerArc</textarea></td>
+                  </tr>
+                <tr>
+                    <td>Enter the number in the image to the right
+                            <input name="ctl00$ContentPlaceHolder1$txtTuring" type="text" maxlength="5" id="ContentPlaceHolder1_txtTuring" />&nbsp; 
+                            <span id="ContentPlaceHolder1_lblTuring"><font color="Red"></font></span>
+                    </td>
+                    <td><img height="30" alt="" src="../Turing.aspx" width="80"></td>
+                 </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right">
+                        <a href="javascript:SendEmail();">Send Email</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        <div id="dvPositionTitle">
+             <h1 class="textColorTwo"><span id="ContentPlaceHolder1_lblPositionTitle">Account Executive</span></h1>		 
+			
+            <div id="dvApplySocial">
+			    <div id="dvSocialButtons">
+				    <table style="display:inline;" id="tblSocialButtons" cellpadding="0" cellspacing="0">
+					    <tr>
+						    <td style="vertical-align:top;padding-top:0px"><a href="javascript:void(0);" onclick="javascript:ShowSendForm();" id="lnkSocialEmail"><img src="../images/email-wo-seams_thumb.png" style="padding-top:0px" /></a></td>
+                            
+                            
+						        <td style="vertical-align: top;padding-top:0px"><a href="http://twitter.com/home?status=http%3a%2f%2fjobs.fulltimegigs.com%2fJobSeeker%2fDetail.aspx%3fjid%3d02313226%26utm_source%3dCareerArc%26utm_medium%3dsubscription%26utm_campaign%3dCareerArc" title="Share on Twitter" rel="nofollow" target="_blank" id="lnkSocialTwitter"><img src="../images/twitter.png" alt="Twitter" style="padding-top:0px" /></a></td>
+
+						        <td style="vertical-align: top;padding-top:0px"><script src="http://platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share"></script></td>
+
+						        <td style="vertical-align: top;padding-top:0px"><a href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fjobs.fulltimegigs.com%2fJobSeeker%2fDetail.aspx%3fjid%3d02313226%26utm_source%3dCareerArc%26utm_medium%3dsubscription%26utm_campaign%3dCareerArc" title="Share on Facebook" rel="nofollow" target="_blank" id="lnkSocialFacebook"><img src="../images/fb.png" alt="Facebook" style="padding-top:0px" /></a></td>
+						
+						        <td style="vertical-align:top;padding-right:45px;padding-top:0px"><g:plusone size="medium" annotation="none" href="http%3a%2f%2fjobs.fulltimegigs.com%2fJobSeeker%2fDetail.aspx%3fjid%3d02313226%26utm_source%3dCareerArc%26utm_medium%3dsubscription%26utm_campaign%3dCareerArc"></g:plusone><script type="text/javascript">						                                                                                                                                                                                                 (function () { var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true; po.src = 'https://apis.google.com/js/plusone.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s); })();</script></td>
+                            
+					    </tr>
+				    </table>
+			     </div>
+                 
+             </div>
+        </div>
+
+		<div id="dvJobDetails">
+		    
+			<div id="dvXtras" class="textColorTwo">
+                <div id="upperApply"> 
+                
+                    
+                           <div class="indeedApply" >
+		                        <span class="indeed-apply-widget"
+                                     data-indeed-apply-apiToken="4fed5b1c7122aad37f6ce6530296425ca72f65dc5954e1907b10d936ebb321cd"
+                                     data-indeed-apply-jobId="2313226"
+                                     data-indeed-apply-jobLocation="Martinburg, WV"
+                                     data-indeed-apply-jobTitle="Account Executive"
+                                     data-indeed-apply-jobUrl="http://jobs.fulltimegigs.com/JobSeeker/Detail.aspx?jid=2313226&siteid=1161&mobile=0"
+                                     data-indeed-apply-postUrl="http://applications.HiringHook.com/api/Indeed?jobid=2313226&siteid=1161&mobile=0"
+                                     data-indeed-apply-continueUrl="http://jobs.fulltimegigs.com/JobSeeker/Thank_You.aspx?jobid=2313226" data-indeed-apply-jobMeta="?jid=2313226&siteid=1161&mobile=0" data-indeed-apply-name="firstlastname"></span>
+
+                                <script>                                    (function (d, s, id) {
+                                        var js, iajs = d.getElementsByTagName(s)[0];
+                                        if (d.getElementById(id)) { return; }
+                                        js = d.createElement(s); js.id = id; js.async = true;
+                                        js.src = "https://apply.indeed.com/indeedapply/static/scripts/app/bootstrap.js";
+                                        iajs.parentNode.insertBefore(js, iajs);
+                                    } (document, 'script', 'indeed-apply-js'));
+                                </script>
+                            </div>
+                           <a id="ContentPlaceHolder1_lnkApply2" href="Profile.aspx?jobid=2313226">Apply</a> 
+                 </div>
+				<div id="ContentPlaceHolder1_dvLocation"><span class="hdr">Location</span> <br /><span id="ContentPlaceHolder1_lblLocation">Martinburg, WV</span></div> 
+				<div id="ContentPlaceHolder1_dvSalary"><span class="hdr">Salary</span> <br /><span id="ContentPlaceHolder1_lblSalary">$40,000 - $80,000</span></div> 
+				 
+				<div id="ContentPlaceHolder1_dvJobType"><span class="hdr">Job Type</span> <br /><span id="ContentPlaceHolder1_lblJobType">Direct Hire</span></div>
+				
+				<div id="ContentPlaceHolder1_dvPosted"><span class="hdr">Date</span> <br /><span id="ContentPlaceHolder1_lblDatePosted">Jan 20, 2016</span></div>
+				<div id="ContentPlaceHolder1_dvJobID"><span class="hdr">Job ID</span> <br /><span id="ContentPlaceHolder1_lblJobId">2313226</span></div>
+			</div>
+        
+			<div id="dvDescription">
+				
+					<div class="desc">
+						<span id="ContentPlaceHolder1_lblDescription">Job Description/Responsibilities:<br> &nbsp;<br> Ensures growth of sales of MRO/Industrial product base, identifies and develops new prospects and grows business to contribute to the achievement of corporate sales goals.<br> <strong>&nbsp;You must have:</strong> <ul> <li>Experience selling Industrial/MRO products such as power transmission, bearing, safety, electro/mechanical, hose, gasket, and fluid power products or allied industry products. </li><li>Excellent networking, prospecting and closing skills. </li><li>Ability to handle customers’ on-site inquiries, recommending better applications, design &amp; product improvements. </li><li>You are an active member and participant in business organizations and networking events within the community. </li><li>Ability to learn and sell new products</li></ul> <strong>Responsibilities:</strong> <ul> <li>Achieve sales and profit goals by developing existing customers, opening new business, and customer retention </li><li>Conduct sales and service activities, develop strong customer relationships, identify product applications, and introduce new products and services </li><li>Prepare quotations and proposals follow up and negotiate terms, and close transactions</li></ul> <strong>Position Requirements:</strong> <ul> <li>&nbsp;2&#43; years business to business industrial / MRO sales experience </li><li>Proven experience in developing new business, building repeat business, and managing a sales area</li></ul> </span>
+					</div>
+				
+			</div>
+
+			<div id="dvDetailBtmLinks">
+			
+				<div id="dvDetailApplyLink">
+				    
+                           <div class="indeedApply" >
+		                        <span class="indeed-apply-widget"
+                                     data-indeed-apply-apiToken="4fed5b1c7122aad37f6ce6530296425ca72f65dc5954e1907b10d936ebb321cd"
+                                     data-indeed-apply-jobId="2313226"
+                                     data-indeed-apply-jobLocation="Martinburg, WV"
+                                     data-indeed-apply-jobTitle="Account Executive"
+                                     data-indeed-apply-jobUrl="http://jobs.fulltimegigs.com/JobSeeker/Detail.aspx?jid=2313226&siteid=1161&mobile=0"
+                                     data-indeed-apply-postUrl="http://applications.HiringHook.com/api/Indeed?jobid=2313226&siteid=1161&mobile=0"
+                                     data-indeed-apply-continueUrl="http://jobs.fulltimegigs.com/JobSeeker/Thank_You.aspx?jobid=2313226" data-indeed-apply-jobMeta="?jid=2313226&siteid=1161&mobile=0" data-indeed-apply-name="firstlastname"></span>
+
+                                <script>                                    (function (d, s, id) {
+                                        var js, iajs = d.getElementsByTagName(s)[0];
+                                        if (d.getElementById(id)) { return; }
+                                        js = d.createElement(s); js.id = id; js.async = true;
+                                        js.src = "https://apply.indeed.com/indeedapply/static/scripts/app/bootstrap.js";
+                                        iajs.parentNode.insertBefore(js, iajs);
+                                    } (document, 'script', 'indeed-apply-js'));
+                                </script>
+                            </div>
+                           <a id="ContentPlaceHolder1_lnkApply" href="Profile.aspx?jobid=2313226">Apply</a> 
+				</div>
+				<div id="dvBackToJobsBtm">
+					
+				</div>
+			</div>
+
+		</div>
+
+		<br class="clear" />
+
+</div>
+
+                    </div>
+                </div>
+    </form>
+    </div><!-- /.entry -->
+    <div class="fix"></div>
+</div><!-- /.post -->
+     
+            </div><!-- /#main -->
+                
+<div id="sidebar">
+    <iframe src="http://www.fulltimegigs.com/target-job-search" width="300" height="345" scrolling="no">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+    <div id="text-2" class="widget widget_text"><h3>Join the fulltimeGiGS network</h3>          <div class="textwidget">By joining the fulltimeGiGS network, you gain access to apply for jobs quickly and easily, sign up for job alerts and submit your resume for consideration.
+<br><br>
+<a href="http://jobs.fulltimegigs.com/jobseeker/profile.aspx"><img src="http://www.fulltimegigs.com/wp-content/uploads/2013/01/createaccount.png"></a></div>
+        </div>
+<div id="mc4wp_widget-2" class="widget widget_mc4wp_widget"><h3>Newsletter</h3><!-- Form by MailChimp for WordPress plugin v2.2 - https://mc4wp.com/ --><form method="post" action="http://www.fulltimegigs.com/" id="mc4wp-form-1" class="form mc4wp-form"><p>
+    <label>First Name:</label>
+    <input type="text" name="FNAME" placeholder="Your first name">
+
+
+    <label>Last Name:</label>
+    <input type="text" name="LNAME" placeholder="Your last name">
+
+    <label for="mc4wp_email">Email address: </label>
+    <input type="email" id="mc4wp_email" name="EMAIL" placeholder="Your email address" required />
+</p>
+
+<p>
+    <input type="submit" value="Sign up" />
+</p><textarea name="_mc4wp_required_but_not_really" style="display: none !important;"></textarea><input type="hidden" name="_mc4wp_form_submit" value="1" /><input type="hidden" name="_mc4wp_form_instance" value="1" /><input type="hidden" name="_mc4wp_form_nonce" value="46b1870a68" /></form><!-- / MailChimp for WP Plugin -->
+</div></div><!-- /#sidebar -->
+
+
+        </div><!-- /#main-sidebar-container -->         
+
+        
+    </div><!-- /#content -->
+    
+    
+        
+    
+
+    
+
+    
+    <div id="footer" class="col-full">
+    
+            
+        
+        <div id="copyright" class="col-left">
+            <p></p><p><span class="orange"><a href="http://www.fulltimegigs.com/">fulltimeGiGs.com</a>: </span>     <span class="grey">          <a href="http://www.fulltimegigs.com/privacy-policy/">privacy</a>        <a href="http://www.fulltimegigs.com/terms-and-conditions/">terms of use</a>         <a href="http://www.fulltimegigs.com/contact-us/">contact us</a>
+            <a href="http://www.fulltimegigs.com/about-us/">about us</a>            </span></p><p></p>      </div>
+        
+        <div id="credit" class="col-right">
+            <p></p><p>Copyright © 2016 fulltimeGiGs.com</p><p></p>        </div>
+        
+    </div><!-- /#footer  -->
+
+    
+    <div class="fix"></div><!--/.fix-->
+    
+    <!--[if lt IE 9]>
+<script src="http://www.fulltimegigs.com/wp-content/themes/canvas5/includes/js/respond.js"></script>
+<![endif]-->
+<script type="text/javascript" src="http://www.fulltimegigs.com/wp-includes/js/admin-bar.min.js?ver=3.5.1"></script>
+<script type="text/javascript" src="http://www.fulltimegigs.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.25.0-2013.01.18"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.fulltimegigs.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.fulltimegigs.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.3.3"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var wooFeedbackL10n = {"nextButton":"Next \u2192","prevButton":"\u2190 Previous"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://www.fulltimegigs.com/wp-content/themes/canvas5/includes/js/feedback.js?ver=5.0.7"></script>
+    <script type="text/javascript">
+        (function() {
+            var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+            request = true;
+
+            b[c] = b[c].replace( rcs, ' ' );
+            b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+        }());
+    </script>
+   
+                
+    
+    </div><!-- /#wrapper -->
+
+</body>
+</html>     
+            
