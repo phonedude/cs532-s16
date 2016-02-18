@@ -14,7 +14,7 @@ cs532_pvargas_hw3.pdf
 
 ## File Structure
 
-![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a02/documents/images/a3folder.png)
+![alt tag](https://github.com/phvargas/cs532-s16/blob/master/a03/documents/images/a3folder.png)
 
 ## a3/documents
 
