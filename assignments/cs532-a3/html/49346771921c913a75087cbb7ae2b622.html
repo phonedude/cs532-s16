@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://www.google.com/jsapi">
+</script>
+<script type="text/javascript">
+google.load("feeds", "1") //Load Google Ajax Feed API (version 1)
+</script>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>BuyCheap2Day - Compare, Find Deals and Offers Online</title>
+
+
+
+<meta name="Description" content="BuyCheap2Day - Compare, Find Deals and Offers Online">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+<meta name="robots" content="noindex" />
+<base target="_blank"/>
+<link rel="shortcut icon" href="/img/favicon.gif" type="image/x-icon">
+<link href="/style/estilo.css" rel="stylesheet" type="text/css" media="screen">
+
+</head> 
+<body>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53187508-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+<div id="inicio"></div>
+<div id="header">
+<a href="/"><img src="/img/misitio.jpg" width="700" height="120" alt="BuyCheap2Day" title="BuyCheap2Day"></a>
+<div id="page">
+<div id="migaspan">
+</div>
+<form action="/gk" method="get" target="_self"><input name="query" type="text" value="" size="20"><input type="submit" value="Search"/></form>
+<br/>
+
+
+
+<!-- +1 asincrono -->
+<div style="margin:3px;width:290px;" class="g-plusone" data-annotation="inline"></div>
+<script type="text/javascript">
+window.___gcfg = {lang: \'es-419\'};
+(function() 
+{var po = document.createElement("script");
+po.type = "text/javascript"; po.async = true;
+po.src = "https://apis.google.com/js/plusone.js";
+var s = document.getElementsByTagName("script")[0];
+s.parentNode.insertBefore(po, s);
+})();
+</script>
+
+<!-- Facebook I Like asincrono-->
+<div id="fb-root"></div>
+<script type="text/javascript">
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, \'script\', \'facebook-jssdk\'));</script>
+
+<a href="https://twitter.com/share" style="margin:3px;" class="twitter-share-button" data-via="" data-lang="en">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script><br>	
+
+
+
+<div class="intro">
+
+
+
+<div id="feeddiv"></div>
+
+<script type="text/javascript">
+
+var feedcontainer=document.getElementById("feeddiv")
+var feedurl="http://rest.ebay.com/epn/v1/find/item.rss?keyword=262279533964&sortOrder=StartTimeNewest&programid=1&campaignid=5337587215&toolid=10039&listingType1=All&lgeo=1&descriptionSearch=true&feedType=rss&entriesPerPage=1"
+var feedlimit=20
+var rssoutput=""
+
+function rssfeedsetup(){
+var feedpointer=new google.feeds.Feed(feedurl) //Google Feed API method
+feedpointer.setResultFormat(google.feeds.Feed.MIXED_FORMAT)
+feedpointer.setNumEntries(feedlimit) //Google Feed API method
+feedpointer.load(displayfeed) //Google Feed API method
+}
+
+function displayfeed(result){
+if (!result.error){
+var thefeeds=result.feed.entries
+for (var i=0; i<thefeeds.length; i++)
+rssoutput+="<a href='" + thefeeds[i].link + "' style='text-decoration:none'>" + "<b><h1> eBay >> " + thefeeds[i].title + "</h1></b>" + "</a>" + thefeeds[i].content + "<p><b><a href='http://www.amazon.com/s/ref=as_li_ss_tl?_encoding=UTF8&camp=1789&creative=390957&tag=mexiplaza-baby-20&field-keywords=" + thefeeds[i].title + "&linkCode=ur2&url=search-alias%3Daps'>" + "Compare >> Amazon >>" + "</a></b></p>"
+rssoutput+=""
+feedcontainer.innerHTML=rssoutput
+}
+else
+alert("Error fetching feeds!")
+}
+
+window.onload=function(){
+rssfeedsetup()
+}
+
+</script>
+
+
+
+<br/>
+
+<b>
+<script>document.write('<scr'+'ipt src="http://rover.ebay.com/ar/1/55242/1?lt=1&adtype=3&pubid=5575054094&toolid=10001&campid=5337587215&customid=&laction=_blank&ltext=CONTINUE%2C+Details%2C+Reviews+and+Price+for+this+product+%28eBay+product%29&j7s=1&n3y=1&p9m=1&v1e=1&r7n=1&q5b=1&x6n=1&m9q=1&g2e=1&b4x=1&k4v=1&u7v=1&a3h=1&def=a3h&ig=1&mpt='+Math.floor(Math.random()*999999999)+'"></scr'+'ipt>');</script><noscript><a target="_blank" href="http://rover.ebay.com/rover/1/711-53200-19255-0/1?icep_ff3=1&pub=5575054094&toolid=10001&campid=5337587215&customid=&ipn=psmain&icep_vectorid=229466&kwid=902099&mtid=824&kw=lg">CONTINUE, Details, Reviews and Price for this product (eBay product)</a><img style="text-decoration:none;border:0;padding:0;margin:0;" src="http://rover.ebay.com/roverimp/1/711-53200-19255-0/1?ff3=1&pub=5575054094&toolid=10001&campid=5337587215&customid=&mpt=[CACHEBUSTER]"></noscript>
+</b>
+
+</div>
+
+
+
+<br/>
+<b>
+
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_enable_interest_ads = "true";
+amzn_assoc_tracking_id = "mexiplaza-baby-20";
+amzn_assoc_ad_mode = "auto";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_textlinks = "";
+amzn_assoc_linkid = "b2fdd51c51d498f3ed05d1b3372b3c71";
+amzn_assoc_fallback_mode = {"type":"search","value":"jewelry"};
+amzn_assoc_default_category = "All";
+</script>
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+
+
+</b>
+
+
+<br/>
+<form action="/gk" method="get" target="_self"><input name="query" type="text" value="" size="20"><input type="submit" value="Search"/></form>
+<br/>
+
+
+
+
+
+<a target="_blank" href="http://www.facebook.com/"><img src="/img/logo-facebook.jpg" width="96" height="96" alt="Facebook" title="Facebook"></a>
+<a target="_blank" href="https://twitter.com/"><img src="/img/logo-twitter.jpg" width="96" height="96" alt="Twitter" title="Twitter"></a>
+<a target="_blank" href="https://plus.google.com/"><img src="/img/logo-google-plus.jpg" width="96" height="96" alt="Google+" title="Google+"></a>
+
+
+
+
+
+<div style="text-align:center;padding:6px;"><a target="_self" href="#inicio">UP</a></div>
+<div class="footer">
+Copyright &copy; 2016 DBL<br>
+</div><br>
+
+
+</div></div>
+</body> 
+</html>
+
+
+
+
+

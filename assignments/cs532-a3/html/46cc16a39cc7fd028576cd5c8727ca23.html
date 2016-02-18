@@ -1,0 +1,886 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" dir="ltr" lang="en" xml:lang="en">
+<head>
+<title>Box &amp; Case Breaks</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+
+<base href="http://14breaks.miiduu.com/" />
+<link rel="shortcut icon" href="" type="images/x-icon"/>
+<link rel="icon" href="" />
+<!--[if lt IE 7]>
+<link rel="stylesheet" type="text/css" href="/catalog/view/theme/default/stylesheet/ie6.css" />
+<script type="text/javascript" src="/catalog/view/javascript/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+DD_belatedPNG.fix('img, #header .div3 a, #content .left, #content .right, .box .top');
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/catalog/view/theme/default/stylesheet/default.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="/catalog/view/theme/concise-red/stylesheet/stylesheet.css" media="screen" />
+<script type="text/javascript" src="/catalog/view/javascript/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/jquery.tools.min.js"></script>
+<script type="text/javascript" src="/catalog/view/theme/gallery-blue/js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/pload.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/tab.js"></script>
+<script type="text/javascript" src="/catalog/view/javascript/jquery/thickbox/thickbox-compressed.js"></script>
+
+ 
+ 
+<link rel="stylesheet" type="text/css" href="/catalog/view/javascript/jquery/thickbox/thickbox.css" />
+<link rel="stylesheet" type="text/css" href="/catalog/view/theme/concise-blue/stylesheet/font.css" />
+<script type="text/javascript" src="/catalog/view/javascript/jquery/superfish/js/superfish.js"></script>
+<script type="text/javascript"><!--
+function bookmark(url, title) {
+	if (window.sidebar) { // firefox
+    window.sidebar.addPanel(title, url, "");
+	} else if(window.opera && window.print) { // opera
+		var elem = document.createElement('a');
+		elem.setAttribute('href',url);
+		elem.setAttribute('title',title);
+		elem.setAttribute('rel','sidebar');
+		elem.click();
+	} else if(document.all) {// ie
+   		window.external.AddFavorite(url, title);
+	}
+}
+	
+//--></script>
+<style>
+<!--
+body {
+    background-color: #ffffff;
+	color: #000000;
+	font-size: 12px;
+}
+a, a:visited, a b {
+	color: #333333;
+	font-size: 12px;
+}
+a:hover {
+	color:#E32B2E;
+}
+/*--------------------------------------------//global*/
+.logo a {
+	color: #E32B2E;
+	font-size: 30px;
+}
+.topmenu > li > a {
+    font-size: 20px;
+	color: #1B1F23;
+}
+.topmenu > li:hover {
+    background-image: url("/catalog/view/theme/concise-red/images/menu_active.png");
+}
+.nav li.over a, .nav a:hover, .nav li.sfHover.level-top > a {
+    color: #ffffff;
+}
+.menu_cotent li a {
+	color: #1B1F23;
+    background: url("/catalog/view/theme/concise-red/images/menu_dot.png") no-repeat scroll 4px center transparent;
+}
+ul.menu_cotent, ul.menu_cotent ul {
+	background: none repeat scroll 0 0 #ffffff;
+}
+.nav ul li a:hover {
+    color: #E32B2E !important;
+}
+ul.menu_cotent {
+    border-color: #E32B2E #E5E5E5 #E5E5E5;
+}
+
+#header .cart-block .top_cart h4, .navigation-row label {
+    color: #E32B2E;
+}
+#header .links a {
+    color: #1B1F23;
+    font-size: 12px;
+}
+#header .links a:hover {color:#E32B2E;}
+#header {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.nav {
+    border-top: 4px solid #DCDCDC;
+}
+/*-------------------------------------------------//header*/
+
+.content_title h2 {
+	color: #1B1F23;
+	font-size: 20px;
+}
+.products-grid .product-name a, .products-grid2 .product-name a {
+	color: #3B3B3B;
+	font-size: 18px;
+}
+.regularPrice {
+    color: #FF0000;
+}
+.specialPrice {
+    color: #3B3B3B;
+}
+.button, .buynow {
+    background: none repeat scroll 0 0 #E32B2E;
+    color: #ffffff !important;
+}
+.button:hover,.buynow:hover {background: #000000; color: #ffffff !important;}
+.button3 {
+    background: none repeat scroll 0 0 #000000;
+}
+.products-grid {background: #ffffff;}
+
+.li-banner .nav-btn {
+	background-image: url("/catalog/view/theme/concise-red/js/li-slider/images/button.png") !important;
+	}
+.li-banner .timer-horizontal-bottom { 
+	background-color: #E32B2E !important;				
+}
+/*-----------------------------------------------//Home page*/
+#ap_banner {
+    background: none repeat scroll 0 0 #F7F7F7;
+}
+.col-main {
+    background: none repeat scroll 0 0 #ffffff;
+}
+.pages .links b {
+    background: none repeat scroll 0 0 #E32B2E;
+}
+/*-----------------------------------------------//Category & Search page*/
+.box .top {
+    color: #1A1A1A;
+    font-size: 18px;
+	background: #ffffff; 
+}
+#category ul > li > a {
+    color: #1A1A1A;
+}
+#category ul > li > a:hover, #category ul > li ul > li > a:hover {
+    color: #E32B2E;
+}
+.box .middle {
+	background: #ffffff;
+}
+/*----------------------------------------------//sidebar*/
+.product_show_r h1 {
+    color: #1B1F23;
+    font-size: 26px;
+}
+.old-price .price {
+    color: #999999;
+    font-size: 14px;
+}
+.new-price .price, .product_special {
+    color: #E32B2E;
+    font-size: 18px;
+}
+.product_wishlist a {
+    color: #333333;
+    font-size: 15px;
+}
+.goodspackagewrap .selected, .goods-detail-tab .selected {
+    color: #E32B2E;
+}
+.tags a {
+    color: #E32B2E;
+}
+/*----------------------------------------------//product*/
+#footer {
+    background: none repeat scroll 0 0 #000000;
+    color: #ffffff;
+    font-size: 11px;
+}
+.foot_bot a {
+    color: #888888;
+    font-size: 12px;
+}
+.foot_bot a:hover {color: #ffffff;}
+.foot_bot {
+    border-top: 1px solid #222222;
+}
+.foot_bot_l li {
+    border-left: 1px solid #222222;
+}
+/*------------------------------------------//footer*/
+-->
+</style>
+</head><body>
+<div id="container">
+<div id="header">
+<div class="logo"><a href="http://14breaks.miiduu.com/"><img src="http://m6.miiduu.com/store6/116363/image/data/201601/screen-shot-2015-12-27-at-4-03-19-pm.jpg" width="268" height="50" title="14 Breaks" alt="14 Breaks" /></a></div>
+      
+      <div class="navigation-row">
+        <form action="http://14breaks.miiduu.com/" method="post" enctype="multipart/form-data" id="currency_form">
+          <fieldset class="form-currency">
+            <label> Currencies: </label>
+            <select onchange="$('#currency_form').submit();" name="currency_code">
+                             <option value="CAD" >Canadian Dollar</option>
+                              <option value="EUR" >Euro</option>
+                              <option value="GBP" >Pound Sterling</option>
+                              <option value="USD" selected="selected">US Dollar</option>
+                           </select>
+            <input type="hidden" name="redirect" value="http://14breaks.miiduu.com/box-amp-case-breaks?page=1" />
+          </fieldset>
+        </form>
+        </div>
+<div class="search_block">
+              <div class="search_lt" onclick="moduleSearch();"> </div>
+              <div class="search_rt">                 <input type="text" class="go" value="Keywords" id="filter_keyword" onclick="this.value = '';" onkeydown="this.style.color = '#333333'" />
+                 </div>
+          </div>
+          <ul class="links">
+        <li><a href="https://14breaks.miiduu.com/index.php?route=account/account">Account</a></li>
+        <li><a href="http://14breaks.miiduu.com/index.php?route=checkout/cart">Basket</a></li>
+        <li><a href="https://14breaks.miiduu.com/index.php?route=account/wish_list">Wishlist</a></li>
+        <li><a href="https://14breaks.miiduu.com/index.php?route=checkout/shipping">Checkout</a></li>
+        <li><a href="https://14breaks.miiduu.com/index.php?route=account/login">Log In</a></li>
+      </ul>
+      <ul id="topmenu" class="nav topmenu">
+                              <li class="first level-top"> <a href=""><span class="toplink">Home</span></a>  </li>
+                              <li class="next level-top"> <a href="box-amp-case-breaks"><span class="toplink">Box &amp; Case Break Spots</span></a>             <ul style="display:none;" class="menu_cotent">
+                            <li><a href="http://14breaks.miiduu.com/baseball-breaks"><span>Baseball Breaks</span></a>  </li>
+                            <li><a href="http://14breaks.miiduu.com/football-breaks"><span>Football Breaks</span></a>  </li>
+                          </ul>
+             </li>
+                              <li class="next level-top"> <a href="single-cards"><span class="toplink">Single Cards</span></a>             <ul style="display:none;" class="menu_cotent">
+                            <li><a href="http://14breaks.miiduu.com/baseball-single-cards"><span>Baseball Single Cards</span></a>  </li>
+                            <li><a href="http://14breaks.miiduu.com/football-single-cards"><span>Football Single Cards</span></a>  </li>
+                          </ul>
+             </li>
+                  </ul>       
+        <div class="cart-block">
+          <div class="top_cart topmenu"><a href="http://14breaks.miiduu.com/index.php?route=checkout/cart">
+            <h4>Cart <span id="cart_total">0&nbsp;&nbsp;item(s) - $0.00</span></h4>
+            </a></div>
+        </div>
+</div>
+<script type="text/javascript"><!-- 
+function getURLVar(urlVarName) {
+	var urlHalves = String(document.location).toLowerCase().split('?');
+	var urlVarValue = '';
+	
+	if (urlHalves[1]) {
+		var urlVars = urlHalves[1].split('&');
+
+		for (var i = 0; i <= (urlVars.length); i++) {
+			if (urlVars[i]) {
+				var urlVarPair = urlVars[i].split('=');
+				
+				if (urlVarPair[0] && urlVarPair[0] == urlVarName.toLowerCase()) {
+					urlVarValue = urlVarPair[1];
+				}
+			}
+		}
+	}
+	
+	return urlVarValue;
+} 
+
+jQuery(document).ready(function($) {
+	route = getURLVar('route');
+	
+	if (!route) {
+		jQuery('#tab_home').addClass('selected');
+	} else {
+		part = route.split('/');
+		
+		if (route == 'common/home') {
+			jQuery('#tab_home').addClass('selected');
+		} else if (route == 'account/login') {
+			jQuery('#tab_login').addClass('selected');	
+		} else if (part[0] == 'account') {
+			jQuery('#tab_account').addClass('selected');
+		} else if (route == 'checkout/cart') {
+			jQuery('#tab_cart').addClass('selected');
+		} else if (part[0] == 'checkout') {
+			jQuery('#tab_checkout').addClass('selected');
+		} else {
+			jQuery('#tab_home').addClass('selected');
+		}
+	}
+});
+jQuery('#filter_keyword').keydown(function(e) {
+	if (e.keyCode == 13) {
+		moduleSearch();
+	}
+});
+
+function moduleSearch() {
+	url = 'index.php?route=product/search';
+	
+	var filter_keyword = jQuery('#filter_keyword').attr('value');
+	
+	if (filter_keyword) {
+		url += '&keyword=' + encodeURIComponent(filter_keyword);
+	}
+	
+	var filter_category_id = jQuery('#filter_category_id').attr('value');
+	
+	if (filter_category_id) {
+		url += '&category_id=' + filter_category_id;
+	}
+	
+	location = url;
+}
+
+//--></script>
+<div class="wrapper">
+
+
+<div id="column_left">
+    <div class="box" id="category">
+  <div class="top"><span>Categories</span></div>
+  <div class="middle"><ul><li><a href="http://14breaks.miiduu.com/box-amp-case-breaks"><b>Box &amp; Case Breaks</b></a><ul><li><a href="http://14breaks.miiduu.com/baseball-breaks">Baseball Breaks</a></li><li><a href="http://14breaks.miiduu.com/football-breaks">Football Breaks</a></li></ul></li><li><a href="http://14breaks.miiduu.com/hobby-boxes">Hobby Boxes</a></li><li><a href="http://14breaks.miiduu.com/single-cards">Single Cards</a></li></ul></div>
+  <div class="bottom">&nbsp;</div>
+</div>
+
+    <div class="box" id="myblock">
+  <div class="top"><span>My Block</span></div>
+  <div class="middle" style="text-align: center;">
+    
+  </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+
+    <div class="box sidebar-featured">
+  <div class="top"><span>Featured</span></div>
+  <div class="middle"> 
+      <table cellpadding="2" cellspacing="0" style="width: 100%;">
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2013-topps-strata-ej-manuel-rc-jersey"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0018-55x100.jpg" title="2013 Topps Strata EJ Manuel RC Jersey " alt="2013..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2013 Topps Strata EJ Manuel RC Jersey " href="http://14breaks.miiduu.com/2013-topps-strata-ej-manuel-rc-jersey">2013 Topps Strata...</a></p>
+            <div class="price-box"><span class="special-price">$0.95</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273437">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273437">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-panini-elite-jim-kelly-jersey-throwback-199"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Jim-Kelly-55x100.jpg" title="2014 Panini Elite Jim Kelly Jersey Throwback /199" alt="2014..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Panini Elite Jim Kelly Jersey Throwback /199" href="http://14breaks.miiduu.com/2014-panini-elite-jim-kelly-jersey-throwback-199">2014 Panini Elite...</a></p>
+            <div class="price-box"><span class="special-price">$2.00</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273436">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273436">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2015-panini-prizm-mark-mcgwire-fireworks-refractor"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0026-55x100.jpg" title="2015 Panini Prizm Mark McGwire Fireworks Refractor" alt="2015..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2015 Panini Prizm Mark McGwire Fireworks Refractor" href="http://14breaks.miiduu.com/2015-panini-prizm-mark-mcgwire-fireworks-refractor">2015 Panini Prizm...</a></p>
+            <div class="price-box"><span class="special-price">$0.90</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273435">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273435">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2013-topps-chrome-jeremy-hellickson-gold-50"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0036-55x100.jpg" title="2013 Topps Chrome Jeremy Hellickson Gold /50" alt="2013..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2013 Topps Chrome Jeremy Hellickson Gold /50" href="http://14breaks.miiduu.com/2013-topps-chrome-jeremy-hellickson-gold-50">2013 Topps Chrome...</a></p>
+            <div class="price-box"><span class="special-price">$0.90</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273434">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273434">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2015-topps-phillip-dorsett-rc-2-color-patch"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0006-55x100.jpg" title="2015 Topps Phillip Dorsett RC 2 Color Patch" alt="2015..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2015 Topps Phillip Dorsett RC 2 Color Patch" href="http://14breaks.miiduu.com/2015-topps-phillip-dorsett-rc-2-color-patch">2015 Topps...</a></p>
+            <div class="price-box"><span class="special-price">$1.05</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273433">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273433">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-platinum-eric-ebron-rc-diecut"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0005-55x100.jpg" title="2014 Topps Platinum Eric Ebron RC Diecut" alt="2014..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Platinum Eric Ebron RC Diecut" href="http://14breaks.miiduu.com/2014-topps-platinum-eric-ebron-rc-diecut">2014 Topps...</a></p>
+            <div class="price-box"><span class="special-price">$0.65</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273432">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273432">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-fire-larry-fitzgerald-499"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0027-55x100.jpg" title="2014 Topps Fire Larry Fitzgerald /499" alt="2014..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Fire Larry Fitzgerald /499" href="http://14breaks.miiduu.com/2014-topps-fire-larry-fitzgerald-499">2014 Topps Fire...</a></p>
+            <div class="price-box"><span class="special-price">$0.80</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273431">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273431">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-chrome-derek-carr-rc-mini-insert"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0016-55x100.jpg" title="2014 Topps Chrome Derek Carr RC Mini Insert" alt="2014..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Chrome Derek Carr RC Mini Insert" href="http://14breaks.miiduu.com/2014-topps-chrome-derek-carr-rc-mini-insert">2014 Topps Chrome...</a></p>
+            <div class="price-box"><span class="special-price">$0.70</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273430">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273430">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-platinum-james-white-3-color-patch-auto"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0025-55x100.jpg" title="2014 Topps Platinum James White 3 Color Patch Auto" alt="2014..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Platinum James White 3 Color Patch Auto" href="http://14breaks.miiduu.com/2014-topps-platinum-james-white-3-color-patch-auto">2014 Topps...</a></p>
+            <div class="price-box"><span class="special-price">$7.00</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273429">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273429">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2015-panini-crown-royale-tyler-lockett-royal-rookies"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0030-55x100.jpg" title="2015 Panini Crown Royale Tyler Lockett Royal Rookies" alt="2015..." /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2015 Panini Crown Royale Tyler Lockett Royal Rookies" href="http://14breaks.miiduu.com/2015-panini-crown-royale-tyler-lockett-royal-rookies">2015 Panini Crown...</a></p>
+            <div class="price-box"><span class="special-price">$0.70</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273428">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273428">Add to Cart</a></div>
+          </div></td>
+      </tr>
+          </table>
+     </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+
+    <div class="box" id="information">
+  <div class="top"><span>Information</span></div>
+  <div class="middle">
+    <ul>
+				<li><a href="http://14breaks.miiduu.com/terms-conditions">Terms &amp; Conditions</a></li>
+			</ul>
+  </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+      <style type="text/css">
+  .c-value-no,.c-value-no i{
+  font:12px/1.5 tahoma,arial,宋体;
+  }
+.c-value-no i {
+    background-position: 0px 0px;
+    display: inline-block;
+    height: 16px;
+    overflow: hidden;
+    vertical-align: top;
+}
+.c-value-no {
+    background-position: 0px -14px;
+    display: inline-block;
+    height: 14px !important;
+    overflow: hidden;
+    text-align: left;
+    vertical-align: inherit !important;
+    width: 61px;
+}
+
+.linking a {text-decoration:underline; font-size:11px;}
+
+  </style>
+
+<div class="box2">
+  <div class="top"><span>Rating & Feedback</span></div>
+  <div class="top_cont3"></div>
+  <div class="middle">
+    <ul style="list-style-type:none; margin:0px;">
+          </ul>
+  </div>
+  <div class="bottom">Certified by Miiduu</div>
+</div>
+    <div class="imageblock">
+<a href="#"><img src="http://m6.miiduu.com/store6/116363/image/" /></a>
+</div>
+
+    <div class="box" id="bestseller">
+          <form action="" method="post" enctype="multipart/form-data" id="bestproduct" >
+          <div class="top"><span>Bestseller</span></div>
+          <div class="middle">
+          <ul class="clearfix">
+          
+          </ul>
+          </div>
+          <div class="bottom">&nbsp;</div>
+          <input type="hidden" name="quantity" size="3" value="1" />
+           
+           <input type="hidden" name="redirect" value="" />
+          </form>
+          <script type="text/javascript">
+         	function addbestToCart() {
+				jQuery('#bestproduct').submit();
+			}
+         </script>
+        </div>
+
+    <div class="box sidebar-latest">
+  <div class="top"><span>New Arrivals</span></div>
+  <div class="middle">     <table cellpadding="2" cellspacing="0" style="width: 100%;">
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2013-topps-strata-ej-manuel-rc-jersey"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0018-55x100.jpg" alt="2013..." title="2013 Topps Strata EJ Manuel RC Jersey " /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2013 Topps Strata EJ Manuel RC Jersey " href="http://14breaks.miiduu.com/2013-topps-strata-ej-manuel-rc-jersey">2013 Topps Strata...</a></p>
+            <div class="price-box"><span class="special-price">$0.95</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273437">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273437">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-panini-elite-jim-kelly-jersey-throwback-199"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Jim-Kelly-55x100.jpg" alt="2014..." title="2014 Panini Elite Jim Kelly Jersey Throwback /199" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Panini Elite Jim Kelly Jersey Throwback /199" href="http://14breaks.miiduu.com/2014-panini-elite-jim-kelly-jersey-throwback-199">2014 Panini Elite...</a></p>
+            <div class="price-box"><span class="special-price">$2.00</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273436">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273436">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2015-panini-prizm-mark-mcgwire-fireworks-refractor"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0026-55x100.jpg" alt="2015..." title="2015 Panini Prizm Mark McGwire Fireworks Refractor" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2015 Panini Prizm Mark McGwire Fireworks Refractor" href="http://14breaks.miiduu.com/2015-panini-prizm-mark-mcgwire-fireworks-refractor">2015 Panini Prizm...</a></p>
+            <div class="price-box"><span class="special-price">$0.90</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273435">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273435">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2013-topps-chrome-jeremy-hellickson-gold-50"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0036-55x100.jpg" alt="2013..." title="2013 Topps Chrome Jeremy Hellickson Gold /50" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2013 Topps Chrome Jeremy Hellickson Gold /50" href="http://14breaks.miiduu.com/2013-topps-chrome-jeremy-hellickson-gold-50">2013 Topps Chrome...</a></p>
+            <div class="price-box"><span class="special-price">$0.90</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273434">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273434">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2015-topps-phillip-dorsett-rc-2-color-patch"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0006-55x100.jpg" alt="2015..." title="2015 Topps Phillip Dorsett RC 2 Color Patch" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2015 Topps Phillip Dorsett RC 2 Color Patch" href="http://14breaks.miiduu.com/2015-topps-phillip-dorsett-rc-2-color-patch">2015 Topps...</a></p>
+            <div class="price-box"><span class="special-price">$1.05</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273433">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273433">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-platinum-eric-ebron-rc-diecut"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0005-55x100.jpg" alt="2014..." title="2014 Topps Platinum Eric Ebron RC Diecut" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Platinum Eric Ebron RC Diecut" href="http://14breaks.miiduu.com/2014-topps-platinum-eric-ebron-rc-diecut">2014 Topps...</a></p>
+            <div class="price-box"><span class="special-price">$0.65</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273432">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273432">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-fire-larry-fitzgerald-499"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0027-55x100.jpg" alt="2014..." title="2014 Topps Fire Larry Fitzgerald /499" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Fire Larry Fitzgerald /499" href="http://14breaks.miiduu.com/2014-topps-fire-larry-fitzgerald-499">2014 Topps Fire...</a></p>
+            <div class="price-box"><span class="special-price">$0.80</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273431">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273431">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-chrome-derek-carr-rc-mini-insert"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0016-55x100.jpg" alt="2014..." title="2014 Topps Chrome Derek Carr RC Mini Insert" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Chrome Derek Carr RC Mini Insert" href="http://14breaks.miiduu.com/2014-topps-chrome-derek-carr-rc-mini-insert">2014 Topps Chrome...</a></p>
+            <div class="price-box"><span class="special-price">$0.70</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273430">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273430">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2014-topps-platinum-james-white-3-color-patch-auto"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0025-55x100.jpg" alt="2014..." title="2014 Topps Platinum James White 3 Color Patch Auto" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2014 Topps Platinum James White 3 Color Patch Auto" href="http://14breaks.miiduu.com/2014-topps-platinum-james-white-3-color-patch-auto">2014 Topps...</a></p>
+            <div class="price-box"><span class="special-price">$7.00</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273429">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273429">Add to Cart</a></div>
+          </div></td>
+      </tr>
+            <tr>
+        <td valign="top" width="1"><div class="image-position"><a class="product-image" href="http://14breaks.miiduu.com/2015-panini-crown-royale-tyler-lockett-royal-rookies"><img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/Scan0030-55x100.jpg" alt="2015..." title="2015 Panini Crown Royale Tyler Lockett Royal Rookies" /></a></div></td>
+        <td valign="top"><div class="product-details">
+            <p class="product-name"><a title="2015 Panini Crown Royale Tyler Lockett Royal Rookies" href="http://14breaks.miiduu.com/2015-panini-crown-royale-tyler-lockett-royal-rookies">2015 Panini Crown...</a></p>
+            <div class="price-box"><span class="special-price">$0.70</span></div>
+                        <div class="add_to_wishlist"><a href="/index.php?route=account/wish_list&product_id=2273428">Add to Wishlist</a></div>
+            <div class="add_to_cart"><a href="/index.php?route=checkout/cart&product_id=2273428">Add to Cart</a></div>
+          </div></td>
+      </tr>
+          </table>
+     </div>
+  <div class="bottom">&nbsp;</div>
+</div>
+
+  </div>
+
+<div class="col-main">
+      <div id="ap_banner">        <a href="http://14breaks.miiduu.com/index.php?route=common/home">Home</a>          > <a href="http://14breaks.miiduu.com/box-amp-case-breaks">Box &amp; Case Breaks</a> </div>
+  <div class="content_title">
+    <h2>
+      <div style="float:left;">Box &amp; Case Breaks</div>
+      <div class="sortpanel"><span class="sortby">Sort By:
+        <select name="sort" onchange="location = this.value">
+                       <option value="http://14breaks.miiduu.com/box-amp-case-breaks?sort=p.sort_order&order=ASC" selected="selected">Default</option>
+                        <option value="http://14breaks.miiduu.com/box-amp-case-breaks?sort=p.date_added&order=DESC">New Arrival</option>
+                        <option value="http://14breaks.miiduu.com/box-amp-case-breaks?sort=p.price&order=ASC">Price Low > High</option>
+                        <option value="http://14breaks.miiduu.com/box-amp-case-breaks?sort=p.price&order=DESC">Price High > Low</option>
+                   </select>
+        </span></div>
+    </h2>
+  </div>
+      
+  
+    <ul class="products-grid2">
+            <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-49ers-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(49ERS) 2014 Panini Certified PYT" alt="(49ERS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(49ERS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-49ers-2014-panini-certified-pyt">(49ERS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.50</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272569"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272569" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-bengals-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(BENGALS) 2014 Panini Certified PYT" alt="(BENGAL..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(BENGALS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-bengals-2014-panini-certified-pyt">(BENGALS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.50</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272567"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272567" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-bills-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(BILLS) 2014 Panini Certified PYT" alt="(BILLS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(BILLS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-bills-2014-panini-certified-pyt">(BILLS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$3.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272566"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272566" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+      </ul>
+  <ul class="products-grid2">
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-broncos-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(BRONCOS) 2014 Panini Certified PYT" alt="(BRONCO..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(BRONCOS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-broncos-2014-panini-certified-pyt">(BRONCOS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272565"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272565" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-browns-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(BROWNS) 2014 Panini Certified PYT" alt="(BROWNS..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(BROWNS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-browns-2014-panini-certified-pyt">(BROWNS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$4.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272564"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272564" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-bucs-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(BUCS) 2014 Panini Certified PYT" alt="(BUCS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(BUCS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-bucs-2014-panini-certified-pyt">(BUCS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272563"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272563" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+      </ul>
+  <ul class="products-grid2">
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-cardinals-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(CARDINALS) 2014 Panini Certified PYT" alt="(CARDIN..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(CARDINALS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-cardinals-2014-panini-certified-pyt">(CARDINALS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$1.75</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272562"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272562" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-chiefs-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(CHIEFS) 2014 Panini Certified PYT" alt="(CHIEFS..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(CHIEFS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-chiefs-2014-panini-certified-pyt">(CHIEFS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.25</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272561"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272561" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-colts-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(COLTS) 2014 Panini Certified PYT" alt="(COLTS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(COLTS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-colts-2014-panini-certified-pyt">(COLTS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272560"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272560" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+      </ul>
+  <ul class="products-grid2">
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-cowboys-amp-chargers-combo-spot-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(COWBOYS &amp; CHARGERS COMBO SPOT) 2014 Panini Certified PYT" alt="(COWBOY..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(COWBOYS &amp; CHARGERS COMBO SPOT) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-cowboys-amp-chargers-combo-spot-2014-panini-certified-pyt">(COWBOYS &amp; CHARGERS...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272559"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272559" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-falcons-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(FALCONS) 2014 Panini Certified PYT" alt="(FALCON..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(FALCONS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-falcons-2014-panini-certified-pyt">(FALCONS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.75</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272558"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272558" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-giants-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(GIANTS) 2014 Panini Certified PYT" alt="(GIANTS..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(GIANTS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-giants-2014-panini-certified-pyt">(GIANTS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$6.50</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272557"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272557" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+      </ul>
+  <ul class="products-grid2">
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-jaguars-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(JAGUARS) 2014 Panini Certified PYT" alt="(JAGUAR..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(JAGUARS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-jaguars-2014-panini-certified-pyt">(JAGUARS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$4.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272556"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272556" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-jets-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(JETS) 2014 Panini Certified PYT" alt="(JETS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(JETS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-jets-2014-panini-certified-pyt">(JETS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$1.75</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272555"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272555" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-lions-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(LIONS) 2014 Panini Certified PYT" alt="(LIONS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(LIONS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-lions-2014-panini-certified-pyt">(LIONS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$1.50</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272554"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272554" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+      </ul>
+  <ul class="products-grid2">
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-packers-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(PACKERS) 2014 Panini Certified PYT" alt="(PACKER..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(PACKERS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-packers-2014-panini-certified-pyt">(PACKERS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272553"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272553" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-panthers-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(PANTHERS) 2014 Panini Certified PYT" alt="(PANTHE..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(PANTHERS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/-panthers-2014-panini-certified-pyt">(PANTHERS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$1.75</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272552"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272552" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/2014-panini-certified-pyt-raiders">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(RAIDERS) 2014 Panini Certified PYT" alt="(RAIDER..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(RAIDERS) 2014 Panini Certified PYT" href="http://14breaks.miiduu.com/2014-panini-certified-pyt-raiders">(RAIDERS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$5.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272549"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272549" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+      </ul>
+  <ul class="products-grid2">
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/2014-panini-certified-pyt-rams">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(RAMS) 2014 Panini Certified PYT " alt="(RAMS)..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(RAMS) 2014 Panini Certified PYT " href="http://14breaks.miiduu.com/2014-panini-certified-pyt-rams">(RAMS) 2014 Panini...</a></p>
+      <p class="price-box">         <span class="specialPrice">$2.25</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272548"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272548" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+                <li class="item">
+      <div class="boxout boxout_1">
+        <div class="boxin"><a href="http://14breaks.miiduu.com/-redskins-amp-ravens-combo-spot-2014-panini-certified-pyt">			   			   			   <img src="http://m6.miiduu.com/store6/116363/image/cache/data/201601/2014-Panini-Certified-Football-Sales-Sheet_Page_1-240x400.jpg" title="(REDSKINS &amp; RAVENS COMBO SPOT) 2014 Panini Certified PYT " alt="(REDSKI..." /></a></div>
+      </div>
+      <p class="product-name"><a title="(REDSKINS &amp; RAVENS COMBO SPOT) 2014 Panini Certified PYT " href="http://14breaks.miiduu.com/-redskins-amp-ravens-combo-spot-2014-panini-certified-pyt">(REDSKINS &amp; RAVENS...</a></p>
+      <p class="price-box">         <span class="specialPrice">$3.00</span>         </p>
+      <div style="text-align:center"><a class="button" href="https://14breaks.miiduu.com/index.php?route=checkout/cart&product_id=2272545"> <span>Add to Cart</span> </a></div>
+      <div class="wishlist"><a href="/index.php?route=account/wish_list&product_id=2272545" id="add_to_wishlist" class="products-grid_wishlist">Add to Wishlist</a></div>
+
+    </li>
+          </ul>
+  <div class="bg-toolbar">
+    <div class="pages">
+      <ol>
+        <div class="links"> <b>1</b>  <a href="http://14breaks.miiduu.com/box-amp-case-breaks?page=2">2</a>  <a href="http://14breaks.miiduu.com/box-amp-case-breaks?page=2">&gt;</a> <a href="http://14breaks.miiduu.com/box-amp-case-breaks?page=2">&gt;|</a> </div><div class="results">Showing 1 to 20 of 24 (2 Pages)</div>
+      </ol>
+    </div>
+  </div>
+    <div class="ap_bl_bot">
+    <div class="ap_bl_bot_right">&nbsp;</div>
+  </div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18071551-1']);
+  _gaq.push(['_setDomainName', '.miiduu.com']);
+  _gaq.push(['_setAllowHash', false]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</div>
+      <div id="footer">
+        <div class="foot_bot">
+          <div class="foot_bot_l word1">
+            <ul>
+	  <li><a href="about-us">About Us</a></li>
+	  	  <li><a href="terms-conditions">Terms Conditions</a></li>
+	  	  <li><a href="privacy-policy">Privacy Policy</a></li>
+	  	  <li><a href="index.php?route=information/sitemap">Site Map</a></li>
+	  	  <li><a href="index.php?route=information/contact">Contact Us</a></li>
+	              </ul>
+          </div>
+          <div class="foot_bot_r"><a href="http://www.miiduu.com/" target="_blank" style="margin: 0px;">Online Store</a> Powered by Miiduu</div>
+        </div>
+      </div>
+
+</div>
+</body>
+</html>
+ 

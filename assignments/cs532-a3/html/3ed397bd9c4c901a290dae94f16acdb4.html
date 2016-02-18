@@ -1,0 +1,2102 @@
+<html><head><title>Object moved</title></head><body>
+<h2>Object moved to <a href="/landing.aspx">here</a>.</h2>
+</body></html>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	MDOTtraffic | Powered by MDOT 
+</title><meta HTTP-EQUIV="Pragma" content="no-cache" /><meta name="ROBOTS" content="INDEX, NOFOLLOW" /><meta name="viewport" content="height=1050" /><meta name="Description" content="View Traffic Alerts and Streaming Video for Mississippi Highways.  Sign up for alerts customized to your commute by map location, time, and type of alert." /><meta name="Keywords" content="MDOTtraffic, MStraffic, Mississippi Department of Transportation,  Traffic,  Streaming  Video,  Alerts, Commute, Cameras" /><link rel="Fav Icon" href="/favicon.ico?v=3" /><link rel="icon" href="/favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" media="screen, projection" href="css/screen.css" /><link rel="stylesheet" type="text/css" media="screen, projection" href="css/jqui/jquery-ui-1.8.13.custom.css" />
+    <!--[if lt IE 8]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+    <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+    <!--<script src="js/extinfowindow.js" type="text/javascript"></script>
+		<script src="js/infobubble.js" type="text/javascript"></script> -->
+    <script src="js/infobox.js" type="text/javascript"></script>
+    <script src="js/jquery-1.6.1.min.js" type="text/javascript"></script>
+    <script src="js/jquery-1.8.13.ui.min.js" type="text/javascript"></script>
+    <script src="js/jquery.effects.core.js" type="text/javascript"></script>
+    <script src="js/jquery.effects.slide.js" type="text/javascript"></script>
+    <script src="js/jquery.marquee.js" type="text/javascript"></script>
+    <script src="js/global.js" type="text/javascript"></script>
+     <script src="js/sharescript.js" type="text/javascript"></script>
+    <style type="text/css">
+        .infoBox
+        {
+            /* background: "url('css/map/mapWindow_beak.png') no-repeat";*/
+            padding: 10px 10px 10px 10px; /* padding not working */
+            position: relative; /* border-radius:12px;-moz-border-radius:12px;-webkit-border-radius:12px;behavior:url(css/PIE.htc);position:relative;    */
+            background-color: #000;
+            border: 2px solid gray;
+            border-radius: 12px;
+        }
+        
+        
+        
+        .map-box
+        {
+            background: #000;
+            padding: 10px;
+            border-radius: 12px;
+            position: relative;
+            width: 360px;
+            box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+        }
+        
+        
+        
+        .map-box:after /*this makes the tip*/
+        {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(0, 0, 0, 0);
+            border-top-color: #000;
+            border-width: 15px;
+            left: 50%;
+            margin-left: -15px;
+        }
+        .style1
+        {
+            width: 166px;
+            height: 119px;
+        }
+    </style>
+    <script type="text/javascript">
+		   
+        //var reloadDataTime = 300000; // 5 minutes  = 300000 
+        var reloadDataTime = 30000; // 5 minutes  = 300000 
+        var logosrc="images/logos/logo-mdottraffic-left.png"
+            var j_emergencyEventExists, j_amberAlertExists, j_siteBulletinExists, j_numBannersShowing; 
+            var  j_tickertextEvents, j_tickertextAmber, j_tickertextBulletin, j_shadedCountiesString; 
+       
+            var userSavedLat, userSavedLon, userSavedZoom; 
+            userSavedLat = ""; 
+           j_emergencyEventExists  = false; 
+             j_amberAlertExists  = false; 
+              j_siteBulletinExists  = false; 
+
+              j_tickertextEvents  =  "There are no active weather or emergency events";
+             j_tickertextAmber  =  "There are no active special alerts."; 
+              j_tickertextBulletin  =  "There are no active bulletins."; 
+              
+              j_shadedCountiesString = ""; 
+              
+              
+              // j_shadedCountiesString = "";  
+           
+               // j_emergencyEventExists  = false; 
+           //j_tickertextEvents ="I am the ticker tape ";
+            
+           //j_amberAlertExists  = true; 
+           //j_tickertextAmber ="I am the ticker tape ";
+            
+            //j_siteBulletinExists  = true; 
+           //j_siteBulletinExists ="I am the ticker tape "; 
+           
+
+		    var map;
+		    var markersALL = [];
+            var polylinesALL = []; 
+            var usercommutePolys = []; 
+            var countyBoundaryPolys =[]; 
+           var firstRun = true; 
+
+            var infobox = null ; //styled infowindow 
+            var infoWindowLineTooltip = null; 
+		    
+          
+           var gicons = [];
+		    gicons["hot-spots"] = new google.maps.MarkerImage("images/mapicons/pin-hot-spots.png");
+		    gicons["cameras"] = new google.maps.MarkerImage("images/mapicons/pin-cameras-2.png");
+		    gicons["construction"] = new google.maps.MarkerImage( "images/mapicons/pin-construction.png");
+		    gicons["closed-roads"] = new google.maps.MarkerImage( "images/mapicons/pin-closed-roads.png");
+		    gicons["incident-alerts"] = new google.maps.MarkerImage( "images/mapicons/pin-alerts.png");
+		    gicons["cancelled-alerts"] = new google.maps.MarkerImage( "images/mapicons/pin-cancelled-alerts.png");
+		    gicons["signs-on"] = new google.maps.MarkerImage( "images/mapicons/pin-signs-on.png");
+		    gicons["signs-off"] = new google.maps.MarkerImage( "images/mapicons/pin-signs-off.png");
+		    gicons["welcome-centers"] = new google.maps.MarkerImage( "images/mapicons/pin-welcome-centers.png");
+		    gicons["rest-areas"] = new google.maps.MarkerImage( "images/mapicons/pin-rest-areas.png"); 
+             gicons["smart-workzones"] = new google.maps.MarkerImage("images/mapicons/pin-smart-workzones.png");
+             gicons["weather"] = new google.maps.MarkerImage("images/mapicons/pin-weather.png");
+             gicons["rwis"] = new google.maps.MarkerImage("images/mapicons/pin-thermometer.png");
+
+		   // gicons["evacuation-1"] = new GIcon(baseIcon, "images/mapicons/pin-evac-1.png");
+		   // gicons["evacuation-2"] = new GIcon(baseIcon, "images/mapicons/pin-evac-2.png");
+          function debugClicking()
+          {
+          google.maps.event.addListener(map, "click", function(e) 
+							{
+									document.getElementById("ta1").value += "\n" + e.latLng + "\n "; 
+                                   var markerToAdd = new google.maps.Marker(
+                                     {
+                                     position:e.latLng, 
+                                     title: "clicked" 
+                                     });
+                                
+									markerToAdd.setMap(map);
+
+								//	}
+							}//addlistener 
+						)//end  GEvent.addListener call 
+          }
+
+
+	    function createMarker(lat, lon, group, icontype, tooltip, markerid, framehtml) {
+		
+		        var marker = new google.maps.Marker(
+                 {
+                 position:new google.maps.LatLng(lat, lon), 
+                 title: tooltip, 
+                 icon: gicons[icontype] 
+                 //animation: google.maps.Animation.BOUNCE 
+                  });
+                  marker.metadata = {type: "point", id: markerid, markergroup: group, lat: lat, lon: lon};
+                var markerimage_normal; 
+                var markerimage_highlight; 
+               markerimage_normal = gicons[icontype].url;
+                markerimage_highlight = markerimage_normal;
+                 
+               markerimage_highlight = markerimage_normal.replace(".png","_highlight.png") ;
+
+		        markersALL[markerid]=marker;
+           
+		        //markerGroups[group].push(marker);
+                
+		        
+		       google.maps.event.addListener(marker, 'click', function () {
+          
+                       infobox.setContent(framehtml); 
+                    infobox.open(map, marker); 
+                    //test zoom here
+                    if (querystring("zoomto")==1) 
+                    {
+                       map.setCenter(new google.maps.LatLng(lat, lon));
+                       map.setZoom(17); 
+                    }
+  
+  
+		        });
+                 // Switch icon on marker mouseover and mouseout
+
+                 
+                google.maps.event.addListener(marker, "mouseover", function() {
+                   
+                    marker.setIcon(markerimage_highlight);
+                });
+                google.maps.event.addListener(marker, "mouseout", function() {
+                    marker.setIcon(markerimage_normal);
+               });
+               
+
+		        return marker;
+		    } //end createMarker 
+
+              function createPolyline(coords, group, tooltip, polylineid) {             
+                    var pathpoints = eval(coords) ; 
+         
+                     var thisPolyline = new google.maps.Polyline(       
+                     {    path:  pathpoints,    
+                              strokeColor: '#ff0000',
+                             strokeOpacity: .25,
+                             strokeWeight: 10 });  
+
+                     thisPolyline.metadata = {type: "polyline", polylineid: polylineid, polylinegroup: group, polylinepath: coords};       
+                polylinesALL[polylineid]=thisPolyline; 
+               
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! mouse events not working in IE 9 
+   google.maps.event.addListener(thisPolyline, 'mouseover', function() {
+     thisPolyline.setOptions({
+       strokeOpacity: .50
+     });
+     //infoWindowLineTooltip.setContent(tooltip); 
+           //infoWindowLineTooltip.open(map, thisPolyline);
+   });
+
+    google.maps.event.addListener(thisPolyline, 'mouseout', function() {
+     thisPolyline.setOptions({
+       strokeOpacity: .25
+       
+     });
+    //infoWindowLineTooltip.close();
+   });                
+    
+        google.maps.event.addListener(thisPolyline, 'click', function () {  
+                      //infobox.setContent(framehtml); 
+                   //infobox.open(map, thisPolyline);   
+                  //alert("clicked, open infobox ") ; 
+        });                
+		  return thisPolyline;
+         
+		  } //end createPolyline 
+
+function showAddress() {
+
+  var g = google.maps;
+  var geocoder = new g.Geocoder();
+ var address = document.getElementById("address").value; ; 
+  geocoder.geocode({ 'address': address}, function(results, status) {
+    if (status == g.GeocoderStatus.OK) {
+      // map.fitBounds(results[0].geometry.viewport);
+      map.setCenter(results[0].geometry.location);
+      map.setZoom(14);
+   //???? needed for infobubble ?? 
+   infobox.close(); 
+   //if (map.getExtInfoWindow() != null) {
+           // map.closeExtInfoWindow();}
+    } else {
+      alert(address + " not found: " + status);
+    }
+  });
+ }//end function showaddress
+
+          
+	   function loadMapSetup() {
+
+      var myOptions = { 
+      zoom: 12, 
+      center: new google.maps.LatLng(32.29876, -90.18481), 
+      mapTypeId: google.maps.MapTypeId.ROADMAP ,
+      mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+      navigationControlOptions: {style: google.maps.NavigationControlStyle.ZOOM_PAN} , 
+      scrollwheel: true, 
+      disableDoubleClickZoom: false, 
+      overviewMapControl: true, 
+      scaleControl: true,
+      noClear: true, 
+      overviewMapControlOptions: {opened:true} 
+    }; 
+    //christie 
+  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+  var infoOptions = {
+			 //content: "holding..."
+             boxClass: "map-box"
+			,disableAutoPan: false
+			,maxWidth: 0
+			,pixelOffset: new google.maps.Size(-200,-50)
+            ,alignBottom: true
+			,zIndex: null
+            ,closeBoxMargin: "0px 0px 0px 0px"
+			,closeBoxURL: "css/map/mapWindow_close.png"
+			,infoBoxClearance: new google.maps.Size(50, 50) //changed from (5, 1) on 2/24/2015, x, y 
+			,isHidden: false
+			,pane: "floatPane"
+			,enableEventPropagation: false
+          
+            
+		};//end myOptions
+  infobox = new InfoBox(infoOptions);  
+  infoWindowLineTooltip =  new google.maps.InfoWindow; 
+
+
+
+/* uncomment and try this later 
+  // Try W3C Geolocation method (Preferred)
+  if(navigator.geolocation) {
+    browserSupportFlag = true;
+    navigator.geolocation.getCurrentPosition(function(position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+   
+      map.setCenter(initialLocation);
+    }, function() {
+      handleNoGeolocation(browserSupportFlag);
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    browserSupportFlag = false;
+    handleNoGeolocation(browserSupportFlag);
+  }
+
+  */
+
+/*********** new traffic v3 **********/
+// Add traffic control
+  var traffic_button = new TrafficControl();
+ 
+  // Remove invisible legend from its location and reinsert it to the map
+  var legend = document.getElementById("legend");
+ 
+  map.controls[google.maps.ControlPosition.RIGHT].push(legend);
+  
+  //add the zoom to bar 
+ var sb = document.getElementById("searchbar");
+ 
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(sb);
+ // sb.style.visibility = "visible"; 
+		        
+		    }// end function load 
+          
+            function toggleCommutes()
+            {
+             for (var existingMarker in usercommutePolys) {
+              if (document.getElementById('check-hot-spots').checked) {
+               
+		                usercommutePolys[existingMarker].setMap(map); 
+		       } else {
+                       usercommutePolys[existingMarker].setMap(null); 
+		       }
+             
+              }// end for 
+            }
+            function toggleGroup(category) {
+            for (var existingMarker in markersALL) {
+		       if (markersALL[existingMarker].metadata.markergroup == category){
+                if (markersALL[existingMarker].getMap() == null ) {
+		                markersALL[existingMarker].setMap(map); 
+		            } else {
+                       markersALL[existingMarker].setMap(null); 
+		            }
+               }
+              }// end for 
+		    }//end function toggleGroup 
+
+              function checkAll()
+            {
+          if (document.getElementById("check-all").checked)
+          {
+            $("#map-controls :checkbox:not(:disabled)").attr('checked', true);
+         
+             $('#map-controls input[type=checkbox]:checked:not(:disabled)').each(function () {
+                 $(this).parent().addClass('selected');
+                 });
+
+                 for (var existingMarker in markersALL) {
+		                    markersALL[existingMarker].setMap(map); 
+		              }  
+                for (var existingPolyline in polylinesALL) {
+		                    polylinesALL[existingPolyline].setMap(map); 
+		              } 
+                         
+            }
+           else 
+             {
+             $("#map-controls :checkbox:not(:disabled)").attr('checked', false);
+         
+              $('#map-controls input[type=checkbox]:not(:disabled)').each(function () {
+                   $(this).parent().removeClass('selected');
+                    });
+             for (var existingMarker in markersALL) {
+		                     markersALL[existingMarker].setMap(null); 
+		              } 
+             for (var existingPolyline in polylinesALL) {
+		                    polylinesALL[existingPolyline].setMap(null); 
+		              }   
+          }
+          toggleCommutes(); 
+          toggleTraffic();
+          toggleCountyBoundaries();
+          
+              
+    }
+
+
+              function changeGroupDisplay(markergroupname) {
+             
+            for (var existingMarker in markersALL) {
+		        if (markersALL[existingMarker].metadata.markergroup == markergroupname){
+                     if (markerGroupChecked(markergroupname)) {
+		                    markersALL[existingMarker].setMap(map); 
+		              } 
+                      else {
+                            markersALL[existingMarker].setMap(null); 
+		             }
+               }// end if the checkbox is checked 
+              }// end for 
+              for (var existingPolyline in polylinesALL) {
+		        if (polylinesALL[existingPolyline].metadata.polylinegroup == markergroupname){
+                     if (markerGroupChecked(markergroupname)) {
+		                    polylinesALL[existingPolyline].setMap(map); 
+		              } 
+                      else {
+                            polylinesALL[existingPolyline].setMap(null); 
+		             }
+               }// end if the checkbox is checked 
+              }// end for 
+		    }//end function changeGroupDisplay 
+
+function markerGroupChecked(markergroupname)
+  {
+        var checkboxid; 
+        switch (markergroupname)
+        {
+            case "map-hot-spots": 
+                 checkboxid = "check-hot-spots"; 
+                 break; 
+		    case "map-cameras": 
+                 checkboxid = "check-cameras"; 
+                 break; 
+		    case "map-construction": 
+                 checkboxid = "check-construction"; 
+                 break; 
+		    case "map-closed-roads": 
+                 checkboxid = "check-closed-roads"; 
+                 break; 
+		    case "map-incident-alerts": 
+                 checkboxid = "check-incident-alerts"; 
+                 break; 
+		    case "map-cancelled-alerts":  
+                 checkboxid = "check-cancelled-alerts"; 
+                 break; 
+		    case "map-signs-on":  
+                 checkboxid = "check-signs-on"; 
+                 break; 
+		    case "map-signs-off":  
+                 checkboxid = "check-signs-off"; 
+                 break; 
+		    case "map-rest-areas": 
+                 checkboxid = "check-rest-areas"; 
+                 break; 
+		    case "map-welcome-centers": 
+                 checkboxid = "check-welcome-centers"; 
+                 break; 
+		    case "map-evacuation-1":  
+                 checkboxid = "check-evacuation-1"; 
+                 break; 
+		    case "map-evacuation-2":   
+                 checkboxid = "check-evacuation-2"; 
+                 break; 
+            case "map-smart-workzones":  
+                 checkboxid = "check-smart-workzones"; 
+                 break; 
+            case "map-weather": 
+                 checkboxid = "check-weather"; 
+                 break; 
+            case "map-rwis":
+                checkboxid = "check-rwis"; 
+                break; 
+        }//end case 
+
+            if (document.getElementById(checkboxid).checked)
+            { return true; 
+            }
+            else 
+            { return false; 
+            }
+}// end function markerGroupChecked
+		    ///////////////////////////////////////////////////////////////////////////////////////////
+		    ///start traffic 
+		    //////
+
+            
+ function toggleTraffic() {
+ 
+    if (document.getElementById('check-traffic-layer').checked) {
+               
+      trafficInfo.setMap(map); 
+        } else {
+      trafficInfo.setMap(null); 
+		}
+ }
+ 
+ function toggleCountyBoundaries() {
+ 
+    var length = 0;
+    for(prop in countyBoundaryPolys){
+        if(countyBoundaryPolys.hasOwnProperty(prop))
+         {   length++;
+            break;
+          }
+    }
+     if ((length== 0) && (document.getElementById('check-county-boundaries').checked) )
+      {//first time turned on (could be by automatic weather update or by user checkbox) 
+        AjaxGetCountyPolys(); 
+        
+        //$('#li-county-boundaries').addClass('selected');
+        //alert("checked the box");
+        //$("#li-county-boundaries input:checkbox").attr("checked", true);
+      }
+      //else 
+      {
+         for (var existingMarker in countyBoundaryPolys) {
+       
+              if (document.getElementById('check-county-boundaries').checked) {
+         
+		                countyBoundaryPolys[existingMarker].setMap(map); 
+		       } else {
+                       countyBoundaryPolys[existingMarker].setMap(null); 
+		       }            
+        }// end for 
+      }
+
+            
+     
+ }
+ 
+ 
+ 
+function TrafficControl() {
+ 
+  // This seems to be a fragment of the v2 traffic layer
+  trafficInfo = new google.maps.TrafficLayer();
+    trafficInfo.setMap(map);
+  
+}
+      
+            
+		    ///////////
+		    //start debug
+		    function getCurrentMapPos() {
+		        var point;
+		        point = map.getCenter();
+		        zoom = map.getZoom();
+		        document.getElementById("ta1").value += "\n lat = " + point.lat() + ", lon = " + point.lng() + ", zoom = " + zoom ; 
+		    }         
+            ///end debug
+            ///////////
+
+            
+            function OnRequestComplete(result, userContext, methodName) {
+   // alert("done" & methodName) ; 
+
+}
+function OnRequestError(error, userContext, methodName) {
+    if (error != null) {
+     alert("Error"  + error.get_message());
+    }}
+
+
+function AJAXSaveLocation() {
+var ctr = map.getCenter();
+var savelat =ctr.lat();
+var savelon=ctr.lng();
+
+var savezoom =map.getZoom();
+var defaultcam = ""; //not using ??
+ 
+if (userSignedInOrOut == 'in' )  
+{
+    PageMethods.SaveLocation(savelat, savelon, savezoom, defaultcam  , OnRequestComplete, OnRequestError);
+    //could move to request complete but not dependent? 
+    setUserHomeMapVars(savelat, savelon, savezoom);
+    alert("This will be your new starting point....");
+    
+} 
+else 
+{
+   
+alert("Sign up now to save your home map! \n You can also save your commutes and favorite cameras.") ;
+ }
+
+
+}//end AJAXSaveLocation 
+
+function goToHomeMap(){
+  
+if (userSavedLat == "")
+{
+    alert("Save your home map by clicking 'Save as My Home Map' on the top menu"); 
+}
+else  
+    {
+    infobox.close(); 
+   //  if (map.getExtInfoWindow() != null) {
+   //         map.closeExtInfoWindow();}
+     map.setCenter(new google.maps.LatLng(userSavedLat, userSavedLon)); 
+     map.setZoom(userSavedZoom);
+     }
+}
+
+function goToStateMap(){
+   infobox.close(); 
+    map.setCenter(new google.maps.LatLng(32.52948771126763,-89.84619140625));
+    map.setZoom(7); 
+}
+
+function setUserHomeMapVars(savelat, savelon, savezoom){
+userSavedLat = savelat; 
+  userSavedLon = savelon;  
+    userSavedZoom = savezoom; 
+}
+
+function reloadit()
+{ 
+       // alert("in reload") ; 
+      //  window.location.reload(); //old 
+        //var javaimgsrc = "images/bg-grid.png";
+        try {
+            AjaxReloadData(); 
+            //d = new Date();
+            //document.images['imgLogoKeepAlive'].src = logosrc + "?num=" + d.getTime();
+            
+        }
+        catch (err) {//error, ignore
+            alert("error");
+        }
+        // setTimeout('reloadit()', 900000); //900000= 15mins //7200000 = 2 hrs 
+        setTimeout('reloadit()', reloadDataTime); //900000= 15mins //7200000 = 2 hrs 
+}
+
+function ConfirmFirstResponderRequest()
+{
+if (!document.getElementById("cbRequestFirstRepsonderAccess").checked && !document.getElementById("cbRequestMediaAccess").checked)
+    {
+    return true; 
+    }
+    
+    
+    var confirmed; 
+    confirmed = confirm("You have requested special access to a secured portion of MDOTtraffic which is available to emergency personnel.  Additional information will be required.  Click OK to proceed and MDOT will contact you by email to confirm.  Access is free and only requires the user to sign a video sharing agreement.") ;
+    return confirmed; 
+
+}
+
+
+function AJAXloadAllData() 
+{
+AjaxReloadAlertPolylines(); 
+AjaxReloadDMSs(); 
+AjaxReloadAlerts(); 
+   AjaxGetMarkers("cameras"); 
+  //AjaxGetMarkers("smartworkzones"); 
+  AjaxGetMarkers("wcras"); 
+ AjaxGetMarkers("rwis"); //comment here -- no rwis -- 
+ // AjaxGetCountyPolys(); //load only on demand
+}//end AJAXloadNewMapData 
+
+function AjaxGetMarkers(markertype) {
+var  urlstring;
+var rootstring =  "default.aspx/"; 
+switch (markertype)
+ {
+ /*case "alerts":
+   urlstring = rootstring + "LoadAlertData"; 
+   break;
+ case "DMS":
+ urlstring = rootstring + "LoadDMSData"; 
+   break;
+   */
+ case "cameras":
+   urlstring = rootstring + "LoadCameraData"; 
+   break;
+ case "smartworkzones":
+  urlstring = rootstring + "LoadSWZData"; 
+   break;
+ case "wcras":
+   urlstring = rootstring + "LoadWCRAData"; 
+   break;
+    case "rwis":
+     urlstring = rootstring + "LoadRWISData"; 
+       break;
+
+ default:
+   alert("invalid type to load") ; 
+ } //end switch 
+
+$.ajax({
+type: "POST",
+url: urlstring,
+data: "{}",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success: function(response) {
+var cmarkers = response.d;
+LoadMarkers_generic(cmarkers); 
+}, /*end success*/ 
+failure: function(msg) {
+alert ("error" + msg) ; 
+}
+});
+}//end getMarkers
+
+function AjaxGetCountyPolys() {
+$.ajax({
+type: "POST",
+url: "default.aspx/LoadCountyBoundaries",
+data: "{}",
+contentType: "application/json; charset=utf-8",
+dataType: "json",
+success: function(response) {
+var cpolys = response.d;
+LoadPolygons_counties(cpolys);
+}, /*end success*/ 
+error: function (request, status, error) {
+        alert(request.responseText);
+}
+});
+}//end getCountyPolys
+
+
+ function AJAXCheckBanners() {
+            $.ajax({
+                type: "POST",
+                url: "default.aspx/LoadEmergencyAmberAndBulletins",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                 success: function(response) {
+    $.each(response, function (key, new1) {
+        //inside for each, but there is only one       
+  if(( j_emergencyEventExists != new1.emergencyEventExists) || 
+    (j_amberAlertExists != new1.amberAlertExists) ||
+    (j_siteBulletinExists != new1.siteBulletinExists) ||
+    (j_tickertextEvents != new1.tickertextEvents) || 
+    (j_tickertextAmber != new1.tickertextAmber) ||
+    (j_tickertextBulletin != new1.tickertextBulletin)) 
+  {       
+      //set new text, then hide and show. 
+      $('#emergenciesBannerText').html(new1.tickertextEvents);
+      $('#amberAlertsBannerText').html(new1.tickertextAmber);
+      $('#siteBulletinBannerText').html(new1.tickertextBulletin); 
+      j_emergencyEventExists = new1.emergencyEventExists;
+      j_amberAlertExists = new1.amberAlertExists;
+      j_siteBulletinExists = new1.siteBulletinExists;
+      hideshowScrollingBanners(); 
+    }
+    else 
+    {
+       //alert("no change" ) ; 
+    }
+     
+  }); //end for each 
+    }, /*end success*/ 
+               
+                failure: function (msg) {
+                    alert("error" + msg);
+                }
+            });
+
+        }
+
+        function setCountyColors(colorlist){
+       // alert(colorlist); 
+       //check the box 
+        
+        if (Object.keys(countyBoundaryPolys).length == 0)
+        {
+            AjaxGetCountyPolys(); 
+              $('#li-county-boundaries').addClass('selected');
+            $("#li-county-boundaries input:checkbox").attr("checked", true);
+        }
+        else 
+        {
+
+        //unshade all first 
+         for (var p in countyBoundaryPolys) {
+         countyBoundaryPolys[p].setOptions({fillOpacity: 0.0});
+         }
+
+        // var pretendstr;
+         //pretendstr = "'co_1', '#008375'; 'co_2', '#484959'; 'co_3', '#008375'; 'co_4', '#484959'";
+
+         var splitPointColon, splitPointComma;
+                splitPointColon = colorlist.split(";");
+                for (i = 0; i < splitPointColon.length; i++) {
+                    splitPointComma = splitPointColon[i].split(",");
+                    var poly = countyBoundaryPolys[eval(splitPointComma[0])]; 
+                    if (poly) 
+                    {
+                        poly.setOptions({fillOpacity: 0.5, fillColor: eval(splitPointComma[1])});
+                    }
+                } //end for
+                //alert(latlons.length); 
+         //p_IOR = countyBoundaryPolys["co_1"]; 
+         //p_IOB.setOptions({strokeWeight: 2.0, fillOpacity: 1.0, fillColor: 'green'});
+
+
+        // alert(" loaded, boom") ; 
+        //var thismap = eval("map" + evid);
+         //   var thismarkersALL = eval("markersALL" + evid);
+         //   var thismarker;
+          //  thismarker = eval(thismarkersALL)[markerToClick];
+          
+          
+  /*
+         for (var existingMarker in countyBoundaryPolys) {
+                       countyBoundaryPolys[existingMarker].setMap(map); 
+myPolygon.setOptions({strokeWeight: 2.0, fillColor: 'green'});
+
+            if (document.getElementById('check-county-boundaries').checked) {
+         
+		                countyBoundaryPolys[existingMarker].setMap(map); 
+		       } else {
+                       countyBoundaryPolys[existingMarker].setMap(null); 
+		       }
+               */            
+        //}// end for 
+      }
+        }
+function AJAXCheckShadedCounties() {
+            $.ajax({
+                type: "POST",
+                url: "default.aspx/LoadShadedCountiesList",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                 success: function(response) {
+  if(( j_shadedCountiesString != response.d))
+    {     
+       setCountyColors(response.d); 
+    }
+    else 
+    {
+       //alert("no change" ) ; 
+       //setCountyColors(response.d); 
+    }
+    
+    }, /*end success*/ 
+               
+                failure: function (msg) {
+                    alert("error" + msg);
+                }
+            });
+
+        }
+
+    </script>
+   
+
+		<script>
+		    (function (i, s, o, g, r, a, m) {
+		        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+		            (i[r].q = i[r].q || []).push(arguments)
+		        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		    ga('create', 'UA-46064474-1', 'mdottraffic.com'); //mdottraffic
+		    ga('send', 'pageview');
+
+
+</script>
+
+</head>
+<body class="mainpage">
+    <script type="text/javascript">
+
+
+
+        if ((isMobileDevice()) && (location.search.indexOf("fullsite") == -1))
+        {
+            document.location = "http://mobile.mdottraffic.com/"; 
+         }
+
+    </script>
+     <script async src='https://i.simpli.fi/dpx.js?cid=16313&action=100&segment=godwingroupmdotsiteretargeting&m=1&sifi_tuid=14604'></script>
+    <form method="post" action="" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+function loadUserSetup(){
+signInOrOut('out', '');
+goToStateMap();
+} //end loadUserSetup()
+function loadWhereTo(){
+//no whereTo sent 
+}//end loadWhereTo
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=cDICWc0zrUUo-SB7y_RA057PHJpWGhHVHNMfTzJ1NWevDDDiDMa18fIyil3ODO7T61WksNoSsRLCRdlz-nkvDwhLe0EYpnurDk_axAakLE1xaAY-Zyrk8sfKDGbFmbCtRpSet5havldr7jHkFhY50nmk_rZycqShiqOII89V4SKGNpJHdosztYsHc2PwvBlS0&amp;t=6119e399" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var PageMethods = function() {
+PageMethods.initializeBase(this);
+this._timeout = 0;
+this._userContext = null;
+this._succeeded = null;
+this._failed = null;
+}
+PageMethods.prototype = {
+_get_path:function() {
+ var p = this.get_path();
+ if (p) return p;
+ else return PageMethods._staticInstance.get_path();},
+LoadCountyBoundaries:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadCountyBoundaries',false,{},succeededCallback,failedCallback,userContext); },
+SaveLocation:function(lat,lon,zoom,camera,succeededCallback, failedCallback, userContext) {
+/// <param name="lat" type="Number">System.Double</param>
+/// <param name="lon" type="Number">System.Double</param>
+/// <param name="zoom" type="Number">System.Int32</param>
+/// <param name="camera" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'SaveLocation',false,{lat:lat,lon:lon,zoom:zoom,camera:camera},succeededCallback,failedCallback,userContext); },
+LoadAlertData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadAlertData',false,{},succeededCallback,failedCallback,userContext); },
+LoadAlertData_Polylines:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadAlertData_Polylines',false,{},succeededCallback,failedCallback,userContext); },
+LoadDMSData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadDMSData',false,{},succeededCallback,failedCallback,userContext); },
+LoadRWISData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadRWISData',false,{},succeededCallback,failedCallback,userContext); },
+LoadWCRAData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadWCRAData',false,{},succeededCallback,failedCallback,userContext); },
+LoadCameraData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadCameraData',false,{},succeededCallback,failedCallback,userContext); },
+LoadSWZData:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadSWZData',false,{},succeededCallback,failedCallback,userContext); },
+LoadShadedCountiesList:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadShadedCountiesList',false,{},succeededCallback,failedCallback,userContext); },
+LoadEmergencyAmberAndBulletins:function(succeededCallback, failedCallback, userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+return this._invoke(this._get_path(), 'LoadEmergencyAmberAndBulletins',false,{},succeededCallback,failedCallback,userContext); }}
+PageMethods.registerClass('PageMethods',Sys.Net.WebServiceProxy);
+PageMethods._staticInstance = new PageMethods();
+PageMethods.set_path = function(value) {
+PageMethods._staticInstance.set_path(value); }
+PageMethods.get_path = function() { 
+/// <value type="String" mayBeNull="true">The service url.</value>
+return PageMethods._staticInstance.get_path();}
+PageMethods.set_timeout = function(value) {
+PageMethods._staticInstance.set_timeout(value); }
+PageMethods.get_timeout = function() { 
+/// <value type="Number">The service timeout.</value>
+return PageMethods._staticInstance.get_timeout(); }
+PageMethods.set_defaultUserContext = function(value) { 
+PageMethods._staticInstance.set_defaultUserContext(value); }
+PageMethods.get_defaultUserContext = function() { 
+/// <value mayBeNull="true">The service default user context.</value>
+return PageMethods._staticInstance.get_defaultUserContext(); }
+PageMethods.set_defaultSucceededCallback = function(value) { 
+ PageMethods._staticInstance.set_defaultSucceededCallback(value); }
+PageMethods.get_defaultSucceededCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default succeeded callback.</value>
+return PageMethods._staticInstance.get_defaultSucceededCallback(); }
+PageMethods.set_defaultFailedCallback = function(value) { 
+PageMethods._staticInstance.set_defaultFailedCallback(value); }
+PageMethods.get_defaultFailedCallback = function() { 
+/// <value type="Function" mayBeNull="true">The service default failed callback.</value>
+return PageMethods._staticInstance.get_defaultFailedCallback(); }
+PageMethods.set_enableJsonp = function(value) { PageMethods._staticInstance.set_enableJsonp(value); }
+PageMethods.get_enableJsonp = function() { 
+/// <value type="Boolean">Specifies whether the service supports JSONP for cross domain calling.</value>
+return PageMethods._staticInstance.get_enableJsonp(); }
+PageMethods.set_jsonpCallbackParameter = function(value) { PageMethods._staticInstance.set_jsonpCallbackParameter(value); }
+PageMethods.get_jsonpCallbackParameter = function() { 
+/// <value type="String">Specifies the parameter name that contains the callback function name for a JSONP request.</value>
+return PageMethods._staticInstance.get_jsonpCallbackParameter(); }
+PageMethods.set_path("default.aspx");
+PageMethods.LoadCountyBoundaries= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadCountyBoundaries(onSuccess,onFailed,userContext); }
+PageMethods.SaveLocation= function(lat,lon,zoom,camera,onSuccess,onFailed,userContext) {
+/// <param name="lat" type="Number">System.Double</param>
+/// <param name="lon" type="Number">System.Double</param>
+/// <param name="zoom" type="Number">System.Int32</param>
+/// <param name="camera" type="String">System.String</param>
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.SaveLocation(lat,lon,zoom,camera,onSuccess,onFailed,userContext); }
+PageMethods.LoadAlertData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadAlertData(onSuccess,onFailed,userContext); }
+PageMethods.LoadAlertData_Polylines= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadAlertData_Polylines(onSuccess,onFailed,userContext); }
+PageMethods.LoadDMSData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadDMSData(onSuccess,onFailed,userContext); }
+PageMethods.LoadRWISData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadRWISData(onSuccess,onFailed,userContext); }
+PageMethods.LoadWCRAData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadWCRAData(onSuccess,onFailed,userContext); }
+PageMethods.LoadCameraData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadCameraData(onSuccess,onFailed,userContext); }
+PageMethods.LoadSWZData= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadSWZData(onSuccess,onFailed,userContext); }
+PageMethods.LoadShadedCountiesList= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadShadedCountiesList(onSuccess,onFailed,userContext); }
+PageMethods.LoadEmergencyAmberAndBulletins= function(onSuccess,onFailed,userContext) {
+/// <param name="succeededCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="failedCallback" type="Function" optional="true" mayBeNull="true"></param>
+/// <param name="userContext" optional="true" mayBeNull="true"></param>
+PageMethods._staticInstance.LoadEmergencyAmberAndBulletins(onSuccess,onFailed,userContext); }
+var gtc = Sys.Net.WebServiceProxy._generateTypedConstructor;
+Type.registerNamespace('mdottraffic');
+if (typeof(mdottraffic.mapPolygon) === 'undefined') {
+mdottraffic.mapPolygon=gtc("mdottraffic.mapPolygon");
+mdottraffic.mapPolygon.registerClass('mdottraffic.mapPolygon');
+}
+if (typeof(mdottraffic.mapMarker) === 'undefined') {
+mdottraffic.mapMarker=gtc("mdottraffic.mapMarker");
+mdottraffic.mapMarker.registerClass('mdottraffic.mapMarker');
+}
+if (typeof(mdottraffic.mapPolyline) === 'undefined') {
+mdottraffic.mapPolyline=gtc("mdottraffic.mapPolyline");
+mdottraffic.mapPolyline.registerClass('mdottraffic.mapPolyline');
+}
+if (typeof(mdottraffic.bannerData) === 'undefined') {
+mdottraffic.bannerData=gtc("mdottraffic.bannerData");
+mdottraffic.bannerData.registerClass('mdottraffic.bannerData');
+}
+//]]>
+</script>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAgkFGNu3GxCzDQQ6QmGbUXTq2eCQDkZ04iJxffwy8AlECoaAslXSbSyIrOQIGGf0WHuLHIiTtx6HOvMUxbWRkBIX2ltaq7UmASdod8i1pOaH6+f28GNV31+z65DbDqxMS4p5s1IRRwkAG4KPf04wa9DRaNuf9SNIYcschr0T2jPPZ5RKlUkUzH4TvwP6UYFIUnJiXtQL+7rYRKwvno/JPXr" />
+    
+    <div id="divMain" style="height:100%"> 
+
+    <div id="header" class="group">
+        <h1 id="site-logo">
+            <img  id="imgLogoKeepAlive" width="230px" src="images/logos/MDOTtraffic.com.png" alt="MDOTtraffic powered by the Mississippi Department of Transportation" />
+            <img  id="img1" width="200px"  src="images/landing/start-your-trip-off-right-only2.png" alt="MDOTtraffic powered by the Mississippi Department of Transportation" />
+        </h1>
+        <!-- USER IS LOGGED IN -->
+        <div id="user-nav-wrap">
+            <div id="welcomeUser" class="simple-horiz-nav">
+                <ul>
+                    <span id="up_signout">
+                            <fieldset style="border: none;">
+                                <li class="welcome-user">
+                                    <label id="lblWelcome">
+                                        Welcome, MDOTtraffic User!</label></li>
+                                <li class="sign-out">
+                                    <a onclick="javascript:signInOrOut(&#39;out&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;, &#39;&#39;);" id="lnkbtnSignOut" href="javascript:__doPostBack(&#39;lnkbtnSignOut&#39;,&#39;&#39;)">Sign Out</a>
+                                </li>
+                            </fieldset>
+                        </span>
+                </ul>
+            </div>
+            <div id="user-nav" class="simple-horiz-nav">
+                <ul>
+                    <li id="user-nav-firstresponders"><a id="lnkOpenVWall" onclick="_gaq.push(['_trackEvent', 'TopMenu', 'MenuClick', 'Video Wall']);">Video Wall</a> </li>
+                    <li id="user-nav-set-home"><a href="#">Save As My Home Map</a></li>
+                    <li id="user-nav-go-home"><a href="#">My Home</a></li>
+                    <li id="user-nav-commutes"><a href="#">My Commutes</a></li>
+                    <li id="user-nav-favorites"><a href="#">My Favorites</a></li>
+                    <li id="user-nav-accounts"><a href="#">My Account Info</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- USER IS NOT LOGGED IN -->
+        <div id="user-sign-in" class="simple-horiz-nav">
+            <ul>
+                <li id="openSignIn"><a href="#" id="hrefSignIn">Sign In</a></li>
+               
+                <li id="signup"><a href="#" >Create an Account</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="loginWrapper" title="Sign In" class="rounded">
+        <span id="up_signin">
+                <fieldset style="border: none;">
+                    <p style="text-align: right;">
+                        <img src="images/x_close.png" style="width: 13; height: 13; text-align: right; padding-top: 10px"
+                            alt="Close tab" onclick="javascript:document.getElementById('loginWrapper').style.display = 'none';" /></p>
+                    <p>
+                        <label for="username">
+                            Username</label><br />
+                        <input name="username" type="text" id="username" /></p>
+                    <p>
+                        <label for="password">
+                            Password</label><br />
+                        <input name="password" type="password" id="password" /></p>
+                    <p>
+                        <input id="rememberMe" type="checkbox" name="rememberMe" checked="checked" /><label for="rememberMe">Remember
+                            me</label>
+                            </p>
+                            <p><br />
+                  <input type="submit" name="btnSignIn" value="Sign in" id="btnSignIn" />
+                  <br /><br />
+                  </p>
+
+                    <p id="forgotPwdLink">
+                        <a href="#" id="forgot-password" onclick="javascript:forgotPasswordClick();">Forgot
+                            your password?</a>
+                        
+                    </p>
+                </fieldset>
+            </span>
+    </div>
+  
+    <!-- SCROLLING ALERT BANNERS -->
+    <div id="emergenciesBanner" class="emergencybanner horizontal_scroller group">
+        <div class="scrollingtext">
+            <p id="emergenciesBannerText">
+                There are no active weather or emergency events</p>
+        </div>
+    </div>
+    <div id="amberAlertsBanner" class="amberbanner horizontal_scroller group">
+        <div class="scrollingtext">
+            <p id="amberAlertsBannerText">
+                There are no active special alerts.</p>
+        </div>
+    </div>
+    <div id="siteBulletinBanner" class="sitebulletinbanner horizontal_scroller group">
+        <div class="scrollingtext">
+            <p id="siteBulletinBannerText">
+                There are no active bulletins.</p>
+        </div>
+    </div>
+    <!--
+         <div id="divTempMessage" class="amberbanner horizontal_scroller group">
+			<p>NOTICE - September 19th-23rd - Connection to some views may be interrupted due to scheduled equipment upgrades.  </p>
+		</div>
+        -->
+    <div id="map-container" style="overflow:hidden" >
+        <div id="map-menu-accordion" >
+            <!-- begin accordion -->
+            <h3 id="map-controls-hdr">
+                <a href="#map-controls-wrap" id="menulegend">Map Legend</a></h3>
+            <div id="map-controls-wrap" class="accordion-item">
+                <div id="map-controls">
+                    <ul><li id="li-check-all" class="group">
+                            <label for="check-all">
+                                Check/Uncheck All</label><input onclick="checkAll()" class="checkbox" name="check-all"
+                                    id="check-all" type="checkbox" checked="checked" /></li>
+                        <li id="li-hot-spots" class="group">
+                            <label for="check-hot-spots">
+                                My Commutes</label><span class="user-benefit">Sign in to create commutes!</span><input
+                                    onclick="toggleCommutes()" class="checkbox" name="check-hot-spots"
+                                    id="check-hot-spots" type="checkbox" checked="checked" /></li>
+                        <li id="li-cameras" class="group">
+                            <label for="check-cameras">
+                                Cameras</label><input onclick="changeGroupDisplay('map-cameras')" class="checkbox" name="check-cameras"
+                                    id="check-cameras" type="checkbox" checked="checked" /></li>
+                        <li id="li-construction" class="group">
+                            <label for="check-construction">
+                                Construction/Maintenance</label><input onclick="changeGroupDisplay('map-construction')"
+                                    class="checkbox" name="check-construction" id="check-construction" type="checkbox"
+                                    checked="checked" /></li>
+                        <li id="li-closed-roads" class="group">
+                            <label for="check-closed-roads">
+                                Closed Roads</label><input onclick="changeGroupDisplay('map-closed-roads')" class="checkbox"
+                                    name="check-closed-roads" id="check-closed-roads" type="checkbox" checked="checked" /></li>
+                        <li id="li-incident-alerts" class="group">
+                            <label for="check-incident-alerts">
+                                Incident Alerts</label><input onclick="changeGroupDisplay('map-incident-alerts')" class="checkbox"
+                                    name="check-incident-alerts" id="check-incident-alerts" type="checkbox" checked="checked" /></li>
+                        <li id="li-weather" class="group">
+                            <label for="check-weather">
+                                Weather Related Alerts</label><input onclick="changeGroupDisplay('map-weather')" class="checkbox"
+                                    name="check-weather" id="check-weather" type="checkbox" checked="checked" /></li>
+                        <li id="li-cancelled-alerts" class="group">
+                            <label for="check-cancelled-alerts">
+                                Cancelled Alerts</label><input onclick="changeGroupDisplay('map-cancelled-alerts')" class="checkbox"
+                                    name="check-cancelled-alerts" id="check-cancelled-alerts" type="checkbox" checked="checked" /></li>
+                        <li id="li-signs-on" class="group">
+                            <label for="check-signs-on">
+                                Message Signs (on)</label><input onclick="changeGroupDisplay('map-signs-on')" class="checkbox"
+                                    name="check-signs-on" id="check-signs-on" type="checkbox" checked="checked" /></li>
+                        <li id="li-signs-off" class="group">
+                            <label for="check-signs-off">
+                                Message Signs (off)</label><input onclick="changeGroupDisplay('map-signs-off')" class="checkbox"
+                                    name="check-signs-off" id="check-signs-off" type="checkbox" checked="checked" /></li>
+                        <li id="li-rest-areas" class="group">
+                            <label for="check-rest-areas">
+                                Rest Areas</label><input onclick="changeGroupDisplay('map-rest-areas')" class="checkbox"
+                                    name="check-rest-areas" id="check-rest-areas" type="checkbox" checked="checked" /></li>
+                        <li id="li-welcome-centers" class="group">
+                            <label for="check-welcome-centers">
+                                Welcome Centers</label><input onclick="changeGroupDisplay('map-welcome-centers')" class="checkbox"
+                                    name="check-welcome-centers" id="check-welcome-centers" type="checkbox" checked="checked" /></li>
+                        <li id="li-rwis" class="group">
+                            <label for="check-rwis">
+                                Road Weather Sensors</label><input onclick="changeGroupDisplay('map-rwis')" class="checkbox"
+                                    name="check-rwis" id="check-rwis" type="checkbox" checked="checked" /></li>
+                                      
+                         <li id="li-traffic-layer" class="group" style= "padding-left:0px;" >
+                            <label for="check-traffic-layer" style= "padding-left:10px;">
+                                Traffic Layer <img src="images/mapicons/slowfast2.png" style="padding:0px 0 0 20px;
+                                                    margin:0; border: 0px solid green" />
+                                 </label>
+                                
+                                
+                            <input onclick="toggleTraffic();" class="checkbox"
+                                    name="check-traffic-layer" id="check-traffic-layer" type="checkbox" checked="checked" /></li> 
+
+
+                      <li id="li-county-boundaries" class="group" style= "padding-left:0px;  vertical-align: top; " >
+                         <label for="check-county-boundaries" style= "padding-left:10px;"  class="group">
+                                County Boundaries 
+                                <!-- <table style="font-size:9px; width: 100px; display: inline" ><tr><td>Ice on Bridges</td><td style=" background-color: blue">&nbsp; </td></tr>
+                                <tr><td>Ice on Roads</td><td style=" background-color: pink" >&nbsp; </td></tr></table> -->
+                               <img src="images/mapicons/ClosureLegend.png" style="width:100px; padding: 0px 0 0 5px;margin:0; border: 0px solid green; vertical-align: middle"    /> 
+                                </label> <input onclick="toggleCountyBoundaries();" class="checkbox"
+                              name="check-county-boundaries" id="check-county-boundaries" type="checkbox" />
+
+
+                       </li>
+                        
+                    </ul>
+                </div>
+            </div> 
+            <h3 id="preset-locations-hdr">
+                <a href="#preset-locations">My Hot Spots</a></h3>
+            <div id="preset-locations" class="simple-vert-nav accordion-item"  title="My Hot Spots" >
+                <div class="group">
+                <br />
+                    <h2>
+                        Statewide View</h2>
+                    <div class="locationChoices group">
+                        <ul>
+                            <li><a href="javascript:goToStateMap();">State of Mississippi</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                        <div class="group" style="position: relative">
+                            <h2>
+                                I-10</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(30.3435467155964,  -89.410171508789,  12);">Bay St. Louis - Diamondhead</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(30.4297295750316,  -89.0946578979492,  12);">GulfPort - I-10</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                I-20</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(32.333558948641,  -90.1476287841796,  11);">Jackson and surrounding areas</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                I-22</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(34.842387,  -89.630144,  11);">I-22</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                I-220</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(32.3927179812638,  -90.1942348480224,  14);">I-220 and Highland Colony</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.296927663442,  -90.2423000335693,  14);">I-220 and I-20 (Metrocenter)</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.3494399890743,  -90.2384376525878,  14);">I-220 and Medgar Evers</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                I-55</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(32.356763182678,  -90.1508903503418,  14);">I-55 - Northside Drive</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.5949861141958,  -90.0702095031738,  13);">I-55 and 22 (Canton)</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.4729846649464,  -90.1266860961914,  13);">I-55 and 463 (Madison)</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.3376926384297,  -90.1637649536132,  14);">I-55 and Lakeland</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.4221380740575,  -90.1474571228027,  14);">I-55 and Natchez Trace</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.2988865426113,  -90.1689147949218,  14);">I-55 South of Lakeland to I-20</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(34.9605276721893,  -90.0005149841308,  13);">Southaven</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.2755223369538,  -90.1562976837158,  14);">The Stack (I-20, I-155, and US 49)</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                MS 25</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(32.3410284609476,  -90.0944137573242,  14);">Airport Road (Lakeland)</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.358068244037,  -90.0176811218261,  14);">Castlewoods (Lakeland)</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.3918482759755,  -90.1398611068725,  15);">Countyline Road - Northpark</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(32.4088060182482,  -90.0824832916259,  14);">Spillway - Resevoir Area</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                MS 6</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(34.3727702446632,  -89.5344543457031,  14);">Oxford</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                MS 82</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(33.5494066375466,  -88.6837005615234,  11);">Golden Triangle - Columbus</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                MS 84</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(31.5576204311775,  -91.424446105957,  13);">Natchez</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                US 49</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(32.224419385153,  -90.201187133789,  13);">Byram - Richland (South of Jackson)</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(31.2979147165306,  -89.3064880371093,  12);">Hattiesburg</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+                        <div class="group" style="position: relative">
+                            <h2>
+                                US 90</h2>
+                            <div class="locationChoices group" style="position: relative">
+                                <ul>
+                                    
+                                            <li>
+                                                <a href="javascript:showMap(30.4229206386242,  -88.8766479492187,  13);">Biloxi - Ocean Springs</a>
+                                            </li>
+                                        
+                                            <li>
+                                                <a href="javascript:showMap(30.3623594238647,  -88.5408782958984,  13);">Pascagoula - US90</a>
+                                            </li>
+                                        
+                                </ul>
+                            </div>
+                        </div>
+                    
+            </div>
+           <h3>
+                <a href="#message-signs">Message Signs</a></h3>
+            <div id="message-signs" class="accordion-item" title="Dynamic Message Signs">
+                <iframe class="accordion-ifrm" id="ifrmMsgSigns" name="ifrmMsgSigns" scrolling="auto"
+                    frameborder="0"></iframe>
+            </div>
+            <h3>
+                <a href="#cameras-list">Cameras List</a></h3>
+            <div id="cameras-list" class="accordion-item" title="Cameras List">
+                <iframe class="accordion-ifrm" id="ifrmCameraList" name="ifrmCameraList" scrolling="auto"
+                    frameborder="0"></iframe>
+            </div>
+            <h3>
+                <a href="#alerts-list">Alerts</a></h3>
+            <div id="alerts-list" class="accordion-item" title="Alerts List">
+                <iframe class="accordion-ifrm" id="ifrmAlerts" name="ifrmAlerts" scrolling="auto"
+                    frameborder="0"></iframe>
+            </div>
+            <h3>
+                <a id="menu-favorites-list" href="#favorites-list">My Favorites</a></h3>
+            <div id="favorites-list" class="accordion-item" title="My Favorites">
+                <iframe class="accordion-ifrm" src="" id="ifrmFavorites" name="ifrmFavorites" scrolling="auto"
+                    frameborder="0"></iframe>
+            </div>
+            
+            <div id="mapMenuShowHide">
+                <a href="#">
+                    <img src="images/btn-vert-map-show-hide.png" alt="Show/Hide Map Controls" /></a>
+            </div>
+        </div>
+        <!-- /end accordion -->
+        <div id="map_canvas">
+        </div>
+    </div>
+    
+    <div id="divContactUs" title="Contact Us">
+        <iframe id="ifrmContactUs" name="ifrmContactUs" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+    <div id="divContributors" title="Contributors" >
+    
+        <iframe id="ifrmContributors" name="ifrmContributors" scrolling="auto" frameborder="0" >
+        </iframe>
+      
+    </div>
+    <div id="divFaq" title="Frequently Asked Questions">
+        <iframe id="ifrmFAQ" name="ifrmFAQ" scrolling="auto" frameborder="0"></iframe>
+    </div>
+     <div id="divDataUpdateInfo" title="Data Update Information">
+        <iframe id="ifrmDataUpdateInfo" name="ifrmDataUpdateInfo" scrolling="auto" frameborder="0"></iframe>
+    </div>
+     <div id="divSignupSuccess" title="Start your trip off right with MDOTtraffic">
+        <iframe id="ifrmSignupSuccess" name="ifrmSignupSuccess" scrolling="auto" frameborder="0"></iframe>
+    </div>
+    <div id="divSpecialAccessReg" title="Start your trip off right with MDOTtraffic">
+        <iframe id="ifrmSpecialAccessReg" name="ifrmSpecialAccessReg" scrolling="auto" frameborder="0"></iframe>
+    </div>
+    
+    <div id="divMyCommutes" title="My Commutes">
+        <iframe id="ifrmCommutes" name="ifrmCommutes" scrolling="auto" frameborder="0"></iframe>
+    </div>
+    <div id="divAccountInfo" title="My Account Info">
+        <iframe id="ifrmAccountInfo" name="ifrmAccountInfo" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+    <div id="divPasswordRecovery" title="Password Recovery">
+        <iframe id="ifrmPasswordRecovery" name="ifrmPasswordRecovery" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+    <div id="divFavoritesConsole" title="My Favorite Camera Views Console">
+        <iframe id="ifrmFavoritesConsole" name="ifrmFavoritesConsole" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+     <div id="divSignup" title="Create Your New Account" class="rounded">
+      <p style="text-align: right; margin:0; padding:0; line-height:0">
+                        <img src="images/x_close.png" style="width: 13px; height: 13px; text-align: right; padding-top: 10px; padding-right: 10px"
+                            alt="Close tab" onclick="javascript:document.getElementById('divSignup').style.display = 'none';" /></p>
+       
+       
+        <iframe id="ifrmSignup" name="ifrmSignup" scrolling="no" frameborder="0"  style="margin-top:5px;margin-bottom:5px; margin-right:0; margin-left:0px; ">
+        </iframe>
+    </div>
+    <div id="divUnregister" title="Unregister">
+        <table border="0" cellpadding="0" cellspacing="0" style="width: 85%" align="center"
+            class="unregtable">
+            <tr>
+                <td>
+                    <div id="pnlStayRegistered">
+	
+                        <table class="unregtable">
+                            <tr>
+                                <td>
+                                    <br />
+                                    <span style="font-size: 14pt; color: #333399">Receiving too many alerts ??? </span>
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Did you know you can <b>limit the types</b> of alerts you receive?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Did you know you can <b>draw your alert</b> area on the map?
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <br />
+                                    Click here to stay registered and edit your alert choices.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="button" onclick="javascript:openCommutesWindow();" value="Edit Alerts"
+                                        id="btnOpenCommutes" />
+                                    <br />
+                                    <br />
+                                </td>
+                            </tr>
+                        </table>
+                        <hr />
+                    
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="pnlUnreg">
+	
+                        <table class="unregtable">
+                            <tr>
+                                <td>
+                                    <span style="font-size: 14pt; color: #333399">Unregister from MDOTtraffic preferences
+                                        and alerts </span>
+                                    <br />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Help us improve by telling us why you no longer want to have an account with MDOTtraffic.com
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea name="taUnregReason" id="taUnregReason" maxlength="300" onkeyup="return ismaxlength(this)" cols="40" rows="4" wrap="soft"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                   
+                                                <input type="submit" name="btnUnregister" value="Unregister Now" id="btnUnregister" />
+                                                &nbsp; &nbsp;<input type="button" onclick="javascript:$('#divUnregister').dialog('close');"
+                                                    value="Cancel" />
+                                                &nbsp; &nbsp;
+                                          
+                                </td>
+                            </tr>
+                        </table>
+                    
+</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="lblErrorUnreg"><font color="Red"></font></span>
+                </td>
+            </tr>
+        </table>
+        <a id="testlink"></a>
+    </div>
+    <!--  end div unregister -->
+    <div id="divEmergenciesContainer" title="Active Emergency Events" class="group">
+        <iframe id="ifrmEmergencies" name="ifrmEmergencies" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+    <div id="divAmberContainer" title="Active Special Alert" class="group">
+        <iframe id="ifrmAmberAlerts" name="ifrmAmberAlerts" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+    <div id="divSiteBulletinsContainer" title="Active Site Bulletins" class="group">
+        <iframe id="ifrmSiteBulletins" name="ifrmSiteBulletins" scrolling="auto" frameborder="0">
+        </iframe>
+    </div>
+    <!-- This is the legend of the Traffic button in the document tree.
+     The Traffic button itself is created inside TrafficControl -->
+    <div id="legend">
+        <table cellpadding="0" cellspacing="0" border="0" style="width: 250px; height: 28px;">
+            <tr>
+                <td colspan="2" rowspan="2" style="width: 180px; padding: 0 0 0 8px; white-space: nowrap;">
+                    <b>Live traffic</b>
+                </td>
+                <td align="center" style="width: 60px; font-size: 10px;">
+                    Slow
+                </td>
+                <td align="center" style="width: 60px; font-size: 10px;">
+                    Fast
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <img style="vertical-align: top" src="images/mapicons/slowfast.png" width="66" height="10"
+                        alt="" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="searchbar" class="searchbarcss" style="visibility:hidden;">
+        Zoom to:
+        <input name="address" id="address" onclick="this.value = ''; this.onclick ='';" onkeypress="KeyDownHandlerShowAddress(event);"
+            size="60" type="text" />
+        <!-- 
+                    Zoom to: <input name="address" id="address" onclick="this.value = ''; this.onclick ='';" 
+       onkeydown="if(event.keyCode==13) {event.keyCode=9; showAddress();}"
+                        size="60" type="text" />
+                   <input id="btnGeoSearch" onclick="showAddress(document.getElementById('address').value);" type="button"
+                        value="Find it" />
+        <input id="btnGeoSearch" onclick="showAddress();" type="button" value="Find it" />-->
+    <a href ="#" onclick="showAddress();" >Find it</a>
+       
+        
+      <!--  <div  id = "map-update" >
+                        
+                           <label style="display:inline; padding-right:2px;" id="lblTimeUpdated1" >Last Updated: </label>
+                   <label style="display:inline" id="lblTimeUpdated2" ></label>
+                 <input type="button" onclick="javascript:AjaxReloadData();" value="Update"/>
+                  <a  id = "btnDataUpdateInfo">?</a>      
+                </div>
+          -->      
+    </div>
+    <div id="footer" class="horiz-nav-wrap group" > 
+    <a  href="http://www.MDOTtraffic.com/MS511" target="_blank"  style="background-color:Blue; "  >
+    <img id="img511"  src="images/logos/511-logo.png" alt= "Mississippi 511 logo"  style= "height:50px; float:left; padding: 7px 0 0 10px" /> 
+    </a>
+
+        <div class="horiz-nav">
+            <ul>
+             <li  id="menu-511website"></li>
+                <li id="menu-faq" style="vertical-align:middle;"><a href="#">FAQ</a></li>
+                <li id="menu-contributors"><a href="#">Contributors</a></li>
+                <li id="menu-contact-us"><a href="#">Contact Us</a></li>
+                <li id="menu-landing-link"><a href="landing.aspx">Travel Resources</a></li>
+                <li id="menu-privacy-policy"><a target="_blank" href="resources/MDOTtrafficPrivacyPolicy.pdf">Privacy</a></li>
+                <li id="menu-admin"><a href="admin/default.aspx" target="_blank">Admin</a></li>
+                <!--
+                    <li id="menu-emergency-officials"><a href="http://video.mstraffic.com" target="_self" >Emergency Officials</a></li>
+					<li id="menu-facebook"><a href="http://www.facebook.com/mississippi.transportation"  target="_blank" ><img src="images/facebooklink.png" alt="Follow MDOT on Facebook" /></a></li>
+                    <li id="menu-twitter"><a href="http://www.twitter.com/"  target="_blank" ><img src="images/twitterlink.png" alt="Follow MDOT on Twitter" /></a></li>
+                    -->
+            </ul>
+        </div>
+        <div id="map-update">
+       
+        <ul> 
+             <li> <a href ="#" id="btnDataUpdateInfo">?</a>
+            </li>
+            <li>
+            <a href ="#"  onclick="javascript:AjaxReloadData();" >Update</a>
+             
+            </li>
+           <li> <span id="lastmapupdate"> Last Map Update:
+        <label id="lblTimeUpdated2"></label>
+        </span></li>
+            </ul>
+                
+        </div>
+    </div>
+   
+
+    
+    <div style="display: none;">
+        <!-- preload highlight images -->
+        <img src="/images/mapicons/pin-alerts_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-cameras-2_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-cancelled-alerts_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-closed-roads_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-construction_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-hot-spots_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-rest-areas_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-signs-off_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-signs-on_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-welcome-centers_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-smart-workzones_highlight.png" alt="" />
+        <img src="/images/mapicons/pin-weather_highlight.png" alt="" />
+         <img src="/images/mapicons/pin-thermometer_highlight.png" alt="" />
+    </div>
+    
+  </div> 
+    </form>
+   
+    <script type="text/javascript">
+
+
+        function LoadMarkers_generic(markerlist) {
+            var tempmarker;
+            var thismarkergroup; 
+            $.each(markerlist, function (key, a) {
+                tempmarker = createMarker(a.lat, a.lon, a.markergroup, a.icontype, a.tooltip, a.markerid, a.framehtml);
+                thismarkergroup = a.markergroup; 
+                if (markerGroupChecked(a.markergroup)) {
+                    tempmarker.setMap(map);                  
+                }
+            });
+            
+            //load specific camera 
+            if ( (firstRun == true) && (window.location.href.indexOf('loadStreamID=') != -1) && thismarkergroup == "map-cameras") {
+                firstRun = false;
+                loadWhereTo();
+            }
+        } //end loadmarkers_generic
+
+        function LoadPolygons_counties(polygonlist) {
+            var temppoly;
+            $.each(polygonlist, function (key, a) {
+                temppoly = createPolygon(a.path, a.polygongroup, a.polygonid, a.strokeColor, a.strokeOpacity, a.strokeWeight, a.fillColor, a.fillOpacity, a.zIndex);
+                //if (markerGroupChecked(a.markergroup)) {
+                temppoly.setMap(map);
+                //countyBoundaryPolys.push(temppoly); 
+                countyBoundaryPolys[a.polygonid] = temppoly;
+                // }
+            });
+            function createPolygon(coords, group, polygonid, sColor, sOp, sWt, fColor, fOp, zIn) {
+                var i, j;
+                var splitPointColon, splitPointComma;
+                splitPointColon = coords.split(";");
+                //alert(splitPointColon.length); //num points 
+                var latlons;
+                latlons = new Array();
+                for (i = 0; i < splitPointColon.length; i++) {
+                    splitPointComma = splitPointColon[i].split(",");
+                    latlons.push(new google.maps.LatLng(splitPointComma[1], splitPointComma[0]));
+                } //end for
+                //alert(latlons.length); 
+
+                var thisPolygon = new google.maps.Polygon(
+                     { paths: latlons,
+                         strokeColor: sColor, strokeOpacity: sOp, strokeWeight: sWt, fillColor: fColor,
+                         fillOpacity: fOp
+                     });
+
+                //   thisPolyline.metadata = {type: "polyline", polylineid: polylineid, polylinegroup: group, polylinepath: coords};       
+                //polylinesALL[polylineid]=thisPolyline; 
+
+                return thisPolygon;
+            } //end createPolygon 
+        } //end loadmarkers_generic
+        function AjaxReloadData() {
+            AjaxReloadAlerts(); //this one updates the clock 
+            AjaxReloadAlertPolylines();
+            AjaxReloadDMSs();
+            AJAXCheckBanners();
+            AJAXCheckShadedCounties(); 
+        }
+
+        function getTimeStamp() {
+            var now = new Date();
+           // return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
+           //          + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
+            //          .getSeconds()) : (now.getSeconds())));
+            var retstr, ender, hourstr; 
+            if (now.getHours() > 12) {
+                ender = " PM";
+                hourstr = now.getHours() - 12 ; 
+            }
+            else {
+                ender = " AM";
+               hourstr= now.getHours()
+            }
+             retstr =  ( hourstr + ':'
+                      + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
+                      .getSeconds()) : (now.getSeconds())));
+             retstr += ender; 
+             return retstr; 
+        }
+        function AjaxReloadAlerts() {
+
+            $.ajax({
+                type: "POST",
+                url: "default.aspx/LoadAlertData",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    var cmarkers = response.d;
+                    ReloadAlerts(cmarkers);
+                    document.getElementById("lblTimeUpdated2").innerHTML = getTimeStamp();
+                    
+                }, /*end success*/
+                failure: function (msg) {
+                    alert("error" + msg);
+                }
+            });
+
+        }
+
+        function isAlertType(markertype) {
+            switch (markertype) {
+                case "map-weather":  case "map-construction": case "map-closed-roads": case "map-incident-alerts":  case "map-cancelled-alerts": 
+                    return true;
+                    break;
+                default:
+                    return false;
+            }
+
+        }
+
+        function ReloadAlerts(newmarkerlist) {
+            var tempmarker;
+            for (var existingMarker in markersALL) {
+
+                if (markersALL[existingMarker].metadata.markergroup == "map-construction" || markersALL[existingMarker].metadata.markergroup == "map-closed-roads" || markersALL[existingMarker].metadata.markergroup == "map-incident-alerts" || markersALL[existingMarker].metadata.markergroup == "map-cancelled-alerts") {//ignore if not an alert type                                             
+                    //alert("outside loop for  " + markersALL[existingMarker].metadata.id + " "); 
+                    var keepit = false;
+                    for (var newmarker in newmarkerlist) {
+
+                        if (markersALL[existingMarker].metadata.id == newmarkerlist[newmarker].markerid &&
+                                    markersALL[existingMarker].metadata.markergroup == newmarkerlist[newmarker].markergroup &&
+                                    markersALL[existingMarker].metadata.lat == newmarkerlist[newmarker].lat &&
+                                    markersALL[existingMarker].metadata.lon == newmarkerlist[newmarker].lon) {
+                            //marker must be its old type, incident changed to cleared needs to be reloaded 
+                            keepit = true;
+                            //alert("keepit true " + markersALL[existingMarker].metadata.id + " ");
+                            break;
+                        }
+                        else {
+                            //var str = "false " + markersALL[existingMarker].metadata.id + "  " + newmarkerlist[newmarker].markerid;
+                            //str += "\n"; 
+                            //str += markersALL[existingMarker].metadata.markergroup + "  " +  newmarkerlist[newmarker].markergroup; 
+                            //         str += markersALL[existingMarker].metadata.lat + "  " + newmarkerlist[newmarker].lat ; 
+                            //         str += markersALL[existingMarker].metadata.lon + "  " + newmarkerlist[newmarker].lon; 
+                            //alert(str) ; 
+                        }
+
+                    }
+                    if (keepit == false) {
+                        //alert("delete" + markersALL[existingMarker].metadata.id);
+                        //delete marker, no longer in active alerts or its type changed 
+                        markersALL[existingMarker].setMap(null);
+                        //delete markerGroups[group][marker];
+                        delete markersALL[existingMarker];
+                    }
+                } //end if type is an alert 
+            } //end for each existing      
+            ///////////////////////////////////////////////////////////////////  christie !!!  TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //also infobox.close if necessary ?? how to know marker that is open ????
+            //also need user polygons and polyline functions
+            $.each(newmarkerlist, function (key, a) {
+                if (markersALL[a.markerid] == null) {
+                    tempmarker = createMarker(a.lat, a.lon, a.markergroup, a.icontype, a.tooltip, a.markerid, a.framehtml);
+                    if (markerGroupChecked(a.markergroup)) {
+                        tempmarker.setMap(map);
+                    }
+                }
+                else {
+                    // alert("marker exists, do nothing"); 
+                }
+            });
+          
+            if ((firstRun == true) && (window.location.href.indexOf('loadStreamID=') == -1)) {
+                //if loading a camera, skip here and wait load after ajax call
+                firstRun = false;
+                loadWhereTo();
+            }
+        } //end ReloadAlerts  
+
+        function AjaxReloadDMSs() {
+
+            $.ajax({
+                type: "POST",
+                url: "default.aspx/LoadDMSData",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    var cmarkers = response.d;
+                    ReloadDMSs(cmarkers);
+                }, /*end success*/
+                failure: function (msg) {
+                    alert("error" + msg);
+                }
+            });
+
+        }
+
+        function ReloadDMSs(newmarkerlist) {
+            var tempmarker;
+            for (var existingMarker in markersALL) {
+                if (markersALL[existingMarker].metadata.markergroup == "map-signs-off" || markersALL[existingMarker].metadata.markergroup == "map-signs-on") {//ignore if not DMS type 
+                    var keepit = false;
+                    for (var newmarker in newmarkerlist) {
+                        if (existingMarker == newmarkerlist[newmarker].markerid && markersALL[existingMarker].metadata.markergroup == newmarkerlist[newmarker].markergroup) {
+                            //marker must be its old type, incident changed to cleared needs to be reloaded 
+                            keepit = true;
+                            break;
+                        }
+                    }
+                    if (keepit == false) {
+                        //alert("delete" + existingMarker);
+                        //delete marker, no longer in active alerts or its type changed 
+                        markersALL[existingMarker].setMap(null);
+                        //delete markerGroups[group][marker];
+                        delete markersALL[existingMarker];
+                    }
+                } //end if type is an alert 
+            } //end for each existing      
+            ///////////////////////////////////////////////////////////////////  christie !!!  TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //also infobox.close if necessary ?? how to know marker that is open ????
+            //also need user polygons and polyline functions
+            $.each(newmarkerlist, function (key, a) {
+                if (markersALL[a.markerid] == null) {
+                    tempmarker = createMarker(a.lat, a.lon, a.markergroup, a.icontype, a.tooltip, a.markerid, a.framehtml);
+                    if (markerGroupChecked(a.markergroup)) {
+                        tempmarker.setMap(map);
+                    }
+                }
+                else {
+                    // alert("marker exists, do nothing"); 
+                }
+            });
+        } //end ReloadDMS   
+
+
+        function AjaxReloadAlertPolylines() {
+            $.ajax({
+                type: "POST",
+                url: "default.aspx/LoadAlertData_Polylines",
+                data: "{}",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    var cpolylines = response.d;
+                    ReloadAlertPolylines(cpolylines);
+                }, /*end success*/
+                failure: function (msg) {
+                    alert("error" + msg);
+                }
+            });
+
+        }
+
+        function ReloadAlertPolylines(newpolylinelist) {
+            var temppolyline;
+
+            for (var existingPoly in polylinesALL) {
+                if (polylinesALL[existingPoly].metadata.polylinegroup == "map-construction" || polylinesALL[existingPoly].metadata.polylinegroup == "map-closed-roads" || polylinesALL[existingPoly].metadata.polylinegroup == "map-incident-alerts" || polylinesALL[existingPoly].metadata.polylinegroup == "map-cancelled-alerts") {//ignore if not an alert type                                             
+                    var keepit = false;
+                    for (var newpolyline in newpolylinelist) {
+                        if (existingPoly == newpolylinelist[newpolyline].polylineid &&
+                                    polylinesALL[existingPoly].metadata.polylinegroup == newpolylinelist[newpolyline].polylinegroup &&
+                                    polylinesALL[existingPoly].metadata.path == newpolylinelist[newpolyline].path) {
+                            //marker must be its old type, incident changed to cleared needs to be reloaded 
+                            keepit = true;
+                            break;
+                        }
+                    }
+                    if (keepit == false) {
+                        //alert("delete" + existingMarker);
+                        //delete marker, no longer in active alerts or its type changed 
+                        polylinesALL[existingPoly].setMap(null);
+                        //delete markerGroups[group][marker];
+                        delete polylinesALL[existingPoly];
+                    }
+                } //end if type is an alert 
+            } //end for each existing      
+            ///////////////////////////////////////////////////////////////////  christie !!!  TO DO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //also infobox.close if necessary ?? how to know marker that is open ????
+            //also need user polygons and polyline functions
+            $.each(newpolylinelist, function (key, a) {
+                if (polylinesALL[a.polylineid] == null) {
+                 temppolyline = createPolyline(a.path, a.polylinegroup, a.tooltip, a.polylineid);
+                    if (markerGroupChecked(a.polylinegroup)) {
+                        temppolyline.setMap(map);
+                    }
+                   
+                }
+                else {
+                    // alert("polyline exists, do nothing"); 
+                }
+            });
+        } //end ReloadAlerts_Polylines  
+    </script>
+   <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+    twttr.conversion.trackPid('l4htt');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4htt&p_id=Twitter" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4htt&p_id=Twitter" />
+</noscript>
+
+</body>
+</html>

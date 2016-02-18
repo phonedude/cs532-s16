@@ -1,0 +1,353 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META http-equiv="Expires" content="-1">
+<title>Forest Owlet (Heteroglaux blewitti) - BirdLife species factsheet</title>
+<link rel="stylesheet" type="text/css" href="/datazone/css/default.css">
+<link rel="stylesheet" type="text/css" href="/datazone/css/speciesfactsheet.css">
+<link rel="stylesheet" href="http://www.birdlife.org/datazone/js/ol/theme/default/style.css" type="text/css">
+<script src="/datazone/js/shared.js" language="javascript"></script><script src="/datazone/js/appcode.js" language="javascript"></script><script language="javascript">
+
+				var m_ShowEmailWindowPageType = "dz_general";
+				var m_CurrentPageURL = "http://www.birdlife.org/datazone/species/factsheet/22689335";
+
+				var map;
+				var m_MapBounds = "8256870,2421079.25,8611111,2492263.5";
+				var m_Gid = "2289";
+
+			</script><script src="http://maps.googleapis.com/maps/api/js?v=3.6&amp;sensor=false"></script><script src="/datazone/js/OpenLayers-2.11/OpenLayers.js"></script><script language="javascript">
+
+		        function DrawSpeciesMap(){
+
+					// If we haven't got the bounds or the GID then do nothing.
+					if (m_MapBounds == "" || m_Gid == "")
+						return;
+
+					var coords = m_MapBounds.split(',');
+
+					map = new OpenLayers.Map({
+			            div: "map",
+				        projection: "EPSG:900913",
+				        units: "m",
+				        maxResolution: 156543.0339,
+				        maxExtent: new OpenLayers.Bounds(-20037508, -20037508, 20037508, 20037508)
+			        });
+
+					// For setting the Extent to the species data extent.
+			        //maxExtent: new OpenLayers.Bounds(coords[0], coords[1], coords[2], coords[3])
+
+					//,
+			        //maxExtent: new OpenLayers.Bounds(1551208.125, 9500995, 19807772, 11922888)
+
+					// Extent for the world - I think!
+			        //maxExtent: new OpenLayers.Bounds(-20037508, -20037508, 20037508, 20037508)
+			        // Examples for some species ID's
+			        //maxExtent: new OpenLayers.Bounds(575173.1875, -8732544, 940202.5625, -8541862)
+			        //maxExtent: new OpenLayers.Bounds(1551208.125, 9500995, 19807772, 11922888)
+
+					var googlePhysical = new OpenLayers.Layer.Google(
+				        "Google Physical Map",
+				        {
+				        	code: 'GooglePhysicalMap',
+							type: google.maps.MapTypeId.TERRAIN, // ROADMAP,
+							'sphericalMercator': true
+						}
+			        );
+
+					var cqlFilter = "spcrecid = "+m_Gid;
+/*
+					var specieswms = new OpenLayers.Layer.WMS(
+				       	"Species",
+				       	"http://birdlaa2.memset.net:8080/geoserver/wms?",
+		       			{
+		          			layers: 'birdlife:gtbs',
+		          			srs: 'EPSG:4326',
+							format: 'image/png8',
+							cql_filter: cqlFilter, //377,3371
+							tilesOrigin : "143.60260815000004,-43.851764249999995",
+							tiled: 'true',
+							transparent: true,
+							styles: ""
+		       			},
+		       			{
+		            		'opacity': 0.65, 'isBaseLayer': false, 'wrapDateLine': true
+		       			}
+
+		    		);
+*/
+					var specieswms = new OpenLayers.Layer.WMS(
+				       	"Species",
+				       	"http://birdlaa5.memset.net:8080/geoserver/wms?",
+		       			{
+		          			layers: 'topp:species_maps_wm_2015_gen', // 2015 2nd attempt!
+		          			srs: 'EPSG:900913',
+							format: 'image/png8',
+							cql_filter: cqlFilter, //377,3371
+							tilesOrigin : "143.60260815000004,-43.851764249999995",
+							tiled: 'true',
+							transparent: true,
+							styles: ""
+		       			},
+		       			{
+		            		'opacity': 0.65, 'isBaseLayer': false, 'wrapDateLine': true
+		       			}
+
+		    		);
+
+		            map.addLayers([googlePhysical, specieswms]);
+
+		            // This centers on the Equator
+		            //map.setCenter(new OpenLayers.LonLat(0, 0), 0);
+
+		            // This works just fine.
+		            //map.zoomToExtent(new OpenLayers.Bounds(1551208.125, 9500995, 19807772, 11922888));
+
+		            // This works just fine - and better as we have set the map extent to this earlier
+		            // we are just forcing the display.
+		            //map.zoomToExtent(map.maxExtent);
+
+					var ext = new OpenLayers.Bounds(coords[0], coords[1], coords[2], coords[3]);
+					var newZoomLevel = map.getZoomForExtent(ext,true);
+
+					x = parseFloat(ext.left) + ((parseFloat(ext.right) - parseFloat(ext.left)) / 2);
+					y = parseFloat(ext.top) + ((parseFloat(ext.bottom) - parseFloat(ext.top)) / 2);
+
+					map.setCenter(new OpenLayers.LonLat(x, y), newZoomLevel-1);
+
+		        }
+
+			</script>
+</head>
+<body onload="DrawSpeciesMap();">
+<div id="canvas" class="canvas">
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js"></script><script type="text/javascript">
+		GS_googleAddAdSenseService("ca-pub-8998427340215861");
+		GS_googleEnableAllServices();
+		</script><script type="text/javascript">
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife-MPU");
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife_Bt_1");
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife_Bt_2");
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife_Bt_3");
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife_Bt_4");
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife_Mini_MPU");
+		GA_googleAddSlot("ca-pub-8998427340215861", "BirdLife_Sky_120_1");
+		</script><script type="text/javascript">
+		GA_googleFetchAds();
+		</script><script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script><script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-296539-1");
+			pageTracker._initData();
+			pageTracker._trackPageview();
+		</script><div id="banner" class="banner">
+<div id="banner-left" style="cursor:hand;cursor:pointer;" onClick="document.location.href='http://www.birdlife.org'"></div>
+<div id="banner-left-title"><h1>Species</h1></div>
+<div id="banner-search" style="float:right;height:25px;text-align:right;margin-top:30px;margin-right:10px;"><form id="frmMainSearch" method="get" action="http://www.birdlife.org/datazone/sowbsearchresults.php">
+<input type="hidden" id="a" name="a" value="ns"><b style="color:white;">Search</b> 
+					<input type="text" id="SearchTerms" name="SearchTerms" size="20" maxlength="100"> <input type="submit" value="Go" class="qpqsubmit">
+</form></div>
+</div>
+<div id="workingarea">
+<div id="contentwrapper"><div id="contentcolumnfluidright"><div class="innertube">
+<div class="sectionFullWidth">
+<div class="emailandprint">
+<div id="ep_Emailbutton" style="float:left;"><div style="font-size:7pt;cursor:hand;cursor:pointer;" onClick="doShowEmailWindow();">
+<img src="/datazone/images/email.gif">email a friend</div></div>
+<div id="ep_Resizebutton" style="float:right;"><div style="font-size:7pt;cursor:hand;cursor:pointer;" onClick="ResizeForPrint(1);">
+<img src="/datazone/images/print.gif">printable version</div></div>
+<div id="ep_Printbutton" style="float:left;display:none;"><div style="font-size:7pt;cursor:hand;cursor:pointer;" onClick="window.print();">
+<img src="/datazone/images/print.gif">print</div></div>
+<div id="ep_Cancelbutton" style="float:right;display:none;"><div style="font-size:7pt;cursor:hand;cursor:pointer;" onClick="ResizeForPrint(0);">
+<img src="/datazone/images/printclose.gif">close</div></div>
+</div>
+<div style="padding:3px;background-color:#3333FF;color:#fff;font-weight:bold;"></div>
+<div class="SpeciesHeader">
+<div class="SpeciesCategoryCR">CR</div>
+<div class="SpeciesName">Forest Owlet <i>Heteroglaux blewitti</i>
+</div>
+</div>
+</div>
+<div id="contentwrapper"><div id="contentcolumnfluidleft"><div class="innertube">
+<table cellspacing="0" class="SpeciesChampionTable">
+<tr>
+<td id="backgroundFill">BirdLife Species Champion</td>
+<td><a href="http://www.birdlife.org/action/campaigns/species_champions/index.html">Become a BirdLife Preventing Extinctions Programme Supporter</a></td>
+</tr>
+<tr><td colspan="2"><span style="font-size:5px;"> </span></td></tr>
+<tr>
+<td id="backgroundFill">BirdLife Species Guardian</td>
+<td><a href="http://www.bnhs.org/" target="_blank">Bombay Natural History Society (BNHS)</a></td>
+</tr>
+<tr><td colspan="2">
+						For information about BirdLife Species Champions and Species Guardians visit the
+						<a href="http://www.birdlife.org/extinction/index.html">
+						BirdLife Preventing Extinctions Programme.</a>
+</td></tr>
+</table>
+<div id="divKeyFactsPrintArea" style="width:100%;display:none;"></div>
+<p><image src="http://www.birdlife.org/datazone/images/species_images/2289.gif" border="0" style="float:left;margin-right:5px;"></image><b>Justification</b><br>This species has a tiny, severely fragmented population, known from fewer than 12 recent locations. It is likely to be declining as a result of loss of its deciduous forest habitat. Although surveys continue to discover more individuals, these factors lead to its present classification as Critically Endangered. Further information may warrant its downlisting to a lower category of threat in future.  <p></p></p>
+<p><b>Taxonomic source(s)</b><br>del Hoyo, J.; Collar, N. J.; Christie, D. A.; Elliott, A.; Fishpool, L. D. C. 2014. <i>HBW and BirdLife International Illustrated Checklist of the Birds of the World</i>. Barcelona, Spain and Cambridge UK: Lynx Edicions and BirdLife International.</p>
+<p><b>Synonym(s)</b><br><i>Athene blewitti</i> Collar and Andrew (1988), <i>Athene blewitti</i> Collar et al. (1994), <i>Athene blewitti</i> Sibley and Monroe (1990, 1993)</p>
+<p><b>Identification</b><br>23&#160;cm. Typical owlet with rather plain crown and heavily banded wings and tail. Dark grey-brown crown and nape, faintly spotted white. Broadly banded, blackish-brown and white wings and tail, with a broad white tail-tip. Dark brown breast with broad, prominent barring on flanks. Rest of underparts are white. <strong>Similar spp.</strong> Spotted Owlet <em>A. brama</em> has more distinct spotting on crown and nape, a prominent white nuchal collar, and lacks broadly banded tail. <strong>Voice</strong> Territorial call is rather loud, mellow <em>uwww</em> or <em>uh-wuwww</em>. Calls include hissing <em>shreeee</em> or <em>kheek</em> and repeated <em>kwaak</em> notes, rising and falling in pitch. </p>
+<p><div style="float:right;height:345px;width:410px;">
+<div id="map" class="smallmap" style="border:solid 1px black;float:right;height:275px;width:400px;"></div>
+<img src="http://www.birdlife.org/datazone/images/speciesrangelegend.gif" style="float:right;">
+</div><b>Distribution and population</b><br><em>Heteroglaux blewitti</em> is endemic to central <strong>India</strong>. Until its rediscovery in 1997, it was only known from seven specimens collected during the 19th century at four localities in two widely separated areas, north-western Maharashtra (G. Jathar <span style="font-style: italic;">in litt.</span> 2012), and south-east Madhya Pradesh/western Orissa. In 2000, a survey of 14 forest areas across its former range located 25 birds at four sites in northern Maharashtra and south-western Madhya Pradesh, including three pairs at Taloda Forest Range and seven pairs at Toranmal Forest Range. Further surveys in 2004 found 12 adults and 7 fledglings in Toranmal but no birds were found in Taloda (Jathar and Rahmani 2004), and following surveys in 2005 and 2006 also reported a pair of birds at Toranmal Forest Range (Jathar and Rahmani 2006, Jathar and Patil 2011, G. Jathar <span style="font-style: italic;">in litt.</span> 2012). Further surveys on the Toranmal Forest Range in November 2009 revealed that only two of the seven territories remain<span style="font-weight: bold; "> </span><strong style="font-weight: normal; "> (</strong>G. Jathar <em style="">in litt.</em> 2010)<strong style=""></strong>. A further study in 2010-2011 surveying known localities in Taloda and Toranmal Forest Ranges found no birds in Taloda and only one pair in Toranmal despite intensive surveying over two seasons (Jathar and Patil 2011). No birds were found in a brief survey of its former eastern range in Orissa, or in north-east Andhra Pradesh (Mehta <em style="">et al. </em>2007, Anon. 2009)<strong style=""></strong>. <br/><br/>In 2003, survey effort in the Satpura Range (Maharashtra) located another five sites with a total of nine birds (Rithe 2003)<strong style=""></strong>, indicating that the species may prove to be widespread but previously overlooked in the western Satpura Mountains, and in 2006, 24 birds were found in two sites in Burhanpur and one site in Khandwa (Mehta <em style="">et al. </em>2007). By 2005, over 100 individuals had been recorded in Melghat Tiger Reserve, Maharashtra<span style="font-weight: bold;"> </span><em><span style="font-weight: bold;"></span></em>(Kasambe <em>et al</em><span style="font-style: italic;">.</span> 2005)<strong></strong>, which is now recognised as the species's stronghold. The species has also been found breeding nearby at Yawal Wildlife Sanctuary  (Chavan and Rithe 2009), however recent surveys found no Forest Owlet in this area (Bombay Natural History Society 2013). The species was recently recorded in Tansa Wildlife Sanctuary, Maharashtra (Deshpande 2014). Modelling suggests that its remaining range is severely fragmented, and only c.10% is protected<span style="font-weight: bold;"> </span><strong style="font-weight: normal;"> (</strong>G. Jathar <em>in litt.</em> 2010)<strong></strong>. Although there is some confusion over its former abundance, evidence strongly suggests it has always been scarce. <br><br><b>Population justification</b><br>The population is estimated to number 50-249 mature individuals based on the number of records from known sites, with c. 100 individuals now recorded from Melghat Tiger Reserve. This estimate is equivalent to 75-374 individuals in total, rounded here to 70-400 individuals. Given the increasing number of records and sites known within its range it may prove to be more common than previous evidence has suggested.<br><br><b>Trend justification</b><br>The species faces a number of threats which in combination are suspected to be causing a decline at a rate of 10-19% over ten years.<br><br><b>Ecology</b><br>It appears to be a sedentary resident with recent sightings from fairly open dry deciduous forest dominated by teak <em>Tectona grandis </em>(Ishtiaq <em>et al</em><span style="font-style: italic;">.</span> 2002)<strong></strong>. Along with teak, a ground cover of weed like wild basil and grasses is typical of the known owlet sites (D. Patil <span style="font-style: italic;">in litt.</span> 2012). It was rediscovered at 460 m and other known locations are at 400-700 m (G. Jathar <span style="font-style: italic;">in litt.</span> 2012). Most historical records came from moist deciduous forest or dense jungle, the altitudinal range of which is unclear, although most specimens were collected in plains forest. This suggests that the recent observations from hill slopes may represent birds in suboptimal habitat. It appears to be quite strongly diurnal and fairly easy to detect, frequently perching on prominent bare branches. Lizards, small rodents, nestlings of other birds, grasshoppers, frogs and caterpillars are all prey items (Ishtiaq <em>et al</em>. 2002, Kasambe <em>et al</em>. 2005)<strong></strong><strong></strong>, which are often cached in hollow tree trunks (Ishtiaq <em>et al</em><span style="font-style: italic;">. </span>2002)<strong></strong>.<strong> </strong>It appears to partition resources with the similar and widespread Spotted Owlet <em>Athene brama<span style="font-weight: bold;"> </span></em>(Kasambe <em>et al</em><span style="font-style: italic;">.</span> 2005)<strong></strong>. It breeds between October and May, laying a brood of two eggs (Ishtiaq and Rahmani 2005) in a hole in a softwood tree, and can re-lay if its first nesting attempt fails. At one nest, the young fledged at 30-32 days, after which they were dependent on the parents for at least another 40-45 days (Ishtiaq <em>et al</em><span style="font-style: italic;">.</span> 2002)<strong></strong>.  <br><br><b>Threats</b><br>Given its rarity, identification of threats is difficult.&#160;Forest in its range is being lost and degraded by illegal tree cutting for firewood and timber, and encroachment for cultivation, grazing and settlements<em>&#160;</em>(Ishtiaq&#160;<em>et al</em><span style="font-style: italic;">.</span>&#160;2002, Chavan and Rithe 2009)<strong></strong>, as well as forest fires and minor irrigation dams (Chavan and Rithe 2009)<strong></strong>.&#160;The site of its initial discovery in 1872 (Chhattisgarh) has completely been encroached by agriculture (D. Patil <span style="font-style: italic;">in litt.</span> 2012). Large areas of forest in the Yawal Wildlife Sanctuary and Yawal Forest Division as well as the Aner Wildlife Sanctuary and the Satpuda mountain ranges in Maharashtra have recently been subject to encroachment leading to habitat loss for this species (Nannaware 2014). It is likely that other forest areas where it occurs are under similarly intense pressure. Overgrazing by cattle may reduce habitat suitability<strong> </strong>(Jathar 2003). The proposed Upper Tapi Irrigation Project threatens 244 ha of prime habitat used by the species<strong style="font-weight: normal;"> (</strong>Kasambe <em>et al</em><span style="font-style: italic;">.</span> 2004). It suffers predation from a number of native raptors, limiting productivity, and it faces competition for a limited number of nesting cavities (Jathar 2003, Ishtiaq and Rahmani 2005)<strong></strong>. The species is hunted by local people and body parts and eggs are used for local customs, such as the making of drums<strong> </strong>(Jathar 2003, Jathar and Rahmani undated)<strong></strong>. Pesticides and rodenticides are used to an unknown degree within its range and may pose an additional threat <strong> </strong>(Jathar 2003). <br><br><strong>Conservation Actions Underway</strong><br/>CITES Appendix I. Since its rediscovery in 1997, fieldwork has been conducted to study its status, ecology and threats. Interventions have been made to seek the prevention of further forest losses at the site of rediscovery. Over 100 individuals have been seen in the protected Melghat Tiger Reserve, Maharashtra (Kasambe <em>et al</em><span style="font-style: italic;">.</span> 2005)<strong></strong>, and it has been recorded in Toranmal Reserve Forest, Khaknar Reserve Forest and Yawal Wildlife Sanctuary. Further surveys in 2009 in the Melghat Tiger Reserve indicate that the park is well protected<strong style="font-weight: normal;"> (</strong>G. Jathar <em>in litt.</em> 2010). An education and awareness programme has been initiated. A recent survey was carried out in Maharashtra and Madhya Pradesh  in 2010 and 2011 (Jathar and Patil 2011). A recovery plan is being worked on  (D. Patil <span style="font-style: italic;">in litt.</span> 2012). A long-term project to investigate the impact of timber harvesting on the species in Madhya Pradesh has been initiated (P. Mehta <em>in litt</em>. 2013).<br/><br/><strong>Conservation Actions Proposed</strong><br/>Prevent illicit wood-cutting and hunting of wildlife in forests within the species's range (Ishtiaq and Rahmani 2005)<strong></strong>. Advocate suitable forest management practices including controlled grazing and appropriate control of forest fires (Bombay Natural History Society 2013). Conduct surveys in remaining suitable habitat, particularly sites in the 800 km gap between the east/west limits of the historical records, to establish its total range, current distribution and population status, habitat use, and to assess its main threats. Potential habitat should be searched at Orissa and Chhattisgarh particularly. Research its relationship with both invasive and potentially problematic native species (D. Patil <span style="font-style: italic;">in litt.</span> 2012). Provide support to the education and awareness-raising programme among local communities to promote the value and importance of this species and convey its potential benefits. Promote ecotourism. Control the use of pesticides and rodenticides. Use nest site protection to avoid destruction of nests. Initiate a number of forest management measures and establish community reserves within its range (Rahmani and Jathar 2004, G. Jathar <span style="font-style: italic;">in litt.</span> 2012)<strong></strong>, with Khaknar and Toranmal being priority sites for protection. Train forest staff in conservation. Use watershed development to stabilise the species's habitat. Publicise conservation among local young people (D. Patil <span style="font-style: italic;">in litt.</span> 2012). Colour-banding research on the species in Melghat and Tadoba Tiger Reserves and the forests of Toranmal, Maharashtra is planned for September 2013 (Anon. 2013).<br><br></p>
+<p><p><b>References</b><br>Anon. 2009. Status of Blewitt's Owl in Aruka Valley and Environmental Management Plan in view of the proposed bauxite mines. <i>S&aacute;lim Ali Centre for Ornithology and Natural History Annual Report</i> 2007-2008: 50-51.</p><p>Anon. 2013. Project to study Forest owlets in Melghat & Tadoba TRs and in Toranmal, Nandurbar district. <i>Protected Area Update</i> 19(3): 16.</p><p>BirdLife International. 2001. <i>Threatened birds of Asia: the BirdLife International Red Data Book</i>. BirdLife International, Cambridge, U.K.</p><p>Bombay Natural History Society. 2013. Forest Owlet - Preventing Exctinctions Programme Interim Report 2012-2013. BirdLife International.</p><p>Chavan, R. A.; Rithe, K. D. 2009. Occurrence and breeding record of the Forest Owlet <i>Heteroglaux blewitti</i> from Yawal Wildlife Sanctuary, Maharashtra, India. <i>Journal of the Bombay Natural History Society</i> 106(2): 207-208.</p><p>Deshpande, A. 2014. Forest Owlet spotted in Ghats. The Hindu Available at: <a href="http://www.thehindu.com/sci-tech/forest-owlet-spotted-in-ghats/article6646793.ece">http://www.thehindu.com/sci-tech/forest-owlet-spotted-in-ghats/article6646793.ece</a>. (Accessed: 15/06/2015).</p><p>Ishtiaq, F.; Rahmani, A. R. 2005. The Forest Owlet <i>Heteroglaux blewitti</i>: vocalization, breeding biology and conservation. <i>Ibis</i> 147: 197-205.</p><p>IUCN. 2015. The IUCN Red List of Threatened Species. Version 2015-4. Available at: <a href="www.iucnredlist.org">www.iucnredlist.org</a>. (Accessed: 19 November 2015).</p><p>Jathar, G. 2003. Saving the mysterious Forest Owlet. <i>Mistnet</i> 4(3 & 4): 9-10.</p><p>Jathar, G. A.; Patil, D. N. 2011. Reassessment of the status of the Forest Owlet in its known distribution and evaluation of conservation issues. Final Report. . Foundation for Ecological Conservation and Sustainable Development, India. Published for Watershed Organization Trust, Pune.</p><p>Jathar, G. A.; Rahmani, A. R. 2004. <i>Ecological studies of the Forest Spotted Owlet </i>Athene (Heteroglaux) blewitti<i>: final report</i>. Bombay Natural History Society, Mumbai, India.</p><p>Jathar, G. A.; Rahmani, A. R. 2006. <i>Status of the critically endangered Forest Owlet </i>Heteroglaux blewitti<i> (Hume) in Maharashtra</i>. Melghat Tiger Reserve Technical Bulletin.</p><p>Kasambe, R.; Pande, S.; Wadatkar, J.; Pawashe, A. 2004. Additional records of the Forest Owlet <i>Heteroglaux blewitti</i> Hume, 1873, in Melghat Tiger Reserve, Maharashtra. <i>Newsletter for Ornithologists</i>: 12-14.</p><p>Kasambe, R.; Wadatkar, J.; Bhusum, N.S.; Kasdekar, F. 2005. Forest Owlets <i>Heteroglaux blewitti</i> in Melghat Tiger Reserve, Distt. Amravati, Maharashtra. <i>Newsletter for Birdwatchers</i> 45: 38-40.</p><p>Mehta, P.; Kulkarni, J.; Patil, D.; Kolte, P.; Khatavkar, P. 2007. <i>A survey of critically endangered Forest Owlet (</i>Heteroglaux blewitti<i>) in Central India</i>.</p><p>Nannaware, R. 2014. The assassination of Yawal. <i>Sanctuary Asia</i> 34(3): 72-75.</p><p>Rithe, K. 2003. Saving the Forest Owlet. <i>Sanctuary Asia</i> 23: 30-31.</p></p>
+<p><p><b>Further web sources of information</b><br><a href="http://www.birdlife.org/datazone/userfiles/file/Species/AsRDBPDFs/species/heteblew.pdf" class="inlinelink">Detailed species accounts from the <i>Threatened birds of Asia: the BirdLife International Red Data Book</i> (BirdLife International 2001).</a></p><p><a href="http://www.hbw.com" class="inlinelink">Explore HBW Alive for further information on this species</a></p><p><a href="http://ibc.lynxeds.com/" class="inlinelink">Search for photos and videos,	 and hear sounds of this species from the Internet Bird Collection</a></p></p>
+<p><b>Text account compilers</b><br>Benstead, P., Bird, J., Butchart, S., Davidson, P., Derh&eacute;, M., Mahood, S., Peet, N., Symes, A., Taylor, J., Tobias, J., Khwaja, N. & Ashpole, J</p>
+<p><b>Contributors</b><br>Ishtiag, F., Jathar, G., Kasambe, R., Mehta, P. & Patil, D.</p>
+<p><b>IUCN Red List evaluators</b><br>Symes, A.</p>
+<p><b>Recommended citation</b><br>
+			BirdLife International (2016) Species factsheet: <i>Heteroglaux blewitti</i>. Downloaded from
+			<a href="http://www.birdlife.org" target="_blank" class="inlinelink">http://www.birdlife.org</a> on 14/02/2016.
+			Recommended citation for factsheets for more than one species: BirdLife International (2016) IUCN Red List for birds. Downloaded from
+			<a href="http://www.birdlife.org" target="_blank" class="inlinelink">http://www.birdlife.org</a> on 14/02/2016.
+		</p>
+<p>
+			This information is based upon, and updates, the information published in BirdLife International (2000)
+			Threatened birds of the world. Barcelona and Cambridge, UK: <a href="http://www.lynxeds.com" target="_blank" class="inlinelink">Lynx Edicions</a> and BirdLife International, BirdLife International (2004)
+			Threatened birds of the world 2004 CD-ROM and BirdLife International (2008) Threatened birds of the world 2008 CD-ROM. These sources provide the information for species accounts for the birds on the IUCN Red List.
+		</p>
+<p>
+			To provide new information to update this factsheet or to correct any errors, please email <a href="mailto:science@birdlife.org" class="inlinelink">BirdLife</a></p>
+<p>
+			To contribute to discussions on the evaluation of the IUCN Red List status of Globally Threatened Birds, please visit BirdLife's <a href="http://www.birdlife.org/globally-threatened-bird-forums" target="_blank" class="inlinelink">Globally Threatened Bird Forums</a>.
+		</p>
+<p><b>Additional resources for this species</b></p>
+<p><a href="http://www.arkive.org/forest-owlet/heteroglaux-blewitti/#src=portletV3api" title="ARKive species - Forest owlet (Heteroglaux blewitti)" ><img src="http://cdn2.arkive.org/media/88/88F381EF-F111-443F-B2BC-DA710DBAC619/Presentation.Portlet/Forest-owlet-with-head-tilted.jpg" alt="ARKive species - Forest owlet (Heteroglaux blewitti)" title="ARKive species - Forest owlet (Heteroglaux blewitti)" border="0"//></a>
+0
+
+</p>
+</div></div></div>
+<div id="rightfixedcolumn">
+<div id="divKeyFactsBlock" class="divKeyFactsBlock">
+<table cellspacing="0" class="KeyFactsTable8pt">
+<tr><th id="backgroundFill" colspan="2">Key facts</th></tr>
+<tr>
+<td id="label" width="50%">Current IUCN Red List category</td>
+<td width="50%">Critically Endangered</td>
+</tr>
+<tr>
+<td id="label">Family</td>
+<td>Strigidae (Typical Owls)</td>
+</tr>
+<tr>
+<td id="label">Species name author</td>
+<td>(Hume, 1873)</td>
+</tr>
+<tr>
+<td id="label">Population size</td>
+<td>50-249
+														mature individuals
+													</td>
+</tr>
+<tr>
+<td id="label">Population trend</td>
+<td>Decreasing</td>
+</tr>
+<tr>
+<td id="label">Distribution size (breeding/resident)</td>
+<td>550 km<sup>2</sup>
+</td>
+</tr>
+<tr>
+<td id="label">Country endemic?</td>
+<td>Yes</td>
+</tr>
+<tr><td colspan="2" id="label">Links to further information</td></tr>
+<tr><td colspan="2"><a href="/datazone/species/factsheet/22689335/additional" style="font-size:1em;">- Additional Information on this species</a></td></tr>
+</table>
+<br style="clear:both;">
+</div>
+<script type="text/javascript">
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+			(function() {
+				var gads = document.createElement('script');
+				gads.async = true;
+				gads.type = 'text/javascript';
+				var useSSL = 'https:' == document.location.protocol;
+				gads.src = (useSSL ? 'https:' : 'http:') +
+				'//www.googletagservices.com/tag/js/gpt.js';
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(gads, node);
+			})();
+		</script><script type="text/javascript">
+			googletag.cmd.push(function() {
+				googletag.defineSlot('/3572241/BirdLife-Leaderboard', [[728, 90], [970, 90], [970, 250]], 'div-gpt-ad-1418035065808-0').addService(googletag.pubads());
+				googletag.defineSlot('/3572241/BirdLife-MPU', [[300, 250], [300, 600]], 'div-gpt-ad-1418035065808-1').addService(googletag.pubads());
+				googletag.defineSlot('/3572241/BirdLife-MPU2', [[300, 250], [300, 600]], 'div-gpt-ad-1418035065808-2').addService(googletag.pubads());
+				googletag.defineSlot('/3572241/BirdLife-MPU3', [[300, 250], [300, 600]], 'div-gpt-ad-1418035065808-3').addService(googletag.pubads());
+				googletag.pubads().enableSingleRequest();
+				googletag.pubads().collapseEmptyDivs();
+				googletag.enableServices();
+			});
+		</script><table width="300" border="0"><tr><td>
+<div id="div-gpt-ad-1418035065808-1" style="margin-bottom:20px;"><script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1418035065808-1'); });
+					</script></div>
+<div id="div-gpt-ad-1418035065808-2" style="margin-bottom:20px;"><script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1418035065808-2'); });
+					</script></div>
+<div id="div-gpt-ad-1418035065808-3" style="margin-bottom:20px;"><script type="text/javascript">
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1418035065808-3'); });
+					</script></div>
+</td></tr></table>
+</div>
+</div></div></div>
+<div id="leftfixedcolumn"><div id="leftmenu" class="divMenuContainer">
+<div class="divMenuItemTitle">Species</div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/species">Home</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/species/search">Search</a></div></div>
+<div class="divMenuItemBlank"></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/programmeofwork">Programme of work</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/spcdownload">Download maps</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/taxonomy">Taxonomy</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/spcreferences">References</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/speciespubs">Publications</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/spctermsdef">Terms and definitions</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/climatechange">Climate change maps</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/euroredlist"><span style="color:red;font-weight:bold">2015 European Red List</span></a></div></div>
+<div class="divMenuItemBlank"></div>
+<div class="divMenuItemTitle">Data zone</div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/home">Home</a></div></div>
+<div class="divMenuItem" style="background-color:#3C6284;"><div><a href="http://www.birdlife.org/datazone/species" style="color:#FAFAFA;">Species</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/site">Sites (IBAs)</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/eba">Endemic Bird Areas</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/sowb">State of the world's birds</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/country">Country profiles</a></div></div>
+<div class="divMenuItem"><div><a href="http://maps.birdlife.org/marineIBAs/default.html">Marine e-Atlas</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/info/citizenscience">Citizen Science</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/datazone/sowb/CBDsupport">CBD support</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/globally-threatened-bird-forums" target="_self">BirdLife Forums</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.seabirdtracking.org/" target="_blank">Seabird Tracking</a></div></div>
+<div class="divMenuItemBlank"></div>
+<div class="divMenuItemTitle"> BirdLife</div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org" target="_self">Home</a></div></div>
+<div class="divMenuItem"><div><a href="http://www.birdlife.org/worldwide/support-us/support-us" target="_self">How to help BirdLife</a></div></div>
+</div></div>
+<br style="clear:both">
+</div>
+<div id="footer">
+<div id="footeritemleft">
+<a href="http://www.birdlife.org/contact.html">Contact</a> |
+				<a href="http://www.birdlife.org/datazone/info/disclaimer">Disclaimer</a> |
+				<a href="http://www.birdlife.org/datazone/info/termsofuse">Terms of Use</a> |
+				<a href="http://www.birdlife.org/datazone/info/acknowledgement">Acknowledgements</a>
+</div>
+<div id="footeritemright"><a href="http://www.qpqsoftware.com" target="_blank">QPQ Software Ltd<span style="font-size:10pt;height:10px;" title="We do really tricky stuff!" alt="We do really tricky stuff!">.</span></a></div>
+</div>
+</div>
+<div id="popupwrapper">
+<div id="popupheader" onMouseDown="beginDragInfo(this.parentNode, event);">
+<div id="popupheadertext"></div>
+<a href="javascript:doShowInfo(false,%200,%200,%200);"><div id="ico_close"></div></a>
+</div>
+<div id="popupscroll"><div id="popupbody"><div id="popupcontent"></div></div></div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>Museum of Earthly Wonders</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="index, follow">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+    	<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=yes" />
+		<meta name="title" content="Museum of Earthly Wonders" />
+		<meta name="description" content="Tweet your exhibit via Twitter with #AvosInSpace #sweepstakes for a chance to win a trip to Mexico and Avocados From Mexico for a year!" />
+
+		<meta property="og:type" content="article" /> 
+		<meta property="og:url" content="http://host-d.oddcast.com/php/application_UI/doorId=1326/clientId=364" />
+		<meta property="og:image" content="http://host-d.oddcast.com/ccs6/customhost/1326/misc/thumb.jpg" />
+		<meta property="og:title" content="Museum of Earthly Wonders"/> 
+		<meta property="og:description" content="Tweet your exhibit via Twitter with #AvosInSpace #sweepstakes for a chance to win a trip to Mexico and Avocados From Mexico for a year!" />
+		
+		<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  		<script src="//code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+		
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				var isMobile = 'ontouchstart' in window;
+				
+				//Get the query string parameter
+				queryStr = document.location.href;
+				
+				//Get the lang parameter from query string if available.
+				try {
+					lang = 'lang=' + queryStr.match(/lang=([a-zA-Z+]+)/)[1] + '/' || '';
+				} catch (e) { 
+					lang = ''; 
+				}
+
+				$('body').html('<iframe id="oddcast_health_net" style="" width="100%" height="100%" src="http://host-d.oddcast.com/php/application_UI/doorId=1326/clientId=364/'+ lang + location.search + '" scrolling="yes" marginwidth="0" frameborder="0" allowTransparency="false" allowfullscreen="true"></iframe>');
+				
+				if(isMobile) {
+					$( window ).on( "orientationchange", function( event ) {
+						resizeMe();
+					});				
+					$( window ).orientationchange();
+				}
+			});
+			
+			function resizeMe() {
+				//var w = window.innerWidth;
+				//var h = window.innerHeight;
+				
+				var w = $(window).width();
+				var h = $(window).height();
+				
+				$("#oddcast_health_net")[0].setAttribute("width", w);
+				$("#oddcast_health_net")[0].setAttribute("height", h);
+			}	
+		</script>
+
+
+		<style type="text/css">
+			/*html{ width:100%;height:100%; margin: 0; padding: 0;}*/
+			html{ height:100%;}
+			body, p { width:100%;height:100%; margin: 0; padding: 0; background-color: #FFFFFF;}
+		</style>
+				
+		<script type="text/javascript">
+			var _naq = _naq || [];
+		</script>
+	</head>
+	
+	<body>
+	</body>
+	
+</html>

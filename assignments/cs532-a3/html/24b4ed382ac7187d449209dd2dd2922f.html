@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FREE Unique Article Creator Online</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<meta name="robots" content="index, follow" />
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Multi Languages SEO Friendly Article Generator Online" />
+	<meta name="keywords" content="content, unique article, articles, contents, unique content, keyword, seo article, google seo" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tooltip.js"></script>
+	<script type="text/javascript" src="js/bootstrap-popover.js"></script>
+	<script type="text/javascript" src="js/bootstrap-tab.js"></script>
+	<script type="text/javascript">
+	var baseUrl = 'http://'+window.location.host+window.location.pathname.replace(/(\/index\.php|\/)$/, '');
+	$(document).ready(function() {
+		// remove http scheme from urls before submitting
+		$('#form').submit(function() {
+			$('#url').val($('#url').val().replace(/^http:\/\//i, ''));
+			return true;
+		});
+
+		// tooltips
+		$('a[rel=tooltip]').tooltip();
+	});
+	</script>
+  </head>
+  <body>
+	<div class="container">
+	<center>
+
+	  <div align="center" style="margin-bottom:0px;"><a href="http://articlecreator.fullcontentrss.com" title="FREE Unique Article Creator Online"><img src="images/ArticleCreatorLogo.png"></a></div>
+	  <div style="font-size:14px; color:grey;">Multi Languages SEO Friendly Article Generator Online</div><br /><br />
+  	</center>
+
+<div>
+<center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Full Content RSS TXT -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-2985280251753703"
+     data-ad-slot="3885584530"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center></div><br />
+
+  <form method="get" action="go.php" id="form" class="form-horizontal"role="form">
+
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="keyword">Keyword:</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control input-lg" id="keyword" name="keyword" title="KEYWORD" placeholder="Enter keyword e.g. smartphone, samsung galaxy, seo tool, etc"required />
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="lang">Language</label>
+			<div class="col-sm-10">
+			<select name="lang" id="lang" class="form-control" title="Language" data-content="Select the language!">
+				<option value="us" selected="selected">English</option>
+				<option value="fr">French</option>
+				<option value="de">Germany</option>
+				<option value="es">Spanish</option>
+				<option value="nl">Netherland</option>
+				<option value="cn">Chinese</option>
+				<option value="jp">Japanese</option>
+				<option value="br">Brazil</option>
+				<option value="ru">Russia</option>
+				<option value="se">Sweden</option>
+				<option value="pl">Polish</option>
+				<option value="kr">Korean</option>\
+				<option value="tr">Turkish</option>
+
+			</select>
+			</div>
+		</div>
+
+		
+		<div id="spinner">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="rewrite">Rewrite articles:</label>
+				<div class="col-sm-10">
+				<select name="rewrite" id="rewrite" class="form-control" title="Rewrite articles" data-content="By default, links within the content are preserved. Change this field if you'd like links removed.">
+					<option value="original">keep original</option>
+					<option value="unique">make unique</option>
+				</select>
+			</div>
+			</div>
+		</div>
+	
+		<div class="form-group">
+			<label class="control-label col-sm-2" for="numbers">Number of Articles</label>
+			<div class="col-sm-10">
+			<select name="numbers" id="numbers" class="form-control" title="Number of Articles">
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+			</div>
+		</div>
+
+
+		<div id="showaccesskey" class="form-group" style="display:none">
+				<label class="control-label col-sm-2" for="accesskey">Access Key</label>
+				<div class="col-sm-10"><input type="text" id="accesskey" name="accesskey"  class="form-control" title="ACCESS KEY" />
+				<br /><div style=font-size:80%;><font color="grey">Access key is required when you select "Make unique" or set the number of articles to more than three.</font></div>
+				</div>
+		</div>
+
+		
+			<script type="text/javascript">
+				document.getElementById('rewrite').addEventListener('change', function () {
+				var style = this.value == 'unique' ? 'block' : 'none';
+				document.getElementById('showaccesskey').style.display = style;
+				});
+				document.getElementById('lang').addEventListener('change', function () {
+				var style = this.value == 'us' ? 'block' : 'none';
+				document.getElementById('spinner').style.display = style;
+				});
+				document.getElementById('numbers').addEventListener('change', function () {
+				var style = this.value !== '3' ? 'block' : 'none';
+				document.getElementById('showaccesskey').style.display = style;
+				});
+				document.getElementById('lang').addEventListener('change', function () {
+				var style = this.value !== 'us' ? 'block' : 'none';
+				document.getElementById('showaccesskey').style.display = style;
+				});
+			</script>
+	
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<input type="submit" id="submit" name="submit" value="Submit" class="btn btn-primary" />
+		</div>
+	</div>
+	</form>
+	
+	<ul class="nav nav-tabs">
+        <li class="active"><a href="#about" data-toggle="tab">About</a></li>
+		<li><a href="#key" data-toggle="tab">Access Key</a></li>
+		<li><a href="#buyscript" data-toggle="tab">BUY SCRIPT</a></li>
+	</ul>
+
+	<div class="tab-content">
+	
+	<!-- ABOUT TAB -->
+	
+	<div class="active tab-pane" id="about">
+       <p><h3>Unique Article Creator</h3> ArticleCreator is <b>the best article generator tool to generate SEO friendly unique articles</b> from your keyword. Tool will fetch articles from various content sources: Bing, Yahoo or Google News. Our tool will automatically grab fresh new article, blog or news which then will be rewritten to make them unique and better for SEO. <b>It's completely free to use, just enter your keyword, select the article source & click submit button</b>. <font color="teal">You will be redirected to a new page to view the article in HTML mode. Download link of the TXT file will can be found at the bottom of the page. </font><b>SPINTAX format</b> - {phrase1|phrase2|phrase3|phrase4} - will also available when you activate rewrite feature.</p>
+	<p>Now, Article Creator supports multiple languages: <b>English, French, Germany, Spanish, Dutch (Netherlands), Chinese, Japanese, Brazil, Russia, Sweden, Polish (Poland), Korean & Turkish. </b>Note that article rewriter (article spinner) available for English only. </p>
+	<p><img src="images/Multi-Language-Article-Generator.png" alt="Multi language Article Generator "title="Multi language Article Generator"></p>
+	<p>Please don't spam & abuse this tool. It will make this tool still available for free. You can also support our tool by linking back to us.</p>
+        
+	</div>
+	
+	<!-- ACCESS KEY TAB -->
+	
+	<div class="tab-pane" style="padding-top:20px;" id="key">
+	<div style="float: left; width: 55%; padding:10px;">
+ 	Access Key is required when you activate "Rewrite articles" option or set the number of articles to more than three articles. Activating <b>article rewriter</b> or <b>article spinner</b> feature will make your article unique and better for search engine indexing and SERP. Buy the access key for <font color="red">$2</font> per month for yearly subscription, or $4 for monthly subscription. <b>we will send the access key to your PayPal email in few hours.</b>
+	</div>
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="AGLV9TC42DWE6">
+	<table>
+	<tr><td><input type="hidden" name="on0" value="Subscription Option">Subscription Option</td></tr><tr><td><select name="os0">
+		<option value="$4/month">$4/month : $4,00 USD - monthly</option>
+		<option value="$2/month">$2/month : $24,00 USD - yearly</option>
+	</select> </td></tr>
+	</table>
+	<input type="hidden" name="currency_code" value="USD">
+	<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+	<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+	</form>
+	</div>
+	<br/>
+        
+	<!-- BUY SCRIPT TAB -->
+	
+	<div class="tab-pane" id="buyscript">
+	<div style="float: left; width: 65%; padding:10px;">
+ 	ArticleCreator script available for purchasing for <font color="red">$27</font> only. It's a PHP script, buying the script will give you many benefits: <b>using it for yourself, make money by offering the same service as we do to your users, you can also customize the script, including improving the rewriting feature</b>. Just install the script on your web server, and you can run the tool in minutes. <br /><br />Buy the script now and <b>we will send the script to your PayPal email in few hours.</b> Be sure to add our email FullContentRSS@gmail.com to your contact.
+	</div>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="8AMBPLL7GBY78">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+	</div>
+	
+
+	<!-- FeedBack TAB -->
+	
+	<div class="tab-pane" id="feedback">
+	<b>Rewriter feature will make the article unique by replacing words with their synonyms</b>. <font color="teal">Give us a feedback to make the rewriter feature better</font>, just drop an email to FullContentRSS@gmail.com with "Feedback for Rewriter Feature" as the email subject, and mention what your suggestion for which words and the synonyms. We always improve the quality of rewriter feature by regularly updating the <b>synonims thesaurus</b>. 
+	</div>
+	<br/>
+    </div>
+
+<div><br />
+<center>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Full Content RSS TXT -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:468px;height:60px"
+     data-ad-client="ca-pub-2985280251753703"
+     data-ad-slot="3885584530"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center></div><br />
+
+
+
+
+        <center><div style="padding-top:10px; clear:both;"><hr><a href="http://articlecreator.fullcontentrss.com">Article Creator</a> | <a href="http://fullcontentrss.com" target="_blank">Full RSS</a> | <a href="http://autopilotblogger.fullcontentrss.com" title="Automatic Blog" target="_blank">Automatic Blog</a> Hosting by. <a href="http://goo.gl/AGd1wt" title="One Click VPS" rel="nofollow" target="_blank">Simple VPS</a> | <a href="mailto:fullcontentrss@gmail.com" target="_top">Contact Us</a></div>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-annotation="inline" data-width="200" data-href="http://fullcontentrss.com"></div></center>
+</div>
+  </body>
+</html>

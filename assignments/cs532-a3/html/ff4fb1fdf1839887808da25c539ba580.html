@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<script>
+var pageCounterPaywall = 0; 
+      function getCookie(name)
+      {
+        var re = new RegExp(name + "=([^;]+)");
+        var value = re.exec(document.cookie);
+        return (value != null) ? unescape(value[1]) : null;
+      }
+      var checkCookie = getCookie('SESSchecknc');
+      if (checkCookie!='undefined' && checkCookie==1)
+      { 
+         var currentUrl = document.URL;
+         if (currentUrl.indexOf("?nc=1") > -1){ }
+         else
+         {
+            if (currentUrl.indexOf("?") > -1)
+            {
+               if (currentUrl.indexOf("&nc=1") > -1) {}
+               else{
+                  window.location.href = currentUrl+"&nc=1";                  
+               }            
+            }
+            else
+            {
+            window.location.href = currentUrl+"/?nc=1"; 
+			
+            }
+            //document.open('text/javascript');
+            //document.write('<script type="text/undefined">');
+         }
+      }
+</script>
+   <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+	 <meta charset="utf-8">
+		<!-- Always force latest IE rendering engine or request Chrome Frame -->
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function c(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),c=a.length,u=0;c>u;u++)a[u].apply(i,r);return i}function u(t,e){p[t]=f(t).concat(e)}function f(t){return p[t]||[]}function s(){return r(c)}var p={};return{on:u,emit:c,create:s,listeners:f,context:e,_events:p}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!v++){var t=l.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(p,function(e,n){t[e]||(t[e]=n)});var n="https"===s.split(":")[0]||t.sslForHttp;l.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=l.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),c=t(1),u=window,f=u.document;t(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),l=e.exports={offset:i(),origin:s,features:{},xhrWrappable:d};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],12:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],13:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}]},{},["G9z0Bl"]);</script>
+		<!-- Use title if it's in the page YAML frontmatter -->			
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City | The Nation</title>
+			<link rel="profile" href="http://gmpg.org/xfn/11">
+			<link rel="pingback" href="">
+			<!-- Facebook META -->
+			<!--<meta property="fb:app_id" content="">-->
+			<meta property="og:site_name" content="The Nation">
+			<meta property="og:title" content="The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City">
+			<meta property="og:description" content="A city in the grip of a housing crisis just spent $5 million on the Super Bowl. Yes, people are angry.">
+			<!--<meta property="og:url" content="">-->
+			<meta property="og:image" content="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img-1440x756.jpg">
+			<meta property="og:type" content="website">
+			<!-- Twitter META -->
+			<meta name="twitter:title" content="The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City">
+			<meta name="twitter:description" content="A city in the grip of a housing crisis just spent $5 million on the Super Bowl. Yes, people are angry.">
+			<meta name="twitter:url" content="http://www.thenation.com/article/the-streets-of-san-francisco-super-bowl-city-meets-tent-city/">
+			<meta name="twitter:image" content="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img-1440x756.jpg">
+						<!-- Fav Icon -->
+			<!--<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />--->
+			<link rel="icon" type="image/ico" href="http://www.thenation.com/wp-content/themes/thenation/images/favicon.ico" />
+	<meta name="sailthru.image.full" content="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img-680x430.jpg" /> 
+<meta name="sailthru.image.thumb" content="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img-275x173.jpg" />
+<meta name="sailthru.title" content="The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City" />
+<meta name="sailthru.date" content="February 4th, 2016" />
+<meta name="sailthru.content_id" content="201712" />
+<meta name="sailthru.description" content="A city in the grip of a housing crisis just spent $5 million on the Super Bowl. Yes, people are angry." />
+<meta name="sailthru.tags" content="Housing and Homelessness,Police and Law Enforcement,Racism and Discrimination,Sports," />
+<meta name="keywords" content="Affordable housing,billionaires,Football,Police brutality,Super Bowl" />
+<meta name="sailthru.author" content="Dave Zirin" />
+<script type="text/javascript">
+    (function() 
+	{
+        function loadHorizon() 
+		{
+	        var s = document.createElement('script');
+	        s.type = 'text/javascript';
+	        s.async = true;
+	        s.src = location.protocol + '//ak.sail-horizon.com/horizon/v1.js';
+	        var x = document.getElementsByTagName('script')[0];
+	        x.parentNode.insertBefore(s, x);
+        	}
+        loadHorizon();
+        var oldOnLoad = window.onload;
+        window.onload = function() 
+		{
+            	if (typeof oldOnLoad === 'function') 
+			{
+                	oldOnLoad();
+          		}
+            	Sailthru.setup({
+                	domain: 'horizon.thenation.com'
+            		});
+        	};
+    	})();
+</script>
+<!--Advertisements-->
+<script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+<script type="text/javascript" src="//kilomonj.net/adBlockDetector/12257" async defer></script>
+<!--<script class="kxct" data-id="JDkN7kNL" data-timing="async" data-version="1.9" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);
+    k.src = /^https?:\/\/([a-z0-9_\-\.]+\.)?krxd\.net(:\d{1,5})?\//i.test(src) ? src : src === "disable" ? "" :
+      (location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=JDkN7kNL"
+  ;
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+  
+</script>-->
+	<!-- Begin comScore Tag -->
+	<script>
+	  var _comscore = _comscore || [];
+	  _comscore.push({ c1: "2", c2: "20564932" });
+	  (function() {
+		var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	  })();
+	</script>
+	<noscript>
+	  <img src="http://b.scorecardresearch.com/p?c1=2&c2=20564932&cv=2.0&cj=1" />
+	</noscript>
+	<!-- End comScore Tag -->
+<link href="http://www.thenation.com/wp-content/themes/thenation/stylesheets/jquery.bxslider.css" rel="stylesheet" type="text/css">
+
+<!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
+<meta name="description" content="On a daily basis, an estimated 2,000 pounds of “trash, human waste and hypodermic needles” are removed from the homeless encampments around San Francisco. These are the tent cities that form the backdrop to the monstrous spectacle of decadence that is Super Bowl week in the Bay Area." />
+<meta name="keywords" content="housing and homelessness, police and law enforcement, racism and discrimination, sports, affordable housing, billionaires, football, police brutality, super bowl" />
+<meta property="fb:app_id" content="192399944158735" />
+<meta property="og:site_name" content="The Nation" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City" />
+<meta property="og:url" content="http://www.thenation.com/article/the-streets-of-san-francisco-super-bowl-city-meets-tent-city/" />
+<meta property="og:description" content="On a daily basis, an estimated 2,000 pounds of “trash, human waste and hypodermic needles” are removed from the homeless encampments around San Francisco. These are the tent cities that form the backdrop to the monstrous spectacle of decadence that is Super Bowl week in the Bay Area." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:updated_time" content="2016-02-04T18:37:57+00:00" />
+<meta property="og:image" content="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img.jpg" />
+<meta property="og:image:width" content="1440" />
+<meta property="og:image:height" content="907" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2016-02-04T14:07:32+00:00" />
+<meta property="article:modified_time" content="2016-02-04T18:37:57+00:00" />
+<meta property="article:author" content="http://www.thenation.com/author/dave-zirin/" />
+<meta property="article:publisher" content="https://www.facebook.com/TheNationMagazine" />
+<meta property="article:tag" content="housing and homelessness" />
+<meta property="article:tag" content="police and law enforcement" />
+<meta property="article:tag" content="racism and discrimination" />
+<meta property="article:tag" content="sports" />
+<meta property="article:tag" content="affordable housing" />
+<meta property="article:tag" content="billionaires" />
+<meta property="article:tag" content="football" />
+<meta property="article:tag" content="police brutality" />
+<meta property="article:tag" content="super bowl" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@TheNation" />
+<meta name="twitter:title" content="The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City" />
+<meta name="twitter:description" content="On a daily basis, an estimated 2,000 pounds of “trash, human waste and hypodermic needles” are removed from the homeless encampments around San Francisco. These are the tent cities that form the backdrop to the monstrous spectacle of decadence that is Super Bowl week in the Bay Area." />
+<meta name="twitter:image:src" content="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img.jpg" />
+<meta name="twitter:image:width" content="1440" />
+<meta name="twitter:image:height" content="907" />
+<!-- END Metadata added by Add-Meta-Tags WordPress plugin -->
+
+<link rel="alternate" type="application/rss+xml" title="The Nation &raquo; Feed" href="http://www.thenation.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Nation &raquo; Comments Feed" href="http://www.thenation.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Nation &raquo; The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City Comments Feed" href="http://www.thenation.com/article/the-streets-of-san-francisco-super-bowl-city-meets-tent-city/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.thenation.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.4"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='defaultbasic-css'  href='http://www.thenation.com/wp-content/themes/thenation/style.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='thenation-stylesheet-all-css'  href='http://www.thenation.com/wp-content/themes/thenation/stylesheets/all.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='basicfonts-css'  href='http://www.thenation.com/wp-content/themes/thenation/stylesheets/fonts.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css'  href='http://www.thenation.com/wp-content/plugins/form-maker/css/jquery-ui-1.10.3.custom.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-spinner-css'  href='http://www.thenation.com/wp-content/plugins/form-maker/css/jquery-ui-spinner.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='form_maker_calendar-jos-css'  href='http://www.thenation.com/wp-content/plugins/form-maker/css/calendar-jos.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='form_maker_frontend-css'  href='http://www.thenation.com/wp-content/plugins/form-maker/css/form_maker_frontend.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='style_submissions-css'  href='http://www.thenation.com/wp-content/plugins/form-maker/css/style_submissions.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='//www.thenation.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=2.3.13' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='//www.thenation.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=2.3.13' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='//www.thenation.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=2.3.13' type='text/css' media='all' />
+<link rel='stylesheet' id='tn_stf_style-css'  href='http://www.thenation.com/wp-content/plugins/tn-sailthruforms/admin/assets/tn_sailthruforms_style.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css'  href='http://www.thenation.com/wp-content/plugins/wordpress-popular-posts/style/wpp.css?ver=3.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='like-dislike-css'  href='http://www.thenation.com/wp-content/plugins/like-dislike-counter-for-posts-pages-and-comments/css/ldc-lite.css?ver=1.0.0' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='https://maps.google.com/maps/api/js?sensor=false&#038;ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/form-maker/js/if_gmap_front_end.js?ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/form-maker/js/jelly.min.js?ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/form-maker/js/file-upload.js?ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/form-maker/js/calendar/calendar.js?ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/form-maker/js/calendar/calendar_function.js?ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/tn-customeditor//tinymce-dropcap.js?ver=4.2.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/plugins/tn-sailthruforms/admin/assets/tn_sailthruforms_script.js?ver=1.0.0'></script>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.thenation.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.2.4" />
+<meta name="generator" content="WooCommerce 2.3.13" />
+<link rel='canonical' href='http://www.thenation.com/article/the-streets-of-san-francisco-super-bowl-city-meets-tent-city/' />
+<link rel='shortlink' href='http://www.thenation.com/?p=201712' />
+<link rel="stylesheet" href="http://www.thenation.com/wp-content/plugins/solr-for-wordpress-on-pantheon/template/autocomplete.css" type="text/css" media="screen" />
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          //  $("#s").suggest("?method=autocomplete", {});
+          //  $("#search-value").suggest("?method=autocomplete", {});
+        });
+    </script>
+    <script type='text/javascript'>var pageCounterPaywall = 0; var scrollHolderPaywall = {};var maxarticlePaywall = 0; var current_articlePaywall = 0; var maxdaysPaywall = 0; var accesseddaysPaywall = 0; </script>				<!-- WordPress Popular Posts v3.2.1 -->
+				<script type="text/javascript">//<![CDATA[
+
+					// Create XMLHttpRequest object and set variables
+					var xhr = ( window.XMLHttpRequest )
+					  ? new XMLHttpRequest()
+					  : new ActiveXObject( "Microsoft.XMLHTTP" ),
+					url = 'http://www.thenation.com/wp-admin/admin-ajax.php',
+					params = 'action=update_views_ajax&token=a4fd180ac3&id=201712';
+					// Set request method and target URL
+					xhr.open( "POST", url, true );
+					// Set request header
+					xhr.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" );
+					// Hook into onreadystatechange
+					xhr.onreadystatechange = function() {
+						if ( 4 == xhr.readyState && 200 == xhr.status ) {
+							if ( window.console && window.console.log ) {
+								window.console.log( xhr.responseText );
+							}
+						}
+					}
+					// Send request
+					xhr.send( params );
+
+				//]]></script>
+				<!-- End WordPress Popular Posts v3.2.1 -->
+				<script src="http://www.thenation.com/wp-content/plugins/tn-paywall/inc/paywall-script.php?nc=1&paywallid=MjAxNzEy&display=YmxvY2s="></script><script>
+jQuery(document).ready(function(){
+   jQuery('#search').submit(function(event){
+      if (jQuery('#search input:text').eq(0).val().length<1){
+	 return false;
+      }
+   });
+   jQuery('#searchbox').submit(function(event){
+      if (jQuery('#searchbox input:text').eq(0).val().length<1){
+	 return false;
+	 }
+   });
+});
+</script>
+</head>
+<!-- Quantcast Tag -->  <script type="text/javascript">  var _qevents = _qevents || [];    (function() {  var elem = document.createElement('script');  elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";  elem.async = true;  elem.type = "text/javascript";  var scpt = document.getElementsByTagName('script')[0];  scpt.parentNode.insertBefore(elem, scpt);  })();    _qevents.push({  qacct:"p-krSvyk7fmpe57"  });  </script>    <noscript>  <div style="display:none;">  <img src="//pixel.quantserve.com/pixel/p-krSvyk7fmpe57.gif" border="0" height="1" width="1" alt="Quantcast"/>  </div>  </noscript>  <!-- End Quantcast tag -->
+<body>
+<!-- Google Analytics Code -->
+<!--<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-63392420-1', 'auto');
+  ga('send', 'pageview');
+
+</script>-->
+<!-- Live Google Analytics Code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82883-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Google Analytics Code End -->
+<!-- Chartbeat code starts here -->
+<script type="text/javascript">
+  var _sf_async_config = { uid: 7841, domain: 'thenation.com', useCanonical: true };
+  (function() {
+    function loadChartbeat() {
+      window._sf_endpt = (new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src','//static.chartbeat.com/js/chartbeat.js');
+      document.body.insertBefore(e, document.body.firstChild);
+    };
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+      loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+</script>
+<!-- Chartbeat code ends here -->
+<!-- Google Mobile Interstitial Starts here -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
+<script> 
+  (adsbygoogle = window.adsbygoogle || []).push({ 
+    google_ad_client: 'ca-pub-4976568202552923', 
+    enable_page_level_ads: true, 
+    interstitials: {google_ad_channel: 'ca-pub-4976568202552923'} 
+  }); 
+</script>
+<!-- Google Mobile Interstitial Ends here -->
+<!-- Advertisements -->
+<!---- Moat Script starts here -------->
+<script type="text/javascript">(function(){var a=document,b=a.createElement("script"),a=a.getElementsByTagName("script")[0];b.type="text/javascript";b.async=!0;b.src="http://s.moatads.com/thenationcontent252XZzP54/moatcontent.js";a.parentNode.insertBefore(b,a)})();</script>
+<!---- Moat Script ends here --------->
+<script>
+    var pageCounterPaywall ;
+	var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+</script>
+<!-- Function to call Advertisements on entire website-->
+<script type='text/javascript'>
+   function call_ad(ad_type,ad_div,ad_name_desktop,ad_name_mobile,custom_targeting,key,values) {
+      if (typeof custom_targeting === 'undefined') { custom_targeting = false; }
+      if (typeof key === 'undefined') { key = null; }
+      if (typeof values === 'undefined') { values = null; }
+      var w,h,w1,h1;
+      var ad_name='';
+      if (ad_type == "leaderboard")
+	  {
+		 w = 728;
+		 h = 90;
+		 w1=970;
+		 h1=90;
+		 ad_name = ad_name_desktop;
+		 if (isMobile.any())
+		 {
+			 w = 320;
+			 h = 50;
+			 ad_name = ad_name_mobile;
+		 }
+      }
+      else if (ad_type == "halfpage")
+	  {
+		w = 300;
+		h = 250;
+		w1 = 300;
+		h1 = 600;
+		ad_name = ad_name_desktop;
+		if(isMobile.any())
+		{
+			w = 300;
+			h = 250;
+			w1 = 300;
+			h2 = 250;
+			ad_name = ad_name_mobile;
+		}		
+      }
+      else if (ad_type == "halfpage250") {
+	 w = 300;
+	 h = 250;
+	 ad_name = ad_name_desktop;
+      }
+      else if (ad_type == "pixel")
+	  {
+		var ad_pixel_name1 = "_pixel_2";
+		var ad_pixel_name_final=ad_name_desktop.indexOf(ad_pixel_name1);
+		//alert(ad_pixel_name_final);
+		if(ad_pixel_name_final<=-1)
+		{
+			/*for hiding meterpaywall popups when pixel ads call starts here*/
+			var hidePixelBool = false;
+			var meetkatstep1 = jQuery('#paywall .step.one');
+			var meetkatstep2 = jQuery('#paywall .step.two');
+			var meetkatstep3 = jQuery('#paywall .step.three');
+			var meetkatstep4 = jQuery('#paywall .step.four');
+			if (typeof meetkatstep1!='undefined' && meetkatstep1.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (typeof meetkatstep2!='undefined' && meetkatstep2.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (typeof meetkatstep3!='undefined' && meetkatstep3.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (typeof meetkatstep4!='undefined' && meetkatstep4.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (hidePixelBool===true) {
+			  return;
+			}
+		}
+		/*for hiding meterpaywall popups when pixel ads call ends here*/
+		
+		if(isMobile.any())
+		{
+		ad_name = ad_name_mobile;
+		}
+		else
+		{
+		ad_name = ad_name_desktop;
+		}
+		
+						w = 1;
+		h = 1;
+      }
+      //alert('ad_name: '+ad_name+'  div: '+ad_div+'  key: '+key+'  values: '+values);
+      googletag.cmd.push(function() {
+      var ad_slot = null;
+	  if(ad_type == "halfpage" || ad_type == "leaderboard") {
+		ad_slot = googletag.defineSlot('/1004953/'+ad_name, [[w, h],[w1,h1]], ad_div);
+	  }
+	  else {
+		ad_slot = googletag.defineSlot('/1004953/'+ad_name, [w, h], ad_div);
+	  }
+      if (custom_targeting==true && key && values)
+	  {
+		 for(i=0;i<key.length;i++) {
+			ad_slot = ad_slot.setTargeting(key[i], [values[i]]);
+		 }
+      }
+      ad_slot = ad_slot.addService(googletag.pubads());
+      googletag.pubads().enableSingleRequest();
+      	  googletag.pubads().refresh([ad_slot]); // Since same ad unit might get repeated
+	  //setInterval(function(){googletag.pubads().refresh([ad_slot]);}, 10000);
+            googletag.enableServices();
+      });
+		googletag.cmd.push(function() {
+		googletag.display(ad_div);		
+      });
+   }
+</script>
+<div id="ad-pixel"></div>
+<div id="ad-pixel-2"></div>
+<div id="ad-leaderboard" class="push ad full-width leaderboard"></div>
+<a href="http://www.thenation.com/advertising-policy" class="top-ad-policy">Ad Policy</a>
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+		<header id="desktop">
+	<div class="header-bar utility">
+	<div class="row">
+	<div class="small-12 columns">
+		<ul class="actions">
+			<li><a class="social-link fb" href="https://www.facebook.com/TheNationMagazine" target="_blank"><span>Facebook</span></a></li>
+			<li><a class="social-link tw" href="https://twitter.com/thenation" target="_blank"><span>Twitter</span></a></li>
+						<li>
+				<a href="https://donate.thenation.com/responsive-pages/5_122014_hompage" class="btn btn-yellow donate">Donate</a>
+			</li>
+									<li>
+				<script  src="http://www.thenation.com/wp-content/themes/thenation/inc/pcd_javascript.php?nc=1"></script>						<div id="login-content-id-pcd_login" style="display:none;">
+	                                        <div class="lightbox-form">
+			<div class="lightbox-inner login_popup">
+				<div class="listing__hero row">
+					<div class="listing_form small-12 columns">
+						<!--<div class="closebutton"></div>-->
+                        <div class="login_top_msz">If you are a current Subscriber and are unable to log in, you may have to create a NEW username and password.  To do so, <a href="https://ssl.palmcoastd.com/06601/apps/LOGINSSO" target="_blank">click here</a> and use the “NEW USER” sign-up option.</div>
+						<h1>Log In</h1>
+						<div class="row primaryError" id="primaryError"  style="display: none">
+						 <div class="field form-field text-field small-12 columns error">
+									<p class="errormsg"></p>
+						 </div>
+						 </div>
+						<form action="index.html" class="search__form" onsubmit="return trigClick();"  name="lightboxform" id="lightboxform">
+								<div class="row">
+								<div class="field form-field e_mail_field_con text-field small-12 columns valid">
+									<input type="text" tabindex="1" name="e_mail" class="pcd_email" value="" id="e_mail" placeholder="" autocapitalize="off">
+									<label for="e_mail">Email *</label>
+															
+								</div>
+							</div>
+							<div class="row">
+								<div class="field form-field text-field pwd_field_con small-12 columns error">
+									<input type="password" tabindex="2" name="pwd" class="pcd_pwd" value="" id="pwd" placeholder="" minlength="2">
+									<label for="last_name">Password *</label>
+									             
+								</div>
+							</div>
+							
+							
+							<div class="row checkbox-row">
+								<div class="field form-field checkbox-field small-7 partsec columns">
+									<div class="checkbox">
+										<input type="checkbox" tabindex="4" value="None" id="box03" class="check_input" name="checkbox3" >
+										<label for="box03"></label>
+									</div>
+									<label for="box03">Remember Me</label>
+									 </div>
+								<div class="field form-field checkbox-field small-5 partsec columns pull-right"> <a tabindex="5" href="https://ssl.palmcoastd.com/06601/apps/-222532" style="padding: 0px !Important;">Forgot Your Password?</a></div>
+							</div>
+ 
+							<div class="row">
+								<div class="field form-field small-12 medium-6 partsec columns">
+									<div class="form-button" id="form-loading">
+									    <button class="primary-button pcdLoginButton" tabindex="3" type="submit" id="loginBut">Log In</button>
+									    <img class="loaderImg" src='http://www.thenation.com/wp-content/themes/thenation/images/loader_40x40.GIF' style="display: none" id="loader" alt="loader">
+								    </div>
+								</div>
+						        </div>
+							<div class="row">
+								<div class="field form-field small-12 medium-12 columns Subscriber_btn">									
+								If you are not a Subscriber, <a href="https://ssl.palmcoastd.com/06601/apps/ORDOPTION1LANDING?ikey=I**TOO" target="_blank">Subscribe</a> Now!<br />Back to <a href="http://m.facebook.com/" >site</a>								
+								</div>
+						      </div>
+						</form>
+					</div>
+				</div>
+			</div>
+</div>					
+						</div>
+						
+									  <a href="http://www.thenation.com/login/" class="btn btn-yellow login">Log In</a>
+				 				</li>
+					</ul>
+		<!-- /.actions -->
+		<nav class="trending">
+						<div class="menu-keyword-menu-container"><ul id="menu-keyword-menu" class="menu"><li id="menu-item-199269" class="menu-item menu-item-type-taxonomy menu-item-object-subject menu-item-199269"><a href="http://www.thenation.com/subject/election-2016/">Election 2016</a></li>
+<li id="menu-item-200267" class="menu-item menu-item-type-taxonomy menu-item-object-keyword menu-item-200267"><a href="http://www.thenation.com/keyword/bernie-sanders/">Bernie Sanders</a></li>
+<li id="menu-item-200624" class="menu-item menu-item-type-taxonomy menu-item-object-keyword menu-item-200624"><a href="http://www.thenation.com/keyword/hillary-clinton/">Hillary Clinton</a></li>
+<li id="menu-item-202149" class="menu-item menu-item-type-taxonomy menu-item-object-keyword menu-item-202149"><a href="http://www.thenation.com/keyword/donald-trump/">Donald Trump</a></li>
+<li id="menu-item-202480" class="menu-item menu-item-type-taxonomy menu-item-object-subject current-article-ancestor menu-item-202480"><a href="http://www.thenation.com/subject/race-and-ethnicity/">Race and Ethnicity</a></li>
+</ul></div>		</nav>
+	</div>
+	</div>
+		<!-- /.trending -->
+	</div>
+	<!-- /.header-bar.utility -->
+
+	<div class="header-bar main" id="'navbar'">
+	<div class="row">
+		<nav role="navigation" class="primary small-12 columns">
+			<ul>
+				<li class="home">
+						<h1 class="logo">
+							<a href="http://www.thenation.com">
+								<img src="http://www.thenation.com/wp-content/uploads/2015/07/d-logo-header.png" alt="The Nation" class="non-sticky">
+								<img src="http://www.thenation.com/wp-content/uploads/2015/07/m-logo.png" alt="The Nation" class="sticky"/>
+							</a>
+						</h1>
+					</li>
+				<li class="news-links">
+									<div class="menu-subject-menu-container"><ul id="menu-subject-menu" class="menu"><li id="menu-item-186986" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186986"><a href="http://www.thenation.com/politics/">Politics</a></li>
+<li id="menu-item-201145" class="menu-item menu-item-type-taxonomy menu-item-object-subject menu-item-201145"><a href="http://www.thenation.com/subject/world/">World</a></li>
+<li id="menu-item-201148" class="menu-item menu-item-type-taxonomy menu-item-object-subject menu-item-201148"><a href="http://www.thenation.com/subject/economy/">Economy</a></li>
+<li id="menu-item-116709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116709"><a href="http://www.thenation.com/culture/">Culture</a></li>
+<li id="menu-item-115090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115090"><a href="http://www.thenation.com/take-action/">Take Action</a></li>
+</ul></div>				</li>
+				 
+				
+				<li class="article-meta">
+													 <h3 class="tophead_subject"><a href="http://www.thenation.com/subject/sports/">
+					Sports</a></h3>
+											<h2>The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City</h2>
+				</li>
+								<li class="quick-links">
+					<ul>
+														<li class="current-issue"><a href="http://www.thenation.com/issue/february-29-2016-issue/">Current Issue</a></li>
+																	
+						
+														<li class="subscribe">
+								<a href="https://ssl.palmcoastd.com/06601/apps/ORDOPTION1LANDING?ikey=I**TOO">Subscribe</a>								</li>
+														<li class="search-toggle"><a href="#">Search</a></li>
+					</ul>
+				</li>
+				 
+				<li class="article-social">
+						<ul>
+							<li><a href="javascript:void(0)" class="social-article social-share fb"><span>Facebook</span></a></li>
+							<li><a href="javascript:void(0)" class="social-article social-share tw"><span>Twitter</span></a></li>
+							<li><a href="javascript:void(0)" class="social-article social-share email"><span>Email</span></a></li>
+						</ul>
+					</li>
+								</ul>
+		</nav>
+		</div>
+	<!-- /.primary -->
+	</div>
+
+	<!-- /.header-bar.main -->
+	<div class="header-bar search searchbardrop">
+	<div class="row">
+		<form action="http://www.thenation.com/" role="search" method="get" id="search" name="search">
+			<input type="text" placeholder="Search" name="ssearch">
+			 <input type="hidden" name="post_type" value="article" />
+		</form>
+		</div>
+	</div>
+</header>
+<script type="text/javascript">
+	jQuery( document ).ready(function($) {
+		$(".landing ul>li.news-links, .landing ul>li.quick-links").attr('style','display:inline !important');
+	});
+	</script>
+<!-- /#desktop -->
+<header id="mobile" class="push">
+	<div class="header-bar">
+		<a href="#mobile-menu" class="nav-toggle">
+			<span>Toggle Menu</span>
+		</a>
+		<h1 class="logo">
+			<a href="http://www.thenation.com"><img src="http://www.thenation.com/wp-content/uploads/2015/07/m-logo.png" alt="The Nation"/></a>
+		</h1>
+						
+								  <a href="http://www.thenation.com/login/" class="my-profile"><span>Log In</span></a>
+				 							 
+	 	</div>
+	<!-- /.header-bar -->
+	<div id="mobile-menu" role="navigation">
+	<div class="mobile-scroll">
+	
+		<nav class="primary">
+			<ul>
+				<div class="menu-subject-menu-container"><ul id="menu-subject-menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186986"><a href="http://www.thenation.com/politics/">Politics</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-subject menu-item-201145"><a href="http://www.thenation.com/subject/world/">World</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-subject menu-item-201148"><a href="http://www.thenation.com/subject/economy/">Economy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116709"><a href="http://www.thenation.com/culture/">Culture</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115090"><a href="http://www.thenation.com/take-action/">Take Action</a></li>
+</ul></div>			</ul>
+		</nav>
+		<nav class="utility">
+			<ul>
+												<li class="subscribe">
+								<a class="alert" href="https://ssl.palmcoastd.com/06601/apps/ORDOPTION1LANDING?ikey=I**MOB">Subscribe</a>								</li>
+																					<li class="current-issue"><a href="http://www.thenation.com/issue/february-29-2016-issue/">Current Issue</a></li>
+																	
+						
+														<li class="subscribe">
+																</li>
+															<li>
+				<a href="https://donate.thenation.com/responsive-pages/5_122014_hompage">Donate</a>
+			</li>
+			<!-- Login/Logout -->
+							<li>
+				<script  src="http://www.thenation.com/wp-content/themes/thenation/inc/pcd_javascript.php?nc=1"></script>						<div id="login-content-id-pcd_login" style="display:none;">
+	                                        					
+						</div>
+						
+									  
+				 <li><a href="http://www.thenation.com/login/">Log In</a></li>
+				 				</li>
+							</ul>
+		</nav>
+		<div class="social">
+			<a class="social-icon icon-fb" target="_blank" href="https://www.facebook.com/TheNationMagazine">
+			<span>Facebook</span>
+			</a>
+			<a class="social-icon icon-tw" target="_blank" href="https://twitter.com/thenation">
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="search">
+			<form id="mobile-search" action="http://www.thenation.com/" role="search" method="get" name="search">
+			<!--<input type="text" placeholder="Search" class="clearable" name="s">-->
+			<input type="text" id="q" class="clearable" name="ssearch" placeholder="Search">
+			 <input type="hidden" name="post_type" value="article" />
+		</form>
+		
+		</div>
+		</div>
+	</div>
+	<!-- /#mobile-menu -->
+</header>
+	<div class="container push"><script type= "text/javascript">
+var preventLoad_article = false;
+var check_comment = false;
+jQuery(document).ready(function(){
+		});
+</script>
+
+
+<div class="article-wrap article-page " id="wrap">
+	<!-- Advertisements -->
+<script type="text/javascript">
+	var key = [];
+	var values = [];
+</script>
+		<script type="text/javascript">
+			key.push("tn_keyword");
+			values.push("'affordable', 'billionair', 'football', 'police-bru', 'super-bowl'");
+		</script>
+				<script type="text/javascript">
+			key.push("tn_author");
+			values.push("'dave-z'");
+		</script>
+			<!-- Calling Header, Footer Leaderboards and Pixel Ads -->
+	<script type="text/javascript">
+		jQuery( document ).ready(function($) {
+			custom_targeting = false;
+			if (key.length > 0 && values.length > 0) {
+				custom_targeting = true;
+			}
+			call_ad('leaderboard','ad-leaderboard','tn_politics_cities_ros_leaderboard_1','tn_politics_cities_article_leaderboard_mobile_1',custom_targeting,key,values);
+			call_ad('pixel','ad-pixel','tn_politics_cities_article_pixel_1','tn_politics_cities_article_pixel_mobile_1',custom_targeting,key,values);
+			call_ad('pixel','ad-pixel-2','tn_politics_cities_article_pixel_2','tn_politics_cities_article_pixel_mobile_2',custom_targeting,key,values);
+			//call_ad('pixel','ad-pixel','tn_test_pixel','tn_test_pixel',custom_targeting,key,values);
+			//call_ad('pixel','ad-pixel-2','tn_test_pixel_2','tn_test_pixel_2',custom_targeting,key,values);
+			//call_ad('pixel','ad-pixel','tn_politics_cities_article_pixel_1','tn_politics_cities_article_pixel_1',custom_targeting,key,values);
+			//call_ad('pixel','ad-pixel-2','tn_politics_cities_article_pixel_2','tn_politics_cities_article_pixel_2',custom_targeting,key,values);
+			call_ad('leaderboard','div-gpt-ad-1428494597034-0','tn_politics_cities_ros_leaderboard_1','tn_politics_cities_article_leaderboard_mobile_1',custom_targeting,key,values);
+		});
+	</script>
+	<div class="postid-201712 scrolltrace " articlelisttitle="The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City" articlelistlinks="http://www.thenation.com/article/the-streets-of-san-francisco-super-bowl-city-meets-tent-city/" article-post-id="201712">
+	<article id="url-title">
+	<!-- Banner Image -->  
+			<header class="article-header">
+		<div class="article-header-content">
+					<ul class="article-info">
+				<li class="category"><a href="http://www.thenation.com/subject/sports/" class="anchor_subject"
+                     subjectlink="http://www.thenation.com/subject/sports/">Sports</a></li><li class="subcategory"><a href="http://www.thenation.com/keyword/super-bowl/">Super Bowl</a></li><li class="subcategory"><a href="http://www.thenation.com/keyword/affordable-housing/">Affordable housing</a></li>				</ul>
+		
+			<h1 class="title">The Streets of San Francisco: ‘Super Bowl City’ Meets Tent City</h1>
+			<h2 class="subtitle">A city in the grip of a housing crisis just spent $5 million on the Super Bowl. Yes, people are angry. </h2>
+			<div class="byline">
+							<h2 class="author_name">By <a class="author" href="http://www.thenation.com/authors/dave-zirin/">Dave Zirin</a><a class="author-twitter" href="https://twitter.com/@EdgeofSports" target="blank"><span>Twitter</span></a></h2>					<!--<h2>By </h2>-->
+								
+		
+				<h4 class="time is_date article_pub_time">February 4, 2016<!--<span><a href="" class="click_comment"></span><span>3 Comments</span></a>-->
+								
+				</h4>
+
+							</div>
+			<ul class="article-share">
+			<li><a class="social-share fb" href="javascript:void(0)"><span>Facebook</span></a></li>
+					<li><a class="social-share tw" href="javascript:void(0)"><span>Twitter</span></a></li>
+					<li><a class="social-share email" href="javascript:void(0)"><span>Email</span></a></li>
+					<li><a class="social-share tn_print" href="javascript:void(0)" onclick="tn_print_fn()"><span>Print</span></a></li>
+			</ul>
+			</div>
+		</header>
+					
+		
+		<section class="article-body  abody-201712">
+		<aside class="left full-width-mobile image wide indent">
+										<a class="gallery imgHover" href="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img.jpg" title="Meg Bender holds up a sign during a protest outside Super Bowl City, pro-football’s weeklong theme park, in San Francisco on February 3, 2016. (AP Photo / Eric Risberg)"><img src="http://www.thenation.com/wp-content/uploads/2016/02/Super_Bowl_homeless_ap_img.jpg" alt="Super Bowl protester"></a>
+										<p class="caption">Meg Bender holds up a sign during a protest outside Super Bowl City, pro-football’s weeklong theme park, in San Francisco on February 3, 2016. <span class="credits">(AP Photo / Eric Risberg)</span></p>
+							</aside>
+							<div style="clear:both"></div>		
+					<p>On a daily basis, an estimated 2,000 pounds of “<a href="http://ww2.kqed.org/news/2016/02/02/tent-cities-compete-with-super-bowl-city-for-attention">trash, human waste and hypodermic needles</a>” are removed from the homeless encampments around San Francisco. These are the tent cities that form the backdrop to the monstrous spectacle of decadence that is Super Bowl week in the Bay Area.<aside class="ad full-width-mobile right grey_back">
+				<div id="ad-halfpage-201712-0"></div>
+				<a href="http://www.thenation.com/advertising-policy" class="ad-policy" target="_blank">Ad Policy</a>
+			</aside>					<script type="text/javascript">
+						jQuery( document ).ready(function($) {
+							call_ad('halfpage','ad-halfpage-201712-0','tn_politics_cities_ros_halfpage_1','tn_politics_cities_ros_halfpage_mobile_1',custom_targeting,key,values);
+						});
+					</script>
+							
+<p>Last August, San Francisco’s <a href="http://sanfrancisco.cbslocal.com/2015/08/24/super-bowl-50-homeless-san-francisco-mayor-ed-lee-super-bowl-city/" target="_blank">Mayor Ed Lee made clear that a cleansing of the homeless</a> would take place before the Super Bowl, saying, “They are going to have to leave. We’ll give you an alternative, we are always going to be supportive, but you are going to have to leave the streets.” Currently, there is no evidence of widespread mass-sweeps. But according to several Bay Area homeless rights activists and social workers with whom I spoke, it seems that when the cameras are on, the city cleans up trash. When the cameras are off, the city cleans up people, whom the San Francisco Police Department treat as if they are equally disposable.		
+<p>As private planes engage in the yearly Super Bowl ritual of fighting for space at area airports, they will be entering a city that serves as a macrocosm of both the excesses of the big game and the human cost to be paid by many of the players we will be cheering on the field. While the city is having another of its periodic real-estate booms, creating the most expensive housing market in the nation—with a minuscule one-bedroom apartments going for $3,500 a month—the number of homeless in San Francisco is staggering. In a city with an official population of about 800,000, there are from 7,000 to 10,000 homeless. As Jessica Hanson Weaver, a social worker who works in the largest of the San Francisco homeless shelters, said to me, “That number goes up and down depending on variety of factors. It includes youth, families, and adults in shelters, and also those in streets, living in parks, or in the care of hospitals.”		
+<p>It is certainly true that one cannot blame the current mission-creep subtle-sweep of the homeless solely on the Super Bowl. That’s because for Mayor Ed Lee the crackdown on the homeless is not a Super Bowl phenomenon but a year-round game. In 2015, the police of San Francisco <a href="http://ww2.kqed.org/news/2016/02/02/tent-cities-compete-with-super-bowl-city-for-attention">handed out roughly 2,300 citations a month to homeless people.</a> That’s 77 every day. These citations lead to arrest, which leads to warehousing people behind bars instead of confronting the near total absence of affordable housing. The greatest sin in all of this is that <a href="https://medium.com/conscious-by-handup/why-are-so-many-people-homeless-in-san-francisco-3abee92eb4e#.ckdq9tthg">61 percent of the homeless lost their homes while still employed</a>. There is just nowhere to live.		
+<p>As Hanson Weaver said to me, “Over the past five years we have seen a sixfold increase in citations against homeless people. This is because areas where homeless have traditionally found shelter—Tenderloin, Civic Center, South of Market—are in the center of a new massive development of the ‘MidMarket’ area that surrounds Twitter headquarters.”						<style>
+			.article-wrap .article-body aside.left.custom_background_201712			 {
+			 background:#5000b2 !important;
+			 }
+			 </style>
+				<aside class="left takeaction indent custom_background_201712">
+					<div class="action_tout_heading"><p><p><span>LIKE THIS? GET MORE OF OUR BEST REPORTING AND ANALYSIS</span></p></p></div>
+					<form action="" name="sailthru_action_tout_form" method="post">
+					<input type="email" name="email" id="take_action_sailthru_email_201712" class="take_action_sailthru_email" Placeholder="Enter Email">
+									<input type="hidden" name="take_action_sailthru_list_final" id="take_action_sailthru_list_final_201712" value="daily_tout,master,daily">
+					<div class="cta"><p>
+										<input type="button" class="take_action_sailthru_submit" name="submit_sailthru" value="SIGN UP!" onclick="add_action_tout_sailthru(201712)"></p></div>
+					</form>
+				<p id="action_tout_response_201712"></p>
+				</aside>
+				
+<p>This housing and human crisis has led to a series of protests over the past week against the estimated $5 million in public spending on Super Bowl infrastructure, <a href="http://www.sfgate.com/bayarea/article/SF-budget-analyst-says-city-got-poor-financial-6762385.php">a deal that analysts are saying is lousy for the city</a>. Five million dollars could have meant 500 units of new housing. Instead, it has gone primarily toward to building “Super Bowl City,” an NFL street fair for the locals who can’t afford tickets to the game. It’s a street fair branded with corporate logos and monitored, <a href="http://www.thenation.com/article/why-bay-area-residents-are-protesting-the-super-bowl/?nc=1">as journalist Davey D told us</a>, by police in full body armor and rooftop snipers, turning public sidewalks into the property of the National Football League and their sponsors.		
+<p>Yet while Twitter HQ has become a symbol for the gentrification and skyrocketing costs in the city, the social media platform has also become an organizing tool for resistance. On Wednesday, hundreds took to the streets in a protest under the banner #tacklehomelessness. The protests are aimed at challenging the priorities of SF leaders. These protests provide the only vestiges of hope for this remarkable urban area that has become more than “a tale of two cities.” It’s a tale of two worlds.		
+<p>I spoke with activist Nato Green, who describes himself as “the country’s only semi-functional hybrid of comedian and union organizer.”		
+<p>His comments deserve reading and rereading: “The Super Bowl is the literal, physical manifestation of Mayor Lee’s term. San Francisco has become uninhabitable for anyone but rich people and tourists. At the same time that the mayor is stonewalling investigations into racist police violence and political corruption in his administration, huge swaths of public space are inaccessible to residents for private parties. He put the city on the hook for millions of dollars based on an insider handshake agreement with the representative of the Super Bowl Committee, who happened to be the spokesman for the previous mayor. His policies created a crisis of eviction and displacement, and now police are rounding up and flooding the homeless encampments they caused so Super Bowl 50 VIPs don’t have to see it. Mayor Lee is trying to make San Francisco into a managed simulacrum of a city, like Disneyland’s Main Street with animatronic urbanism, and police are there to evict the remaining real residents who get in the way. We’re not going to make it easy for him.”		
+<p>If there is one positive about the debt, displacement, and militarization that the Super Bowl has amplified in San Francisco, it is that it has shined a piercing light on the problems that plague the area. In the light of day, the priorities of this “managed simulacrum of a city” have never been more exposed.		
+		</section>
+		<footer class="article-footer narrow">
+
+			   		<div class="footer-module comments">
+			<!-- Comments count function -->
+				<a class="click_comment" href="">3 Comments</a>
+			</div>
+						<div class="footer-module">
+				<ul class="article-share">
+					<li><a class="social-share fb" href="javascript:void(0)"><span>Facebook</span></a></li>
+					<li><a class="social-share tw" href="javascript:void(0)"><span>Twitter</span></a></li>
+					<li><a class="social-share email" href="javascript:void(0)"><span>Email</span></a></li>
+					<li><a class="social-share tn_print" href="javascript:void(0)" onclick="tn_print_fn()"><span>Print</span></a></li>
+				</ul>
+			</div>
+			<!--<div class="footer-module narrow supplemental-info">
+							</div>-->
+			
+			<div class="footer-module narrow author-bio">
+									<p><span><a href="http://www.thenation.com/authors/dave-zirin/"> Dave Zirin</a>
+												 <a class="author-twitter" href="https://twitter.com/@EdgeofSports" target="blank"><span>Twitter</span></a>
+						 						</span> Dave Zirin is the sports editor of <em>The Nation</em>.</em></p><br/>
+						</div>
+							<div class="footer-module narrow contact-us">
+					<p>To submit a correction for our consideration, click <a target=_blank href=/corrections>here.</a>										</p>
+					<p>For Reprints and Permissions, click <a target="_blank" href="http://www.thenationreprints.com/services/reprints/">here.</a></p>
+				</div>
+				
+			<div id="comments_201712" class="commentContainer" style="display:none">
+			<div id="comments" class="comments-area">
+
+							<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/article/the-streets-of-san-francisco-super-bowl-city-meets-tent-city/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<p class="must-log-in">In order to comment, you must be logged in as a paid subscriber. <a href="#TB_inlinepcd_login?width=600&height=550&inlineId=login-content-id-pcd_login" class="thickbox comment_login_link"> Click here to log in</a> or subscribe.</p>												</div><!-- #respond -->
+						<!--<h2 class="comments-title">
+					</h2>-->
+		<div class="comment_sorting_setting_outer">
+    <div class="sort_com_label">Sort comments By:</div>
+				<select id="comment_sorting_setting" name="comment_sorting_setting" class="comment_sorting_setting" comment_postid="201712" my-ajax-url="http://www.thenation.com/wp-admin/admin-ajax.php">
+					<option sort-attr="1"  selected=selected>Chronological Order</option>
+					<option sort-attr="2"  >Most Liked</option>
+				</select>
+			</div>
+<div class="clear"></div>
+		<ol class="comment-list custom_comments">
+			   <li id="comment-2109905830" class="comment byuser comment-author-003347507 even thread-even depth-1 parent">
+   <article id="div-comment-2109905830" commentIDVal="2109905830" class="comment-body ">
+   		<div class="comment-content">
+					<b class="fn">George Hoffman</b> <span class="says">says:</span>					<div class="comment-metadata">
+							<time datetime="2016-02-05T06:06:53+00:00">
+								February 5, 2016 at 6:06 am							</time>
+											</div><!-- .comment-metadata -->
+										<p>I lived in the Bay Area from 1995 to 2000, first in San Francisco and then I moved to Oakland because after my divorce I couldn&apos;t afford the high rent where I was living at the time. But even back then the hand writing was on the wall with gentrification, high rents and the legion of homeless people. San Francisco is a great city, a world class city. But so very expensive.</p>
+					<div class="ldc-cmt-box clearfix"><span class="ldc-ul_cont" onclick="alter_ul_post_values(this,2109905830,'c_like')" ><img src="http://www.thenation.com/wp-content/themes/thenation/images/up.png" alt="upimg"/>(<span>5</span>)</span><span class="ldc-ul_cont" onclick="alter_ul_post_values(this,2109905830,'c_dislike')" ><img src="http://www.thenation.com/wp-content/themes/thenation/images/down.png" alt="downimg"/>(<span>1</span>)</span></div>										
+													</div><!-- .comment-content -->
+
+				
+			</article>
+			
+</li><!-- #comment-## -->
+<ol class="children">
+   <li id="comment-2109905841" class="comment byuser comment-author-005207816 odd alt depth-2">
+   <article id="div-comment-2109905841" commentIDVal="2109905841" class="comment-body ">
+   		<div class="comment-content">
+					<b class="fn">Walter Pewen</b> <span class="says">says:</span>					<div class="comment-metadata">
+							<time datetime="2016-02-05T11:23:17+00:00">
+								February 5, 2016 at 11:23 am							</time>
+											</div><!-- .comment-metadata -->
+										<p>Frankly it is not a &quot;world class city&quot; these days.  In 1950, yes.  The fact that the title is thrown around constantly shows how good the chamber of commerce is there.  It&apos;s main industry has been TOURISM for quite some time.  And especially the arrivistes, would not know world class from a hole in their ass.   Witness events right now.</p>
+					<div class="ldc-cmt-box clearfix"><span class="ldc-ul_cont" onclick="alter_ul_post_values(this,2109905841,'c_like')" ><img src="http://www.thenation.com/wp-content/themes/thenation/images/up.png" alt="upimg"/>(<span>10</span>)</span><span class="ldc-ul_cont" onclick="alter_ul_post_values(this,2109905841,'c_dislike')" ><img src="http://www.thenation.com/wp-content/themes/thenation/images/down.png" alt="downimg"/>(<span>1</span>)</span></div>										
+													</div><!-- .comment-content -->
+
+				
+			</article>
+			
+</li><!-- #comment-## -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-2109905815" class="comment byuser comment-author-005207816 even thread-odd thread-alt depth-1">
+   <article id="div-comment-2109905815" commentIDVal="2109905815" class="comment-body ">
+   		<div class="comment-content">
+					<b class="fn">Walter Pewen</b> <span class="says">says:</span>					<div class="comment-metadata">
+							<time datetime="2016-02-04T19:27:23+00:00">
+								February 4, 2016 at 7:27 pm							</time>
+											</div><!-- .comment-metadata -->
+										<p>I&apos;d suggest there will not be a solution for people who care about human beings.  San Francisco changed so dramatically in the 1980&apos;s the old city basically lost it&apos;s soul.  I lived there for a time, watched my gay cohorts get sick and die, and the next thing that happened was straights were moving into the gentrified gay areas for lower rent.   At the same time, the elderly and blue collar class mostly disappeared from the city as a residence.  The tech class doesn&apos;t give a fucking damn about the city.   They like the views.  They don&apos;t talk to people in the neighborhoods, they don&apos;t have to .  Might as well be Houston for all they care.</p>
+					<div class="ldc-cmt-box clearfix"><span class="ldc-ul_cont" onclick="alter_ul_post_values(this,2109905815,'c_like')" ><img src="http://www.thenation.com/wp-content/themes/thenation/images/up.png" alt="upimg"/>(<span>15</span>)</span><span class="ldc-ul_cont" onclick="alter_ul_post_values(this,2109905815,'c_dislike')" ><img src="http://www.thenation.com/wp-content/themes/thenation/images/down.png" alt="downimg"/>(<span>4</span>)</span></div>										
+													</div><!-- .comment-content -->
+
+				
+			</article>
+			
+</li><!-- #comment-## -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+					
+</div><!-- #comments -->			</div>
+					</footer>
+		<footer class="article-footer recirc-block">
+			<div class="footer-module full-width-mobile recirc-block">
+					<div class="recirc column" id="recirccol-201712">
+					<ul class="tag-browser">
+					 
+							<li><a name="sports" class="other" href="#">Sports</a></li>
+						 
+							<li><a name="super-bowl" class="other" href="#">Super Bowl</a></li>
+				 
+							<li><a name="affordable-housing" class="other" href="#">Affordable housing</a></li>
+										
+					</ul>
+					<div class="recirc-carousel" id="recirccar-201712">
+														<ul id="sports" class="article-list">
+																		<li>
+										<time>Feb 11, 2016</time>
+										<h2 class="title"><a href="http://www.thenation.com/article/in-defense-of-black-panther-tributes-at-the-super-bowl/">In Defense of Beyoncé’s Black Panther Tribute at the Super Bowl</a> <span class="author">
+																	By Dave Zirin																		</span></h2>
+									</li>
+																		<li>
+										<time>Feb 11, 2016</time>
+										<h2 class="title"><a href="http://www.thenation.com/article/the-plan-for-detroits-former-tiger-stadium-ignores-history-and-potentially-safety/">The Plan for Detroit’s Former Tiger Stadium Ignores History—and Potentially Safety</a> <span class="author">
+																	By Michael Betzold																		</span></h2>
+									</li>
+																	</ul>
+														<ul id="super-bowl" class="article-list">
+														<li>
+								<time>Feb 11, 2016</time>
+								<h2 class="title"><a href="http://www.thenation.com/article/in-defense-of-black-panther-tributes-at-the-super-bowl/">In Defense of Beyoncé’s Black Panther Tribute at the Super Bowl</a> <span class="author">									By Dave Zirin								</span></h2>
+							</li>
+														<li>
+								<time>Feb 11, 2016</time>
+								<h2 class="title"><a href="http://www.thenation.com/article/cam-newton-and-the-burden-of-history/">Cam Newton and the Burden of History</a> <span class="author">									By Donna Murch								</span></h2>
+							</li>
+													</ul>
+												<ul id="affordable-housing" class="article-list">
+														<li>
+								<time>Feb 08, 2016</time>
+								<h2 class="title"><a href="http://www.thenation.com/article/super-bowl-50-brought-to-you-by-toe-fungus/">Super Bowl 50: Brought to You by Toe Fungus</a> <span class="author">									By Dave Zirin								</span></h2>
+							</li>
+														<li>
+								<time>Dec 23, 2015</time>
+								<h2 class="title"><a href="http://www.thenation.com/article/media-notices-homeless-people-on-streets-blames-progressive-mayor/">Media Notices Homeless People on Streets, Blames Progressive Mayor</a> <span class="author">									By Patrick Markee								</span></h2>
+							</li>
+													</ul>
+												
+					</div>
+				</div>
+				<style>
+.tout.footer.donate.zczSDRFXFn{
+background: #cc0e0e !important;
+}
+.tout.footer.donate p{color: #ffffff !important;}
+.tout.footer.donate .btn{
+   border:3px solid #ffffff !important;
+   color: #ffffff !important;
+   background: #cc0e0e !important;
+}
+.tout.footer.donate .btn:hover{
+   background:#ffffff !important;
+   color:#cc0e0e !important;
+}
+</style>
+<div class="tout footer donate column zczSDRFXFn">
+   <div class="donate-wrapper">
+             <p>“AN INDISPENSABLE VOICE IN OUR POLITICAL DIALOGUE.”
+
+
+— ELIZABETH WARREN
+</p>
+            <div class="donate-grid"><a href="https://ssl.palmcoastd.com/06601/apps/ANNIVERSARY2?ikey=I**RR2" target="_blank" class="btn">Subscribe to The Nation</a></div>   </div>
+</div>
+							</div>
+		</footer>
+		</article>
+
+
+<script type="text/javascript">
+  //  googletag.cmd.push(function() {
+  //  googletag.defineSlot('/1004953/tn_article_leaderboard_2', [728, 90], 'div-gpt-ad-1428494597034-0').
+  //  setTargeting("test","infinitescroll").
+  //  addService(googletag.pubads());
+  //
+  // // Infinite scroll requires SRA
+  // googletag.pubads().enableSingleRequest();
+  //
+  // // Disable initial load, we will use refresh() to fetch ads.
+  // // Calling this function means that display() calls just
+  // // register the slot as ready, but do not fetch ads for it.
+  // googletag.pubads().disableInitialLoad();
+  //
+  // // Enable services
+  // googletag.enableServices();
+  //});
+    
+  
+ // Function to generate unique names for slots
+ var nextSlotId = 1;
+ function generateNextSlotName() {
+   var id = nextSlotId++;
+   return 'adslot' + id;
+ }
+	var nextSlotIdSide = 1;
+	function generateNextSlotNameSide() {
+	  var idSide = nextSlotIdSide++;
+	  return 'slotSide' + idSide;
+	}
+
+</script>
+	
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+   //googletag.display('div-gpt-ad-1428494597034-0');
+});
+</script>
+	 <div id="ad-interarticle"   class="ad full-width interarticle position-relative">
+		<a href="http://www.thenation.com/advertising-policy" class="top-ad-policy">Ad Policy</a>
+		<div id="div-gpt-ad-1428494597034-0"> 
+<!--     <script>
+        // Call display() to register the slot as ready
+        // and refresh() to fetch an ad.
+        googletag.cmd.push(function() {
+          googletag.display('div-gpt-ad-1428494597034-0');
+          googletag.pubads().refresh();
+        });
+     </script> 
+--> </div>
+	</div>
+	 <!--<div id='div-gpt-ad-1428494597034-0' class="push ad full-width leaderboard"></div>-->
+	
+	<a class="inifiniteLoader"><img src="http://www.thenation.com/wp-content/themes/thenation/images/infi_loader.gif" /></a>
+	</div>
+					</div><!-- article wrap -->
+	<!--<a class="goTop" title="Scroll Top"><img src="http://www.thenation.com/wp-content/themes/thenation/images/scroll_arrow.png" /></a>-->
+<!-- Including  Body content image in gallery -->
+	<!-- Including  Body content image in  gallery -->
+	<script>
+	       function runSlider(ele)
+	    {   
+			 ele.bxSlider({
+  adaptiveHeight: true,
+ adaptiveHeightSpeed: 500,
+  infiniteLoop: false,
+  hideControlOnEnd: false,
+  pager: false
+});
+return false;
+		}
+
+	   
+		 jQuery(document).ready(function(){
+		 var flag = false;
+		 $('section.article-body img').each(function() {
+		   
+			 if($(this).parent("a").parent("figure").hasClass('bx-item'))
+			 {
+			  flag = true;
+			 }
+			 else
+			 {
+			 $(this).parent("a").addClass("gallery");
+			 }
+			 });
+             if(flag)
+			{
+			 runSlider($('.gallery-2'));
+			}
+	});
+	</script>
+	<script>	
+jQuery(document).ready(function(){
+  $e = $('.article-body').children().last();   
+   $t = $e.prop("tagName");
+   var tagsArray = ['FORM','ASIDE'];
+   var anothertagsArray = {'UL':'li','OL':'li','BLOCKQUOTE':'p'};
+   if(jQuery.inArray($t, tagsArray )!='-1')
+   {} 
+   else
+   {    
+      if($t in anothertagsArray)
+      {
+         $('.article-body > p:last-of-type').toggleClass('changed');
+         $e.find(anothertagsArray[$t]+':last').addClass('redotclass');         
+      }    
+   }
+});
+jQuery(document).ready(function(){
+$('figure').each(function(){
+    //this wrapped in jQuery will give us the current .letter-q div
+   if($(this).hasClass('alignright')||$(this).hasClass('alignleft') || $(this).hasClass('aligncenter'))
+   { 
+     $(this).after('<div class="clear"></div>');
+	}
+	});
+
+	//jQuery('.click_comment').click(function(){
+	//			console.log("called     "+'#comments_201712' );
+	//		$( '#comments_201712' ).toggle();
+	//		$('html, body').animate({
+	//			scrollTop: $('#comments_201712').offset().top
+	//		},2000);
+	//		return false;
+	//	});
+});
+</script>
+	<script>// Scroll IF # id exist in URL
+	jQuery(document).ready(function($){
+	var url_id = window.location.hash.substr(1);
+	if(url_id!='')
+	{
+	var s = url_id;
+	var n = s.indexOf('/');
+	if(n!=''&& typeof n!= 'undefined')
+	{
+		var id_var = s.substring(0, n != -1 ? n : s.length);
+		//alert(id_var);
+		
+				$('html, body').animate({
+					scrollTop: $('#'+id_var).offset().top
+				},2000);
+				return false;
+			
+		}
+	}
+	});
+	</script>
+	
+	<script type="text/javascript">
+/*script to handle Back Button Event */
+var pageChange = 1;
+jQuery.noConflict();
+if(window.attachEvent) {
+    window.attachEvent('onpopstate', datHash);
+}
+function datHash(event)
+{
+	//event.preventDefault();
+	var str = $('#goback').val();
+	if(str=='')
+	{
+	 window.history.go(-Math.abs(pageChange));
+	}
+	else
+	{
+	 window.history.go(-Math.abs(pageChange));
+	}
+	return false;
+}
+/*script to handle Back Button Event */
+
+</script>
+<!--Alternate Popup code start-->
+<!--Alternate Popup code End--> 
+<script type="text/javascript">
+
+jQuery(document).ready(function($){
+	$('.post-edit-link').attr('href', function( _, action){
+    return action.replace('https', 'http');
+});
+    });
+
+jQuery(document).ready(function($) {
+	
+//	(function(window, undefined) {
+//    // Define variables
+//    var History = window.History,
+//        State = History.getState();
+//
+//    // Bind statechange event
+//    History.Adapter.bind(window, 'statechange', function() {
+//        var State = History.getState();
+//    });
+//	})(window);
+	
+	$('a.inifiniteLoader').hide();
+	var count = 1;
+	var loagAgn = false;
+	/*Script to handle Article Load Ajax*/
+	function loadArticle(pageNumber){
+		$('a.inifiniteLoader').show('fast');
+		$.ajax({
+		    url: "http://www.thenation.com/wp-admin/admin-ajax.php",
+		    type:'POST',
+			cache: false,
+			dataType: 'json',
+		    data: {action:'infinite_scroll',page_no: pageNumber, loop_file: 'articleload',slug:'housing-and-homelessness,police-and-law-enforcement,racism-and-discrimination,sports',curr_post_id:'201712',baseInfo:'{"SERVER_SOFTWARE":"nginx\/1.8.1","REQUEST_URI":"\/article\/the-streets-of-san-francisco-super-bowl-city-meets-tent-city\/","USER":"22d953dfb2ec48d2b9bd3843ba7ab31b","HOME":"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b","FCGI_ROLE":"RESPONDER","QUERY_STRING":"","REQUEST_METHOD":"GET","CONTENT_TYPE":"","CONTENT_LENGTH":"","SCRIPT_NAME":"\/index.php","DOCUMENT_URI":"\/index.php","DOCUMENT_ROOT":"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b\/code","SERVER_PROTOCOL":"HTTP\/1.1","GATEWAY_INTERFACE":"CGI\/1.1","REMOTE_ADDR":"75.117.50.129","REMOTE_PORT":"57980","SERVER_ADDR":"10.223.176.123","SERVER_PORT":"11534","SERVER_NAME":"endpoint4899c635.chios.panth.io","REDIRECT_STATUS":"200","PATH_INFO":"","PATH_TRANSLATED":"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b\/code","HTTPS":"OFF","SCRIPT_FILENAME":"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b\/code\/\/index.php","HTTP_HOST":"www.thenation.com","HTTP_USER_AGENT":"Mozilla\/5.0 (Linux; Android 4.4.2; QTAQZ3 Build\/KOT49H) AppleWebKit\/537.36 (KHTML, like Gecko) Version\/4.0 Chrome\/30.0.0.0 Safari\/537.36","HTTP_ACCEPT":"text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/webp,*\/*;q=0.8","HTTP_ACCEPT_ENCODING":"gzip","HTTP_COOKIE":"has_js=1","HTTP_REFERER":"http:\/\/m.facebook.com\/","HTTP_SURROGATE_CAPABILITY":"styx=\\\"ESI\/1.0\\\"","HTTP_USER_AGENT_HTTPS":"OFF","HTTP_VIA":"HTTP\/1.1 ECS (fty\/2F9C)","HTTP_X_FB_HTTP_ENGINE":"Liger","HTTP_X_FB_NET_HNI":"311480","HTTP_X_FB_SIM_HNI":"311480","HTTP_X_FORWARDED_FOR":"75.117.50.129, 192.16.47.156, 192.16.47.156","HTTP_X_FORWARDED_PROTO":"http","HTTP_X_HOST":"www.thenation.com","HTTP_X_PANTHEON_CLIENT_IP":"75.117.50.129","HTTP_X_PANTHEON_STYX":"1","HTTP_X_PROTO":"http:\/\/","HTTP_X_PURPOSE":"preview","HTTP_X_VARNISH":"1054159456","PHP_SELF":"\/index.php","REQUEST_TIME_FLOAT":"1455401514.5689","REQUEST_TIME":"1455401514","PRESSFLOW_SETTINGS":"{\\\"conf\\\":{\\\"pressflow_smart_start\\\":true,\\\"pantheon_binding\\\":\\\"22d953dfb2ec48d2b9bd3843ba7ab31b\\\",\\\"pantheon_site_uuid\\\":\\\"672ae238-dede-44f4-9243-89a591c2cc46\\\",\\\"pantheon_environment\\\":\\\"live\\\",\\\"pantheon_tier\\\":\\\"live\\\",\\\"pantheon_index_host\\\":\\\"18f9ce30-8984-49c6-a353-771e7a1a88ef-private.panth.io\\\",\\\"pantheon_index_port\\\":449,\\\"redis_client_host\\\":\\\"10.223.144.11\\\",\\\"redis_client_port\\\":10739,\\\"redis_client_password\\\":\\\"59b174d1fe414ed9850a8e14eb2d6be3\\\",\\\"file_public_path\\\":\\\"sites\/default\/files\\\",\\\"file_private_path\\\":\\\"sites\/default\/files\/private\\\",\\\"file_directory_path\\\":\\\"sites\/default\/files\\\",\\\"file_temporary_path\\\":\\\"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b\/tmp\\\",\\\"file_directory_temp\\\":\\\"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b\/tmp\\\",\\\"css_gzip_compression\\\":false,\\\"js_gzip_compression\\\":false,\\\"page_compression\\\":false,\\\"error_level\\\":0},\\\"databases\\\":{\\\"default\\\":{\\\"default\\\":{\\\"host\\\":\\\"10.223.145.135\\\",\\\"port\\\":22193,\\\"username\\\":\\\"pantheon\\\",\\\"password\\\":\\\"674fcd3a95584c40ad4f55b530c10c30\\\",\\\"database\\\":\\\"pantheon\\\",\\\"driver\\\":\\\"mysql\\\"}}},\\\"drupal_hash_salt\\\":\\\"b444002d80740b3d94cc5e42e4945dbc224fd3134e65b580da60215ffe4c8bf3\\\",\\\"config_directory_name\\\":\\\"config\\\"}","FRAMEWORK":"wordpress","DOCROOT":"\/","FILEMOUNT":"wp-content\/uploads","AUTH_KEY":"VHpmJoHTr14kv2qyk4zD6NrSc3IqAUmZxtz0nUnwkNA=","SECURE_AUTH_KEY":"zuloHYH0e\/uwY8+VFQ\/rgob0NrMXhmIsg9ymhQ4uBTg=","LOGGED_IN_KEY":"2m+ff0Ly0rHeTX0y0XQjPbiJWgk2aCET7rTjb+zMW5c=","NONCE_KEY":"JMqPWPpuEU03WW4UaqSzKy1gkcWsavf\/LHKLgHKzusc=","AUTH_SALT":"Q7pT2rIMICgULXTEtMwYfknUKfI0Yaog3PBcoVMI7F8=","SECURE_AUTH_SALT":"a3AFHfpntT3bMHQ5x\/6oFBL2AUyT\/sRYoO2W8Zz5hws=","LOGGED_IN_SALT":"+gVdi3DCKSVclyPORyNbSyHp2Gx9F81RWiMAwMV3hGg=","NONCE_SALT":"JcwHG4IRUl\/DsS0Va2+Z15HXCQKQmnIsDS8mbPoP8w4=","PANTHEON_INDEX_HOST":"10.223.96.36","PANTHEON_INDEX_PORT":"449","REPLICA_DB_HOST":"10.223.145.196","REPLICA_DB_PORT":"12823","REPLICA_DB_USER":"pantheon","REPLICA_DB_PASSWORD":"691cb64615cb4a5996b181a34ad8de55","REPLICA_DB_NAME":"pantheon","CACHE_HOST":"10.223.144.11","CACHE_PORT":"10739","CACHE_PASSWORD":"59b174d1fe414ed9850a8e14eb2d6be3","DB_HOST":"10.223.145.135","DB_PORT":"22193","DB_USER":"pantheon","DB_PASSWORD":"674fcd3a95584c40ad4f55b530c10c30","DB_NAME":"pantheon","PANTHEON_SITE":"672ae238-dede-44f4-9243-89a591c2cc46","PANTHEON_SITE_NAME":"thenation","PANTHEON_ENVIRONMENT":"live","PANTHEON_INFRASTRUCTURE_ENVIRONMENT":"live","PATH":"\/srv\/bindings\/22d953dfb2ec48d2b9bd3843ba7ab31b\/bin:\/usr\/local\/bin:\/bin:\/usr\/bin:\/srv\/bin"}'},
+		    success: function(receivedHTML){
+			if (typeof receivedHTML == 'object') 
+			{
+				if(typeof receivedHTML.html!=='undefined' && receivedHTML.html!='')
+				{
+					html = receivedHTML.html;
+				}
+			}
+			else
+			{
+				$('a.inifiniteLoader').hide();
+				$("#single_article_footer").show();
+			}
+			//html = receivedHTML.html;
+			$('a.inifiniteLoader').hide('1000');
+			$("#wrap").append(html);    // This will be the div where our content will be loaded
+			var postID = $($.parseHTML(html)).filter(".scrolltrace").attr('article-post-id');
+			
+			$('.abody-'+postID).children('p:first-of-type').html(function (i, html) {
+if ($('.abody-'+postID).children('img').length == "0") {
+var text = $('.abody-'+postID).children('p:first-of-type').html();
+$('.abody-'+postID).children('p:first-of-type').html(text.replace(/^(<.?>)?([A-Za-z0-9])/g,'$1<span class="dropcap">$2</span>'));
+}
+});        
+			/*for hiding meterpaywall popups when pixel ads call starts here*/
+			var hidePixelBool = false;
+			var meetkatstep1 = jQuery('#paywall .step.one');
+			var meetkatstep2 = jQuery('#paywall .step.two');
+			var meetkatstep3 = jQuery('#paywall .step.three');
+			var meetkatstep4 = jQuery('#paywall .step.four');
+			if (typeof meetkatstep1!='undefined' && meetkatstep1.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (typeof meetkatstep2!='undefined' && meetkatstep2.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (typeof meetkatstep3!='undefined' && meetkatstep3.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (typeof meetkatstep4!='undefined' && meetkatstep4.is(':visible'))
+			{
+			  hidePixelBool = true;
+			}
+			if (hidePixelBool===false) 
+			{		  
+				/*for hiding meterpaywall popups when pixel ads call ends here*/
+				/****Alternate Popup code start*********/
+				var enable_alterpopup_check;
+				enable_alterpopup_check ='';
+				if(typeof(enable_alterpopup_check) != "undefined" && enable_alterpopup_check == 1) 
+				{ 
+					var alternate_article_no;
+					alternate_article_no = '';
+					if(pageCounterPaywall % alternate_article_no == 0 && pageCounterPaywall!=0)
+					{
+						show_lightbox('','');
+					}
+				}
+				/******Alternate Popup code End********/
+			}
+			pageCounterPaywall++;
+			ajaxCarousel(postID);
+			/** Slider Content **/
+			var flag = false;
+			$('section.article-body:last img').each(function() {
+			if($(this).parent("a").parent("figure").hasClass('bx-item'))
+			 { 
+			  flag = true;
+			 }
+			 else
+			 {
+			 $(this).parent("a").addClass("gallery");
+			 }
+			 });
+
+			 if(flag){
+			var k = $('section.article-body:last').find('.gallery-2').bxSlider({
+				  adaptiveHeight: true,
+				 adaptiveHeightSpeed: 500,
+				  infiniteLoop: false,
+				  hideControlOnEnd: false,
+				  pager: false
+				});
+			 k.reloadSlider();
+			 }
+			 /* Slider Content End */
+			 
+			 
+			 var usera = navigator.userAgent.toLowerCase(); 
+				if ($('.article-page').length) { 
+				var slickWidth = $('.article-list.slick-slide').width(); 
+				if ($('.ie9').length) 
+				{ slickWidth = $('.recirc-carousel.slick-initialized.slick-slider').width(); } 
+				$('.slick-list.draggable').css( 
+				{'width' : slickWidth} 
+				); 
+				if (!/android|webos|iphone|ipad|ipod|blackberry/i.test(usera)) { 
+				$('.article-list.slick-slide').children('li').css( 
+				{'width' : slickWidth} 
+				); 
+				$('.slick-list').css( 
+				{'width' : slickWidth} 
+				); 
+				} 
+				} 
+			 
+			 
+			 
+			 
+			 
+			 
+		    }
+		});
+	    return false;
+	}
+	
+
+	/*Script to handle Scroll*/
+	 $(window).bind('scroll', function() {
+		
+			$('.scrolltrace').each(function() {
+			   var post = $(this);
+			   var topp = post.position().top;
+			   var bott = post.position().top + post.height();
+			   var pos = $(window).scrollTop();
+			    if (pos>=topp && pos<=bott) {
+			       $(this).addClass('currentScr');
+			       if($('.currentScr').attr("articlelistlinks")!=window.location.href)
+				   {
+						var ua = window.navigator.userAgent;
+						var msie = ua.indexOf("MSIE ");
+
+						if (msie > 0){ 
+							
+						}else{
+								window.history.pushState({}, "", $('.currentScr').attr('articlelistlinks'));
+						}
+				   // Google Analytics  for Infinite Scroll
+					 ga('send', 'pageview', {
+								'page': $('.currentScr').attr('articlelistlinks'),
+								'title': $('.currentScr').attr('articlelisttitle')
+							});
+
+				    pSUPERFLY.virtualPage($('.currentScr').attr('articlelistlinks'), $('.currentScr').attr('articlelisttitle'));
+				$("nav.primary ul li.article-meta h2").html($('.currentScr').attr('articlelisttitle').substring(0,100));
+			       $("title").html($('.currentScr').attr('articlelisttitle'));
+						 
+						 
+						 var linktext = $('.currentScr').find(".anchor_subject").html();
+						 if (linktext!='') {
+						 var linkredirectval =$('.currentScr').find(".anchor_subject").attr('subjectlink');
+						 if(typeof linkredirectval!='undefined')
+						 {
+								var subject_head_link = "<a href='"+linkredirectval+"'>"+linktext+"</a>";
+								$('.tophead_subject').html(subject_head_link);
+						 }
+						 else
+						 {
+							 var subject_head_link = "";
+							$('.tophead_subject').html(subject_head_link);
+						 }
+							
+						 }
+			       
+			       pageChange = parseInt(pageChange) + 1;
+				   }
+				}
+			   else
+			   {
+			       $(this).removeClass('currentScr');
+			   }
+		       });
+			
+		if ( typeof PaywallWorking !== 'undefined' && PaywallWorking == 'on' )
+     {
+        var loadPoint = false;
+        var loadPointElement = $('.scroll_handler:eq('+pageCounterPaywall+')').position();      
+        if (typeof loadPointElement!=="undefined")
+        {
+           loadPoint = loadPointElement.top;
+        }
+     }
+     else
+     {
+        //var loadPoint = $('.footer-module .article-share:last').position().top; 
+        //var loadPoint = $('footer.recirc-block:last').position().top;	
+        var loadPoint = $('.article-header .article-share:last').position().top;
+        //var loadPoint = $('section.article-body:last').position().top;
+     }
+	
+		if  (loadPoint!=false && $(window).scrollTop() > loadPoint)
+		{ if($('.scrolltrace').length==count)
+		  { { loagAgn = true;
+		      if(loagAgn)
+			  {
+			count++;
+		 if (count < 6) {
+			 if(preventLoad_article==false){
+										loadArticle(count);//code
+				
+				}		
+		 }
+		 if (count==6) {
+			$('a.inifiniteLoader').hide();
+			$("#single_article_footer").show();
+		 }
+		 loagAgn = false;
+			  }
+		   }
+		  
+		  }
+		}
+		
+//		 if($(this).scrollTop() > 100){
+//            $('.goTop').stop().animate({
+//                bottom: '20px'    
+//                }, 500);
+//        }
+//        else{
+//            $('.goTop').stop().animate({
+//               bottom: '-100px'    
+//            }, 500);
+//        }
+	});
+	/*Script to handle Scroll close*/	
+	 
+//	$('.goTop').click(function() {
+//        $('html, body').stop().animate({
+//           scrollTop: 0
+//        }, 500, function() {
+//           $('.goTop').stop().animate({
+//               bottom: '-100px'    
+//           }, 500);
+//        });
+//    });
+	
+	 // Script for Comment Sec
+	 $('body').on('click','.click_comment',function(event){
+	   event.preventDefault();
+	   $(this).closest('.article-footer').find('.commentContainer').slideToggle('slow', function() {
+         if ($(this).css('display')=='none') {
+           check_comment = false;//condition added for print
+         }
+         else{
+            check_comment = true;//condition added for print
+         }			
+		});
+		 $('html, body').animate({
+				scrollTop: $($(this).closest('.article-footer').find('.commentContainer')).offset().top
+			},2000);
+	 });
+	 
+	var list;
+	$('body').on('click','a.comment-reply-link',function(event){
+	$( ".comment-status" ).remove();
+	var comment_link_respond = $(this);		
+	comment_link_respond.closest('.comment-form').find('.comment-status').html('');
+	list = $(this).closest('article').attr('id');
+
+	var PIDS = list.split('-');
+	$(this).closest('.comments-area').find('.comment-respond').find('#comment_parent').val(PIDS[PIDS.length-1]);
+	
+	});
+	
+	$('body').on('click','.cancel-comment-reply-link',function(event){
+	$( ".comment-status" ).remove();
+	list=null;
+	});
+	
+	
+	$('body').on('click','.submit',function(event){
+		event.preventDefault();
+		$( ".comment-status" ).remove();
+	var commentform=$(this).closest('.comment-form'); // find the comment  form
+	    commentform.prepend('<div class="comment-status" ></div>'); // add info panel before the form to provide feedback or errors
+        var statusdiv=commentform.find('.comment-status'); // define the infopanel
+				var checkspace = $(this).closest('.comment-form').find("textarea#comment").val();
+		if (checkspace.replace(/\s/g, '').length && $(this).closest('.comment-form').find("textarea#comment").val()!='') {
+			statusdiv.html(' ');
+			//serialize and store form data in a variable
+			var formdata=commentform.serialize();
+			//Add a status message
+			//Extract action URL from commentform
+			var formurl=commentform.attr('action');
+			
+				statusdiv.html('<p>Processing...</p>');
+				 $(this).attr('disabled','disabled');
+				var e = $(this);
+				$.ajax({
+						type: 'post',
+						url: formurl,
+						data: formdata,
+					  error: function(XMLHttpRequest, textStatus, errorThrown)
+						{
+							statusdiv.html(' ');
+							 $('.submit').removeAttr('disabled');
+							statusdiv.html('<p class="error_cmnt" >You might have left one of the fields blank, or be posting too quickly</p>');
+						},
+						success: function(data, textStatus){
+							var chkstatus_comment = $($.parseHTML(data)).filter(".chk_comment_class").attr('comment-status');
+							
+								if (chkstatus_comment=='spam') {
+									statusdiv.html('<p class="error_cmnt" >You have been blocked from commenting by <i>The Nation\'s</i> moderators.</p>');
+								}
+								else{
+									$('.submit').removeAttr('disabled'); 
+									$("textarea#comment").val('');
+									statusdiv.html('<p class="success_cmnt" ></p>');
+									if(e.closest(".comments-area").has("ol.comment-list").length > 0){
+										if(list != null){
+											e.closest(".comments-area").find('#'+list).after(data);
+										}
+										else{
+											e.closest(".comments-area").find('ol.comment-list').prepend(data);
+										}
+									}
+									else{
+										e.closest(".comments-area").prepend('<ol class="comment-list custom_comments"> </ol>');
+										e.closest(".comments-area").find('ol.comment-list').html(data);
+									}
+							}
+						}
+						
+				});
+				return false;
+			statusdiv.html('');
+		}else{
+			statusdiv.html('<p class="error_cmnt" >Please enter text in comment box.</p>');
+		}
+        }); 
+});
+// Print functionality
+function tn_print_fn()
+{            
+    var tn_current_url=window.location.href;
+    if (check_comment == true) {
+       window.open(tn_current_url+'?print=1&comment=1','_blank');
+    }
+    else{
+       window.open(tn_current_url+'?print=1','_blank');
+    }
+    
+    return false;
+}
+</script>
+ 
+<script>
+function add_action_tout_sailthru(post_id)
+{
+ var ajaxurl=ajax_object.ajax_url;
+	var sailthru_email_take_action = document.getElementById('take_action_sailthru_email_'+post_id).value;
+	if(sailthru_email_take_action!='')
+	{
+			var take_action_sailthru_list_final = document.getElementById('take_action_sailthru_list_final_'+post_id).value;
+			var action_tout_sailthru='action_tout_sailthru';
+			jQuery.ajax({
+			url:ajaxurl,
+			type:"POST",
+			data:"sailthru_email_take_action="+sailthru_email_take_action+"&take_action_sailthru_list_final="+take_action_sailthru_list_final+"&action="+action_tout_sailthru,
+			success:function(data){
+			//alert(data);
+			document.getElementById('action_tout_response_'+post_id).innerHTML=data;
+			document.getElementById('take_action_sailthru_email_'+post_id).value='';
+			}
+			});
+	}
+	else
+	{
+	var error_msg='<span style="color:#cc0e0e">Please Enter Email</span>';
+	document.getElementById('action_tout_response_'+post_id).innerHTML=error_msg;
+	}
+}
+</script>
+
+  <div id="show_light_box">
+</div>
+	</div>
+	</div>
+	<div id="single_article_footer" style="display: none">	<footer class="push">
+	<div class="row">
+	<div class="sitemap small-12 columns">
+		<div class="block home">
+			<h1 class="logo">
+					<a href="http://www.thenation.com"><img src="http://www.thenation.com/wp-content/uploads/2015/07/d-logo-header.png" alt="The Nation"></a>
+				</h1>
+		</div>
+		<div class="block social">
+			<h2>Follow The Nation</h2>
+			<ul>
+				<li><a class="fb" href="https://www.facebook.com/TheNationMagazine" target="_blank"></a></li>
+				<li><a class="tw" href="https://twitter.com/thenation" target="_blank"></a></li>
+				<li><a class="rs" href=" http://www.thenation.com/all-rss" target="_blank"></a></li>
+			</ul>
+			<h2>Get Email Updates</h2>
+			<p>Stay connected with everything Nation by signing up for our free daily newsletter. </p>
+			<div class="newsletter-signup">
+					<input type="email" class="newsletter-signup__email" id="newsletter_email" name="newsletter_email" required="required" placeholder="Email address">
+					<input type="button" id="newsletter_submit" value="" class="newsletter-signup__submit" />
+			</div>
+			
+			<div id="subscribe_newsletter"></div>
+		</div>
+		<div class="">
+			<aside id="nav_menu-5" class="widget widget_nav_menu block nation nav"><h2  class="expander"><a href="#">Sections</a></h2><div class="menu-footer-sections-container"><ul id="menu-footer-sections" class="menu"><li id="menu-item-119851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119851"><a href="http://www.thenation.com/politics/">Politics</a></li>
+<li id="menu-item-119852" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119852"><a href="http://www.thenation.com/world/">World</a></li>
+<li id="menu-item-119853" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119853"><a href="http://www.thenation.com/economy/">Economy</a></li>
+<li id="menu-item-119850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119850"><a href="http://www.thenation.com/culture/">Culture</a></li>
+<li id="menu-item-115792" class="menu-item menu-item-type-taxonomy menu-item-object-subject current-article-ancestor menu-item-115792"><a href="http://www.thenation.com/subject/society/">Society</a></li>
+<li id="menu-item-116577" class="menu-item menu-item-type-taxonomy menu-item-object-subject menu-item-116577"><a href="http://www.thenation.com/subject/environment/">Environment</a></li>
+<li id="menu-item-119854" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119854"><a href="http://www.thenation.com/take-action/">Take Action</a></li>
+</ul></div></aside>		</div>
+		<div class="">
+			   <aside id="nav_menu-4" class="widget widget_nav_menu block nation nav"><h2 class="expander"><a href="#">The Nation</a></h2><div class="menu-footer-the-nation-container"><ul id="menu-footer-the-nation" class="menu"><li id="menu-item-116578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116578"><a title="About-us-and-contact" href="http://www.thenation.com/about-us-and-contact/">About</a></li>
+<li id="menu-item-178918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178918"><a href="http://www.thenation.com/advertise/">Advertise</a></li>
+<li id="menu-item-180633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180633"><a href="http://www.thenation.com/ebooks/">Books</a></li>
+<li id="menu-item-116581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116581"><a href="http://www.thenation.com/community-guidelines/">Comments Policy</a></li>
+<li id="menu-item-131108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-131108"><a href="http://www.thenation.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-116583" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116583"><a href="http://www.thenation.com/help/">Help</a></li>
+<li id="menu-item-178899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178899"><a href="http://www.thenation.com/jobs/">Jobs and Internships</a></li>
+<li id="menu-item-134910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134910"><a href="http://www.thenation.com/nation-builders/">Nation Builders</a></li>
+<li id="menu-item-179840" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-179840"><a href="http://www.nationcruise.com/">Nation Cruise</a></li>
+</ul></div></aside>		</div>
+		<div class="">
+			  <aside id="nav_menu-3" class="widget widget_nav_menu block nation nav"><h2 class="expander"><a href="#">Magazine</a></h2><div class="menu-footer-magazine-container"><ul id="menu-footer-magazine" class="menu"><li id="menu-item-134664" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134664"><a href="http://www.thenation.com/issue/">Current Issue</a></li>
+<li id="menu-item-134728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134728"><a href="http://www.thenation.com/masthead/">Masthead</a></li>
+<li id="menu-item-116587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116587"><a href="http://www.thenation.com/archive/">Archive</a></li>
+<li id="menu-item-134846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134846"><a href="https://donate.thenation.com/responsive-pages/5_122014_hompage">Donate</a></li>
+<li id="menu-item-134847" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-134847"><a href="https://ssl.palmcoastd.com/06601/apps/ORDOPTION1LANDING?ikey=I**TOO">Subscribe</a></li>
+<li id="menu-item-134727" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134727"><a href="http://www.thenation.com/subscription-services/">Subscription Services</a></li>
+<li id="menu-item-134733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134733"><a href="http://www.thenation.com/events/">Events</a></li>
+<li id="menu-item-179839" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-179839"><a href="http://www.thenationreprints.com/">Reprints</a></li>
+</ul></div></div></aside>		</div>
+	</div>
+		<div class="copyright row">
+		<div class="small-12 columns">
+			<p>Copyright (c) 2016 The Nation Company LLC</p>
+		</div>
+	</div>
+	</footer>
+</div>
+
+
+    <script type="text/javascript">
+	var isProcessing = false; 
+    function alter_ul_post_values(obj,post_id,ul_type){
+	
+		if (isProcessing)    
+		return;  
+		isProcessing = true;   
+		
+		jQuery(obj).find("span").html("..");
+    	jQuery.ajax({
+   		type: "POST",
+   		url: "http://www.thenation.com/wp-content/plugins/like-dislike-counter-for-posts-pages-and-comments/ajax_counter.php",
+   		data: "post_id="+post_id+"&up_type="+ul_type,
+   		success: function(msg){
+     		jQuery(obj).find("span").html(msg);
+			isProcessing = false; 
+   			}
+ 		});
+	}
+	</script>
+    <script src='http://www.thenation.com/wp-content/plugins/tn-paywall/inc/js/paywall.js'></script><link rel='stylesheet' id='dashicons-css'  href='http://www.thenation.com/wp-includes/css/dashicons.min.css?ver=4.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='thickbox-css'  href='http://www.thenation.com/wp-includes/js/thickbox/thickbox.css?ver=4.2.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/suggest.min.js?ver=1.1-20110113'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/widget.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/button.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/spinner.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/effect.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/jquery/ui/effect-shake.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='//www.thenation.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.60'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.thenation.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=2.3.13'></script>
+<script type='text/javascript' src='//www.thenation.com/wp-content/plugins/woocommerce/assets/js/jquery-cookie/jquery.cookie.min.js?ver=1.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","fragment_name":"wc_fragments"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//www.thenation.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=2.3.13'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"http:\/\/www.thenation.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/Magzine_issue_ajax.js'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/light_box.js'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/javascripts/all.js'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/javascripts/modernizr.js'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/skip-link-focus-fix.js'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/comments_js.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/www.thenation.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.thenation.com/wp-includes/js/thickbox/thickbox.js?ver=3.1-20121105'></script>
+<script type='text/javascript' src='http://www.thenation.com/wp-content/themes/thenation/js/pcd_login_popup.js?ver=4.2.4'></script>
+<script type="text/javascript"  src="http://www.thenation.com/wp-content/themes/thenation/js/jquery.bxslider.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"442438c9d9","applicationID":"5436353","transactionName":"Z1JSYkYACEsAV0cKXV4YZURdTklRD1BWGxxAX0A=","queueTime":0,"applicationTime":735,"ttGuid":"","agentToken":"","atts":"SxVRFA4aG0U=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

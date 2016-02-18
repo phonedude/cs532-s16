@@ -1,0 +1,546 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js" lang="en-US" >
+	<head>
+		<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAQEWVdVGwcEVVFbAQA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:22,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1);t("loader").features.stn=!0,t(2),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:8,2:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,2:23,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:23,2:22,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:23,2:22,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:23,2:22,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:23,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],12:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","trackUserAction","finished","traceEvent","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:21,2:22,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.licenseKey&&t.applicationID&&f&&f.body){s(h,function(e,n){e in t||(t[e]=n)}),l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=l.proto+t.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u="addEventListener",d="attachEvent",p=(""+location).split("?")[0],h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-536.min.js"},l=e.exports={offset:i(),origin:p,features:{}};f[u]?(f[u]("DOMContentLoaded",o,!1),c[u]("load",n,!1)):(f[d]("onreadystatechange",r),c[d]("onload",n)),a("mark",["firstbyte",i()])},{1:21,2:12,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],21:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],22:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],23:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:22,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>  Dear New York Times: The Real Reason Young Feminists Reject Hillary</title>
+		
+		<link rel="stylesheet" href="http://assets.feministing.com/wp-content/themes/feministing2014/css/app.css" />
+		
+		<link rel="icon" href="http://assets.feministing.com/wp-content/themes/feministing2014/assets/img/icons/favicon.ico" type="image/x-icon">
+
+		
+			<meta property="og:site_name" content="Feministing" />
+			<meta property="og:url" content="http://feministing.com/2015/12/17/dear-new-york-times-the-real-reason-young-feminists-reject-hillary/" />
+			<meta property="og:description" content="On Sunday, the world got its latest in a tired stream of “feminist generation war” think pieces, courtesy of The New York Times. The subject: Hillary Clinton’s presidential bid.
+In it, authors Amy Chozick and Yamiche Alcindor explore what they term the “generational divide” on the subject of Clinton’s candidacy. They ..." />
+			<meta property="og:type" content="article" />
+			<meta property="og:image" content="http://assets.feministing.com/wp-content/uploads/2015/12/467396782.jpg" />
+				
+		<script type="text/javascript">
+		
+		var googletag = googletag || {}; googletag.cmd = googletag.cmd || []; (function() { var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js'; var node = document.getElementsByTagName('script')[0]; node.parentNode.insertBefore(gads, node); })();
+		
+		googletag.cmd.push(function() {
+
+		   // Declare any slots initially present on the page
+			googletag.defineSlot('/1010624/Feministing-300-afterfirstpost', [300, 250], 'div-gpt-ad-1414104296310-0').
+			       addService(googletag.pubads());
+			googletag.defineSlot('/1010624/Feministing-300-abovecomments', [300, 250], 'div-gpt-ad-1414104296310-1').
+			       addService(googletag.pubads());
+			googletag.defineSlot('/1010624/Feministing-160', [160, 600], 'div-gpt-ad-1414104296310-2').
+			       addService(googletag.pubads());
+			googletag.defineSlot('/1010624/Feministing-300-topsidebar', [[300, 250], [300, 600]], 'div-gpt-ad-1414104296310-3').
+			       addService(googletag.pubads());
+			googletag.defineSlot('/1010624/Feministing-728', [[728, 90], [970, 90], [970, 250]], 'div-gpt-ad-1414104296310-4').
+			       addService(googletag.pubads());
+			googletag.defineSlot('/1010624/Feministing-320', [320, 50], 'div-gpt-ad-1414104296310-5').
+			       addService(googletag.pubads());
+
+		   // Infinite scroll requires SRA
+		   //googletag.pubads().enableSingleRequest();
+
+		   // Disable initial load, we will use refresh() to fetch ads.
+		   // Calling this function means that display() calls just
+		   // register the slot as ready, but do not fetch ads for it.
+		   //googletag.pubads().disableInitialLoad();
+
+		   // Enable services
+		   googletag.enableServices();
+		
+
+		 });
+		
+		window.gtIndex = 6;
+		
+		</script>
+		
+				<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/feministing.com\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<script type='text/javascript' src='http://assets.feministing.com/wp-content/themes/feministing2014/js/modernizr/modernizr.min.js'></script>
+<script type='text/javascript' src='http://assets.feministing.com/wp-content/themes/feministing2014/js/jquery/dist/jquery.min.js'></script>
+<script type='text/javascript' src='//s7.addthis.com/js/300/addthis_widget.js?#pubid=ra-540f34e469e23fb8'></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-1284206-1', 'auto');
+			ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body class="single single-post postid-115007 single-format-standard">
+		
+	<div class="off-canvas-wrap" data-offcanvas>
+	<div class="inner-wrap">
+	
+		
+	<nav class="tab-bar show-for-small-only">
+		<div class="menuScreen"></div>
+		<section class="left-small">
+			<a class="menu-icon overlayIcon" ><span></span></a>
+		</section>
+		<section class="middle tab-bar-section">
+			
+			<h1 class="title"><a href="/"><span class="icon-feministing"></span><span class="text">Feministing</span></a></h1>
+
+		</section>
+	</nav>
+
+	<aside class="overlayMenu">
+    <ul id="menu-offcanvas" class="off-canvas-list"><li class="divider"></li><li id="menu-item-95846" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-95846"><a href="http://feministing.com/">Home</a></li>
+<li class="divider"></li><li id="menu-item-95870" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95870"><a href="https://feministing.nationbuilder.com/donate">Support Us</a></li>
+<li class="divider"></li><li id="menu-item-95879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95879"><a target="_blank" href="http://www.cafepress.com/feministingstore">Our Store</a></li>
+<li class="divider"></li><li id="menu-item-95845" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95845"><a href="http://feministing.com/about/">About</a></li>
+<li class="divider"></li><li id="menu-item-95880" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95880"><a href="http://feministing.com/frequently-asked-questions/">FAQs</a></li>
+<li class="divider"></li><li id="menu-item-95878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95878"><a href="http://feministing.com/speaking-tour/">Speaking Tour</a></li>
+<li class="divider"></li><li id="menu-item-95843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95843"><a href="http://feministing.com/community/">Community</a></li>
+</ul>	<form role="search" method="get" class="searchform" action="http://feministing.com/">
+			<span class="icon-search"></span><h3 class="text-search">Search</h3><input type="text" value="" name="s" id="s" placeholder="Search Feministing For..."><button type="submit"><span class="icon-search"></span><span class="text-search">Search</span></button>
+		</form>
+	<div class="donate">
+		<h3>We need your help!</h3>
+		<p>Feministing is a labor of love and all our staff has other full-time jobs to support their work on the site. Your donation is much appreciated, and much needed.</p>
+		<a href="https://www.paypal.com/xclick/business=contact%40feministing.com" target="_blank">Donate Now</a>
+	</div>
+	
+	<div class="newsletter">
+	<h3>Get Our Newsletter</h3>
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+	<form action="//feministing.us1.list-manage.com/subscribe/post?u=8d175dfb587dd4fa766ba335c&amp;id=eff265c2ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+	<div class="mc-field-group">
+		<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email address"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Sign Up</button>
+	</div>
+		<div id="mce-responses" class="clear">
+			<div class="response" id="mce-error-response" style="display:none"></div>
+			<div class="response" id="mce-success-response" style="display:none"></div>
+		</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+	    <div style="position: absolute; left: -5000px;"><input type="text" name="b_8d175dfb587dd4fa766ba335c_eff265c2ad" tabindex="-1" value=""></div>
+	    <div class="clear"></div>
+	</form>
+	</div>
+	<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='address';fnames[4]='MMERGE4';ftypes[4]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+	<!--End mc_embed_signup-->
+	
+	<div class="social">
+		<a href="https://twitter.com/feministing" target="_blank"><span class="icon-twitter"></span><span class="text">Twitter</span></a>
+		<a href="http://www.facebook.com/feministing" target="_blank"><span class="icon-facebook"></span><span class="text">Facebook</span></a>
+		<a href="https://plus.google.com/u/0/107556203472527482219" target="_blank"><span class="icon-gplus"></span><span class="text">Google+</span></a>
+		<a href="mailto:info@feministing.com" target="_blank"><span class="icon-mail"></span><span class="text">Email</span></a>
+		<a href="http://feministing.com/feed/" target="_blank"><span class="icon-rss"></span><span class="text">RSS</span></a>
+	</div>
+	
+	<div class="copyright">&copy; 2016 Feministing</div>
+</aside>
+	<div class="top-bar-container contain-to-grid show-for-medium-up medium-12">
+    <nav class="top-bar littleBar" data-topbar="">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="http://feministing.com"><span class="icon-feministing"></span><span class="text">Feministing</span></a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+			<form role="search" method="get" class="searchform" action="http://feministing.com/">
+			<span class="icon-search"></span><h3 class="text-search">Search</h3><input type="text" value="" name="s" id="s" placeholder="Search Feministing For..."><button type="submit"><span class="icon-search"></span><span class="text-search">Search</span></button>
+		</form>
+            <ul id="menu-mainmenu-dropdown" class="top-bar-menu"><li id="menu-item-95875" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95875"><a target="_blank" href="https://feministing.nationbuilder.com/donate">Support Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-95877" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95877"><a href="https://feministing.nationbuilder.com/donate">Support Feministing</a></li>
+	<li id="menu-item-95848" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95848"><a target="_blank" href="http://www.cafepress.com/feministingstore">Our Store</a></li>
+</ul>
+</li>
+<li id="menu-item-95869" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-95869"><a href="http://feministing.com/about/">About</a>
+<ul class="sub-menu">
+	<li id="menu-item-95876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95876"><a href="http://feministing.com/about/">About Feministing</a></li>
+	<li id="menu-item-95863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95863"><a href="http://feministing.com/frequently-asked-questions/">FAQs</a></li>
+	<li id="menu-item-95851" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95851"><a href="http://feministing.com/speaking-tour/">Speaking Tour</a></li>
+</ul>
+</li>
+<li id="menu-item-95840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95840"><a href="http://feministing.com/community/">Community</a></li>
+</ul>        </section>
+    </nav>
+	<nav class="top-bar bigBar">
+		<ul class="title-area">
+            <li class="name">
+                <h1><a href="http://feministing.com"><span class="icon-feministing"></span><span class="text">Feministing</span></a></h1>
+            </li>
+        </ul>
+	</nav>
+</div>
+<section class="container" role="document">
+	<div class="row">
+	<div class="small-12 medium-9 columns mainBody" role="main">
+
+	
+			<article class="post-115007 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-election tag-feminism tag-generation-wars tag-generational-divide tag-hillary-clinton tag-young-feminists tag-young-women" id="post-115007">
+							<div class="adHolder top">
+					<div class="ad show-for-medium-up"><div id='div-gpt-ad-1414104296310-4'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1414104296310-4'); }); </script> </div></div>
+					<div class="ad show-for-small-only"><div id='div-gpt-ad-1414104296310-5'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1414104296310-5'); }); </script> </div></div>
+				</div>
+						<header>
+				<div class="featImg">
+											<img width="830" height="553" src="http://assets.feministing.com/wp-content/uploads/2015/12/467396782.jpg" class="attachment-post-thumbnail wp-post-image" alt="WASHINGTON, DC - MARCH 23:  Former Secretary of State Hillary Clinton participates in a roundtable discussion on expanding opportunities in Americas urban areas, at the Center for American Progress,with Lee Saunders at left, in Washington DC Monday March 23,  2015. (Photo by Melina Mara/The Washington Post via Getty Images)" />										<div class="overlay"></div>
+				</div>
+				<div class="meta"><img alt='' src='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=135&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=270&amp;d=mm&amp;r=g 2x' class='avatar visible-for-medium-up avatar-135 photo' height='135' width='135' /><img alt='' src='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=65&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=130&amp;d=mm&amp;r=g 2x' class='avatar visible-for-small-only avatar-65 photo' height='65' width='65' /><span class="byline">By <a href="#preComment">Dana Bolger</a> &bull; <a href="http://www.twitter.com/danabolger" target="_blank">@danabolger</a> &bull; 1 month ago</span><time class="updated" datetime="2015-12-17T12:00:47+00:00"></time></div>				<h1><a href="http://feministing.com/2015/12/17/dear-new-york-times-the-real-reason-young-feminists-reject-hillary/">Dear New York Times: The Real Reason Young Feminists Reject Hillary</a></h1>
+			</header>
+			
+						<div class="entry-content">
+				<p>On Sunday, the world got its latest in a tired stream of “feminist generation war” think pieces, courtesy of <a href="http://www.nytimes.com/2015/12/13/us/politics/moms-and-daughters-debate-gender-factor-in-hillary-clintons-bid.html" target="_blank"><i><span style="font-weight: 400;">The New York Times</span></i></a>. The subject: Hillary Clinton’s presidential bid.<span id="more-115007"></span></p>
+<p>In it, authors Amy Chozick and Yamiche Alcindor explore what they term the “generational divide” on the subject of Clinton’s candidacy. They interview older women who “get” sexism (“I fought this whole war, and now we’re running out of time, and if not Hillary, then who would it be?”) and younger women who don’t. They select quotes from the younger women that portray them as ditzy (“I want to see someone who, <i>like</i>, has the fervor to fight”) and post-sexism (“If I am supporting her because she is a woman, that’s equally as bad as not supporting her because of her gender”). The (older) women “experts”— who the authors identify by their titles rather than their age — are unanimous in their condemnation of the younger generation’s supposed inexperience, apoliticism, and indolence: “They haven’t experienced the kind of barriers that their mothers and grandmothers did — the kind of exclusions from areas of accomplishment,” one claims. “The younger generation just thinks the pipeline will magically fill up with women who are qualified enough to run for president.” They just haven’t “engage[d]” enough, or “pa[id] [enough] attention.”</p>
+<p>Young women’s ambivalence about Clinton, the authors sum up, is “maddening.”</p>
+<p>What the piece elides is that, for many young women, their rejection of Clinton <em>is</em> informed and deeply political. Many of them have suffered violence, discrimination, and rampant unemployment. They have drawn upon their feminist commitments, alongside their lived experience, to evaluate and reject Clinton’s hawkish foreign policy, <a href="http://www.solidarity-us.org/node/4390" target="_blank">her expansion of drone warfare</a>, <a href="http://www.salon.com/2015/10/15/the_worst_thing_hillary_clinton_has_ever_done/" target="_blank">gutting of welfare</a>, (continuing) <a href="http://feministing.com/2015/12/09/to-folks-who-finally-care-about-trump/" target="_blank">defense of a burgeoning surveillance state</a>, and more — all of which have hurt women in the U.S. and abroad.</p>
+<p>By framing young women as hopelessly uninformed and apolitical — in contrast to their (fore)mothers — the piece obscures real debate and disagreement <em>within</em> generations. It’s a tired trope, one that erases the voices of young women who have decided to demand more of their candidate than that she identify as a woman. And that&#8217;s perhaps the most rigorous engagement of all.</p>
+<p><em>Image <a href="http://www.msnbc.com/msnbc/google-hillary-clinton-2016-answers-most-googled-questions" target="_blank">via</a>.</em></p>
+
+				
+			</div>
+
+							<div class="adHolder centered">
+					<div class="ad"><div id="div-gpt-ad-1414104296310-1" style="width:300px; height:250px;"> <script type="text/javascript"> googletag.cmd.push(function() { googletag.display("div-gpt-ad-1414104296310-1"); }); </script> </div></div>
+				</div>
+						<div class="preComment row">
+				<div class="author column">
+					<div class="left column small-12 medium-6">
+						<div class="avHolder">
+							<a name="preComment"></a>
+							<img alt='' src='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=142&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=284&amp;d=mm&amp;r=g 2x' class='avatar avatar-142 photo' height='142' width='142' />							<div class="bkFade"></div>
+						</div>
+						<h3><a href="http://feministing.com/author/danabolger/" rel="author">Dana Bolger</a></h3>
+						<h4>Washington, DC</h4>
+						<p class="show-for-small-only">Dana Bolger is an editor at Feministing.com and Executive Director of Know Your IX, a national survivor- and youth-led organization working to end gender violence in schools. She's testified before Congress on Title IX policy and legislative reform, and her writing has appeared in a number of outlets, including The New York Times, MSNBC, Al Jazeera America, USA Today, and The Nation. You can find her on Twitter at @danabolger.</p>
+						<p class="show-for-medium-up">Dana Bolger is Executive Director of <ahref="http://knowyourix.org/" target="_blank">Know Your IX</a> and columnist at Feministing.com</p>
+						<a href="http://feministing.com/author/danabolger/" class="readMore">Read more about Dana</a>
+					</div>
+					<div class="right small-12 medium-6">
+						<div class="socialLinks">
+							<a href="http://www.twitter.com/danabolger" class="twitter" target="_blank"><span class="icon-twitter"></span>Dana Bolger</a>														<a href="/contact-an-author/?author=danabolger" class="mail"><span class="icon-mail"></span>Dana Bolger</a>
+						</div>
+					</div>
+				</div>
+				<div class="column">
+								<div class="textwidget"><div class="donate"><h3>We need your help!</h3> <p>Feministing is a labor of love and all our staff have other full-time jobs to support their work on the site. Your donation is much appreciated, and much needed.</p><a href="https://feministing.nationbuilder.com/donate" target="_blank">Donate Now</a></div></div>
+						</div>
+			</div>
+			
+						<div id="comments">
+				<h3>Join the Conversation</h3>
+				<div class="inner">
+					
+<div id="disqus_thread">
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://feministing.com/2015/12/17/dear-new-york-times-the-real-reason-young-feminists-reject-hillary/';
+    var disqus_identifier = '115007 http://feministing.com/?p=115007';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'feministing';
+    var disqus_title = "Dear New York Times: The Real Reason Young Feminists Reject Hillary";
+    var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /* Add the ability to add javascript callbacks */
+        
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/feministing.com\/2015\/12\/17\/dear-new-york-times-the-real-reason-young-feminists-reject-hillary\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/' + 'embed' + '.js' + '?pname=wordpress&pver=2.77';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+				</div>
+			</div>
+						
+			<footer>
+				<div class="related-posts">
+					<h3>Related Content</h3>
+					<div id="related-posts-by-tag">
+	
+	<ul class="show-for-medium-up">
+		
+			<li><h4><a href="http://feministing.com/2016/02/04/the-feminists-not-invited-to-the-hillary-party/" title="The feminists not invited to the Hillary party">The feminists not invited to the Hillary party</a></h4><p><img alt='' src='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=40&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Mahroh Jahangiri</p></li>
+
+		
+			<li><h4><a href="http://feministing.com/2016/01/12/daily-feminist-cheat-shee/" title="Daily Feminist Cheat Sheet">Daily Feminist Cheat Sheet</a></h4><p><img alt='' src='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Alexandra Brodsky</p></li>
+
+		
+			<li><h4><a href="http://feministing.com/2015/12/23/daily-feminist-cheat-sheet-723/" title="Daily Feminist Cheat Sheet">Daily Feminist Cheat Sheet</a></h4><p><img alt='' src='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Sesali B.</p></li>
+
+			</ul>
+
+	<div class="show-for-small-only">
+		<article id="post-116534" class="new medium-6 post-116534 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized tag-elections tag-hillary-clinton tag-iraq tag-white-feminism">
+	<header>
+		<div class="featImg">
+							<img width="595" height="459" src="http://assets.feministing.com/wp-content/uploads/2016/02/hillary-clinton-amy-poehler-e1454613657228.png" class="attachment-post-thumbnail wp-post-image" alt="Hillary Clinton and Amy Poehler stand with two white TV actresses." />						<a href="http://feministing.com/2016/02/04/the-feminists-not-invited-to-the-hillary-party/"><div class="overlay"></div></a>
+		</div>
+		<div class="meta"><img alt='' src='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=96&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=192&amp;d=mm&amp;r=g 2x' class='avatar visible-for-medium-up avatar-96 photo' height='96' width='96' /><img alt='' src='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=65&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=130&amp;d=mm&amp;r=g 2x' class='avatar visible-for-small-only avatar-65 photo' height='65' width='65' /><span class="byline">By <a href="#preComment">Mahroh Jahangiri</a> &bull; <a href="http://www.twitter.com/mahrohj" target="_blank">@mahrohj</a> &bull; 1 week ago</span><time class="updated" datetime="2016-02-04T14:30:03+00:00"></time></div>		<h2><a href="http://feministing.com/2016/02/04/the-feminists-not-invited-to-the-hillary-party/">The feminists not invited to the Hillary party</a></h2>
+	</header>
+	<div class="entry-content">
+		<div class="show-for-medium-up"><p>A few different articles and sentiments have been making the rounds on my newsfeed this week about how we must acknowledge the role Hillary Clinton&#8217;s gender has played in shaping her corporate politics.</p>
+</div>
+		<div class="show-for-small-only"><p>A few different articles and sentiments have been making the rounds on my newsfeed this week about how we must acknowledge the role Hillary Clinton&#8217;s gender has played in shaping her corporate politics.</p>
+</div>
+	</div>
+	<footer>
+		<a href="http://feministing.com/2016/02/04/the-feminists-not-invited-to-the-hillary-party/" class="readMore">Read More</a>
+	</footer>
+</article>
+<article id="post-115702" class="new medium-6 post-115702 post type-post status-publish format-standard hentry category-uncategorized tag-abortion tag-hillary-clinton tag-hillary-rodham-clinton tag-language tag-law-law-law tag-scotus tag-young-feminists">
+	<header>
+		<div class="featImg">
+							<img src="http://assets.feministing.com/wp-content/themes/feministing2014/assets/img/featImg.jpg" />
+						<a href="http://feministing.com/2016/01/12/daily-feminist-cheat-shee/"><div class="overlay"></div></a>
+		</div>
+		<div class="meta"><img alt='' src='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=96&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=192&amp;d=mm&amp;r=g 2x' class='avatar visible-for-medium-up avatar-96 photo' height='96' width='96' /><img alt='' src='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=65&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=130&amp;d=mm&amp;r=g 2x' class='avatar visible-for-small-only avatar-65 photo' height='65' width='65' /><span class="byline">By <a href="#preComment">Alexandra Brodsky</a> &bull; <a href="http://www.twitter.com/azbrodsky" target="_blank">@azbrodsky</a> &bull; 1 month ago</span><time class="updated" datetime="2016-01-12T17:00:22+00:00"></time></div>		<h2><a href="http://feministing.com/2016/01/12/daily-feminist-cheat-shee/">Daily Feminist Cheat Sheet</a></h2>
+	</header>
+	<div class="entry-content">
+		<div class="show-for-medium-up"><p>Queer and lesbian <a href="http://www.autostraddle.com/babelfish-an-investigation-into-queer-lesbian-slang-around-the-world-323660/" target="_blank">slang</a> around the world.</p>
+<p>Hillary Clinton called for the <a href="http://www.c-span.org/video/?c4572858/hillary-clinton-calls-ending-hyde-amendment" target="_blank">repeal of the Hyde Amendment</a>.</p>
+</div>
+		<div class="show-for-small-only"><p>Queer and lesbian <a href="http://www.autostraddle.com/babelfish-an-investigation-into-queer-lesbian-slang-around-the-world-323660/" target="_blank">slang</a> around the world.</p>
+<p>Hillary Clinton called for the <a href="http://www.c-span.org/video/?c4572858/hillary-clinton-calls-ending-hyde-amendment" target="_blank">repeal of the Hyde Amendment</a>.</p>
+</div>
+	</div>
+	<footer>
+		<a href="http://feministing.com/2016/01/12/daily-feminist-cheat-shee/" class="readMore">Read More</a>
+	</footer>
+</article>
+<article id="post-115218" class="new medium-6 post-115218 post type-post status-publish format-standard hentry category-uncategorized tag-child-care tag-daily-feminist-cheat-sheet tag-dating tag-donald-trump tag-hillary-clinton tag-muslims tag-relationships tag-single-black-women">
+	<header>
+		<div class="featImg">
+							<img src="http://assets.feministing.com/wp-content/themes/feministing2014/assets/img/featImg.jpg" />
+						<a href="http://feministing.com/2015/12/23/daily-feminist-cheat-sheet-723/"><div class="overlay"></div></a>
+		</div>
+		<div class="meta"><img alt='' src='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=96&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=192&amp;d=mm&amp;r=g 2x' class='avatar visible-for-medium-up avatar-96 photo' height='96' width='96' /><img alt='' src='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=65&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=130&amp;d=mm&amp;r=g 2x' class='avatar visible-for-small-only avatar-65 photo' height='65' width='65' /><span class="byline">By <a href="#preComment">Sesali B.</a> &bull; <a href="http://www.twitter.com/BadFatBlackGirl" target="_blank">@BadFatBlackGirl</a> &bull; 1 month ago</span><time class="updated" datetime="2015-12-23T17:00:54+00:00"></time></div>		<h2><a href="http://feministing.com/2015/12/23/daily-feminist-cheat-sheet-723/">Daily Feminist Cheat Sheet</a></h2>
+	</header>
+	<div class="entry-content">
+		<div class="show-for-medium-up"><p>The FDA has officially ruled that gay and bisexual men can donate blood&#8230; <a href="http://www.advocate.com/health/2015/12/21/fda-formalizes-one-year-abstinence-update-gay-blood-ban" target="_blank">if they abstain from sex with another man for a year</a>.</p>
+</div>
+		<div class="show-for-small-only"><p>The FDA has officially ruled that gay and bisexual men can donate blood&#8230; <a href="http://www.advocate.com/health/2015/12/21/fda-formalizes-one-year-abstinence-update-gay-blood-ban" target="_blank">if they abstain from sex with another man for a year</a>.</p>
+</div>
+	</div>
+	<footer>
+		<a href="http://feministing.com/2015/12/23/daily-feminist-cheat-sheet-723/" class="readMore">Read More</a>
+	</footer>
+</article>
+	</div>
+		</div>				</div>
+								<div class="tags"><a href="http://feministing.com/tag/election/" rel="tag">Election</a><span class="div">&#9642;</span><a href="http://feministing.com/tag/feminism/" rel="tag">Feminism</a><span class="div">&#9642;</span><a href="http://feministing.com/tag/generation-wars/" rel="tag">generation wars</a><span class="div">&#9642;</span><a href="http://feministing.com/tag/generational-divide/" rel="tag">generational divide</a><span class="div">&#9642;</span><a href="http://feministing.com/tag/hillary-clinton/" rel="tag">Hillary Clinton</a><span class="div">&#9642;</span><a href="http://feministing.com/tag/young-feminists/" rel="tag">young feminists</a><span class="div">&#9642;</span><a href="http://feministing.com/tag/young-women/" rel="tag">young women</a></div>
+			</footer>
+		</article>
+		
+	<!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+	
+	</div>
+	<aside id="sidebar" class="small-12 medium-3 columns">
+		<div class="social">
+		<a href="https://twitter.com/feministing" target="_blank"><span class="icon-twitter"></span><span class="text">Twitter</span></a>
+		<a href="http://www.facebook.com/feministing" target="_blank"><span class="icon-facebook"></span><span class="text">Facebook</span></a>
+		<a href="https://plus.google.com/u/0/107556203472527482219" target="_blank"><span class="icon-gplus"></span><span class="text">Google+</span></a>
+		<a href="/contact-us"><span class="icon-mail"></span><span class="text">Email</span></a>
+		<a href="http://feministing.com/feed/" target="_blank"><span class="icon-rss"></span><span class="text">RSS</span></a>
+	</div>
+
+	<article id="nav_menu-3" class="row widget widget_nav_menu"><div class="small-12 columns"><div class="menu-mainmenu-dropdown-container"><ul id="menu-mainmenu-dropdown-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95875"><a target="_blank" href="https://feministing.nationbuilder.com/donate">Support Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95877"><a href="https://feministing.nationbuilder.com/donate">Support Feministing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95848"><a target="_blank" href="http://www.cafepress.com/feministingstore">Our Store</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-95869"><a href="http://feministing.com/about/">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95876"><a href="http://feministing.com/about/">About Feministing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95863"><a href="http://feministing.com/frequently-asked-questions/">FAQs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95851"><a href="http://feministing.com/speaking-tour/">Speaking Tour</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95840"><a href="http://feministing.com/community/">Community</a></li>
+</ul></div></div></article><article id="search-3" class="row widget widget_search"><div class="small-12 columns"><form role="search" method="get" class="searchform" action="http://feministing.com/">
+			<span class="icon-search"></span><h3 class="text-search">Search</h3><input type="text" value="" name="s" id="s" placeholder="Search Feministing For..."><button type="submit"><span class="icon-search"></span><span class="text-search">Search</span></button>
+		</form>
+</div></article><article id="text-23" class="row widget widget_text"><div class="small-12 columns">			<div class="textwidget"><div class="advertHolder"><div id='div-gpt-ad-1414104296310-3'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1414104296310-3'); }); </script> </div></div></div>
+		</div></article><article id="text-24" class="row widget widget_text"><div class="small-12 columns">			<div class="textwidget"><div class="donate"><h3>We need your help!</h3> <p>Feministing is a labor of love and all our staff have other full-time jobs to support their work on the site. Your donation is much appreciated, and much needed.</p><a href="https://feministing.nationbuilder.com/donate" target="_blank">Donate Now</a></div></div>
+		</div></article><article id="text-25" class="row widget widget_text"><div class="small-12 columns">			<div class="textwidget"><div class="newsletter">
+<h3>Get Our Newsletter</h3>
+<p>New posts and Feministing news delivered to your inbox weekly!</p>
+<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="//feministing.us1.list-manage.com/subscribe/post?u=8d175dfb587dd4fa766ba335c&amp;id=eff265c2ad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	
+<div class="mc-field-group">
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Your email address"><button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">Sign Up</button>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_8d175dfb587dd4fa766ba335c_eff265c2ad" tabindex="-1" value=""></div>
+    <div class="clear"></div>
+</form>
+</div>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='address';fnames[4]='MMERGE4';ftypes[4]='address';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup--></div>
+		</div></article><article id="text-28" class="row widget widget_text"><div class="small-12 columns">			<div class="textwidget"><div class="donate"><h3>Want to write for us?</h3> <p>All Feministing posts are written by the site’s collective of regular columnists and editors. Though we don’t currently accept guest submissions, we have an open platform Community site to which anyone can contribute. We often promote our favorite Community posts on the main site. And Community bloggers who consistently impress us may to be invited to become regular Feministing columnists..</p><a href="http://feministing.com/community/" target="_blank">Our Community Site</a></div></div>
+		</div></article><article id="editors-picks-2" class="row widget widget_editors-picks"><div class="small-12 columns">		<div class="editorsPicks">
+			<h3>Editors' Picks</h3>
+			<ul>
+									<li><a href="http://feministing.com/2016/02/12/icymi-reproductive-justice-groups-forge-alliance-with-black-lives-matter/">ICYMI: Reproductive Justice Groups Forge Alliance with Black Lives Matter</a><br />
+							<div class="byline"><img alt='' src='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Sesali B.</div>						</li>
+											<li><a href="http://feministing.com/2016/02/09/quote-of-the-day-samantha-bee-reveals-secret-to-creating-a-diverse-staff/">Quote of the Day: Samantha Bee Reveals Secret to Creating a Diverse Staff</a><br />
+							<div class="byline"><img alt='' src='http://0.gravatar.com/avatar/c43b5904f8adb9c78b0924bb512b921a?s=40&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c43b5904f8adb9c78b0924bb512b921a?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Maya Dusenbery</div>						</li>
+											<li><a href="http://feministing.com/2016/02/03/at-least-48-transgender-women-killed-in-brazil-in-january/">At least 48 transgender women killed in Brazil in January</a><br />
+							<div class="byline"><img alt='' src='http://2.gravatar.com/avatar/b94859ed91c1c92f6339d4d76568986f?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b94859ed91c1c92f6339d4d76568986f?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Juliana Britto Schwartz</div>						</li>
+											<li><a href="http://feministing.com/2016/02/02/here-lies-the-abyss-xenophobia-and-gender-after-the-cologne-assaults/">Here Lies the Abyss: Xenophobia and Gender After the Cologne Assaults</a><br />
+							<div class="byline"><img alt='' src='http://0.gravatar.com/avatar/9235b405c34b712315e921d35a9901a2?s=40&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9235b405c34b712315e921d35a9901a2?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Katherine Cross</div>						</li>
+											<li><a href="http://feministing.com/2016/02/01/on-reclaiming-and-revisiting-my-masculinity/">On reclaiming and revisiting my masculinity</a><br />
+							<div class="byline"><img alt='' src='http://1.gravatar.com/avatar/ab13792698bc8cecf57c21e8ed2c7a04?s=40&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/ab13792698bc8cecf57c21e8ed2c7a04?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' />By Katie Barnes</div>						</li>
+								</ul>
+		</div>
+		</div></article><article id="text-26" class="row widget widget_text"><div class="small-12 columns">			<div class="textwidget"><div class="advertHolder"><div id='div-gpt-ad-1414104296310-2' style='width:160px; height:600px;'> <script type='text/javascript'> googletag.cmd.push(function() { googletag.display('div-gpt-ad-1414104296310-2'); }); </script> </div></div></div>
+		</div></article><article id="meet-the-crew-2" class="row widget widget_meet-the-crew"><div class="small-12 columns">		<div class="theCrew">
+			<h3>Meet the Crew</h3>
+			<ul>
+				<li><a href="http://feministing.com/author/lori/" class="avHolder"><img alt='Lori Adelman' src='http://1.gravatar.com/avatar/45b75e9bc05d03e66e3bbf75bc6a8ec8?s=40&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/45b75e9bc05d03e66e3bbf75bc6a8ec8?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/lori/">Lori Adelman</a><br /><em>Executive Director, Partnerships</em></li><li><a href="http://feministing.com/author/maya/" class="avHolder"><img alt='Maya Dusenbery' src='http://0.gravatar.com/avatar/c43b5904f8adb9c78b0924bb512b921a?s=40&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c43b5904f8adb9c78b0924bb512b921a?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/maya/">Maya Dusenbery</a><br /><em>Executive Director, Editorial</em></li><li><a href="http://feministing.com/author/jos/" class="avHolder"><img alt='Jos Truitt' src='http://2.gravatar.com/avatar/5507c6e729107430a181eddb7bccc629?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5507c6e729107430a181eddb7bccc629?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/jos/">Jos Truitt</a><br /><em>Executive Director, Development</em></li><li><a href="http://feministing.com/author/azbrodsky/" class="avHolder"><img alt='Alexandra Brodsky' src='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ebd3d44dd3e71c03592e84e3cf3cb049?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/azbrodsky/">Alexandra Brodsky</a><br /><em>Senior Editor</em></li><li><a href="http://feministing.com/author/julianabritto/" class="avHolder"><img alt='Juliana Britto Schwartz' src='http://2.gravatar.com/avatar/b94859ed91c1c92f6339d4d76568986f?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b94859ed91c1c92f6339d4d76568986f?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/julianabritto/">Juliana Britto Schwartz</a><br /><em>Editor</em></li><li><a href="http://feministing.com/author/danabolger/" class="avHolder"><img alt='Dana Bolger' src='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=40&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/ce3a7da30a6440fc57432c1854d8fa7c?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/danabolger/">Dana Bolger</a><br /><em>Editor</em></li><li><a href="http://feministing.com/author/sesali/" class="avHolder"><img alt='Sesali B.' src='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/504c39d8ba00c7508e8d8aa4193c049a?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/sesali/">Sesali B.</a><br /><em>Editor</em></li><li><a href="http://feministing.com/author/katie-barnes/" class="avHolder"><img alt='Katie Barnes' src='http://1.gravatar.com/avatar/ab13792698bc8cecf57c21e8ed2c7a04?s=40&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/ab13792698bc8cecf57c21e8ed2c7a04?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/katie-barnes/">Katie Barnes</a><br /><em>Columnist</em></li><li><a href="http://feministing.com/author/vbayetti/" class="avHolder"><img alt='Verónica Bayetti Flores' src='http://1.gravatar.com/avatar/74317eb52bdb8b06210d643aad92afd2?s=40&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/74317eb52bdb8b06210d643aad92afd2?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/vbayetti/">Verónica Bayetti Flores</a><br /><em>Columnist</em></li><li><a href="http://feministing.com/author/reinagattuso/" class="avHolder"><img alt='Reina Gattuso' src='http://2.gravatar.com/avatar/b89fec23a33d0f2fd2deb74d3c8e91d8?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b89fec23a33d0f2fd2deb74d3c8e91d8?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/reinagattuso/">Reina Gattuso</a><br /><em>Columnist</em></li><li><a href="http://feministing.com/author/mahrohj/" class="avHolder"><img alt='Mahroh Jahangiri' src='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=40&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/45eb1b99c831e3e6b59248b272492a1f?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/mahrohj/">Mahroh Jahangiri</a><br /><em>Columnist</em></li><li><a href="http://feministing.com/author/suzanna/" class="avHolder"><img alt='Suzanna Bobadilla' src='http://2.gravatar.com/avatar/b5d115c0aa07b394c3b92d0ef3e048c0?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/b5d115c0aa07b394c3b92d0ef3e048c0?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/suzanna/">Suzanna Bobadilla</a><br /><em>Interviews Columnist</em></li><li><a href="http://feministing.com/author/baxter/" class="avHolder"><img alt='Courtney Baxter' src='http://0.gravatar.com/avatar/3e4efb1f203f1fe01921e6f277f84ecf?s=40&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/3e4efb1f203f1fe01921e6f277f84ecf?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/baxter/">Courtney Baxter</a><br /><em>Operations Strategist</em></li><li><a href="http://feministing.com/author/feminist8/" class="avHolder"><img alt='Sheila Bapat' src='http://2.gravatar.com/avatar/271f972b579b21f089df066e1f1e9968?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/271f972b579b21f089df066e1f1e9968?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/feminist8/">Sheila Bapat</a><br /><em>Books columnist</em></li><li><a href="http://feministing.com/author/hubersamj/" class="avHolder"><img alt='Sam Huber' src='http://2.gravatar.com/avatar/2fd546560432e454ba83da3cb920b2fb?s=40&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/2fd546560432e454ba83da3cb920b2fb?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/hubersamj/">Sam Huber</a><br /><em>Books columnist</em></li><li><a href="http://feministing.com/author/avakofman/" class="avHolder"><img alt='Ava Kofman' src='http://0.gravatar.com/avatar/ff9c308e4f79d1333765b4d9b7c5baef?s=40&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/ff9c308e4f79d1333765b4d9b7c5baef?s=80&amp;d=mm&amp;r=g 2x' class='avatar avatar-40 photo' height='40' width='40' /></a><a href="http://feministing.com/author/avakofman/">Ava Kofman</a><br /><em>Books columnist</em></li>			</ul>
+		</div>
+		</div></article><article id="widget-id-2" class="row widget widget_widget-id"><div class="small-12 columns">
+		<div class="hotTopics">
+			<h3><h3>Hot Topics</h3></h3>
+			<ul>
+				<li><a href='http://feministing.com/tag/sexism/' title='Sexism Tag' class='sexism'>Sexism</a></li><li><a href='http://feministing.com/tag/media/' title='Media Tag' class='media'>Media</a></li><li><a href='http://feministing.com/tag/racism/' title='Racism Tag' class='racism'>Racism</a></li><li><a href='http://feministing.com/tag/humor/' title='Humor Tag' class='humor'>Humor</a></li><li><a href='http://feministing.com/tag/law/' title='Law Tag' class='law'>Law</a></li>			</ul>
+		</div>
+
+		</div></article>	
+	<div class="social">
+		<a href="https://twitter.com/feministing" target="_blank"><span class="icon-twitter"></span><span class="text">Twitter</span></a>
+		<a href="http://www.facebook.com/feministing" target="_blank"><span class="icon-facebook"></span><span class="text">Facebook</span></a>
+		<a href="https://plus.google.com/u/0/107556203472527482219" target="_blank"><span class="icon-gplus"></span><span class="text">Google+</span></a>
+		<a href="/contact-us"><span class="icon-mail"></span><span class="text">Email</span></a>
+		<a href="http://feministing.com/feed/" target="_blank"><span class="icon-rss"></span><span class="text">RSS</span></a>
+	</div>
+	<div class="copyright">
+		&copy; 2016 Feministing
+	</div>
+	</aside>
+</div>
+<div class="addthis_sharing_toolbox"><div class="at-share-title">Share This!</div></div>
+</section>
+<footer class="footer">
+	<div class="row">
+				<a href="http://feministing.com" class="logo"><span class="icon-feministing"></span><span class="text">Feministing</span></a>
+		<ul id="menu-mainmenu-dropdown-2" class="top-bar-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-95875"><a target="_blank" href="https://feministing.nationbuilder.com/donate">Support Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95877"><a href="https://feministing.nationbuilder.com/donate">Support Feministing</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-95848"><a target="_blank" href="http://www.cafepress.com/feministingstore">Our Store</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-95869"><a href="http://feministing.com/about/">About</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95876"><a href="http://feministing.com/about/">About Feministing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95863"><a href="http://feministing.com/frequently-asked-questions/">FAQs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95851"><a href="http://feministing.com/speaking-tour/">Speaking Tour</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95840"><a href="http://feministing.com/community/">Community</a></li>
+</ul>		<div class="right">
+			<div class="social">
+				<a href="https://twitter.com/feministing"><span class="icon-twitter"></span><span class="text">Twitter</span></a>
+				<a href="http://www.facebook.com/feministing"><span class="icon-facebook"></span><span class="text">Facebook</span></a>
+				<a href="https://plus.google.com/u/0/107556203472527482219"><span class="icon-gplus"></span><span class="text">Google+</span></a>
+				<a href="mailto:info@feministing.com"><span class="icon-mail"></span><span class="text">Email</span></a>
+				<a href="http://feministing.com/feed/"><span class="icon-rss"></span><span class="text">RSS</span></a>
+			</div>
+		</div>
+					</div>
+</footer>
+<div class="copyright"><div class="row">&copy; Feministing 2016</div></div>
+<a class="exit-off-canvas"></a>
+
+		</div>
+</div>
+    <script type="text/javascript">
+    // <![CDATA[
+        var disqus_shortname = 'feministing';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1) {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('rel'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) url = url[0];
+                    else url = url[1]
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    //]]>
+    </script>
+	<script type="text/javascript">
+		var queryArgs = {"action":"fem_morePosts","page":2,"posts_per_page":"8","total_pages":0,"category__not_in":[44420]}	</script><script type='text/javascript' src='http://assets.feministing.com/wp-content/themes/feministing2014/js/app.js'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a103cdc68d","applicationID":"4410961","transactionName":"ZldVYEUHCkJYVURZWF8dYkZeSQ1fXVNIHkdZQg==","queueTime":0,"applicationTime":28,"atts":"ShBWFg0dGUw=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-536.min.js"}</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using apc
+Object Caching 2656/2715 objects using apc
+Content Delivery Network via Amazon Web Services: S3: assets.feministing.com
+
+ Served from: feministing.com @ 2016-02-13 20:32:08 by W3 Total Cache -->

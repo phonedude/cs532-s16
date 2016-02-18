@@ -1,0 +1,730 @@
+ 
+<!DOCTYPE html>
+  <head>
+    <title>Morgan Hill Webcam - California Scenic Webcam in San Francisco Bay Area</title>
+		<meta charset="UTF-8">
+    <meta name="description" content="Morgan Hill Webcam is a live streamings HD-quality video window into the Southern Santa Clara Valley in Northern California. Panoramic westerly views across Gilroy, San Martin, Morgan Hill and beyond, including the Santa Cruz Mountains.">
+    <meta name="keywords" content="PTZtv, morgan hill california, morgan hill weather, webcam, web cam, weather cam, live weather camera, mountain views, scenic views, sunset, sunrise, city lights, san francisco, bay area, silicon valley, monterey, santa cruz, california, henry coe, real estate, horse ranches, farms, parks, wildlife, climate, aircraft views">
+		<meta name="application-name" content="Morgan Hill Webcam" />	
+		<meta property="og:image" content="images/mhw_preview.jpg" />
+		<meta property="og:title" content="Morgan Hill Webcam - Live Streaming Video from PTZtv" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="Live Webcam" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">			
+		<link rel="image_src" type="image/jpg" href="images/mhw_preview.jpg">
+		<link rel="canonical" href="http://www.morganhillwebcam.com" />
+		<script type='text/javascript' src='http://cdn.ptztv.com/coread/block.js'></script>
+		<script type="text/javascript" src="http://cdn.ptztv.com/flowplayer/flowplayer-3.2.13.min.js"></script>
+		<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/mhw-1.0.0.css">		
+		<script type="text/javascript">
+		// get time in milliseconds
+		var theDate   = new Date();
+    var millisecs = theDate.getMilliseconds();
+
+	  // ===== Check for SmartTV =====					 
+	  function isSmartTV(ua) {
+	     return Boolean(ua.match(/TV/));
+	  }
+				
+	  // ===== Check for GoogleTV =====					 
+	  function isGoogleTV(ua) {
+	     return Boolean(ua.match(/GoogleTV/i));
+	  }
+
+	  // ===== Check for Apple iDevice =====					 
+	  function isAppleiDevice(ua) {
+	     return Boolean( ua.match(/iPhone/i) || ua.match(/iPod/i) || ua.match(/iPad/i) );
+	  }
+
+	  // ===== Check for Android Device =====					 
+	  function isAndroidDevice(ua) {
+	     return Boolean( ua.match(/Android/i) );		
+	  }
+
+		// ===== Check for Android Version =====					 
+	  function isAndroidVersion(ua, ver) {
+	     if( ua.indexOf("Android") >= 0 ) {
+			     var androidVersion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
+
+					 return Boolean( androidVersion >= ver ); // test for this ver or greater
+
+       } else return false;
+	  }
+
+	  // ===== Check for Flash =====
+    function flashSupported(up) {
+        
+       var support = false;
+       
+	 		 if( up.match(/Win/i) || up.match(/Mac/i) ) {
+			 
+			 		 support = true; // force flowplayer test for Flash
+					 
+       } else if("ActiveXObject" in window) { // IE only
+       
+               try {
+                   support = !!(new ActiveXObject("ShockwaveFlash.ShockwaveFlash"));
+               } catch(e) {
+                   support = false;
+               }
+        
+       // other browsers
+       } else {
+   
+           support = !!navigator.mimeTypes['application/x-shockwave-flash'];
+   
+       }
+        
+       return support;
+        
+    }	
+		
+		 
+		function wopen(url, name, w, h, scroll)
+		{
+				// if( navigator.appName != "Microsoft Internet Explorer" ){w += 16;h += 86;}
+				// else {w += 16;h += 70};
+ 
+ 				var win = window.open(url,
+  														name, 
+  														'width=' + w + ', height=' + h + ', ' +
+  														'location=no, menubar=no, ' +
+															'scrollbars=' + scroll + ', ' +
+  														'status=no, toolbar=no, resizable=yes');
+ 				// win.resizeTo(w, h);
+ 				win.focus();
+		}
+
+		// AJAX
+		var xmlhttp;
+		function loadAJAX( url, callback )
+		{
+		 		if( window.XMLHttpRequest )
+  			{// code for IE7+, Firefox, Chrome, Opera, Safari
+  					xmlhttp = new XMLHttpRequest();
+  			}
+				else
+  			{// code for IE6, IE5
+  			    xmlhttp = new ActiveXObject( "Microsoft.XMLHTTP" );
+  			}
+				xmlhttp.onreadystatechange = callback;				
+				xmlhttp.open( "GET", url, true );
+				xmlhttp.send();
+		}
+
+		// Get platform
+    var userPlatform = navigator.platform;					 
+    var userAgent = navigator.userAgent;
+    var GoogleTV  = isGoogleTV( userAgent );
+		var SmartTV   = isSmartTV( userAgent );
+		var Android   = isAndroidDevice( userAgent );
+		
+		</script>
+		<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-24373193-17']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>		
+  </head>
+  <body onbeforeunload="javascript:reset_webcam_list()" onload="javascript:loadCheck()">
+  <div id="centerwrapper">
+    <div id="root" style="position:absolute;width:1220px;">
+  		<div id="headbannerdiv">
+  				 <img src="http://cdn.morganhillwebcam.com/images/mhw_banner_1.jpg" width="1204" height="145" alt="MorganHillWebcam.com" />
+  		</div>
+			<div id="siteselectdiv">
+           <select id="sspulldown" onchange="javascript:siteSelectLaunch(this);">
+                <option id="first_option" selected value="http://morganhillwebcam.com">Watch another webcam...</option>			
+                <option value="Preview">What's on PTZtv</option>
+                <option value="http://PortEvergladesWebcam.com">Port Everglades</option>
+                <option value="http://FtLauderdaleWebcam.com">Fort Lauderdale</option>
+                <option value="http://FtLauderdaleBeachCam.com">Marriott FLL Beach</option>															
+                <option value="http://HiltonBeachCam.com">Hilton FLL Beach</option>
+                <option value="http://PompanoBeachCam.com">Pompano Beach</option>								
+                <option value="http://PortMiamiWebcam.com">Port Miami</option>
+                <option value="http://KeyWestHarborWebcam.com">Key West Harbor</option>
+                <option value="http://PortTampaWebcam.com">Port Tampa</option>
+                <option value="http://PortNassauWebcam.com">Port Nassau</option>																	
+                <option value="http://PortStMaartenWebcam.com">Port St. Maarten</option>
+                <option value="http://PortArubaWebcam.com">Port Aruba</option>
+                <option value="http://PortBermudaWebcam.com">Port Bermuda</option>
+                <option value="http://PortCanaveralWebcam.com">Port Canaveral</option>
+                <option value="http://AtlanticCityWebcam.com">Atlantic City</option>
+                <option value="http://NJWildlifeCam.com">New Jersey Wildlife</option>
+                <option value="http://NYHarborWebcam.com">New York Harbor</option>
+                <option value="http://PortNYWebcam.com">Port New York</option>
+                <option value="http://KittyCatCam.com">Kitty Cat Cam</option>
+           </select>
+           <script type="text/javascript">
+           function reset_webcam_list() {
+                document.getElementById('first_option').selected = true;
+                return true;
+           }
+					 
+					 function siteSelectLaunch(sel) {
+					 			var value = sel.value;
+								
+					 			if( value == "Preview" ) {
+								    wopen('http://whatson.ptztv.com/', 'whatson', 800, 450, 'no');
+										document.getElementById('first_option').selected = true;
+								} else location=value;					 
+					 }        
+
+					 var okayToPlay = true;
+					 					 
+					 function loadCheck() {
+								var htmlLeftLen    = document.getElementById('adskyleftdiv').innerHTML.length;
+								var htmlRightLen   = document.getElementById('adskyrightdiv').innerHTML.length;
+								var htmlBottomLen  = document.getElementById('adbannerdiv').innerHTML.length;
+
+								// alert( "Left = " + htmlLeftLen ); alert( "Right = " + htmlRightLen ); alert( "Bottom = " + htmlBottomLen );																								
+								if( ((htmlLeftLen == 479) && (htmlRightLen == 482) && (htmlBottomLen == 551)) || (typeof PTZtv === "undefined") ) {
+
+										document.getElementById('videoplayer_1').innerHTML = "<img src='http://cdn.morganhillwebcam.com/slideshow/welcome_faq.jpg' width='800' height='450' alt=''>";
+										document.getElementById('audioplayer_1').innerHTML = "&nbsp;";
+										
+										okayToPlay = false;
+										
+										$f("*").unload();
+										
+										return false;
+										
+								} else return true;
+					 }
+           </script>					 
+			</div>
+<!--
+      <div id="newsdiv">
+    	</div>			
+-->
+			<div id="fblinkdiv" style="position:absolute;left:1052px;top:1px;width:90px;height:21px;text-align:right;">
+					 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2FPTZtv&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;"></iframe>
+    	</div>
+    	<div id="plusonediv" style="position:absolute;left:1142px;top:1px;height:22px;width:64px;text-align:right;">
+					 <g:plusone size="medium"></g:plusone>
+    	</div>			
+			<div id="promoboxdiv">
+					<a href="http://www.ptztv.com" target="_blank"><img src="http://cdn.morganhillwebcam.com/images/PTZtv_promo_1.jpg" width="160" height="100" alt="PTZtv Scenic Webcams" /></a>
+			</div>					
+			<div id="partnerad1div">
+							<script type="text/javascript">
+    					 // Select ad image at random
+							 var maxNumAds = 28;
+							 var adIndex = new Array();
+							 var adLink  = new Array();
+							 							 
+							 function placeAd(n) {
+							 
+    			     					document.write("<a href='" + adLink[n] + "'><img id='adID" + n + "' src='http://cdn.morganhillwebcam.com/images/ad_mhw_" + adIndex[n] + ".jpg' width='152' height='386' alt='PTZtv Webcams' /></a>");						 
+
+							 }
+							 
+							 function cycleAd(n) {
+
+							 					adIndex[n]++;
+												if( adIndex[n] > maxNumAds ) adIndex[n] = 1;
+																			 
+							 					document.getElementById("adID"+n).src = "http://cdn.morganhillwebcam.com/images/ad_mhw_" + adIndex[n] + ".jpg";
+							 
+							 }
+
+    					 adIndex[1] = ((millisecs % (maxNumAds/2)) + 1);
+							 adLink[1]  = "javascript:cycleAd(1)";
+							 
+							 placeAd(1);
+							 
+							</script>				
+    	</div>
+			<div id="partnerad2div">
+							<script type="text/javascript">
+    					 // Select ad image at random
+    					 adIndex[2] = ((millisecs % (maxNumAds/2)) + 1)*2;
+							 adLink[2]  = "javascript:cycleAd(2)";
+
+    			     placeAd(2);					 
+
+							</script>
+    	</div>
+			<div id="weatherdiv">
+					 		<span style="position:absolute;left:2px;top:6px;width:154px;height:90px;">
+    			        <a href="http://www.wunderground.com/personal-weather-station/dashboard?ID=KCAMORGA14" target="_blank">
+									    <img id="weatherSticker" src="http://weathersticker.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=wu_macwhite&pwscode=KCAMORGA14" alt="Click for Morgan Hill Forecast" height="90" width="154" />
+									</a>
+							</span>		
+							<script type="text/javascript">
+									// Config and state
+									weatherUpdateInterval = 300000;		 // 5 x 60 x 1000 milliseconds = 5 minutes
+
+									// get latest weather sticker and display
+									imageBuffer = new Image();
+									imageBuffer.onload = weatherSwapImageBuffer;
+
+									function weatherUpdateImg() {
+									    var theDate = new Date();
+											imageBuffer.src = "http://weathersticker.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=wu_macwhite&pwscode=KCAMORGA14"+ "&" + parseInt(theDate.getTime() / weatherUpdateInterval);
+									}
+		
+									// swap latest weather sticker into view
+									function weatherSwapImageBuffer() {
+													 document.getElementById('weatherSticker').src = imageBuffer.src;
+									}
+
+									// start downloading images...
+									setInterval('weatherUpdateImg()', weatherUpdateInterval);
+						  </script>					
+    	</div>
+			<!-- HDTV player starts here -->
+			<div id="HDTVcamdiv">
+					 <div id="viewersdiv">Viewers: <span id="visitorcounter"></span></div> 
+			     <div id="webcamnamediv">
+  				     <img src="http://cdn.morganhillwebcam.com/images/mhw_hdtv_1.png" width="230" height="34" alt="Morgan Hill Webcam" />
+  				 </div>
+					 <div id="timendatediv">
+					     <iframe src="http://free.timeanddate.com/clock/i2ib5o7n/n283/fn17/fs12/fcfff/tc000/pc000/ftb/ts1" frameborder="0" width="67" height="16"></iframe>
+					 </div>
+					 <div id="videoplayer_1"></div>
+					 <div id="videostatus">HDTV off</div>
+    	     <div id="bgbannerdiv">
+					 		 <img src='http://cdn.ptztv.com/images/USCaribBW_2.jpg' width='728' height='90'  alt=''>
+					 </div>
+					 <div id="adbannerdiv">
+               <script type="text/javascript"><!--
+               google_ad_client = "ca-pub-4810494881468391";
+               /* MHW Banner Bottom */
+               google_ad_slot = "2057996889";
+               google_ad_width = 728;
+               google_ad_height = 90;
+               google_page_url = "http://morganhillwebcam.com/index.php";							 
+               //-->
+               </script>
+               <script type="text/javascript"
+               src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+               </script>				 
+    	     </div>
+					 <script type="text/javascript">
+					 var fp_ver          = (GoogleTV || Android) ? '3.2.14' : '3.2.18';
+					 var stream_mode     = 'flash';
+					 var stream_prefix   = '';					 
+					 var webcam_stream   = 'mhw.stream';
+					 var stream_provider = 'ptztv';
+					 var splash_welcome_image = 'welcome.jpg';
+					 					 
+					 // Set server
+					 var serverName   = "mia10-1.portfever.com";
+					 var rtmpApp      = "liveedge"; // "redirect";
+					 var hlsApp       = "liveedge";
+					 var leastLoaded  = ""; // "getserver.php";
+					 var targetServer = "rtmp://" + serverName + "/" + rtmpApp;
+					 
+					 // Init viewer count source
+			     var mhwViewerCount  = "mhw_visitors.txt";
+			     var seeViewerCount  = mhwViewerCount;
+					 var viewerCountUpdateInterval = 300000;		 // 5 x 60 x 1000 milliseconds = 5 minutes
+
+					 // player timeout init
+					 var webcamTimeout = 30 * 60 * 1000;											
+					 var timeoutID = null;
+					 var timeoutPending = false;						 
+
+					 // viewer count function
+					 function viewerCountUpdate() {
+							var theDate = new Date();
+							
+							loadAJAX( seeViewerCount + "?" + parseInt(theDate.getTime() / viewerCountUpdateInterval), function() {
+          								     if( (xmlhttp.readyState == 4) && (xmlhttp.status == 200) ) document.getElementById('visitorcounter').innerHTML = xmlhttp.responseText;
+          							}							
+							);
+					 }
+
+					 // start count updates...
+					 setInterval('viewerCountUpdate()', viewerCountUpdateInterval);						 	
+					 
+					 if( flashSupported(userPlatform) ) {
+					     // Proceed with Flash player
+							 
+							 // catch and suppress syntax errors in H.264 metadata(??)							 
+	 				 		 window.onerror = function() {					 						
+											return true;
+					 		 }
+
+							 // video player
+			 				 flowplayer("videoplayer_1", "http://cdn.ptztv.com/flowplayer/flowplayer.commercial-" + fp_ver + ".swf", {
+							 
+							 						showErrors: false, // suppress player error messages when stream not found
+													buffering: false,	 // suppress spinning buffering animation
+
+													key: '#$322ca5f13554bdd2b1b',
+
+													onBeforeFullscreen : function() {
+																	return false;
+													},
+																								
+													contextMenu: [
+																	 // PTZtv Portfolio
+																	 {'PTZtv Webcam Portfolio...' : function() {
+															       location.href = "http://www.PTZtv.com/portfolio";
+															 }},
+
+																	 // Menu separator.
+																	 '-',
+
+																	 // About PTZtv
+																	 {'About PTZtv...' : function() {
+    															       location.href = "http://www.PTZtv.com/about-us";
+																	 }}
+													],															
+    
+													clip : {
+																	 fadeInSpeed: 3000,
+																	 fadeOutSpeed: 3000,
+																	 scaling: 'fit',
+																	 
+																   onBegin: function() { // Show video is ON if clip 1
+															 					 if( this.getClip().index >= 1) {
+																				 		 document.getElementById('videostatus').innerHTML = "HDTV on";
+																				 }
+																				 // Start timeout
+																				 initTimeout();
+															 		 },
+																 
+																   onBufferFull: function() { // Show video is ON if clip 1
+															 					 if( this.getClip().index >= 1) {
+																				 		 // document.getElementById('videostatus').innerHTML = "HDTV on";
+																				 }
+																				 // Start timeout (if not alreay started) to catch manual play resume
+																				 initTimeout();																				 
+															 		 },	
+																 
+																	 onStop: function(){
+																	 			 document.getElementById('videostatus').innerHTML = "HDTV stopped";																		 
+																	 			 // Clear the auto-stop timer in case this was a manual stop
+																				 if( timeoutPending ) {
+																				 		 clearTimeout( timeoutID );
+																						 timeoutID = null;
+																						 timeoutPending = false;
+																				 }
+																	 }																 
+  												},
+
+													playlist: [
+																	 // Welcome slide...
+																	 { url: 'http://cdn.morganhillwebcam.com/slideshow/' + splash_welcome_image,
+																	   duration: 2,
+																	   provider: 'http'
+																	 },
+      													 	 // Live streaming video - MHW cam
+																	 { url: webcam_stream,
+																	   live: true,
+																	   provider: stream_provider,
+																		 autoBuffering: true,
+																	   autoPlay: true,
+																	   accelerated: false,
+																	   bufferLength: 3,
+																		 onBufferFull : function() {
+																				 document.getElementById('videostatus').innerHTML = 'MHW now playing';
+    																		 viewerCountUpdate();																				 
+																		 }	 
+																	 }						
+													],
+													
+													plugins: {
+																	 ptztv: {
+																	 					 url: 'http://cdn.ptztv.com/flowplayer/flowplayer.rtmp-3.2.13.swf',
+																						 netConnectionUrl: targetServer,															 
+																						 failOverDelay: 4000																	 },
+																	 
+																	 controls: {
+																	 					 height: '5%',
+ 																						 backgroundGradient: 'none',																						 
+																	 					 // which buttons are visible and which are not?
+																						 play:true,
+																						 volume:true,
+																						 mute:true,
+																						 time:false,
+																						 stop:true,
+																						 playlist:true,
+																						 fullscreen:false,																						 
+																						 // No timeline/playhead bar
+																						 scrubber: false,
+																						 // enable tooltips for the buttons
+																						 tooltips: { buttons: true,
+																						 					   play: 'Play HDTV',
+																												 stop: 'Stop HDTV'																				 
+																						 }
+																	 }
+													},
+													
+													canvas: {
+																	 backgroundColor: '#000000',
+																	 backgroundGradient: 'none'
+													},													
+												
+													onError: function(err) {
+																	 // Update status indicator
+																	 var errmsg;
+																	 
+															 		 if( this.getClip().index > 0) {
+																	 		 if( err == 200 ) errmsg = "Video stream not found";
+																			 else if( err == 201 ) errmsg = "Unable to load video stream";
+																			 else errmsg = "Internal error #" + err;
+																			 document.getElementById('videostatus').innerHTML = "OFFLINE (" + errmsg + ")";
+																	 }
+																	 
+																	 // Start playing slideshow image clips
+																	 // this.play(0);
+											    }							 
+							 });
+
+				 
+					 // end of Flash					
+
+					 } else {
+							 
+							 // Try HLTML5
+							 document.getElementById('videostatus').innerHTML = "HTML5 Mode";
+
+							 // start cam
+							 stream_mode = "html5";
+							 
+							 if( SmartTV ) setHighBandwidth();
+							 else getBandwidth();
+							 
+					 } // end of non-Flash
+					 					 
+					 // ==================== Timeout functions ====================
+					 function initTimeout() {
+					 		// Hide the "play again" button 
+							if( $f("videoplayer_1") ) $f("videoplayer_1").getPlugin("play").css({opacity: 0});	
+							// If not already active, set timeout timer to automatically stop player
+							if( ! timeoutPending ) {
+									timeoutPending = true;
+									timeoutID = setTimeout( 'stopPlayer()', webcamTimeout );
+							}
+					 }
+					 														 
+					 // stop players after preset timeout
+					 function stopPlayer() {
+							// Clear the timer states
+							timeoutID = null;
+							timeoutPending = false;
+							// Make the "play again" button visible, disable autoplay and then tell players to STOP
+							if( $f("videoplayer_1") ) {
+    							$f("videoplayer_1").getPlugin("play").css({opacity: 1});
+    							$f("videoplayer_1").getClip(2).update({ autoplay: false });
+    							$f("videoplayer_1").stop();
+							}
+
+							if( document.getElementById('vplayer') ) {
+									document.getElementById('vplayer').pause();
+							}	
+					 }
+					 
+					 // ===== Get bandwidth choice
+					 function getBandwidth() {
+
+					 					document.getElementById('videoplayer_1').innerHTML = "<br/><br/><span style='font-size:16px;'>SELECT YOUR CONNECTION TYPE...</span><br/><br/>"
+																																			 + "<br/><br/><button type='button' id='bigbuttonred' onclick='javascript:setHighBandwidth()'>HIGH<br/>BANDWIDTH<br/>WiFi, 4G</button><br/><br/>"
+																																			 + "<br/><br/><button type='button' id='bigbuttongrn' onclick='javascript:setLowBandwidth()'>LOW<br/>BANDWIDTH<br/>CELL, 3G</button>";
+					 }
+
+					 function setHighBandwidth() {
+					 					stream_prefix = "";
+										document.getElementById('videostatus').innerHTML = "HIGH Bandwidth Mode";
+										startCam();
+					 }
+
+					 function setLowBandwidth() {
+					 					stream_prefix = "pre";
+										document.getElementById('videostatus').innerHTML = "LOW Bandwidth Mode";
+										startCam();
+					 }
+					 					 
+					 // ===== Start HTML5 video player =====				 
+					 function startCam() {
+
+					 					if( okayToPlay ) {
+												  if( leastLoaded ) {
+                              loadAJAX(leastLoaded, function() {
+                								     if( (xmlhttp.readyState == 4) && (xmlhttp.status == 200) ) {
+              
+                  									     serverName = xmlhttp.responseText.substr(9);
+              													 
+              													 if( ! (serverName.match(/unknown/g)) ) {													     
+              															 tryHTML5();
+              													 } else {
+              							 								 document.getElementById('videostatus').innerHTML = "No server available";													 
+              													 }															 
+                  									 }
+                								 }
+              							  );
+													} else {
+													
+													    tryHTML5();
+													
+													}
+										}	 
+					 }
+
+					 // ===== Try HTML5
+					 function tryHTML5() {
+																											 
+							 			document.getElementById('videoplayer_1').innerHTML = "<video id='vplayer' autoplay webkit-playsinline onclick='playPauseVideo()' width=800 height=450 poster='http://cdn.morganhillwebcam.com/slideshow/" + splash_welcome_image + "'>"
+																																			 + "<source src='http://" + serverName + "/" + hlsApp + "/" + stream_prefix + webcam_stream + "/playlist.m3u8' />"
+																																			 + "<source src='rtsp://" + serverName + "/" + hlsApp + "/" + stream_prefix + webcam_stream + "' />"
+																																			 + "</video>";
+																																			 
+										document.getElementById('videostatus').innerHTML = "Touch screen to play/pause VIDEO";
+										
+							 			document.getElementById('vplayer').addEventListener('play', initTimeout, false);
+
+										viewerCountUpdate();
+					 }
+					 // =====
+					 function playPauseVideo() {
+					 					theVideo = document.getElementById('vplayer');
+
+										if( theVideo.paused ) theVideo.play(); else theVideo.pause();
+					 }
+					 					 					 							 
+    	     </script>
+					 
+			</div>
+			<!-- HDTV player ends here -->
+			<!-- nonHDTV page content starts here -->
+			<div id="bgskyleftdiv">
+					 		 <img src="http://cdn.ptztv.com/images/USportsBW_1.jpg" width="160" height="600" alt="">
+			</div>
+			<div id="adskyleftdiv">
+          <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-4810494881468391";
+          /* MHW Sky Left */
+          google_ad_slot = "6488196481";
+          google_ad_width = 160;
+          google_ad_height = 600;
+          google_page_url = "http://morganhillwebcam.com/index.php";					
+          //-->
+          </script>
+          <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
+    	</div>
+    	<div id="bgskyrightdiv">
+					<img src="http://cdn.ptztv.com/images/USportsBW_2.jpg" width="160" height="600" alt="">			
+			</div>						
+    	<div id="adskyrightdiv">
+          <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-4810494881468391";
+          /* MHW Sky Right */
+          google_ad_slot = "9441662885";
+          google_ad_width = 160;
+          google_ad_height = 600;
+          google_page_url = "http://morganhillwebcam.com/index.php";					
+          //-->
+          </script>
+          <script type="text/javascript"
+          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>		
+    	</div>
+    	<div id="fr24twdiv">
+    			<div id="airtrafficdiv">
+    			     <span id="fr24block" >
+							 		<iframe id="fr24frame" src="http://www.flightradar24.com/simple_index.php?lat=37.13&lon=-121.63&z=9" width="432" height="460" frameborder="0" scrolling="no"></iframe>
+							 </span>
+    			     <span id="twitterblock">
+          	 			<a class="twitter-timeline" height="486" href="https://twitter.com/PTZtv"  data-chrome="nofooter transparent" data-widget-id="382669323006783488">Tweets by @PTZtv</a>
+          				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    			     </span>							 
+          		 <script type="text/javascript">							 
+    							 function expandMT() {
+    							     document.getElementById('twitterblock').style.display = "none";
+    							     document.getElementById('fr24frame').width = 874;
+    							     document.getElementById('mtexpanddiv').style.width = '874px';											 
+    							     document.getElementById('fr24mapcontrol').innerHTML = "Shrink Map and Show Twitter Feed";
+    							     document.getElementById('fr24mapcontrol').href = "javascript:shrinkMT();";											 											  
+    							 }
+    							 function shrinkMT() {
+    							     document.getElementById('fr24frame').width = 432;
+    							     document.getElementById('mtexpanddiv').style.width = '432px';											 
+    							     document.getElementById('twitterblock').style.display = "inline";
+    							     document.getElementById('fr24mapcontrol').innerHTML = "Expand Map and Hide Twitter Feed";
+    							     document.getElementById('fr24mapcontrol').href = "javascript:expandMT();";											 
+    							 }									 
+							 </script>
+    			</div>
+   			  <div id="mtexpanddiv">
+									Live Air Traffic Map by <a href="http://www.flightradar24.com/" target="_blank">Flightradar24.com</a><br/>
+					        <a id="fr24mapcontrol" href="javascript:expandMT();">Expand Map and Hide Twitter Feed</a>
+    			</div>											
+      </div>
+			<div id="footerdiv">
+					<div id="footerbgdiv">
+		          <img src="http://cdn.morganhillwebcam.com/images/mhw_bg_1.jpg" width="1202" height="200" alt="" />
+					</div>
+    			<div id="welcomediv">
+							 Welcome to the <b>Morgan Hill Webcam</b>. A 24/7 live streaming HD-quality Internet video broadcast produced by <a href="http://www.PTZtv.com" target="_blank">PTZtv</a>.
+							 Morgan Hill is a small city located some 60 miles south of <a href="http://en.wikipedia.org/wiki/San_francisco" target="_blank">San Francisco</a> and 20 miles south of <a href="http://en.wikipedia.org/wiki/San_jose_ca" target="_blank">San Jose</a> and <a href="http://en.wikipedia.org/wiki/Silicon_valley" target="_blank">Silicon Valley</a> in <a href="http://en.wikipedia.org/wiki/Northern_California" target="_blank">Northern California</a>.
+							 Its population of over 37,000 residents live in a 4-mile wide strip of <a href="http://en.wikipedia.org/wiki/Santa_Clara_Valley" target="_blank">Santa Clara Valley</a> and surrounding foothills.
+							 Our views extend beyond <a href="http://en.wikipedia.org/wiki/Hollister,_California" target="_blank">Hollister</a> to the south and on a clear day, <a href="http://en.wikipedia.org/wiki/Cupertino" target="_blank">Cupertino</a> to the north (home of <a href="http://www.apple.com" target="_blank">Apple Inc</a>).
+							 Directly opposite you see the <a href="http://en.wikipedia.org/wiki/Santa_Cruz_Mountains" target="_blank">Santa Cruz Mountains</a> where the tallest peak is <a href="http://en.wikipedia.org/wiki/Loma_Prieta" target="_blank">Loma Prieta</a> at over 3,700ft.
+							 The foreground peak is a Morgan Hill landmark known as "El Toro" at 1,300ft.
+							 Our live streaming video is accompanied by radio reception from a variety of local sources which can include public safety (Police, Fire, CAL FIRE, EMS), NOAA Weather, airports and air traffic control. If you have a specific view in mind (location &amp; time) or 
+							 interest in a particular radio frequency then please let us know via our <a href="javascript:wopen('contact.html', 'contact', 830, 700, 'no');">contact</a> page. Morgan Hill Webcam is part of an R&amp;D project for <a href="http://www.PTZtv.com" target="_blank">PTZtv</a>. Don't forget to visit our other webcams at the links below... 
+					</div>					
+			    <div id="linksdiv">
+    			    <span style="font-size:12px;line-height:25px;vertical-align:middle;">
+									<a href="javascript:void(0);" onclick="window.location='http://PortEvergladesWebcam.com';">Port Everglades</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://FtLauderdaleWebcam.com';">Fort Lauderdale</a>&nbsp;&nbsp;|&nbsp;									
+									<a href="javascript:void(0);" onclick="window.location='http://PortMiamiWebcam.com';">Miami</a>&nbsp;&nbsp;|&nbsp;									
+									<a href="javascript:void(0);" onclick="window.location='http://KeyWestHarborWebcam.com';">Key West</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://PortTampaWebcam.com';">Tampa</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://PortNassauWebcam.com';">Nassau</a>&nbsp;&nbsp;|&nbsp;									
+									<a href="javascript:void(0);" onclick="window.location='http://PortStMaartenWebcam.com';">St. Maarten</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://PortArubaWebcam.com';">Aruba</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://PortBermudaWebcam.com';">Bermuda</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://PortCanaveralWebcam.com';">Port Canaveral</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://AtlanticCityWebcam.com';">Atlantic City</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://NYHarborWebcam.com';">NY Harbor</a>&nbsp;&nbsp;|&nbsp;
+									<a href="javascript:void(0);" onclick="window.location='http://PortNYWebcam.com';">NY Port</a>
+							</span>
+    			</div>					
+					<div id="menudiv">
+            	<span style="font-size:12px;line-height:25px;vertical-align:middle;">
+							    <a href="archive.php" target="_blank">24/7 Webcam Archive</a>&nbsp;&nbsp;|&nbsp;
+							    <a href="javascript:wopen('about.html', 'about', 830, 760, 'yes');">About</a>&nbsp;&nbsp;|&nbsp;					
+           			  <a href="http://www.ptztv.com/contact-us/" target="_blank">Contact</a>&nbsp;&nbsp;|&nbsp;
+								  <a href="http://www.ptztv.com/about-us/privacy/" target="_blank">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;									
+								  <a href="http://www.ptztv.com/about-us/terms-conditions/" target="_blank">Terms of Use</a>&nbsp;&nbsp;|&nbsp;
+								  <a href="http://www.ptztv.com/faq/" target="_blank">FAQ</a>&nbsp;&nbsp;|&nbsp;
+									<a href="http://forecast.weather.gov/MapClick.php?lat=37.14&lon=-121.65&site=mtr&smap=1&unit=0&lg=en&FcstType=text" target="_blank">National Weather Service Forecast</a>&nbsp;&nbsp;|&nbsp;									
+									<a href="http://earthquake.usgs.gov/earthquakes/map/" target="_blank">USGS Earthquake Map</a>	
+									<br/>
+									<a href="http://en.wikipedia.org/wiki/Morgan_Hill" target="_blank">Morgan Hill on Wikipedia</a>&nbsp;&nbsp;|&nbsp;
+									<a href="http://www.morganhilllife.com/" target="_blank">Morgan Hill Life</a>&nbsp;&nbsp;|&nbsp;
+									<a href="http://www.morganhilltimes.com/" target="_blank">Morgan Hill Times</a>&nbsp;&nbsp;|&nbsp;
+								  <a href="http://www.coepark.org/" target="_blank">Henry Coe State Park</a>&nbsp;&nbsp;|&nbsp;
+								  <a href="http://www.visitcalifornia.com/" target="_blank">Visit California</a>
+							</span>
+					</div>
+					<div id="copyrightdiv">
+										Morgan Hill Webcam content copyright &#169; <script type="text/javascript">document.write(new Date().getFullYear());</script> <a href="http://morganhillwebcam.com">MorganHillWebcam.com</a> and <a href="http://PTZtv.com/" target="_blank">PTZtv LLC</a>
+  									All rights reserved.
+										We are not affiliated with or officially endorsed by the <a href="http://www.morganhill.ca.gov/" target="_blank">City of Morgan Hill</a>.
+										Real-time flight tracking map courtesy of <a href="http://www.flightradar24.com/" target="_blank">Flightradar24.com</a>
+					</div>
+  		</div>
+    </div>
+  </div>
+  </body>
+</html>
