@@ -6,7 +6,7 @@ This folder and subfolders contain submission files required for assignment 2.
 
 ## Due Date
 
-Feb 15, 2016 at 11:59.9 P.M.
+Feb 18, 2016 at 11:59.9 P.M.
 
 ## Main Solution File
 
