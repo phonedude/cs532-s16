@@ -1,0 +1,2269 @@
+http://www.marketwatch.com/story/elon-musk-a-thermostat-sized-box-may-one-day-power-your-house-2014-09-17
+
+
+
+Elon Musk: A thermostat-sized box may one day power your house - MarketWatch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(5),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,window.onerror=e,NREUM.noticeError=n;try{throw new Error}catch(f){"stack"in f&&(t(1),t(4),"addEventListener"in window&&t(2),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&t(3),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:8,2:5,3:9,4:7,5:20,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],4:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(2);t("loader").features.stn=!0,t(1),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:6,2:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:20,2:21,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:21,2:20,ee:"QJf3ax"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:21,2:20,ee:"QJf3ax"}],8:[function(t,e){function n(t,e,n){var r=t[0];"string"==typeof r&&(r=new Function(r)),t[0]=o(r,"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:21,2:20,ee:"QJf3ax"}],9:[function(t,e){function n(){c.inPlace(this,d,"fn-")}function r(t,e){c.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}var i=t("ee").create(),a=t(1),s=t(2),c=s(i),f=s(a),u=window.XMLHttpRequest,d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=i,window.XMLHttpRequest=function(t){var e=new u(t);try{i.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",function(t,e){return e}),e.addEventListener("readystatechange",n,!1)}catch(r){try{i.emit("internal-error",[r])}catch(o){}}return e},window.XMLHttpRequest.prototype=u.prototype,c.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),i.on("send-xhr-start",r),i.on("open-xhr-start",r)},{1:5,2:21,ee:"QJf3ax"}],10:[function(t){function e(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function n(t){var n=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!n.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){n.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=e(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(n.cat=d.split(", ").pop())}}else n.status=0;r.cbTime=this.cbTime,o("xhr",[n,r,this.startTime])}}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=n,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,n){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=e(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof n.onload))&&i.end(n)}catch(e){try{a.emit("internal-error",[e])}catch(r){}}};for(var u=0;c>u;u++)n.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:11,3:9,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],11:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){p.proto="https"===d.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=p.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=window,c=s.document,f="addEventListener",u="attachEvent",d=(""+location).split("?")[0],p=e.exports={offset:i(),origin:d,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),s[f]("load",n,!1)):(c[u]("onreadystatechange",r),s[u]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}],20:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],21:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s,t))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:20,ee:"QJf3ax"}]},{},["G9z0Bl",3,10,4]);
+    ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"6e882eab2f",applicationID:"4126423",sa:1,agent:"js-agent.newrelic.com/nr-476.min.js"}
+  
+
+      var slotMachine = (function () {
+          var _slots = {};
+          return {
+              add: function(name, slot, id) {
+                  if (!_slots[name]) { _slots[name] = {} };
+                  _slots[name].slot = slot;
+                  _slots[name].id = id;
+              },
+              get: function(key) {
+                  if (typeof key === 'string') {
+                      return _slots[key];
+                  }
+                  else if (typeof key === 'object') {
+                      for (var name in _slots) {
+                          if (_slots.hasOwnProperty(name) && _slots[name].slot === key) {
+                              return name;
+                          }
+                      }
+                  }
+              },
+              getAll: function(device) {
+                  return _slots;
+              },
+              onRenderEnd: function (event) {
+                  var name = slotMachine.get(event.slot);
+                  if (_slots[name]) {
+                      _slots[name].rendered = true;
+                  }
+                  if ($) {
+                      //$(window).trigger('adRendered', { name: name, slot: event.slot });
+                      $('#' + _slots[name].id).trigger('rendered', { name: name, slot: event.slot });
+                  }
+              },
+              slots: _slots
+          }
+      })();
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+      var gads = document.createElement("script");
+      gads.async = true;
+      gads.type = "text/javascript";
+      var useSSL = "https:" == document.location.protocol;
+      gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+      var node =document.getElementsByTagName("script")[0];
+      node.parentNode.insertBefore(gads, node);
+    })();
+
+    googletag.cmd.push(function() {
+        googletag.enableServices();
+        googletag.pubads().addEventListener('slotRenderEnded', slotMachine.onRenderEnd);
+    });
+  
+
+    var _sf_startpt=(new Date()).getTime();
+  
+
+
+
+
+
+
+
+
+Latest News
+
+
+
+
+
+
+
+
+
+
+Dow
+
+16,396
+-57.81
+-0.35%
+
+
+
+
+
+
+Nasdaq
+
+4,489
+-44.98
+-0.99%
+
+
+
+
+
+
+S&P 500
+
+1,916
+-11.02
+-0.57%
+
+
+
+
+
+
+
+
+
+1:47 P.M. ET
+
+
+                                  Nasdaq Composite carves out new session low, down 41 points
+                                
+
+
+
+
+
+ 
+1:47 P.M. ET
+
+
+                                  S&P 500 Index falls 9 points, or 0.5%, to 1,918
+                                
+
+
+
+
+
+ 
+1:46 P.M. ET
+
+
+Breaking
+      Stocks slip to near session lows; Dow industrials down 47 points
+                                
+
+
+
+
+
+ 
+1:46 P.M. ET
+
+
+                                  Pope Francis birth control could be justified in areas hit by zika virus
+                                
+
+
+
+
+
+ 
+1:38 P.M. ET
+
+
+                                  Obama does not plan to meet Fidel Castro on Cuba visit
+                                
+
+
+
+
+
+ 
+1:38 P.M. ET
+
+
+Updated
+      Here’s why oil rout is hurting the global economy instead of helping
+                                
+
+
+
+
+
+ 
+1:36 P.M. ET
+
+
+Updated
+      Pope Francis calls Donald Trump ‘not Christian’ over wall stance
+                                
+
+
+
+
+
+ 
+1:27 P.M. ET
+
+
+Breaking
+      Stocks slipping toward session lows; Dow industrials down 40 points
+                                
+
+
+
+
+
+ 
+1:14 P.M. ET
+
+
+Opinion
+      The S&P 500 rose for three days in a row — here’s what it could mean
+                                
+
+
+
+
+
+ 
+1:06 P.M. ET
+
+
+                                  Amazon was upgraded at Canaccord Genuity, which sees potential for a 40% rally in the stock
+                                
+
+
+
+
+
+ 
+12:57 P.M. ET
+
+
+                                  Here’s what Dukakis thinks about schoolmate Scalia — and the Bush family
+                                
+
+
+
+
+
+ 
+12:53 P.M. ET
+
+
+Updated
+      Here’s why Fed’s Bullard is now leery of more interest-rate increases
+                                
+
+
+
+
+
+ 
+12:48 P.M. ET
+
+
+                                  Public divided on nomination by Obama of Scalia replacement
+                                
+
+
+
+
+
+ 
+12:41 P.M. ET
+
+
+Updated
+      Dow struggles to lift off as slumping Wal-Mart  offsets IBM surge
+                                
+
+
+
+
+
+ 
+12:32 P.M. ET
+
+
+                                  Amazon stock price target raised to $750 from $600 at Canaccord Genuity
+                                
+
+
+
+
+
+ 
+12:32 P.M. ET
+
+
+                                  Amazon upgraded to buy from hold at Canaccord Genuity
+                                
+
+
+
+
+
+ 
+12:31 P.M. ET
+
+
+Updated
+      FTSE 100 knocked lower as commodity shares struggle 
+                                
+
+
+
+
+
+ 
+12:29 P.M. ET
+
+
+Updated
+      Apple’s iPhone sales fall for the first time, says Gartner
+                                
+
+
+
+
+
+ 
+12:29 P.M. ET
+
+
+Updated
+      IRS reports 400% increase in email scams
+                                
+
+
+
+
+
+ 
+12:28 P.M. ET
+
+
+Opinion
+      Developing countries must stem the huge outflows of capital
+                                
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Log In
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+
+News Viewer
+
+
+Video
+
+
+Radio, Podcasts
+
+
+First Take
+
+
+Games
+
+
+Portfolio
+
+
+My MarketWatch
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_front', [[280, 40]], 'ad-nav-home-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Home Sponsor', slot, 'ad-nav-home-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+News Viewer
+
+
+
+
+
+
+
+                                      googletag.cmd.push(function () {
+                                          var slot = googletag.defineSlot('/2/marketwatch.com/nav_newsviewer', [[280, 40]], 'ad-nav-news-viewer-sponsor')
+                                                  .addService(googletag.pubads());
+                                          googletag.enableServices();
+                                          slotMachine.add('Nav News Viewer Sponsor', slot, 'ad-nav-news-viewer-sponsor');
+                                      });
+                                  
+
+
+
+
+
+
+
+
+Markets
+
+
+
+
+
+
+
+Markets Stream
+
+
+U.S.
+
+
+Europe/Middle East
+
+
+Emerging Markets
+
+
+Asia
+
+
+Canada
+
+
+Columns
+
+
+Market Snapshot
+
+
+Movers & Shakers
+
+
+The Tell
+
+
+Currencies
+
+
+Futures Movers
+
+
+Pre-Market News
+
+
+
+
+Tools
+
+
+Earnings Wall
+
+
+Markets Overview
+
+
+IPO Calendar
+
+
+Earnings Calendar
+
+
+Currency Tools
+
+
+Futures Contracts
+
+
+Market Screener
+
+
+Hulbert Interactive
+
+
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_markets', [[280, 40]], 'ad-nav-markets-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Markets Sponsor', slot, 'ad-nav-markets-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+Investing
+
+
+
+
+
+
+
+Stocks
+
+
+Mutual Funds
+
+
+ETFs
+
+
+Options
+
+
+Bonds
+
+
+Commodities
+
+
+Currencies
+
+
+Futures
+
+
+Hedge Funds/Insider Trades
+
+
+Getting Started
+
+
+MarketWatch Adviser
+
+
+Columns
+
+
+Options Trader
+
+
+Revolution Investing
+
+
+
+
+Tools
+
+
+Stock Screener
+
+
+Funds Finder
+
+
+ETF Screener
+
+
+Options Screener
+
+
+IPO Calendar
+
+
+Earnings Calendar
+
+
+More...
+
+
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_investing', [[280, 40]], 'ad-nav-investing-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Investing Sponsor', slot, 'ad-nav-investing-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+Trading Deck
+
+
+
+
+
+
+                        .
+                      
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_tradingdeck', [[280, 40]], 'ad-nav-trading-deck-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Trading Deck Sponsor', slot, 'ad-nav-trading-deck-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+Personal Finance
+
+
+
+
+
+
+
+10 Things
+
+
+Big Spender
+
+
+Real Estate
+
+
+Spending & Saving
+
+
+Taxes
+
+
+Columns
+
+
+The Moneyologist
+
+
+Brett Arends
+
+
+Bill Bischoff
+
+
+Amy Hoak
+
+
+Chuck Jaffe
+
+
+Jennifer Openshaw
+
+
+Jennifer Waters
+
+
+
+
+Tools
+
+
+Funds Finder
+
+
+Today's Rates
+
+
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_personalfinance', [[280, 40]], 'ad-nav-personal-finance-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Personal Finance Sponsor', slot, 'ad-nav-personal-finance-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+Retirement
+
+
+
+
+
+
+
+RetireMentors
+
+
+Encore
+
+
+Taxes
+
+
+Retire Here, Not There
+
+
+How-to Guides
+
+
+Social Security
+
+
+Estate Planning
+
+
+Events
+
+
+Columns
+
+
+Robert Powell's Retirement Portfolio
+
+
+Andrea Coombes's Working Retirement
+
+
+
+
+Tools
+
+
+Retirement Planner
+
+
+How long will my money last?
+
+
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_retirement', [[280, 40]], 'ad-nav-retirement-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Retirement Sponsor', slot, 'ad-nav-retirement-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+Economy
+
+
+
+
+
+
+
+Federal Reserve
+
+
+Capitol Report
+
+
+Economic Report
+
+
+Columns
+
+
+Darrell Delamaide
+
+
+Irwin Kellner
+
+
+Rex Nutting
+
+
+
+
+Tools
+
+
+Economic Calendar
+
+
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_economypolitics', [[280, 40]], 'ad-nav-economy-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Economy Sponsor', slot, 'ad-nav-economy-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+Real Estate
+
+
+
+
+
+
+
+Location Scouts
+
+
+realtor.com
+
+
+
+
+
+                                        googletag.cmd.push(function () {
+                                            var slot = googletag.defineSlot('/2/marketwatch.com/nav_realestate', [[280, 40]], 'ad-nav-real-estate-sponsor')
+                                                    .addService(googletag.pubads());
+                                            googletag.enableServices();
+                                            slotMachine.add('Nav Real Estate Sponsor', slot, 'ad-nav-real-estate-sponsor');
+                                        });
+                                    
+
+
+
+
+
+
+
+
+
+My MarketWatch
+
+
+Portfolio
+
+
+Watchlist
+
+
+Alerts
+
+
+Games
+
+
+Log In
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+Industries
+
+
+
+
+
+
+
+
+         Elon Musk: A thermostat-sized box may one day power your house
+    
+
+
+
+
+
+                googletag.cmd.push(function () {
+                    var slot = googletag.defineSlot('/2/marketwatch.com/industries_story', [[300, 250],[300, 600],[300, 1050]], 'ad-display-ad')
+                            .addService(googletag.pubads());
+                        slot.defineSizeMapping([[[1024, 0], [[300,250],[300,600],[300,1050]]], [[0,0], [[300,250]]]]);
+                    googletag.enableServices();
+                    slotMachine.add('Display Ad', slot, 'ad-display-ad');
+                });
+            
+
+
+
+
+    By
+        
+        Jennifer Booton
+
+Published: Sept 18, 2014 7:57 a.m. ET
+
+Share
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+The ties between Tesla and SolarCity will only tighten from here
+
+
+
+
+      window.videoDomain = 'http://video-api.wsj.com';
+    
+
+
+
+
+
+
+
+
+Jennifer Booton/MarketWatch
+
+Tesla CEO Elon Musk and SolarCity CEO Lyndon Rive discuss the future of solar energy at the Nasdaq on Wednesday.
+
+
+
+
+
+
+
+
+By
+
+
+                                        JenniferBooton
+
+
+Reporter
+
+
+
+
+
+
+
+
+NEW YORK (MarketWatch) — It’s easy to get lost in the numbers that swirl around a project as massive as Tesla’s $5 billion gigafactory. But by sitting back and looking outside of the box, the potential ground-level benefits of such an immense factory begin to set in.  The numbers might make you woozy: a $5 billion investment, a $1.25 billion tax break in Nevada, 6,500 new jobs, 50 gigawatts of battery storage by 2020, 500,000 electric cars per year.  What this really means is the massive factory -- which Tesla Motors Inc. 
+
+                            
+                            
+                                  
+      
+      
+      
+      
+      
+      
+      
+                                  
+                                    TSLA, -2.24%
+
+                            
+                                  
+      
+      
+      
+      
+      
+      
+      
+                                         CEO Elon Musk and his first cousin, SolarCity Corp. 
+
+                            
+                            
+                                  
+      
+      
+      
+      
+      
+      
+      
+                                  
+                                    SCTY, -6.30%
+
+                            
+                                  
+      
+      
+      
+      
+      
+      
+      
+                                          CEO Lyndon Rive, hinted Wednesday at a private conference may be the first of several perhaps larger plants -- is that an increased level of manufacturing scale will improve the efficiency and affordability of lithium-ion batteries.
+
+That, in turn, will power not just the car, but also the home. In fact, of the 50 gigawatts of battery power Tesla aims to produce through the gigafactory by 2020, 15 gigawatts is expected to be funneled directly towards stationary energy storage systems.  It’s that intersection of batteries and power storage that these two cousins, who conceived of SolarCity several years ago in an RV on their way to Burning Man, hope to forge together.  SolarCity and Tesla have for years operated as separate entities, seemingly with a separate focus. But that is starting to change. Musk, in a closed-door interview with the press on Wednesday, said Tesla is using SolarCity’s customers as a base to discover how to make battery packs that are small enough, light enough and powerful enough that they might one day sit comfortably in your garage, a mere four inches from the wall. 
+
+                  “We want to make sure the gigafactory has excess capacity for grid storage.”
+                  
+
+                              Tesla CEO Elon Musk
+                          
+
+
+
+
+
+
+Musk didn’t provide specifics on this futuristic vision, but alluded to the fact that home storage might one day fit into a device similar to the size of a Nest thermostat 
+
+                            
+                            
+                                  
+      
+      
+      
+      
+      
+      
+      
+                                  
+                                    GOOGL, -1.77%
+
+                            
+                                  
+      
+      
+      
+      
+      
+      
+      
+                                          or, perhaps, a flat-screen TV.  “We want to make sure the gigafactory has excess capacity for grid storage,” Musk said earlier Wednesday at a SolarCity and renewable energy conference. And in envisioning this future, Tesla is working directly with SolarCity to determine what its customers need. 
+
+That paves the way for a potential partnership between the two in the future, although Musk said Tesla wouldn’t, well “couldn’t,” provide exclusivity to SolarCity, likely for financial and competitive reasons.  Today, the batteries needed to store a sufficient amount of solar energy are far too large to be tacked onto a single residential home. However,as the two work together and utilize SolarCity’s existing customer base, they hope to scale down the size of a battery over time. Shares of Tesla were up 0.56% to $262.84 in premarket trade Thursday after closing up 0.25% to $261.38 on Wednesday. SolarCity’s climbed 1.06% premarket, following a 0.19% decline to $67 on Wednesday.  The symbiotic relationship between these two companies was first introduced in late 2013 in the form of SolarCity’s DemandLogic product, which uses complex algorithms in conjunction with a homeowner’s power system to discharge power from a Tesla battery during peak demand hours. At 5 p.m., when the sun starts to set, solar production decreases and a homeowner becomes more reliant on the utility, the battery steps in as a temporary fix during peak, high-demand periods, enabling the homeowner to meet energy needs without relying too heavily on the utility and being forced to pay peak prices. The next morning as the sun rises, the battery is fully charged again and the cycle restarts. 
+
+
+
+
+Tesla Motors Inc.
+
+
+
+
+
+
+
+
+
+
+
+A look at the Tesla Gigafactory to be based in Nevada.
+
+In the future, a dual system like this may help to keep more energy off the grid and make homes more self-sufficient. However, Musk and Rive both admitted that the utility will never quite die, with Musk predicting a future where 65% of energy consumption comes from solar, and the rest from utilities.  “A grid is useful and has its needs,” Rive said. “But I’m hoping a majority will come from the inside.”
+
+
+                                More from MarketWatch
+                            
+
+
+
+
+
+
+
+                googletag.cmd.push(function () {
+                    var slot = googletag.defineSlot('/2/marketwatch.com/industries_story', [[1, 1]], 'ad-teads')
+                            .addService(googletag.pubads());
+                        slot.setTargeting('product', 'inarticlevid');
+                    googletag.enableServices();
+                    slotMachine.add('Teads', slot, 'ad-teads');
+                });
+            
+
+
+
+
+
+
+
+                                googletag.cmd.push(function () {
+                                    var slot = googletag.defineSlot('/2/marketwatch.com/article_stock_module', [[80, 21]], 'ad-stock-references-ad')
+                                            .addService(googletag.pubads());
+                                    googletag.enableServices();
+                                    slotMachine.add('Stock References Ad', slot, 'ad-stock-references-ad');
+                                });
+                            
+
+
+Quote References
+
+
+TSLA
+
+-3.78
+-2.24%
+
+
+
+SCTY
+
+-1.31
+-6.30%
+
+
+
+GOOGL
+
+-12.97
+-1.77%
+
+
+
+
+
+More News from MarketWatch
+
+
+Top Stories
+Trending
+Recommended
+
+
+
+
+
+
+
+
+
+
+
+
+Negative interest rates set stage for next crisis, Stephen Roach says
+
+
+
+
+
+
+
+
+
+Dow struggles to lift off as slumping Wal-Mart  offsets IBM surge
+
+
+
+
+
+
+
+
+
+Here’s why Fed’s Bullard is now leery of more interest-rate increases
+
+
+
+
+
+
+
+
+
+Don’t quit your job if you work in 1 of these 5 industries
+
+
+
+
+
+
+
+
+
+Is Wall Street in the middle of a ‘garbage’ stock-market rally?
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+                                    Jennifer
+                                    Booton
+
+
+
+
+
+
+
+
+                            Jennifer Booton is a MarketWatch reporter based in New York. You can follow her on Twitter @jbooton.
+                        
+
+
+
+MarketWatch Partner Center
+
+
+
+
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-1')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '1');
+                        slot.setTargeting('tile', '10');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 1', slot, 'ad-broker-button-1');
+                            });
+                        
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-2')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '2');
+                        slot.setTargeting('tile', '11');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 2', slot, 'ad-broker-button-2');
+                            });
+                        
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-3')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '3');
+                        slot.setTargeting('tile', '12');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 3', slot, 'ad-broker-button-3');
+                            });
+                        
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-4')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '4');
+                        slot.setTargeting('tile', '13');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 4', slot, 'ad-broker-button-4');
+                            });
+                        
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-5')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '5');
+                        slot.setTargeting('tile', '14');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 5', slot, 'ad-broker-button-5');
+                            });
+                        
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-6')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '6');
+                        slot.setTargeting('tile', '15');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 6', slot, 'ad-broker-button-6');
+                            });
+                        
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/brokerbuttons.marketwatch.com/industries_story', [[288, 40]], 'ad-broker-button-7')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('pos', '7');
+                        slot.setTargeting('tile', '16');
+                    googletag.enableServices();
+                                slotMachine.add('Broker Button 7', slot, 'ad-broker-button-7');
+                            });
+                        
+
+
+ 
+
+                googletag.cmd.push(function () {
+                    var slot = googletag.defineSlot('/2/bottom.marketwatch.com/industries_story', [[300, 250],[300, 600]], 'ad-bottom-display-ad')
+                            .addService(googletag.pubads());
+                    googletag.enableServices();
+                    slotMachine.add('Bottom Display Ad', slot, 'ad-bottom-display-ad');
+                });
+            
+
+
+
+            $(document).ready(function() {
+                if (window.MutationObserver) {  // arrive breaks if MutationObserver not supported by browser
+                    $(".outbrain-widget-SB_4").arrive(".ob-widget", function () {
+                        $(".outbrain-widget-SB_4").unbindArrive();
+                        $(".outbrain-widget-SB_4").trigger("rendered");
+                    });
+                }
+                else {  // TODO ~ remove; listening to this event causes performance problems
+                    $(".outbrain-widget-SB_4").on('DOMNodeInserted', function () {
+                        $(".outbrain-widget-SB_4").off('DOMNodeInserted');
+                        $(".outbrain-widget-SB_4").trigger('rendered');
+                    });
+                }
+            });
+        
+
+
+
+
+
+
+
+                                    Jennifer
+                                    Booton
+
+
+
+
+
+
+
+
+                            Jennifer Booton is a MarketWatch reporter based in New York. You can follow her on Twitter @jbooton.
+                        
+
+
+
+
+            We Want to
+            Hear from You
+
+
+Join the conversation
+Comment
+
+
+
+
+                medianet_width = "600";
+                medianet_height = "250";
+                medianet_crid = "305312222";
+                medianet_versionId = "111299";
+                (function() {
+                    var isSSL = 'https:' == document.location.protocol;
+                    var mnSrc = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/nmedianet.js?cid=8CU6CD37D' + (isSSL ? '&https=1' : '');
+                    document.write('<scr' + 'ipt type="text/javascript" id="mNSC" src="' + mnSrc + '"></scr' + 'ipt>');
+                })();
+            
+
+
+
+
+
+
+
+
+
+
+
+Careers
+
+
+
+
+
+
+
+Don't quit your job if you work in these 5 industries
+
+
+View More
+
+
+
+
+Mansion Global
+
+
+
+
+
+
+
+Haute home schools designed to give kids a bespoke education
+
+
+View More
+
+
+
+
+Markets
+
+
+
+
+
+
+
+Talk of China dumping Treasurys may be true
+
+
+View More
+
+
+
+
+Markets
+
+
+
+
+
+
+
+Is the stock market in the middle of a 'garbage' rally?
+
+
+View More
+
+
+
+
+
+
+Sponsored Headlines
+
+
+
+
+
+
+
+MarketWatch
+
+Site Index
+Topics
+Help
+Feedback
+Newsroom Roster
+Media Archive
+Premium Products
+Mobile
+
+
+
+Company
+
+Company Info
+Code of Conduct
+Corrections
+Advertising Media Kit
+Advertise Locally
+License our Content
+Broker Center
+Your Ad Choices
+
+
+
+Dow Jones Network
+
+WSJ.com
+Barron's Online
+BigCharts
+Virtual Stock Exchange
+Financial News Online
+WSJ.com Small Business
+realtor.com
+Mansion Global
+
+
+
+Back to Top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright ©2016 MarketWatch, Inc.  All rights reserved.
+
+                By using this site you agree to the Terms of Service,
+                Privacy Policy, and Cookie Policy.
+            
+
+                Intraday Data provided by SIX Financial Information and subject to terms of use.
+                Historical and current end-of-day data provided by SIX Financial Information. Intraday data
+                delayed per exchange requirements. S&P/Dow Jones Indices (SM) from Dow Jones & Company, Inc.
+                All quotes are in local exchange time. Real time last sale data provided by NASDAQ. More
+                information on NASDAQ traded symbols and their current financial status. Intraday
+                data delayed 15 minutes for Nasdaq, and 20 minutes for other exchanges. S&P/Dow Jones Indices (SM)
+                from Dow Jones & Company, Inc. SEHK intraday data is provided by SIX Financial Information and is
+                at least 60-minutes delayed. All quotes are in local exchange time.
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Advanced Search
+
+
+
+
+
+
+
+
+
+Tesla Motors Inc.
+U.S.: Nasdaq: TSLA
+
+
+
+
+$164.90
+
+-3.78
+(-2.24%)
+
+
+
+
+
+
+
+
+Volume2.9M
+Open$172.42
+High$172.95
+Low$164.87
+P/E Ratio0
+Div Yield0
+Market Cap22.1B
+
+
+
+
+
+
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/marketwatch.com/sponsor_livequotes', [[288, 40]], 'ad-quote-tip-xnasstocktsla')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('sym', 'TSLA');
+                    googletag.enableServices();
+                                slotMachine.add('Quote Tip XNASStockTSLA', slot, 'ad-quote-tip-xnasstocktsla');
+                            });
+                        
+
+
+
+
+
+SolarCity Corp.
+U.S.: Nasdaq: SCTY
+
+
+
+
+$19.48
+
+-1.31
+(-6.30%)
+
+
+
+
+
+
+
+
+Volume7.1M
+Open$21.95
+High$22.00
+Low$19.41
+P/E Ratio0
+Div Yield0
+Market Cap2.0B
+
+
+
+
+
+
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/marketwatch.com/sponsor_livequotes', [[288, 40]], 'ad-quote-tip-xnasstockscty')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('sym', 'SCTY');
+                    googletag.enableServices();
+                                slotMachine.add('Quote Tip XNASStockSCTY', slot, 'ad-quote-tip-xnasstockscty');
+                            });
+                        
+
+
+
+
+
+Alphabet Inc. Cl A
+U.S.: Nasdaq: GOOGL
+
+
+
+
+$719.00
+
+-12.97
+(-1.77%)
+
+
+
+
+
+
+
+
+Volume1.4M
+Open$733.96
+High$736.00
+Low$718.95
+P/E Ratio30.95
+Div Yield0
+Market Cap494.8B
+
+
+
+
+
+
+
+
+
+                            googletag.cmd.push(function () {
+                                var slot = googletag.defineSlot('/2/marketwatch.com/sponsor_livequotes', [[288, 40]], 'ad-quote-tip-xnasstockgoogl')
+                                        .addService(googletag.pubads());
+                                    slot.setTargeting('sym', 'GOOGL');
+                    googletag.enableServices();
+                                slotMachine.add('Quote Tip XNASStockGOOGL', slot, 'ad-quote-tip-xnasstockgoogl');
+                            });
+                        
+
+
+
+
+
+LatestNews
+
+
+    var blueGrass2SilentTest=true;
+
+
+
+
+<li class="shareable" data-sequence="{{Sequence}}" data-number="{{MessageNumber}}" data-share-modprefix="mw_latestnews_" data-share-hover="true" data-share-text="{{Headline}}" data-share-url="{{ShareUrl}}">
+
+  {{#Url}}
+  <span class="timestamp">{{FormattedTimestamp}}</span>
+  <div class="headline">
+    <a target="_blank" href="{{Url}}">
+      {{#Label}}
+        <span class="label {{Label}}">{{Label}}</span>
+      {{/Label}}
+      {{Headline}}
+    </a>
+    <div class="share-icons dark-matter">
+      <button class="social-button facebook fa fa-facebook-square trackable" data-track-click="social_latestnews_facebook"></button>
+      <button class="social-button twitter fa fa-twitter trackable" data-track-click="social_latestnews_twitter"></button>
+    </div>
+  </div>
+  {{/Url}}
+  {{^Url}}
+  <span class="timestamp no-social">{{FormattedTimestamp}}</span>
+  <span class="headline">{{Headline}}</span>
+  {{/Url}}
+</li>
+{{#linker}}
+
+{{#results}}
+    <div id="site-search-stocks" class="site-search-section">
+        {{#symbolsResultsText}}
+            <span class="results-count">{{symbolsResultsText}}</span>
+        {{/symbolsResultsText}}
+        <h3>Stocks</h3>
+        {{#symbols}}
+            {{#quote}}
+                <a class="quote-box" href="{{quote.link}}">
+                    <h4 class="display">{{ticker}}</h4>
+                    <div class="company">{{company}}</div>
+                    <div class="quote">
+                        <span class="price">{{formattedLastPrice}}</span>
+                        <span class="change {{netChange}}">{{formattedNetChange}}</span>
+                        <span class="change {{changePercent}}">{{formattedChangePercent}}</span>
+                    </div>
+                </a>
+            {{/quote}}
+        {{/symbols}}
+        {{^symbols}}
+            <div class="no-results">No results found</div>
+        {{/symbols}}
+    </div>
+    <div id="site-search-editorial">
+        <div id="site-search-columns" class="site-search-section">
+            {{#columnsResultsText}}
+                <span class="results-count">{{columnsResultsText}}</span>
+            {{/columnsResultsText}}
+            <h3>Columns</h3>
+            {{#columns}}
+                <div>
+                    <a href="{{columnLink}}">{{title}}</a>
+                </div>
+            {{/columns}}
+            {{^columns}}
+                <div class="no-results">No results found</div>
+            {{/columns}}
+        </div>
+        <div id="site-search-authors" class="site-search-section">
+            {{#authorsResultsText}}
+                <span class="results-count">{{authorsResultsText}}</span>
+            {{/authorsResultsText}}
+            <h3>Authors</h3>
+            {{#authors}}
+                <div>
+                    <a href="{{authorLink}}">{{name}}</a>
+                </div>
+            {{/authors}}
+            {{^authors}}
+                <div class="no-results">No results found</div>
+            {{/authors}}
+        </div>
+        <div id="site-search-topics" class="site-search-section">
+            {{#topicsResultsText}}
+                <span class="results-count">{{topicsResultsText}}</span>
+            {{/topicsResultsText}}
+            <h3>Topics</h3>
+            {{#organizations}}
+                <div class="result-type">Organizations</div>
+                <div class="result-value">
+                    <a href="/organizations/{{link}}">{{name}}</a>
+                </div>
+            {{/organizations}}
+            {{#people}}
+                <div class="result-type">People</div>
+                <div class="result-value">
+                    <a href="/people/{{link}}">{{name}}</a>
+                </div>
+            {{/people}}
+            {{#subjects}}
+                <div class="result-type">Subjects</div>
+                <div class="result-value">
+                    <a href="/subjects/{{link}}">{{name}}</a>
+                </div>
+            {{/subjects}}
+            {{#companies}}
+                <div class="result-type">Companies</div>
+                <div class="result-value">
+                    <a href="/companies/{{link}}">{{name}}</a>
+                </div>
+            {{/companies}}
+            {{^topics}}
+                <div class="no-results">No results found</div>
+            {{/topics}}
+        </div>
+    </div>
+{{/results}}
+
+{{/linker}}
+{{#headlines}}
+    <div class="article">
+        <a class="headline" href="{{Url}}">{{Headline}}</a>
+        <p class="summary">{{Abstract}}</p>
+    </div>
+{{/headlines}}
+{{#headlines}}
+<div class="article shareable" data-share-hover="true" data-share-text="{{Headline}}" data-share-url="{{ShareUrl}}">
+  <span class="timestamp">{{FormattedTimestamp}}</span>
+  <div class="stuff">
+    {{#Url}}
+    {{#Label}}
+      <span class="label {{Label}}">{{Label}}</span>
+    {{/Label}}
+    <a class="headline trackable" target="_blank" href="{{Url}}" data-track-mod="MW_story_latest_news">{{Headline}}</a>
+    <div class="share-icons invisible">
+      <button class="social-button facebook fa fa-facebook-square trackable" data-track-click="social_navnewsviewer_facebook"></button>
+      <button class="social-button twitter fa fa-twitter trackable" data-track-click="social_navnewsviewer_twitter"></button>
+    </div>
+    {{/Url}}
+    {{^Url}}
+    <span class="headline">{{Headline}}</span>
+    {{/Url}}
+  </div>
+</div>
+{{/headlines}}
+<li><span class="timestamp">{{FormattedTimestamp}}</span><a href="{{Url}}?mod=MW_story_hoverstory">{{Headline}}</a></li>
+{{#bulletins}}
+    {{^Expired}}
+    {{^closed}}
+        {{#Bulletin}}
+            <div class="notification bulletin {{bg}}">
+                <h3 class="module-header">Bulletin</h3>
+                {{^link}}
+                    <span class="message">{{Subject}}</span>
+                    <button class="bulletin-close"><img src="{{resources.content}}/svg/icons/ico-close-white.svg" alt="Close Bulletin" /></button>
+                {{/link}}
+                {{#link}}
+                    <a href="{{url}}">
+                        <span class="message">{{Subject}}</span>
+                    </a>
+                    <button class="bulletin-close"><img src="{{resources.content}}/svg/icons/ico-close-white.svg" alt="Close Bulletin" /></button>
+                    <div class="shareable" data-share-url="{{shareUrl}}" data-share-text="{{Subject}}">
+                        <button class="twitter"><img src="{{resources.content}}/svg/icons/ico-twitter-white.svg" alt="Share on Twitter" /></button>
+                        <button class="facebook"><img src="{{resources.content}}/svg/icons/ico-facebook-white.svg" alt="Share on Facebook" /></button>
+                    </div>
+                {{/link}}
+            </div>
+        {{/Bulletin}}
+    {{/closed}}
+    {{/Expired}}
+{{/bulletins}}
+{{#alert}}
+<div id="investor-alert" class="notification">
+  {{#text}}
+  <h3 class="module-header">Investor</h3>
+  <span class="message">
+    {{text}}
+    <span class="timestamp">{{time}}</span>
+  </span>
+  <div class="investor-alert-ad">
+    {{#sponsor}}
+    {{> ad}}
+    {{/sponsor}}
+  </div>
+  {{/text}}
+</div>
+{{/alert}}
+ 
+
+	// if present, canonical link is preferred
+	var p = '/story/elon-musk-a-thermostat-sized-box-may-one-day-power-your-house-2014-09-17';
+	var cl = $('link[rel=canonical]');
+	if (cl != undefined && cl.length > 0) {
+		p = $(cl).attr('href');
+	}
+	var _sf_async_config={uid:17409,domain:"marketwatch.com",path:p,zone:'industries_story'};
+
+	    _sf_async_config.authors = 'Jennifer Booton';
+        _sf_async_config.sections = 'Industries';
+
+
+	(function(){
+        function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+                (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+                "js/chartbeat.js");
+            document.body.appendChild(e);
+	    }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+        function() {
+            loadChartbeat();
+        } :
+        function() {
+            oldonload();
+            loadChartbeat();
+        }
+	})();
+
+
+    window.__mw_inactiveSettings = {
+        isEnabled: true,
+        inactiveTime: 120000
+    };
+ 
+        var ScrillaZilla = {
+            number: '2',
+            site: 'marketwatch.com',
+            zone: 'industries_story'
+        }
+    
+
+	(function(){
+        function loadDJInsightsHooks() {
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', "http://mw1.wsj.net/MW5/content/analytics/hooks.js");
+            document.body.appendChild(e);
+	    }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+        function() {
+            loadDJInsightsHooks();
+        } :
+        function() {
+            oldonload();
+            loadDJInsightsHooks();
+        }
+	})();
+
+
+ 
+        // copied from mw.module.ui, that doesn't load fast enough to use
+        function _trackingHacking() {
+            var z = $('#media-swatch').css('z-index');
+            switch (z) {
+                case '1':
+                    return 'desktop';
+                case '2':
+                    return 'tablet-landscape';
+                case '3':
+                    return 'tablet-portrait';
+                default:
+                    return 'phone';
+            }
+        }
+
+    if (typeof s != "undefined") {
+        s.channel = "MarketWatch";
+s.prop5 = "http://www.marketwatch.com/story/elon-musk-a-thermostat-sized-box-may-one-day-power-your-house-2014-09-17";
+s.prop6 = "http://www.marketwatch.com/story/elon-musk-a-thermostat-sized-box-may-one-day-power-your-house-2014-09-17";
+s.eVar11 = "MarketWatch";
+s.prop10 = "";
+s.prop11 = "";
+s.server = "www.marketwatch.com";
+s.prop13 = "industries_story";
+s.prop27 = "nomem";
+s.prop1 = "Article";
+s.prop2 = "MW_Industries";
+s.prop3 = "MW_Article_Normal_Industries|Industries";
+s.prop4 = "MW_Article_Normal_Elon Musk: A thermostat-sized box may one day power your house";
+s.prop8 = "MarketWatch.com";
+s.prop19 = "article";
+s.prop20 = "D5AD1C8C-3EAA-11E4-976D-A64A5D2F6737";
+s.prop21 = "Jennifer Booton";
+s.prop22 = "MW_Article_Normal_Industries|Industries";
+s.prop7 = "off";
+s.pageName = "MW_Article_Industries|Industries_D5AD1C8C-3EAA-11E4-976D-A64A5D2F6737";
+s.prop23 = "2014-09-18 7:57";
+s.events = "event12,event18";
+s.prop9 = "free";
+s.eVar4 = "MW_Article_Industries|Industries_D5AD1C8C-3EAA-11E4-976D-A64A5D2F6737";
+
+        s.prop8 += ' ' + _trackingHacking();
+        var s_code=s.t();if(s_code)document.write(s_code);
+     }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

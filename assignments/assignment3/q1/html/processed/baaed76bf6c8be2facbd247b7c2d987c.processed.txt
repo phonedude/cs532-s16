@@ -1,0 +1,3725 @@
+http://www.telegraph.co.uk/
+
+
+
+
+
+
+        // <![CDATA[
+        for(var i = 0; i < optimizely["activeExperiments"].length; i++){
+            var expid = optimizely["activeExperiments"][i];
+            var experimentname = optimizely.data.experiments[expid].name;
+            var variationname = optimizely.variationNamesMap[expid];
+            optimizely.$("head").prepend("<meta name=\"DCSext.opt\" content=\"" + experimentname + "-" + variationname +"\" />");
+        }
+        // ]]>
+    
+
+           /* EPOCH time at the start of the page */
+
+           /*As IE8 doest support Date.now() functionality,using the diffrent one*/
+             if (!Date.now) {
+                    Date.now = function now() {
+                      return new Date().getTime();
+                   };
+              }
+
+              var pageStartTime = Date.now();
+
+
+
+
+
+
+The Telegraph - Telegraph online, Daily Telegraph, Sunday Telegraph - Telegraph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var logo = function(param) {
+        document.onreadystatechange = function () {
+                if (document.readyState == "interactive") {
+                        document.getElementById("logo").src = param;
+                }
+        }
+}
+
+
+ logo("/template/ver1-0/i/thetelegraph_344.gif"); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var tmgOptaCallback = function() {
+            //Add logic below that will be executed once the opta widget loads
+            $('.standings-container tr:even').addClass('odd'); //even rows for tables
+            $('.standings-container tr:odd').addClass('even'); //odd rows for tables
+         };
+
+        // <![CDATA[
+        var _optaCallbacks;
+
+        if (_optaParams) {
+            _optaCallbacks = _optaParams.callbacks;
+        }
+
+        if (_optaCallbacks) {
+            if( _optaCallbacks.indexOf(tmgOptaCallback) < 0) {
+            _optaCallbacks.push(tmgOptaCallback);
+            }
+        } else {
+            _optaCallbacks = [tmgOptaCallback];
+        }
+
+        var _optaParams = {
+            custID: 'ea84a6c1e3333c9d011be831766d51de',
+            anim:   'none',
+            language: 'en_GB',
+            timezone: 0,
+            callbacks: _optaCallbacks
+        };
+        // ]]>
+    
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+            var _optaCallbacks = _optaParams.callbacks;
+
+            if (_optaCallbacks) {
+                if (_optaCallbacks.indexOf(optaTeamLinkingCallback) < 0) {
+                    _optaCallbacks.push(optaTeamLinkingCallback);
+                }
+            } else {
+                _optaCallbacks = [optaTeamLinkingCallback];
+            }
+
+            _optaParams.callbacks = _optaCallbacks;
+        
+
+
+.lazyImg{display:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.webtrendsAsyncInit=function(){
+    var dcs=new Webtrends.dcs().init({
+        dcsid:"dcsshgbi400000gscd62rrg43_4o2o",
+        domain:"webtrends.telegraph.co.uk",
+        timezone:0,
+        adimpressions:true,
+        adsparam:"WT.ac",
+        offsite:false,
+        download:true,
+        downloadtypes:"xls,doc,pdf,txt,csv,zip,docx,xlsx,rar,gzip",
+        metanames:"DCSext.MLC, DCSext.source, DCSext.Category, DCSext.Genre, DCSext.Channel, DCSext.imageNo, DCSext.GalleryType, DCSext.Content_Type, DCSext.Level, DCSext.author, DCSext.articleFirstPublished, DCSext.articleId, DCSext.productProvider, DCSext.productName, DCSext.EA_Search_Type, DCSext.EA_Search_Engine, DCSext.EA_Search_Phrase, DCSext.oss, DCSext.ossType, DCSext.cf, DCSext.cn, DCSext.cd, DCSext.pd,DCSext.cmsSect",        
+        fpcdom:".telegraph.co.uk",
+        plugins:{
+            hm:{src:"/template/ver1-0/js/asyncwebtrends/webtrends.hm.js",hmurlparams:"frame,image"},
+            qbert: { src:"/template/ver1-0/js/asyncwebtrends/qbert-wtplugin.js" }
+        }
+        });
+    if ($.cookie("tmg_subs") != null){
+    	var ts = $.parseJSON($.cookie("tmg_subs"));
+        dcs.DCSext.location = ts.location;
+    	dcs.DCSext.trialDescription =ts.trialDescription;
+	    dcs.DCSext.subscriptionType = ts.subscriptionType;
+	    dcs.DCSext.flowType = ts.flowType;
+	    dcs.DCSext.productType = ts.productType;
+	    dcs.DCSext.serviceId = ts.serviceId;
+	    dcs.DCSext.servicePriceId = ts.servicePriceId;
+	
+	    dcs.DCSext.discountVoucher = ts.discountVoucher;
+	    dcs.DCSext.partnerName = ts.partnerName;
+	    dcs.DCSext.currentPromoName = ts.currentPromoName;
+	    dcs.DCSext.sourcePromoName = ts.sourcePromoName;
+	    dcs.DCSext.promoType = ts.promoType;
+	    dcs.DCSext.tCode = ts.tCode;
+	    dcs.DCSext.status = ts.status == true  && ts.acquisitionCompleted == true ? 'Active':'Inactive';
+
+   }
+   //if( /Android|webOS|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { dcs.DCSext.platform="tablet";}    
+   //dcs.track();
+
+};
+(function(){
+    var s=document.createElement("script"); s.async=true; s.src="/template/ver1-0/js/asyncwebtrends/webtrends.js";
+    var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+}());
+
+
+
+//Events tracking for Google Analytics
+function trackGoogle() {
+try {var pageTracker = _gat._getTracker("UA-7226372-1");pageTracker._trackPageview();} catch(err) {}
+}
+
+//External links tracking through Google Analytics
+function isLinkExternal(link) {
+    var r = new RegExp('^https?://(?:www.)?' + location.host.replace(/^www./, ''));
+        return !r.test(link);
+}
+$(document).ready(function() {
+    $(document).bind('click', function(e) {
+        var target = (window.event) ? e.srcElement : e.target;
+        while (target) {
+            if (target.href) break;
+            target = target.parentNode;
+        }
+        if (!target || !isLinkExternal(target.href)) return true;
+        var link = target.href;
+        link = '/outgoing/' + link.replace(/:\/\//, '/');
+        _gaq.push(['_trackPageview', link]);
+    });
+});
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7226372-1']);
+  _gaq.push(['_setDomainName', 'telegraph.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+
+  var gs_channels="default";
+  // Last-updated: 2016-02-18 18:49:28.246
+gs_channels="rendevous,mastercardbrits,nuffield";
+
+
+
+    // <![CDATA[
+  var qcSegs = '';
+  var qcResults = function(qc){
+    for (var i=0;i<=qc.segments.length-1;i++){
+      if(qc.segments[i].id != 'D' && qc.segments[i].id != 'T') qcSegs += ';qc='+qc.segments[i].id;
+    }
+  }
+    // ]]>
+
+
+
+
+
+
+
+
+    document.domain = "telegraph.co.uk";
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	var _comscore = _comscore || [];
+	_comscore.push({
+		c1 : "2",
+		c2 : "6035736"
+	});
+	(function() {
+		var s = document.createElement("script"), el = document
+				.getElementsByTagName("script")[0];
+		s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb"
+				: "http://b")
+				+ ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	})();
+
+
+
+
+
+
+
+
+
+
+		var subsInfo = new Object();
+		subsInfo.channel =  $('meta[name="DCSext.Channel"]').attr("content");
+		if(subsInfo.channel==undefined){subsInfo.channel='';}
+		subsInfo.mlc = $('meta[name="DCSext.MLC"]').attr("content");
+		if(subsInfo.mlc==undefined){subsInfo.mlc='';}
+		subsInfo.category = $('meta[name="DCSext.Category"]').attr("content");
+		if(subsInfo.category==undefined){subsInfo.category='';}
+		subsInfo.level = $('meta[name="DCSext.Level"]').attr("content");
+		if(subsInfo.level==undefined){subsInfo.level='';}
+		subsInfo.author = $('meta[name="DCSext.author"]').attr("content");
+		if(subsInfo.author==undefined){subsInfo.author='';}
+		subsInfo.content_type = $('meta[name="DCSext.Content_Type"]').attr("content");
+		if(subsInfo.content_type==undefined){subsInfo.content_type='';}
+		subsInfo.articleId = $('meta[name="DCSext.articleId"]').attr("content");
+		if(subsInfo.articleId==undefined){subsInfo.articleId='';}
+		var subsJson = JSON.stringify(subsInfo);
+		$.cookie("tmg_subs_referer",subsJson, { path: '/', domain: 'telegraph.co.uk'});
+		var inviteWTUrlSuffix='?channel='+ subsInfo.channel+'&mlc='+subsInfo.mlc+'&category='+ subsInfo.category+'&level='+subsInfo.level+'&author='+subsInfo.author+'&content_type='+subsInfo.content_type+'&articleId='+subsInfo.articleId;
+		
+		<!-- default inviteUrl value is UK-->
+		var inviteUrl = "" + '/subscriptions/invitation/';
+		
+		
+			
+				
+					var inviteUrl = "" + "/subscriptions/invitation-intl/";
+				
+			
+		
+		
+				
+				
+				
+			
+		var plink = "http://www.telegraph.co.uk/template/ver1-0/templates/fragments/common/toolBar-js.jsp";
+	
+
+
+
+
+
+Accessibility links
+
+Skip to content
+Skip to navigation
+
+
+
+
+
+
+
+
+
+		Thursday 18 February 2016Last updated 8 minutes ago
+
+
+
+
+
+
+
+
+
+
+
+
+                                        Search - enhanced by OpenText
+
+
+
+
+
+
+
+
+
+
+/* EPOCH time at the  end of Header */
+var tmgHeaderTimerEnd=Date.now();
+
+
+
+
+
+
+Home
+Video
+News
+World
+Sport
+Finance
+Comment
+Culture
+Travel
+Life
+Women
+Fashion
+Luxury
+Tech
+Cars
+Film
+TV
+
+
+
+
+
+
+
+
+
+Hot Topics
+
+
+
+
+Hot Topics
+
+EU referendum
+
+
+Weather
+
+
+Donald Trump
+
+
+Premier League
+
+
+Champions League
+
+
+Markets
+
+
+Personal Finance
+
+
+
+
+
+
+
+
+
+Advertisement
+
+
+
+
+	document.write(tmgAdsBuildAdTag("ban", "970x250,970x90,940x250,728x90,468x60", "adj", "", 2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EU summit: no second renegotiation if Britain votes to leave, say Europe's leaders
+
+
+
+
+ 
+
+
+
+
+
+
+Belgian plan to prevent the UK from "blackmailing" Europe with an out vote as 
+  David Cameron's reform deal blasted as "an irrelevant sideshow" - follow the 
+  latest news 
+
+
+Peter Foster: Cameron's last chance to beat EU bureaucrats
+
+EU referendum: The Europe debate in 7 charts
+
+Will the UK leave the EU? How to track the odds of a Brexit
+
+
+
+
+
+
+
+
+
+Who are these contemptible hypocrites trying to block David Cameron's EU deal?
+
+
+
+
+ 
+
+
+
+
+Nigel Jones: The Prime Minister's meagre demands are too much for the 
+  likes of France and Spain, who prefer to see Britain shackled to a corpse 
+
+
+
+
+
+
+Choked until unconscious — for a £15k Rolex
+
+
+
+
+ 
+
+
+
+
+Police release shocking footage of a brutal robbery. Warning: contains 
+  images some viewers may find distressing
+
+
+
+
+
+
+
+
+ 
+
+
+Momentum activists 'fuelling rise of anti-semitism' at Oxford University Labour Club
+
+
+
+
+"Vicious culture of personal attacks" 
+
+
+
+
+
+
+
+
+ 
+
+
+Secret video filmed by Adam Johnson's schoolgirl accuser before alleged sexual encounter
+
+
+
+
+
+
+William and Kate in Anglesey to mark end of RAF Search and Rescue Force
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Schoolgirls 'dropped TV on woman' who suffered more than 100 injuries in five-hour torture murder, court hears
+
+
+
+
+
+
+
+
+ 
+
+
+Hundreds of convicted murderers could appeal their sentences after 'joint enterprise' law wrongly interpreted for 30 years
+
+
+
+
+
+
+Neighbours at war over 'torturous' piano-playing - by an award-winning young musician
+
+
+
+
+ 
+
+
+
+
+Court told that Joao Baptista was driven from his £5m Kensington home by "deafening" 
+  music following objection to 'iceberg' extension
+
+
+
+
+
+
+
+
+
+
+
+Midtjylland vs Man Utd - live: Memphis strikes after De Gea injury blow
+
+
+
+
+ 
+
+
+
+
+
+
+Visitors a goal up after seeing first-choice 'keeper withdraw from Europa 
+  League clash in Denmark. Join JJ Bull for the latest 
+
+
+
+
+
+
+
+50+ Fashion Week: 87-year-old model proves it's all about style, not age
+
+
+
+
+ 
+
+
+
+
+As Daphne Selfe graces the London Fashion Week catwalk, retailer JD Williams 
+  sets ball rolling on new collections for a huge and under-appreciated market 
+
+
+
+
+
+
+
+Revealed: Europe's booziest ski resort
+
+
+
+
+ 
+
+
+
+
+Research has uncovered the European ski resort with more bars per square 
+  kilometre than any other
+
+
+
+
+
+
+
+How the 'ideal' male body changes around the world
+
+
+
+
+ 
+
+
+
+
+A new series of Photoshopped images illustrates how different cultures 
+  perceive male beauty 
+
+
+
+
+
+
+
+
+
+• The worst female Photoshop fails
+
+
+
+
+
+
+
+
+'Dogs welcome, bankers banned' - restaurant owner turns away financiers after being refused loan
+
+
+
+
+ 
+
+
+
+
+
+
+
+'We've got £80k in student debt. Can we borrow £100k for our first home?'
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+News Headlines»
+
+
+
+
+Life through a lens: Beauty, drama and horror showcased in the World Press Photo Contest
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+iPhone sales fall for the first time
+
+
+
+
+
+
+
+
+
+Homeless woman hailed a hero over 'foiled' burglary is arrested in connection with the incident
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+N Korea's nuclear test 'could jolt volcano back to life'
+
+
+
+
+
+
+
+
+Alert over deadly fake airbags as suspected counterfeiter held
+
+
+
+
+
+
+
+
+
+Third of NHS drug panel 'paid by pharmaceutical firms'
+
+
+
+
+
+
+
+
+
+Don't be like Obama, says bizarre Russian anti-smoking ad
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Boy, two, hospitalised after being bitten by spider in Aldi bananas
+
+
+
+
+
+
+
+
+Ice and snow trigger commuter travel warnings
+
+
+
+
+
+
+
+
+
+Testicle removal mistake among 1,100 NHS errors
+
+
+
+
+
+
+
+
+
+Hoverboard rider chased and stabbed in near-fatal attack
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Former City trader in court charged with murdering wife at Essex home
+
+
+
+
+
+
+
+
+Cambridge undergraduate claims he was too drunk to have raped fellow student
+
+
+
+
+
+
+
+
+
+Cannabis does not cause anxiety and depression, study finds
+
+
+
+
+
+
+
+Peru's mysterious ‘boiling river’ which burns animals alive (but is nowhere near a volcano)
+
+
+
+
+
+ 
+
+
+
+
+
+
+Finance headlines»
+
+
+
+
+
+Oil prices crash after Saudis dash hope of production cut
+
+
+
+
+
+ 
+
+
+
+
+The Kingdom's foreign minister says other nations can freeze production or 
+  limit supply but Saudis will not take part in a cut 
+
+
+
+
+
+
+
+
+Centrica urges policy overhaul as it warns of 'looming gap' in UK energy supplies
+
+
+
+
+
+
+
+
+
+Asda serves up worst ever quarterly sales on record after bleak Christmas
+
+
+
+
+
+
+
+
+
+Global leaders must act now as fresh downturn looms, warns OECD
+
+
+
+
+
+
+
+
+
+This website names and shames companies with all-male boards
+
+
+
+
+
+
+
+
+
+Defence a new priority for Government, says BAE chief
+
+
+
+
+
+
+
+
+
+Eurotunnel boss calls for Channel Tunnel extension to protect against migrants
+
+
+
+
+
+
+
+
+
+British Gas profits rise 31pc to £574m
+
+
+
+
+
+
+
+
+Six Nations 2016
+
+
+
+
+
+Jones lays down law to England hopefuls
+
+
+
+
+
+ 
+
+
+
+
+Coach tells Danny Cipriani he needs to work harder, the squad is not a 
+  kindergarten and fitness levels are up '30 per cent’ 
+
+
+
+
+
+
+
+
+Is Cipriani good enough to be in the England side? Time to find out...
+
+
+
+
+
+
+
+
+
+Early indications of Jones' England reign
+
+
+
+
+
+
+
+
+
+Six Nations top performers: Most metres, tackles, carries, kicks - who comes out on top?
+
+
+
+
+
+
+
+
+
+Five attacking lessons for England
+
+
+
+
+
+
+
+
+
+Is this the worst Six Nations ever?
+
+
+
+
+
+
+
+
+
+France's brutal targeting of Sexton was a disgrace
+
+
+
+
+
+
+
+
+
+Thrilling of Georgie, Part II is Welsh smash hit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recommended»
+
+
+
+
+
+
+Microsoft Surface Book review: a brilliant hybrid made for Windows 10
+
+ 
+
+
+
+
+
+
+
+Welcome to the gun show: Sex, distrust and Trump inside the world's biggest arms fair
+
+ 
+
+
+
+
+
+
+
+'Lonely' chimp hugs human after years in isolation
+
+ 
+
+
+
+
+
+
+
+Meningitis B: everything parents need to know
+
+ 
+
+
+
+
+
+
+
+Ankara bombing: Is it safe to go to Turkey?
+
+ 
+
+
+
+
+
+
+
+Watch: Prince William's ex-girlfriend Rose Farquhar audition for The Voice UK
+
+ 
+
+
+
+
+
+
+
+The worst Photoshop fails of women's bodies 
+
+ 
+
+
+
+
+
+
+
+Tesco says au revoir to the French curved croissant because Brits prefer them straight
+
+ 
+
+
+
+
+
+
+
+How does Sports Illustrated secure the biggest models?
+
+ 
+
+
+
+
+
+
+
+How to survive working from home: 12 tips and tricks
+
+ 
+
+
+
+
+
+
+
+Pictures of the day
+
+ 
+
+
+
+
+
+
+
+'The most exciting and complete M car BMW has built'
+
+ 
+
+
+
+
+
+
+
+30 items that should be in your wardrobe by the time you’re 30 
+
+ 
+
+
+
+
+
+
+
+Telegraph Casino: enjoy classic table games and slots
+
+ 
+
+
+
+
+
+
+
+
+
+
+Sport»
+
+
+
+
+
+
+
+
+ 
+
+
+Why United must get rid of Van Gaal now
+
+
+
+
+
+
+Charlie Eccleshare: Waiting until summer could reduce chances of 
+  getting Mourinho, Van Gaal is clearly a lame duck, and club must learn 
+  lessons of Moyes debacle 
+
+
+
+
+Comments
+
+
+United won't be hit hard by losing Rooney
+
+Why Zlatan would flop in Premier League
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Is Cipriani good enough to be in the England side? Time to find out...
+
+
+
+
+Stats: There are those who say that Danny Cipriani deserves a place in 
+  the England team, but Eddie Jones isn't one of them... will the numbers tell 
+  us who's right? 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Adebayor blames Levy for Spurs stand-off
+
+
+
+
+Crystal Palace striker had a messy split from Tottenham last year, and he hold 
+  the club's chairman responsible 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Ibrahimovic hints at move to Man Utd
+
+
+
+
+PSG forward is an admirer of Jose Mourinho and refused to quash talk of a 
+  potential move to England this summer 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+ 
+
+
+10 phenomenal stats from Messi's 301 La Liga goals
+
+
+
+
+The Barcelona star has registered some spectacular numbers on his run to 301 
+  strikes in Spain's top tier 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+ 
+
+
+United won't be hit hard by losing Rooney
+
+
+
+
+Data: With Rooney facing a spell on the sidelines, we look at the 
+  potential damage to Louis van Gaal's team 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+ 
+
+
+Indonesian rookie to race for Manor... as Brit Stevens given boot
+
+
+
+
+Indonesian rookie Rio Haryanto replaces Will Stevens as second driver at Manor 
+  after bidding more than £10 million for the seat 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+ 
+
+
+Sampaoli emerges as serious Chelsea candidate
+
+
+
+
+Exclusive: Former Chile boss has talked his way into reckoning with 
+  Diego Simeone, Antonio Conte and Massimiliano Allegri 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+
+There has been a major redundancy programme at the FA to fund its share of the cost. Yet one question nags away at the 3G revolution: namely, how safe is the rubber crumb infill used on the pitches? 
+
+
+
+
+
+Sam Wallace
+
+
+There have been great captains who have taken their team to the heights. There have been few who have revolutionised cricket in their own country and outside it, as Bredon McCullum has
+
+
+
+
+
+Scyld Berry
+
+
+This travesty of a Fifa presidential election recalls the days of Comical Ali, who declared impending victory over America while American tanks shook the room in which he promised death to the invader
+
+
+
+
+
+Paul Hayward
+
+
+
+
+
+
+
+
+
+
+
+
+
+Comment & Analysis»
+
+
+
+Maria Caulfield MP
+
+
+
+Brussels can destroy our towns by fiat
+
+
+
+
+Bruce Clark
+
+
+
+Brexit could tip Northern Ireland into violence
+
+
+
+
+Azeem Ibrahim
+
+
+
+It's not our fault that Westerners join Isil
+
+
+
+
+Letters: EU
+
+
+
+Ministers must have the backbone to reject an inadequate deal
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+                                 /* EPOCH time at the start of MPU Ad */
+                                   var mpuAdTimerStart = Date.now();
+                               
+Advertisement
+
+
+	document.write(tmgAdsBuildAdTag("mpu,hpg", "300x250,300x600", "adj", "", 2));
+
+
+
+
+
+
+
+Featured video»
+
+
+
+
+
+
+
+
+
+
+
+
+Have-a-go-hero tackles gun wielding robber
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+'I think I've won £1,000'. 'No, you've won £1million!'
+
+
+
+
+
+
+
+
+
+
+
+
+
+What alternatives if Britain leaves the EU?
+
+
+
+
+
+
+
+
+
+
+
+
+
+Migrants return to Iraq as Europe dreams fail
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Why some Americans think UK needs guns
+
+
+
+
+
+
+
+
+
+
+
+
+
+Turtle v Bass battle over fish dinner
+
+
+
+
+
+
+
+
+
+
+
+
+
+Panda masters double roly poly
+
+
+
+
+
+
+
+
+
+
+
+
+
+How much sugar is in the food you eat?
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+Eyeshadow vs eye crayon
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+How to take the perfect Instagram picture
+
+
+
+
+
+
+
+
+Most Shared
+
+Most Commented
+
+
+
+
+
+1
+
+
+
+
+National drink wine day: 7 great reasons to guzzle fermented grapes
+
+
+
+
+2
+
+
+
+
+Nigel Lawson: Britain outside the EU would stand tall as a free and prosperous nation
+
+
+
+
+3
+
+
+
+
+Jonathan Neumann: Jews know that a boycott is just the beginning
+
+
+
+
+4
+
+
+
+
+Baby dolphin dies after being paraded on beach for photographs
+
+
+
+
+5
+
+
+
+
+To let: a castle, for £346 a week (but it is haunted)
+
+
+
+
+6
+
+
+
+
+Polish codebreakers 'cracked Enigma before Alan Turing'
+
+
+
+
+7
+
+
+
+
+AEP: Negative interest rates are a calamitous misadventure
+
+
+
+
+8
+
+
+
+
+Son of Turkish president accused of money laundering in Italy
+
+
+
+
+9
+
+
+
+
+Juncker 'confident' on Cameron's reform deal but EU leaders threaten to object - live
+
+
+
+
+10
+
+
+
+
+Nigel Jones: Who are these contemptible hypocrites trying to block Cameron's EU deal?
+
+
+
+
+
+
+
+1
+
+
+
+
+Nigel Lawson: Britain outside the EU would stand tall as a free and prosperous nation
+
+
+
+
+2
+
+
+
+
+Nigel Jones: Who are these contemptible hypocrites trying to block Cameron's EU deal?
+
+
+
+
+3
+
+
+
+
+Juncker 'confident' on Cameron's reform deal but EU leaders threaten to object - live
+
+
+
+
+4
+
+
+
+
+Letters: Ministers must have the backbone to reject an inadequate EU deal
+
+
+
+
+5
+
+
+
+
+'We've got £80,000 in student debt. Can we borrow £100,000 for our first home?'
+
+
+
+
+6
+
+
+
+
+Jones lays down law to England hopefuls
+
+
+
+
+7
+
+
+
+
+Peter Foster: Cameron's last chance to beat EU bureaucrats
+
+
+
+
+8
+
+
+
+
+Dr Azeem Ibrahim: Anyone who thinks Westerners are flocking to Isil because of the Iraq war is a fantasist
+
+
+
+
+9
+
+
+
+
+Welsh village to sue government over 'alarmist' rising sea level claim
+
+
+
+
+10
+
+
+
+
+Momentum activists blamed for rise of anti-semitism at Oxford Labour Club,  a senior source has claimed
+
+
+
+
+
+
+
+				var expandMostCommentedArticles = false;
+				var expandMostSharedArticles = true;
+				var expandMostViewedArticlesTab = false;
+				var mostCommentedAccordionValue = 0;
+				var mostSharedAccordionValue = 1;
+				var mostViewedAccordionValue = 2;
+			
+
+
+
+
+
+
+Travel»
+
+
+
+
+
+
+
+
+ 
+
+
+What leaving the EU could cost travellers
+
+
+
+
+From higher airfares and costlier mobile bills to the death of the booze 
+  cruise, Nick Trend outlines the potential impact of a Brexit 
+
+
+
+
+
+
+
+
+
+
+Nine surprising dining customs around the world
+
+
+
+
+
+ 
+
+
+
+
+How not to embarrass yourself while eating with foreigners
+
+
+
+
+
+
+
+
+12 amazing bedrooms on boats
+
+
+
+
+
+ 
+
+
+
+
+From decadence on the Danube to luxury on the Nile, see our pick of the best 
+  river cruise suites
+
+
+
+
+
+
+
+
+The ultimate walking tour of London
+
+
+
+
+
+ 
+
+
+ Telegraph Tours 
+
+
+Join Sophie Campbell, Telegraph Travel's London expert and a Blue Badge guide, 
+  on this four-day walking tour
+
+
+
+
+
+
+
+
+7 amazing Reykjavik hotels
+
+
+
+
+
+ 
+
+
+
+
+From boutique to budget, our expert offers a guide to the city's best hotels 
+  for stylish good looks and Nordic chic
+
+
+
+
+
+
+
+
+
+Quiz: Can you identify these cities?
+
+
+
+
+
+ 
+
+
+
+
+We've removed the labels from maps of 15 cities - can you still tell which is 
+  which? 
+
+
+
+
+
+
+London's 11 most notorious execution sites
+
+
+
+
+
+ 
+
+
+
+
+500 years after Queen Mary's birth, we track down the places where the Marian 
+  Martyrs, and thousands of others, were condemned 
+
+
+
+
+
+
+Britain's 10 best islands
+
+
+
+
+
+ 
+
+
+
+
+Nick Crane introduces our guide to Britain's best islands, including Skye, 
+  Mersea and Lindisfarne
+
+
+
+
+
+
+10 incredible Cote d'Azur hotels
+
+
+
+
+
+ 
+
+
+ Top 10
+
+
+Featuring the top places to stay for beaches, sea views and local cuisine 
+
+
+
+
+
+
+The 50 greatest hotels in the world
+
+
+
+
+
+ 
+
+
+
+
+From barefoot retreats to city-centre chic, Telegraph Travel's team of experts 
+  brings you the definitive guide 
+
+
+
+
+
+
+What do airlines do with dead passengers?
+
+
+
+
+
+ 
+
+
+
+
+Cabin crew reveal all: “move them to first class – don’t put them in the loo" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Culture»
+
+
+
+
+
+
+
+
+ 
+
+
+The hateful 18: Gaming's vilest villains
+
+
+
+
+Gaming
+
+
+With this week’s launch of Street Fighter V, we’ve decided to take a look at 
+  some of gaming’s biggest rotters
+
+
+Street 
+  Fighter V tips from Problem X, one of the UK's best players
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A half-hearted Sex and the City
+
+
+
+
+
+ 
+
+
+Film Reviews
+
+
+Robbie Collin reviews How to be Single
+
+
+ 
+
+
+
+
+
+
+Bone Tomahawk: the most shocking western in years
+
+
+
+
+
+ 
+
+
+Film Reviews
+
+
+Cannibals shake up the traditional western in this bloody but surprisingly 
+  moving genre mash-up
+
+
+ 
+
+
+
+
+
+
+Chandler Bing meets Hotline Bling
+
+
+
+
+
+ 
+
+
+Comedy
+
+
+Why had nobody thought to combine Drake and Chandler's dad dancing before?
+
+
+
+
+
+
+Listen to Kanye West's Saturday Night Live 'meltdown'
+
+
+
+
+
+ 
+
+
+News
+
+
+West's backstage outburst included him saying he was more influential than 
+  Kubrick and Picasso
+
+
+
+
+
+
+NME Awards 2016: Coldplay took on their haters, Taylor Swift didn't like the trophy, plus six other things we learnt
+
+
+
+
+
+ 
+
+
+Music
+
+
+Swift found the finger-shaped NME Award "agressive"
+
+
+
+
+
+
+
+
+Want to play retro games on a new hand-held console?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+Mad Max’s Doof Warrior and other unsung heroes of the 2016 Oscars
+
+
+
+
+Film
+
+
+From The Revenant’s ‘warmth team,’ to Mad Max’s demented guitarist, we 
+  celebrate the overlooked talents behind this year’s biggest films
+
+
+
+
+
+
+
+‘The Adventures Of Luke Starkiller’: Peter Mayhew releases pages from his 1976 Star Wars script
+
+
+
+
+
+ 
+
+
+Film
+
+
+Early drafts of George Lucas’s space epic were notably different from the 
+  final film
+
+
+
+
+
+
+The Hollywood stars who tried to rebuild war-torn Germany
+
+
+
+
+
+ 
+
+
+Books
+
+
+The Bitter Taste of Victory : In the Ruins of the Reich is an account of the 
+  artists, writers and film stars who tried to rebuild Germany after the war
+
+
+ 
+
+
+
+
+
+
+
+
+100 funny jokes by 100 comedians
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Market Data»
+
+
+
+
+
+
+
+
+Premier League fixtures»
+
+
+
+
+
+
+Premier League table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Galleries»
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16 pictures
+Little people in surreal scenarios »
+
+
+
+
+
+9 pictures
+Every doggie's gone surfin' »
+
+
+
+
+
+34 pictures
+World Press Photo Contest »
+
+
+
+
+
+19 pictures
+Pictures of the day  »
+
+
+
+
+
+22 pictures
+NME Awards 2016 »
+
+
+
+
+
+18 pictures
+Strike a pose »
+
+
+
+
+
+11 pictures
+Birds of a feather »
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Obituaries»
+
+
+
+
+John Debenham Taylor, intelligence officer
+
+
+
+
+
+ 
+
+
+
+
+Senior intelligence officer who served with SOE as an instructor and with MI6 
+  in Cold War hotspots
+
+
+
+
+
+Professor Christopher Brooke
+
+
+
+
+
+ 
+
+
+
+
+Historian who brought humane sympathy to the study of medieval life, Church 
+  and marriage
+
+
+
+
+
+Tom Pugh, cricketer
+
+
+
+
+
+ 
+
+
+
+
+Cricketer who was short-listed for the part of James Bond 
+
+
+
+
+
+
+
+           /* EPOCH time at the end of right hand column */
+              var rightHandTimer=Date.now();
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Personal Finance »
+
+
+
+
+
+
+
+ 
+
+
+'We've got £80,000 in student debt. Can we borrow £100,000 for our first home?'
+
+
+Money Makeover
+
+
+The experts are divided over whether this young couple should jump on the 
+  property ladder as quickly as they can, or save for a smaller mortgage 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+'Sell-off has barely begun' says £1.2bn investor
+
+
+
+
+
+
+
+
+
+Date set for Lloyds' Supreme Court case
+
+
+
+
+
+
+
+
+
+Technology»
+
+
+
+
+
+
+
+ 
+
+
+Changing your iPhone date to 1 Jan 1970 will not make it retro - it just breaks
+
+
+
+
+Don't fall for the internet's latest hoax about changing the date on your 
+  iPhone to 1 Jan 1970 to get a retro Apple design
+
+
+
+
+
+
+
+
+
+Living in the future: Earin wireless ear buds
+
+
+
+
+
+
+
+
+
+Tinder co-founder Whitney Wolfe: 'People want dating apps where women can feel in control'
+
+
+
+
+
+
+
+
+
+
+
+Fashion and beauty»
+
+
+
+
+
+
+
+ 
+
+
+50 stylish buys under £50
+
+
+
+
+Credit card taken a hit this week? These 50 chic buys won't break the bank
+
+
+
+
+
+
+
+
+
+Watch the first trailer for 'Ab Fab: The Movie'
+
+
+
+
+
+
+
+
+
+How does Sports Illustrated secure top models?
+
+
+
+
+
+
+
+
+
+Street style tips from New York Fashion Week
+
+
+
+
+
+
+
+
+
+
+
+
+Luxury»
+
+
+
+
+
+
+
+ 
+
+
+The magic of Dior
+
+
+
+
+Dior presents its latest fine jewellery additions in a charming animation by 
+  Victoire de Castellane
+
+
+
+
+
+
+
+
+
+Masters of Design: jewellery illustrators
+
+
+
+
+
+
+
+
+
+Coravin revisited: new and improved
+
+
+
+
+
+
+
+
+
+
+Men»
+
+
+
+
+
+
+
+ 
+
+
+Is this the most protective girlfriend ever?
+
+
+
+
+There's marking your territory - and then there's stamping your face all over 
+  it, as this apparently concerned woman has done
+
+
+
+
+
+
+
+
+
+How the 'ideal' male body changes around the world
+
+
+
+
+
+
+
+
+
+You're dropped! The shamed sports stars who were spurned by sponsors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Food and drink»
+
+
+
+
+
+
+
+ 
+
+
+You might be sprinkling wood over your pasta instead of Parmesan
+
+
+
+
+Shock report from the USA finds that some of the popular Italian cheese sold 
+  to consumers is not actually Parmesan at all 
+
+
+
+
+
+
+
+
+
+Of course Starbucks' drinks are full of sugar
+
+
+
+
+
+
+
+
+
+What to cook this week: speedy suppers and one-pot wonders
+
+
+
+
+
+
+
+
+
+
+
+Property»
+
+
+
+
+
+
+
+ 
+
+
+Prime (minister's) real estate: Margaret Thatcher's £30m home
+
+
+
+
+Exclusive: it houses the study from which she called Ronald Reagan, and has a 
+  bomb-proof door. Margaret Thatcher’s former Belgravia mansion goes on sale 
+
+
+Comments
+
+
+
+
+
+
+
+
+
+Britain's most expensive Huf Haus is yours for £5m (with a helicopter thrown in)
+
+
+
+
+
+
+
+
+
+It's official: the top tower in London (and it's not just about height)
+
+
+
+
+
+
+
+
+
+
+
+
+Gardening»
+
+
+
+
+
+
+
+ 
+
+
+The world's most romantic gardens
+
+
+
+
+In time for Valentine's Day, the horticultural hotspots for lovers all over 
+  the world
+
+
+
+
+
+
+
+
+
+Valentine's Day: where do our roses come from?
+
+
+
+
+
+
+
+
+
+Valentine's Day: The best bouquets to buy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cars»
+
+
+
+
+
+
+
+ 
+
+
+Your chance to own James Bond's Aston Martin DB10
+
+
+
+
+One of the 10 Aston Martin DB10's built for the James Bond movie 'SPECTRE' 
+  will be auctioned at Christie's at 7.30pm tonight
+
+
+
+
+
+
+
+
+
+European Car of the Year 2016: the contenders
+
+
+
+
+
+
+
+
+
+How do I maintain my car? – 10 tips from a 3 million-mile driver
+
+
+
+
+
+
+
+
+
+
+
+Education»
+
+
+
+
+
+
+
+ 
+
+
+'I'm moving house; will my daughter miss out on a primary school place?'
+
+
+
+
+Ask the experts: Applying to primary schools can be stressful, but 
+  where should parents apply if they plan to move just before the start of 
+  term? 
+
+
+
+
+
+
+
+
+
+The most exclusive boarding schools
+
+
+
+
+
+
+
+
+
+Boarding schools face a steep learning curve
+
+
+
+
+
+
+
+
+
+
+
+Women»
+
+
+
+
+
+
+
+ 
+
+
+The worst Photoshop fails of women's bodies
+
+
+
+
+Snickers has deliberately put a Photoshop mistake in its latest advert to make 
+  a point about women's bodies. Here, we've round up some of the worst editing 
+  mistakes you're ever likely to see
+
+
+
+
+
+
+
+
+
+Coughing in theatres has reached peak selfishness - I've had it
+
+
+
+
+
+
+
+
+
+Why you should pay your children to do household chores
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+				US News
+
+
+
+
+
+ 
+
+
+
+
+                                Latest and breaking stories from the United States
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Film
+
+
+
+
+
+ 
+
+
+
+
+                                All the latest film trailers, reviews and features
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Barnebys
+
+
+
+
+
+ 
+
+
+
+
+                                The women behind the supercar industry
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Diesel Performance
+
+
+
+
+
+ 
+
+
+
+
+                                The innovative Shell V-Power Nitro+ Diesel
+
+
+
+                                View
+
+
+
+
+
+
+
+
+
+/* EPOCH time at the end of content Area */
+                var contentEndTimer = Date.now();
+
+Back to top
+
+
+
+
+HOME
+News
+World News
+Obituaries
+
+Travel
+
+Health
+Jobs
+
+ 
+Sport
+Football
+Cricket
+Fantasy Football
+
+Culture
+
+Motoring
+Dating
+
+ 
+Finance
+Personal Finance
+Economics
+Markets
+
+Fashion
+
+Property
+Puzzles
+
+ 
+Comment
+My Telegraph
+Letters
+Columnists
+
+Technology
+
+Gardening
+Telegraph Shop
+
+ 
+Contact us
+Privacy and Cookies
+Guidelines
+Advertising
+
+Tickets
+
+
+Announcements
+Reader Prints
+
+
+
+
+
+
+Follow Us
+Apps
+Epaper
+Expat
+
+
+Promotions
+Subscriber
+Syndication
+
+
+
+ 
+
+© Copyright of Telegraph Media Group Limited 2016
+Terms and Conditions 
+Today's News
+Archive
+Style Book
+Weather Forecast
+
+
+ 
+
+/* EPOCH time at the end of footer */
+                var footerEndTimer = Date.now();
+
+
+
+    g_opt_c = ''; g_opt_b = true;g_opt_s = true;
+ 
+
+
+
+
+
+
+
+
+
+
+
+			(function() {
+				var links = $("a[href*='disqus_thread']");
+				var query = "";
+				var blogQuery = "";
+				var normal = new Array();
+				var normalCounts = new Array();
+				var blog = new Array();
+				var blogCounts = new Array();
+
+				for(var i = 0; i < links.length; i++) {
+					if (links[i].getAttribute('dsqid')) {
+						var dsqid = links[i].getAttribute('dsqid');
+						if (links[i].className == 'dsqblog') { blogQuery += 'dsqid' + i + '=' + dsqid + '&'; } else { query += 'dsqid' + i + '=' + dsqid + '&'; }
+					}
+				}
+				if (query.length != "" && blogQuery.length != "") {
+					$("a[href*='disqus_thread']") && $("a.dsqblog").each(function(i) {
+						blog[i] = $(this).attr("href");
+						$(this).attr("href","blog_link");
+					});
+					loadScript("http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?" + query, function() {
+						$("a[href*='disqus_thread']").not(".dsqblog").each(function(i) {
+							normal[i] = $(this).attr("href");
+							normalCounts[i] = $(this).html();
+							$(this).attr("href","normal_link");
+						});
+
+						$("a[href*='blog_link']").each(function(i) { $(this).attr("href",blog[i]); });
+
+						loadScript("http://telegraphblogs.disqus.com/get_num_replies_from_dsqid.js?" + blogQuery, function() {
+							$("a[href*='normal_link']").each(function(i) { $(this).attr("href",normal[i]); });
+						});
+					});
+				} else {
+					document.write('<script charset="utf-8" type="text/javascript" src="http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?' + query + '"></' + 'script>');
+				}
+			})();
+		
+
+
+
+
+		var _sf_async_config={uid:22437,domain:"telegraph.co.uk"};
+
+		
+			_sf_async_config.sections = "Home";
+		
+
+		(function(){
+			function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			(("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://") +
+			"static.chartbeat.com/js/chartbeat.js"); document.body.appendChild(e);
+		}
+		var oldonload = window.onload;
+		window.onload = (typeof window.onload != 'function') ?
+		loadChartbeat : function() { oldonload(); loadChartbeat(); }; })();
+	
+ 
+			var skimlinks_script = document.createElement('script'); 
+			    skimlinks_script.type = 'text/javascript'; 
+			    skimlinks_script.async = 'true';
+			    skimlinks_script.src = 'http://s.skimresources.com/js/296X467.skimlinks.js';
+			var skimlinks_script_attach = document.getElementsByTagName('script')[0]; 
+			skimlinks_script_attach.parentNode.insertBefore(skimlinks_script, skimlinks_script_attach.nextSibling); 
+		
+
+
+
+
+
+			 var pvar = { cid: "uk-101665h", content: "0", server: "secure-uk" };
+			 var feat = { surveys_enabled: 1 };
+			 var trac = nol_t(pvar, feat);
+			 trac.record().post().do_sample();
+		
+
+
+
+
+
+
+
+
+	
+	document.write(tmgAdsBuildAdTag("tmg", "1x1", "adj", "", 2));
+	document.write(tmgAdsBuildAdTag("ftr", "1x1", "adj", "", 2));
+_satellite.pageBottom();
+
+

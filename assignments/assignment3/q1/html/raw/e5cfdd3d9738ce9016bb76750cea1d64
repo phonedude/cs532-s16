@@ -1,0 +1,479 @@
+https://BitcoinAverage.com/
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BitcoinAverage - Bitcoin Price Index</title>
+
+    <meta name="description" content="BitcoinAverage provides a reliable bitcoin price index, it is based on a weighted average of prices from exchanges all over the world. BitcoinAverage.com was the first composite Bitcoin Price Index created, the project is opensource and our API is free.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="bitcoin price, bitcoin price index, bitcoin live price, bitcoin live rate, bitcoin average price,
+    bitcoin mean price, bitcoin exchange, bitcoin average rate, bitcoin exchange rate, bitcoin weighted average, bitcoin weighted average price,
+    bitcoin alerts, bitcoin price alerts,
+    bitcoin calculator, bitcoin price calculator, bitcoin converter, bitcoin price converter, bitcoin cost,  bitcoin value, bitcoin worth,
+    BTC price, BTC converter, BTC cost, BTC value, BTC worth,
+    BTC mean price, BTC exchange, BTC rate, BTC average rate, BTC exchange rate,
+    XBT price, XBT converter, XBT cost, XBT value, XBT worth,
+    XBT mean price, XBT exchange, XBT rate, XBT average rate, XBT exchange rate,
+    bitcoin markets, bitcoin currency markets,
+    bitcoin volume, bitcoin trading volume, bitcoin volume charts, bitcoin volume history, bitcoin trading volume history, bitcoin market volume,
+    bitcoin price history, bitcoin rate history, bitcoin price charts, bitcoin trading history, bitcoin market history, bitcoin exchanges history,
+    bitcoin USD exchange rate, BTC USD exchange rate, XBT USD exchange rate, bitcoin dollar exchange rate,
+    bitcoin EUR exchange rate, BTC EUR exchange rate, XBT EUR exchange rate, bitcoin euro exchange rate,
+    bitcoin GBP exchange rate, BTC GBP exchange rate, XBT GBP exchange rate, bitcoin sterling exchange rate,
+    bitcoin CNY exchange rate, BTC CNY exchange rate, XBT CNY exchange rate, bitcoin renminbi exchange rate,
+    bitcoin CAD exchange rate, BTC CAD exchange rate, XBT CAD exchange rate, bitcoin canadian dollar exchange rate,
+    bitcoin API, bitcoin rate API, bitcoin price API, bitcoin price index API,
+    BTC API, BTC rate API, BTC price API, BTC price index API,
+    bitcoin price" />
+
+    <link rel="author" href="https://github.com/bitcoinaverage" />
+    <link rel="publisher" href="https://plus.google.com/+BitcoinaveragePriceIndex" />
+    <link rel="alternate" type="application/json" href="https://api.bitcoinaverage.com/all" title="full API data for BitcoinAverage Price Index" />
+    <link rel="canonical" href="http://bitcoinaverage.com/price/" />
+    <link rel="help" href="https://bitcoinaverage.com/faq.htm" title="BitcoinAverage FAQ" />
+    <link rel="dns-prefetch" href="https://api.bitcoinaverage.com" />
+    <link rel="shortcut icon" href="https://bitcoinaverage.com/favicon.ico" />
+
+    <meta name="alexaVerifyID" content="ka6MOfTvOp4FdLOHVWtgzatyRnI" />
+
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="BitcoinAverage Price Index and Charts - BitcoinAverage"/>
+    <meta property="og:description" content="BitcoinAverage Price Index is a weighted average of prices from nearly all Bitcoin exchanges around the world. BitcoinAverage.com is opensource."/>
+    <meta property="og:site_name" content="BitcoinAverage"/>
+    <meta property="og:url" content="https://bitcoinaverage.com/"/>
+    <meta property="og:image" content="https://bitcoinaverage.com/img/logo_full.png"/>
+
+    <meta property="article:author" content="https://github.com/bitcoinaverage"/>
+    <meta property="article:publisher" content="https://plus.google.com/+BitcoinaveragePriceIndex"/>
+    <meta property="article:published_time" content="2013-08-02T14:41:59+00:00"/>
+    <meta property="article:modified_time" content="2014-03-02T08:35:50+00:00"/>
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:title" content="BitcoinAverage Price Index and Charts - BitcoinAverage"/>
+    <meta name="twitter:description" content="BitcoinAverage Price Index is a weighted average of prices from nearly all Bitcoin exchanges around the world. BitcoinAverage.com is opensource."/>
+    <meta name="twitter:site" content="@BitcoinAverage"/>
+    <meta name="twitter:site:id" content="1620115130"/>
+    <meta name="twitter:creator" content="@BitcoinAverage"/>
+    <meta name="twitter:creator:id" content="1620115130"/>
+    <meta name="twitter:image" content="https://bitcoinaverage.com/img/logo_full.png"/>
+
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link href="css/font-awesome.3.2.1/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="css/lightbox.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/lib/highstock.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.formatCurrency.js"></script>
+    <script type="text/javascript" src="js/lib/lightbox.js"></script>
+    <script type="text/javascript" src="js/lib/moment.min.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/fiat_data.js"></script>
+    <script type="text/javascript" src="js/helpers.js"></script>
+    <script type="text/javascript" src="js/currency_shared_render.js"></script>
+    <script type="text/javascript" src="js/homepage.js"></script>
+
+    <style>
+    .responsive-banner-home { width: 320px; height: 50px; }
+    @media(min-width: 500px) { .responsive-banner-home { width: 468px; height: 60px; } }
+    @media(min-width: 800px) { .responsive-banner-home { width: 728px; height: 90px; } }
+    </style>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+    <meta itemprop="name" content="BitcoinAverage - independent bitcoin price" />
+    <meta itemprop="specialty" content="bitcoin exchange rates" />
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div itemscope itemtype="http://schema.org/Brand">
+                <meta itemprop="image" content="https://bitcoinaverage.com/img/logo_full_large.png" />
+                <meta itemprop="logo" content="https://bitcoinaverage.com/img/logo_full_large.png" />
+                <a class="navbar-brand logo" href="https://bitcoinaverage.com/" itemprop="url">
+                    <span itemprop="name">BitcoinAverage</span>
+                </a>
+                <h1 class="navbar-brand slogan hidden-xs hidden-sm" itemprop="description">bitcoin price index</h1>
+            </div>
+
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="submenu" href="markets.htm">MARKETS</a></li>
+                <li><a class="submenu" href="charts.htm">CHARTS</a></li>
+                <li><a class="submenu" href="blog/">BLOG</a></li>
+                <li><a class="submenu" href="explain.htm">INDEX FORMULA</a></li>
+                <li itemscope itemtype="http://schema.org/AboutPage">
+                    <a class="submenu" href="faq.htm" itemprop="url">FAQ</a>
+                </li>
+                <li><a class="submenu" href="api.htm">API</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="main-container" class="container">
+
+    <div class="row indent">
+        <div class="col-md-6 market-page-description text-left">
+            <span class="base">bitcoin</span> to <span class="full-currency-name legend-currency-code-update">
+            United States Dollar</span>, <a href="explain.htm">bitcoin average price index</a>
+        </div>
+        <div class="col-md-6 base-button-wrapper text-right">
+            <button type="button" class="btn btn-primary btn-xs" id="base-switch-button">&#3647;1 base used</button>
+        </div>
+    </div>
+
+
+    <div class="col-md-12 text-center currency-header">
+
+        <div class="row strip active">
+            <div class="col-md-4 main-price-shift">
+                <div class="price-shift-title">24h price change</div>
+                <div class="price-arrow"></div>
+                <div class="price-shift"></div>
+                <div class="price-shift-prc"></div>
+            </div>
+            <div class="col-md-4" id="global-box" itemscope itemtype="http://schema.org/PriceSpecification">
+                <span id="global-cursym" class="cursym-main"></span><!--
+                --><span id="global-last" class="last-main" itemprop="price">385</span><!--
+                --><span id="global-curcode" class="curcode-main" itemprop="priceCurrency">USD</span>
+            </div>
+            <div class="col-md-4 main-volume">
+                <div class="volume-title">24h global trading volume</div>
+                <div class="volume"></div>
+                <div class="volume-shift"></div>
+                <div class="volume-shift-prc"></div>
+            </div>
+            <div class="col-md-6 main-price-highlow">
+                <div class="price-high-title">high</div>
+                <div class="price-high"></div>
+                <div class="price-low-title">low</div>
+                <div class="price-low"></div>
+            </div>
+            <div class="col-md-6 main-market-avg">
+                <div class="market-cur-avg-title"></div>
+                <div class="market-cur-avg"></div>
+                <div class="market-24h-avg-title">24h sliding average</div>
+                <div class="market-24h-avg"></div>
+            </div>
+        </div>
+        <div class="row show-grid currency-box col-md-12">
+            <ul class="currency-navigation primary-currency-switch col-md-4 col-sm-12 col-xs-12"></ul>
+            <ul class="currency-navigation secondary-currency-switch col-md-5 col-sm-6 col-xs-8"></ul>
+            <div class="more-currencies col-md-2 col-xs-12 col-sm-12">
+                more currencies
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <ul class="all-currency-navigation all-currencies currency-navigation"></ul>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 sub-header">
+            <div class="col-xs-6">
+                <a href="converter.htm"><span class="glyphicon glyphicon-transfer"></span><span> bitcoin price converter</span></a>
+            </div>
+            <div class="col-xs-6 text-right">
+                <span id="legend-update-time"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- bitcoin calc [start]
+    <div class="row  bitcoin-calc__wrapper">
+        <div class="bitcoin-calc">
+
+            <div class="bitcoin-field__wrapper">
+                <input type="text" value="1" id="currency-input">
+                <div id="bitcoin-calc-currency-label" class="label currency-label">USD↓</div>
+
+                 <div class="calculator-currency-switch  col-md-4 col-sm-4 col-xs-4">
+                     <ul class="primary-currency-switch-calc currency-navigation"></ul>
+                     <ul class="secondary-currency-switch-calc currency-navigation"></ul>
+                 </div>
+
+            </div>
+
+            <div class="equals visible-lg">=</div>
+
+            <div class="bitcoin-field__wrapper">
+                <input type="text" value="1" id="bitcoin-input" style="color: black;">
+                <div class="label bitcoin-label">&#3647;</div>
+            </div>
+
+        </div>
+        <div class="twitter-follow-wrapper">
+            <a href="https://twitter.com/BitcoinAverage" class="twitter-follow-button" data-show-count="false"></a>
+        </div>
+    </div>
+     bitcoin calc [end]-->
+
+    <div class="ba-ads-bottom">
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle responsive-banner-home"
+            style="display:inline-block"
+            data-ad-client="ca-pub-9795175343560011"
+            data-ad-slot="2647586483"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+    </div>
+
+    <!--new section start -->
+    <div class="tab_content col-md-offset-3 tab-content" id="legend-block">
+
+        <!-- BEGIN MARKET DATA -->
+        <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
+            <!--
+            <table width="100%;" cellpadding="0" cellspacing="0" class="legend-table table table-striped table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th width="35%">
+                            <div class="legend-table__wrapper">
+                                <span class="legend-curcode"></span>
+                                <span class="legend-currency-code-update"></span>
+                            </div>
+                        </th>
+
+                        <th width="30%">
+                            <div class="legend-table__wrapper">
+                                <div>
+                                    <small class="operation-label">ask</small>
+                                    <span id="legend-ask"></span>
+                                </div>
+
+                                <div>
+                                    <small class="operation-label">bid</small>
+                                    <span id="legend-bid"></span>
+                                </div>
+                            </div>
+                        </th>
+
+
+                        <th width="35%" class="last-price">
+                            <div class="legend-table__wrapper">
+                                <div>
+                                    <span id="legend-last"></span>
+                                </div>
+                                <div>
+                                    <small id="legend-update-time"></small>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                <tr style=" border-top:0px solid #fff; background:none; height:10px;">
+                    <td class="" width="25%" style="padding:0px; background:none; border-bottom:2px solid #DDDDDD; border-top:none;"></td>
+                    <td class="" width="25%" style="padding:0px; background:none; border-bottom:2px solid #DDDDDD; border-top:none;"></td>
+                    <td class="" width="33%" style="padding:0px; background:none; border-bottom:2px solid #DDDDDD; border-top:none;"></td>
+                </tr>
+                <tr id="legend-24h-avg-container">
+                    <td class="legend-name" colspan="2">24h global sliding average</td>
+                    <td class="legend-rate text-right" width="44%"><span id="legend-24h-avg"></span> <span class="legend-curcode">USD</span></td>
+                </tr>
+                <tr>
+                    <td class="legend-name" colspan="2"><span class="legend-curcode">USD</span> trading volume (24h)</td>
+                    <td class="legend-rate text-right" width="44%"><span class="">&#3647;</span> <span id="legend-currency-trading-volume"></span></td>
+                </tr>
+                <tr>
+                    <td class="legend-name" colspan="2"><span class="legend-curcode">USD</span> trading volume share</td>
+                    <td class="legend-rate text-right" width="44%"><span id="legend-global-volume-percent"></span>%</td>
+                </tr>
+                </tbody>
+            </table>
+            -->
+            <div>
+                <h3>Bitcoin daily price chart</h3>
+            </div>
+
+            <div id="small-chart"></div>
+        </div>
+        <!-- END MARKET DATA -->
+
+        <!-- BEGIN CURRENCY MARKETS -->
+        <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-6 col-lg-offset-0">
+            <div>
+                <h3>Bitcoin currency markets</h3>
+            </div>
+            <table class="table table-striped table-condensed table-hover" id="global-average-data-table">
+                <thead>
+                <tr>
+                    <th style="width: 10%;">currency</th>
+                    <th style="width: 15%;" class="text-right">volume %</th>
+                    <th style="width: 15%;" class="text-right">volume &#3647;</th>
+                    <th style="width: 25%;" class="text-center" colspan="2">last price</th>
+                    <th style="width: 20%;" class="text-right">cross price</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <a href="#" id="show-more-currencies-in-global-avg-table">all currencies</a>
+
+            <a href="#" id="show-ignored" class="text-right pull-right"><span id="ignored_count"></span> exchange(s) ignored</a>
+
+            <table class="table table-striped table-condensed table-hover" width="100%;" id="legend-ignored-table">
+                <thead>
+                <tr>
+                    <th width="40%" colspan="2">ignored exchange</th>
+                    <th width="60%" style="text-align: right">reason</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr id="legend-ignored-slot0-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot0-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot0-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot1-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot1-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot1-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot2-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot2-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot2-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot3-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot3-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot3-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot4-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot4-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot4-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot5-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot5-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot5-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot6-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot6-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot6-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot7-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot7-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot7-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot8-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot8-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot8-reason"></td>
+                </tr>
+                <tr id="legend-ignored-slot9-box">
+                    <td class="legend-name" width="30%" id="legend-ignored-slot9-name"></td>
+                    <td class="legend-rate text-right" colspan="2" id="legend-ignored-slot9-reason"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- END CURRENCY MARKETS -->
+
+    </div>
+</div>
+<!-- END MAIN CONTAINER -->
+
+
+    <div class="ba-ads-left"></div>
+
+    <div class="ba-ads-right">
+
+        <p>just ads</p>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:160px;height:600px"
+             data-ad-client="ca-pub-9795175343560011"
+             data-ad-slot="8506292480"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+    </div>
+
+    <div class="ba-ads-middle">
+
+
+    </div>
+
+    <!-- BEGIN FOOTER -->
+    <footer class="footer clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="f_left foot_left">
+                    <section>
+                        <h4><span>Support Us</span></h4>
+                            <span style="font-size: 80%">
+                                <a href="bitcoin:1EQDEEbYJuevPpJsDczQzspTV8GRTCpk1T?label=Donation%20to%20BitcoinAverage.com">1EQDEEbYJuevPpJsDczQzspTV8GRTCpk1T</a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="img/donation_url_qrcode.png" data-lightbox="image-1" title="BitcoinAverage.com donation address"><i class="glyphicon glyphicon-qrcode"></i></a>
+                            </span>
+                    </section>
+                </div>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Main -->
+                <div class="privacy">
+                    2013<script>document.write("-"+new Date().getFullYear())</script>&nbsp; CC-BY-NC-SA &nbsp; BITCOINAVERAGE
+                </div>
+                <div class="f_right foot_right" style="text-align: right">
+                    <section id="section-connect">
+                        <h4><span>Connect with us</span></h4>
+                        <a href="https://github.com/bitcoinaverage/bitcoinaverage" target="_blank" title="github"><span class="icon-stack">
+                                    <i class="icon-circle icon-stack-base icon-1x"></i>
+                                    <i class="icon-github icon-light"></i>
+                                </span>
+                        </a>
+                        <a href="https://bitcointalk.org/index.php?topic=270190.0" target="_blank" title="bitcointalk thread">
+                                <span class="icon-stack">
+                                    <i class="icon-circle icon-stack-base"></i>
+                                    <i class="icon-comment icon-light"></i>
+                                </span>
+                        </a>
+                        <a href="https://twitter.com/BitcoinAverage" target="_blank" title="twitter">
+                                <span class="icon-stack">
+                                    <i class="icon-circle icon-stack-base"></i>
+                                    <i class="icon-twitter icon-light"></i>
+                                </span>
+                        </a>
+                        <a href="mailto:info@bitcoinaverage.com" title="email">
+                                <span class="icon-stack">
+                                    <i class="icon-circle icon-stack-base"></i>
+                                    <i class="icon-envelope icon-light"></i>
+                                </span>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-42688472-1', 'bitcoinaverage.com');ga('send', 'pageview');
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+    </script>
+</body>
+</html>
+

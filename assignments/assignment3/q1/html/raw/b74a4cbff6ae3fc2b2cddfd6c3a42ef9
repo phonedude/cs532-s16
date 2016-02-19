@@ -1,0 +1,269 @@
+https://blockchain.info/wallet
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitcoin Wallet - Be Your Own Bank - Blockchain.info</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link rel="stylesheet" href="/Resources/bootstrap.min.css"><link rel="stylesheet" href="/Resources/bootstrap-responsive.min.css"><link rel="stylesheet" href="/Resources/overrides.min.css?d7dd0de6cc636885"><script src="/Resources/wallet/jquery.min.js" type="text/javascript"></script><script type="text/javascript" src="/Resources/wallet/bootstrap.min.js"></script><script src="/Resources/wallet/shared.min.js?d7dd0de6cc636885" type="text/javascript"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+    <script type="text/javascript" src="/Resources/wallet/wallet-index.min.js?d7dd0de6cc636885"></script>
+
+    <link rel="stylesheet" type="text/css" href="/Resources/wallet/slidedeck.skin.css" media="screen" />
+    <script type="text/javascript" src="/Resources/wallet/slidedeck.jquery.lite.js"></script>
+    <style type="text/css">
+        #slidedeck_frame {
+            width: 901px;
+            height: 300px;
+            margin:0 auto;
+        }
+
+        .navbar {
+            margin-bottom:0px;
+        }
+        h3 {
+            padding-bottom:2px;
+        }
+    </style>
+
+    <META NAME="Description" CONTENT="My Wallet is a free online bitcoin wallet which you can use to make worldwide payments for free. We make paying with bitcoins easy and secure.">
+</head>
+<body>
+
+
+    <div class="navbar" style="height:40px;overflow:visible">
+        <div class="navbar-inner" style="height:43px;">
+            <div class="container">
+                <div class="logo hidden-phone hidden-tablet"><a href="/"><img border="0" src="/Resources/blockchain-logo-vector.svg" style="width:194px;height:53px" alt="Bitcoin block explorer and currency statistics"/></a></div>
+
+                <ul class="nav">
+                    <li><a href="/" title="Blockchain.info Home">Home</a></li>
+                    <li><a href="/charts" title="Bitcoin Charts">Charts</a></li>
+                    <li><a href="/stats" title="Bitcoin Stats">Stats</a></li>
+                    <li><a  class="hidden-phone" href="https://markets.blockchain.info" title="Bitcoin Markets">Markets</a></li>
+                    <li class="hidden-phone"><a href="/api" title="Blockchain Developer Tools">API</a></li>
+                    <li class="active"><a href="/wallet" title="Bitcoin Wallet">Wallet</a></li>
+                </ul>
+
+                
+                    <ul class="nav pull-right hidden-phone">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span>English</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" style="min-width:20px" id="languages_select">
+                                <li><a tabindex="-1" href="/de" data-code="de" title="German"><span>Deutsch</span></a></li><li><a tabindex="-1" href="/hi" data-code="hi" title="Hindi"><span>हिन्दी</span></a></li><li><a tabindex="-1" href="/no" data-code="no" title="Norwegian"><span>Norsk</span></a></li><li><a tabindex="-1" href="/ru" data-code="ru" title="Russian"><span>Русский</span></a></li><li><a tabindex="-1" href="/pt" data-code="pt" title="Portuguese"><span>Português</span></a></li><li><a tabindex="-1" href="/bg" data-code="bg" title="Bulgarian"><span>български език</span></a></li><li><a tabindex="-1" href="/fr" data-code="fr" title="French"><span>Français</span></a></li><li><a tabindex="-1" href="/zh-cn" data-code="zh-cn" title="Chinese"><span>汉语</span></a></li><li><a tabindex="-1" href="/hu" data-code="hu" title="Hungarian"><span>Magyar</span></a></li><li><a tabindex="-1" href="/sl" data-code="sl" title="Slovenian"><span>Slovenščina</span></a></li><li><a tabindex="-1" href="/id" data-code="id" title="Indonesian"><span>Bahasa Indonesia</span></a></li><li><a tabindex="-1" href="/sv" data-code="sv" title="Swedish"><span>Svenska</span></a></li><li><a tabindex="-1" href="/ko" data-code="ko" title="Korean"><span>한국어</span></a></li><li><a tabindex="-1" href="/el" data-code="el" title="Greek"><span>Ελληνικά</span></a></li><li><a tabindex="-1" href="/en" data-code="en" title="English"><span>English</span></a></li><li><a tabindex="-1" href="/it" data-code="it" title="Italian"><span>Italiano</span></a></li><li><a tabindex="-1" href="/es" data-code="es" title="Spanish"><span>Español</span></a></li><li><a tabindex="-1" href="/vi" data-code="vi" title="Vietnam"><span>Tiếng</span></a></li><li><a tabindex="-1" href="/th" data-code="th" title="Thai"><span>ภาษาไทย</span></a></li><li><a tabindex="-1" href="/ja" data-code="ja" title="Japanese"><span>日本語</span></a></li><li><a tabindex="-1" href="/pl" data-code="pl" title="Polish"><span>Polski</span></a></li><li><a tabindex="-1" href="/da" data-code="da" title="Danish"><span>Dansk</span></a></li><li><a tabindex="-1" href="/ro" data-code="ro" title="Romanian"><span>Română</span></a></li><li><a tabindex="-1" href="/nl" data-code="nl" title="Dutch"><span>Nederlands</span></a></li><li><a tabindex="-1" href="/tr" data-code="tr" title="Turkish"><span>Türkçe</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+
+ <div class="quickstart">
+    <div class="container" id="intro-header">
+        <div class="row-fluid">
+            <div class="span4 col hidden-phone">
+                <h6>New Users</h6>
+                <p>Creating a new bitcoin wallet takes literally a few seconds. You will be able to send and receive payments immediately.</p>
+            </div>
+            <div class="span4 col">
+                <h6>Existing Users</h6>
+                <p>If you have previously created a My Wallet account click below to login.</p>
+            </div>
+            <div class="span4 col hidden-phone">
+                <h6>Help And Support</h6>
+                <p>Please consult the FAQ for commonly asked questions. For any problems with the site, please contact us.</p>
+            </div>
+        </div>
+
+        <div class="row-fluid">
+            <div class="span4 col hidden-phone">
+                <p><a href="/wallet/new" class="btn btn-primary">Start A New Wallet</a></p>
+
+            </div>
+            <div class="span4 col">
+                <p><a href="/wallet/login" class="btn btn-primary">Login Now</a></p>
+            </div>
+            <div class="span4 col hidden-phone">
+                <p><a href="/wallet/support-pages" class="btn btn-info">Support Pages</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="text-align:justify;" id="intro-body">
+
+    <div class="page-header">
+        <h1>My Wallet <small>Be Your Own Bank.</small>
+	
+			<span style="float:right;font-weight:normal;font-size:13px;" class="hidden-phone">
+				Confused? Read the <a href="/wallet/bitcoin-faq">Beginners FAQ</a> - <a href="/wallet/how-it-works">How It Works</a>
+			</span>
+        </h1>
+    </div>
+
+    
+
+    
+
+    
+
+    <div class="row-fluid">
+        <div class="span6">
+            <p>
+                <img style="display:inline;float:left;padding:5px;" src="/Resources/blockchain.png">My Wallet is a free online bitcoin wallet, which you can use to make worldwide payments for free. We make paying with bitcoins easy and secure available anywhere on your phone or desktop.
+            </p>
+
+            <p>
+                We are not a bank; you retain complete ownership of your Money. We cannot view your balance, see your transactions or make payments on your behalf.
+            </p>
+
+            <p align="center">
+                <a href="/wallet/new" style="margin:5px" class="btn btn-success">Create My Free Wallet</a> &nbsp;&nbsp;
+                <a href="/wallet/demo-account" style="margin:5px" class="btn btn-primary">Try A Demo Account</a>
+            </p>
+
+            <br />
+
+            <blockquote id="fade1">
+                <p>By 2015, cash could be looking like an endangered species</p>
+                <small>techradar.com</small>
+            </blockquote>
+
+            <div class="well" id="fade2" style="display:none;">
+                Already using Bitcoin? <a href="/wallet/import-wallet">Import your wallet</a>.
+            </div>
+        </div>
+
+        <div class="span6">
+            <p><a id="youtube-preview" href="#"><img src="/Resources/promo/youtube-preview.png" alt="Bitcoin Introduction View" /></a></p>
+        </div>
+    </div>
+
+    <div class="page-header"></div>
+
+    <h2 align="center" style="color:#CCCCCC;font-size:26px;padding-bottom:20px">
+        Free. Open Source. <span class="transacted"><span data-c="14520938458253774">$ 60,871,774,017.00</span></span> Successfully Transacted.
+    </h2>
+
+    <div id="slidedeck_frame" class="skin-slidedeck hidden-phone">
+        <dl class="slidedeck">
+            <dt>Mobile Support</dt>
+            <dd><h2>Mobile Support</h2><div class="column">Our web interface supports all popular mobile devices including <a href="/wallet/android-app">Android</a>, <a href="/wallet/iphone-app">iPhone and iPad</a>. If your phone is lost or stolen your wallet will still be safely backed up on our servers.<p><a href="/wallet/android-app" title="Blockchain Android App"><img src="/Resources/promo/android.png" alt="Blockchain Android App" style="padding:5px"></a><a href="/wallet/iphone-app" title="Blockchain iPhone App"><img src="/Resources/promo/ios.png" alt="Blockchain iPhone App" style="padding:5px"></a><img src="/Resources/promo/opera.png" title="Mobile Browser Logo"></p></div><div style="padding-top:100px;" class="column"><a href="/wallet/iphone-app"><img src="/Resources/promo/iphone_bitcoin_wallet_cropped.png" style="padding:5px"></a></div></dd>
+            <dt>Double Encryption</dt>
+            <dd><h2>Double Encryption</h2><div class="column">Before your bitcoin wallet is saved on our servers, it is AES 256 Bit encrypted in your browser. Your password is never shared with us so not even we can open your wallet. Not only that, but your wallet can be optionally encrypted again with a second password requiring one password to login and a separate password to make transactions. If that is not enough we also support a variety of two-factor authentication methods.</div><div class="column"><img src="/Resources/promo/double_encryption.png" style="padding-left:30px"></div></dd>
+            <dt>One Click Backups</dt>
+            <dd><h2>One Click Backups</h2><p>We make every effort to keep your wallet safely backed up. However, there is no substitution for having a backup on your own PC. At a touch of a button, you can have your encrypted wallet emailed to you, saved to your dropbox account or saved locally. Then even if blockchain.info suffers data loss or goes offline for you can still access your funds.</p><p align="center"><img src="/Resources/promo/dropbox-backup_cropped.png"></p></dd>
+            <dt>Payment Notifications</dt>
+            <dd><h2>Payment Notifications</h2><p>Receive Notifications whenever a payment is sent or received from your bitcoin wallet. The average delay for payment notifications is less than 50ms. If you receive a payment while logged into My Wallet a sound will play and the interface will instantaneously update without needing a page reload.</p><p align="center" style="padding-top:35px"><img src="/Resources/promo/skype.png" title="Bitcoin Payment Notifications Skype"><img src="/Resources/promo/google_talk.png" title="Payment Notifications Google Talk"><img src="/Resources/promo/email.png"></p> </dd>
+            <dt>Charts & Analytics</dt>
+            <dd><h2>Charts & Analytics</h2>Generate charts and reports for recent bitcoin transactions. View your account balance over time, number of transactions and revenue per day. <p align="center"><img src="/Resources/promo/charts.png" title="Built In Charts & Analytics"></p></dd>
+        </dl>
+    </div>
+
+    <div class="row-fluid" style="margin-top:25px">
+        <div class="span4">
+            <img alt="Secure" src="/Resources/secure_bitcoin_wallet.png" style="padding-right:7px;float:left"> <h2>Secure</h2>
+
+            <p>Blockchain.info uses industry standard <a rel="popover" title="AES Encryption" data-content="An extremely strong encryption standard adopted by the US government and now widely used worldwide for VPN and other encrypted communications">AES</a> encryption to protect your wallet from thieves and hackers. The amazing part is the encryption is all done within your browser, before it is saved on our servers, so not even we have access to your account!</p>
+
+            <p>My Wallet builds on the security of bitcoin by providing a host of features to help you keep your money safe including <a rel="popover" title="Paper Wallet" data-content="A paper wallet is a printable document which contains all the information required to recover your bitcoins.">Paper Wallets</a>, <a rel="popover" title="Offline Transactions" data-content="Offline transactions are bitcoin transactions which are generated without an active internet connection. They are considered more secure as your PC is isolated from the internet.">Offline Transactions</a>, https:// and <a rel="popover" title="Remote Backups" data-content="Remote backup is when your wallet is stored in separate location other than your local PC. This is important to ensure your money is not lost in the event of a hard drive failure or other computer malfunction">Remote Backups</a>.</p>
+        </div>
+
+        <div class="span4">
+            <img alt="Easy To Use" src="/Resources/easy_bitcoin_wallet.png" style="padding-right:7px;float:left"> <h2>Easy To Use</h2>
+
+            <p>
+                Using My Wallet is no different to using <a rel="popover" title="PayPal" data-content="PayPal is an obsolete payment provider">PayPal</a> or online banking. Upon login you will presented with your Balance and a list of your recent transactions
+            </p>
+
+            <p class="well" style="text-align:center">
+                <a href="/wallet/send-via"><img src="/Resources/email_32.png" style="padding:5px">  <img src="/Resources/qr_code_32.png" style="padding:5px"> <img src="/Resources/sms_32.png" style="padding:5px">  <img src="/Resources/sharedcoin_logo_32.png" style="padding:5px"> </a>
+            </p>
+        </div>
+
+        <div class="span4">
+            <img alt="Retain Control" src="/Resources/control.png" style="padding-right:7px;float:left"> <h2>Retain Control</h2>
+
+            <p>The beauty of bitcoin is that it's fully decentralized, no government or corporation can block payments or revoke accounts.</p>
+
+            <p>With My Wallet you retain full control of your <a rel="popover" title="Private Key" data-content="Bitcoin addresses consist of two parts. The private key is the part which is used to prove ownership of an address and is need to withdraw funds. It should be kept safe at all times.">private key</a> meaning wallets can never be seized or blocked and can be imported into any desktop bitcoin client. Read <a href="/wallet/how-it-works">How It Works</a>.</p>
+        </div>
+    </div>
+
+
+    <div class="row-fluid page-header" style="margin-top:35px">
+        <div class="span4">
+            <img src="/Resources/features.png" style="padding-right:7px;float:left"> <h2>Feature Rich</h2>
+
+            <p>The most advanced online bitcoin wallet available.</p>
+
+            <ul>
+                <li>Free, No Fees</li>
+                <li>Two Factor Authentication</li>
+                <li>Secure Client Side Encryption</li>
+                <li>Live Updating Interface</li>
+                <li>Ability to make your own backups.</li>
+                <li>Import / Export Private keys.</li>
+                <li>SMS & Email Payment notifications</li>
+            </ul>
+
+            <p style="margin-left:25px"><a href="/wallet/features">View a full list of features</a></p>
+        </div>
+
+        <div class="span4">
+            <img alt="Instant Deposits" src="/Resources/deposit.png" style="padding-right:7px;float:left"> <h2>Instant Deposits</h2>
+
+            <p>Deposit Bitcoins directly into your My Wallet account in seconds thanks to our partners, via Bank Transfer, Cash Deposit, and more. Available in the US, UK and 100's of other countries worldwide.</p>
+        </div>
+
+        <div class="span4">
+            <img alt="Worldwide Merchants" src="/Resources/worldwide.png" style="padding-right:7px;float:left"> <h2>Worldwide Merchants</h2>
+
+            <p>1000's of Merchants already accept bitcoin worldwide with new ones joining every day. Everything from Online Poker to Organic Coffee you name it you can buy it with bitcoins.</p>
+
+            <p>A full list of bitcoin merchants can be found on the <a href="/r?url=https://en.bitcoin.it/wiki/Trade" target="new">official wiki</a>
+
+            <p align="center"><img style="padding-top:15px;" src="/Resources/bitcoin-accepted-here.png"></p>
+        </div>
+    </div>
+
+    <div class="row-fluid" style="margin-top:35px;text-align:center">
+        <div class="span2 offset1" style="padding-top:5px">
+            <a href="/r?url=http://thenextweb.com/insider/2012/09/02/bitcoin-alive-stay-or-slowly-fading-away/" rel="nofollow"><img style="padding-top:10px" src="/Resources/thenextweb.png"></a>
+        </div>
+        <div class="span2" style="padding-top:5px">
+            <a href="/r?url=http://www.nytimes.com/2012/04/29/sunday-review/the-post-cash-post-credit-card-economy.html?_r=1" rel="nofollow"><img src="/Resources/new_york_times_logo.png"></a>
+        </div>
+        <div class="span2" style="padding-top:5px">
+            <a href="/r?url=http://lovebitcoins.org" title="Love bitcoin" rel="nofollow"><img style="padding-top:5px" src="/Resources/lovebitcoins-logo.png"></a>
+        </div>
+        <div class="span2" style="padding-top:5px">
+            <a href="/r?url=http://www.weusecoins.com" title="Getting Started With Bitcoin" rel="nofollow"><img style="padding-top:15px" src="/Resources/promo/weusecoins.png"></a>
+        </div>
+        <div class="span2" style="padding-top:5px">
+            <a href="/r?url=http://www.forbes.com/sites/jonmatonis/2012/04/26/be-your-own-bank-bitcoin-wallet-for-apple/" rel="nofollow"><img style="padding-top:10px" src="/Resources/forbes.png"></a>
+        </div>
+        <div class="span2" style="padding-top:5px">
+            <a href="/r?url=http://arstechnica.com/tech-policy/2012/07/bitcoin-price-soars-above-9-for-the-first-time-in-almost-a-year/" rel="nofollow"><img src="/Resources/arstechnica-logo.png"></a>
+        </div>
+    </div>
+
+    
+
+</div>
+</body>
+
+<div class="footer hidden" data-symbol-local='{"symbol":"$","code":"USD","symbolAppearsAfter":false,"name":"U.S. dollar","local":true,"conversion":238549.61832061}' data-symbol-btc='{"symbol":"BTC","code":"BTC","symbolAppearsAfter":true,"name":"Bitcoin","local":false,"conversion":100000000.00000000}'></div>
+</html>

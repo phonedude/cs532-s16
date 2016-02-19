@@ -1,0 +1,187 @@
+http://www.ivoireweb.net/video-jeune-guineen-gueri-du-virus-ebola-tiens-dire-population-senegalaise/
+
+
+
+
+
+
+
+
+ivoireweb.net 
+ 
+ 
+
+   
+
+ 
+
+
+
+
+
+
+ivoireweb.net
+
+
+
+
+Ce nom de domaine n'est pas disponible
+Il a été enregistré via gandi.net
+More information about the owner
+ 
+
+Enregistrer votre nom de domaine
+
+Chez Gandi, vous avez le choix sur plus d'une centaine d'extensions et vous bénéficiez de tous les services inclus (mail, redirection, ssl..)
+  Rechercher un nom de domaine 
+
+
+Votre site dans le cloud ?
+
+Découvrez Simple Hosting, notre cloud en mode PaaS à partir de 4€HT par mois (-50% la première année pour les clients domaine)
+  Découvrir notre offre 
+ 
+
+
+This domain name has been registered with Gandi.net
+It is currently being parked by the owner
+See the domain's public registration information
+ 
+
+Register a domain name
+
+At Gandi, you can choose from over a hundred different extensions, and benefit from a wide range of services included with your domain (email, forwarding, SSL, etc.)
+  Search for a domain 
+
+
+Simple Hosting
+
+Discover Gandi's Simple Hosting, our cloud-based PaaS service starting at €4 per month (50% off the first year for domain name customers).
+
+  More information 
+ 
+
+
+Este dominio no está disponible
+Ha sido registrado en gandi.net
+Más información sobre el propietario
+ 
+
+Registrar un nombre de dominio
+
+En Gandi puede elegir entre más de cien extensiones y beneficiar de todos los servicios incluidos (mail, redirección, ssl..)
+  Registrar un nombre de dominio 
+
+
+Simple Hosting
+
+Descubra Simple Hosting, nuestro cloud en modo PaaS a partir de 4€ sin IVA por mes (50% de descuento el primer año para los clientes dominio)
+  Más información 
+ 
+
+
+此域名之註冊商為Gandi.net
+無法註冊此域名
+请查看此域名之公开whois资讯
+ 
+
+搜尋域名
+
+您在Gandi可以註冊一百多個不同類型的域名，並享有許多域名之附加服務：電子郵件、轉址、SSL憑證等等
+  搜尋域名 
+
+
+Simple Hosting
+
+了解更多Gandi 之Simple Hosting 服務，此雲端PaaS 服務費率每月為 4 € 起跳（有購買域名之會員還可享有第一年半價之折扣。）
+  更多資訊 
+ 
+
+
+此域名之注册商为Gandi.net
+无法注册此域名
+请查看此域名之公开whois资讯
+ 
+
+注册域名
+
+您在Gandi可以注册一百多个不同类型的域名，并享有许多域名之附加服务：电子邮件、转址、SSL凭证等等
+  搜寻域名 
+
+
+Simple Hosting
+
+了解更多Gandi 之Simple Hosting 服务，此云端PaaS 服务费率每月为 4 € 起跳（有购买域名之会员还可享有第一年半价之折扣。）
+  更多资讯 
+ 
+ 
+
+
+
+
+français                    
+
+
+English                    
+
+
+español                    
+
+
+正體中文                    
+
+
+简体中文                    
+ 
+
+
+
+            var g_dev = 0;
+            var g_lang = 'zh-hans';
+            var g_currency = 'USD';
+            var g_global_environment = 'camping';
+            var g_global_section = '';
+        
+
+
+
+
+
+
+
+
+
+
+            // This js needs the above default scripts, and can be required by the other scripts below.
+            Translations.set({":":":","js_info":"Messages","401":"You have been logged out. <a href=\"/login\" rel=\"login\">Log in</a> again.","chat_online_greetings_2":"Hello, we are here. What's your question?","ttc_amount":"$amount incl. VAT","durations":{"hours":{"one":"hour","many":"hours"},"years":{"one":"year","many":"years"},"days":{"one":"day","many":"days"},"months":{"one":"month","many":"months"}},"500":"An error has occurred on this page. It's likely already being worked on, so please try it again a bit later. If it still occurs, please <a href=\"/faq/contact_support\">contact customer support</a> with details.","chat_offline_greetings":"No agents are available for chat at the moment.","chat_away_greetings":"No agents are available. Please try again soon!","ht_amount":"$amount + VAT","chat_online_greetings":"Click here for chat","chat_offline_greetings_2":"No agents are available for chat at the moment. You may leave us a message with your question here, with as many details as you can.  We will respond as quickly as possible.","chat_away_greetings_2":"Hello, our agents are currently busy on other communication channels. You may ask your question, one of them will answer you as soon as they become available.","js_error":"Errors","js_warning":"Warnings","ctrl_enter":"Click or validate by pressing Ctrl+Enter","404":"We could not find the page you requested."});
+        
+
+
+
+    var submenu = $('<div>').addClass('submenu').append('<div id="navigation-main-submenu">');
+    $('header').removeClass('no-submenu');
+    $(document).ready(function() {
+        var userLang = (navigator.language) ? navigator.language : navigator.userLanguage;
+        var lang = userLang == 'fr' || userLang == 'en' || userLang == 'es' ? userLang : 'en';
+        switchLanguage(lang);
+        $('#navigation-main li > a').each(function() { 
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                lang = $(this).attr('lang');
+                switchLanguage(lang);
+            });
+        });
+     });
+    function switchLanguage(lang) {
+        $('#navigation-main li').removeClass('active');
+        activeItem = $('#navigation-main li#navigation-main-camping_' + lang)
+        activeItem.addClass('active');
+        activeItem.append(submenu);
+        $('section').hide();
+        $('section[lang="' + lang + '"]').show();
+    }
+ 
+            Prompt.setDisabled(0);
+         
+

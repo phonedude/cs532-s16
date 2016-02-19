@@ -1,0 +1,781 @@
+https://bitbillions.com/?refid=199daPhZpfY2oxYyNuHGsNAeUWQKify9wG
+
+
+
+
+
+
+
+
+(window.NREUM||(NREUM={})).loader_config={xpid:"UAACVV9VGwAFXFFXDgU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document;t(2);var f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);
+bitbillions - Every Internet Marketer's Dream
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '489191577903016');
+fbq('track', "PageView");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Sign In
+
+
+
+
+Username
+
+
+
+Password
+
+
+Sign In  or  Join Now
+
+Forgot your sign in details?
+
+
+
+
+Join Now
+
+
+
+
+
+
+
+more EFFECTIVE tools
+
+
+
+high end marketing services
+
+
+
+advertising tools
+
+
+
+community engagement
+
+
+
+team building and support
+
+and much more...
+
+
+
+
+
+more EARNING options
+
+
+
+online tasks
+
+
+
+offline projects
+
+
+
+affiliate commissions
+
+
+
+products and services
+
+and much more...
+
+
+
+
+
+more HAPPY you
+
+
+
+good return on investment
+
+
+
+top notch support
+
+
+
+expanding product base
+
+
+
+personal development
+
+DON'T MISS OUT!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Every Internet Marketer's Dream
+
+
+
+
+
+
+
+Toggle navigation
+
+
+
+
+
+
+
+Home
+Services
+Earnings
+Portfolio
+Contact
+FAQ
+Shop 
+
+
+
+
+
+
+Advertising & Marketing Tools
+We build powerfully effective digital advertising and marketing tools so you can get more customers, sign-ups, leads, or whatever you need to grow your Internet Marketing business.
+  QUICK INFO  or  JOIN NOW 
+ 
+
+
+
+
+×Close
+GBBG|bitbillions Advertising, Marketing & Earning Network
+
+
+Let’s face it. Internet Marketing is not easy. No matter how great your product or service, or how huge the commissions are, without a lot of quality traffic, you will never get the sign-ups and team affiliates you need to really earn money online. Some of the amazing things we offer include:
+
+ Digital advertising campaigns
+ High volume website and video traffic
+ Custom responsive websites and SEO services
+ Affiliate commission opportunities
+ Website monetization
+ Online earnings through completing easy tasks
+
+We know digital advertising well. We are also experts in Internet Marketing. At GBBG|bitbillions you will not only find incredible tools to promote your home based business or online income opportunity, but we also offer additional ways for you to earn extra money. Join today and see why thousands of other Internet Marketers are already using our services.
+
+
+ JOIN NOW  close
+
+
+
+
+
+
+
+
+
+
+
+
+
+Services
+
+Get more customers, signups, and earnings.
+
+
+
+
+Traffic
+Our $9 Ad Network and Traffic Monster services deliver a flood of visitors.
+ JOIN NOW
+
+
+
+
+Income
+Website monetization tools, affiliate commissions, and task earnings.
+ JOIN NOW
+
+
+
+
+Business Development
+Custom websites, SEO services, training programs and development tools.
+ JOIN NOW
+
+
+
+
+
+
+
+
+
+
+
+Online Earnings
+
+Earn additional income by completing simple tasks, referring others, and publishing ads.
+
+
+
+We pay affiliate commissions on all our products and services.
+
+
+
+Do you have your own website or blog? You can promote our products and services using our handy affiliate referral links. We pay excellent commissions on sales made through your links. You do not have to purchase anything yourself in order to earn these commissions. Simply share your links and earn.
+
+Our marketing team even provides quality banners, email templates, and other marketing tools to boost your success! You can be on your way to earnings in minutes.
+ JOIN NOW
+
+
+
+
+
+
+Task Earnings
+
+
+
+Have some spare time you could spend earning extra cash? We have a handy task platform where you get paid for completing online and offline tasks. Some tasks are as simple as looking at a website or watching a video. Now that’s a cool idea! Watch a video or check out a website and get paid for it.
+
+
+
+
+
+Marketing Commissions
+
+
+
+Want to earn some extra money promoting great products on your website or blog? Or, would you like to create your own independent sales agency where you are the boss and set your own rules? We pay excellent commissions on our custom responsive websites and SEO services. Did you know? Over 95% of all businesses do not have a custom responsive website! Opportunity is EVERYWHERE!
+
+
+
+
+
+Publisher Ad Revenue
+
+
+
+Monetize your website with advertising revenue. Our $9 Ad Network pays you every single time a page on your site is viewed. Most ad networks only pay when a visitor clicks a link (CPC) or when you deliver 1,000 impressions (CPM). We think 100% of your traffic is worth something. So, everytime someone looks at a page on your site, why not get paid?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Digital Advertising Agency
+Our ad gurus manage professional campaigns to drive traffic to your website. Super high visibility for less than $1 per day!
+
+
+PURCHASE
+
+
+
+
+
+
+
+
+
+Why Choose GBBG|bitbillions
+
+Simply put, we make it easier for you to grow your Internet Marketing business.
+
+
+
+
+ Traffic Monster
+ Money Maker
+ Advertiser
+ Publisher
+ Business Builder
+
+
+
+Traffic Monster
+
+
+
+
+ High quality website visitors
+ Low cost per acquisition
+ Fresh daily audience delivery
+ Website and video traffic
+ Guaranteed unique individuals
+ Time-based visitors/viewers
+ Excellent return on investment
+
+
+
+Want to flood your website or video with tons of high quality visitors? Create a Traffic Monster campaign and watch the customers come rushing in.
+If you are looking for even more visibility, or want a constantly fresh audience, we recommend you let our digital ad agency gurus manage a professional ad campaign for you for less than $1 per day.
+ GET STARTED
+
+
+
+Money Maker
+
+
+
+
+ Get paid for viewing websites
+ Earn money watching videos
+ Complete simple tasks for extra income
+ Refer customers and earn commissions
+ Market our products and services on your site
+ Sell our products in the “real world” for profit
+ Excellent earnings with ZERO investment
+
+
+
+Our affiliate marketing system rewards you for sharing your links with others, marketing our products online, and even selling our services offline in the “real world”.
+Not only can you use our advertising and marketing products to build your own business, but you can tell others about our excellent services and get extra cash for sharing.
+ START EARNING
+
+
+
+Advertiser
+
+
+
+
+ $9 flat rate banner/text/video ads
+ High performance delivery technology
+ Global delivery to millions
+ Simple management dashboard
+ Thousands of quality publishers for one flat rate
+ Astounding visibility and conversions
+ Excellent return on investment
+
+
+
+Looking for a low cost but high performance advertising channel? $9 Ad Network allows you to place your banner, text, or video ad on thousands of sites for only $9.
+Get your advertiser account today and see why thousands of other Internet Marketers are already enjoying the traffic and conversions expected for a much higher price than only $9.
+ CREATE AD
+
+
+
+Publisher
+
+
+
+
+ Easy to use management dashboard
+ Simple copy/paste ad embed script
+ Thousands of quality advertisers
+ Get paid for every page view
+ Wide array of sizes
+ Embed banner, text, and video ads
+ Excellent way to monetize your site
+
+
+
+Turn every page load into money. Embed our advertising code into your website and get paid every single time your pages are viewed.
+$9 Ad Network allows you to turn every visitor to your website into a constant stream of advertising revenue.
+ MONETIZE NOW
+
+
+
+Business Builder
+
+
+
+
+ Professional marketing materials
+ How to’s and training
+ Exclusive banners and image content
+ Engaging email and copy templates
+ Team building tools
+ Cooperative advertising options
+ Custom websites and SEO services
+
+
+
+Once you get your Internet Marketing business growing through our advertising products, you need tools to take it to the next level.
+Business Builder is just the set of resources you are looking for to improve upon your successes and turn your part-time hobby into a real business endeavor.
+ GET STARTED
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Believer!
+
+
+
+At first I was highly suspicous, now I am a believer, Thank you Bitbillions! 
+– Larry
+Alberta Canada
+
+
+
+
+
+
+
+
+
+Fast Results!
+
+
+
+This is really amazing and really working fast! I am happy With the results. I just activated my Business Builder recently and after about 2 days I got a referral that have already become active. This is effective. The traffic here is great.
+– Betty Ahamba
+Norway
+
+
+
+
+
+
+
+
+
+Wow amazing!
+
+
+
+BitBillions has so many ways to earn, and new earning sources are being added constantly. My largest monthly earnings so far were about $3,000. It is easy to refer people into BitBillions, I have hundreds of referrals so far.
+– Robert
+Whately, MA, USA
+
+
+
+
+
+
+
+
+
+Incredible!
+
+
+
+I did not expect such an effect. Half an hour ago, I placed ads on the $ 9 Ad Network. Immediately there was a referral and put 6 more ads !!!!!
+– Valery Ryabov
+Votkinsk, Russia
+
+
+
+
+
+
+
+
+
+Adrenalin!
+
+
+
+Since I joined GBBG|Bitbillions a year ago now, my adrenalin pump has been in overdrive! The talent and the vision of this company with focus on the new emerging technology along with their desire to share the potential incredible wealth, is far more reaching than just profound! If you are looking for an opportunity, GBBG|bitbillions has something for everyone online and in my opinion is the BEST $0 Opportunity Anyone could EVER join!
+– Leslie Banks
+Kettinge, Denmark
+
+
+
+
+
+
+
+
+
+Trustworthy!
+
+
+
+Conducting business on the Internet can offer entrepreneurs a variety of advantages. However, there are also some problems or disadvantages that can arise when doing business online â€“ issue of trust and empathy in business relationship, just to mention a few. Besides, it is not always that organizations incorporate the interest and happiness of their members. Incidentally, I came across one and after due scrutiny, I found it a place where one can achieve great strides in ones entrepreneurial efforts. And that is GBBG. I am here because I have found GBBG to be futuristic, a place I can earn money and it is awesome.
+– Dr Chigbo Ibeh
+Nigeria
+
+
+
+
+
+
+
+
+
+Thumbs Up!
+
+
+
+I am so proud to have been invited to bitbillions. I’ve made good strides since becoming a member, and will continue to share this exceptional opportunity with others that are willing or can see the vision of this company. I Give them my support, and Thumbs UP
+– Louis Harvey
+Philadelphia, PA, USA
+
+
+
+
+
+
+
+
+
+
+
+
+What Are You Waiting For?
+All the advertising and marketing tools you need to kick your home based Internet Marketing business into overdrive are waiting for you inside!
+  JOIN NOW 
+
+
+
+
+
+(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));
+
+
+
+
+
+r. ryano18 Feb 16j. santos18 Feb 16O. Leoo18 Feb 16m. umar18 Feb 16s. Munerotto18 Feb 16Ã. GuÃ°nadÃ³ttir18 Feb 16S. Babyuk18 Feb 16D. Roa18 Feb 16d. zlobin18 Feb 16å. è³´18 Feb 16r. muhammad.redha18 Feb 16M. Ndlazi18 Feb 16A. Pushkin18 Feb 16M. Pendleton18 Feb 16R. Wendler17 Feb 16O. Majer17 Feb 16R. Machani17 Feb 16M. Mashori17 Feb 16t. tarlok kumar17 Feb 16W. Nancolas17 Feb 16M. Groth17 Feb 16E. Sander17 Feb 16L. Adiatu17 Feb 16F. Mugone17 Feb 16I. Johnson17 Feb 16o. ada17 Feb 16N. Kim17 Feb 16t. elarbi17 Feb 16h. krishnan17 Feb 16A. Rossi17 Feb 16 
+
+
+181,072 MEMBERS
+and growing daily...
+3,685 people have earned money with bitbillions.1,775 this year, 1,218 this month, 674 yesterday.
+
+
+
+
+
+
+
+
+
+
+
+
+
+GBBG owns and manages several high quality, high traffic web properties. We specialize in developing advertising and marketing tools for Internet Marketers. We also provide custom responsive website design and SEO services.
+
+
+
+ Austin, Texas USA
+ Customer Service  [email protected]
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */
+ Tech Support  [email protected]
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */
+
+
+
+
+
+
+
+
+Links
+
+
+ Privacy
+ Legal
+ FAQ
+ Blog
+
+
+
+
+
+
+Share
+Tweet #bitbillions!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+
+
+
+
+
+
+
+
+
+
+Copyright Â© 2013 - 2016 Global Bitbillions Group Incorporated. All Rights Reserved
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jQuery(document).ready(function() {$('[data-toggle="tooltip"]').tooltip();});
+
+			var test = 1;
+			var is_asked = false;
+			var allow = Math.floor((Math.random() * 100) + 1);
+			window.onbeforeunload = function() {
+			if (!is_asked){
+			is_asked = true;
+			setTimeout(function() {
+			test = 2;
+			}, 500)
+			return "WAIT! DON'T MISS OUT! \n\nWe were just about to show you an incredible offer, but if you leave you will miss it!";
+			}
+			}
+			setInterval(function() {
+			if (test === 2) {
+			window.onbeforeunload = null;
+			window.parent.location = "http://abc.bitbillions.com/agency/?source=network";
+			test = 3; //
+			}
+			}, 50);
+			jQuery("form").submit(function(){
+			is_asked = true;
+			});
+			jQuery("a").click(function(){
+			is_asked = true;
+			});
+		
+
+var fbxhr = new XMLHttpRequest();
+fbxhr.open("POST", "https://graph.facebook.com", true);
+fbxhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+fbxhr.send("id=https://bitbillions.com/&scrape=true");
+
+window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c8e31235dd","applicationID":"3580594","transactionName":"b1cEY0MAX0oEVURbDlYdJ1RFCF5XSlVfXwNRXANTHAdDVgtC","queueTime":0,"applicationTime":178,"atts":"QxAHFQsaTEQ=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-686.min.js"}
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+
+
+
+(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'1000484289729','properties':{'pixelId':'432811'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-38837407-1', 'auto');ga('send', 'pageview');
