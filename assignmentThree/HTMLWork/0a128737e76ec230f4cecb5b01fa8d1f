@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Admin Panel Template"/>
+    <title>Social Media and Content Management Software | MavSocial</title>
+        <script>
+        // Saving server current timestamp in JS var - Pavan
+       // var server_curr_time = '1455843646';
+        //
+        var public_path = 'https://app.maventus.com/';
+        var s3_base_url = 'https://maventus.s3.amazonaws.com/';
+                        var bucket_url = 'https://maventus.s3.amazonaws.com/bucket/';
+        var short_url = '';
+                var userTimeZone = '-480,1';
+                
+                /*Walk Me Snippet added by vamshi*/
+        /*(function () {
+            var walkme = document.createElement('script');
+            walkme.type = 'text/javascript';
+            walkme.async = true;
+            walkme.src = 'https://cdn.walkme.com/users/9acd035692204f8387f85424141e0a3b/test/walkme_9acd035692204f8387f85424141e0a3b_https.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(walkme, s);
+            window._walkmeConfig = {smartLoad: true};
+        })();*/
+        /*End of Walk me snippet*/
+    </script>
+
+    <link rel="shortcut icon" href="https://maventus.s3.amazonaws.com/images/favicon.png">
+
+        </head>
+<body
+    style='padding:0' >
+
+
+<div class="navbar navbar-fixed-top">
+    
+
+                    </div>
+        
+    <div class="">
+        
+
+
+
+<script type="text/javascript">
+    /* Expand status */
+    localStorage.setItem("expand", "1");
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36009075-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<style type="text/css">
+
+    .img_ie {
+        width: 168px;
+        height: 40px;
+    }
+
+    .foot_ie {
+        width: 110px;
+        height: 37px;
+    }
+
+    .login-contain {
+        height: auto;
+        margin-bottom: 117px;
+	    }
+	.home_login{ width:100%; height:auto;}
+	.home_login ul{ margin:0; padding:0;}
+	.home_login ul li{ list-style:none; margin:0 0 20px 0;}
+	.power_by{ margin-top:20px;}
+	.clear{ clear:both;}
+	.login_main_bg{ height:650px;}
+
+	@media screen and (max-width: 767px) {
+		.login-contain{ width:84% !important; margin-top:60px !important; margin-bottom:10px;}
+		.mb_clear{ clear:both !important;  display: none !important;}
+		.power_by{height: auto% !important;}
+		.login_main_bg{ height:auto !important; padding-bottom:10px !important;}
+		.mb_uname,.mb_pass{ width:90% !important;}
+		.mb_padding{ padding-bottom:10px;}
+		}
+	
+	
+</style>
+<div class="content-wrap container-fluid" style="padding:0;">
+    <div class='row-fluid'>
+
+        <div class='span10' style='background-color:#e6e6e6; border-radius:25px; margin-left: auto;  margin-right: auto;   float: none;' class="mb_padding">
+            <div class='row-fluid' style='background-color:black;padding-top: 10px;padding-bottom:10px'>
+                <div class='span5 logo'><a href="https://app.maventus.com/home/home"><img
+                            src="https://d3np90d49szjeb.cloudfront.net/images/mavsocial_logo.png" width="168" height="40" alt=""
+                            class="img_ie"></a></div>
+                <div class='span7' align='right'>
+                    <div style='margin-right:22px;margin-top:1%'>
+                        <h3 style='color:white'>Social Media Marketing for Business</h3>
+                    </div>
+                </div>
+            </div>
+            <link rel="apple-touch-icon" href="https://app.maventus.com/ico/custom_icon.png"/>
+            <div class='power_by'>
+
+                <div class="login-contain">
+                    <form action="https://app.maventus.com/user/login" method="post" id="frmLogin" style='margin:0'>
+                                                
+                        	<div class="span12">
+                            	<!--left_login_box-->
+                            	<div class="span8 home_login"> 
+                                	<ul>
+                                    	<li><h3 style="color:#000000;"><strong>MavSocial Secure Login</strong></h3></li>
+                                        <li>
+                                        <input name="email" id="email" placeholder="Enter your email"
+                                                       style='width:92%;padding-left:25px;' type="email"
+                                                       class="user-name mb_uname"></li>
+                                            <li>
+                                             <input name="pwd" id="pwd" placeholder="Password"
+                                                       style='width:92%;padding-left:25px;' type="password"
+                                                       class="user-pass mb_pass">
+                                            </li>  
+                                            
+                                            <div class="clear"></div>
+                                            <li>
+                                           <span style="float:left;">
+                                           <label class="checkbox" style='text-align:left'>
+                                                    <input type="checkbox" style='margin-top:2px' id="remember_me"
+                                                           name="remember_me">
+                                                    Remember Me </label></span>
+                                           <!--forget possword-->
+                                           <span style="float:right;">
+                                           <a href='#forgot_password' id="forgot_password_btn" style='text-decoration:none' role="button" data-toggle="modal">Forgot Your Password?</a>
+                                           </span>
+                                            </li>  
+                                            <div class="clear"></div>
+                                            <li></li>
+                                            <li style="margin:0;">
+                                            Don't have an account? 
+                                            </li>    
+                                            
+                                            <li>
+                                              <div class="clear"></div>
+                                            <span style="float:left; margin-top:4px;">
+                                           <a href='http://www.mavsocial.com/sign-up/'
+                                                   style='text-decoration:none; color: #FF0000; font-size: 14px;'><strong>Sign
+                                                        up here.</strong></a></span>
+                                                        
+                                          <span style="float:right;">
+                                          <input name="sbtLogin" type="hidden" value="yes"/>
+                                                <button class="btn btn-large login-btn"
+                                                        style='margin-right:1%; padding: 5px 45px; -webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;'
+                                                        type="submit">Login
+                                                </button>
+                                           </span>
+                                            </li>
+                       </ul>
+  
+                                </div>
+                                <!--right_side_box_img-->
+                                <div class="span4 mb_clear">
+                                
+                                 <img src="https://d3np90d49szjeb.cloudfront.net/images/mavsocial_login_image.png"
+                                         style="height: 260px;"/>
+                                
+                                </div>                            
+                            </div>
+                        
+                        
+                        <!--<table>
+                            <tr>
+                                <td style="vertical-align: top; padding-right: 20px;" class="span8">
+                                    <table class='table form-table' style='margin:0'>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="2" style='font-size:20px; padding: 0 8px 8px; '>MavSocial
+                                                Secure Login
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+
+                                        <tr>
+                                            <td colspan='2' style="height: 54px; padding-top: 10px;">
+                                                <input name="email" id="email" placeholder="Enter your email"
+                                                       style='width:92%;padding-left:25px;' type="email"
+                                                       class="user-name"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan='2' style="padding: 0 8px; height: 54px;">
+                                                <input name="pwd" id="pwd" placeholder="Password"
+                                                       style='width:92%;padding-left:25px;' type="password"
+                                                       class="user-pass"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label class="checkbox" style='text-align:left'>
+                                                    <input type="checkbox" style='margin-top:2px' id="remember_me"
+                                                           name="remember_me">
+                                                    Remember Me </label></td>
+                                            <td style="text-align: right;"><a href='#forgot_password'
+                                                                              id="forgot_password_btn"
+                                                                              style='text-decoration:none' role="button"
+                                                                              data-toggle="modal">Forgot Your
+                                                    Password?</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 28px 0 0 8px;">Don't have an account? <br/>
+                                                <a href='http://www.mavsocial.com/sign-up/'
+                                                   style='text-decoration:none; color: #FF0000; font-size: 14px;'><strong>Sign
+                                                        up here.</strong></a></td>
+                                            <td style='text-align: right;padding: 0 0 1px 0; vertical-align: bottom;'>
+                                                <input name="sbtLogin" type="hidden" value="yes"/>
+                                                <button class="btn btn-large login-btn"
+                                                        style='margin-right:1%; padding: 5px 45px; -webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;'
+                                                        type="submit">Login
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td class="span4">
+                                    <img src="https://d3np90d49szjeb.cloudfront.net/images/mavsocial_login_image.png"
+                                         style="height: 260px;"/>
+                                </td>
+                            </tr>
+                        </table>-->
+
+                    </form>
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+            <div class='row-fluid'>
+
+                <div class="span12" align='center'>
+                    <div><img style="" width='110px' height='110px'
+                              src="https://d3np90d49szjeb.cloudfront.net/images/mavsocial_powered_by.png"
+                              alt="Software for Social Media Marketing Powered by MavSocial" class="foot_ie"/></div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class='row-fluid' align='center' style="left: 1000px;">
+        <p style="color:#FF0000">(c) Copyright 2013-2016 Maventus Group Incorporated</p>
+    </div>
+</div>
+<div id="forgot_password" style='border:none' class="modal hide fade" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true"></div>
+<script type="text/javascript">
+    $(function () {
+        $("#email").focus();
+        $('#frmLogin').validate({
+
+            rules: {
+                email: {required: true, email: true},
+                pwd: {required: true}
+            },
+            messages: {
+                email: {
+                    required: "Please enter your email",
+                    email: "Please enter valid email"
+                },
+                pwd: {
+                    required: "Please enter your password"
+                }
+            }
+        });
+    });
+</script>
+    </div>
+
+    <div class="modal hide fade" id="getting-started-box">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3 class="gettingstarted_modal_title create_item_title">Getting Started with MavSocial</h3>
+    </div>
+    <div class="modal-body">
+        <div class="explor_main">
+            <div class="main_box">
+                <!--first box-->
+                <div class="explore_box">
+                    <div class="icon_image"><i class="fa fa-sitemap"></i></div>
+                    <div class="round_div" style="background-color: #ec5656;">1</div>
+                    <div class="explore_text">
+                        <!--<h3 class="explore_hedding">Add Social Network</h3>-->
+                        <div class="button_gup"><a class="explore_buttons"
+                                                   href="https://app.maventus.com/account/manage-social-network"
+                                                   target="_blank">Social Networks</a></div>
+                        <div class="explore_data">Add any of your Social Networks and start using MavSocial.</div>
+                    </div>
+                </div>
+
+                <!--2nd box-->
+                <div class="devider_arrow"><i class="fa fa-chevron-right"></i></div>
+
+                <!--3rd box-->
+                <div class="explore_box">
+                    <div class="icon_image"><i class="fa fa-picture-o"></i></div>
+                    <div class="round_div" style=" background-color:#52b6d7;">2</div>
+                    <div class="explore_text">
+                        <!--<h3 class="explore_hedding">Manage Your Digital Content</h3>-->
+                        <div class="button_gup"><a class="explore_buttons"
+                                                   href="https://app.maventus.com/media/image-library"
+                                                   target="_blank" style=" background-color:#52b6d7;">Digital
+                                Library</a></div>
+                        <div class="explore_data">Manage your digital content effectively with MavSocial Digital
+                            Library
+                            .
+                        </div>
+                    </div>
+                </div>
+
+                <!--4th box-->
+                <div class="devider_arrow"><i class="fa fa-chevron-right"></i></div>
+
+                <!--5th box-->
+                <div class="explore_box">
+                    <div class="icon_image"><i class="fa fa-edit"></i></div>
+                    <div class="round_div" style="background-color:#3f87c5;">3</div>
+                    <div class="explore_text">
+                        <!--<h3 class="explore_hedding">Share on Your Networks</h3>-->
+                        <div class="button_gup"><a class="explore_buttons"
+                                                   href="https://app.maventus.com/post-manager/index"
+                                                   target="_blank" style="background-color:#3f87c5;">Post
+                                Manager</a>
+                        </div>
+                        <div class="explore_data">Share your content with the powerful MavSocial Post Manager.</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<input type="hidden" id="credit_user_cash_hidden" value=""/>
+
+<!-- Quick Post Popup -->
+<!--<div class="mav_qp_block">
+    <div class="mav_qp_box">
+        <div class="mav_qp_inner">
+            <iframe src="" id="iframe_qp"></iframe>
+            <input type="hidden" id="mav_qp_content_loaded" value="0"/>
+        </div>
+
+        <div class="mav_qp_arrow_box">
+            <span class="mav_qp__down_arrow"><i class="fa fa-caret-square-o-up mav_qp_toogle_slide"></i></span>
+        </div>
+    </div>
+</div>-->
+
+<!-- -->
+<!-- Main Quick Post Starts -->
+    <script src="https://d3np90d49szjeb.cloudfront.net/bucket/js/footer_js_v_1-6.gz.js"></script>
+
+
+
+
+
+</body>
+
+<script type="text/javascript">
+
+</script>
+</html>
