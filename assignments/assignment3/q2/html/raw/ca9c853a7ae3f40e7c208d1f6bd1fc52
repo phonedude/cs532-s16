@@ -1,0 +1,889 @@
+http://iNewsTV.org/
+﻿<!DOCTYPE html>
+<!--[if IE 7 | IE 8]>
+<html class="ie" dir="ltr" lang="en">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=1024,maximum-scale=1.0">
+<title>iNewsTV.org</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=edge,chrome=1">
+<meta name="title" content="iNewsTV.org"/>
+<meta name="keywords" content="live,news,tv,world,videos,"/>
+<meta name="description" content="Watch live tv and news videos."/>
+<script type="text/javascript">
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"efaaf0292be27ac8e2c61e32ae67dc5d",petok:"ae0973b1cca5835fdbc536aa3d96053e7dab3efa-1455821364-1800",zone:"inewstv.org",rocket:"0",apps:{"clky":{"sid":"100782023","uid":"66534322"},"ga_key":{"ua":"UA-38985246-1","ga_bs":"2"},"cdnjs":{"__h":"1","cdnjs":"GF"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=fb690a32f5/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"clky":{"sid":"100782023","uid":"66534322"},"ga_key":{"ua":"UA-38985246-1","ga_bs":"2"},"cdnjs":{"__h":"1","cdnjs":"GF"}};
+//]]>
+</script><script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=dccf16c0cc/appsh.min.js"></script><script type="text/javascript">__CF.AJS.inith();</script><link rel="shortcut icon" href="http://inewstv.org/uploads/favicon.ico">
+<link rel="alternate" type="application/rss+xml" title="iNewsTV.org" href="http://inewstv.org/rss.php"/>
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="http://inewstv.org/templates/default/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="http://inewstv.org/templates/default/css/bootstrap-responsive.min.css">
+<!--[if lt IE 9]>
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" media="screen" href="http://inewstv.org/templates/default/css/new-style.css">
+<link rel="stylesheet" type="text/css" media="screen" href="http://inewstv.org/templates/default/css/uniform.default.min.css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=all" rel="stylesheet" type="text/css">
+<!--[if IE]>
+
+<link rel="stylesheet" type="text/css" media="screen" href="http://inewstv.org/templates/default/css/new-style-ie.css">
+
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400italic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=Open+Sans:700italic" rel="stylesheet" type="text/css">
+<![endif]-->
+<link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+ var MELODYURL = "http://inewstv.org";
+ var MELODYURL2 = "http://iNewsTV.org";
+ var TemplateP = "http://inewstv.org/templates/default";
+ var _LOGGEDIN_ =  false ;
+</script>
+<script type="text/javascript">
+ var pm_lang = {
+	lights_off: "Lights off",
+	lights_on: "Lights on",
+	validate_name: "Please enter a name",
+	validate_username: "Please enter a username",
+	validate_pass: "Please provide a password",
+	validate_captcha: "Please enter the validation code",
+	validate_email: "Please enter a valid email address",
+	validate_agree: "Please accept our policy",
+	validate_name_long: "Your name must consist of at least 2 characters",
+	validate_username_long: "Your username must consist of at least 2 characters",
+	validate_pass_long: "Your password must be at least 5 characters long",
+	validate_confirm_pass_long: "Please enter the same password as above",
+	choose_category: "Please choose a category",
+ 	validate_select_file: "No file was selected/uploaded.",
+ 	validate_video_title: "Please enter a title for this video",
+	onpage_delete_favorite_confirm: "You are about to remove this video from your favorites list. Click 'Cancel' to stop, 'OK' to delete.",
+	please_wait: "Loading...",
+	// upload video page
+	swfupload_status_uploaded: "Uploaded",
+	swfupload_status_pending: "Continue with the rest of the form.",
+	swfupload_status_queued: "Queued",
+	swfupload_status_uploading: "Uploading...",
+	swfupload_file: "File",
+	swfupload_btn_select: "Select",
+	swfupload_btn_cancel: "Cancel",
+	swfupload_status_error: "Error",
+	swfupload_error_oversize: "Size of the selected file(s) is greater than allowed limit",
+	swfupload_friendly_maxsize: ""
+ }
+</script>
+<script type="text/javascript" src="http://inewstv.org/js/swfobject.js"></script>
+<style type="text/css">h1{color:#f9f9f9;}h2{color:#f9f9f9;}h3{color:#f9f9f9;}h4{color:#f9f9f9;}h5{color:#f9f9f9;}h6{color:#f9f9f9;}#wrapper{background-image:none;background-color:#333333;color:#ededed;width:1040px;max-width:1040px;}.text-exp .show-more{background-image:linear-gradient(bottom,#333333 0%,#333333 50%,rgba(244,245,247,0)100%); background-image: -o-linear-gradient(bottom, #333333 0%, #333333 50%, rgba(244,245,247,0)100%); background-image: -moz-linear-gradient(bottom, #333333 0%, #333333 50%, rgba(244,245,247,0)100%); }body{background-image:none;background-color:#797979;}.wide-header{background-image:none;background-color:#2e2e2e;}#user-pane{color:#dedede;}#user-pane .greet-links a{color:#dedede;}#user-pane .greet-links a:visited{color:#dedede;}.wide-nav{background-image:none;background-color:#fafafa;box-shadow:none;border-top-color:#fafafa;border-bottom-color:#fafafa;}ul.nav li a.wide-nav-link{text-shadow:none;color:#0f0f0f;}#wrapper a{text-shadow:none;color:#96bfe0;}h1.site-title a{text-shadow:none;color:#e0e0e0;}footer{text-shadow:none;background-color:#2e2e2e;color:#ededed;}footer a{text-shadow:none;color:#ededed;}.fixed960{max-width:1040px;}</style>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38985246-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+</script>
+</head>
+<body><script type="text/javascript">
+//<![CDATA[
+try{(function(a){var b="http://",c="inewstv.org",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+</script>
+<header class="wide-header" id="overview">
+<div class="row-fluid fixed960">
+<div class="span3">
+<a href="http://inewstv.org/index.php" rel="home"><img src="http://inewstv.org/uploads/custom-logo.png" alt="iNewsTV.org" title="iNewsTV.org" border="0"/></a>
+</div>
+<div class="span6 wide-header-pad">
+<form action="http://inewstv.org/search.php" method="get" id="search" name="search" onSubmit="return validateSearch('true');">
+<div class="controls">
+<div class="input-append">
+<input class="span10 pm-search-field" id="appendedInputButton" size="16" name="keywords" type="text" placeholder="Search..." x-webkit-speech="x-webkit-speech" onwebkitspeechchange="this.form.submit();" onblur="fill();" autocomplete="off">
+<button class="btn" type="submit"><i class="icon-search"></i></button>
+</div>
+<div class="suggestionsBox" id="suggestions" style="display: none;">
+<div class="suggestionList input-xlarge" id="autoSuggestionsList">
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="span3 hidden-phone">
+<div id="user-pane">
+<div class="user-data">
+<span class="avatar-img avatar-generic">
+<a class="primary ajax-modal" data-toggle="modal" data-backdrop="true" data-keyboard="true" href="#header-login-form" rel="tooltip" title="Login"><img src="http://inewstv.org/templates/default/img/pm-avatar.png" width="40" height="40" alt=""></a>
+</span>
+<span class="greet-links">
+<div class="ellipsis"><strong>Welcome</strong></div>
+<span class=""> <a class="primary ajax-modal" data-toggle="modal" data-backdrop="true" data-keyboard="true" href="#header-login-form">Login</a> / <a href="http://inewstv.org/register.php">Register</a></span>
+</span>
+</div>
+<div class="modal hide" id="header-login-form" role="dialog" aria-labelledby="header-login-form-label">  
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h3 id="header-login-form-label">Login</h3>
+</div>
+<div class="modal-body">
+<p></p>
+<form class="form-horizontal" name="login_form" id="login-form" method="post" action="http://inewstv.org/login.php">
+<fieldset>
+<div class="control-group">
+<label class="control-label" for="username">Username/Email</label>
+<div class="controls"><input type="text" class="hocusfocus input-large" id="hocusfocus" name="username" value=""></div>
+</div>
+<div class="control-group">
+<label class="control-label" for="pass">Password</label>
+<div class="controls"><input type="password" class="input-large" id="pass" name="pass" maxlength="32" autocomplete="off"></div>
+</div>
+<div class="control-group">
+<div class="controls">
+<label class="checkbox">
+<input type="checkbox" name="remember" value="1"> <small>Remember me</small>
+</label>
+</div>
+</div>
+<div class="">
+<div class="controls">
+<button type="submit" name="Login" value="Login" class="btn btn-blue" data-loading-text="Login">Login</button>
+<span class="signup"><small><a href="http://inewstv.org/login.php?do=forgot_pass">Forgot your password?</a></small></span>
+</div>
+</div>
+</fieldset>
+</form> </div>
+</div>
+</div> 
+</div> 
+</div>
+</header>
+<nav class="wide-nav">
+<div class="row-fluid fixed960">
+<span class="span12">
+<div class="navbar">
+<div class="navbar-inner">
+<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<div class="nav-collapse">
+<ul class="nav">
+<li><a href="http://inewstv.org/index.php" class="wide-nav-link">Home</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle wide-nav-link" data-toggle="dropdown">Category <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<ul id='ul_categories'>
+<li class=""><a href="http://inewstv.org/category.php?cat=live-tv" class="">Live TV</a></li>
+<li class="topcat"><a href="http://inewstv.org/category.php?cat=videos" class="topcat">Videos</a>
+<ul class='hidden_li'>
+<li class=""><a href="http://inewstv.org/category.php?cat=news" class="">News</a> </li>
+<li class=""><a href="http://inewstv.org/category.php?cat=funny" class="">Funny</a> </li>
+<li class=""><a href="http://inewstv.org/category.php?cat=real-life" class="">Real Life</a> </li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+<li><a href="http://inewstv.org/topvideos.php" class="wide-nav-link">Top videos</a></li>
+<li><a href="http://inewstv.org/newvideos.php" class="wide-nav-link">New videos</a></li>
+<li><a href="http://inewstv.org/randomizer.php" rel="nofollow" class="wide-nav-link">Random video</a></li>
+<li><a href="http://inewstv.org/page.php?p=6" class="wide-nav-link">Contact us</a></li>
+<li><a href="http://inewstv.org/fbconnect.php?init" style="float:right" rel="nofollow" title="Register/Login with Facebook"><img src="http://inewstv.org/templates/default/img/fblogin_small.gif" style="border:none;"/></a></li> </ul>
+<ul class="nav pull-right pm-ul-pages">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle wide-nav-link" data-toggle="dropdown">Pages <b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="http://inewstv.org/page.php?p=4">The iNewsTV Daily</a></li>
+<li><a href="http://inewstv.org/page.php?p=5">The Left Side News</a></li>
+<li><a href="http://inewstv.org/page.php?p=6">Contact Us</a></li>
+</ul>
+</li>
+<li><a href="http://inewstv.org/register.php" class="btn-register border-radius2">Register</a></li>
+</ul>
+</div> 
+</div>
+</div> 
+</div> 
+</span>
+</div>
+</nav>
+<a id="top"></a>
+<div id="wrapper">
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span8">
+<div id="primary">
+<div id="pm-featured" class="border-radius3">
+<h2>Featured video: <a href="http://inewstv.org/watch.php?vid=466e75f86">Mumia Abu-Jamal Speaks Out from Prison on Pennsylvania's New Law Censoring Convicts' Speech</a></h2>
+<div id="Playerholder">
+You need to have the <a href="http://www.macromedia.com/go/getflashplayer">Flash Player</a> installed and
+a browser with JavaScript support.
+</div>
+<script type="text/javascript" src="http://iNewsTV.org/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key="";</script>
+<script type="text/javascript">
+        var flashvars = {
+                
+                                            
+                        file: 'http://www.youtube.com/watch?v=C_-bPE4g7Hs',
+                        
+                                        
+    				primary: "flash",
+                    width: "100%",
+                    height: "371",
+                    image: 'http://i.ytimg.com/vi/C_-bPE4g7Hs/sddefault.jpg',
+                    logo: {
+                    	file: 'http://inewstv.org/uploads/inewstvorg-100.png',
+                    	link: 'http://inewstv.org',
+                    	},
+    		    autostart: 'false',
+                };
+        
+            jwplayer("Playerholder").setup(flashvars);
+        </script>
+</div>
+<div class="element-videos">
+<div class="btn-group btn-group-sort">
+<button class="btn btn-small" id="list"><i class="icon-th"></i> </button>
+<button class="btn btn-small" id="grid"><i class="icon-th-list"></i> </button>
+</div>
+<h2 class="upper-blue">New videos</h2>
+<ul class="pm-ul-browse-videos thumbnails" id="pm-grid">
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">10:24</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=6bd7fb9c8" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/N2VU0b0Q8RY/maxresdefault.jpg" alt="Keep It in the Ground: Author Terry Tempest Williams Buys 1,750 Acres of Oil &amp; Gas Leases in Utah" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=6bd7fb9c8" class="pm-title-link" title="Keep It in the Ground: Author Terry Tempest Williams Buys 1,750 Acres of Oil &amp; Gas Leases in Utah">Keep It in the Ground: Author Terry Tempest Williams Buys 1,750 Acres of Oil & Gas Leases in Utah</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T16:35:09+0000" title="Thursday, February 18, 2016 4:35 PM">2 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>1 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">- In Utah, more than 100 protesters disrupted a federal auction of oil and gas leases, spontaneously bursting into song until they were forced to leave. Author and activist Terry Tempest Williams, registered as Bidder 19, successfully bought rights to 1,7</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">06:13</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=69fdab8c2" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/toB6-7aRamA/maxresdefault.jpg" alt="What Is the Government Still Hiding? ACLU Continues Fight to Obtain Photos of Bush-Era Torture" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=69fdab8c2" class="pm-title-link" title="What Is the Government Still Hiding? ACLU Continues Fight to Obtain Photos of Bush-Era Torture">What Is the Government Still Hiding? ACLU Continues Fight to Obtain Photos of Bush-Era Torture</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T16:35:08+0000" title="Thursday, February 18, 2016 4:35 PM">2 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>1 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">- Earlier this month, the Pentagon released nearly 200 photographs relating to the abuse of prisoners by U.S. military personnel in Iraq and Afghanistan but refused to release a larger batch of 1,800 images. The American Civil Liberties Union has been fig</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">13:46</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=eabc4a706" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/SGCSy2Ogoa4/maxresdefault.jpg" alt="Apple vs. the FBI: Inside the Battle Snowden Calls &quot;The Most Important Tech Case in a Decade&quot;" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=eabc4a706" class="pm-title-link" title="Apple vs. the FBI: Inside the Battle Snowden Calls &quot;The Most Important Tech Case in a Decade&quot;">Apple vs. the FBI: Inside the Battle Snowden Calls "The Most Important Tech Case in a Decade"</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T16:35:06+0000" title="Thursday, February 18, 2016 4:35 PM">2 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>1 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">- A major debate over privacy and online encryption has erupted after the computer giant Apple announced it will resist a court order to help the FBI break into an iPhone recovered from one of the San Bernardino shooters. Citing an 18th century law, feder</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">11:24</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=f6ebf67b7" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/SjrRylx5tA4/maxresdefault.jpg" alt="Targeting Transgender Children, South Dakota Passes Transphobic School Bathroom Bill" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=f6ebf67b7" class="pm-title-link" title="Targeting Transgender Children, South Dakota Passes Transphobic School Bathroom Bill">Targeting Transgender Children, South Dakota Passes Transphobic School Bathroom Bill</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T16:35:05+0000" title="Thursday, February 18, 2016 4:35 PM">2 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>11 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">- South Dakota could soon become the first state in the country to ban transgender students from using the bathroom that corresponds to their gender identity. On Tuesday, the South Dakota state Senate passed a measure mandating that restrooms and locker r</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">12:06</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=e9bffdb12" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/nKa-POy3bnk/sddefault.jpg" alt="Top U.S. &amp; World Headlines — February 18, 2016" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=e9bffdb12" class="pm-title-link" title="Top U.S. &amp; World Headlines — February 18, 2016">Top U.S. & World Headlines — February 18, 2016</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T15:35:07+0000" title="Thursday, February 18, 2016 3:35 PM">3 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>7 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">Visit to watch the full independent, global news hour, read the transcript, search our archive and to make a donation to support us.Democracy Now! is an independent global news hour that airs weekdays on nearly 1,400 TV and radio stations Monday through F</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">03:16</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=8dca68de6" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/BrH167aFZx0/sddefault.jpg" alt="Street trolling: Chinese internet wants Snowden St as US names plaza after dissident Liu Xiaobo" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=8dca68de6" class="pm-title-link" title="Street trolling: Chinese internet wants Snowden St as US names plaza after dissident Liu Xiaobo">Street trolling: Chinese internet wants Snowden St as US names plaza after dissident Liu Xiaobo</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=RussiaToday">Russia Today</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T14:35:03+0000" title="Thursday, February 18, 2016 2:35 PM">4 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>2 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">Beijing has labelled "provocative" the US Senate’s approval to rename a plaza in front of the Chinese embassy in Washington after a jailed dissident. In response, critics have proposed that a passage in front of the US embassy in Beijing be renamed “Snowd</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">16:16</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=361457c13" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/iqw812EyVdg/maxresdefault.jpg" alt="CNN GOP Presidential Town Hall: The Young Turks Summary" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=361457c13" class="pm-title-link" title="CNN GOP Presidential Town Hall: The Young Turks Summary">CNN GOP Presidential Town Hall: The Young Turks Summary</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=TYT">The Young Turks</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T06:35:04+0000" title="Thursday, February 18, 2016 6:35 AM">12 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>2 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">Cenk Uygur and John Iadarola of The Young Turks break down the CNN GOP Presidential Town Hall. Who do you think had the best night at the latest Republican town hall: Ben Carson, Marco Rubio or Ted Cruz? Do you agree with TYT’s opinion? Tell us what you t</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">09:18</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=983452725" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/O2Er3Eu7Mgo/maxresdefault.jpg" alt="Beyoncé Bashing Blaze Host Gets SCHOOLED By Charlemagne Tha God" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=983452725" class="pm-title-link" title="Beyoncé Bashing Blaze Host Gets SCHOOLED By Charlemagne Tha God">Beyoncé Bashing Blaze Host Gets SCHOOLED By Charlemagne Tha God</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=TYT">The Young Turks</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T03:35:05+0000" title="Thursday, February 18, 2016 3:35 AM">15 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>4 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">Tomi Lauren made headlines for criticizing Beyonce for her Super Bowl Halftime performance, comparing the Black Panthers to the KKK. Rapper and radio host Charlemagne Tha God goes on her show to clarify what the purpose of the Black Panthers was. Cenk Uyg</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">11:33</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=f07b7cba6" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/--Lx-3DPXzo/maxresdefault.jpg" alt="Donald Trump's Vice President?" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=f07b7cba6" class="pm-title-link" title="Donald Trump's Vice President?">Donald Trump's Vice President?</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=TYT">The Young Turks</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-18T02:35:06+0000" title="Thursday, February 18, 2016 2:35 AM">16 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>2 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">The Joe Scarborough / Donald Trump conflict of interest may have actually jumped the shark this week. "Journalist" Scarborough is getting asked about his relationship with Trump more and more often, people are even questioning whether or not he'll be Trum</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">06:37</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=8fdfe979a" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/oyCfldozeLY/sddefault.jpg" alt="Putin, Orban meet in Moscow, discuss sanctions &amp; refugee crisis" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=8fdfe979a" class="pm-title-link" title="Putin, Orban meet in Moscow, discuss sanctions &amp; refugee crisis">Putin, Orban meet in Moscow, discuss sanctions & refugee crisis</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=RussiaToday">Russia Today</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-17T19:35:04+0000" title="Wednesday, February 17, 2016 7:35 PM">23 hours ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>20 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">The solution to the refugee crisis lies in the political settlement of conflicts, particularly in Syria and Libya, President Vladimir Putin said following a meeting with Hungarian PM Viktor Orban. He added that the two share views on the migrant and refug</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">04:27</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=8d320a58e" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/eUpNEJsoMQA/maxresdefault.jpg" alt="Inside How Citizens, Journalists, Doctors &amp; Scientists Exposed the Flint Water Crisis Cover-Up" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=8d320a58e" class="pm-title-link" title="Inside How Citizens, Journalists, Doctors &amp; Scientists Exposed the Flint Water Crisis Cover-Up">Inside How Citizens, Journalists, Doctors & Scientists Exposed the Flint Water Crisis Cover-Up</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-17T18:35:13+0000" title="Wednesday, February 17, 2016 6:35 PM">1 day ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>6 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">- We speak with Curt Guyette of the ACLU of Michigan. He is an investigative reporter who was just named Michigan Journalist of the Year by the Michigan Press Association. He talks about the citizen-led effort to prove, despite assurances by state officia</p>
+</div>
+</li>
+<li>
+<div class="pm-li-video">
+<span class="pm-video-thumb pm-thumb-145 pm-thumb border-radius2">
+<span class="pm-video-li-thumb-info">
+<span class="pm-label-duration border-radius3 opac7">06:19</span> <span class="label label-new">New</span> </span>
+<a href="http://inewstv.org/watch.php?vid=3f13ac9f1" class="pm-thumb-fix pm-thumb-145"><span class="pm-thumb-fix-clip"><img src="http://i.ytimg.com/vi/isOhuy4LjrU/maxresdefault.jpg" alt="Meet the Flint Official Whose Bid to Restore Safe Drinking Water Was Blocked by an Unelected Manager" width="145"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=3f13ac9f1" class="pm-title-link" title="Meet the Flint Official Whose Bid to Restore Safe Drinking Water Was Blocked by an Unelected Manager">Meet the Flint Official Whose Bid to Restore Safe Drinking Water Was Blocked by an Unelected Manager</a></h3>
+<div class="pm-video-attr">
+<span class="pm-video-attr-author">by <a href="http://inewstv.org/profile.php?u=DemocracyNow">DemocracyNow</a></span>
+<span class="pm-video-attr-since"><small>Added <time datetime="2016-02-17T18:35:11+0000" title="Wednesday, February 17, 2016 6:35 PM">1 day ago</time></small></span>
+<span class="pm-video-attr-numbers"><small>4 Views / 0 Likes</small></span>
+</div>
+<p class="pm-video-attr-desc">- To learn more about how how Flint ended up with an unelected emergency manager, we spoke with Flint City Councilmember Eric Mays. Eleven months ago, in March 2015, the City Council voted seven to one on his resolution to stop using water from the corros</p>
+</div>
+</li>
+</ul>
+</div> 
+<div class="clearfix"></div>
+</div> 
+</div> 
+<div class="span4" id="secondary">
+<div class="widget">
+<div class="pm-ad-zone" align="center"><center><script type="text/javascript" src="http://ap.lijit.com///www/delivery/fpi.js?z=152369&u=tribalsouls&width=300&height=250"></script></center><img src="http://inewstv.org/ajax.php?p=stats&do=show&aid=5&at=1" width="1" height="1" border="0"/></div>
+</div> 
+<div class="widget">
+<div class="btn-group btn-group-sort pm-slide-control">
+<button class="btn btn-mini prev" id="pm-slide-top-prev"><i class="pm-vc-sprite arr-l"></i></button>
+<button class="btn btn-mini next" id="pm-slide-top-next"><i class="pm-vc-sprite arr-r"></i></button>
+</div>
+<h4>Top videos</h4>
+<ul class="pm-ul-top-videos" id="pm-ul-top-videos">
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=0f8818a7f" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/0f8818a7f-1.jpg" alt="Aljazeera America" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=0f8818a7f" class="pm-title-link">Aljazeera America</a></h3>
+<span class="pm-video-attr-numbers"><small>21.4k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=2773f7c61" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/2773f7c61-1.jpg" alt="NASA" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=2773f7c61" class="pm-title-link">NASA</a></h3>
+<span class="pm-video-attr-numbers"><small>21k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=6b0daf8c8" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/6b0daf8c8-1.jpg" alt="Democracy Now!" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=6b0daf8c8" class="pm-title-link">Democracy Now!</a></h3>
+<span class="pm-video-attr-numbers"><small>20.7k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=1a52027fa" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/1a52027fa-1.jpg" alt="Free Speech TV" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=1a52027fa" class="pm-title-link">Free Speech TV</a></h3>
+<span class="pm-video-attr-numbers"><small>20.4k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=db245ded4" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/db245ded4-1.jpg" alt="AP Breaking News" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=db245ded4" class="pm-title-link">AP Breaking News</a></h3>
+<span class="pm-video-attr-numbers"><small>19.6k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=945eb7c17" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/945eb7c17-1.jpg" alt="Weather Nation" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=945eb7c17" class="pm-title-link">Weather Nation</a></h3>
+<span class="pm-video-attr-numbers"><small>18.9k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=a158cefbc" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/a158cefbc-1.jpg" alt="Huffpost Live" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=a158cefbc" class="pm-title-link">Huffpost Live</a></h3>
+<span class="pm-video-attr-numbers"><small>18.3k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=eed13dbd8" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/eed13dbd8-1.jpg" alt="Bloomberg" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=eed13dbd8" class="pm-title-link">Bloomberg</a></h3>
+<span class="pm-video-attr-numbers"><small>17.8k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=547dcebf3" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/547dcebf3-1.jpg" alt="MSNBC" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=547dcebf3" class="pm-title-link">MSNBC</a></h3>
+<span class="pm-video-attr-numbers"><small>17.3k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=4a52d606b" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/4a52d606b-1.jpg" alt="Fox News" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=4a52d606b" class="pm-title-link">Fox News</a></h3>
+<span class="pm-video-attr-numbers"><small>16.9k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=3d634a11b" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/3d634a11b-1.jpg" alt="CNN" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=3d634a11b" class="pm-title-link">CNN</a></h3>
+<span class="pm-video-attr-numbers"><small>16.2k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=e18acbc4c" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/e18acbc4c-1.jpg" alt="Russia Today" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=e18acbc4c" class="pm-title-link">Russia Today</a></h3>
+<span class="pm-video-attr-numbers"><small>15.2k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=f47b4b2e6" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/f47b4b2e6-1.jpg" alt="KRON 4 NEWS San Francisco" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=f47b4b2e6" class="pm-title-link">KRON 4 NEWS San Francisco</a></h3>
+<span class="pm-video-attr-numbers"><small>15.1k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=a5ba12bcd" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/a5ba12bcd-1.jpg" alt="BBC NEWS" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=a5ba12bcd" class="pm-title-link">BBC NEWS</a></h3>
+<span class="pm-video-attr-numbers"><small>13.9k Views</small></span>
+</div>
+</li>
+<li>
+<div class="pm-li-top-videos">
+<span class="pm-video-thumb pm-thumb-106 pm-thumb-top border-radius2">
+<span class="pm-video-li-thumb-info">
+</span>
+<a href="http://inewstv.org/watch.php?vid=6c5c984a6" class="pm-thumb-fix pm-thumb-106"><span class="pm-thumb-fix-clip"><img src="http://inewstv.org/uploads/thumbs/6c5c984a6-1.jpg" alt="Sky News" width="106"><span class="vertical-align"></span></span></a>
+</span>
+<h3 dir="ltr"><a href="http://inewstv.org/watch.php?vid=6c5c984a6" class="pm-title-link">Sky News</a></h3>
+<span class="pm-video-attr-numbers"><small>13.1k Views</small></span>
+</div>
+</li>
+</ul>
+<div class="clearfix"></div>
+</div> 
+<div class="widget">
+<h4>Categories</h4>
+<ul class="pm-browse-ul-subcats">
+<ul id='ul_categories'>
+<li class=""><a href="http://inewstv.org/category.php?cat=live-tv" class="">Live TV</a></li>
+<li class="topcat"><a href="http://inewstv.org/category.php?cat=videos" class="topcat">Videos</a>
+<ul class='hidden_li'>
+<li class=""><a href="http://inewstv.org/category.php?cat=news" class="">News</a> </li>
+<li class=""><a href="http://inewstv.org/category.php?cat=funny" class="">Funny</a> </li>
+<li class=""><a href="http://inewstv.org/category.php?cat=real-life" class="">Real Life</a> </li>
+</ul>
+</li>
+</ul>
+</ul>
+</div> 
+<div class="widget">
+<h4>Tags</h4>
+<a href="http://inewstv.org/tag.php?t=news" class="tag_cloud_link" style="font-size:20px;">news</a>
+<a href="http://inewstv.org/tag.php?t=politics" class="tag_cloud_link" style="font-size:17px;">politics</a>
+<a href="http://inewstv.org/tag.php?t=usa" class="tag_cloud_link" style="font-size:17px;">usa</a>
+<a href="http://inewstv.org/tag.php?t=russia-today" class="tag_cloud_link" style="font-size:17px;">russia today</a>
+<a href="http://inewstv.org/tag.php?t=government" class="tag_cloud_link" style="font-size:15px;">government</a>
+<a href="http://inewstv.org/tag.php?t=war" class="tag_cloud_link" style="font-size:15px;">war</a>
+<a href="http://inewstv.org/tag.php?t=democracy-now" class="tag_cloud_link" style="font-size:15px;">Democracy Now!</a>
+<a href="http://inewstv.org/tag.php?t=peace" class="tag_cloud_link" style="font-size:15px;">peace</a>
+<a href="http://inewstv.org/tag.php?t=tyt" class="tag_cloud_link" style="font-size:13px;">tyt</a>
+<a href="http://inewstv.org/tag.php?t=the-young-turks" class="tag_cloud_link" style="font-size:13px;">the young turks</a>
+<a href="http://inewstv.org/tag.php?t=liberal" class="tag_cloud_link" style="font-size:13px;">liberal</a>
+<a href="http://inewstv.org/tag.php?t=democrat" class="tag_cloud_link" style="font-size:13px;">democrat</a>
+<a href="http://inewstv.org/tag.php?t=mrctv" class="tag_cloud_link" style="font-size:11px;">mrctv</a>
+<a href="http://inewstv.org/tag.php?t=republican" class="tag_cloud_link" style="font-size:11px;">republican</a>
+<a href="http://inewstv.org/tag.php?t=zonation" class="tag_cloud_link" style="font-size:11px;">ZoNation</a>
+<a href="http://inewstv.org/tag.php?t=conservative" class="tag_cloud_link" style="font-size:11px;">conservative</a>
+<a href="http://inewstv.org/tag.php?t=live" class="tag_cloud_link" style="font-size:11px;">live</a>
+<a href="http://inewstv.org/tag.php?t=liveleak" class="tag_cloud_link" style="font-size:11px;">liveleak</a>
+<a href="http://inewstv.org/tag.php?t=video" class="tag_cloud_link" style="font-size:11px;">video</a>
+<a href="http://inewstv.org/tag.php?t=leak" class="tag_cloud_link" style="font-size:11px;">leak</a>
+</div> 
+</div> 
+</div> 
+</div> 
+<a id="back-top" class="hidden-phone hidden-tablet" title="Go Up">
+<i class="icon-chevron-up"></i>
+<span></span>
+</a>
+<div class="floating_ad_left sticky_ads">
+</div>
+<div class="floating_ad_right sticky_ads">
+</div>
+</div> 
+<div class="row-fluid fixed960">
+<div class="row-fluid">
+<a href="http://inewstv.org/rss.php" title="iNewsTV.org RSS" class="pm-rss-link"><i class="pm-vc-sprite ico_rss"></i> RSS</a>
+</div>
+</div>
+<div class="pm-ad-zone" align="center"><table border="0" style="background-color:#2e2e2e;border-collapse:collapse;border:0px solid #2e2e2e;color:#000000;width:100%" cellpadding="1" cellspacing="1">
+<tr>
+<td><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=151578&u=tribalsouls&width=728&height=90"></script></td>
+<td></td>
+</tr>
+</table><img src="http://inewstv.org/ajax.php?p=stats&do=show&aid=2&at=1" width="1" height="1" border="0"/></div>
+<footer>
+<div class="row-fluid fixed960">
+<div class="span8">
+<ul>
+<li><a href="http://inewstv.org/index.php">Home</a></li>
+<li><a href="http://inewstv.org/contact_us.php">Contact us</a></li>
+<li><a href="http://inewstv.org/category.php?cat=live-tv" title="Live news TV streams">Live TV</a></li>
+<li><a href="" target="_blank" title="Live entertainment TV streams"></a></li>
+<li><a href="http://inewstv.org/register.php">Register</a></li> <li><a href="http://inewstv.org/page.php?p=4">The iNewsTV Daily</a></li>
+<li><a href="http://inewstv.org/page.php?p=5">The Left Side News</a></li>
+<li><a href="http://inewstv.org/page.php?p=6">Contact Us</a></li>
+</ul>
+<p>
+&copy; 2016 iNewsTV.org. All rights reserved
+</p>
+</div>
+<div class="span3">
+</div>
+<div class="span1">
+<ul id="lang_selector">
+<div class="btn-group dropup lang-selector hidden-phone" id="lang-selector">
+<a class="btn btn-link dropdown-toggle" data-toggle="dropdown" href="#"><img src="http://inewstv.org/lang/flags/us.png" width="16" height="10" alt="English" title="English" align="texttop"> <span class="hide">English</span> <span class="caret"></span></a>
+<ul class="dropdown-menu border-radius0 pullleft lang_submenu">
+<li><a href="#" title="Albanian" name="2" id="lang_select_2">Albanian</a></li>
+<li><a href="#" title="Arabic" name="3" id="lang_select_3">Arabic</a></li>
+<li><a href="#" title="Brazilian" name="4" id="lang_select_4">Brazilian</a></li>
+<li><a href="#" title="Bulgarian" name="5" id="lang_select_5">Bulgarian</a></li>
+<li><a href="#" title="Croatian" name="6" id="lang_select_6">Croatian</a></li>
+<li><a href="#" title="Danish" name="7" id="lang_select_7">Danish</a></li>
+<li><a href="#" title="Deutsch" name="8" id="lang_select_8">Deutsch</a></li>
+<li><a href="#" title="Fran&#231;ais" name="9" id="lang_select_9">Fran&#231;ais</a></li>
+<li><a href="#" title="Georgian" name="10" id="lang_select_10">Georgian</a></li>
+<li><a href="#" title="Italian" name="11" id="lang_select_11">Italian</a></li>
+<li><a href="#" title="Lithuanian" name="12" id="lang_select_12">Lithuanian</a></li>
+<li><a href="#" title="Nederlands" name="13" id="lang_select_13">Nederlands</a></li>
+<li><a href="#" title="Polish" name="14" id="lang_select_14">Polish</a></li>
+<li><a href="#" title="Portuguese" name="15" id="lang_select_15">Portuguese</a></li>
+<li><a href="#" title="Rom&#226;n&#259;" name="16" id="lang_select_16">Rom&#226;n&#259;</a></li>
+<li><a href="#" title="Russian" name="17" id="lang_select_17">Russian</a></li>
+<li><a href="#" title="Serbian" name="18" id="lang_select_18">Serbian</a></li>
+<li><a href="#" title="Slovak" name="19" id="lang_select_19">Slovak</a></li>
+<li><a href="#" title="Spanish" name="20" id="lang_select_20">Spanish</a></li>
+<li><a href="#" title="Swedish" name="21" id="lang_select_21">Swedish</a></li>
+<li><a href="#" title="T&uuml;rk&ccedil;e" name="22" id="lang_select_22">T&uuml;rk&ccedil;e</a></li>
+<li><a href="#" title="Hebrew" name="23" id="lang_select_23">Hebrew</a></li>
+<li><a href="#" title="Thai" name="24" id="lang_select_24">Thai</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<div id="lights-overlay"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.cookee.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.validate.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.carouFredSel.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.touchwipe.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.maskedinput-1.3.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.tagsinput.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery-scrolltofixed-min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/jquery.ba-dotimeout.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/js/jquery.typewatch.js" type="text/javascript"></script>
+<script src="http://inewstv.org/js/melody.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/melody.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/lightbox.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+		// live search 
+		$('#appendedInputButton').typeWatch({
+			callback: function() {
+					var a = $('#appendedInputButton').val();
+					
+					$.ajax({
+						type: "POST",
+			            url: MELODYURL2 + "/ajax_search.php",
+			            data: {
+							"queryString": a
+			            },
+			            dataType: "html",
+			            success: function(b){
+							if (b.length > 0) {
+			                    $("#suggestions").show();
+			                } else {
+								$("#suggestions").hide();
+							}
+							$("#autoSuggestionsList").html(b);		
+						}
+					});
+				},
+		    	wait: 400,
+		    	highlight: true,
+		    	captureLength: 3
+		});
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#pm-ul-wn-videos").carouFredSel({
+		items				: 4,
+		circular			: false,
+		direction			: "left",
+		height				: null,
+		width       		: null,
+		infinite			: false,
+		responsive			: true,
+		prev	: {	
+			button	: "#pm-slide-prev",
+			key		: "left"
+		},
+		next	: { 
+			button	: "#pm-slide-next",
+			key		: "right"
+		},
+	scroll		: {
+		items			: null,		//	items.visible
+		fx				: "scroll",
+		easing			: "swing",
+		duration		: 500,
+		wipe			: true,
+		event			: "click",
+	},
+	auto: false
+				
+	});	
+});
+
+$(document).ready(function() {
+	$("#pm-ul-top-videos").carouFredSel({
+	items: 5,
+	direction: "up",
+	width: "variable",
+	height:  "variable",
+	circular: false,
+	infinite: false,
+	scroll: {
+		fx: "fade",
+		event: "click",
+		wipe: true,
+		duration: 150
+	},
+	auto: false,
+		prev	: {	
+			button	: "#pm-slide-top-prev",
+			key		: "left"
+		},
+		next	: { 
+			button	: "#pm-slide-top-next",
+			key		: "right"
+		}
+	});	
+});
+</script>
+<script type="text/javascript">
+    
+        $('#header-login-form').on('shown', function () {
+            $('.hocusfocus').focus();
+        });
+    
+    </script>
+<script src="http://inewstv.org/templates/default/js/waypoints.min.js" type="text/javascript"></script>
+<script src="http://inewstv.org/templates/default/js/melody.social.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var sc_project=9480699; 
+var sc_invisible=1; 
+var sc_security="f1a1fc66"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="hit counter" href="http://statcounter.com/" target="_blank"><img class="statcounter" src="http://c.statcounter.com/9480699/0/f1a1fc66/1/" alt="hit counter"></a></div></noscript>
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="how to add a hit counter to a website"><script type="text/javascript">
+try {Histats.start(1,2540184,4,0,0,0,"");
+Histats.framed_page();
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img src="http://sstatic1.histats.com/0.gif?2540184&101" alt="how to add a hit counter to a website" border="0"></a></noscript>
+<script type="text/javascript" src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=73806ac11c/apps1.min.js"></script><script type="text/javascript">__CF.AJS.init1();</script></body>
+</html> 

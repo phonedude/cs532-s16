@@ -1,0 +1,46 @@
+http://smarturl.it/ChrisXGP?IQid=tw
+
+
+
+
+
+
+			var destinationUrl = "http://google.prf.hn/click/camref:10lyb3/destination:https%3A%2F%2Fplay.google.com%2Fstore%2Fmusic%2Falbum%2FChris_Brown_X_Deluxe_Version%3Fid%3DBvssedjuh4n73rtigtrpvlpstoe%26hl%3Den";
+			var numRedirects = 0;
+			function LinkDecorator() {};
+			LinkDecorator.prototype.decorate = function(url) {
+				return url;
+			}
+			var linkDecorator = new LinkDecorator();
+			var numAsyncTasks = 1;
+			function onAsyncTaskComplete() {
+				numAsyncTasks--;
+				if (numAsyncTasks <= 0) {
+					onAllAsyncTasksComplete();
+				}
+	   		}
+			function makePixel(url) {
+				var img = document.createElement("img");
+				img.onload = function() {
+					onAsyncTaskComplete();
+				}
+				img.src = url;
+			}
+			function onAllAsyncTasksComplete() {
+				if (numRedirects == 0) {
+										numRedirects++;
+					window.location = linkDecorator.decorate(destinationUrl);
+				}
+			}
+		
+
+
+
+			makePixel("\/\/googleads.g.doubleclick.net\/pagead\/viewthroughconversion\/993583143\/?value=1.00\x26label=Xb8JCOnY5wgQp8Dj2QM\x26guid=ON\x26script=0");
+			window.setTimeout(onAllAsyncTasksComplete, 2000);
+		
+
+
+
+
+

@@ -1,0 +1,267 @@
+https://sites.google.com/site/alessandriadigitale/home/osservatorio-tv-alessandria
+
+
+
+
+/* Copyright 2008 Google. */ (function() { var e="wtsrt_",g="tbsd_",h="tbnd_",k="start",l="_wtsrt",m="_tbnd",n="CSI/";(function(){function f(a){this.t={};this.tick=function(a,c,b){this.t[a]=[void 0!=b?b:(new Date).getTime(),c];if(void 0==b)try{window.console.timeStamp(n+a)}catch(d){}};this.tick(k,null,a)}var a;window.performance&&(a=window.performance.timing);var p=a?new f(a.responseStart):new f;window.jstiming={Timer:f,load:p};if(a){var c=a.navigationStart,d=a.responseStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick(l,void 0,c),b.tick(e,l,d),b.tick(g,e))}try{a=null,
+window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick(m,void 0,window.chrome.csi().startE),b.tick(h,m,c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick(m,void 0,window.external.startE),b.tick(h,m,c))),a&&(window.jstiming.pt=a)}catch(q){}})(); })()
+
+
+
+/* Copyright 2008 Google. */ (function() { var d="",g="__duration__",h="function";function k(c){return document.getElementById(c)}window.byId=k;function l(c){return c.replace(/^\s+|\s+$/g,d)}window.trim=l;var m=[],n=0;window.JOT_addListener=function(c,a,b){var e=new String(n++);c={eventName:c,handler:a,compId:b,key:e};m.push(c);return e};window.JOT_removeListenerByKey=function(c){for(var a=0;a<m.length;a++)if(m[a].key==c){m.splice(a,1);break}};
+window.JOT_removeAllListenersForName=function(c){for(var a=0;a<m.length;a++)m[a].eventName==c&&m.splice(a,1)};window.JOT_postEvent=function(c,a,b){var e={eventName:c,eventSrc:a||{},payload:b||{}};if(window.JOT_fullyLoaded)for(a=m.length,b=0;b<a&&b<m.length;b++){var f=m[b];f&&f.eventName==c&&(e.listenerCompId=f.compId||d,(f=typeof f.handler==h?f.handler:window[f.handler])&&f(e))}else window.JOT_delayedEvents.push({eventName:c,eventSrc:a,payload:b})};window.JOT_delayedEvents=[];
+window.JOT_fullyLoaded=!1;window.JOT_formatRelativeToNow=function(c,a){var b=((new Date).getTime()-c)/6E4;if(1440<=b||0>b)return null;var e=0;60<=b&&(b/=60,e=2);2<=b&&e++;return a?window.JOT_siteRelTimeStrs[e].replace(g,Math.floor(b)):window.JOT_userRelTimeStrs[e].replace(g,Math.floor(b))}; })()
+
+
+
+  
+
+  var breadcrumbs = [{"path":"/site/alessandriadigitale/home","deleted":false,"title":"Alessandria Digitale","dir":"ltr"},{"path":"/site/alessandriadigitale/home/osservatorio-tv-alessandria","deleted":false,"title":"Osservatorio Tv Alessandria","dir":"ltr"}];
+  var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/77c5f6/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+  
+  
+
+  
+
+  var webspace = {"enableAnalytics":true,"pageSharingId":"jotspot_page","enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"Alessandria Digitale","isStartPageEnabled":false,"adsensePublisherId":"ca-pub-6254655866759997","features":{"validateClientGvizDataSourceUrls":true,"contactStoreMigrationPollForGapi":true,"gapiLoaderUtil":true,"moreMobileStyleImprovements":true,"gadgetsInStratus":false,"accumulativeBubblePanelCreation":true,"domainAnalyticsInGAOnly":true,"noCaptcha":true,"enableNewImageSlider":false,"templatesInStratus":false,"fileCabinetScreenReaderFix":true,"updatedTosAndPrivacyLinks":null,"useTitleAsTemplateIndicator":false,"pageDrafts":false,"mobileOrientationFix":true,"plusBadge":false,"pdfEmbedSupport":false,"jsClickFix":true,"updatedReportAbuseForm":false},"isPublic":true,"isConsumer":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"onepickBaseUrl":"https://docs.google.com","domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://www.google.com/a/SelectSession?continue\u003dhttps://sites.google.com/site/alessandriadigitale/home/osservatorio-tv-alessandria\u0026service\u003djotspot","analyticsAccountId":"UA-17824118-1","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/en/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/77c5f6/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/77c5f6/system/js/codemirror.js","https://ssl.gstatic.com/sites/p/77c5f6/system/app/css/codemirror_css.css","https://ssl.gstatic.com/sites/p/77c5f6/system/js/trog_edit__en.js","https://ssl.gstatic.com/sites/p/77c5f6/system/app/css/trogedit.css","/site/alessandriadigitale/_/rsrc/1454889826000/system/app/css/editor.css","https://ssl.gstatic.com/sites/p/77c5f6/system/app/css/codeeditor.css","/site/alessandriadigitale/_/rsrc/1454889826000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/alessandriadigitale","name":"alessandriadigitale","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":"/home","parentWuid":"wuid:gx:683594e7bd7daa80","siteLocale":"it","timeZone":"America/Los_Angeles","type":"text","title":"Osservatorio Tv Alessandria","locale":"en","wuid":"wuid:gx:39d779aef1a43c64","revision":4335,"path":"/home/osservatorio-tv-alessandria","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"osservatorio-tv-alessandria","canChangePath":true,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"Web Page"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false},"gadgets":{"baseUri":"/site/alessandriadigitale/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["un minuto fa","__duration__ minuti fa","un\u0027ora fa","__duration__ ore fa"];
+
+
+
+                window.jstiming.load.tick('scl');
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+Osservatorio Tv Alessandria - Alessandria Digitale
+
+
+
+                window.jstiming.load.tick('cl');
+              
+
+
+
+ 
+
+
+
+
+
+
+
+
+Alessandria DigitaleCerca nel sito
+
+
+
+
+
+
+
+
+
+
+
+
+Alessandria DigitaleBITRATE Canali TVCanali DTT - Suddivisi per genereComposizione Mux DigitaliContatti - Collabora con Alessandria DigitaleDTT: Domande e RisposteFrequenze Radio AlessandriaInfo Mux (NIT)Mhp - Applicazioni interattiveMux - Dati TecniciNumerazione LCNOsservatorio Radio AlessandriaOsservatorio Tv AlessandriaSegnalazioni - Problemi di ricezioneTeletextVisiteArchivio150° Unità d'ItaliaBITRATE Canali TVComposizione Mux DigitaliComposizione Mux DTT (2008-2010)Immagini - TV del passatoImmagini TV 2010-2013Info Mux (NIT) 2011-2012 (1)Info Mux (NIT) 2012LCN del passato (2003-2010)Loghi Tv di NataleOsservatorio Radio Alessandria 2015/2016Osservatorio Radio TV Satellite 2015/2016Osservatorio Tv 2010Osservatorio Tv 2011 (1)Osservatorio Tv 2011 (2)Osservatorio Tv 2012 (1)Osservatorio Tv 2012 (2)Osservatorio Tv 2013 (1)Osservatorio Tv 2013 (2)Osservatorio Tv 2014 (1)Osservatorio Tv 2014 (2)Osservatorio Tv 2015 (1)Osservatorio Tv 2015 (2)Osservatorio Tv 2016 (1)Riconfigurazione Mux DTT 2003-2007Riconfigurazione Mux DTT 2008Riconfigurazione Mux DTT 2009Riconfigurazione Mux DTT 2010Riconfigurazione Mux DTT 2011Riconfigurazione Mux DTT 2012Riconfigurazione Mux DTT 2013Riconfigurazione Mux DTT 2014Riconfigurazione Mux DTT 2015Riconfigurazione Mux DTT 2016Riepilogo 2010-2011Rottamazioni UHF 61-69Switch Off 2010Elenco Frequenze TV1) Composizione Mux 1 Rai Regione2) Ricezioni dall'esteroAcqui TermeAlessandriaCasale MonferratoNovi LigureTortonaValenzaF.A.QFrequenzeTV del passatoGuida Tv Locali01) Telecity 7Gold AL02) Telecity AL03) 4Rete04) 4Rete Blu05) Rete 706) Videonord07) Nordovest 7 VDA08) Piemonte +09) Videonovara10) GRP Televisione11) GRP News12) GRP Piedmont13) Telecupole14) Telesubalpina15) Videogruppo Piemonte16) Primantenna17) Rete 82 Studionord18) E21 Network19) Primarete 18420) Studio 121) Canale Piemonte22) Telestudio23) For Music24) Primantenna Family25) Motori TV26) Radio JukeBox TV27) Espansione TV28) Qtv29) ProntoGold TV130) Telecity 7Gold TO31) Telecity 7Gold MI32) Telecity 233) Telereporter Piemonte34) Studio Nord35) Rete St-Vincent36) Rete Canavese37) Telegranda38) E21 TeletorinoGuida Tv Nazionali01) Canali Rai02) Canali Mediaset03) Canali La7 & La7D04) TV805) Deejay TV06) 7Gold07) Odeon 2408) Canale Italia 8309) Canale Italia 8410) Cielo11) TV200012) Agon Channel13) Alice14) Capri Gourmet15) Real Time16) DMAX17) Focus18) Giallo19) Supertennis20) Sky TG24 DTT21) Retecapri22) Radio Capri TelevisiON23) Boing24) K225) Frisbee26) Cartoonito27) Super!28) Padre Pio TV29) LaTV30) Italia Channel31) Cantando Ballando32) Italia 5333) Italia 13534) Italia 13635) Italia 14236) Italia 15637) Italia 15938) Italia 16039) Italia 12140) Italia 12641) Italia 12742) RTL 102.5 TV43) Radio Capital TV44) Radio Italia TV45) Onda Italiana46) m2o Tv47) Play.Me48) QVC49) HSE2450) Channel 2451) Rete Italia52) Air Italia53) Italia+54) Linea Italia55) Italia TV56) Ok Italia57) Split Tv58) Gold TV Italia59) La4 Italia60) Sportitalia61) WingaTV62) Sport 163) Nuvolari64) Rai HDImmagini RipetitoriAltri RipetitoriBric.MontalbanoBricco dell'olioLussitoM.GiaroloM.PeniceM.RonzoneImmagini TVCH 07 - Mux E21 NetworkCH 21 - Mux PrimantennaCH 22 - Mux 1 Rai PiemonteCH 23 - Mux 1 Rai LombardiaCH 24 - Mux QuartareteCH 25 - Mux Cairo DueCH 26 - Mux 3 RaiCH 28 - Mux Europa7 (DVB-T2)CH 29 - Mux La9CH 30 - Mux 2 RaiCH 31 - Mux Studio1CH 32 - Mux Rete 7CH 33 - Mux ReteA2CH 34 - Mux StartUp PiemonteCH 34 - Mux Tele 7 LaghiCH 36 - Mux Mediaset2CH 37 - Mux La3CH 38 - Mux Mediaset3CH 39 - Mux GRP TelevisioneCH 40 - Mux 4 RaiCH 41 - Mux Telestar PiemonteCH 42 - Mux TelecolorCH 43 - Mux Tivù ItaliaCH 44 - Mux ReteA1CH 45 - Mux Telecity AlessandriaCH 47 - Mux TIMB1CH 48 - Mux TIMB3CH 49 - Mux Mediaset4CH 50 - Mux DfreeCH 51 - Mux City Radio TVCH 52 - Mux Mediaset1CH 53 - Mux Canale ItaliaCH 55 - Mux TIMB2CH 56 - Mux Mediaset5CH 57 - Mux RetecapriCH 59 - Mux Telenova PiemonteLink UtiliPalinsesti del passato01) Raiuno02) Raidue03) Raitre04) Rete 405) Canale 506) Italia 107) TMC08) La709) TMC 210) MTV11) Rete A - MTV12) ReteA - All Music13) Italia 7Gold14) OdeonTV15) Quadrifoglio TV - Odeon TV16) Quartarete TV17) Rete 7 - JTV18) Telecupole19) Telestudio20) Altaitalia TV21) CanalOne22) Anime Gold23) Virgin Radio TV24) Canale Italia Musica25) Telecampione26) Blue Jeans TV27) Mas Latina TV28) Telecity 1 TO29) Videostar30) Videostar 231) Super TV32) ItaliaOtto 1 AL / TO33) ItaliaOtto 234) Telestar 1 MI35) Telestar 236) TOP37) Vero Lady38) Gioca TV39) Telecity 1 AL40) Casa TVPay TVSatelliteElenco Canali SatellitariElenco Radio SatellitariLCN SkyLCN TivùSatOsservatorio Radio TV SatelliteSezione DownloadSondaggiRisultati SONDAGGIStreamingZapping TVCH 07 - Mux E21 NetworkCH 21 - Mux PrimantennaCH 22 - Mux 1 Rai PiemonteCH 23 - Mux 1 Rai LombardiaCH 24 - Mux QuartareteCH 25 - Mux Cairo DueCH 26 - Mux 3 RaiCH 28 - Mux Europa7 (DVB-T2)CH 29 - Mux La9CH 30 - Mux 2 RaiCH 31 - Mux Studio1CH 32 - Mux Rete 7CH 33 - Mux ReteA2CH 34 - Mux StartUp PiemonteCH 34 - Mux Tele 7 LaghiCH 36 - Mux Mediaset2CH 37 - Mux La3CH 38 - Mux Mediaset3CH 39 - Mux GRP TelevisioneCH 40 - Mux 4 RaiCH 41 - Mux Telestar PiemonteCH 42 - Mux TelecolorCH 43 - Mux Tivù ItaliaCH 44 - Mux ReteA1CH 45 - Mux Telecity AlessandriaCH 47 - Mux TIMB1CH 48 - Mux TIMB3CH 49 - Mux Mediaset4CH 50 - Mux DfreeCH 51 - Mux City Radio TVCH 52 - Mux Mediaset1CH 53 - Mux Canale ItaliaCH 55 - Mux TIMB2CH 56 - Mux Mediaset5CH 57 - Mux RetecapriCH 59 - Mux Telenova PiemonteMappa del sito
+
+
+
+ 
+
+Alessandria Digitale‎ > ‎
+  
+
+Osservatorio Tv Alessandria
+
+
+
+
+
+
+
+
+
+
+
+L'osservatorio Tv Alessandria è uno spazio che si occupa di segnalare tutto ciò che accade nell'etere televisivo ad Alessandrie e provincia.
+
+
+
+
+
+
+
+Alessandria Digitale
+ on Google+ 
+
+
+
+
+COMPOSIZIONE MUX DTT: CLICCA QUI
+
+
+Febbraio 201618.02.2016Ulteriori novità per "LaTV" LCN 164 canale presente nel Mux ReteA2 Ch 33 M.Ronzone (AL) + M.Penice (PC). Nelle ore notturne, precisamente dalla 00.00 alle ore 07.00 del mattino successivo, il canale viene "spento" per lasciare spazio ai canali "Luci Rosse TV 1" LCN 452 e "Luci Rosse TV 2" LCN 453.Novità nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL). Alle ore 5.55 circa di questa mattina, sul canale "TV8" LCN 8 è stato cambiato il logo di rete da "MTV8" a "TV8". Ecco le immagini:Novità nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL). All'1 circa di questa notte, il canale "MTV8" LCN 8, 108 e 508 è stato rinominato in "TV8". Inoltre, i canali inattivi (a schermo nero) "MTV8 On Demand" LCN 808 e "MTV8 News On Demand" LCN 908 sono stati rinominati in "TV8 On Demand" e "TV8 News On Demand". Per tutta la notte però, il canale ha trasmesso come sempre con il logo di "MTV8". Ecco le immagini:Novità in vista per i canali pay "Discovery World - Premium" LCN 320 e "BBC Knowledge - Premium" LCN 321 presenti nel Mux Mediaset5 Ch 56 M.Giarolo (AL) + Bricco dell'olio (AL). Apprendiamo dal sito di Premium Mediaset, che i due canali cesseranno le proprie trasmissioni il 29 Febbraio 2016. Dal 1 Marzo 2016 i due canali non saranno più visibili su Premium Mediaset. Nuovi canali in arrivo? Ecco un immagine:17.02.2016Novità per "LaTV" LCN 164 canale presente nel Mux ReteA2 Ch 33 M.Ronzone (AL) + M.Penice (PC). Il logo di rete, è stato spostato in basso a sinistra. Ecco un immagine:Da alcuni giorni su "ITALIA 53" LCN 53 canale presente nel Mux Canale Italia Ch 53 M.Ronzone (AL) è approdato il programma "Casalotto" che fino a fine 2015 era visibile su "Telecity 7Gold AL" LCN 10. Segnaliamo inoltre, che questo programma, è collegato all'arrivo di "LaTV" LCN 164 nel Mux ReteA2 Ch 33. Ecco le immagini:Novità nel Mux ReteA2 Ch 33 M.Ronzone (AL) + M.Penice (PC). Aggiunto il canale "LaTV" LCN 164. In onda, è attualmente presente un promo in loop. Dal promo in onda, si intuisce che dietro a questo nuovo progetto ci sono quelli del programma "Casalotto" che fino a fine 2015 era in onda su "Telecity 7Gold AL" LCN 10 e che da alcuni giorni è nuovamente in onda in tv su "ITALIA 53" LCN 53, senza dimenticare la breve esperienza con il contenitore "Canale 55" su "CAPRI GOURMET" LCN 55. Segnaliamo infine una curiosità! Sul digitale terrestre, almeno nel Nord Italia, esiste già una televisione con il nome "LA TV" LCN 675 / 685 ricevibile tramite il Mux Rete7 Ch 32 e il Mux Tele 7 Laghi Ch 34. Ecco le immagini:DTT, valutazione economica LCN: rilevante anche "l'effetto traino per vicinanza". Info: QUI16.02.2016Apprendiamo dalla pagina facebook di TvDigitalDivide la seguente notizia: Rai, 20 mln per l'offerta HD. La tv di Stato ha indetto un maxi bando da 20,4 milioni di euro, uno dei più onerosi degli ultimi tempi, per l'acquisizione di materiale e tecnologia per migliorare l'offerta in alta definizione dei canali pubblici. Il bando scade il prossimo 5 aprile. L'obiettivo di Antonio Campo Dall'Orto è quello di trovare un fornitore unico di impianti e telecamere broadcast HD per l'offerta tv del futuro e per colmare il gap con gli operatori internazionali come Sky Italia e Discovery. La Rai ha infatti in cantiere il progetto di lanciare entro la fine del 2016 un'offerta di ben 11 canali in alta definizione e un altro canale sperimentale in UltraHD. (MF - Milano Finanza). Ecco un immagine:Novità per "TELECAMPIONE" LCN 75 e "ORLER TV" LCN 144 canali presenti rispettivamente nel Mux Rete7 Ch 32 M.Ronzone (AL), nel Mux Telecolor Ch 42 Bricco dell'olio (AL) e nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL). Sul canale, è saltuariamente presente un promo con scritto: "Dal 1 Marzo Orler TV sarà visibile solo sul canale 144". Ecco le immagini:Novità per "SOS TELEVISION" LCN 147 canale presente nel Mux ReteA2 Ch 33 M.Ronzone (AL) + M.Penice (PC). Il canale, trasmette ora correttamente nel formato 4:3. Ecco un immagine:15.02.2016Problemi tecnici in mattinata per "TELECAMPIONE" LCN 75 canale presente nel Mux Telecolor Ch 42 Bricco dell'olio (AL). Il canale per alcuni minuti, è risultato a schermo nero.Problemi tecnici in mattinata per "TELECAMPIONE" LCN 75 canale presente nel Mux Rete7 Ch 32 M.Ronzone (AL). Il canale per alcuni minuti, è risultato inattivo (a schermo nero).Problemi tecnici nella serata di ieri per "QTV" LCN 176 canale presente nel Mux Studio1 Ch 31 M.Ronzone (AL). Sul canale per alcuni minuti, si è alternata una schermata a barre verticali colorate con la regolare programmazione del canale. Ecco un immagine:14.02.2016In occasione di San Valentino, sul canale "Super!" LCN 47 presente nel Mux TIMB1 Ch 47 M.Giarolo (AL) + Bricco dell'olio (AL) è curiosamente presente in sovraimpressione la scritta "SUPERLOVE". Ecco un immagine:In giornata, il canale "ShowTV - AB Channel" LCN 216 presente nel Mux Quartarete Ch 24 M.Ronzone (AL) è tornato a trasmettere regolarmente.Nella serata di ieri su "ITALIA CHANNEL" LCN 123 canale presente nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL) era curiosamente presente un programma di Babel TV / Romit Tv. In alto a sinistra e/o a destra infatti, durante alcuni servizi sono apparsi i loghi di BabelTv e RomitTv. Ecco le immagini:In occasione di San Valentino, il logo di "frisbee" LCN 44 canale presente nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL) è stato leggermente modificato. Alla destra del logo è infatti presente un cuore. Ecco un immagine:In occasione di San Valentino, il logo di "K2" LCN 41 canale presente nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL) è stato leggermente modificato. Alla destra del logo è infatti presente un cuore. Ecco un immagine:In occasione di San Valentino, su "Boing" LCN 40 canale presente nel Mux Mediaset2 Ch 36 M.Giarolo (AL) + Bricco dell'olio (AL) è presente in basso a destra la scritta "I Love Boing". Ecco un immagine:In occasione di San Valentino, il logo di "MTV MUSIC" LCN 67 canale presente nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL) è stato leggermente modificato. Questo logo però, era già apparso erroneamente per alcune ore alcuni giorni fa. Ecco un immagine:In occasione di San Valentino, su "La 9" LCN 76 canale presente nel Mux La9 Ch 29 Bric.Montalbano (AL) e nel Mux Telecolor Ch 42 Bricco dell'olio, è presente, almeno durante alcune televendite, un cuore rosso in alto a destra. Ecco un immagine:Continua a risultare spento il Mux Quartarete Ch 24 da Regione Ricci - Acqui Terme (AL). Il Mux è ormai spento da diversi mesi. Ringrazio Federico per la segnalazione.13.02.2016Problemi tecnici per "TELECAMPIONE" LCN 75 canale presente nel Mux Rete7 Ch 32 M.Ronzone (AL). Il canale risulta inattivo (a schermo nero).In giornata, il canale "CHIESA TV" LCN 195 presente nel Mux Telenova Piemonte Ch 59 M.Ronzone (AL) che era in collegamento con il circuito "inBlu" stava ritrasmettendo il canale "PADRE PIO TV". Ecco un immagine:Problemi tecnici per "ShowTV - AB Channel" LCN 216 canale presente nel Mux Quartarete Ch 24 M.Ronzone (AL). Il canale risulta a schermo nero.Aeranti-Corallo: a rischio i fondi per le tv locali. Info: QUI12.02.2016Novità per "TBNE" LCN 695 canale presente nel Mux Grp Ch 39 M.Ronzone (AL). Di recente, il logo di rete è stato leggermente alzato. Ecco un immagine:11.02.2016DTT. Mediaset: troppo stretta la scadenza europea per i 700 MHz. Info: QUINovità per "SOS TELEVISION" LCN 147 canale presente nel Mux ReteA2 Ch 33 M.Ronzone (AL) + M.Penice (PC). Sul canale, è stato aggiunto il logo di rete in maniera fissa. Inoltre in onda, sono presenti dei nuovi promo. Ecco le immagini:Novità per il logo di "For Music - prove tecniche trasmissione" LCN 613 canale presente nel Mux Quartarete Ch 24 M.Ronzone (AL). La scritta "FORMUSIC.TV" è stata leggermente ingrandita. Ecco un immagine:Nella serata di ieri, su "CANTANDO BALLANDO" LCN 161 canale presente nel Mux Canale Italia Ch 53 M.Ronzone (AL), era curiosamente presente la programmazione di "Italiamia". Ecco un immagine:10.02.2016Nel pomeriggio, il canale "Lombardia Tv" LCN 219 presente nel Mux Primantenna Ch 21 M.Ronzone (AL) è tornato a trasmettere regolarmente.Nel pomeriggio, il canale "R101 TV" LCN 167 presente nel Mux Telecity Alessandria Ch 45 M.Giarolo (AL) + Bricco dell'olio (AL) è tornato a trasmettere regolarmente.Problemi tecnici in giornata per "Rai Sport 1" LCN 57, "Rai Sport 2" LCN 58 e "Rai Sport 1 HD" LCN 557 canali presenti nel Mux 2 Rai Ch 30 M.Penice (PV) + Eremo (TO) e nel Mux 4 Rai Eremo (TO). Sui tre canali, durante il TgSport erano presenti evidenti problemi audio/video. Ecco le immagini:Novità per "Rai Sport 1" LCN 57, "Rai Sport 2" LCN 58 e "Rai Sport 1 HD" LCN 557 canali presenti nel Mux 2 Rai Ch 30 M.Penice (PV) + Eremo (TO) e nel Mux 4 Rai Eremo (TO). La scritta "PUBBLICITÀ" presente in sovraimpressione, è stata leggermente modificata e ora risulta identica a quella di "Rai 4" e "Rai Storia". Ecco le immagini:DTT. Determina 05/02/2016 Mise, Rottamazione frequenze tv: conclusa la procedura per la Lombardia. Info: QUIProblemi tecnici in giornata per "Lombardia Tv" LCN 219 canale presente nel Mux Primantenna Ch 21 M.Ronzone (AL). Sul canale è presente una schermata nera con la scritta "No Video Signal !". Ecco un immagine:Problemi tecnici in giornata per "R101 TV" LCN 167 canale presente nel Mux Telecity Alessandria Ch 45 M.Giarolo (AL) + Bricco dell'olio (AL). Il canale risulta inattivo (a schermo nero).Novità per "Rai Storia" LCN 54 canale presente nel Mux 2 Rai Ch 30 M.Penice (PV) + Eremo (TO). La scritta "PUBBLICITÀ" presente in sovraimpressione, è stata leggermente modificata e ora risulta identica a quella di "Rai 4". Ecco un immagine:09.02.2016Novità per "Rai 4" LCN 21 canale presente nel Mux 3 Rai Ch 26 M.Penice (PV) + Eremo (TO). La scritta "PUBBLICITÀ" presente in sovraimpressione, non è più posizionata in alto a sinistra e di colore viola. Dalla giornata odierna infatti, è stata spostata in basso a sinistra ed è di colore bianco. Ecco un immagine:Problemi tecnici nel pomeriggio per "RadioItaliaTV" LCN 70 canale presente nel Mux ReteA1 Ch 44 M.Ronzone (AL). Durante la diretta per Sanremo, ci sono stati alcuni sganci di segnale e in onda sono apparse delle barre verticali colorate. Ecco un immagine:Novità per "MTV MUSIC" LCN 67 canale presente nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL). In mattinata, sul canale, in occasione della festa di San Valentino, era presente un logo inedito, con alcuni cuoricini. In tarda mattinata però, è stato reinserito il solito logo. Ecco un immagine:Tv. Frequenze 700 MHz a tlc: Italia ancora lontana dal traguardo UE del 2020. Info: QUI08.02.2016Novità nel Mux 2 Rai Ch 30 M.Penice (PV) + Eremo (TO). Di recente, il logo di "Rai Sport 1" LCN 57 è stato spostato leggermente verso destra. Il logo di "Rai Sport 2" LCN 58 invece, è rimasto invariato. Ecco un immagine:Ulteriori novità per "Rai News 24" LCN 48 canale presente nel Mux 1 Rai Ch 22 + Ch 23 M.Penice (PV). La grafica del canale è stata nuovamente modificata, e ora è nuovamente presente la grafica precedente.Novità nel Mux Mediaset3 Ch 38 M.Giarolo (AL) + Bricco dell'olio (AL). Al posto del canale pay "Premium Calcio HD" LCN 381 è arrivato il canale "Premium Sport 2 HD". Ecco un immagine del nuovo logo:Novità nel Mux Mediaset1 Ch 52 M.Giarolo (AL) + Bricco dell'olio (AL). Al posto del canale pay "Premium Calcio" LCN 371 è arrivato il canale "Premium Sport 2". Ecco un immagine del nuovo logo:Mediaset, Premium Calcio si trasforma in Premium Sport 2. Info: QUINovità per "Rai Sport 1 HD" LCN 557 canale presente nel Mux 4 Rai Ch 40 Eremo (TO). Di recente, il logo di rete è stato leggermente spostato verso sinistra. Ecco un immagine:Novità per "Rai News 24" LCN 48 canale presente nel Mux 1 Rai Ch 22 + Ch 23 M.Penice (PV). La grafica del canale, è stata leggermente modificata. Ecco un immagine:Da alcuni giorni, sui canali "STUDIO1" LCN 80  e "STUDIO1 HD" LCN 580 presenti nel Mux Studio1 Ch 31 M.Ronzone (AL) è in onda in alcune fasce orarie la programmazione di "DTV". Ecco le immagini:Problemi tecnici nella serata di ieri per "Lombardia Sat" LCN 199 canale presente nel Mux Telecolor Ch 42 Bricco dell'olio (AL). Sul canale, era presente un fermo immagine. In mattinata il canale è tornato a trasmettere regolarmente.Nuovamente problemi tecnici nella serata di ieri per il Mux Cairo Due Ch 25 M.Giarolo (AL). Il Mux, soffriva saltuariamente di brevi / lunghi off.07.02.2016Lungo off nel pomeriggio per il Mux Cairo Due Ch 25 da M.Giarolo (AL). In seguito, il Mux è stato riacceso. Ringrazio Paolo per la segnalazione.Problemi tecnici nel pomeriggio per "SUPER TV VA" LCN 92 canale presente nel Mux Tele 7 Laghi Ch 34 M.Penice (PV). Il canale, per diversi minuti è risultato a schermo nero e/o con saltuari squadrettamenti.Problemi tecnici nel pomeriggio per "TELECAMPIONE" LCN 75 canale presente nel Mux Rete7 Ch 32 M.Ronzone (AL). Per diversi minuti, il canale è risultato a schermo nero.Problemi tecnici per "AMICI ANIMALI TV" LCN 248 canale presente nel Mux Studio1 Ch 31 M.Ronzone (AL). In mattinata, il canale era stato momentaneamente eliminato dal Mux. In tarda mattinata però, il canale è stato riaggiunto.06.02.2016Nel pomeriggio, in occasione del Rugby 6 Nazioni, i canali "DEEJAY TV" LCN 9 e "DMAX" LCN 52 presenti rispettivamente nel Mux ReteA1 Ch 44 M.Ronzone (AL) e nel Mux TIMB1 Ch 47 M.Giarolo (AL) + Bricco dell'olio (AL) hanno trasmesso in simulcast. Sotto al logo di "DEEJAY TV" era presente la scritta "LIVE". Ecco le immagini:Nella serata di ieri, in occasione di una televendita, il logo di "ITALIA CHANNEL" LCN 123 canale presente nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL) è stato curiosamente rimpiccolito e ristretto. Ecco un immagine:Nella serata di ieri, le trasmissioni di "Telenova 2" LCN 272 e 662 canale presente nel Mux Telenova Piemonte Ch 59 M.Ronzone (AL) erano curiosamente in onda con un riquadrino e uno sfondo blu. In sovraimpressione inoltre, oltre al logo di Telenova2, era cuiosamente presente anche il logo di Telenova News. Ecco un immagine:05.02.2016Studio Universal cambia la sua veste grafica in occasione del mese degli Oscar. Info: QUINuova veste grafica per il canale pay "Studio Universal - Premium" LCN 337 presente nel Mux Mediaset5 Ch 56 M.Giarolo (AL) + Bricco dell'olio (AL). Di recente sul canale, è stato inserito un nuovo logo di rete.Novità nel Mux TIMB3 Ch 48 M.Giarolo (AL) + Bricco dell'olio (AL). Eliminati i canali (copia) "LA7" LCN 507 e "LA7D" LCN 529. Di conseguenza, non è più presente il conflitto LCN con i canali "La7 HD" LCN 507 e "La7d HD" LCN 529 presenti nel Mux Cairo Due Ch 25. Ecco un immagine:Novità per "Sky TG24" LCN 27 canale presente nel Mux ReteA1 Ch 44 M.Ronzone (AL). Sotto al logo di rete, è ora presente la seguente scritta: "News 24 ore su 24 sul canale 50". Ecco un immagine:In alcune fasce orarie serali, sui canali "ITALIA 159" LCN 159 e "ITALIA 160" LCN 160 presenti nel Mux Canale Italia Ch 53 M.Ronzone (AL), è curiosamente presente la programmazione di "Italiamia". Ecco le immagini:Il 9 Giugno l'Ultra HD Forum aprirà il 13esimo Forum Europeo Digitale di Lucca. Info: QUIP.S.Berlusconi: "Per Premium a oggi nessuna reale trattativa con Sky ma si parla...". Info: QUI04.02.2016Nel pomeriggio, il canale "Lombardia Sat" LCN 199 presente nel Mux Telecolor Ch 42 Bricco dell'olio (AL) ha curiosamente trasmesso la programmazione di Telecolor Sicilia. Ecco un immagine:03.02.2016Novità nel Mux Telestar Piemonte Ch 41 M.Giarolo (AL) + Bricco dell'olio (AL). Sul canale "VETRINA 7 GOLD" LCN 227 è stato eliminato il logo di "OK SHOP". Al suo posto è tornato il logo di "VETRINA 7 GOLD", ma rispetto al passato, è leggermente diverso. Inoltre, la programmazione sembrerebbe sempre riconducibile al gruppo OkItalia / OkShop. Ecco le immagini:Novità nel Mux Telecity Alessandria Ch 45 M.Giarolo (AL) + Bricco dell'olio (AL). Aggiunto il canale "OK SHOP" LCN 99. Il canale, è trasmesso in MPEG-4 (H264) e di conseguenza, è visibile esclusivamente sui decoder/tv HD. Ringrazio Federico per la collaborazione. Ecco un immagine:Lcn, la Corte conferma il piano di numerazione varato nel 2013. Info: QUIDTT, LCN. Cassazione cancella il lavoro del CdS e del suo commissario ad acta. Tutto resta com'è. Info: QUINovità per "Real Time" LCN 31 canale presente nel Mux TIMB1 Ch 47 M.Giarolo (AL) + Bricco dell'olio (AL). In questi giorni, in occasione della festa di San Valentino, il logo di rete risulta animato con alcuni cuoricini. Ecco un immagine:Mediaset, no discussioni aperte per fusioni o acquisizioni nella pay Tv. Info: QUIFrequenze tv, Ue: banda 700 MHz per il 5G entro 2020. Info: QUINumerazione LCN: vince l’Agcom (per ora). Info: QUI02.02.2016Novità per i canali "TELECAMPIONE" LCN 75 e "ORLER TV" LCN 144 presenti rispettivamente nel Mux Rete7 Ch 32 M.Ronzone (AL), nel Mux Telecolor Ch 42 Bricco dell'olio (AL) e nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL). Nel pomeriggio, è stato eliminato in sovraimpressione il logo di "Tlc Telecampione". In onda è ora presente esclusivamente il logo di "ORLER TV". Inoltre, sul canale, passa saltuariamente la seguente scritta: "Dal 1 Febbraio Orler TV sarà visibile sul Ch 75 e sul Ch 144 del digitale terrestre. A partire dal 1 Marzo saremo visibili solo sul Ch 144.". Ecco le immagini:Nel pomeriggio, il canale "ITALIA CHANNEL" LCN 123 presente nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL) ha trasmesso con il logo di PianetaTV, come accade saltuariamente. Questo pomeriggio però, il logo risultava molto più piccolo e ristretto. Ecco un immagine:Problemi tecnici nel pomeriggio per "Rai Radio1" canale radio presente nel Mux 1 Rai Lombardia Ch 23 M.Penice (PV). Per alcuni minuti, l'emittente radiofonica è risultata muta e quindi senza audio. Nel Mux 1 Rai Piemonte Ch 22 invece, l'emittente radiofonica "Rai Radio1" ha continuato a trasmettere regolarmente come sempre.Nel pomeriggio, il canale "Lombardia Tv" LCN 219 presente nel Mux Primantenna Ch 21 M.Ronzone (AL) è tornato a trasmettere regolarmente.Problemi tecnici per il Mux Rete7 Ch 32 M.Ronzone (AL). Dalla giornata di ieri, scansionando con un decoder DVB-T la frequenza UHF 32 (562 MHz), si può notare che il decoder scansiona erroneamente due versioni diverse del Mux Rete7. Se si scansiona una prima volta, la composizione del Mux risulta come al solito, ma se si scansiona nuovamente, appare una versione leggermente differente del Mux. Infatti, in questa versione il canale "TeleCupole" LCN 15 risulta rinominato in "TELECUPOLE", "RADIO MANILA" non risulta presente nel Mux, "PIEMONTE+" LCN 110 risulta rinominato in "PIEMONTE+", "ITALIA9N VN" LCN 287 risulta rinominato in "ITALIA9 VN", "THE SOUND" LCN 639 risulta rinominato in "THE SOUND VN", "Nordovest 7 VDA" LCN 113 risulta rinominato in "NORDOVEST 7 VDA", e infine "Videonord" LCN 72 risulta rinominato in "VIDEONORD". Se si prova a scansionare nuovamente la frequenza, a volte apparirà la 1° versione e a volte la 2° versione. Ecco le immagini a confronto:Novità nel Mux Telecolor Ch 42 Bricco dell'olio (AL). Al posto del canale "VERO LADY" LCN 144 è arrivato il canale "TELECAMPIONE" LCN 75. La programmazione, almeno per il momento risulta identica a quella di "ORLER TV" LCN 144 presente nel Mux TIMB2 Ch 55. Con questo spostamento, si è risolto il conflitto LCN con "ORLER TV" LCN 144. Ecco le immagini:Novità nel Mux Rete7 Ch 32 M.Ronzone (AL). Eliminato il canale "VERO LADY" LCN 144. Aggiunto il canale "TELECAMPIONE" LCN 75. Il canale trasmette ora nel corretto formato 16:9, e la programmazione, almeno per il momento risulta identica a quella di "ORLER TV" LCN 144 presente nel Mux TIMB2 Ch 55. Ecco le immagini:Problemi tecnici per "Lombardia Tv" LCN 219 canale presente nel Mux Primantenna Ch 21 M.Ronzone (AL). Nella serata di ieri, sul canale era presente un fermo immagine. In mattinata, il canale risulta a schermo nero. Ecco un immagine:01.02.2016Novità nel Mux Telecolor Ch 42 Bricco dell'olio (AL). Nel pomeriggio, su "VERO LADY" LCN 144 è curiosamente arrivata la programmazione di Telecampione / Orler TV. Prima del collegamento però, sono apparse alcune schermate con scritto "VERO LADY" e "GVG 11". Inoltre, per diversi minuti è andato in onda un cartello dinamico con della musica in sottofondo con scritto "GVG ITALIA - GLOBAL VISION GROUP - GVG 11 - Per Info www.gvgitalia.eu". Dopo alcuni secondi di barre verticali colorate è arrivata la programmazione di Telecampione / Orler TV. Il canale, era inizialmente trasmesso nel formato corretto 16:9, ma alcuni minuti dopo ha iniziato a trasmettere nel formato errato 16:9 letterbox. Al momento, sembrerebbe sparita dal digitale terrestre, la programmazione di VERO LADY. Ecco le immagini:Novità nel Mux Rete7 Ch 32 M.Ronzone (AL). Nel pomeriggio, su "VERO LADY" LCN 144 è curiosamente arrivata la programmazione di Telecampione / Orler TV. Il canale però, è trasmesso erroneamente nel formato 4:3. Al momento, sembrerebbe sparita dal digitale terrestre, la programmazione di VERO LADY. Ecco un immagine:Novità per "m2o Tv" LCN 158 canale presente nel Mux ReteA2 Ch 33 M.Ronzone (AL) + M.Penice (PC). Dalla giornata odierna, il canale ha un nuovo logo di rete. Ecco un immagine:Novità nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL). Il canale "TELECAMPIONE" LCN 75 è stato rinominato in "ORLER TV" ed occupa ora la LCN 144. Il canale però, risulta in conflitto LCN con "VERO LADY" presente nel Mux Rete7 Ch 32 e nel Mux Telecolor Ch 42. In sovraimpressione, almeno per il momento, è ancora presente il logo di "Tlc Telecampione". Ecco le immagini:Novità nel Mux Telecolor Ch 42 Bricco dell'olio (AL). Fine delle trasmissioni per "TRS-Evergreen" LCN 93 e le copie "TRS2-Evergreen" LCN 274, "TRS HD-Evergreen" LCN 593 e "TRS3-Evergreen" LCN 634. Alle ore 6:00 al suo posto è arrivata la programmazione di "Canale 93 - TRS Auto". Inizialmente però, in sovraimpressione era presente come sempre il logo di TRS-Evergreen. Solo alcune ore dopo, alle ore 9:00 circa, è apparso in sovraimpressione il nuovo logo di "Canale 93 - TRS Auto". Il logo era posizionato inizialmente in alto a destra, e in seguito è stato spostato in basso a destra. Al momento, gli identificativi dei canali non sono ancora stati aggiornati. Ecco le immagini:Ulteriori novità per "SPLIT TV" LCN 59 canale presente nel Mux TIMB2 Ch 55 M.Giarolo (AL) + Bricco dell'olio (AL). Durante i programmi nel formato 16:9, il logo di rete viene inserito nella vecchia posizione, ma rispetto ad alcuni giorni fa, il logo risulta molto più piccolo. Inoltre, alcuni programmi vengono trasmessi anche in 16:9 Windowbox. Ecco le immagini:Problemi tecnici per "Boing" LCN 40 canale presente nel Mux Mediaset2 Ch 36 M.Giarolo (AL) + Bricco dell'olio (AL). Per tutta la giornata di ieri, e buona parte della mattinata odierna, il canale ha trasmesso senza logo di rete.Nella serata di ieri, il canale "VERO LADY" LCN 144 presente nel Mux Rete7 Ch 32 M.Ronzone (AL) è tornato a trasmettere regolarmente.
+
+_____________________________________________________________
+
+
+
+
+L'osservatorio TV con le segnalazioni Gennaio-Giugno 2016 lo trovate: QUIL'osservatorio TV con le segnalazioni Luglio-Dicembre 2015 lo trovate: QUIL'osservatorio TV con le segnalazioni Gennaio-Giugno 2015 lo trovate: QUIL'osservatorio TV con le segnalazioni Luglio-Dicembre 2014 lo trovate: QUIL'osservatorio TV con le segnalazioni Gennaio-Giugno 2014 lo trovate: QUIL'osservatorio TV con le segnalazioni Luglio-Dicembre 2013 lo trovate: QUIL'osservatorio TV con le segnalazioni Gennaio-Giugno 2013 lo trovate: QUIL'osservatorio TV con le segnalazioni Luglio-Dicembre 2012 lo trovate: QUI
+
+
+L'osservatorio TV con le segnalazioni Gennaio-Giugno 2012 lo trovate: QUI
+L'osservatorio TV con le segnalazioni Luglio-Dicembre 2011 lo trovate: 
+QUI
+L'osservatorio TV con le segnalazioni Gennaio-Giugno 2011 lo trovate: QUI
+L'osservatorio TV con le segnalazioni Marzo-Dicembre 2010 lo trovate: QUI
+_____________________________________________________________
+
+
+
+
+
+
+ 
+
+
+
+Comments
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sign in|Report Abuse|Print Page|Powered By Google Sites
+
+
+
+
+
+
+    window.jstiming.load.tick('sjl');
+  
+
+
+    window.jstiming.load.tick('jl');
+  
+
+      
+          sites.core.Analytics.createTracker();
+          sites.core.Analytics.trackPageview();
+        
+    
+
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configura le opzioni di ricerca...","url":"/site/alessandriadigitale/system/app/pages/admin/settings"});
+                  
+
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    
+
+            JOT_setupNav("2bd", "Navigazione", true);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          
+
+              new sites.CommentPane('//docs.google.com/comments/d/AAHRpnXv4xP9q9-X1h7sQ89KXJzekehsx6t3UHOiuYR0t_W7HyOUclnN4Gady5lKd5iNyOmSd9ipAivCASGop4tW5Fg4AvGRnYgEBn2Lk2ESBnRYLnmm1MYuu7KM7zhVMyEz5ir41MNdG/api/js?anon=true',
+                  false, false);
+            
+
+  setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('https://sites.google.com/site/alessandriadigitale/_/tz', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+
+
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  
+
+        JOT_insertAnalyticsCode(false,
+            false);
+      
+
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "it");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  
+
+        JOT_insertTranslateCode('en', 'it');
+      
+
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+
+
+    JOT_postEvent('decorateGvizCharts');
+  
+
+          JOT_setupPostRenderingManager();
+        
+
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        
+ 
+
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        
+
+

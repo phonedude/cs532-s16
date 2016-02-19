@@ -1,0 +1,1349 @@
+http://www.ilfoglio.it/articoli/2014/09/21/renzi-dentro-al-futuro-in-america___1-v-121139-rubriche_c381.htm
+
+
+
+
+
+
+La singolare esperienza che porterà Renzi dentro al futuro
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+            AudioPlayer.setup("http://static.ilfoglio.it/scripts/player.swf", {  
+                width: 290  
+            });  
+        
+
+			var scriptStack = new Array();
+			
+			
+			var getCookie = function(name) {
+				if(document.cookie == ""){ //almeno PHPSESSID si deve salvare nell client
+					return 1; // significa che i cookie non sono abilitati
+				}
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for(var i=0;i < ca.length;i++) {
+					var c = ca[i];
+					while (c.charAt(0)==' ') c = c.substring(1,c.length);
+					if (c.indexOf(nameEQ) == 0) { return c.substring(nameEQ.length,c.length);}
+				}
+				return null;
+			}
+			
+			// Set cookie
+			var setCookie = function(name,value,days) {
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime()+(days*24*60*60*1000));
+					var expires = date.toGMTString();
+				}
+				else var expires = "";
+				//document.cookie = name+"="+value+"; expires="+expires+"; path=/";
+				
+				Nx.request('home','setCookieDirective',[value,expires]);
+			}
+			
+			if(!getCookie('cookiesDirective') || getCookie('cookiesDirective')=='-1'){
+				//console.log('cookie not loaded');
+				var OAS_RICH = function(pos){
+					return;
+				}
+			}else{
+				
+				//console.log('rm loaded');
+				document.write('<scr' + 'ipt  SRC="http://static.ilfoglio.it/scripts/rm.js"');
+					//JS 1.1
+					<!--
+					if(browser){
+						OAS_version = 11;
+						if ((navigator.userAgent.indexOf('Mozilla/3') != -1) || (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1))
+							OAS_version = 10;
+						if (OAS_version >= 11)
+							document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');
+					} //-->
+					
+					<!--
+						if(browser){
+							document.write('');
+							function OAS_AD(pos) {
+			//console.log('OAS AD called');
+							if (OAS_version >= 11)
+								OAS_RICH(pos);
+							else
+								OAS_NORMAL(pos);
+							}  
+						}//-->
+					
+				
+			}
+			
+			
+
+		<!--
+			/*if(browser){
+				OAS_version = 11;
+				if ((navigator.userAgent.indexOf('Mozilla/3') != -1) || (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1))
+					OAS_version = 10;
+				if (OAS_version >= 11)
+					document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');
+			}*/  //-->
+		
+
+		<!--
+		/*	
+			if(browser){
+				document.write('');
+				function OAS_AD(pos) {
+//console.log('OAS AD called');
+				if (OAS_version >= 11)
+					OAS_RICH(pos);
+				else
+					OAS_NORMAL(pos);
+				}  
+			} */   //-->
+		
+
+
+
+
+
+
+
+
+
+
+OAS_RICH('BackGround');
+    var Nx = new nAjax();
+
+
+
+
+
+				
+				if(browser){ 
+				    OAS_AD('Top');
+				   OAS_AD('PopUp');
+
+//console.log('Ad:'+OAS_AD('Top'));
+				}else{
+					OAS_RICH('Top');
+				}
+				
+
+
+
+SCARICA IL FOGLIO DI OGGI | VIDEO | NEWSLETTER
+
+
+
+
+							var username = read_username_from_cookies();
+							
+							if(username)
+							{
+								document.write('<a >BENVENUTO '+username+'</a><span class="graytext"> | </span>');
+							}
+						
+ACCEDI
+ | REGISTRATI
+ | INFO
+
+
+
+
+
+
+
+				document.write(today);
+				
+
+
+
+
+
+							OAS_RICH('TopLeft');
+							
+
+
+
+
+
+							OAS_RICH('TopRight');
+							
+
+
+
+
+
+
+
+
+
+
+DIRETTORE CLAUDIO CERASA
+
+							document.write(today);
+						    
+
+
+
+
+
+
+
+
+
+
+
+							   //Google Webmaster tools
+							   /*  (function() {
+								var cx = '015304438770231074083:cymciykd_qc';
+								var gcse = document.createElement('script');
+								gcse.type = 'text/javascript';
+								gcse.async = true;
+								gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+								'//www.google.com/cse/cse.js?cx=' + cx;
+								var s = document.getElementsByTagName('script')[0];
+								s.parentNode.insertBefore(gcse, s);
+							    })();
+							    */
+							
+
+
+
+
+
+
+
+
+
+ Breaking News
+
+
+
+18:39Usa-Vaticano: Trump, "vergognosi" commenti Papa
+
+
+18:03Divorziati: Papa, vanno integrati, comunione ultimo passo
+
+
+18:01Borse europee:chiudono contrastate, torna tensione su banche
+
+
+17:23Rai: Bignardi,miei programmi flop? Falso. Non sono renziana
+
+
+17:23Brexit: Renzi, abbastanza ottimista su accordo Ue
+
+
+16:22Usa: superindice cala dello 0,2% a gennaio, secondo attese
+
+
+15:42Wall Street: apre prudente e contrastata
+
+
+15:40Euro: scende sotto 1,11 dollari dopo Fed
+
+
+15:17Usa-Cuba: Obama, andro' a Cuba e parlero' di diritti umani
+
+
+13:44Ocse: taglia stime Pil Italia, solo +1% nel 2016
+
+
+
+
+
+								$(function () {
+									
+									var media_query_desktop = 1024;
+									var media_query_stat = null;
+									var b_news = $(".b-news");
+									var obj_start = false;
+									
+									if($(document).width() >= media_query_desktop)
+									{
+										start_ticker(b_news);
+										obj_start = true;
+										media_query_stat = 'desktop';
+										
+									}else{																            
+							            media_query_stat = 'nodesktop';
+									}
+									
+									
+									$(window).resize(function(){
+										
+										if(media_query_stat!='desktop' && $(document).width() >= media_query_desktop)
+										{
+											if(!obj_start)
+											{
+												start_ticker(b_news);
+											}else{
+												b_news.myTicker('resume');
+											}											
+											media_query_stat = 'desktop';
+											
+										}else if(media_query_stat!='nodesktop' && $(document).width() < media_query_desktop){
+											
+											if(obj_start)
+											{
+												b_news.myTicker('pause');
+											}											
+											media_query_stat = 'nodesktop';
+										}
+										
+									});
+									
+									function start_ticker(ticker)
+									{									
+										ticker.myTicker({
+							                effect: "scroll",
+							                scrollType: "continuous",
+							                scrollStart: "inside",
+							                scrollInterval: 20,
+							                transitionTime: 500,
+							                autoplay: true
+							            });
+									}
+									
+								});   
+						    
+
+
+
+
+
+
+
+
+
+Home
+
+
+
+
+
+
+
+Elefantino
+
+
+
+
+
+
+
+
+
+
+
+
+
+Blog
+
+
+
+
+
+
+Rubriche
+
+
+
+
+
+
+Foglianti
+
+
+
+
+
+
+Video
+
+
+
+
+
+
+Immagini
+
+
+
+
+
+
+Scarica il Foglio
+
+
+
+
+
+
+ABBONATI
+
+
+
+
+
+
+EBOOK
+
+
+
+
+
+
+
+
+METEO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SHOP
+
+
+
+
+
+
+
+
+
+
+
+
+Politica
+
+
+
+
+
+
+Economia
+
+
+
+
+
+
+Esteri
+
+
+
+
+
+
+Chiesa
+
+
+
+
+
+
+Cronache
+
+
+
+
+
+
+Cultura
+
+
+
+
+
+
+Libri
+
+
+
+
+
+
+Tecnologia
+
+
+
+
+
+
+Scienza
+
+
+
+
+
+
+Sport
+
+
+
+
+
+
+Dati e statistiche
+
+
+
+
+
+
+
+
+GLI INSERTI DEL FOGLIO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sezioni
+SHOP
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+Edicola
+
+
+
+Blog
+
+
+Rubriche
+Foglianti
+
+
+Video
+Immagini
+
+
+METEO
+ABBONATI
+
+
+Politica
+Economia
+
+
+Esteri
+
+
+
+Chiesa
+
+
+Sport
+Cronache
+
+
+GLI INSERTI DEL FOGLIO
+
+
+Scienza
+Cultura
+
+
+Tecnologia
+Libri
+
+
+Dati e statistiche
+
+
+
+
+
+
+
+
+
+
+
+
+OAS_RICH('MaxTicker_01');
+
+
+
+
+
+
+
+La singolare esperienza che porterà Renzi dentro al futuro
+Il premier nella Silicon Valley farà visita alla Singularity University. Io ci sono stato e vi spiego che cosa accade lì
+
+di Mario Sechi 
+		    | 21 Settembre 2014 ore 06:27
+
+COMMENTA
+0 | 
+			
+ | 
+			
+
+
+
+
+
+
+
+
+				//scriptStack.push('facebook');
+				if(!getCookie('cookiesDirective') || getCookie('cookiesDirective')=='-1'){
+					//console.log('facebook & addthis script not loaded');
+				}else{
+					document.write('<scr'+'ipt type="text/javascript" src="//connect.facebook.net/it_IT/all.js#xfbml=1"></scr'+'ipt>');
+					
+				}
+			
+
+
+
+
+
+
+Matteo Renzi (foto LaPresse)
+
+ 
+Quanto vale questo? Osservo l’astro sospeso in aria, proiettato sullo schermo, la domanda mi fa andare in corto circuito gli ultimi neuroni accesi. E’ sera, sono rinchiuso dentro un hangar. Quanto vale questo? Giuro, non so quanto vale un asteroide. Mi chiedo perché mai dovrebbe valere qualcosa un sasso arido che ruzzola nello spazio. Peter Diamandis preme un pulsante e sul bozzolone volante si stampa un elenco di minerali noti e misteriosi. Tadà, ecco la risposta: una miniera, l’asteoroide è una potenziale miniera del domani! Che sciocco, Mario.
+ 
+
+ ARTICOLI CORRELATI 
+
+Che dragata
+
+
+Come ci scoprimmo scozzesi e berlusco-putiniani (e altri buffi revenant)
+
+
+Generazione you and me
+
+
+Renzi: "Non bastano le riforme se non ci sono idee"
+
+
+Tutte le bischerate di Renzi
+
+		
+		Chissà che faccia farà Matteo Renzi quando lunedì prossimo sbarcherà alla Singularity University, nel cuore della Silicon Valley, e scoprirà che da quelle parti discutono di “colonizzazione spaziale” come se si trattasse di peanuts. Il suo primo viaggio americano da quando è presidente del Consiglio farà tappa in un posto speciale, la fabbrica del domani. Renzi arriverà alla Singularity lunedì pomeriggio e si tratterrà per circa due ore. Visiterà il campus e il suo innovation lab, assisterà a una presentazione sulla tecnologia esponenziale, incontrerà un centinaio di ricercatori italiani che lavorano nella Silicon Valley e risponderà alle domande dei partecipanti all’incontro. E’ il mondo di Renzi? Sì e no. Sì per l’immaginario renziano, no perché la Singularity è irriproducibile in Italia. Fondata da un gruppo di visionari californiani, ha l’appoggio e la collaborazione di partner come Google, Autodesk e Cisco. E’ un mix di educazione accademica e acceleratore di start-up che ha l’ambizione di immaginare e costruire il futuro. E’ il sogno americano 2.0 e tutto il resto è ferraglia del Novecento.
+ 
+Io l’ho visto, quel futuro. E per me è stato indimenticabile. Ottobre 2010, arrivo a San Francisco dopo aver fatto tappa a Los Angeles. Mi piazzo all’Hotel Monaco, ho ancora ventiquattr’ore libere prima di puntare verso Moffett Field. La giornata è stupenda, sono a un passo da Union Square, vado a farmi un giro in città. Entro da Borders, a caccia dei libri che in Italia non traducono mai. Sono come un bimbo nel negozio di giocattoli. Salgo all’ultimo piano, musica, compact disc. Mi si ghiaccia il cuore: gli scaffali sono in disarmo. La musica online qui ha già vinto, i cd sono al tappeto e il countdown è finito da un pezzo. Esco da Borders con un paio di libri e la netta sensazione che la rivoluzione digitale qui sia un fatto che galoppa. Passeggio, San Francisco è meravigliosa. La sera vado a cena da Morton’s e tiro un sospiro di sollievo: la bistecca non si è smaterializzata.
+ 
+L’indomani mattina, prendo la mia valigia e vado alla Caltrain Station, dove mi attende un treno per Moffett Field. Scorrono i nomi di luoghi che evocano imprese titaniche della rete: Menlo Park, Palo Alto. A Mountain View scendo, trovo un taxi, è guidato da un sik. Turbante bianco. Ricordi del Rajasthan. Go to Moffett Field, please. Pochi minuti e sono arrivato a destinazione. Eccomi, Silicon Valley! Il campus è in un centro di ricerche speciale: il Nasa’s Ames Research Center, 2.500 dipendenti, quasi 900 milioni di dollari di budget. E’ leader nella nanotecnologia, information technology, biotecnologia, robotica, trasporto e ricerca spaziale. Dio, mi sento come Neil Armstrong. Faccio il check-in, mi danno una stanza che sa di antico, impregnata di viaggi sulla luna, stringo mani di uomini e donne che vengono da tutto il mondo e comincio la mia avventura alla Singularity University. Sono in orbita.
+ 
+Il primo contatto con il mondo alieno è a cena. David S. Rose, uno dei pionieri della Silicon Valley, proietta slide e video a un ritmo che Matteo Renzi se lo sogna. Fa un viaggio tra singolarità e crescita esponenziale. La Singolarità è una teoria elaborata da Ray Kurzweill (fondatore con Peter Diamandis della Singularity University) dove la legge di Moore sulla crescita esponenziale della potenza dei semiconduttori viene estesa ad altre tecnologie. Risultato: una superintelligenza che va al di là dei limiti umani e avvia una nuova civiltà. Mal di testa? Prendiamo un’aspirina e torniamo alla conferenza di David Rose.
+ 
+
+
+
+				OAS_RICH('VideoBox_2');
+			
+
+		E’ davanti a me, descrive un mondo che si sta smaterializzando. Tutti ascoltano, rapiti. Sul patibolo sale il mio oggetto più amato: “Il libro è morto”. Ghigliottinato. Qui non ci sono limiti, penso, mentre comincio a guardarmi intorno. Sono un giornalista rotativizzato e come Bruce Chatwin comincio a chiedermi: “Cosa ci faccio qui?”. Ho una penna, un taccuino e una curiosità nuragica. E gli altri? Azionista di un fondo d’investimento lussemburghese; amministratore delegato dell’acciaio cileno; manager potenziato a Cambridge; business angel polacco; immobiliarista spagnolo; tecnoscrittrice delle Antille; telecomunicante brasiliano; allevatore di zoomers canadesi (ancora non ho capito cosa sono); biotecnologo uscito dall’encierro di Pamplona; olandese volante specializzato in Fisica; televisionaro allenato da cosmonauti russi con volo incorporato su un Mig-31; analista della Cia che si occupa di Big Data, mondi virtuali e prepara il briefing per quello che abita alla Casa Bianca; diplomatico delle neuroscienze; fabbricatore di fibre ottiche; agente di cambio e nanotecnologo; direttore della Fondazione di Ratan Tata, Elon Musk e Larry Page; consulente from Harvard; designer from Stanford; brand strategist from Canada; “sognatore perpetuo” e dirigente del Dipartimento del commercio americano; fisico e matematico fondatore di una banca a Mosca; presidente dell’Agenzia anticorruzione del governo della Romania; progettista di navette spaziali per la Lockheed-Martin; micro-psicoanalista e investitore from Ginevra; inventore di trentatré brevetti americani, tra cui il Matrix panel; costruttore di droni; produttore dei film di Almodóvar; prima (del crollo) ventisei anni in Bear Stearns e dopo (il crollo) azionista di un hedge fund; supermanager di Tv Globo, 120 milioni di spettatori, e proprietaria di quattro ristoranti cinesi; consulente della Security exchange commission (Sec) per le quotazioni sul Nasdaq; sassofonista israeliano, fondatore nel 1997 di un’impresa di telecomunicazioni venduta nel 2000 a Lucent per 4,75 miliardi di dollari; scrittore, attore e creatore dello show televisivo “It’s Always Sunny in Philadelphia”; progettista di piattaforme petrolifere from Canada. Gesù, se tutto va bene, ne esco pazzo. And you? Eccola, la domanda, lo sapevo che arrivava, la freccia curiosa. E tu? “Ehm… I’m from Sardinia”. 
+ 
+Così mi sono ritrovato a progettare un robot insegnante con la tecnologia dei prossimi trent’anni e a farmi domande come questa: chi ha il potere di spegnerlo?  E’ un robot che ha l’autoapprendimento? E se impara a disubbidire? E’ in rete con altri robot e dialoga con i suoi simili? Penserete che tutto questo mi abbia seriamente danneggiato il cervello, ma è la realtà dei laboratori dell’innovazione. L’intelligenza artificiale è un fatto che si sta materializzando intorno a noi.  Non ci credete? Fantascienza? Asimov-dipendenza del vostro umile cronista? Bene, qualche settimana fa Starwood, una delle più grandi e prestigiose catene alberghiere del mondo, ha cominciato la sperimentazione di due maggiordomi-robot all’Aloft Hotel di Cupertino. Stanno arrivando.
+ 
+Qualcuno dirà che la Singularity University è uno strano posto con della strana gente, ma vi giuro che non c’è niente di più potente dell’entusiasmo di chi vuole plasmare il futuro. E per questo Renzi troverà un’accoglienza trionfale. Non si sono mai visti presidenti del Consiglio che twittano e hanno un’infarinatura digitale, Matteo non ha il peccato originale di quello che non usa l’email, non sa accendere il computer e vede tutto quello che va oltre l’sms del telefonino come un ostacolo insuperabile. Il premier – fatto straordinario per la politica italiana – è coetaneo di molti di quei giovani che ogni anno entrano alla Singularity e poi ne escono profondamente cambiati. Succederà anche a lui? Lo spero. In questi giorni gli alumni della Singularity hanno discusso su come dare il benvenuto a Renzi. Ci sarà più di una sorpresa per lui. I suoi oppositori-a-prescindere diranno che la visita è fuffa hi-tech, i turbo-renzisti canteranno che Matteo è decisamente meglio di Bill Gates. Hanno torto gli uni e gli altri. La scelta di Renzi è azzeccata perché il luogo ha un fascino magnetico, gli studenti sono thinkers che vogliono essere anche makers, gli insegnanti sono il meglio che si possa desiderare per capire come gira e girerà il mondo. Il tuo e quello degli altri.
+ 
+Il mio mondo, ah, che ricordo indelebile. Pranzavo con Rafi Gideon (quello dei 4,75 miliardi di dollari) e un altro paio di colleghi di corso, quando Ralph Merkle, uno dei più influenti studiosi di nanotecnologia della Silicon Valley, guarda divertito il mio taccuino e mi chiede che mestiere faccio. Confesso, sono un giornalista. Risposta fulminante: mi dispiace per te, perderai il lavoro. Ma qui forse lo ritroverai. I Singularitarians sono fatti così, non si preoccupano delle conseguenze. Intelligenza artificiale e automazione avanzano a passo di carica, ma chi li inventa, da queste parti, non si pone il problema della disoccupazione. Il pianeta ha risorse abbondanti per tutti, è la risposta di Peter Diamandis ai miei dubbi sugli effetti dell’innovazione in Europa. Noi non siamo americani, la nostra società non reggerà l’urto, ribatto incontrando il consenso degli altri amici del Vecchio continente. Mi rendo conto che è un dibattito tra due mondi diversi, versione reloaded della metafora di Marte e Venere forgiata da Robert Kagan per evidenziare le profonde differenze tra Stati Uniti ed Europa sul tema della guerra.  La Silicon Valley è figlia della rivoluzione culturale degli anni Settanta, ha un tratto psichedelico, liberatorio, è una Nuova Utopia che ieri ballava (e faceva molto altro ancora) a Woodstock e oggi fa la fila per le presentazioni dell’iPhone6.  Tutto è possibile, niente è impossibile. A Renzi tutto questo farà molto bene, perché mentre da noi si discute di articolo 18, in quella striscia di terra sempre tremante progettano il futuro del lavoro e dei senza-lavoro.
+ 
+Un Singularitarian – e Renzi lo sarà dopo il suo viaggio – pensa che il mondo non può ma deve essere un posto migliore per tutta l’umanità. Possibilmente per l’eternità. Uno dei fondatori, Ray Kurzweill, ha scritto un libro intitolato “Transcend”. E’ un manuale che consiglia come vivere bene e a lungo, il tempo sufficiente per raggiungere i progressi della biotecnologia e tagliare così il traguardo della vita eterna. Impossibile? Non per loro. Studiano come arrivarci.
+ 
+Il Singularitarian non si limita a parlare, agisce. Nessuno dei suoi progetti, sogni o ambizioni può restare lettera morta. Vince. Perde. Cade. Si rialza. E’ lo spirito americano, puoi fallire, ma poi ricominci. In Italia se fallisci, sei bollato a vita. Non ti vedono come un tenace imprenditore che non molla, ma come uno marchiato dall’inaffidabilità. Abramo Lincoln nacque povero, non fu eletto per otto volte, fallì due volte come imprenditore, poi divenne storia, Lincoln. Questo è lo spirito di Singularity, un’iniezione di energia vitale. Renzi ha promesso di cambiare verso all’Italia. Non so se ci riuscirà, ma di una cosa sono certo: il sogno di Singularity lo inseguirà per sempre.
+ 
+
+
+ <<  
+ >> 
+
+
+
+			@media only screen and (max-width: 480px) {
+				.widgetRel { font-size: 14px; width: 100%; }
+				.ed_Related_Record_Div { width: 47%; height: 184px; }
+				.ed_Related_Record_Div .ed_Related_Record_Div_Img { height: 90px; }
+			}
+
+			@media only screen and (min-width: 481px) and (max-width: 768px) {
+				.widgetRel { font-size: 15px; width: 100%; }
+				.ed_Related_Record_Div { width: 31%; height: 184px; }
+				.ed_Related_Record_Div .ed_Related_Record_Div_Img { height: 90px; }
+			}
+
+			@media only screen and (min-width: 769px) {
+				.widgetRel { font-size: 15px; width: 100%; }
+				.ed_Related_Record_Div { width: 23%; height: 184px; }
+				.ed_Related_Record_Div .ed_Related_Record_Div_Img { height: 90px; }
+			}
+
+			.widgetRel{font-family:Arial,sans-serif; font-weight:normal; margin-top:12px; text-align:left;}
+			.ed_Related_title {border-bottom:1px solid #a9baad; color:#3f4549; font-family:Arial,sans-serif; font-size:15px; font-weight:bold; margin-bottom:15px; margin-left:5px; text-align:left;}
+			.ed_Related_Record_Div a {border:0px none; color:#393838; font-family:Arial,sans-serif; font-weig
+			ht:normal; margin:0px; padding:0px; text-decoration:none;}
+			.ed_Related_Record_Div a:hover {color:#3f4549; text-decoration:underline;}
+			.ed_Sponsor{background-color:#fff;}
+			.ed_Related_Record_Content_Data {border-width:0px; color:#6d6e71; font-size:11px; display:none;}
+		
+
+			var eDintorniRelated_Account='ilfoglio';
+			var eDintorniRelated_Channel='1';
+			var eDintorniRelated_Title_Box='Ti potrebbero interessare anche: ';
+			var eDintorniRelated_Title_Lenght='85';
+			var eDintorniRelated_Img_Default='http://static.ilfoglio.it/templates/default/images/assets/images/logo_140x90.png';
+			var eDintorniRelated_SponsorFormat='2';
+		
+
+ © FOGLIO QUOTIDIANO 
+
+
+ ARGOMENTI 
+TECNOLOGIA
+		,
+		STATI UNITI
+		,
+		MATTEO RENZI
+
+
+
+ | 
+			E-MAIL
+
+
+
+
+
+
+
+
+				//scriptStack.push('addthis'); 
+				if(!getCookie('cookiesDirective') || getCookie('cookiesDirective')=='-1'){
+					//console.log('facebook & addthis script not loaded');
+				}else{
+					document.write('<scr'+'ipt type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5358b8d15cb437e1" async="async" ></scr'+'ipt>');
+				}
+				
+
+
+
+
+
+
+
+			var reset_disqus = function(){
+				DISQUS.reset({
+					reload: true,
+					config: function () {
+						var disqus_shortname = 'ilfoglio'; // required: replace example with your forum shortname
+						var disqus_identifier = '/dettaglio/121139/';
+					}
+				});
+			};
+
+			var disqus_config = function () {
+				// The generated payload which authenticates users with Disqus
+				this.page.remote_auth_s3 = "eyJpZCI6IiIsInVzZXJuYW1lIjoiIiwiZW1haWwiOiIiLCJhdmF0YXIiOiIifQ== 7d958028f2d314c1537261b268924ca3d6e38972 1455821364";
+				this.page.api_key = 'WFZWV1kFeAzSWB3IauZw58nrb6sefsuIZtBZEiTMtDBOvR9AOhvLUvDdURv8aCo4';
+
+// This adds the custom login/logout functionality
+				this.sso = {
+					name:   "Il Foglio",
+					button:  "http://static.ilfoglio.it/templates/default/images/assets/images/il-foglio-disqus.jpg",
+					icon:     "http://www.ilfoglio.it/favicon.ico",
+					url:      "http://www.ilfoglio.it/login.php",
+					logout:   "http://www.ilfoglio.it/logout.php",
+					width:   "500",
+					height:  "700"
+				};
+			};
+
+
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'ilfoglio'; // required: replace example with your forum shortname
+			var disqus_identifier = '/dettaglio/121139/';
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			
+			//scriptStack.push('disqus_embed');
+			if(!getCookie('cookiesDirective') || getCookie('cookiesDirective')=='-1'){
+				console.log('disqus script not loaded');
+			}else{
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			}
+
+		
+Please enable JavaScript to view the comments powered by Disqus.
+comments powered by Disqus
+
+
+
+
+    OAS_RICH('VideoBox');
+ 
+
+
+
+
+
+
+Articoli
+piu letti
+	    
+piu condivisi
+ 
+
+
+
+
+Renzi dà un po’ di mare sardo alla Francia. Lezioni da trarne, per pescatori e giuristi 
+
+
+
+
+Perché la scoperta delle onde gravitazionali può rivoluzionare la scienza
+
+
+
+
+Per insegnanti e Tar la scuola è laica solo quando fa comodo a loro
+
+
+
+
+Pellicola trasparente e ombrellone. Le onde gravitazionali spiegate a chi ancora ci ha capito poco
+
+
+
+
+La miseria sessuale
+
+
+
+
+Non si può celare l’assalto fatale della Rivoluzione francese alle libertà 
+
+
+
+
+Basta  pagliacci
+
+
+
+
+
+
+Perché la scoperta delle onde gravitazionali può rivoluzionare la scienza
+
+
+
+
+Renzi dà un po’ di mare sardo alla Francia. Lezioni da trarne, per pescatori e giuristi 
+
+
+
+
+Per insegnanti e Tar la scuola è laica solo quando fa comodo a loro
+
+
+
+
+Noi, trenta-quarantenni che stasera guarderemo Sanremo perché c'è Cristina D'Avena
+
+
+
+
+E' morto Antonin Scalia, il giudice che credeva in Dio, nel diavolo e nella Costituzione così com'è
+
+
+
+
+La miseria sessuale
+
+
+
+
+Deutsche Bank è la nuova Lehman? Forse sì e potrebbe farci molto comodo
+
+
+
+
+
+
+    OAS_RICH('VideoBox');
+ 
+
+
+
+
+
+
+		<!--
+		if(!getCookie('cookiesDirective') || getCookie('cookiesDirective')=='-1'){
+			//console.log('cookie not loaded');
+		}else{
+			OAS_rn = '001234567890'; OAS_rns = '1234567890';
+			OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+			document.write("<scr"+"ipt type='text/javascript' src='http://adv.ilsole24ore.it/RealMedia/ads/adstream_jx.ads/"+OAS_sitepage+"/1" + OAS_rns +"@VideoBox'><\/script>");
+		}
+		//  --> 
+		
+
+
+
+
+
+
+
+
+ 
+
+
+
+In primo piano
+
+
+
+
+Che cosa ha detto veramente il Papa su Zika e contraccezione
+
+
+
+
+Autisti per combattere la solitudine. In Cina Uber più che un servizio di trasporto è un servizio sociale
+
+
+
+
+Deadpool è la nuova demenziale frontiera dei supereroi
+
+
+
+
+Il lavoro irraggiungibile dei rifugiati allarma l’establishment tedesco
+
+
+
+
+Visti i bilanci, i grillini si sono “romanizzati” in Parlamento. Inchiesta
+
+
+
+
+Un "santino" per i magistrati della corrente dei "passionisti"
+
+
+
+
+Tutte le ambizioni geopolitiche del nuovo think tank di Google
+
+
+
+
+
+
+
+
+    OAS_RICH('TextBox_02');
+ 
+
+
+
+    OAS_RICH('TextBox_03');
+ 
+
+ 
+
+
+
+
+
+			<!--
+			OAS_rn = '001234567890'; OAS_rns = '1234567890';
+			OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+			if(!getCookie('cookiesDirective') || getCookie('cookiesDirective')=='-1'){
+				console.log('cookie not loaded');
+			}else{
+				document.write("<scr"+"ipt type='text/javascript' src='http://adv.ilsole24ore.it/RealMedia/ads/adstream_jx.ads/advertising.ilsole24ore.com/INREAD/ilfoglio/1" + OAS_rns +"@Cobrand_Triplo'><\/script>");
+			}
+			//  -->
+		
+
+
+
+
+
+
+
+			$(function(){
+				var track = null;
+				if($(document).width() >= 748){
+					if(track == null){
+						$('.column').equalHeight();
+					}
+				}
+
+				$(window).resize(function(){
+					if($(document).width() >= 1024){
+						if(track == null || track != 1024){
+							$('.column').css('min-height', 'auto');
+							$('.column').equalHeight();
+							track = 1024;
+						}
+					}
+					else if($(document).width() >= 748){
+						if(track == null || track != 748){
+							$('.column').css('min-height', 'auto');
+							$('.column').equalHeight();
+							track = 748;
+						}
+					}else{
+						if(track == 748 || track != 300){
+							$('.column').css('min-height', 'auto');
+							track = 300;
+						}
+
+
+					}
+				});
+			});
+		
+
+
+
+					//Google analytics
+					/*  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+					  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+					  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+					  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+					  ga('create', 'UA-3334333-1', 'ilfoglio.it');
+					  ga('send', 'pageview');
+						*/
+					
+
+
+
+IL FOGLIO
+
+ELEFANTINO
+EDITORIALI
+BLOG
+RUBRICHE
+
+LETTERE
+FOGLIANTI
+ARCHIVI
+VIDEO
+IMMAGINI
+EBOOK
+
+ 
+
+
+
+
+POLITICA
+
+
+ECONOMIA
+
+
+ESTERI
+
+
+CHIESA
+
+
+ITALIA
+
+
+CULTURA
+
+
+LIBRI
+
+
+SPORT
+
+
+ 
+
+
+
+
+MIO ACCOUNT
+LOG IN >
+
+MODIFICA I TUOI DATI >
+
+
+CONTATTI
+ABBONAMENTI >
+PUBBLICITÀ >
+DIFFUSIONE >
+
+
+TERMINI DI UTILIZZO
+PRIVACY POLICY >
+NORME PER LE DISCUSSIONI >
+INFORMAZIONI >
+
+
+Web design Fabio Cremonesi
+Developed by Bluservice
+Pubblicità WebSystem
+
+
+
+
+
+Seguici su
+
+
+
+
+NEWSLETTER
+
+ 
+
+
+
+FOGLIO QUOTIDIANO soc. coop.
+ - 
+
+							P.IVA 03231770961 
+							-
+
+							© tutti i diritti sono riservati. 
+						
+
+
+ 
+
+
+ 
+
+OAS_RICH('PopUp');
+
+
+
+
+
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ilfoglio'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+   /* (function () {
+	var s = document.createElement('script'); s.async = true;
+	s.type = 'text/javascript';
+	s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+	(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());*/
+
+
+
+
+
+
+
+	// Using $(document).ready never hurts
+	$(document).ready(function(){
+
+		// Cookie setting script wrapper
+		var cookieScripts = function () {
+			// Internal javascript called
+			console.log("Running");
+			
+			
+			//AudiWeb
+			$.getScript('http://secure-it.imrworldwide.com/v60.js', function(){	
+				
+				var pvar = { cid: "ilfoglio-it", content: "0", server: "secure-it" };
+				var feat = { check_cookie: 0 };
+				var trac = nol_t(pvar, feat);
+				trac.record().post();
+					
+				var	noscr="";
+					noscr+="<div>";
+					noscr+="<img src='//secure-it.imrworldwide.com/cgi-bin/m?ci=ilfoglio-it&amp;cg=0&amp;cc=0&amp;ts=noscript'";
+					noscr+="width='1' height='1' alt='' />";
+					noscr+="</div>";
+					noscr+="";
+				
+				var noscript   = document.createElement("noscript");
+				noscript.innerHTML  = noscr;
+				$("#audiwebscripts").append(noscript);
+				
+			});
+			
+			//Disqus
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.type = 'text/javascript';
+			s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+			}());
+			
+			//Google Analytics
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-3334333-1', 'ilfoglio.it');
+			  ga('send', 'pageview');
+			
+			//Google Web Master Tools
+			(function() {
+				var cx = '015304438770231074083:cymciykd_qc';
+				var gcse = document.createElement('script');
+				gcse.type = 'text/javascript';
+				gcse.async = true;
+				gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+				'//www.google.com/cse/cse.js?cx=' + cx;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(gcse, s);
+				})();
+			
+			if($.inArray('addthis', scriptStack) > 0 ){
+				$.getScript('http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5358b8d15cb437e1');
+				console.log("scriptStack punon");
+			}
+			
+			if($.inArray('facebook', scriptStack) > 0 ){
+				$.getScript('http://connect.facebook.net/it_IT/all.js#xfbml=1&appId=318632034953553');
+			}
+			if($.inArray('disqus_embed', scriptStack) > 0 ){
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+				})();
+			}
+			if($.inArray('twitter_1', scriptStack) > 0 ){
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+			}
+			if($.inArray('twitter_2', scriptStack) > 0 ){
+				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+			}
+			
+			if( typeof eDintorniRelated_Url === 'undefined') { var eDintorniRelated_Url = '';
+			}else{
+			console.log('caricato lo script di edintorni');
+				if($.inArray('eDintorni', scriptStack) > 0 ){
+					document.write('<sc' +
+									'ript' +
+									' async language="javascript" src="' + eDintorniRelated_Url + '">' +
+									'</sc' +
+									'ript>');
+				} 
+			
+			}
+			
+			
+		}
+	
+		/* Call cookiesDirective, overriding any default params
+		
+			*** These are the defaults ***
+				explicitConsent: true,
+				position: 'bottom',
+				duration: 10,
+				limit: 0,
+				message: null,				
+				cookieScripts: null,
+				privacyPolicyUri: 'privacy.html',
+				scriptWrapper: function(){},	
+				fontFamily: 'helvetica',
+				fontColor: '#FFFFFF',
+				fontSize: '13px',
+				backgroundColor: '#000000',
+				backgroundOpacity: '80',
+				linkColor: '#CA0000'
+				
+		*/
+		
+		if( getCookie('cookiesDirective') != '-1'){ console.log('accettate o no azione'); }else{ console.log('non accettato'); }
+		
+		if( getCookie('cookiesDirective')=='-1'){
+			//console.log('cookie not loaded');
+		}else{
+			$.cookiesDirective({
+				privacyPolicyUri: '/cookie-privacy/index___11-9_c209.htm',
+				explicitConsent: true,
+				duration: 10,
+				position : 'bottom',
+				scriptWrapper: cookieScripts, 
+				cookieScripts: 'AudiWeb', 
+				backgroundColor: '#52B54A',
+				linkColor: '#ffffff'
+			});
+		}
+	
+	});
+	
+
+
+
+Potrai chiudere l'informativa fra  secondi
+
+
+
+

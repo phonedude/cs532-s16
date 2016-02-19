@@ -1,0 +1,146 @@
+http://selectbutton.jp/apps/manbo
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta charset="utf-8">
+    <meta name="version" content="0.0.0">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta name="keywords" content="Mola mola,Sunfish,Survive,Survive! Mola mola!,App,Nurturing game,Game,Sea,Aquarium,Free,iOS,iPhone,Android,Sudden death,2ch,4ch,Casual Game">
+    <meta name="description" content="Survive! Mola mola! 300 million of my own kind, all dead">
+    <meta property="fb:app_id" content="331411140366688">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://selectbutton.jp/apps/manbo">
+    <meta property="og:title" content="Survive! Mola mola! Official Website | SELECT BUTTON inc.">
+    <meta property="og:description" content="Survive! Mola mola! 300 million of my own kind, all dead">
+    <meta property="og:image" content="http://selectbutton.jp/apps/manbo_en/img/ogp.png">
+    <meta property="og:site_name" content="Survive! Mola mola! Official Website | SELECT BUTTON inc.">
+    <link rel="apple-touch-icon-precomposed" href="/apps/manbo_en/img/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="/apps/manbo_en/img/favicon.ico">
+    <title>Survive! Mola mola! Official Website | SELECT BUTTON inc.</title>
+    <link rel="stylesheet" href="/apps/manbo_en/css/jquery.fancybox.css" type="text/css">
+    <link rel="stylesheet" href="/apps/manbo_en/css/helpers/jquery.fancybox-thumbs.css" type="text/css">
+    <link rel="stylesheet" href="/apps/manbo_en/css/reset.css" type="text/css"><!--[if !IE]><!-->
+    <link rel="stylesheet" href="/apps/manbo_en/css/styles.css" type="text/css"><!--<![endif]-->
+    <!--[if gte IE 9]>
+    <link rel="stylesheet" href="/apps/manbo_en/css/styles_ie.css" type="text/css"><![endif]-->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53493518-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=331411140366688&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="content"><img src="/apps/manbo_en/img/bg.png" style="min-width:940px;" class="backgroundImage">
+      <header>
+        <nav>
+          <div class="block">
+            <h1><a href="//selectbutton.jp" target="_blank"><img src="/apps/manbo_en/img/logo_s.png" alt="SelectButton inc." title="SelectButton inc." width="246" height="28"></a></h1>
+            <div class="socialbutton">
+              <div class="fb-like" data-href="http://selectbutton.jp/apps/manbo" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+              <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section id="title">
+        <div class="block">
+          <canvas id="mainCanvas" width="900" height="580"></canvas><img id="newsImage" src="/apps/manbo_en/img/news_downloads.png" alt="5,000,000+ downloads!!" title="5,000,000+ downloads!!" width="438" height="34">
+          <h1 class="logo"><img id="logoImage" src="/apps/manbo_en/img/title_logo.png" alt="Survive! Mola mola! 300 million of my own kind, all dead" title="Survive! Mola mola! 300 million of my own kind, all dead" width="572" height="244"></h1>
+          <div id="storeinfo">
+            <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button"><img src="/apps/manbo_en/img/title_btn_appstore.png" alt="AppStore" title="AppStore" width="180" height="61"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button"><img src="/apps/manbo_en/img/title_btn_googleplay.png" alt="googleplay" title="googleplay" width="180" height="61"></a></div>
+          </div>
+        </div>
+        <div id="subCanvasBlock" class="block">
+          <canvas id="subCanvas" width="900" height="580"></canvas>
+          <div id="deathResult" class="block">
+            <div id="resultSardine" class="result"><img src="/apps/manbo_en/img/result_sardine.png" alt="Cause of death: Sardine bones" title="Cause of death: Sardine bones" width="642" height="360" class="result_image">
+              <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button_left"><img src="/apps/manbo_en/img/title_btn_appstore_s.png" alt="AppStore" title="AppStore" width="144" height="50"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button_right"><img src="/apps/manbo_en/img/title_btn_googleplay_s.png" alt="googleplay" title="googleplay" width="144" height="50"></a>
+                <p>Survive! Mola mola! 300 million of my own kind, all dead</p>
+              </div>
+            </div>
+            <div id="resultJellyfish" class="result"><img src="/apps/manbo_en/img/result_jellyfish.png" alt="Cause of death: Plastic bag" title="Cause of death: Plastic bag" width="642" height="360" class="result_image">
+              <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button_left"><img src="/apps/manbo_en/img/title_btn_appstore_s.png" alt="AppStore" title="AppStore" width="144" height="50"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button_right"><img src="/apps/manbo_en/img/title_btn_googleplay_s.png" alt="googleplay" title="googleplay" width="144" height="50"></a>
+                <p>Survive! Mola mola! 300 million of my own kind, all dead</p>
+              </div>
+            </div>
+            <div id="resultSquid" class="result"><img src="/apps/manbo_en/img/result_squid.png" alt="Cause of death: Ate too much squid" title="Cause of death: Ate too much squid" width="642" height="360" class="result_image">
+              <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button_left"><img src="/apps/manbo_en/img/title_btn_appstore_s.png" alt="AppStore" title="AppStore" width="144" height="50"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button_right"><img src="/apps/manbo_en/img/title_btn_googleplay_s.png" alt="googleplay" title="googleplay" width="144" height="50"></a>
+                <p>Survive! Mola mola! 300 million of my own kind, all dead</p>
+              </div>
+            </div>
+            <div id="resultShrimp" class="result"><img src="/apps/manbo_en/img/result_shrimp.png" alt="Cause of death: Shrimp shell" title="Cause of death: Shrimp shell" width="642" height="360" class="result_image">
+              <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button_left"><img src="/apps/manbo_en/img/title_btn_appstore_s.png" alt="AppStore" title="AppStore" width="144" height="50"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button_right"><img src="/apps/manbo_en/img/title_btn_googleplay_s.png" alt="googleplay" title="googleplay" width="144" height="50"></a>
+                <p>Survive! Mola mola! 300 million of my own kind, all dead</p>
+              </div>
+            </div>
+            <div id="resultTap" class="result"><img src="/apps/manbo_en/img/result_tap.png" alt="Cause of death: Died from touching it too much" title="Cause of death: Died from touching it too much" width="642" height="360" class="result_image">
+              <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button_left"><img src="/apps/manbo_en/img/title_btn_appstore_s.png" alt="AppStore" title="AppStore" width="144" height="50"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button_right"><img src="/apps/manbo_en/img/title_btn_googleplay_s.png" alt="googleplay" title="googleplay" width="144" height="50"></a>
+                <p>Survive! Mola mola! 300 million of my own kind, all dead</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="feature">
+        <div class="block youtube">
+          <iframe width="650" height="366" src="https://www.youtube.com/embed/FDvU-9tOztk" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="block app">
+          <h1><img src="/apps/manbo_en/img/feature_app_headline.png" alt="Brand-new nurturing game where &quot;death=pleasure&quot;" title="Brand-new nurturing game where &quot;death=pleasure&quot;" width="820" height="58"></h1>
+          <div class="content clearfix">
+            <p>The "closest animal to heaven" has arrived!!<br>Take care of your mola!  An all new free game where "death=pleasure"<br>Molas are pretty distinct with a large and oddly-shaped body.  <br>However, they are actually very delicate.  The smallest thing can make them die (´・ω・`) <br>Don't let your mola die.  Grow your mola to the world's biggest 2.5t class!</p>
+            <div class="previews clearfix"><a rel="fancybox-thumb" href="/apps/manbo_en/img/storeimage01.png" title="Grow for the sake of your fallen kin! Become the biggest mola mola in the world. Unfortunately for mola mola, they aren't very good at staying alive..." class="fancybox-thumb"><img src="/apps/manbo_en/img/storeimage01.png" alt="Grow for the sake of your fallen kin! Become the biggest mola mola in the world. Unfortunately for mola mola, they aren't very good at staying alive..." width="176" height="264"></a><a rel="fancybox-thumb" href="/apps/manbo_en/img/storeimage02.png" title="No creature is closer to swimming through those pearly gates. Their frail bodies succumb to death so easily. They're so incredibly weak." class="fancybox-thumb"><img src="/apps/manbo_en/img/storeimage02.png" alt="No creature is closer to swimming through those pearly gates. Their frail bodies succumb to death so easily. They're so incredibly weak." width="176" height="264"></a><a rel="fancybox-thumb" href="/apps/manbo_en/img/storeimage03.png" title="Don't let this get you down... Gain weight any way you can!" class="fancybox-thumb"><img src="/apps/manbo_en/img/storeimage03.png" alt="Don't let this get you down... Gain weight any way you can!" width="176" height="264"></a><a rel="fancybox-thumb" href="/apps/manbo_en/img/storeimage04.png" title="Increase weight. Evolve your mola!" class="fancybox-thumb"><img src="/apps/manbo_en/img/storeimage04.png" alt="Increase weight. Evolve your mola!" width="176" height="264"></a></div><img src="/apps/manbo_en/img/feature_turtle.png" alt="黄金のカメ" width="218" height="120" class="turtle">
+          </div>
+        </div>
+      </section>
+      <section id="spec">
+        <div class="background">
+          <div class="block">
+            <div class="clearfix">
+              <div class="storeicon"><img src="/apps/manbo_en/img/spec_appicon.png" alt="Survive! Mola mola!" title="Survive! Mola mola!" width="184" height="184"></div>
+              <dl>
+                <dt>App name</dt>
+                <dd>Survive! Mola mola!</dd>
+                <dt>Release</dt>
+                <dd>Android、iOS</dd>
+                <dt>Price</dt>
+                <dd>Free</dd>
+                <dt>OS</dt>
+                <dd>Android 4.0+、iPhone、iPod touch and iPad iOS7.0+</dd>
+              </dl>
+              <div class="storebutton"><a href="https://itunes.apple.com/us/app/id915222954" target="_blank" class="img_button"><img src="/apps/manbo_en/img/title_btn_appstore.png" alt="AppStore" title="AppStore" width="180" height="61"></a><a href="https://play.google.com/store/apps/details?id=jp.selectbutton.manbotheworld" target="_blank" class="img_button"><img src="/apps/manbo_en/img/title_btn_googleplay.png" alt="googleplay" title="googleplay" width="180" height="61"></a></div>
+            </div>
+            <nav>
+              <ul>
+                <li class="first"><a href="http://selectbutton.jp" target="_blank">SELECT BUTTON inc.</a></li>
+              </ul>
+            </nav><small>©SELECT BUTTON inc.</small>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
+    <script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
+    <script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+    <script src="/apps/manbo_en/createjs/manbo/Manbo.js"></script>
+    <script src="/apps/manbo_en/js/main.js"></script>
+    <script src="/apps/manbo_en/js/jquery.min.js"></script>
+    <script src="/apps/manbo_en/js/jquery.fancybox.pack.js"></script>
+    <script src="/apps/manbo_en/js/helpers/jquery.fancybox-thumbs.js"></script>
+    <script src="/apps/manbo_en/js/sub.js"></script>
+  </body>
+</html>

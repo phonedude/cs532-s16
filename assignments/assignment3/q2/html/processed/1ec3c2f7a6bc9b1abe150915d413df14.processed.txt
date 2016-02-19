@@ -1,0 +1,942 @@
+http://abusidiqu.com/its-all-scripted-ebola-virus-is-a-biological-weapon-from-the-us-read-this-shocking-report/
+
+
+
+  
+
+Its All Scripted! Ebola Virus Is A Biological Weapon From the US [Read This Shocking Report] - Abusidiqu
+
+
+
+
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"b8de8fbf421faac18684edf74f904c09",petok:"c4ba62a51294c5ee6ec8118aa8b9c3e0f9331092-1455821400-3600",zone:"abusidiqu.com",rocket:"0",apps:{"ga_key":{"ua":"UA-34095171-2","ga_bs":"2"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=fb690a32f5/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/abusidiqu.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		
+img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+img#wpstats{display:none}
+.recentcomments a{display:inline!important;padding:0!important;margin:0!important;}
+
+
+
+    
+
+var tdBlocksArray = []; //here we store all the items for the current page
+
+//td_block class - each ajax block uses a object of this class for requests
+function tdBlock() {
+    this.id = '';
+    this.block_type = 1; //block type id (1-234 etc)
+    this.atts = '';
+    this.td_column_number = '';
+    this.td_current_page = 1; //
+    this.post_count = 0; //from wp
+    this.found_posts = 0; //from wp
+    this.max_num_pages = 0; //from wp
+    this.td_filter_value = ''; //current live filter value
+    this.is_ajax_running = false;
+    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+    this.header_color = '';
+    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+}
+
+    
+    
+        // td_js_generator - mini detector
+        (function(){
+            var htmlTag = document.getElementsByTagName("html")[0];
+
+            if ( navigator.userAgent.indexOf("MSIE 10.0") > -1 ) {
+                htmlTag.className += ' ie10';
+            }
+
+            if ( !!navigator.userAgent.match(/Trident.*rv\:11\./) ) {
+                htmlTag.className += ' ie11';
+            }
+
+            if ( /(iPad|iPhone|iPod)/g.test(navigator.userAgent) ) {
+                htmlTag.className += ' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if ( user_agent.indexOf("android") > -1 ) {
+                htmlTag.className += ' td-md-is-android';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Mac OS X')  ) {
+                htmlTag.className += ' td-md-is-os-x';
+            }
+
+            if ( /chrom(e|ium)/.test(navigator.userAgent.toLowerCase()) ) {
+               htmlTag.className += ' td-md-is-chrome';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Firefox') ) {
+                htmlTag.className += ' td-md-is-firefox';
+            }
+
+            if ( -1 !== navigator.userAgent.indexOf('Safari') && -1 === navigator.userAgent.indexOf('Chrome') ) {
+                htmlTag.className += ' td-md-is-safari';
+            }
+
+        })();
+
+
+
+
+        var tdLocalCache = {};
+
+        ( function () {
+            "use strict";
+
+            tdLocalCache = {
+                data: {},
+                remove: function (resource_id) {
+                    delete tdLocalCache.data[resource_id];
+                },
+                exist: function (resource_id) {
+                    return tdLocalCache.data.hasOwnProperty(resource_id) && tdLocalCache.data[resource_id] !== null;
+                },
+                get: function (resource_id) {
+                    return tdLocalCache.data[resource_id];
+                },
+                set: function (resource_id, cachedData) {
+                    tdLocalCache.remove(resource_id);
+                    tdLocalCache.data[resource_id] = cachedData;
+                }
+            };
+        })();
+
+    
+    
+var td_viewport_interval_list=[{"limitBottom":767,"sidebarWidth":251},{"limitBottom":1023,"sidebarWidth":339}];
+var td_animation_stack_effect="type0";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img";
+var td_animation_stack_general_selectors=".td-animation-stack img, .post img";
+var td_ajax_url="http:\/\/abusidiqu.com\/wp-admin\/admin-ajax.php?td_theme_name=Newsmag&v=2.3.5";
+var td_get_template_directory_uri="http:\/\/abusidiqu.com\/wp-content\/themes\/Abusidiq";
+var tds_snap_menu="smart_snap_always";
+var tds_logo_on_sticky="";
+var tds_header_style="9";
+var td_please_wait="Please wait...";
+var td_email_user_pass_incorrect="User or password incorrect!";
+var td_email_user_incorrect="Email or username incorrect!";
+var td_email_incorrect="Email incorrect!";
+var tds_more_articles_on_post_enable="";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_theme_color_site_wide="#c90000";
+var tds_smart_sidebar="enabled";
+var tdThemeName="Newsmag";
+var td_magnific_popup_translation_tPrev="Previous (Left arrow key)";
+var td_magnific_popup_translation_tNext="Next (Right arrow key)";
+var td_magnific_popup_translation_tCounter="%curr% of %total%";
+var td_magnific_popup_translation_ajax_tError="The content from %url% could not be loaded.";
+var td_magnific_popup_translation_image_tError="The image #%curr% could not be loaded.";
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+
+
+
+
+
+.wpb_animate_when_almost_visible{opacity:1;}
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34095171-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+
+
+
+//<![CDATA[
+try{(function(a){var b="http://",c="abusidiqu.com",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+
+
+
+
+
+
+CLOSE
+
+
+
+NEWS
+POLITICS
+OPINION
+
+MY BLOG
+
+
+PRESS RELEASE
+SPECIAL REPORT
+MORE
+
+VIDEO
+PHOTOS
+WORLD AFFAIRS
+ENTERTAINMENT
+FAITH
+SPORT
+LIFESTYLE
+
+
+ 
+ 
+
+
+
+
+
+Thursday, February 18, 2016HOME
+ABOUT US
+ADVERTISE WITH US
+PRIVACY
+TERMS OF USE
+WRITE FOR US
+CONTACT US
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+NEWS
+
+var block_td_uid_1_56c61258709d1 = new tdBlock();
+block_td_uid_1_56c61258709d1.id = "td_uid_1_56c61258709d1";
+block_td_uid_1_56c61258709d1.atts = '{"limit":"5","td_column_number":3,"ajax_pagination":"next_prev","category_id":"35","show_child_cat":5,"td_ajax_filter_type":"td_category_ids_filter","td_ajax_preloading":"","class":"td_block_id_1784139080 td_uid_1_56c61258709d1_rand"}';
+block_td_uid_1_56c61258709d1.td_column_number = "3";
+block_td_uid_1_56c61258709d1.block_type = "td_block_mega_menu";
+block_td_uid_1_56c61258709d1.post_count = "5";
+block_td_uid_1_56c61258709d1.found_posts = "3146";
+block_td_uid_1_56c61258709d1.header_color = "";
+block_td_uid_1_56c61258709d1.ajax_pagination_infinite_stop = "";
+block_td_uid_1_56c61258709d1.max_num_pages = "630";
+tdBlocksArray.push(block_td_uid_1_56c61258709d1);
+
+
+
+ 
+
+Buhari Appoints Tolu Ogunlesi Special Adviser On New Media 
+
+
+
+
+ 
+
+Nigerian Soldiers Capture Boko Haram’s Deadliest Stronghold 
+
+
+
+
+ 
+
+Dominica Republic Officials Reveal How Diezani Obtained Foreign Diplomatic Passport 
+
+
+
+
+ 
+
+Alleged N2.1bn Fraud: EFCC Lines-up 15 Witnesses Against Dokpesi 
+
+
+
+
+ 
+
+2016 Budget: Buhari’s N500bn Social Investment Votes, Greatest Duty To Nigerians — University Don 
+
+ 
+
+
+POLITICS
+
+var block_td_uid_2_56c612587e058 = new tdBlock();
+block_td_uid_2_56c612587e058.id = "td_uid_2_56c612587e058";
+block_td_uid_2_56c612587e058.atts = '{"limit":"5","td_column_number":3,"ajax_pagination":"next_prev","category_id":"44","show_child_cat":5,"td_ajax_filter_type":"td_category_ids_filter","td_ajax_preloading":"","class":"td_block_id_3311701766 td_uid_2_56c612587e058_rand"}';
+block_td_uid_2_56c612587e058.td_column_number = "3";
+block_td_uid_2_56c612587e058.block_type = "td_block_mega_menu";
+block_td_uid_2_56c612587e058.post_count = "5";
+block_td_uid_2_56c612587e058.found_posts = "1049";
+block_td_uid_2_56c612587e058.header_color = "";
+block_td_uid_2_56c612587e058.ajax_pagination_infinite_stop = "";
+block_td_uid_2_56c612587e058.max_num_pages = "210";
+tdBlocksArray.push(block_td_uid_2_56c612587e058);
+
+
+
+ 
+
+Stop Labelling Modu Sheriff Boko Haram Sponsor – PDP 
+
+
+
+
+ 
+
+The Redemption Boat Has Capsized; Jonathan’s Loyalists Threaten To Dump PDP 
+
+
+
+
+ 
+
+Jonathan Backs Choice Of Modu Sheriff As PDP Chair… We Don’t Want Him, Says Ex-ministers 
+
+
+
+
+ 
+
+Nothing Will Stop Us From Replacing Buhari In 2019, New PDP Chair, Sheriff, Vows 
+
+
+
+
+ 
+
+Sharp Division In PDP Over Choice Of Ali Modu Sheriff As Acting Chiarman 
+
+ 
+
+
+OPINION
+
+MY BLOG
+
+
+PRESS RELEASE
+SPECIAL REPORT
+MORE
+
+VIDEO
+PHOTOS
+WORLD AFFAIRS
+ENTERTAINMENT
+FAITH
+SPORT
+LIFESTYLE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+Its All Scripted! Ebola Virus Is A Biological Weapon From the US [Read This Shocking Report]
+
+By Editor -  Sep 20, 2014 0 
+
+
+SHARE
+
+Facebook
+Twitter
+
+
+
+
+
+By Mike Adams, the Health Ranger
+(NaturalNews) On the very same day that vaccine maker GlaxoSmithKline is being fined $490 million by Chinese authorities for running an illegal bribery scheme across China [3], the media is announcing the “astonishing” launch of human trials for an Ebola vaccine.
+
+
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+
+Care to guess who will be manufacturing this vaccine once it is whitewashed and rubber-stamped as “approved?” GlaxoSmithKline, of course. The same company that also admitted to a massive criminal bribery network in the United States, where felony crimes were routinely committed to funnel money to over 40,000 physicians who pushed dangerous prescription drugs onto patients.
+This is the company that is now — today! — injecting 60 “volunteers” with an experimental Ebola vaccine.
+Spontaneous vaccine development a scientific impossibility
+“Normally it would take years of human trials before a completely new vaccine was approved for use,” reports the BBC. [1] “But such is the urgency of the Ebola outbreak in west Africa that this experimental vaccine is being fast tracked at an astonishing rate.”
+Yes, it’s astonishing because it’s impossible.
+As any vaccine-related virologist already knows, the process of going from an in-the-wild infection of Ebola to a manufactured vaccine ready for human trials simply cannot be achieved in a matter of a few weeks or months. Apparently, we are all to believe that a spontaneous scientific miracle has now taken place — a literal act of vaccine magic — which has allowed the criminal vaccine industry to skip the tedious R&D phases and create a vaccine ready for human trials merely by waving a magic wand.
+“The first of 60 healthy volunteers will be injected with the vaccine,” says the BBC today, and vaccine pushers are of course lining up to proclaim the vaccine miracle which has spontaneously appeared before them like a burning bush:
+Professor Adrian Hill, director of the Jenner Institute in Oxford, who is leading the trial, said: “This is a remarkable example of how quickly a new vaccine can be progressed into the clinic, using international co-operation.”
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+Near-proof that this was all scripted
+The far more likely explanation, of course, is that all this was scripted in advance: the outbreak, the international cry for help, the skyrocketing of the stock price for Tekmira (which has received financial investments from Monsanto), the urgent call for a vaccine and now the spontaneous availability of human vaccine trials. It’s all beautifully scripted from start to finish, better than a Shakespearean tragedy played out on the international stage.
+The “heroes” of this theater have been pre-ordained to be drug companies and vaccines, and it is already written in the script that vaccines will be heralded as lifesaving miracles of modern science even if they infect people and cause widespread damage as has now happened to young girls in Colombia who are being hospitalized en masse after being injected with HPV vaccines. [2]
+Incredibly, the official response from vaccine-pushing health authorities in Colombia is that all these girls who are suffering from paralysis are merely “imagining” their symptoms and suffering from “mass hysteria.” Obviously, if vaccines are created by the gods of modern science — the new cult of our delusional world — then they must be perfect and infallible. Therefore, anyone who suffers side effects of such perfect vaccines must obviously be imagining things. Such is the delusional dogma of modern vaccine pushers.
+This will be the exact same explanation leveled against anyone who suffers harmful effects from an Ebola vaccine, too. After all, the discovery of vaccine side effects simply isn’t in the script being played out before us. Therefore, it cannot be allowed, and any person who actually suffers side effects will be immediately deemed to be mentally ill. (Yes, this is how insane and Orwellian the vaccine industry has become. All who do now bow down to the voodoo of dangerous vaccines are labeled mental patients and then treated with psychiatric drugs. The vaccine industry has quite literally become the Heaven’s Gate Cult of modern medicine…)
+The United States government now owns the patent on Ebola
+This plot gets even more interesting when you realize that a patent on Ebola was awarded to the United States government just four years ago, in 2010.
+That patent, number CA2741523A1, is available here.
+Astonishingly, the patent claims U.S. government ownership over all variants of Ebola which share 70% or more of the protein sequences described in the patent: “[CLAIMS] …a nucleotide sequence of at least 70%-99% identity to the SEQ ID…”
+Furthermore, the patent also claims ownership over any and all Ebola viruses which are “weakened” or “killed,” meaning the United States government is literally claiming ownership over all Ebola vaccines.
+What this means, of course, is that the U.S. government can demand royalties on all Ebola vaccines.
+Even more Orwellian is the fact that the U.S. government can use this patent to halt all other research for treatments or cures for Ebola.
+Patent monopoly gives U.S. government legal right to block all non-vaccine Ebola treatments, cures or research
+Do you remember the massive medical controversy over the BRCA1 gene tied to breast cancer in women? One corporation claimed patent ownership over the gene and then they used that patent to shut down all other research, testing or diagnosis of breast cancer related to that gene. To date, nearly 20% of the human genome has been claimed as “owned” by corporations, universities and even the government.
+The controversy went all the way to the U.S. Supreme Court which ultimately ruled that human genes cannot be patented. But the Supreme Court decision actually protected patents on gene sequences for viruses and other pathogens.
+The truth of the matter is that anyone who owns the Ebola gene patent can legally use that patent to shut down all research on Ebola, including research for non-vaccine medical treatments and cures. This is how medical monopolies are reinforced: by monopolizing all the research and all the “cures.”
+Even more frightening, the “ownership” over Ebola extends to Ebola circulating in the bodies of Ebola victims. When Dr. Kent Brantly was relocated from Africa to the CDC’s care in Atlanta, that entire scene was carried out under the quasi-legal justification that the U.S. government “owned” the Ebola circulating in Dr. Brantly’s blood. Thus, one of the very first things that took place was the acquisition of his blood samples for archiving and R&D by the CDC and the U.S. Department of Defense.
+(Only the gullible masses think that was about saving the life of a doctor. The real mission was to acquire the Ebola strain circulating in his body and use it for weaponization research, vaccine research and other R&D purposes.)
+Anyone infected with Ebola now deemed to be carrying “government property” in the form of a patented virus
+This brings us to the quarantine issue. As the whole world knows by now, the entire nation of Sierra Leone is now under a state of medical martial law, where Ebola victims are now being hunted down like fugitives in door-to-door manhunts. [4]
+Simultaneously, the United States government is now operating under Obama’s executive order #13674, signed on July 31, 2014, which allows the U.S. federal government to arrest and quarantine any person who shows symptoms of infectious disease. [5]
+This executive order allows federal agents to forcibly arrest and quarantine anyone showing symptoms of:
+…Severe acute respiratory syndromes, which are diseases that are associated with fever and signs and symptoms of pneumonia or other respiratory illness, are capable of being transmitted from person to person, and that either are causing, or have the potential to cause, a pandemic, or, upon infection, are highly likely to cause mortality or serious morbidity if not properly controlled.
+Part of the legal argument for justifying such a quarantine in the case of Ebola goes like this: If you are carrying Ebola in your body, then you are in possession of U.S. government property!
+The fact that the virus is replicating in your body is, legally speaking, a violation of patent law. Because you are providing a host environment for the replication of the virus, you technically are breaking federal laws that restrict the copying and distributed of patented properties, which in this case include the Ebola virus.
+Thus, the government has every right to “relocate” you and prevent you from violating patent law by replicating, distributing or spreading THEIR intellectual property (i.e. the Ebola virus).
+Lest you think this legal argument sounds insane, just remember that the legal system is full of lawyers who make far more insane arguments on a daily basis, including the argument that human genes could be patented in the first place. And medical officials also make insane, irrational arguments almost constantly, including the argument that all those girls in Colombia who are suffering convulsions and paralysis from the HPV vaccine are merely “imagining” their symptoms. Such explanations flatly defy any attachment to sane thinking.
+Ultimately, the patent on the Ebola virus provides the legal justification for forced government quarantines — and even medical research — on Ebola victims.
+“Ebola is a genetically modified organism”
+What I’ve outlined in this story is just a small taste of the crime against humanity which is taking place right before our eyes. I am now convinced that this Ebola outbreak is very likely not an accident, and many scientists in Africa wholeheartedly agree that the outbreak is actually the deployment of a biological weapon.
+“Ebola is a genetically modified organism (GMO),” declared Dr. Cyril Broderick, Professor of Plant Pathology, in a front-page story published in the Liberian Observer. [6]
+He goes on to explain:
+[Horowitz] confirmed the existence of an American Military-Medical-Industry that conducts biological weapons tests under the guise of administering vaccinations to control diseases and improve the health of “black Africans overseas.”
+SITES AROUND AFRICA, AND IN WEST AFRICA, HAVE OVER THE YEARS BEEN SET UP FOR TESTING EMERGING DISEASES, ESPECIALLY EBOLA
+The World Health Organization (WHO) and several other UN Agencies have been implicated in selecting and enticing African countries to participate in the testing events, promoting vaccinations, but pursuing various testing regiments.
+AFRICAN LEADERS AND AFRICAN COUNTRIES NEED TO TAKE THE LEAD IN DEFENDING BABIES, CHILDREN, AFRICAN WOMEN, AFRICAN MEN, AND THE ELDERLY. THESE CITIZENS DO NOT DESERVE TO BE USED AS GUINEA PIGS!
+Africa must not relegate the Continent to become the locality for disposal and the deposition of hazardous chemicals, dangerous drugs, and chemical or biological agents of emerging diseases. There is urgent need for affirmative action in protecting the less affluent of poorer countries, especially African citizens, whose countries are not as scientifically and industrially endowed as the United States and most Western countries, sources of most viral or bacterial GMOs that are strategically designed as biological weapons. It is most disturbing that the U. S. Government has been operating a viral hemorrhagic fever bioterrorism research laboratory in Sierra Leone.
+The world must be alarmed. All Africans, Americans, Europeans, Middle Easterners, Asians, and people from every conclave on Earth should be astonished. African people, notably citizens more particularly of Liberia, Guinea and Sierra Leone are victimized and are dying every day.
+Sources for this article include:
+[1] http://www.bbc.com/news/health-29230157
+[2] http://news.yahoo.com/mystery-illness-plague…
+[3] http://www.bbc.com/news/business-29274822
+[4] http://www.naturalnews.com/046945_medical_ma…
+[5] http://www.federalregister.gov/articles/2014…
+[6] http://www.liberianobserver.com/security/ebo…
+[7] http://www.google.com/patents/CA2741523A1
+[8] http://www.naturalnews.com/036417_Glaxo_Merc…
+[9] http://www.naturalnews.com/046259_ebola_outb…
+[10] http://www.naturalnews.com/040400_gene_paten…
+[11] http://www.naturalnews.com/028492_BRCA1_huma…
+[12] http://www.thecommonsenseshow.com/2014/09/17…
+Stay updated with Abusidiqu.com, in partnership with NIGERIANEWSBEAT.  Follow us on TWITTER or be our fan on FACEBOOK
+Do not hesitate to leave your opinion in the comment section below.
+To contact Abusidiqu.com for Article Submission and Advertisement or General inquiry, send a mail to [email protected]
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */
+
+
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1024 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+                    if ( td_screen_width >= 768  && td_screen_width < 1024 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-2634832403669952" data-ad-slot="2084726930"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+
+
+
+
+
+SHARE
+
+Facebook
+Twitter
+
+
+tweet !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"); Previous article2015: Jonathan, PDP Governors Strike DealNext articleMy Country and the Abuse of American Dollar By Dele Momodu Editor  
+
+var block_td_uid_3_56c6125896fc5 = new tdBlock();
+block_td_uid_3_56c6125896fc5.id = "td_uid_3_56c6125896fc5";
+block_td_uid_3_56c6125896fc5.atts = '{"limit":3,"ajax_pagination":"next_prev","live_filter":"cur_post_same_tags","td_ajax_filter_type":"td_custom_related","class":"td_block_id_2266000941 td_uid_3_56c6125896fc5_rand","td_column_number":3,"live_filter_cur_post_id":43512,"live_filter_cur_post_author":"3"}';
+block_td_uid_3_56c6125896fc5.td_column_number = "3";
+block_td_uid_3_56c6125896fc5.block_type = "td_block_related_posts";
+block_td_uid_3_56c6125896fc5.post_count = "3";
+block_td_uid_3_56c6125896fc5.found_posts = "19579";
+block_td_uid_3_56c6125896fc5.header_color = "";
+block_td_uid_3_56c6125896fc5.ajax_pagination_infinite_stop = "";
+block_td_uid_3_56c6125896fc5.max_num_pages = "6527";
+tdBlocksArray.push(block_td_uid_3_56c6125896fc5);
+RELATED ARTICLESMORE FROM AUTHOR
+
+
+
+
+ NEWS 
+
+Buhari Appoints Tolu Ogunlesi Special Adviser On New Media 
+
+
+
+
+
+ PRESS RELEASE 
+
+Swearing In of Modu Sheriff Despite Damaging Allegation Says A Lot About PDP – APC UK 
+
+
+
+
+
+ OPINION 
+
+So, Is Every Chief A Thief? (2) By Simon Imobo-Tswam 
+
+  
+
+
+NO COMMENTS
+
+
+Leave a Reply Cancel reply
+
+
+
+
+
+
+
+
+
+
+RECEIVE OUR NEWS VIA EMAILEmail SubscriptionSubscribe 
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+POPULAR STORIES TODAY
+
+
+
+
+
+
+EFCC Reportedly Traces N1trillion Loot Linked to Jonathan's Wife 
+
+
+
+
+
+
+
+
+DSS Raids Ex-NSITF Chiarman, Ngozi Olejeme's Sons' Home, Finds $500,000 In Cash 
+
+
+
+
+
+
+
+
+Nigerian Soldiers Capture Boko Haram’s Deadliest Stronghold 
+
+
+
+
+
+
+
+
+EFCC To Quiz Sacked NTA DG For Diverting Broadcast Equipment To Float Own TV/Radio Station 
+
+
+
+
+
+
+
+
+Buhari Orders Mass Sackings At Budget Office 
+
+
+
+
+
+
+
+
+Presidency Explains Why Heads Of Govt Agencies Were Sacked 
+
+
+
+ 
+ 
+ 
+Like Us on Facebook 
+
+Like Us on Facebook
+
+(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=249643311490&version=v2.3'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk'));
+Archives Archives
+
+Select Month
+ February 2016  (304)
+ January 2016  (499)
+ December 2015  (541)
+ November 2015  (479)
+ October 2015  (490)
+ September 2015  (565)
+ August 2015  (616)
+ July 2015  (601)
+ June 2015  (583)
+ May 2015  (589)
+ April 2015  (539)
+ March 2015  (478)
+ February 2015  (551)
+ January 2015  (682)
+ December 2014  (714)
+ November 2014  (613)
+ October 2014  (685)
+ September 2014  (700)
+ August 2014  (646)
+ July 2014  (633)
+ June 2014  (649)
+ May 2014  (642)
+ April 2014  (509)
+ March 2014  (544)
+ February 2014  (371)
+ January 2014  (477)
+ December 2013  (367)
+ November 2013  (442)
+ October 2013  (443)
+ September 2013  (337)
+ August 2013  (396)
+ July 2013  (337)
+ June 2013  (288)
+ May 2013  (255)
+ April 2013  (232)
+ March 2013  (167)
+ February 2013  (116)
+ January 2013  (114)
+ December 2012  (44)
+ November 2012  (109)
+ October 2012  (194)
+ September 2012  (254)
+ August 2012  (275)
+ July 2012  (247)
+ June 2012  (120)
+ May 2012  (129)
+ April 2012  (12)
+ 0  (1)
+
+ 
+
+
+
+
+
+
+
+
+© All rights reserved, Abusidqu. Powered by Ughojor D.A 
+
+
+
+ABOUT US
+PRIVACY
+TERMS OF USE
+ADVERTISE
+WRITE FOR US
+CONTACT
+ 
+
+
+
+
+
+
+.widget_facebook_likebox{overflow:hidden;}
+
+
+
+
+
+
+    
+
+	
+
+		(function(){
+			var html_jquery_obj = jQuery('html');
+
+			if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+				var path = 'http://abusidiqu.com/wp-content/themes/Abusidiq/style.css';
+
+				jQuery.get(path, function(data) {
+
+					var str_split_separator = '#td_css_split_separator';
+					var arr_splits = data.split(str_split_separator);
+					var arr_length = arr_splits.length;
+
+					if (arr_length > 1) {
+
+						var dir_path = 'http://abusidiqu.com/wp-content/themes/Abusidiq';
+						var splited_css = '';
+
+						for (var i = 0; i < arr_length; i++) {
+							if (i > 0) {
+								arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+							}
+							//jQuery('head').append('<style>' + arr_splits[i] + '</style>');
+
+							var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+								return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+							});
+
+							splited_css += "<style>" + formated_str + "</style>";
+						}
+
+						var td_theme_css = jQuery('link#td-theme-css');
+
+						if (td_theme_css.length) {
+							td_theme_css.after(splited_css);
+						}
+					}
+				});
+			}
+		})();
+
+	
+	
+
+.td-header-border:before,.td-trending-now-title,.td_block_mega_menu .td_mega_menu_sub_cats .cur-sub-cat,.td-post-category:hover,.td-header-style-2 .td-header-sp-logo,.sf-menu ul .td-menu-item>a:hover,.sf-menu ul .sfHover>a,.sf-menu ul .current-menu-ancestor>a,.sf-menu ul .current-category-ancestor>a,.sf-menu ul .current-menu-item>a,.td-next-prev-wrap a:hover i,.page-nav .current,.widget_calendar tfoot a:hover,.td-footer-container .widget_search .wpb_button:hover,.td-scroll-up-visible,.dropcap,.td-category a,input[type="submit"]:hover,.td-post-small-box a:hover,.td-404-sub-sub-title a:hover,.td-rating-bar-wrap div,.td_top_authors .td-active .td-author-post-count,.td_top_authors .td-active .td-author-comments-count,.td_smart_list_3 .td-sml3-top-controls i:hover,.td_smart_list_3 .td-sml3-bottom-controls i:hover,.td-mobile-close a,.td_wrapper_video_playlist .td_video_controls_playlist_wrapper,.td-read-more a:hover,.td-login-wrap .btn,.td_display_err,.td-header-style-6 .td-top-menu-full,#bbpress-forums button:hover,#bbpress-forums .bbp-pagination .current,.bbp_widget_login .button:hover,.header-search-wrap .td-drop-down-search .btn:hover,.td-post-text-content .more-link-wrap:hover a,#buddypress div.item-list-tabs ul li>a span,#buddypress div.item-list-tabs ul li>a:hover span,#buddypress input[type=submit]:hover,#buddypress a.button:hover span,#buddypress div.item-list-tabs ul li.selected a span,#buddypress div.item-list-tabs ul li.current a span,#buddypress input[type=submit]:focus,.td-grid-style-3 .td-big-grid-post .td-module-thumb a:last-child:before,.td-grid-style-4 .td-big-grid-post .td-module-thumb a:last-child:before,.td-grid-style-5 .td-big-grid-post .td-module-thumb:after{background-color:#c90000;}@media (max-width: 767px) {.category .td-category a.td-current-sub-category{background-color:#c90000!important;}}.woocommerce .onsale,.woocommerce .woocommerce a.button:hover,.woocommerce-page .woocommerce .button:hover,.single-product .product .summary .cart .button:hover,.woocommerce .woocommerce .product a.button:hover,.woocommerce .product a.button:hover,.woocommerce .product #respond input#submit:hover,.woocommerce .checkout input#place_order:hover,.woocommerce .woocommerce.widget .button:hover,.woocommerce .woocommerce-message .button:hover,.woocommerce .woocommerce-error .button:hover,.woocommerce .woocommerce-info .button:hover,.woocommerce.widget .ui-slider .ui-slider-handle,.vc_btn-black:hover,.wpb_btn-black:hover,.item-list-tabs .feed:hover a{background-color:#c90000!important;}.top-header-menu a:hover,.top-header-menu .menu-item-has-children li a:hover,.td_module_wrap:hover .entry-title a,.td_mod_mega_menu:hover .entry-title a,.footer-email-wrap a,.widget a:hover,.td-footer-container .widget_calendar #today,.td-category-pulldown-filter a.td-pulldown-category-filter-link:hover,.td-load-more-wrap a:hover,.td-post-next-prev-content a:hover,.td-author-name a:hover,.td-author-url a:hover,.td_mod_related_posts:hover .entry-title a,.td-search-query,.top-header-menu .current-menu-item>a,.top-header-menu .current-menu-ancestor>a,.header-search-wrap .td-drop-down-search .result-msg a:hover,.td_top_authors .td-active .td-authors-name a,.td-mobile-content li a:hover,.post blockquote p,.td-post-content blockquote p,.page blockquote p,.comment-list cite a:hover,.comment-list cite:hover,.comment-list .comment-reply-link:hover,a,.white-menu #td-header-menu .sf-menu>li>a:hover,.white-menu #td-header-menu .sf-menu>.current-menu-ancestor>a,.white-menu #td-header-menu .sf-menu>.current-menu-item>a,.td-stack-classic-blog .td-post-text-content .more-link-wrap:hover a,.td_quote_on_blocks,#bbpress-forums .bbp-forum-freshness a:hover,#bbpress-forums .bbp-topic-freshness a:hover,#bbpress-forums .bbp-forums-list li a:hover,#bbpress-forums .bbp-forum-title:hover,#bbpress-forums .bbp-topic-permalink:hover,#bbpress-forums .bbp-topic-started-by a:hover,#bbpress-forums .bbp-topic-started-in a:hover,#bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,#bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,#bbpress-forums #subscription-toggle a:hover,#bbpress-forums #favorite-toggle a:hover,.widget_display_replies .bbp-author-name,.widget_display_topics .bbp-author-name,.td-category-siblings .td-subcat-dropdown a.td-current-sub-category,.td-category-siblings .td-subcat-dropdown a:hover,.td-pulldown-filter-display-option:hover,.td-pulldown-filter-display-option .td-pulldown-filter-link:hover,.td_normal_slide .td-wrapper-pulldown-filter .td-pulldown-filter-list a:hover,#buddypress ul.item-list li div.item-title a:hover,.td_block_13 .td-pulldown-filter-list a:hover{color:#c90000;}.td-stack-classic-blog .td-post-text-content .more-link-wrap:hover a{outline-color:#c90000;}.td-mega-menu .wpb_content_element li a:hover,.td_login_tab_focus{color:#c90000!important;}.td-next-prev-wrap a:hover i,.page-nav .current,.widget_tag_cloud a:hover,.post .td_quote_box,.page .td_quote_box,.td-login-panel-title,#bbpress-forums .bbp-pagination .current{border-color:#c90000;}.td_wrapper_video_playlist .td_video_currently_playing:after,.item-list-tabs .feed:hover{border-color:#c90000!important;}.td-pb-row [class*="td-pb-span"],.td-pb-border-top,.page-template-page-title-sidebar-php .td-page-content>.wpb_row:first-child,.td-post-sharing,.td-post-content,.td-post-next-prev,.author-box-wrap,.td-comments-title-wrap,.comment-list,.comment-respond,.td-post-template-5 header,.td-container,.wpb_content_element,.wpb_column,.wpb_row,.white-menu .td-header-style-1 .td-header-main-menu,.white-menu .td-header-style-2 .td-header-main-menu,.white-menu .td-header-style-3 .td-header-main-menu,.white-menu .td-header-style-4 .td-header-main-menu,.white-menu .td-header-style-5 .td-header-main-menu,.white-menu .td-header-style-6 .td-header-main-menu,.white-menu .td-header-style-7 .td-header-main-menu,.white-menu .td-header-style-8 .td-header-main-menu,.white-menu .td-header-style-9 .td-header-main-menu,.td-header-style-6 .td-header-container,.td-post-template-1 .td-post-content,.td-post-template-4 .td-post-sharing-top,.td-header-style-6 .td-header-header .td-make-full,#disqus_thread{border-color:#e6e6e6;}.td-top-border{border-color:#e6e6e6!important;}.td-container-border:after,.td-next-prev-separator{background-color:#e6e6e6;}@media (max-width: 767px) {.white-menu .td-header-main-menu{border-color:#e6e6e6;}}.td-header-top-menu,body .td-top-menu-full,.td-header-style-6 .td-top-menu-full{background-color:#222222;}.td-header-style-1 .td-header-sp-top-menu{padding-left:13px;top:0;}@media (min-width: 768px) and (max-width: 1023px) {.td-header-style-1 .td-header-sp-top-menu{margin-top:0;}}.td-header-style-1 .td_ul_logout{position:relative;right:7px;}.td-header-style-1 .td-header-sp-top-widget,.td-header-style-1 .td-top-menu-widget{right:3px;top:0;}@media (min-width: 768px) and (max-width: 1023px) {.td-header-style-1 .td-header-sp-top-widget,.td-header-style-1 .td-top-menu-widget{margin-top:0;}}.td-header-style-2 .td-header-sp-top-menu{padding-left:13px;padding-top:0;padding-bottom:0;}.td-header-style-2 .td-header-sp-top-widget{right:3px;padding-top:0;padding-bottom:0;}.td-header-style-2 .td_ul_logout{position:relative;right:7px;}.td-header-sp-top-menu .top-header-menu>li>a,.td-header-sp-top-menu .td-icon-logout,.td-header-sp-top-menu .td_data_time,.td-header-sp-top-menu .top-header-menu .menu-item .td_user_logd_in{color:#efefef;}.top-header-menu .menu-item-has-children li a{color:#d3d3d3;}.td-header-sp-top-widget .td-social-icon-wrap i{color:#f7f7f7;}.td-header-main-menu{background-color:#ffffff;}.sf-menu>li>a,.header-search-wrap .td-icon-search,#td-top-mobile-toggle i{color:#000000;}.td-header-border:before{background-color:#000000;}.td-sub-footer-container,.td-sub-footer-container a{color:#161616;}.td-sub-footer-container li a:before{background-color:#161616;}.post blockquote p,.page blockquote p{color:#c90000;}.post .td_quote_box,.page .td_quote_box{border-color:#c90000;}
+
+
+			var comm_par_el = document.getElementById( 'comment_parent' ),
+			    comm_par = (comm_par_el && comm_par_el.value) ? comm_par_el.value : '',
+			    frame = document.getElementById( 'jetpack_remote_comment' ),
+			    tellFrameNewParent;
+
+			tellFrameNewParent = function() {
+				if ( comm_par ) {
+					frame.src = "http://jetpack.wordpress.com/jetpack-comment/?blogid=37545965&postid=43512&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=wavatar&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=3.9.1&sig=eed497c5e9b68fafb08d7ccc8054f31a38ae3ef0#parent=http%3A%2F%2Fabusidiqu.com%2Fits-all-scripted-ebola-virus-is-a-biological-weapon-from-the-us-read-this-shocking-report%2F" + '&replytocom=' + parseInt( comm_par, 10 ).toString();
+				} else {
+					frame.src = "http://jetpack.wordpress.com/jetpack-comment/?blogid=37545965&postid=43512&comment_registration=0&require_name_email=1&stc_enabled=0&stb_enabled=0&show_avatars=1&avatar_default=wavatar&greeting=Leave+a+Reply&greeting_reply=Leave+a+Reply+to+%25s&color_scheme=light&lang=en-US&jetpack_version=3.9.1&sig=eed497c5e9b68fafb08d7ccc8054f31a38ae3ef0#parent=http%3A%2F%2Fabusidiqu.com%2Fits-all-scripted-ebola-virus-is-a-biological-weapon-from-the-us-read-this-shocking-report%2F";
+				}
+			};
+
+	
+			if ( 'undefined' !== typeof addComment ) {
+				addComment._Jetpack_moveForm = addComment.moveForm;
+
+				addComment.moveForm = function( commId, parentId, respondId, postId ) {
+					var returnValue = addComment._Jetpack_moveForm( commId, parentId, respondId, postId ), cancelClick, cancel;
+
+					if ( false === returnValue ) {
+						cancel = document.getElementById( 'cancel-comment-reply-link' );
+						cancelClick = cancel.onclick;
+						cancel.onclick = function() {
+							var cancelReturn = cancelClick.call( this );
+							if ( false !== cancelReturn ) {
+								return cancelReturn;
+							}
+
+							if ( !comm_par ) {
+								return cancelReturn;
+							}
+
+							comm_par = 0;
+
+							tellFrameNewParent();
+
+							return cancelReturn;
+						};
+					}
+
+					if ( comm_par == parentId ) {
+						return returnValue;
+					}
+
+					comm_par = parentId;
+
+					tellFrameNewParent();
+
+					return returnValue;
+				};
+			}
+
+	
+			if ( window.postMessage ) {
+				if ( document.addEventListener ) {
+					window.addEventListener( 'message', function( event ) {
+						if ( "http:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				} else if ( document.attachEvent ) {
+					window.attachEvent( 'message', function( event ) {
+						if ( "http:\/\/jetpack.wordpress.com" !== event.origin ) {
+							return;
+						}
+
+						jQuery( frame ).height( event.data );
+					} );
+				}
+			}
+		
+
+
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.9.1',blog:'37545965',post:'43512',tz:'1',srv:'abusidiqu.com'} ]);
+	_stq.push([ 'clickTrackerInit', '37545965', '43512' ]);
+
+
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+
+
+

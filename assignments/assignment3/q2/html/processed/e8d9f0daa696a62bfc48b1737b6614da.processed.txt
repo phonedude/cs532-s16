@@ -1,0 +1,242 @@
+https://www.empreendacomofacebook.com.br/Sistema/Game/loginfacebookinfo
+
+
+
+Empreenda com o Facebook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     var baseUrl = '/Sistema/';
+    
+
+
+
+
+Em caso de dúvidas, visite a nossa página de   perguntas frequentes  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+Jogue
+Jogue o Empreenda com o Facebook, criado em parceria como Sebrae.
+
+
+
+Aprenda
+Aprenda na prática a criar Páginas, anúncios e campanhas no Facebook.
+
+
+
+Empreenda
+Conquiste 9 estrelas e torne-se um “Mestre Empreendedor”!
+
+
+
+Ao clicar em Jogar agora, você concorda com nossos .  Termos e Condições: .
+
+
+            Jogar agora
+            
+
+
+
+
+
+
+
+
+
+
+
+
+×
+Termos e Condições:
+
+
+A) Regras do Jogo: 
+Você só poderá participar do Jogo em uma (01) oportunidade. Para se registrar no Jogo, você deverá informar o seu número de CPF. Um número de CPF não poderá ser utilizado para mais de um (01) registro no Jogo.
+B) Condições Gerais: 
+Sujeito a aprovação do anúncio conforme as Políticas de Publicidade do Facebook (https://www.facebook.com/ad_guidelines.php), registro válido no jogo e aceitação e cumprimento dos termos e Políticas do Facebook, disponível em https://www.facebook.com/policies.
+
+Facebook © 2015
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="text-center">
+                <img src="/Sistema/Content/imgs/preloader.gif">
+            </div>
+        
+
+        (function () {
+            var t, i, e, n = window, o = document, a = arguments, s = "script", r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"], c = function () {
+                var t, i = this;
+                for (i._e = [], t = 0; r.length > t; t++) (function (t) { i[t] = function () { return i._e.push([t].concat(Array.prototype.slice.call(arguments, 0))), i } })(r[t])
+            };
+            for (n._w = n._w || {}, t = 0; a.length > t; t++) n._w[a[t]] = n[a[t]] = n[a[t]] || new c;
+            i = o.createElement(s), i.async = 1, i.src = "//static.woopra.com/js/w.js", e = o.getElementsByTagName(s)[0], e.parentNode.insertBefore(i, e)
+        })("woopra");
+
+        woopra.config({
+            domain: window.location.hostname
+        });
+        woopra.track();
+    
+
+
+ (function () {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+             var fbds = document.createElement('script');
+             fbds.async = true;
+             fbds.src = '//connect.facebook.net/en_US/fbds.js';
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(fbds, s);
+             _fbq.loaded = true;
+            }
+         })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6018364482413', { 'value': '0.00', 'currency': 'USD' }]);
+         
+
+
+ (function () {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+             var fbds = document.createElement('script');
+             fbds.async = true;
+             fbds.src = '//connect.facebook.net/en_US/fbds.js';
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(fbds, s);
+             _fbq.loaded = true;
+         }
+         _fbq.push(['addPixelId', '1411882885720985']);
+        })();
+         window._fbq = window._fbq || [];
+         window._fbq.push(['track', 'PixelInitialized', {}]);
+     
+
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1504020516479039',
+                status: false,
+                cookie: true,
+                xfbml: true,
+                version: 'v2.4'
+            });
+
+        };
+        (function (d) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement('script');
+            js.id = id;
+            js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document));
+
+
+        function LoginInput() {
+            $('#logi-face .icon-spinner').show();
+            $('#logi-face .icon-stack').hide();
+            $('#logi-face').attr('disabled', 'disabled').removeAttr('onClick');
+            FB.login(function (response) {
+                FB.getLoginStatus(function (response) {
+                    if (response.status === 'connected') {
+                        $(".hdnIdFacebook").val(response.authResponse.userID);
+                        $(".hdnTokenFacebook").val(response.authResponse.accessToken);
+                        $(".hdnPermissoes").val(response.authResponse.grantedScopes);
+
+                        $.getJSON("https://graph.facebook.com/v2.4/me?fields=id%2Cname%2Cemail&access_token=" + "&access_token=" + $(".hdnTokenFacebook").val(),
+                            function (data) {
+                                $(".hdnEmail").val(data.email);
+                                $.ajax({
+                                    type: 'POST',
+                                    url: baseUrl + 'Game/CadastroFacebook',
+                                    dataType: 'json',
+                                    async: true,
+                                    data: {
+                                        nome: data.name,
+                                        email: data.email,
+                                        id: data.id,
+                                        origem: $(".hdnOrigem").val(),
+                                        token: $(".hdnTokenFacebook").val(),
+                                        trigger: $(".hdnTrigger").val(),
+                                        permissoes: $(".hdnPermissoes").val()
+                                    },
+                                    beforeSend: function () {
+                                    },
+                                    complete: function (retorno) {
+                                        if (retorno.responseJSON.Mensagem == 'acesso_ok') {
+                                            window.location.href = baseUrl + 'Game/?idUserFacebook=' + retorno.responseJSON.Token;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_face') {
+                                            window.location.href = baseUrl + 'Game/MensagemFacebook/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_face_extender') {
+                                            window.location.href = baseUrl + 'Game/MensagemFacebook/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_exception') {
+                                            window.location.href = baseUrl + 'Game/Mensagem/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_permissoes') {
+                                            window.location.href = baseUrl + 'Game/Mensagem/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_cupom_usuario') {
+                                            window.location.href = baseUrl + 'Game/Mensagem/?Nome=' + retorno.responseJSON.Nome;
+                                        }
+                                    }
+                                });
+                            });
+                    } else if (response.status === 'not_authorized') {
+                        window.location.href = baseUrl + 'Error/Http500';
+                    } else {
+                        window.location.href = baseUrl + 'Error/Http500';
+                    }
+                });
+            }, {
+                scope: 'publish_actions, email, manage_pages',
+                return_scopes: true
+            });
+            woopra.track("LoginClick", {
+                page: "LoginInfo"
+            });
+            fbq('track', 'CompleteRegistration');
+        }
+    
+

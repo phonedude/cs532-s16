@@ -1,0 +1,2674 @@
+http://www.telegraph.co.uk/culture/11102490/Billy-Connolly-interview-Robin-Williams-tried-to-say-goodbye-to-me.html
+
+
+
+
+
+
+        // <![CDATA[
+        for(var i = 0; i < optimizely["activeExperiments"].length; i++){
+            var expid = optimizely["activeExperiments"][i];
+            var experimentname = optimizely.data.experiments[expid].name;
+            var variationname = optimizely.variationNamesMap[expid];
+            optimizely.$("head").prepend("<meta name=\"DCSext.opt\" content=\"" + experimentname + "-" + variationname +"\" />");
+        }
+        // ]]>
+    
+
+           /* EPOCH time at the start of the page */
+
+           /*As IE8 doest support Date.now() functionality,using the diffrent one*/
+             if (!Date.now) {
+                    Date.now = function now() {
+                      return new Date().getTime();
+                   };
+              }
+
+              var pageStartTime = Date.now();
+
+
+Billy Connolly interview: 'Robin Williams tried to say goodbye to me' - Telegraph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var logo = function(param) {
+        document.onreadystatechange = function () {
+                if (document.readyState == "interactive") {
+                        document.getElementById("logo").src = param;
+                }
+        }
+}
+
+
+ logo("/template/ver1-0/i/thetelegraph_344.gif"); 
+
+
+
+
+
+
+
+        var tmgOptaCallback = function() {
+            //Add logic below that will be executed once the opta widget loads
+            $('.standings-container tr:even').addClass('odd'); //even rows for tables
+            $('.standings-container tr:odd').addClass('even'); //odd rows for tables
+         };
+
+        // <![CDATA[
+        var _optaCallbacks;
+
+        if (_optaParams) {
+            _optaCallbacks = _optaParams.callbacks;
+        }
+
+        if (_optaCallbacks) {
+            if( _optaCallbacks.indexOf(tmgOptaCallback) < 0) {
+            _optaCallbacks.push(tmgOptaCallback);
+            }
+        } else {
+            _optaCallbacks = [tmgOptaCallback];
+        }
+
+        var _optaParams = {
+            custID: 'ea84a6c1e3333c9d011be831766d51de',
+            anim:   'none',
+            language: 'en_GB',
+            timezone: 0,
+            callbacks: _optaCallbacks
+        };
+        // ]]>
+    
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+            var _optaCallbacks = _optaParams.callbacks;
+
+            if (_optaCallbacks) {
+                if (_optaCallbacks.indexOf(optaTeamLinkingCallback) < 0) {
+                    _optaCallbacks.push(optaTeamLinkingCallback);
+                }
+            } else {
+                _optaCallbacks = [optaTeamLinkingCallback];
+            }
+
+            _optaParams.callbacks = _optaCallbacks;
+        
+
+
+
+    jq1_11=$.noConflict(true);
+
+
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7226372-1']);
+    _gaq.push(['_setDomainName', 'telegraph.co.uk']);
+    jq1_11.scrollDepth();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.webtrendsAsyncInit=function(){
+    var dcs=new Webtrends.dcs().init({
+        dcsid:"dcsshgbi400000gscd62rrg43_4o2o",
+        domain:"webtrends.telegraph.co.uk",
+        timezone:0,
+        adimpressions:true,
+        adsparam:"WT.ac",
+        offsite:false,
+        download:true,
+        downloadtypes:"xls,doc,pdf,txt,csv,zip,docx,xlsx,rar,gzip",
+        metanames:"DCSext.MLC, DCSext.source, DCSext.Category, DCSext.Genre, DCSext.Channel, DCSext.imageNo, DCSext.GalleryType, DCSext.Content_Type, DCSext.Level, DCSext.author, DCSext.articleFirstPublished, DCSext.articleId, DCSext.productProvider, DCSext.productName, DCSext.EA_Search_Type, DCSext.EA_Search_Engine, DCSext.EA_Search_Phrase, DCSext.oss, DCSext.ossType, DCSext.cf, DCSext.cn, DCSext.cd, DCSext.pd,DCSext.cmsSect",        
+        fpcdom:".telegraph.co.uk",
+        plugins:{
+            hm:{src:"/template/ver1-0/js/asyncwebtrends/webtrends.hm.js",hmurlparams:"frame,image"},
+            qbert: { src:"/template/ver1-0/js/asyncwebtrends/qbert-wtplugin.js" }
+        }
+        });
+    if ($.cookie("tmg_subs") != null){
+    	var ts = $.parseJSON($.cookie("tmg_subs"));
+        dcs.DCSext.location = ts.location;
+    	dcs.DCSext.trialDescription =ts.trialDescription;
+	    dcs.DCSext.subscriptionType = ts.subscriptionType;
+	    dcs.DCSext.flowType = ts.flowType;
+	    dcs.DCSext.productType = ts.productType;
+	    dcs.DCSext.serviceId = ts.serviceId;
+	    dcs.DCSext.servicePriceId = ts.servicePriceId;
+	
+	    dcs.DCSext.discountVoucher = ts.discountVoucher;
+	    dcs.DCSext.partnerName = ts.partnerName;
+	    dcs.DCSext.currentPromoName = ts.currentPromoName;
+	    dcs.DCSext.sourcePromoName = ts.sourcePromoName;
+	    dcs.DCSext.promoType = ts.promoType;
+	    dcs.DCSext.tCode = ts.tCode;
+	    dcs.DCSext.status = ts.status == true  && ts.acquisitionCompleted == true ? 'Active':'Inactive';
+
+   }
+   //if( /Android|webOS|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { dcs.DCSext.platform="tablet";}    
+   //dcs.track();
+
+};
+(function(){
+    var s=document.createElement("script"); s.async=true; s.src="/template/ver1-0/js/asyncwebtrends/webtrends.js";
+    var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+}());
+
+
+
+//Events tracking for Google Analytics
+function trackGoogle() {
+try {var pageTracker = _gat._getTracker("UA-7226372-1");pageTracker._trackPageview();} catch(err) {}
+}
+
+//External links tracking through Google Analytics
+function isLinkExternal(link) {
+    var r = new RegExp('^https?://(?:www.)?' + location.host.replace(/^www./, ''));
+        return !r.test(link);
+}
+$(document).ready(function() {
+    $(document).bind('click', function(e) {
+        var target = (window.event) ? e.srcElement : e.target;
+        while (target) {
+            if (target.href) break;
+            target = target.parentNode;
+        }
+        if (!target || !isLinkExternal(target.href)) return true;
+        var link = target.href;
+        link = '/outgoing/' + link.replace(/:\/\//, '/');
+        _gaq.push(['_trackPageview', link]);
+    });
+});
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7226372-1']);
+  _gaq.push(['_setDomainName', 'telegraph.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+
+  var gs_channels="default";
+  // Last-updated: 2016-02-18 18:49:34.789
+// Status code: 0
+// Read timed out
+gs_channels="RETRY"; 
+
+
+    // <![CDATA[
+  var qcSegs = '';
+  var qcResults = function(qc){
+    for (var i=0;i<=qc.segments.length-1;i++){
+      if(qc.segments[i].id != 'D' && qc.segments[i].id != 'T') qcSegs += ';qc='+qc.segments[i].id;
+    }
+  }
+    // ]]>
+
+
+
+
+
+
+
+
+    document.domain = "telegraph.co.uk";
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+	var _comscore = _comscore || [];
+	_comscore.push({
+		c1 : "2",
+		c2 : "6035736"
+	});
+	(function() {
+		var s = document.createElement("script"), el = document
+				.getElementsByTagName("script")[0];
+		s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb"
+				: "http://b")
+				+ ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	})();
+
+
+
+
+
+
+
+
+
+
+		var subsInfo = new Object();
+		subsInfo.channel =  $('meta[name="DCSext.Channel"]').attr("content");
+		if(subsInfo.channel==undefined){subsInfo.channel='';}
+		subsInfo.mlc = $('meta[name="DCSext.MLC"]').attr("content");
+		if(subsInfo.mlc==undefined){subsInfo.mlc='';}
+		subsInfo.category = $('meta[name="DCSext.Category"]').attr("content");
+		if(subsInfo.category==undefined){subsInfo.category='';}
+		subsInfo.level = $('meta[name="DCSext.Level"]').attr("content");
+		if(subsInfo.level==undefined){subsInfo.level='';}
+		subsInfo.author = $('meta[name="DCSext.author"]').attr("content");
+		if(subsInfo.author==undefined){subsInfo.author='';}
+		subsInfo.content_type = $('meta[name="DCSext.Content_Type"]').attr("content");
+		if(subsInfo.content_type==undefined){subsInfo.content_type='';}
+		subsInfo.articleId = $('meta[name="DCSext.articleId"]').attr("content");
+		if(subsInfo.articleId==undefined){subsInfo.articleId='';}
+		var subsJson = JSON.stringify(subsInfo);
+		$.cookie("tmg_subs_referer",subsJson, { path: '/', domain: 'telegraph.co.uk'});
+		var inviteWTUrlSuffix='?channel='+ subsInfo.channel+'&mlc='+subsInfo.mlc+'&category='+ subsInfo.category+'&level='+subsInfo.level+'&author='+subsInfo.author+'&content_type='+subsInfo.content_type+'&articleId='+subsInfo.articleId;
+		
+		<!-- default inviteUrl value is UK-->
+		var inviteUrl = "" + '/subscriptions/invitation/';
+		
+		
+			
+				
+					var inviteUrl = "" + "/subscriptions/invitation-intl/";
+				
+			
+		
+		
+				
+				
+				
+			
+		var plink = "http://www.telegraph.co.uk/template/ver1-0/templates/fragments/common/toolBar-js.jsp";
+	
+
+
+
+
+
+
+Accessibility links
+
+Skip to article
+Skip to navigation
+
+
+
+
+
+
+Telegraph.co.uk
+
+
+
+
+
+
+
+
+
+                                        Search - enhanced by OpenText
+
+
+
+
+
+
+
+
+		Thursday 18 February 2016
+
+
+
+
+
+
+
+
+/* EPOCH time at the  end of Header */
+var tmgHeaderTimerEnd=Date.now();
+
+
+
+
+
+
+
+
+Home
+Video
+News
+World
+Sport
+Finance
+Comment
+Culture
+Travel
+Life
+Women
+Fashion
+Luxury
+Tech
+Cars
+Film
+TV
+
+
+
+
+
+
+
+
+
+
+Film
+TV and Radio
+Books
+Music
+Comedy
+Art
+Theatre
+Photography
+Dance
+Opera
+Hay Festival
+Glyndebourne
+
+
+
+
+Advertisement
+
+
+
+
+	document.write(tmgAdsBuildAdTag("ban", "970x250,970x90,940x250,728x90,468x60", "adj", "", 2));
+
+
+
+
+
+
+Home»
+Culture
+
+
+
+
+
+
+
+
+
+
+
+Billy Connolly interview: 'Robin Williams tried to say goodbye to me'
+
+At 71, Billy Connolly is as irrepressible as ever - no matter what life throws 
+  at him. He talks candidly about his dark childhood, illness, and the loss of 
+  his friend Robin Williams
+
+
+
+        .newGigyaShare { display: none !important; }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'I know lots of happy comedians': Billy Connolly Photo: CAMERA PRESS/Seamus Ryan
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+							By 
+											Chrissy Iley
+
+8:00AM BST 21 Sep 2014
+
+Follow
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+Comments
+
+ 
+
+
+ On the plane over to New York to meet Billy Connolly I watched his documentary series Billy’s Big Send Off about death and funerals, which he was making before he got diagnosed with Parkinson’s disease, deafness and prostate cancer. It happened all in the same week. He has now had the all-clear from cancer, wears tiny hearing aids, and the Parkinson’s is still there. It creeps along, he says. It’s the slow-developing sort.  We meet at Connolly’s management office in Chelsea. He is looking surprisingly chipper: embroidered shoes, a white dotty shirt, and interesting jewellery – skulls, and a giant beautiful ring with the half-elephant-half-man Hindu god Ganesh. His shaggy hair is slightly less shaggy. It was cut and dyed blond for a film (Wild Oats) where he plays Shirley MacLaine’s con-man toyboy. But more of that later.  Connolly is jovial, smiley, and extremely fresh faced. It would make a better story to say he was bravely battling his inner darkness but he doesn’t seem dark at all. I wondered if the series about death, the soon to be seen Who do You Think You Are? (Connolly is very moved by the story of an ancestor who was an alcoholic syphilitic soldier) meant he’d begun to think about his legacy? He shrugs: “No, it just appealed to me. I was attracted to Who do You Think You Are? because I saw that man who does very harsh political interviews on it and he cried on it.” Does he mean Jeremy Paxman? “Yes, Jeremy Paxman.”  There’s no sign of Connolly’s Parkinson’s. He doesn’t visibly shake or walk oddly but he sometimes forgets the names of people. He insists he had a really bad memory for things like that anyway.  He is soon to be in a very sweet and funny movie from the makers of Outnumbered, What We Did on Our Holiday, in which he plays a dying grandfather swarming with little children who adore him and who believe he has Viking heritage. “I die in almost every movie I’m in,” he says. “My children are sick of it. And then I did the documentary about the business of death. I think it’s just my age.” 
+Related Articles
+
+
+
+Billy Connolly: 34 great quotes
+
+24 Jan 2016
+
+
+
+Billy Connolly: the day I learnt I had cancer and Parkinson's disease
+
+29 Apr 2014
+
+
+
+Robin Williams: 'a lightning ball of nervous comic energy'
+
+12 Aug 2014
+
+
+
+Jacqueline Bissett: 'I’m just getting to grips with my talent’
+
+22 Sep 2014
+
+
+
+Billy Connolly: 'mellower, frailer - better?'
+
+30 Sep 2014
+
+
+
+ Was he trying to prepare himself by embracing death to confront it and somehow take away the fear? “No, no, no, not at all. I had the idea long before the diagnosis. I like graveyards. All these years I’ve been on the road I’d often find myself in graveyards reading some of the stones. There are lots of lovely poems. It’s very entertaining. It’s changing. You get a lot of Teddy Bear gravestones now for kids. Then you get Forever Young, and they’re usually the junkies.”  He’s very matter of fact about it. In What we did on Our Holiday we see his character grasp the frailty of life, rebelling against taking his heart pills. After the incredible week of diagnoses over a year ago, he must have been floored. I heard he had to be talked back into ever working again.  “That’s right. I kind of stopped. It wasn’t shock, it was bewilderment. It’s a lot to take in in one week. I’ve got my hearing aids in, look.” I do look behind a luxuriant curl and see the small hearing aid. “I was disappointed in myself because I’ve always said if a doctor tells me I’ve got cancer the first thing I’m going to do is get 20 fags and start smoking again. I didn’t. It never crossed my mind to start drinking again either.”  Connolly hasn’t had a drink in 30 years, since he met his wife, former Not the Nine O’Clock News comedian turned psychologist, New Zealand-born Pamela Stephenson. He became a lot less wild and a lot more gentle. “When I got the diagnosis I felt like everything was being snatched away, that I was being tested by some sadist.”   Instead of working less, he worked more. This year, as well as What We Did on Our Holiday, he will have the third Hobbit film coming out and later this month will embark on a stand-up tour of Scotland. He says it’s not in defiance: “It just happened that way.”  He has lived in New York for eight years, and before that he had a house in Los Angeles. When he moved he didn’t bring any of the furniture with him. He doesn’t believe in getting attached to pieces of furniture; it’s the Buddhist in him. “I do get attached to some things; my instruments. I suppose there might be a chair or two that I miss. I have another house in Gozo, a wee island off Malta. There might be a jacket I miss and then I’ll remember it’s in another house.”  He also says, “If you are on the road too long you become a fanatic for your shoes because you can only take three pairs with you, otherwise you have to be Arnold Schwarzenegger to carry your bag through the airport, so you begin to miss all your shoes.  “I will tour Scotland, England and Wales, and Ireland separately. Otherwise it will begin to feel that you were born on the road. After you’ve been three months on the road you feel there’s no sense in putting yourself through that and schlepping all this stuff around. You miss various shirts as well.”  Does he miss Pamela too? “Yes. She’s in Australia just now. She is directing a show she’s written about a Brazilian dance called Brazouka.”  Stephenson became obsessed with dance after her appearance in 2010 on Strictly Come Dancing. Does he ever dance with her? “I can tango. Or at least I try my very best and I can do Scottish dancing, various little reels. There’s nothing better than having all my friends over and dancing. “When we had the house in Scotland, which we sold this year, there used to be a huge living room and friends from America and various pals would all have a big dance on a Sunday night. I’d get the local band in. And there’s nothing better than seeing American Jewish guys in kilts. It’s very good for you.  He also loves to go trout fishing. “I don’t kill them or eat them unless we’re camping. I just like the fishing. My son Jamie is a better fisherman than me. I used to do a show called Fly Fishing the World, and one time I asked if I could bring Jamie along. They interviewed him and asked how is it fishing with your dad? And he said, ‘Everyone should fish with their dad because fishing takes such a long time, the daddy stuff is good for about an hour and after that you have to really talk to each other, so I got to know my father quite well.’”  Connolly is beaming from ear to ear as he says this. Was he not close to his children growing up? “I was, but I was like every other dad, out at work, because that’s your duty. I get tired of all these people saying I missed the kids growing up because I was working. Well, that’s your function. Whether you’re hunting deer in an African village, planting wheat on a farm somewhere, you’re the dad, you go out to work.”  He has two children, Jamie and Cara, from his first marriage to Iris Pressagh (from 1969 to 1985). While they were growing up, he was constantly on tour. First with his folk band the Humblebums with Gerry Rafferty, and then as a comedian. Does he regret being away so much? “No. Well. No. It’s foolish to regret anything. I learnt the past doesn’t exist. Once you get that into your head you can stop carrying that burden, especially if you’ve come through something bad, some kind of abuse situation or something like that.  “You’ll see people on talk shows, some mother with a child, saying to the host he has ruined her life. And that would be embedded into the child’s mind. But it’s not like that. I might come from a dark place but that doesn’t make me dark.”   Pamela Stephenson and Billy Connolly in 1982 (Alan Davidson/ The Picture Library Ltd)  His mother left home when he was three years old, abandoning him to be looked after by his two aunts Mona and Margaret, who mostly humiliated him. His father abused him, as was revealed in Stephenson’s biography of her husband. Yet he bears no malice, no flicker of pain, not even a hint of anxiety.  Did he not miss his mother when she left him in the hands of his two almost fairy-tale-like wicked stepmothers? “Aye, well, if you’re truthful to yourself you don’t remember anyway. I miss the vague shadowy memory of this woman. I met her again when I was older and I thought if you loved your mother automatically you would know. There was no automatic. I suppose you’d have to work at it like everything else. I was in her home town. She was always there.  “You can make these judgments from a distance, but you have to understand my mother was a teenager when she had me and there was a war on. My father was away in India and she was a teenager living in a slum with two small kids. Give her a break. From the outside it’s easy to say good, bad, black, white. But it wasn’t like that. You have to understand the class they came from, the religion they came from. This hugely complex thing that this teenager was trying to deal with.”  Were the aunts ever kind to him? “Sometimes. They had their moments.” Was one nicer than the other? “Yes. One was bullied by the other. They were like Whatever Happened to Baby Jane?”  And his father came back from the war and became sexually abusive? “Yes,” he says. And there’s a silence which isn’t really a sticky or emotional silence, it’s indicative of his desire not to dwell on it. “There were loads of guys like me,” he continues. “You only hear from the ones who get hold of the microphone. You have to put it behind you. You don’t have any choice. If you don’t, you are condemned to be defined by it and carry it around like a big rucksack full of rocks. Nobody tells you, you can put it down and walk away, but you can.”  Does he forgive his father? He looks at me as if there was nothing to forgive. “He was a very generous, nice guy. A big lonely man. We used to sail a wee yacht on Victoria Park. Push it into the pond and sail it about. He’d take me to the Barras Market, which was like a kasbah. He bought me my first country and western record, by Slim Whitman. It was called Dear Mary. He thought it was a holy one, a hymn to Mary Mother of God, but it wasn’t.” And he starts to sing Dear Mary. It’s a plaintive, sad, lonesome country song.  Was his father nice and abusive at the same time? “Yes.” Was he a drinker? “Yes.” Does he think that’s why? “I try not to lean on that. I don’t want it to define me.” Perhaps that’s what attracted him to Who do You Think You Are? He wanted to find other things to define him, or feeling his age more than he lets on, he needed to know where he came from in order to know where he was going to.  Connolly’s Wild Oats co-star MacLaine is a big believer in past lives. Did they talk about that on set? “Oh she’s very smart with all that stuff, but a space cadet. We talked a lot about sex. We talked a lot about everything.” Demi Moore is also in the movie. “She is an absolute delight,” he says. “We were mates. In the way that women feel OK with gay guys you can do that as a straight guy when you are 71.”  His complexion is flawless – he doesn’t look 71. “I don’t behave 71 and I don’t have 71-year-old friends, although I’ve noticed some changes recently like some mornings I have to get up and stretch and it didn’t use to be like that.” Does that make him think of his various illnesses? “The cancer is OK. They took out the prostate gland. I have got no sperm but sex is OK. Everything is fine. You just have an orgasm but nothing happens. Nobody has to sit in a damp patch.  “The Parkinson’s, I feel the effect of it every day. Sometimes I can’t play my banjo as well as I used to because my left hand doesn’t move as well as it did. It’s better when I’m in a hurry because I’m less aware of it, but I refuse to be defined by it. I just get on with life despite this being another bump in the road.”  I wonder why his tour is only Scotland. We're speaking before the result of the referendum is known, so I wonder: is it a statement about Scottish independence? “I made the decision ages ago never to speak about Scottish independence during this referendum,” he says carefully. “I don’t want to be one of these showbusiness guys telling people how to vote. It’s too important for anyone in showbusiness to put their oar in. I have a much bigger regard for the Scottish people than that. It’s not Mel Gibson with stories of ‘Freedom!’ ” He mocks the movie Braveheart. “No matter how it goes the government could be the same f------ carpetbaggers.”  With that he asks for another cup of tea to draw a line under the subject. Does he talk to his wife every day? “No. We just talk from time to time.” He says he enjoys being separate and then being together again.  Did he find it weird that she wrote his biography? “No, it was lovely. Very easy. We would just lay in bed in the dark and she would ask me impertinent questions and I would talk. I would always joke around and say, ‘Be nice to me. I’ve got abandonment issues.’ ”  Is that because all comedians are essentially dark? There’s always tears in the clowning? “That sort of thing is mostly said by dull people who would like that to be the truth. I know plenty of happy comedians.” Really, who? “I was going to say Robin Williams.” We both laugh. “He was my pal. He was not always depressed. He was a complicated man, but a beautiful person. He was a joy.”   Billy Connolly with Robin Williams in Aberdeenshire, 2000 (PacificCoastNews)  He gets out his phone and shows me a plethora of Robin Williams photos. In the first one he looks very sad. “No, he’s tired because he’s just come to Scotland and he’s knackered. Look at this one.” He shows me a happier one where they are embracing each other and another where he is wearing a kilt. 
+
+
+tmgAds.embedPlayer = tmgAds.embedPlayer || {};
+tmgAds.embedPlayer = {width:460,height:258,size:'460x258',vidSize:'620x415'};
+if(typeof(tmgAds.page.platform) != 'undefined' && tmgAds.page.platform === "mobile") tmgAds.embedPlayer = {width:300,height:169,size:'300x169',vidSize:'300x235'};
+tmgAds.embedPlayer = {
+  'targetId'     : 'embedPlayerWrapper',
+  'platform'     : tmgAds.page.platform,
+  'width'        : tmgAds.embedPlayer.width,
+  'height'       : tmgAds.embedPlayer.height,
+  'size'         : tmgAds.embedPlayer.size,
+  'autoplay'     : 'false',
+  'vidEmbed'     : 'htYzFsbzpWIstPdohnwohF_f76OkE1Hf',
+  'adTag'        : tmgAdsBuildAdTag("vid",tmgAds.embedPlayer.vidSize,"pfadx",";vidsrc=tmg;vt=embed;dcmt=text/xml",3)
+}
+tmgAds.embedPlayer.remotesrc = 'http://s.telegraph.co.uk/tmgads/tools/ooyala/iframeplayer.html?platform='+tmgAds.page.platform+'&width='+tmgAds.embedPlayer.width+'&height='+tmgAds.embedPlayer.height+'&size='+tmgAds.embedPlayer.size+'&vidEmbed='+tmgAds.embedPlayer.vidEmbed+'&adTag='+encodeURIComponent(tmgAds.embedPlayer.adTag);
+tmgAds.embedPlayer.tmgEmbedPlayer = '<iframe src="'+tmgAds.embedPlayer.remotesrc+'&adobeDTM=live" width="'+tmgAds.embedPlayer.width+'" height="'+tmgAds.embedPlayer.height+'" marginheight="0" marginwidth="0" scrolling="no" frameborder="0"></iframe>';
+document.write(tmgAds.embedPlayer.tmgEmbedPlayer);
+
+ “We used to talk about Parkinson’s a lot. He would call me and we would compare notes. His was early onset, the same as mine. Everybody worries about it. It’s like a mugger following you around.  “We told each other we loved each other. I told him and he told me many times.”  Does he think people stopped telling him they loved him? That they assumed he knew he was loved and he didn’t? “I never stopped it and he never stopped telling me. As a matter of fact, I thought afterwards he tried to say goodbye to me, because he got very luvvie towards the end. It’s fanciful but that’s what I told myself. On the last phone call he said, ‘I love you like a brother’ and I said, ‘I know you do’ and he said, ‘Are you sure you know?’ and I said, ‘Yes’. Robin worried about everything.” And it doesn’t seem that Connolly worries about much. “It’s an act,” he says and suddenly gurgles with laughter so you’ve no idea if it is or it isn’t.  For all his lack of attachment to things, his phone seems to store his entire life. He carries around with him a lot of dead people, pictures of Alex Harvey, the Scottish rock star. As well as pictures of all his children, quite a lot of babies, and his daughter’s poodle.  He also has photographs of his drawings. There’s one called Wee Purple Flower, which is purple with horns coming out of it. Some of the drawings are cartoonish, others are spooky.  There are several of people blindfolded, others where they have their entire heads bandaged like a mummy. There’s one where it looks like a woman is knitting, or maybe eating with giant chopsticks: “Maybe she’s drumming. I really don’t know.” He refuses to analyse them as he moves on to show me pictures of all his children.  “I miss the clatter of children about the house. I miss the mess and the shouting and bawling. ‘He’s got my thing. No he hasn’t.’ I miss all of that.”  His first wife Iris died “four or five years ago. We were in the right place. We were nice to one another. I never fell out with her. It was just over.  “I met Pamela and people who are in love don’t fall in love with other people. It’s a complex thing. It’s good to be in a loving relationship. Pamela and I are often not together because we are completely relaxed with each other.  “Sometimes I dream that I am drunk. I think alcoholics call it a wet dream. I haven’t had a drink for 30 years. And in my dreams I always go: ‘Pamela will be so disappointed with me.’ In my dreams I’m always staggering around trying to get home or drowning. Drowning is about sex I think. I think it’s a reminder that I’m alive.”  What We Did on Our Holiday is released on September 26. Billy's Who Do You Think You Are? will be shown on BBC One, October 2; Billy's tour begins on September 29, in Aberdeen. See billyconnolly.com  - Billy Connolly: 30 great quotes - 100 funny jokes by 100 comedians 
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+ 
+
+
+
+
+    #newGigyaShareSide { display: none !important; }
+
+
+ 
+
+
+
+
+
+
+Culture
+
+
+
+
+
+News »
+
+
+Celebrity news »
+
+
+Culture News »
+
+
+Film »
+
+
+Stars and Stories »
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .newGigyaShare { display: none !important; }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Top Galleries
+
+
+
+
+
+Grace Kelly: her amazing life in pictures
+
+
+
+
+ 
+
+
+ Film 
+
+
+In pictures: the extraordinary life and career of Grace Kelly, film 
+  star and princess
+
+
+
+
+
+
+100 funny jokes by 100 comedians
+
+
+
+
+ 
+
+
+ Comedy
+
+
+One hundred whip-smart wisecracks
+
+
+
+
+
+
+World Press Photo Contest
+
+
+
+
+ 
+
+
+
+
+Winners and runners-up announced in the annual photography competition 
+
+
+
+
+
+
+NME Awards 2016
+
+
+
+
+ 
+
+
+
+
+Highlights from the ceremony in Brixton 
+
+
+
+
+
+
+Little people in surreal scenarios
+
+
+
+
+ 
+
+
+
+
+In pics: Scottish artist David Gilliver creates a strange world of 
+  little people
+
+
+
+
+
+
+Hits, misses and nakedness on the Grammys red carpet
+
+
+
+
+ 
+
+
+
+
+Check out the best looks and the frock horrors from the 58th Annual Grammy 
+  Awards red carpet 
+
+
+
+
+
+
+The Voice UK 2016: who's through so far?
+
+
+
+
+ 
+
+
+ The Voice
+
+
+Take a look at the acts that have made it through the blind auditions stage so 
+  far
+
+
+
+
+
+
+Extreme cosplay bodypainting
+
+
+
+
+ 
+
+
+
+
+In pics: Artist Kay Pike transforms herself into comic characters and 
+  superheroes 
+
+
+
+
+
+
+Baftas 2016 ceremony highlights
+
+
+
+
+ 
+
+
+ Baftas
+
+
+In pics: The best photographs from the 2016 Bafta film awards, hosted 
+  by Stephen Fry 
+
+
+
+
+
+
+100 funny jokes by 100 comedians
+
+
+
+
+ 
+
+
+ Comedy
+
+
+One hundred whip-smart wisecracks 
+
+
+
+
+
+
+
+
+
+Advertisement
+
+		<!--
+			google_ad_client = 'ca-telegraph_uk_300x250';
+			google_ad_channel = 'culture';
+			google_max_num_ads = '3';
+			google_ad_output="js";
+			google_ad_type="text";
+			google_language="en";
+			google_encoding="utf8";
+			google_safe="high";
+			
+			
+			
+							google_hints="culture";
+												
+		// -->
+		
+
+
+
+
+
+
+
+
+
+
+
+How we moderate
+
+telegraphuk
+
+
+		var disqus_title = "Billy Connolly interview: 'Robin Williams tried to say goodbye to me'";
+		var disqus_identifier = "11102490";
+		var disqus_developer = 1;
+		
+Please enable JavaScript to view the comments powered by Disqus.
+blog comments powered by Disqus
+
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+
+     /* EPOCH time at the start of MPU Ad */
+     var mpuAdTimerStart = Date.now();
+  
+Advertisement
+
+
+
+	document.write(tmgAdsBuildAdTag("mpu", "300x250,300x600", "adj", "", 2));
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+100 funny jokes by 100 comedians
+
+
+
+
+
+
+
+
+ 
+
+
+80 great quotes about love and romance
+
+
+
+
+
+
+
+
+ 
+
+
+The best British political insults
+
+
+
+
+
+
+
+
+ 
+
+
+The Simpsons: 40 best quotations
+
+
+
+
+
+
+
+
+ 
+
+
+30 great one-liners
+
+
+
+
+
+
+
+
+ 
+
+
+A history of the world in funny puns
+
+
+
+ 
+
+
+
+Culture Video»
+
+
+
+
+
+
+
+
+
+
+Fry sparks outrage with 'bag lady' comment
+
+
+
+
+
+
+
+
+
+
+
+Bafta highlights: Leo, Kate and the kiss cam
+
+
+
+
+
+
+
+
+
+
+
+Rebel Wilson calls Oscars 'racist'
+
+
+
+
+
+
+
+
+
+
+
+Nick Grimshaw defends Mason Noise
+
+
+
+
+
+
+
+
+ 
+
+
+Listen: The Fratellis: Eyes Wide, Tongue Tied - album stream
+
+
+
+
+
+
+
+
+
+
+
+Glyndebourne presents: Poliuto
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+More from the web
+
+
+
+
+
+
+
+
+
+
+     /* EPOCH time at the start of skyscraper Ad */
+     var startOfSkyscraper = Date.now();
+  
+Advertisement
+
+
+
+	document.write(tmgAdsBuildAdTag("hpg,sks,skl", "300x600,120x600,160x600", "adj", "", 2));
+
+
+
+Advertisement
+
+
+
+
+	document.write(tmgAdsBuildAdTag("yell", "300x150", "adj", "", 2));
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+More from the web 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				var expandMostCommentedArticles = false;
+				var expandMostSharedArticles = false;
+				var expandMostViewedArticlesTab = true;
+				var mostCommentedAccordionValue = 0;
+				var mostSharedAccordionValue = 1;
+				var mostViewedAccordionValue = 2;
+			
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+LISTS AND QUOTES
+
+
+
+
+
+
+ 
+
+
+80 great quotes about love and romance
+
+
+Books
+
+
+In Pictures - the story of love and romance: from Adam and Eve to 
+  Tinder and Chemsex. Compiled by Martin Chilton
+
+
+
+
+
+
+
+
+David Bowie, 1947-2016: his life in pictures
+
+
+
+
+
+
+
+
+
+The best TV detectives and sleuths
+
+
+
+
+
+
+
+
+
+ 
+
+
+30 great opening lines in literature
+
+
+
+
+
+
+
+
+ 
+
+
+30 great one-liners
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+More from the web
+
+
+
+
+
+
+
+
+ 
+					(function() { 
+			        var outbrainScriptTag = document.createElement('script'); 
+			        outbrainScriptTag.type = 'text/javascript'; 
+			        outbrainScriptTag.async = true; 
+			        outbrainScriptTag.id = "outbrain"; 
+			        outbrainScriptTag.src = 'http://widgets.outbrain.com/outbrain.js' ; 
+			        var s = document.getElementsByTagName('script')[0]; 
+			        s.parentNode.insertBefore(outbrainScriptTag, s); 
+					})(); 
+					
+
+
+                /* EPOCH time at the end of right hand column */
+                 var rightHandTimer=Date.now();
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+				US News
+
+
+
+
+ 
+
+
+
+
+                                Latest and breaking stories from the United States
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Film
+
+
+
+
+ 
+
+
+
+
+                                All the latest film trailers, reviews and features
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Barnebys
+
+
+
+
+ 
+
+
+
+
+                                The women behind the supercar industry
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Diesel Performance
+
+
+
+
+ 
+
+
+
+
+                                The innovative Shell V-Power Nitro+ Diesel
+
+
+
+                                View
+
+
+
+
+
+
+
+
+
+
+
+
+/* EPOCH time at the end of content Area */
+                var contentEndTimer = Date.now();
+
+Back to top
+
+
+
+
+HOME
+Film
+Film Reviews
+Film News
+
+Books
+
+Book Reviews
+Book Shop
+
+ 
+Music
+Music Reviews
+Classical Music
+Music Video
+
+Music Festivals
+
+Opera
+Tickets
+
+ 
+TV and Radio
+TV Guide
+Theatre
+Theatre Reviews
+
+Art
+
+Dance
+Dating
+
+ 
+Culture News
+Picture Galleries
+Culture Video
+Culture Critics
+
+Photography
+
+Crossword
+Theatre Tickets
+
+ 
+Contact us
+Privacy and Cookies
+Advertising
+Fantasy Football
+
+
+Announcements
+Reader Prints
+
+
+
+
+
+
+Follow Us
+Apps
+Epaper
+Expat
+
+
+Promotions
+Subscriber
+Syndication
+
+
+
+ 
+
+© Copyright of Telegraph Media Group Limited 2016
+Terms and Conditions 
+Today's News
+Archive
+Style Book
+Weather Forecast
+
+
+ 
+
+/* EPOCH time at the end of footer */
+                var footerEndTimer = Date.now();
+
+
+
+    g_opt_ch = '{}';g_opt_cv = '{}';g_opt_b = true;g_opt_s = true;
+
+var platforme = 'Facebook,Twitter,Pinterest,LinkedIn,Share,Email';
+
+
+    var s = document.createElement('script');
+    s.type='text/javascript';
+    s.src = "http://cdn.gigya.com/js/gigya.js?apikey=2_ASmwJuFXoCCY8YP8uB6mzZphj_UToZbQkeeM6bMOA8swtMk2P3Rwu2WSger_DOSt";
+    document.getElementsByTagName('head')[0].appendChild(s);
+
+    function onGigyaServiceReady(e) {
+        var s = document.createElement('script');
+        s.type='text/javascript';
+        s.src = "/template/ver1-0/js/shareTools1.js";
+        document.getElementsByTagName('head')[0].appendChild(s);
+	 	gigya.socialize.getProviderShareCounts({URL: 'www.telegraph.co.uk', callback:gigyaShareCountDisplay, context:{displayElementId:'shareCountId'} });
+	}
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+			(function() {
+				var links = $("a[href*='disqus_thread']");
+				var query = "";
+				var blogQuery = "";
+				var normal = new Array();
+				var normalCounts = new Array();
+				var blog = new Array();
+				var blogCounts = new Array();
+
+				for(var i = 0; i < links.length; i++) {
+					if (links[i].getAttribute('dsqid')) {
+						var dsqid = links[i].getAttribute('dsqid');
+						if (links[i].className == 'dsqblog') { blogQuery += 'dsqid' + i + '=' + dsqid + '&'; } else { query += 'dsqid' + i + '=' + dsqid + '&'; }
+					}
+				}
+				if (query.length != "" && blogQuery.length != "") {
+					$("a[href*='disqus_thread']") && $("a.dsqblog").each(function(i) {
+						blog[i] = $(this).attr("href");
+						$(this).attr("href","blog_link");
+					});
+					loadScript("http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?" + query, function() {
+						$("a[href*='disqus_thread']").not(".dsqblog").each(function(i) {
+							normal[i] = $(this).attr("href");
+							normalCounts[i] = $(this).html();
+							$(this).attr("href","normal_link");
+						});
+
+						$("a[href*='blog_link']").each(function(i) { $(this).attr("href",blog[i]); });
+
+						loadScript("http://telegraphblogs.disqus.com/get_num_replies_from_dsqid.js?" + blogQuery, function() {
+							$("a[href*='normal_link']").each(function(i) { $(this).attr("href",normal[i]); });
+						});
+					});
+				} else {
+					document.write('<script charset="utf-8" type="text/javascript" src="http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?' + query + '"></' + 'script>');
+				}
+			})();
+		
+
+
+
+
+		var _sf_async_config={uid:22437,domain:"telegraph.co.uk"};
+
+		
+			_sf_async_config.sections = "News, Celebrity news, Culture, Culture News, Film, Stars and Stories, Comedy, TV and Radio, Film news, Mobile, Chrissy Iley, In depth";
+		
+			_sf_async_config.authors = "Chrissy Iley";
+		
+
+		(function(){
+			function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			(("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://") +
+			"static.chartbeat.com/js/chartbeat.js"); document.body.appendChild(e);
+		}
+		var oldonload = window.onload;
+		window.onload = (typeof window.onload != 'function') ?
+		loadChartbeat : function() { oldonload(); loadChartbeat(); }; })();
+	
+ 
+			var skimlinks_script = document.createElement('script'); 
+			    skimlinks_script.type = 'text/javascript'; 
+			    skimlinks_script.async = 'true';
+			    skimlinks_script.src = 'http://s.skimresources.com/js/296X678.skimlinks.js';
+			var skimlinks_script_attach = document.getElementsByTagName('script')[0]; 
+			skimlinks_script_attach.parentNode.insertBefore(skimlinks_script, skimlinks_script_attach.nextSibling); 
+		
+
+
+
+
+
+			 var pvar = { cid: "uk-101665h", content: "0", server: "secure-uk" };
+			 var feat = { surveys_enabled: 1 };
+			 var trac = nol_t(pvar, feat);
+			 trac.record().post().do_sample();
+		
+
+
+
+
+
+
+
+
+	document.write(tmgAdsBuildAdTag("inr", "1x1", "adj", "", 2));
+	document.write(tmgAdsBuildAdTag("tmg", "1x1", "adj", "", 2));
+	document.write(tmgAdsBuildAdTag("ftr", "1x1", "adj", "", 2));
+_satellite.pageBottom();
+
+
+    if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+
+        /*
+         Read Next Widget Data
+         */
+        var readNextArticleList = []
+;
+        var readNextCurrentArticleId = "11102490";
+
+        /*
+         Read Next Widget
+         */
+        var readNextWidget = (function(){
+
+            var settings = {
+                articleImage: "",
+                articleTitle: "",
+                articleUrl: "#",
+                articleId: "",
+                currentArticleId: "",
+                articleList: [],
+                articleListToSkip: [],
+                readNextCookieName: "tmg_read_next",
+                openButton: "#readNextOpen a",
+                closeButton: "#closeBtn a",
+                articleContainer: "#readNextArticleContainer",
+                widgetContainer: "#readNextWidget",
+                displayThumbnail: false,
+                panelOpen: false,
+                autoOpen: true
+            };
+
+            var renderTemplate = function() {
+                var template = '<div id="readNextWidget" style="display:none">' +
+                        '<div id="readNextOpen"><div class="topBar"></div><div id="readNextOpenInner"><a href="' + settings.articleUrl + '"><span>Next Story</span><span class="icn"></span></a></div></div>' +
+                        '<div id="readNextArticleContainer" style="display:none">' +
+                        '<div id="nextArticle"><div class="topBar"></div>' +
+                        '<div id="nextArticleWrapper">'+
+                        '<div id="nextArticleInnerWrapper">'+
+                        '<p id="readNextLabel">MOST VIEWED IN NEWS</p>';
+                        
+				if(settings.articleImage && settings.articleImage!="null" && settings.displayThumbnail){
+					template = template + '<a id="nextPageThumbnail" href="' + settings.articleUrl + '"><img src="'+ settings.articleImage +'"/></a>';
+				}
+                        
+				template = template + '<a id="nextPageTitle" href="' + settings.articleUrl + '"><span>' + settings.articleTitle + '</span></a></div></div>' +
+                        '</div>' +
+                        '<div id="closeBtn"><div class="topBar"></div><a href="#"><span></span></a></div>' +
+                        '</div>' +
+                        '<iframe style="border:none;position:absolute;top:0;left:0; height:100%;width:100%;z-index:-1;" id="iefix" src="about:blank"></iframe>' + //fix for IE bug
+                        '</div>';
+                return template;
+            };
+
+
+            var init = function(currentArticleId, articleList, displayThumbnail) {
+
+                settings.articleList = articleList;
+                settings.currentArticleId = currentArticleId;
+                settings.displayThumbnail = displayThumbnail;
+
+                settings.articleListToSkip = unescape($.cookie(settings.readNextCookieName)).split(',');
+
+                if ($.cookie(settings.readNextCookieName) != null) {
+                    chooseNextArticle(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                    updateCookieBasedOnArticleList(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                } else {
+                    chooseNextArticle(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                    createCookieBasedOnArticleList(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                }
+
+
+                if (settings.articleId != "") {
+
+                    $(renderTemplate()).appendTo("body");
+
+                    $("#nextArticleWrapper a, #readNextOpenInner a").click(function () {
+                        _gaq.push(['_trackEvent', 'wayfarer_read_next', 'click_headline', 'version_1']);
+
+                        getNavPos($(this).attr("href"), "wayfarerReadNext");
+                    });
+
+                    bindUIActions();
+
+                    var displayed = false;
+
+                    setTimeout(function () {
+                        if (!displayed) {
+                            displayed == true;
+                            readNextWidget.display();
+                        }
+
+                    }, 10000);
+
+                    $(window).scroll(function () {
+                        if (isScrolledIntoView("#tmg-related-links")) {
+                            if (!displayed) {
+                                displayed == true;
+                                readNextWidget.display();
+                            }
+                        }
+
+                        if(isScrolledIntoView("#shareBottom") || isScrolledIntoView("#newGigyaShareBottom")) {
+                            if(settings.autoOpen) {
+                                openArticleContainer();
+                            }
+                        }
+
+                        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                            if(settings.autoOpen) {
+                                openArticleContainer();
+                            }
+                        }
+                    });
+                }
+            };
+
+            var display = function () {
+                $(settings.widgetContainer).fadeIn(2000, function () {
+                    //animation complete
+                    _gaq.push(['_trackEvent', 'wayfarer_read_next', 'display_closed', 'version_1']);
+                });
+            };
+
+            var bindUIActions = function () {
+                $(settings.openButton).mouseenter(function (event) {
+                    event.preventDefault();
+                    _gaq.push(['_trackEvent', 'wayfarer_read_next', 'hover_closed', 'version_1']);
+                    openArticleContainer();
+                });
+                $(settings.widgetContainer).mouseleave(function (event) {
+                    event.preventDefault();
+                    closeArticleContainer();
+                });
+                $(settings.closeButton).click(function (event) {
+                    event.preventDefault();
+                    _gaq.push(['_trackEvent', 'wayfarer_read_next', 'click_close', 'version_1']);
+                    updateCookie(settings.articleId, settings.articleListToSkip);
+                    closeArticleContainer();
+                    settings.autoOpen = false;
+                });
+            };
+
+            var openArticleContainer = function () {
+                if (!settings.panelOpen) {
+                	$("#readNextArticleContainer").show();//show/hide because height is calculated incorrectly for elements with display:none
+                    $("#readNextArticleContainer").hide();
+                    $(settings.articleContainer).toggle('slide', {direction: 'left'}, function () {
+                        //animation complete
+                        _gaq.push(['_trackEvent', 'wayfarer_read_next', 'display_open', 'version_1']);
+                    });
+                    settings.panelOpen = !settings.panelOpen;
+                    settings.autoOpen = false; //set auto open to false once user has viewed this once
+                }
+                return false;
+            };
+
+            var closeArticleContainer = function () {
+                if (settings.panelOpen) {
+                    $(settings.articleContainer).toggle('slide', {direction: 'left'}, function () {
+                        //animation complete
+                    });
+                    settings.panelOpen = !settings.panelOpen;
+                }
+                return false;
+            };
+
+
+            var isScrolledIntoView = function(elem) {
+                if($(elem).length) { //check if element exists
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+
+                    var elemTop = $(elem).offset().top;
+                    var elemBottom = elemTop + $(elem).height();
+
+                    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                } else {
+                    return false;
+                }
+            };
+
+            var unique = function(array) {
+                return array.filter(function (el, index, arr) {
+                    return index == arr.indexOf(el);
+                });
+            }
+
+            var createCookieBasedOnArticleList = function(currentArticleId, articleList, articleListToSkip) {
+                articleList.some(function (article) {
+                    if (article.id == currentArticleId) {
+                        articleListToSkip[0] = currentArticleId;
+                        $.cookie(settings.readNextCookieName, escape(articleListToSkip.join(',')), {path: '/', expires: 1, domain: 'telegraph.co.uk'});
+                        return true;
+                    }
+                });
+            }
+
+            var updateCookieBasedOnArticleList = function(currentArticleId, articleList, articleListToSkip) {
+                articleList.some(function (article) {
+                    if (article.id == currentArticleId) {
+                        updateCookie(currentArticleId, articleListToSkip);
+                        return true;
+                    }
+                });
+            }
+
+            var updateCookie = function(articleIdToSkip, articleListToSkip) {
+                articleListToSkip.push(articleIdToSkip);
+                articleListToSkip = unique(articleListToSkip);
+                $.cookie(settings.readNextCookieName, escape(articleListToSkip.join(',')), {path: '/', expires: 1, domain: 'telegraph.co.uk'});
+            }
+
+            var chooseNextArticle = function (currentArticleId, articleList, articleListToSkip) {
+                articleList.some(function (article) {
+                    if ((article.id != currentArticleId) && ($.inArray(article.id, articleListToSkip) === -1)) {
+
+                        //set article
+                        settings.articleTitle = article.title;
+                        settings.articleUrl = article.url;
+                        settings.articleId = article.id;
+						settings.articleImage = article.imgUrl;
+                        return true;
+                    }
+                });
+            }
+
+            //public API
+            return {
+                settings: settings,
+                init: init,
+                display: display,
+                openArticleContainer: openArticleContainer,
+                closeArticleContainer: closeArticleContainer
+            }
+        })();
+
+    };
+
+
+
+

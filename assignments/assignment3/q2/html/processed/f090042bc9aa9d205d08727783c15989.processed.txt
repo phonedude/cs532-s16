@@ -1,0 +1,1502 @@
+http://infectiousdiseases.about.com/od/rarediseases/fl/Ebola.htm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	(function() {
+		var gads = document.createElement("script");
+		gads.async = true;
+		gads.type = "text/javascript";
+		gads.src = "//www.googletagservices.com/tag/js/gpt.js";
+		var node = document.getElementsByTagName("script")[0];
+		node.parentNode.insertBefore(gads, node);
+	})();
+
+
+var abtGenericDomain='j';
+var abtGenericResourceDomain='fj';
+var deviceType='TABLET';
+// RTB timeout
+Abt.RTB.timeout = 600;
+
+
+// Push bidder configs to RTB
+// MUST HAVE A CORRESPONDING PLUGIN OBJECT IN aboutRTB.js
+		Abt.RTB.rtbConfig.push({
+			amazon : '3222'
+		});
+		Abt.RTB.rtbConfig.push({
+			index : '16626'
+		});
+//Set mpt and GMCID cookies
+setCookieValue();
+
+
+Abt.GPT.initGPT({
+	site: 'infectiousdiseases',
+	channel: 'health',
+	articleId: '3253e3073f00036ad3000753',
+	templateId: '65',
+	
+	articleStamp: 'pid1341',
+	pageCount: '1',
+	videoOnPage: 1,
+	companion: false,
+	minimalTemplate: false,
+	hgt: '' + window.screen.height,
+    wdth: '' + window.screen.width,
+	isMobile: false,
+	singleRequest: false,
+	retainHeight: false,
+	wValue: '' + 1024,
+	infValue: '' + 0,
+	dynamicRightRailAds: false,
+    chpg: false,
+    entryType: false,
+	slots: [
+		{'id':'leaderboard', 'pos':'atf', 'sizes':[[728, 90], [970, 250], [970, 90], [1, 1]], 'type':'leaderboard', 'priority':'1'},
+	
+		{'id':'billboard', 'pos':'atf', 'sizes':[[300, 250], [300, 600], [300, 1050]], 'type':'billboard', 'priority':'5'},
+	
+		{'id':'billboard2', 'pos':'btf1', 'sizes':[[300, 250], [300, 251], [2, 1]], 'type':'billboard', 'priority':'99'},
+	
+		{'id':'billboard3', 'pos':'btf2', 'sizes':[[300, 250], [300, 252], [3, 1]], 'type':'billboard', 'priority':'99'},
+	
+		{'id':'billboard4', 'pos':'btf3', 'sizes':[[300, 250], [300, 253], [4, 1]], 'type':'billboard', 'priority':'99'}
+	]
+});
+// analytics/404.ftl
+
+
+var dataLayer = dataLayer || [];
+dataLayer.push({
+abTests: [{
+testName: "optimizelyInclusion",
+bucketDescription: "Include Optimizely snippet",
+bucketName: "optimizely",
+bucketTrackingId: "12",
+bucketValue: 0
+},{
+testName: "relatedClickabilityTest",
+bucketDescription: "mongo bucket",
+bucketName: "mongo",
+bucketTrackingId: "99",
+bucketValue: 2
+},{
+testName: "soastaBoomerang",
+bucketDescription: "Variation includes About.com implementation of boomerang",
+bucketName: "includeDingo",
+bucketTrackingId: "99",
+bucketValue: 2
+}
+],
+envData: {
+environment: {
+environment: "prod",
+application: "globe",
+dataCenter: "ny",
+serverName: "nyglobe2"
+},
+server: {
+version: "1.64.5",
+vendor: "",
+title: "Globe Server"
+},
+resources : {
+version : "1.64.5",
+loadStartTime : "1455130114453",
+loadTimeTaken : "4537"
+},
+client : {
+browserUA : "navigator.userAgent",
+serverUA : "python-requests/2.9.1"
+}
+}
+});
+// AB Testing
+dataLayer.push({
+abTests: [{
+testName:"relatedClickabilityTest",
+bucketDescription:"mongo bucket",
+bucketName:"mongo",
+bucketTrackingId:"99",
+bucketValue:2
+},{
+testName:"soastaBoomerang",
+bucketDescription:"Variation includes About.com implementation of boomerang",
+bucketName:"includeDingo",
+bucketTrackingId:"99",
+bucketValue:2
+},{
+testName:"optimizelyInclusion",
+bucketDescription:"Include Optimizely snippet",
+bucketName:"optimizely",
+bucketTrackingId:"12",
+bucketValue:0
+}]
+});
+//Environment Tracking
+var envData = {
+environment : {
+environment : "prod",
+application : "globe",
+dataCenter : "ny",
+serverName : "nyglobe2"
+},
+server : {
+version : "1.64.5",
+vendor : "",
+title : "Globe Server"
+},
+resources : {
+version : "1.64.5",
+loadStartTime : "1455130114453",
+loadTimeTaken : "4537"
+},
+client : {
+browserUA : navigator.userAgent,
+serverUA : "python-requests/2.9.1"
+}
+};
+dataLayer.push({ envData: envData });
+if ((typeof opt_testid !== 'undefined') && (opt_testid !== '')){
+docCookies.setItem("opt_testid", opt_testid, null, "/", '.about.com');
+} else if (docCookies.getItem('opt_testid')) {
+var opt_testid = docCookies.getItem('opt_testid');
+} else {
+var opt_testid = '';
+}
+Abt.PageView.init({
+event: "unifiedPageview",
+fullUrl: "http://infectiousdiseases.about.com/od/rarediseases/fl/Ebola.htm" + location.hash,
+title: "Ebola",
+contentGroup: "Articles",
+gs: "infectiousdiseases",
+ch: "health",
+authorId: "130440",
+templateId: "65",
+googleAdClient: "ca-aj-about-health",
+googleAdChannel:"primedia_infectiousdiseases tt65",
+zBT: "",
+zBsT: "",
+zBTr: "",
+cat0: "rarediseases",
+cat1: "",
+cat2: "",
+cat3: "",
+cat4: "",
+socialTitle: "What You Should Know About Ebola",
+characterCount: 5611,
+nativeAdEnabled: false,
+experienceType: "single page",
+currentPageOrdinal: "",
+previousPageOrdinal: "",
+pageviewType: "standard",
+templateVariation: "",
+entryType: docCookies.getItem('pageEntryType') || "direct",
+publishDate: "2014-08-07",
+updateDate: "2014-10-14",
+numOfImages: 1,
+numOfPages: 1,
+numOfArticleWords: "",
+numOfLinks: "",
+excludeFromComscore: false,
+socialImage: "",
+description: "",
+numOfMapLabels: ""
+});
+(function() {
+var google_ad_channel = "primedia_infectiousdiseases tt65",
+askoc = docCookies.getItem('askoc'),
+mptCookie = docCookies.getItem('mpt');
+google_ad_channel += ((typeof askoc !== 'undefined' && askoc !== null) ? ' '+askoc+' semd' : '');
+google_ad_channel += ((typeof opt_testid !== 'undefined' && opt_testid !== null) ? (' test' + opt_testid) : '');
+google_ad_channel += ((typeof mptCookie !== 'undefined' && mptCookie !== null) ? ' ' + mptCookie : '');
+google_ad_channel += ' test99 test99 test12';
+Abt.PageView.setData({
+googleAdChannel: google_ad_channel
+});
+}());
+Abt.PageView.ga();
+var ch = 'health',
+gs = 'infectiousdiseases',
+zccnt = '5611',
+zGAst = 'What You Should Know About Ebola',
+zAth = '130440',
+zTt = '65',
+zGAtg ='Articles',
+google_ad_channel = 'primedia_infectiousdiseases tt65',
+cat0 = 'rarediseases/',
+google_ad_client = (docCookies.getItem('mpt') == 'A1') ? 'ca-aj-about-sem' : 'ca-aj-about-health';
+(function() {
+var askoc = docCookies.getItem('askoc'),
+mptCookie = docCookies.getItem('mpt');
+google_ad_channel += ((typeof askoc !== 'undefined' && askoc !== null) ? ' '+askoc+' semd' : '');
+google_ad_channel += ((opt_testid !== 'undefined' && opt_testid !== null) ? (' test' + opt_testid) : '');
+google_ad_channel += ((typeof mptCookie !== 'undefined' && mptCookie !== null) ? ' ' + mptCookie : '');
+}());
+google_ad_channel += ' test99 test99 test12';
+var google_ad_channel_window = google_ad_channel,
+google_ad_client_window = google_ad_client,
+zNative = 0,
+zBsT = docCookies.getItem('zBsT'),
+zBT = docCookies.getItem('zBT'),
+zBTr = docCookies.getItem('zBTr'),
+mpt = docCookies.getItem('mpt');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ebola
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-ML7BFK');
+
+
+
+About.com
+
+
+Food
+
+
+Health
+
+
+Home
+
+
+Money
+
+
+Style
+
+
+Tech
+
+
+Travel
+
+
+
+	More
+	
+
+
+
+
+
+Autos
+
+
+Dating & Relationships
+
+
+Education
+
+
+Entertainment
+
+
+en Español
+
+
+Careers
+
+
+News & Issues
+
+
+Parenting
+
+
+Religion & Spirituality
+
+
+Sports
+
+ 
+ 
+
+
+
+
+
+
+
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Share
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Pin
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+Tweet
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Submit
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Stumble
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Post
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Share
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+Advertisement
+
+
+
+
+
+
+
+
+
+
+ About.com
+ 
+
+
+ About Health
+ 
+
+
+ Infectious Diseases
+ 
+
+
+ Wild and Wacky Infections
+ 
+
+
+
+Ebola
+First Steps to Understanding the Disease
+
+
+
+
+
+
+
+
+By Megan Coffee, MD
+
+
+		                	Infectious Diseases Expert
+ 
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Share
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Pin
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+Tweet
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Submit
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Stumble
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Post
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+Share
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+									Ebola. 
+									CDC/ NIAID 2014
+
+
+
+
+
+
+Written or medically reviewed by a board-certified physician. See About.com's Medical Review Policy.
+        
+ 
+		Updated
+		October 14, 2014.
+	
+Ebola is a viral disease that has been spreading in West Africa (Liberia, Sierra Leone, Guinea). Ebola should be suspected only in those who could have had close contact with an Ebola patient or their body fluids. However, there should be suspicion in anyone with a fever or flu-like symptoms (muscle aches, headache, fatigue, even hiccups) after travel in last 3 weeks from Liberia, Sierra Leone, or Guinea.
+
+
+Patients have traveled with the illness to Nigeria and Senegal but these countries appear to be Ebola-free now. Patients have been taken abroad for care to the US, UK, France, Spain, and Germany. The first person diagnosed outside of Africa was infected in Liberia and then traveled to Dallas, Texas where he later died.
+ Two patients have been infected outside of West Africa while caring for patients - nurses in Dallas, Texas and Madrid, Spain. 8 US citizens so far have been known to have been infected.How is it spread? Ebola is a viral hemorrhagic fever, specifically a filovirus, that is spread through direct contact with a person (or their body fluids) who is ill with Ebola. These body fluids include urine, saliva, feces, vomit, and semen. This may also occur through a needle-stick. This may occur from bathing a sick patient. Those at risk are those with close contact with infected persons, their body fluids, or cadavers - such as through funerals or caregiving. Burial practices as well as caring for sick people can lead to infections.
+
+ Hospitals with incomplete infection control may see nurses, doctors, and other caregivers infected. Transmission can occur in hospitals without enough gloves, face masks, goggles, and other infection control materials to provide safe care.Before a patient has symptoms from Ebola, they cannot transmit the infection.
+ It is not airborne. It is not spread in water or by food. What happens to those infected?Symptoms may develop from 2 to 21 days, normally in 8-10 days.  Symptoms often begin with a sudden fever along with muscle aches and a headache. There may also be nausea, vomitting, diarrhea, cough, and a sore throat. As the disease progresses, some become very sleepy or delirious. By day 5, they can develop hemorrhagic (bleeding) symptoms, which may include mucus membrane bleeding or else bleeding or bruising at the site of a needle injection. Rash may develop as well and many lose weight quickly. By two weeks, those infected either improve rapidly or decline rapidly in a state of shock.The chance of death depends on what Ebola subtype is involved. Ebola Zaire subtype may lead to up to 90% mortality, though death rates have been lower, around 60%, in West Africa where this subtype is spreading. Other subtypes, (Bundibugyo virus, Sudan virus, and Taï Forest virus [formerly Côte d'Ivoire Ebola virus]) are associated with lower death rates, though up to 50% mortality with the Sudan Virus. The Reston subtle has not been associated with human infection and was initially identified in monkeys shipped from the Philippines to the US.How do you test for Ebola?Testing for Ebola is not standardly available in hospitals. It requires specialized testing, such as PCR testing. Within epidemic areas, rapid testing may be available in quarantine areas. In areas without Ebola outbreaks, the Center for Disease Control (CDC) or other national health agencies should be involved.Lab PCR testing cannot detect Ebola until after symptoms begin, and usually at least 3 days after symptoms begin. You cannot test after exposure alone.Is there treatment?There is no proven and approved treatment. To date, most care has been supportive, such as by providing intravenous fluids and nutrition.There had been hope that providing blood serum from those who had recently recovered would help those infected, but this has not been proven yet to be effective.​There is hope that other approaches will work. One approach has been to create monoclonal antibodies, which will act immunologically against Ebola. One such treatment is ZMapp, which is the combination of 3 monoclonal antibodies - given to fewer than 10 patients so far. Another approach, which also has enthusiasm, would be to use a synthetic nucleoside analogs. Favipiravir, approved for influenza in Japan, may be a viable option.There is also hope for vaccine development. None is currently available. It is not expected that one will be fully developed and tested for at least another year.How to prevent infection?To prevent transmission, it is important to quarantine patients and to trace their contacts who should then be monitored and quarantined as appropriate. Within the hospital quarantine area, it is important that all workers wear gloves, eye protection/goggles, face masks, gowns to prevent any exposure to body fluids. Many have worked with Ebola over the years without being infected by exposure to a patient. Previous epidemics have been extinguished by quarantine and contact tracing, while assiduously avoiding new infections in health care workers.Where did it come from?Ebola has been found almost exclusively in Africa. Epidemics have occurred in Democratic Republic of the Congo (DRC), Gabon, Sudan, the Ivory Coast, Uganda, and the Republic of the Congo, before the 2014 spread to Guinea, Sierra Leone, Liberia, and Nigeria. An unrelated epidemic has occurred in the DRC in 2014. Bats are thought to be the reservoir in-between epidemics. As the virus persists without apparent symptoms in bats, bat movement may also transport the disease in between outbreaks. It also affects non-human primates, such as gorillas and monkeys, which often succumb to the disease.  
+
+
+
+
+
+
+
+
+Related Articles
+
+Understand the Hazards of Ebola so that you Don't Fall for the Hype.
+The answer to Ebola is a lot of hard work
+You Probably Don't Have Ebola, But Could It Be the Flu?
+
+
+Are any other viruses like Ebola out there?
+Tackling the Troubling Ebola Virus
+Can Ebola lead to Measles?
+
+
+
+
+
+
+
+Our Expert Recommends
+
+Is there treatment for Ebola?
+What if there is no treatment for Ebola?
+
+
+Information on Treatment, Free Science Articles
+
+
+
+
+
+
+
+
+ 
+
+Infectious Diseases Essentials
+
+
+
+
+ 
+
+
+
+
+What you should know about Bird Flu
+
+Respiratory Infections
+
+ 
+
+ 
+
+
+
+
+When Arthritis Is Contagious
+
+Insect-Borne Diseases
+
+ 
+
+ 
+
+
+
+
+So You Have a Urinary Tract Infection
+
+Infectious Diseases by Name
+
+ 
+
+ 
+
+
+
+
+Can a cat scratch be dangerous?
+
+Wild and Wacky Infections
+
+ 
+
+ 
+
+
+
+
+Good Bacteria and Bad Bacteria: Learn the Difference
+
+Infectious Disease Basics
+
+ 
+
+
+
+
+ 
+
+Health Slideshows
+
+
+
+
+ 
+
+
+
+
+4 Ways to Safeguard Confidence and Inner Strength
+
+Stress Management
+
+ 
+
+ 
+
+
+
+
+6 Mosquito-Borne Diseases from Around the World
+
+Medical Treatments
+
+ 
+
+ 
+
+
+
+
+Advanced Kettlebell Exercises for Stronger Glutes, Thighs and Arms
+
+Exercise
+
+ 
+
+ 
+
+
+
+
+9 Surprising Signs You May Have a Gluten Allergy
+
+Celiac Disease & Gluten Sensitivity
+
+ 
+
+ 
+
+
+
+
+Exercises to Keep Your Hips Strong and Mobile
+
+Physical Therapy
+
+ 
+
+
+
+
+
+
+
+
+Readers Recommend
+
+How Kissing Can Spread Infectious Diseases
+Can Clostridium Difficile Cause Colitis?
+The 10 Best Ways to Prevent Infectious Diseases
+
+
+Profile of Cold Sores Caused by Herpes Virus
+What is Zika?
+
+
+
+
+
+
+
+Advertisement
+
+
+
+
+
+
+ 
+
+
+
+
+Advertisement
+
+
+
+
+
+
+
+			Sign Up for Our Free Newsletters
+		
+Thanks, You're in!
+
+
+
+
+
+
+Living Healthy
+
+
+
+
+Health Tip of the Day
+
+
+
+
+Infectious Diseases
+
+
+
+You might also enjoy:
+
+
+
+Staying Active
+
+
+
+
+Parenting
+
+
+
+
+
+Sign up
+
+
+There was an error. Please try again.
+Please select a newsletter.
+Please enter a valid email address.
+Did you mean ?
+
+
+            Thank you,,for signing up!
+		
+
+
+ 
+Infectious Diseases Categories
+
+
+
+ Infectious Disease Basics
+ 
+
+ Treatments for Infectious Diseases
+ 
+
+ Vaccines and Prevention
+ 
+
+ Infections in Kids
+ 
+
+ Travelers' Health
+ 
+
+ Wild and Wacky Infections
+ 
+
+ Respiratory Infections
+ 
+
+ Gastrointestinal and Foodborne Infections
+ 
+
+ Skin Infections
+ 
+
+ Insect-Borne Diseases
+ 
+
+ Infectious Diseases by Name
+ 
+
+ Glossary
+ 
+
+ Blog
+ 
+
+ Infectious Diseases in Kids
+ 
+
+ Foodborne and Gastrointestinal Diseases
+ 
+
+ Infectious Diseases Listing by Alphabet
+ 
+
+								Updated Articles and Resources 
+ 
+
+
+
+Advertisement
+
+
+
+
+
+Advertisement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+ About.com
+ 
+
+
+ About Health
+ 
+
+
+ Infectious Diseases
+ 
+
+
+ Wild and Wacky Infections
+ 
+
+
+
+					Ebola
+				
+
+
+ 
+
+
+
+
+
+
+
+
+
+About Health
+ Follow us:
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+			We deliver. Get the best of About Health in your inbox.
+		
+Thanks, You're in!
+
+
+
+
+You might also enjoy:
+
+
+
+
+Sign up
+
+
+There was an error. Please try again.
+Please select a newsletter.
+Please enter a valid email address.
+Did you mean ?
+
+
+            Thank you,,for signing up!
+		
+
+
+
+
+
+
+
+Our Story
+Advertise With Us
+Site Map
+Help
+
+
+
+
+Write for About
+Careers at About
+Terms of Use & Policies
+
+
+ 
+
+
+
+
+
+
+© 2016 About.com — All rights reserved. 
+
+
+
+Also from About.com: Calorie Count 
+
+
+
+
+(function(){
+  var dom, doc, where, iframe = document.createElement('iframe');
+  
+  iframe.src = "javascript:false";
+  (iframe.frameElement || iframe).style.cssText = "width: 0; height: 0; border: 0";
+  var where = document.getElementsByTagName('script')[0];
+  where.parentNode.insertBefore(iframe, where);
+
+  try {
+    doc = iframe.contentWindow.document;
+  } catch(e) {
+    dom = document.domain;
+    iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+    doc = iframe.contentWindow.document;
+  }
+  doc.open()._l = function() {
+    var js = this.createElement("script");
+    //TEST URLS
+    //boomerang-0.9.<timestamp>-debug.js
+    var src = 'https://rd.about.com/webapp/dist/boomerang-0.9.1444923999719.min.js';
+    if(dom) this.domain = dom;
+    //DO NOT CHANGE
+    //boomerang uses this ID if using the iframe approach
+    js.id = "boomr-if-as"; 
+    js.src = src;
+    this.body.appendChild(js);
+  };
+  doc.write('<body onload="document._l();">');
+  doc.close();
+  
+
+      function init(b) {
+          
+          b.addVar({
+              'abTests': [{
+                  'testName':"relatedClickabilityTest",
+                  'bucketValue':2
+              },{
+                  'testName':"soastaBoomerang",
+                  'bucketValue':2
+              },{
+                  'testName':"optimizelyInclusion",
+                  'bucketValue':0
+              }],
+              'channel': 'health',
+              'site': 'infectiousdiseases',
+              'templateId': '65',
+              'templateName': 'flexArticle',
+              'templateView': 'TABLET',
+              'tmog': 'g1255eaa4bccd6e79676c6f6265329e',
+              'mint': 'g1255eaa4bccd6e79676c6f6265329e',
+              'idstamp': 'g1255eaa4bccd6e79676c6f6265329e',
+              'dataCenter': 'ny',
+              'serverName': 'nyglobe2',
+              'serverVersion': '1.64.5',
+              'resourceVersion': '1.64.5',
+              'cc': 'US',
+              'city': 'Norfolk',
+              'lat': '36.931',
+              'lon': '-76.24',
+              'rg': 'VA',
+              'timestamp': new Date().getTime(),
+              'referrer': document.referrer,
+              'sessionPc': '1',
+              'userAgent[familyName]': 'Python-requests',
+              'userAgent[versionMajor]': '2',
+              'userAgent[versionMinor]': '9',
+              'userAgent[osName]': 'unknown',
+              'userAgent[osVersion]': '',
+              'userAgent[mobile]': 'false',
+              'userAgent[raw]': 'python-requests/2.9.1'
+          });
+          
+          b.init({
+              beacon_url: 'https://rd.about.com/boomerang',
+              user_ip: '128.82.22.252',
+              site_domain: 'about.com',
+              BW: { enable: false },
+              RT: {
+                  cookie: 'abtRT'
+              },
+              DFPTiming: {}
+          });
+      }
+  
+  if (document.addEventListener) {
+      document.addEventListener("onBoomerangLoaded", function(e) {
+          // e.detail.BOOMR is a reference to the BOOMR global object
+          init(e.detail.BOOMR);
+      });
+   } else if (document.attachEvent) {
+       // IE 6, 7, 8 we use onPropertyChange and look for propertyName === "onBoomerangLoaded"
+       document.attachEvent("onpropertychange", function(e) {
+         if (!e) e=event;
+         if (e.propertyName === "onBoomerangLoaded") {
+             // e.detail.BOOMR is a reference to the BOOMR global object
+             init(e.detail.BOOMR);
+         }
+      });
+   }
+})();    var Abt = window.Abt || {};
+    Abt.tagLinks = function() { 
+        debug.log('Amazon affiliate link tagging script');
+        var js, fjs = document.getElementsByTagName("script")[0]; 
+        js = document.createElement("script"); 
+        js.async = true; 
+        js.src = "//wms-na.amazon-adsystem.com/20070822/US/js/auto-tagger.js?tag=aboutcom02infectiousdiseases-20&locale=US&overwrite=1"; 
+        fjs.parentNode.insertBefore(js, fjs);  
+    };  
+    
+    Abt.tagLinks();
+    
+    //bind the refresh for chapters
+    $(document).on('articleSwitch', Abt.tagLinks);
+// ads/afcAdUnit.ftl
+$('.adsense-slot').each(function() {
+    Abt.AdCode.addAdsenseAfcConfig($(this).attr('id'), Number($(this).attr('adsense-numlinks')), $(this).attr('adsense-displaylabel') === 'true');
+});
+(function() {
+    var properties = {
+    		"leaderboard" : ".gpt.leaderboard",
+    		"mastFixed" : ".mast-fixed",
+    		"main" : "#main",
+    		"lockFor" : ".document-share",
+    		"doLocking" : true
+    		
+    };
+    if (window.Abt && window.Abt.LockLeaderboard) {
+		window.Abt.LockLeaderboard.init(properties);
+    }
+})();
+var google_hints = 'Infectious Diseases, ',
+	google_page_url = window.location.href,
+	google_ad_output = 'js',
+	google_max_num_ads = Abt.AdCode.getTotalAdsenseAfcs();
+	google_num_radlinks = Abt.AdCode.getTotalRadlinks();
+	google_max_radlink_len = '30',
+	google_safe = 'high',
+	google_encoding = 'latin1';
+
+function google_ad_request_done(google_ads) {
+	var containerSelector = 'active-article',
+		build = function(){
+			debug.log('building the cpc links: afc/radlinks');
+			Abt.AdCode.buildAdsenseAfc('<a href="#" data-component="flexArticle" data-source="flexArticle" data-type="adsLabel" data-ordinal="1" onclick="javascript: var w=450, h=425, top=(screen.height / 2) - (h / 2), left=(screen.width / 2) - (w / 2); window.open(&#39;http://www.about.com/z/ad/wasl.htm&#39;, &#39;&#39;, &#39;width=&#39; + w + &#39;, height=&#39; + h + &#39;, top=&#39; + top + &#39;, left=&#39; + left + &#39;, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no&#39;); return false;" class="muted">Ads</a>', containerSelector);
+			Abt.AdCode.buildRadlinks('infectiousdiseases', '<a href="#" data-component="flexArticle" data-source="flexArticle" data-type="adsLabel" data-ordinal="2" onclick="javascript: var w=450, h=425, top=(screen.height / 2) - (h / 2), left=(screen.width / 2) - (w / 2); window.open(&#39;http://www.about.com/z/ad/wasl.htm&#39;, &#39;&#39;, &#39;width=&#39; + w + &#39;, height=&#39; + h + &#39;, top=&#39; + top + &#39;, left=&#39; + left + &#39;, toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, copyhistory=no&#39;); return false;" class="muted">Ads</a>', containerSelector);
+		};
+
+	if($('#stepbystepPage').length > 0) {
+		debug.log('SBS Page: wait until content has loaded');
+		if($('#content').hasClass('loaded')) {
+			debug.log('sbs page is loaded');
+			build();
+		}
+	} else {
+		build();
+		showContent();
+	}
+}
+
+function showContent() {
+	var $content = $('.ads-hidden');
+	if ($content.length) {
+		$content.each(function() {
+			$(this).removeClass('ads-hidden');
+		});
+	}
+} 
+

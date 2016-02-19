@@ -1,0 +1,286 @@
+http://tyznik.com/thrones/
+
+
+
+
+
+Game of Thrones transit maps — Michael Tyznik
+
+
+
+
+
+
+
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-3555383-1', 'auto');
+		  ga('send', 'pageview');
+
+		
+
+
+
+
+Michael Tyznik
+
+
+Branding
+Graphics
+Maps
+Environmental
+About
+
+
+
+
+
+
+
+							Monsoon
+
+
+							Lovesac
+
+
+							Glow
+
+
+							Accessorize
+
+
+							Locale
+
+
+							Eura Collection
+
+
+
+
+							US currency redesign
+
+
+							Feetfirst catalogue
+
+
+							HighStreet Cincinnati
+
+
+							Architect triptychs
+
+
+
+
+
+							Elder Scrolls transit map
+
+
+							Game of Thrones transit maps
+
+
+							Typographic transit maps
+
+
+							Columbus transit maps
+
+
+							Cincinnati rail map 2031
+
+
+
+
+							Urban Outfitters
+
+
+							Halmtorvet basketball court
+
+
+							Cranbrook spa
+
+
+							M&M’s character storytelling
+
+
+							Clifton branch library
+
+
+							Hyatt Waikiki signage
+
+
+							Bus stop signage
+
+
+
+
+
+
+
+Art Prints Shop
+LinkedIn
+Résumé
+
+						document.write("<n uers=\"znvygb:zvpunry@glmavx.pbz\">".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+						Contact
+
+
+
+
+ 
+
+
+
+
+
+			Game of Thrones Transit Maps
+		
+Inspired by the work of Cameron Booth and his awesome Transit Maps Tumblr, I created these rail maps of Westeros and The Known World. Hopefully fans will notice some small touches — the closed stations along the Wall Line, for example.
+Prints of the maps are available starting at $40 at inPRNT: Westeros and The Known World. For European delivery, prints are also available in multiple languages at Artflakes. You can also view the maps at high resolution on my Flickr: Westeros and The Known World.
+Featured by The Verge, The Escapist, The Guardian, Mashable, Boy Genius Report, Polygon, Buzzfeed, Fast Company, Cnet, Kotaku, MTV, The Washington Post, Jezebel, Gizmodo, Le Monde de Vanity Fair, The Daily Record, and the Transit Maps Tumblr. Shortlisted for the 2014 Information Is Beautiful Awards.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+↑ Back to top
+© 2016 Michael Tyznik
+
+
+
+
+function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
+$(document).ready(function() {
+	
+	
+	// BACK TO TOP
+	
+	$('#backtotop').click(function() {
+		$('body,html').animate({scrollTop:0},1000,'easeOutQuad');
+		
+	});
+	
+
+	// RETINA IMAGE REPLACEMENT
+	
+	var retina = window.devicePixelRatio > 1 ? true : false;
+	if (retina) {
+		$('img').each(function() {
+			
+			var src = $(this).attr('src');
+			var ext = src.substring(src.length-3,src.length);
+			src = src.substring(0,src.length-4)+'_2x.'+ext;
+			
+			if ( UrlExists(src) ) {
+				$(this).attr('src',src);
+			}
+			
+			
+		});
+	}
+	
+
+	// MENU SCRIPT
+	
+	var menuOpen = false;
+	var currentSection = '';
+	
+	$('#menu li').click(function() {
+		
+		
+		// Get section name
+		
+		var section = $(this).attr('id');
+		section = section.substring(0,section.length-9);
+		
+		
+		// If the menu is already open
+		
+		if ( menuOpen == true ) {
+			
+			
+			// If this section is already open, close the menu
+			
+			if ( currentSection == section ) {
+				
+				menuOpen = false;
+				currentSection = '';
+				$('#menu li').removeClass('active');
+				$('#thumbscontainer').stop().slideUp(1000,'easeInOutCirc',function() {
+					$('.projectthumbs').hide();							
+				});
+			
+			}
+			
+			
+			// If this section is not already open, close the current section and open the new one
+			
+			else {
+				
+				$('#menu li').removeClass('active');
+				$(this).addClass('active');
+				$('#'+currentSection+'-thumbs').stop().slideUp(500,'easeInOutCirc',function() {
+					currentSection = section;
+					$('#'+currentSection+'-thumbs').stop().slideDown(500,'easeInOutCirc');
+				});
+				
+			}
+		}
+		
+		
+		// If the menu isn't open yet
+		
+		else {
+			
+			menuOpen = true;
+			currentSection = section;
+			$(this).addClass('active');
+			$('#'+currentSection+'-thumbs').show(0,function() {
+				$('#thumbscontainer').stop().slideDown(1000,'easeInOutCirc');
+			});
+			
+		}
+		
+		
+	});
+	
+});
+
+
+
+
+

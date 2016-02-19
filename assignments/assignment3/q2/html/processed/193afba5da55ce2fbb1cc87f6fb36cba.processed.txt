@@ -1,0 +1,796 @@
+http://www.daserste.de/information/wissen-kultur/w-wie-wissen/index.html
+
+
+
+W wie Wissen - ARD | Das Erste
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AKAMAI_MEDIA_ANALYTICS_CONFIG_FILE_PATH = "https://ma728-r.analytics.edgekey.net/config/beacon-8071.xml"; 
+
+
+
+
+
+var app = new Application(jQuery);
+(function(jq){
+//var cssPath = '';
+var cssPathResources = '/mediasrc/';
+var cssPath 		= cssPathResources + 'css/';
+var cssPathLocal 	= cssPathResources + 'css/skin/';
+var cssSuffix		= '/min';
+var mediaMatcher = app.mediaMatcher = new MediaMatcher({
+'screen and (min-width: 0px) and (max-width: 479px)': {
+'css': [cssPath+'xs'+cssSuffix+'.css'],
+'js':  [],
+'obj': [{
+onInit:    function(){},
+onMatch:   function(){app.dispatchEvent(Application.EVENT_VIEW_UPDATED, "xs");},
+onUnmatch: function(){app.dispatchEvent(Application.EVENT_VIEW_DIED, "xs");}
+}]
+},
+'screen and (min-width: 480px) and (max-width: 767px)': {
+'css': [cssPath+'s'+cssSuffix+'.css'],
+'js':  [],
+'obj': [{
+onInit:    function(){},
+onMatch:   function(){app.dispatchEvent(Application.EVENT_VIEW_UPDATED, "s");},
+onUnmatch: function(){app.dispatchEvent(Application.EVENT_VIEW_DIED, "s");}
+}]
+},
+'screen and (min-width: 768px) and (max-width: 1009px)': {
+'css': [cssPath+'m'+cssSuffix+'.css'],
+'js':  [],
+'obj': [{
+onInit:    function(){},
+onMatch:   function(){app.dispatchEvent(Application.EVENT_VIEW_UPDATED, "m");},
+onUnmatch: function(){app.dispatchEvent(Application.EVENT_VIEW_DIED, "m");}
+}]
+},
+'screen and (min-width: 1010px) and (max-width: 1900px)': {
+'css': [cssPath+'l'+cssSuffix+'.css'],
+'js':  [],
+'obj': [{
+onInit:    function(){},
+onMatch:   function(){app.dispatchEvent(Application.EVENT_VIEW_UPDATED, "l");},
+onUnmatch: function(){app.dispatchEvent(Application.EVENT_VIEW_DIED, "l");}
+}]
+},
+'screen and (min-width: 1901px)': {
+'css': [cssPath+'xl'+cssSuffix+'.css'],
+'js':  [],
+'obj': [{
+onInit:    function(){},
+onMatch:   function(){app.dispatchEvent(Application.EVENT_VIEW_UPDATED, "xl");},
+onUnmatch: function(){app.dispatchEvent(Application.EVENT_VIEW_DIED, "xl");}
+}]
+}
+});
+mediaMatcher.showInfo(false);
+mediaMatcher.preLoadCss(false);
+mediaMatcher.dynamicLoadJS(false);
+mediaMatcher.dynamicLoadCss(true);
+mediaMatcher.dynamicTriggerObj(true);
+mediaMatcher.waitBeforeDynamicLoad(25);
+mediaMatcher.waitForCssIsLoaded(true,5000);
+mediaMatcher.tryToSupportNativeMediaQueries(true);
+mediaMatcher.init();
+jq(document).ready(function(){
+if(!app.initialized) app.init();
+});
+})(jQuery.noConflict());
+
+
+
+
+
+
+
+
+
+Zum Inhalt
+Zur Navigation DasErste.de
+Zur Suche
+
+jQuery(document).ready(function() {
+window.setTimeout(function() {
+var ak_stat = "daserste";
+var ak_mobi = "moberste";
+function isStringDetected(value) {
+var regexp = new RegExp(value, "gi");
+return (regexp.test(navigator.appVersion) || regexp.test(navigator.userAgent)) ? true : false;
+}
+function isTablet() {
+if(isStringDetected("iPad|Windows NT|Kindle|PlayBook") || (isStringDetected("Android") && !isStringDetected("Mobile"))) {
+return true;
+}
+return false;
+}
+/* SZMnG-Tag Responsiv-Weiche */
+jQuery.ajaxSetup({cache: true});
+jQuery.getScript("//script.ioam.de/iam.js").done(function() {
+var isMobil = typeof orientation!='undefined' ? true:false;
+if(isTablet()) {
+isMobil = false;
+}
+// Tablets zählen stationär
+if(!isMobil) {
+var iam_data = {
+"st" : ak_stat,
+"cp" : "DasErste"
+};
+}
+else {
+var iam_data = {
+"st" : ak_mobi,
+"cp" : "DasErste"
+};
+}
+iom.c(iam_data,1);
+});
+}, 1);
+});
+
+
+// Comscore
+// <![CDATA[
+function sitestat(u){var d=document,l=d.location;ns_pixelUrl=u+"&ns__t="+(new Date().getTime());u=ns_pixelUrl+"&ns_c="+((d.characterSet)?d.characterSet:d.defaultCharset)+"&ns_ti="+escape(d.title)+"&ns_jspageurl="+escape(l&&l.href?l.href:d.URL)+"&ns_referrer="+escape(d.referrer);var m=u.lastIndexOf("&");if(u.length>2000&&m>=0){u=u.substring(0,m+1)+"ns_cut="+u.substring(m+1,u.lastIndexOf("=")).substring(0,40)}(d.images)?new Image().src=u:d.write('<'+'p><'+'img src="'+u+'" height="1" width="1" alt="*"/'+'><'+'/p>');};
+sitestat("//de.sitestat.com/daserste/daserste/s?name=information.wissen-kultur.w-wie-wissen.index&amp;category=w_wie_wissen&amp;ard_lra=daserste&amp;ard_sparte1=i&amp;ard_sparte2=magazin&amp;ard_sendeplatz=unassigned&amp;ard_sendung=wwiewissen");
+// ]]>
+
+
+
+
+
+
+
+
+
+ARD Navigation
+
+
+
+
+ARD Home
+Nachrichten
+Sport
+Börse
+Ratgeber
+Wissen
+Kultur
+Kinder
+ARD Intern
+Fernsehen
+Radio
+ARD Mediathek
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Suchvorschläge
+
+
+Ergebnisvorschau
+
+
+
+
+
+
+
+Menü
+
+
+Startseite
+
+
+Sendungen
+
+
+
+
+
+Sendungen A bis Z
+
+
+
+function clickLink(linkId,source) {
+document.getElementById(linkId).attributes['target'].value = source;
+document.getElementById(linkId).click();
+}
+
+
+A
+
+B
+
+C
+
+D
+
+E
+
+F
+
+G
+
+H
+
+I
+
+J
+
+K
+
+L
+
+M
+
+N
+
+O
+
+P
+
+Q
+
+R
+
+S
+
+T
+
+U
+
+V
+
+W
+
+X
+
+Y
+
+Z
+
+0-9
+
+
+
+
+
+
+
+
+
+
+Sendungen nach Rubrik
+
+
+
+Nachrichten, Wetter & Sport
+
+Politik & Weltgeschehen
+
+Reportage & Dokumentation
+
+Krimi
+
+Film
+
+Soaps & Serien
+
+Wissen & Kultur
+
+Ratgeber & Service
+
+Talk
+
+Shows & Unterhaltung
+
+Boulevard & Kochen
+
+Comedy & Satire
+
+Kinder
+
+
+
+
+Archiv
+
+
+
+A
+
+B
+
+C
+
+D
+
+E
+
+F
+
+G
+
+H
+
+I
+
+J
+
+K
+
+L
+
+M
+
+N
+
+O
+
+P
+
+Q
+
+R
+
+S
+
+T
+
+U
+
+V
+
+W
+
+X
+
+Y
+
+Z
+
+0-9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+schließen
+
+
+Sendungen
+
+
+
+
+TV-Programm
+
+
+
+
+
+
+
+TV-Programm
+
+
+
+Live
+Mediathek
+Teletext
+Service
+Über uns
+
+
+
+
+
+
+
+
+
+
+
+Das Wissensmagazin im Ersten
+
+
+
+Menü
+
+
+
+
+
+Sendetermin
+
+
+Samstags | 16:00 Uhr
+
+
+
+
+
+
+
+StartseiteSendungsübersichtVideosTeamMehr WissenKontakt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sa, 27.02. | 16:00 Uhr
+
+
+Mein Kumpel, der Roboter – Blechkamerad mit Gefühl
+
+Schluss mit den kalten technischen Gesellen der Vergangenheit: Die neuen Roboter lernen das "Menscheln": Sie helfen bei der Altenpflege, sind Arbeitskollegen, servieren Kaffee. Die Maschinen-Generation der Zukunft kommuniziert mit uns. | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vergangene Sendungen
+
+
+
+
+
+
+
+
+
+
+
+Alles Banane - krummes Ding in Not?
+
+Wir lieben Bananen. Jeder Deutsche vertilgt im Schnitt zwölf Kilo pro Jahr, das ist Europarekord. Doch jetzt bedroht ein aggressiver Pilz die Bananenplantagen. Verschwinden deshalb die gelben Früchte  aus unseren Supermarktregalen? | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+Der besiedelte Mensch - Unser Mikrobiom und wir
+
+Seid umschlungen Billionen! Rund 100 Billionen Bakterien und andere Kleinstlebewesen tummeln sich auf und vor allem in uns. Auf jede einzelne unserer Körperzellen kommen im Schnitt zehn Mikroben und die arbeiten hart. | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+Das ganze Leben ist ein Spiel
+
+Spielen ist nicht nur Zeitvertreib, Spielen macht uns schlau. Es hält unser Gehirn auf Trab, regt die Fantasie an, schult unsere Motorik, Koordination und Reflexe. Das machen sich auch Forscher und Mediziner zunutze. | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+Tod auf der Straße
+
+3.368 Menschen kamen 2014 im Straßenverkehr in Deutschland ums Leben. Das Ziel des Deutschen Verkehrssicherheitsrates lautet: "Vision Zero" - niemand soll mehr im Straßenverkehr sterben. Ist das möglich? | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mehr [W] wie Wissen
+
+
+
+
+
+
+
+
+
+
+
+[W] wie Wissen Specials
+
+Bilderaktionen, Wissenstests, ein Blick hinter die Kulissen und interaktive Anwendungen - [W] wie Wissen hat auf seiner Internetseite einiges zu bieten. | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+Wiederholungstermine
+
+Sendung verpasst? Kein Problem. Das Wissensmagazin im Ersten wird jede Woche mehrmals wiederholt. | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+Sendungs-Vorschau
+
+[W]ann kommt welche Sendung mit welchem Thema? Hier finden Sie die Termine und Themen der kommenden [W] wie Wissen Sendungen. | mehr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Service
+
+Zuschauerredaktion
+Soziale Netzwerke
+Foren & Blogs
+Newsletter
+Pressedienst
+HbbTV
+Das Erste App
+mehr
+
+
+
+DasErste.de
+
+Startseite
+Sendungen
+TV-Programm
+Live
+Mediathek
+Teletext
+Service
+Über uns
+
+
+
+Gemeinsame Programme
+
+Das Erste
+Einsfestival
+EinsPlus
+tagesschau24
+ARD-alpha
+3sat
+arte
+KiKA
+phoenix
+
+
+
+Rundfunkanstalten
+
+Bayerischer Rundfunk
+Hessischer Rundfunk
+Mitteldeutscher Rundfunk
+Norddeutscher Rundfunk
+Radio Bremen
+Rundfunk Berlin-Brandenburg
+Saarländischer Rundfunk
+Südwestrundfunk
+Westdeutscher Rundfunk
+Deutsche Welle
+Deutschlandradio
+
+
+
+
+Impressum
+Hilfe
+Kontakt
+Datenschutzbestimmungen
+
+© BR | DasErste.de
+
+
+Zum Anfang
+
+
+
