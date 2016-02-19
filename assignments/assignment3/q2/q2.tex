@@ -6,13 +6,13 @@
 
 \subsection{Answer}
 \vspace{2mm}
-First, the function {\tt count\_terms} was used to count the term frequency for the given term ``shadow'' in all documents.
+First, the function {\tt count\_terms} was used to count\cite{wordcount} the term frequency for the given term ``shadow'' in all documents.
 
 \newpage
 \vspace{5mm}
 \lstinputlisting[language=Python, caption={count\_terms function}, label=listing:countterms,linerange={12-21},firstnumber=12]{q2/count.py}
 
-Ten of the results were chosen at random and stored in the {\tt uri\_counts} file. In order to easily identify which file corresponds to which URI, since the filename is the non-reversible md5-hashed URI string, a mapping from URI to filename was created using the functions in Listing \ref{listing:geturis} and serialized in the {\tt uri\_map} file using the {\tt pickle} library.\\
+Ten of the results were chosen at random and stored in the {\tt uri\_counts} file. In order to easily identify which file corresponds to which URI, since the filename is the non-reversible md5-hashed URI string, a mapping from URI to filename was created using the functions in Listing \ref{listing:geturis} and serialized in the {\tt uri\_map} file using the {\tt pickle}\cite{pickle} library.\\
 
 \lstinputlisting[language=Python, caption={get\_uris functions}, label=listing:geturis,linerange={23-37},firstnumber=23]{q2/count.py}
 
