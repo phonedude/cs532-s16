@@ -1,0 +1,1084 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgIEWFBVGwAFXFZRBwY="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:21,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),a.xhrWrappable&&t(2),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:22,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:23,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:23,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:23,ee:"QJf3ax"}],8:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:23,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:12,4:8,5:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:21,2:22,handle:"D5DuLP"}],12:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:21,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],21:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],22:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],23:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:22,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tai Lopez Official Site | How To Live The Good Life</title>
+    <meta name="description" content="What is the secret to the grand theory of the 'Good Life': Health, Wealth, Love, & Happiness? Join 1.5 million people on Tai's free book of the day newsletter. " />
+    <meta name="keywords" content="" />
+    <link href="/controller/themes/tai-bnr-opt1/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/controller/themes/tai-bnr-opt1/css/animate.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/controller/themes/tai-bnr-opt1/css/font-awesome.css" media="screen">
+    <link href="/controller/themes/tai-bnr-opt1/css/main.css?v=14343579999" rel="stylesheet" type="text/css" />
+    <link href="/controller/themes/tai-bnr-opt1/css/menu.css?v=14343579999" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/html5shiv.js"></script>
+    <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40664147-1', 'tailopez.com');
+
+ga('require','displayfeatures');
+
+  ga('send', 'pageview');
+ga('send', 'pageview','/order_confirmed');
+
+
+</script>
+
+
+<!--facebook remarketing pixel begin-->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '415050208656224']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=415050208656224&ev=PixelInitialized" /></noscript>
+<!--facebook remarketing pixel end-->
+
+
+    <script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/jquery2.1.0.js"></script>
+    <!-- Start Alexa Certify Javascript -->
+    
+    <script type="text/javascript">
+    _atrk_opts = { atrk_acct:"Io5Zl1aU8KL3L7", domain:"tailopez.com",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Io5Zl1aU8KL3L7" style="display:none" height="1" width="1" alt="" /></noscript>
+    
+    <!-- End Alexa Certify Javascript -->  
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0027/6195.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script></head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+<!--joinForm-->
+<div id="joinForm" class="modal fade desktop" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <button type="button" class="modal_close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <div class="form_joinBox step1">
+                    <style type="text/css">
+#form_container{padding-bottom: 0px;}
+         .join_row{
+         text-align: right;
+         margin-right: 25px;
+         margin-bottom: 10px;
+         /*height: 35px;*/}
+         .ele_self{width: 155px;}
+         .ct{width:159px;}
+         .mt{width:85px;}
+         .dt{width:70px;}
+         .yt{width:70px;}
+         .join_row {
+    position: relative;
+}
+.join-input{font-size: 16px;
+width: 315px;
+padding: 5px;
+font-weight: bold;
+color: #999;
+margin-bottom: 10px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+}
+.join_row label{margin-right: 5px;}
+.nar {
+/*position: absolute;
+left: -9px;
+top: 25px;
+height: 12px;
+width: 12px;
+z-index:999999;
+background: url("./templates/base_9/images/comment_nar.png") center center no-repeat;
+*/
+}
+
+.popup {
+    display: none;
+    /*position: absolute;
+    display: none;
+    color:#ccc;
+    border: 1px solid #eee;
+    width: 131px;
+    height: 40px;
+    text-align: left;
+    background: white;*/
+}
+.txt{text-align:right;}
+        </style><div id="form_container" class="popjoin_box"><form action="http://www.tailopez.com/newjoin.php" method="post" name="popjoin" id="popjoin"><input type="hidden" class="ele_self" name="page" value="1" /><input type="hidden" class="ele_self" name="subjoinid" value="198" /><input type="hidden" class="ele_self" name="joinid" value="186" /><input type="hidden" class="ele_self" name="trackid" value="88000934" /><input type="hidden" id="t_href" value="http://www.tailopez.com/flow.php?id=504&_s=56c60f2adf811&_m=2"><input type="hidden" class="ele_self" name="from" value="44813727" /><input type="hidden" name="refresh" value="no" /><input type="hidden" name="formName" value="popjoin" /><input type="hidden" name="formharh" value="56c60f2ae515a" /><div class="headTitle">Tai's Book Of The Day Newsletter <span>Daily summaries from Tai's favorite books.</span></div>
+<div class="formBox">
+    <label>Email:</label>
+    <div class="form-text">                         
+        <input placeholder="EMAIL" id="Email" re="" value="" class="textbox require ele_self trigger" name="Email" type="text">
+    </div>
+    <label>Name:</label>
+    <div class="form-text">                         
+        <input placeholder="NAME" id="FirstName" re="" value="" class="textbox require ele_self trigger" name="FirstName" type="text">
+    </div>
+    <label>Phone:</label>
+    <div class="form-text">                         
+        <input placeholder="PHONE (OPTIONAL)" re="" value="" class="textbox ele_self trigger" id="CellPhone" name="CellPhone" type="text">
+    </div>
+    <label>Revenue:</label>
+    <div class="form-text selectbox ageRange">
+        <select name="Income" id="Income" class="require ele_self trigger select" re="">
+            <option value="0">Revenue</option>
+            <option value="10">Less than $10K</option>
+            <option value="20">$10K to $50K</option>
+            <option value="30">$50K to $100K</option>
+            <option value="40">$100K to $150K</option>
+            <option value="50">$150K to $200K</option>
+            <option value="60">$200K to $250K</option>
+            <option value="70">$250K to $300K</option>
+            <option value="80">$300K to $350K</option>
+            <option value="90">$350K to $400K</option>
+            <option value="100">$400K to $450K</option>
+            <option value="110">$450K to $500K</option>
+            <option value="120">$500K to $600K</option>
+            <option value="130">$600K to $700K</option>
+            <option value="140">$700K to $800K</option>
+            <option value="150">$800K to $900K</option>
+            <option value="160">$900K to $1 Million</option>
+            <option value="170">$1 Million to $1.5 Million</option>
+            <option value="180">$1.5 Million to $2 Million</option>
+            <option value="190">$2 Million to $2.5 Million</option>
+            <option value="200">$2.5 Million to $3 Million</option>
+            <option value="210">$3 Million to $3.5 Million</option>
+            <option value="220">$3.5 Million to $4 Million</option>
+            <option value="230">$4 Million to $4.5 Million</option>
+            <option value="240">$4.5 Million to $5 Million</option>
+            <option value="250">$5 Million to $10 Million</option>
+            <option value="260">$10 Million to $20 Million</option>
+            <option value="270">$20 Million to $50 Million</option>
+            <option value="280">$50 Million to $100 Million</option>
+            <option value="290">$100 Million to $500 Million</option>
+            <option value="300">$500 Million to $1 Billion</option>
+            <option value="310">$1 Billion or more</option>
+        </select>
+        <div class="clearfix"></div>
+    </div>    
+    <div id="form-result-status" class="text-danger text-center"></div>
+
+<div class="g-recaptcha" style="display:none" data-sitekey="6LcqEwwTAAAAAHDnl8xxRdNsvJDLPTz05VUeQvFF"></div>
+
+    <div class="terms" style="margin-bottom: 10px;">
+        <input id="terms" value="1" class="require ele_self_trigger" style="float:left; margin:3px 10px 0 0;" type="checkbox"><p class="shorttxt" style="text-align:left">By checking this box, I agree to receive emails from tailopez.com (you can unsubscribe at any time).</p>
+    </div>    
+    <input value="CONTINUE" class="btn_submit" name="" type="submit"><br>
+    <p class="shorttxt">
+         By using our site, you agree to the TaiLopez.com
+         <a href="/terms_of_use.php" target="_blank">Terms of Use.</a>
+         <br>
+         <br>
+    </p>
+     <p class="shorttxt" style="font-size: 15px;">
+          Already a member?
+          <a href="/login">Sign in here »</a>
+     </p>
+</div></form></div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div id="header">
+    <div class="topPanel">
+        <div class="container">
+            <div class="leftTop">
+                                                                <a href="tel:1.800.604.2587">1.800.604.2587</a>
+                                                |
+                                                                8581 Santa Monica Blvd # 703 West Hollywood CA 90069
+                                            </div>
+            <div class="topMenu">
+                
+                                                <a href="http://www.tailopez.com/member.php">Login</a>
+                <span>|</span>                                <a href="http://www.tailopez.com/help.php">Help</a>
+                                                            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <div class="topMidPanel">
+        <div class="container" style="position: relative;">
+            <div class="num logo">
+                <a href="/index.php">
+                    <img src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1385605110.4755889ac90cad038a88b96ab27d208d.png" style="width: 197px;">
+                </a>
+            </div>
+                        <div class="join_now hidden-sm hidden-xs" id="top_join_box" style="right:15px; width: 50%;">
+                <label id="header_res_box">Get My Free <strong>&quot;Book Of The Day&quot;</strong><br>Summary Delivered To Your Inbox</label><button class="btn_join" type="submit" name="" onclick="$('#joinForm').modal('show');">JOIN NOW <em>Totally FREE!</em></button>
+            </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <img src="/controller/themes/magzine/images/mobile_nav_indi.jpg" width="38" height="28" alt="" />
+                <span>MENU</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="mb_menu">
+        <div class="container">
+        <ul>
+            <li><a href="/rd/lp=FS-1845&source=topnav67">67 Steps</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a href="/blog/about-tai-lopez">About</a></li>
+        </ul>
+            </div>
+    </div>
+
+    <div id="navbar" class="navigation navbar-collapse collapse">
+        <div class="container">
+            <div class="row posi_rel">
+                <ul class="nav navbar-nav">
+                                        <li><a  href="http://www.tailopez.com/rd/lp=FS-0929" >RETREAT</a></li>
+                                        <li><a target="_blank" href="http://www.tailopez.com/rd/lp=FS-7506" >67 STEPS</a></li>
+                                        <li><a  href="http://www.tailopez.com/flow.php?id=102&&_wid=4&source=topnav" >LIVE TALK</a></li>
+                                        <li><a target="_blank" href="https://www.tailopez.com/product.php?id=FS-1021&source=topnav" >ACCELERATOR</a></li>
+                                        <li><a target="_blank" href="http://www.tailopez.com/blog" >BLOG</a></li>
+                                        <li><a target="_blank" href="http://www.tailopez.com/movies.php" >MOVIES</a></li>
+                                        <li><a target="_blank" href="http://www.tailopez.com/books" >BOOKS</a></li>
+                                        <li><a target="_blank" href="http://www.tailopez.com/blog/about-tai-lopez" >ABOUT</a></li>
+                                        <li><a  href="http://www.tailopez.com/careers" >CAREERS</a></li>
+                                        <li><a  href="https://www.tailopez.com/shop.php?id=1" >T-SHIRT</a></li>
+                                    </ul>
+            </div>
+        </div>
+    </div>
+    <!--/.nav-collapse -->
+</div>
+
+
+
+
+
+<div id="main-content" role="main">
+    <div class="visible-xs whd join_now" id="banner_join_now_main">
+     <label id="header_res_box">Get My Free <strong>"Book Of The Day"</strong><br>Summary Delivered To Your Inbox</label>
+     <button onclick="$('#joinForm').modal('show');" name="" type="submit" class="btn_join">JOIN NOW <em>Totally FREE!</em></button>
+</div>
+
+    <!--<div id="banner">
+    <div  id="banner_box" style="width: 1300px; height: 400px; position: relative;margin: auto;">
+        <div u="slides" style="width:1300px; height: 400px;">
+
+        </div>
+    </div>
+</div>
+-->
+<div id="banner" data-videoid="Y8_wvUcN0G8" data-autoplay="0" data-controls="1">
+    <div data-ride="carousel" class="carousel slide" id="carousel-example-generic1" data-interval="false">
+        <!-- Wrapper for slides -->
+        <div role="listbox" class="carousel-inner">
+                        <div id="4" data-interval="8000" class="item banner4 active" style="background: rgba(0, 0, 0, 0) url(https://www.tailopez.com/medialib/1442105177.00fa56508eb2f1e1b7b724a02de583cf.jpg) no-repeat scroll center top / cover ">
+                <div class="container" style="position: relative;">
+                    <div class="caption">
+    <h1>THE MILLIONAIRE MENTOR:<br> HOW TO SEPARATE YOURSELF FROM THE MASSES</h1>
+    <p class="access"></p>
+    <div class="inst-access">THURSDAY, FEBRUARY 18TH AT 12PM PST (3PM EST / 8PM LONDON TIME)</div>
+    <a class="btn_readmore" href="http://www.tailopez.com/flow.php?lp=FS-5169&_wid=4&utm_medium=banner&utm_source=homepage&utm_campaign=themillionairementor&utm_content=slider">
+        save your spot <span class="arrow">
+        <img src="http://www.tailopez.com/images/efd2/files/magzine/m/fix/2015_Tai_Lopez/10july/images/arrow.png"></span>
+    </a>
+</div>
+                </div>
+            </div>
+                        <div id="14" data-interval="8000" class="item banner4 " style="background: rgba(0, 0, 0, 0) url(https://www.tailopez.com/medialib/1448394038.636b65230b1c4bbd8e763b22e0a2a08c.jpg) no-repeat scroll center top / cover ">
+                <div class="container" style="position: relative;">
+                    <div class="caption">
+    <p class="access"></p>
+    <h1>GET YOUR TICKET TODAY:<br>TAI'S PRIVATE IN-PERSON MENTOR RETREAT</h1>
+    <div class="inst-access">TUESDAY, MARCH 1ST & WEDNESDAY MARCH 2ND<br>HOLLYWOOD, CA</div>
+    <a class="btn_readmore" href="https://www.tailopez.com/product.php?id=FS-1307&utm_medium=homepage&utm_source=homepage&utm_campaign=privatementorretreatmarch1stand2nd&utm_content=slider">
+        CLAIM YOUR SPOT<span class="arrow">
+        <img src="http://www.tailopez.com/images/efd2/files/magzine/m/fix/2015_Tai_Lopez/10july/images/arrow.png"></span>
+    </a>
+</div>
+                </div>
+            </div>
+                        <div id="17" data-interval="8000" class="item banner " style="background: rgba(0, 0, 0, 0) url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454629957.02c709e8d3d8b523deb306f297a76c84.jpg) no-repeat scroll center top / cover ">
+                <div class="container" style="position: relative;">
+                    <div class="caption caption-alt">
+    <h2>Win A New Car</h2>
+    <h3>Here is how to win my <span style="color: #ffcc00; top:0;">snapchat</span> giveaway</h3>
+    <ol class="snapBig">
+        <li>Follow my Snapchat: Tailopez1</li>
+     	<li>Watch my story to see if you're a semi-finalist winner of the day</li>
+     	<li>The car winner will be announced on my Snapchat on Febuary 29th</li>
+    </ol>
+    <a href="http://bit.do/tailopez1banner" class="btn_readmore">Click To Win <span class="arrow"> 
+        <img style="margin-top:2px;" src="/controller/themes/tai-bnr-opt1/images/arrow.png" /></span>
+    </a>
+</div>
+                </div>
+            </div>
+                        <div id="2" data-interval="8000" class="item banner " style="background: rgba(0, 0, 0, 0) url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1432866418.ac02fb2965ed284b09a1f3eb7b4fd736.jpg) no-repeat scroll center top / cover ">
+                <div class="container" style="position: relative;">
+                    <div class="caption">
+
+      <p class="access"><a style="color:#ffffff;text-decoration:none;" href="http://www.tailopez.com/rd/lp=FS-7303&ad=67stepsbannerblue">CLICK HERE TO ACCESS</a></p>
+                 <h1>67 STEPS </h1>
+                    <a href="http://www.tailopez.com/rd/lp=FS-7303" class="btn_readmore">Access now <span class="arrow"> <img src="/controller/themes/tai-bnr-opt1/images/arrow.png" /></span></a>
+                    </div>
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+<div class="followers" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+    <div class="container">
+        <div class="row">
+                        <div class="members">
+                                <span>700,931</span> Members
+                            </div>
+                        <div class="business">
+                                <span>12,485</span> Connections
+                            </div>
+                        <div class="fb_likes">
+                                <a href="https://www.facebook.com/pages/Tai-Lopez/246686818686875" >
+                                <span>396,207</span> Page Likes
+                                </a>
+                            </div>
+                        <div class="tweet_follow">
+                                <a href="https://twitter.com/tailopez/" >
+                                <span>188,310</span> Followers
+                                </a>
+                            </div>
+                        <div class="instagram">
+                                <a href="https://instagram.com/tailopez/?ref=badge" >
+                                <span>329,888</span> Followers
+                                </a>
+                            </div>
+                        <div class="youtube">
+                                <a href="https://www.youtube.com/user/tailopezofficial" >
+                                <span>454,813</span> Subscribers
+                                </a>
+                            </div>
+                    </div>
+    </div>
+</div>
+
+
+<div class="container" id="advertise">
+    <div align="center" class="row">
+        <div class="col-md-12">
+            <a href="/flow.php?lp=FS-7506&source=banner">
+                <img width="100%" class="imptop img_display1" alt="" src="/controller/themes/tai-bnr-opt1/images/67step-big-Banner01.jpg">
+                <img width="100%" class="imptop img_display" alt="" src="/controller/themes/tai-bnr-opt1/images/67step-small-Banner01.jpg">
+            </a>
+        </div>
+    </div>
+    <br>
+    <div align="center" class="row">
+        <div class="col-md-12">
+            <a target="_blank" href="https://www.youtube.com/watch?v=7bB_fVDlvhc&feature=youtu.be">
+                <img width="100%" class="img_display1" alt="" src="/controller/themes/tai-bnr-opt1/images/advt.jpg">
+                <img class="img_display" src="/controller/themes/tai-bnr-opt1/images/tedx-small.jpg">
+            </a>
+        </div>
+    </div>
+</div><div class="container">
+
+    <div class="row">
+        <div id="listing" class="transitions-enabled clearfix">
+                        <!--<div  class="box">
+                <div class="date">February 13, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/the-one-secret-to-being-rich">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455488530.d258d504913a81e4c81d530fd1e45ff6.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455488530.d258d504913a81e4c81d530fd1e45ff6.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/the-one-secret-to-being-rich">The One Secret To Being Rich</a></h2>
+                    <a href="http://www.tailopez.com/blog/the-one-secret-to-being-rich" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 13, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/the-one-secret-to-being-rich"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455488530.d258d504913a81e4c81d530fd1e45ff6.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455488530.d258d504913a81e4c81d530fd1e45ff6.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/the-one-secret-to-being-rich">The One Secret To Being Rich</a></h2>
+                    <a href="http://www.tailopez.com/blog/the-one-secret-to-being-rich" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 11, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/chris-paul-tai-lopez">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455228717.36e6e8b402b91f91bc14066a1be0e7cd.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455228717.36e6e8b402b91f91bc14066a1be0e7cd.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/chris-paul-tai-lopez">Chris Paul Playing Tai Lopez H.O.R.S.E</a></h2>
+                    <a href="http://www.tailopez.com/blog/chris-paul-tai-lopez" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 11, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/chris-paul-tai-lopez"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455228717.36e6e8b402b91f91bc14066a1be0e7cd.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455228717.36e6e8b402b91f91bc14066a1be0e7cd.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/chris-paul-tai-lopez">Chris Paul Playing Tai Lopez H.O.R.S.E</a></h2>
+                    <a href="http://www.tailopez.com/blog/chris-paul-tai-lopez" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 10, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/conqueror-or-coward">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455158898.dd411a2ec8c63773b15d859985f2c16b.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455158898.dd411a2ec8c63773b15d859985f2c16b.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/conqueror-or-coward">Are You A Conqueror Or A Coward?</a></h2>
+                    <a href="http://www.tailopez.com/blog/conqueror-or-coward" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 10, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/conqueror-or-coward"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455158898.dd411a2ec8c63773b15d859985f2c16b.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455158898.dd411a2ec8c63773b15d859985f2c16b.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/conqueror-or-coward">Are You A Conqueror Or A Coward?</a></h2>
+                    <a href="http://www.tailopez.com/blog/conqueror-or-coward" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 7, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/like-tai-lopez">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454876545.c018daff2d2cda2ca9eccf4bad434ae7.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454876545.c018daff2d2cda2ca9eccf4bad434ae7.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/like-tai-lopez">Why You Should Network</a></h2>
+                    <a href="http://www.tailopez.com/blog/like-tai-lopez" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 7, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/like-tai-lopez"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454876545.c018daff2d2cda2ca9eccf4bad434ae7.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454876545.c018daff2d2cda2ca9eccf4bad434ae7.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/like-tai-lopez">Why You Should Network</a></h2>
+                    <a href="http://www.tailopez.com/blog/like-tai-lopez" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 5, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/tai-lopez-on-dating">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454706846.d2eee6f225cd78df2ab0ffc19b726b6f.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454706846.d2eee6f225cd78df2ab0ffc19b726b6f.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/tai-lopez-on-dating">Do Pickup Lines Work?</a></h2>
+                    <a href="http://www.tailopez.com/blog/tai-lopez-on-dating" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 5, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/tai-lopez-on-dating"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454706846.d2eee6f225cd78df2ab0ffc19b726b6f.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454706846.d2eee6f225cd78df2ab0ffc19b726b6f.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/tai-lopez-on-dating">Do Pickup Lines Work?</a></h2>
+                    <a href="http://www.tailopez.com/blog/tai-lopez-on-dating" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 3, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/3-secrets-to-dealing-with-frustrating-people">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454525918.f9c4c953802c2ed8bd464a9806701a50.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454525918.f9c4c953802c2ed8bd464a9806701a50.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/3-secrets-to-dealing-with-frustrating-people">3 Secrets To Deal With Annoying People</a></h2>
+                    <a href="http://www.tailopez.com/blog/3-secrets-to-dealing-with-frustrating-people" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 3, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/3-secrets-to-dealing-with-frustrating-people"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454525918.f9c4c953802c2ed8bd464a9806701a50.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454525918.f9c4c953802c2ed8bd464a9806701a50.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/3-secrets-to-dealing-with-frustrating-people">3 Secrets To Deal With Annoying People</a></h2>
+                    <a href="http://www.tailopez.com/blog/3-secrets-to-dealing-with-frustrating-people" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 2, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/best-advice-life-on-fire">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454449250.a2136d01f55edfc9f0df6e8bd743ad4d.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454449250.a2136d01f55edfc9f0df6e8bd743ad4d.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/best-advice-life-on-fire">Best Advice I'd Give My 20 Year Old Self</a></h2>
+                    <a href="http://www.tailopez.com/blog/best-advice-life-on-fire" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 2, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/best-advice-life-on-fire"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454449250.a2136d01f55edfc9f0df6e8bd743ad4d.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454449250.a2136d01f55edfc9f0df6e8bd743ad4d.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/best-advice-life-on-fire">Best Advice I'd Give My 20 Year Old Self</a></h2>
+                    <a href="http://www.tailopez.com/blog/best-advice-life-on-fire" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">February 1, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/should-you-fight-back">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454367639.1454367639.jpg);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454367639.1454367639.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/should-you-fight-back">Should You Fight Back?</a></h2>
+                    <a href="http://www.tailopez.com/blog/should-you-fight-back" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">February 1, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/should-you-fight-back"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454367639.1454367639.jpg)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454367639.1454367639.jpg" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/should-you-fight-back">Should You Fight Back?</a></h2>
+                    <a href="http://www.tailopez.com/blog/should-you-fight-back" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+                        <!--<div  class="box">
+                <div class="date">January 30, 2016</div>
+                <div class="item">
+                    <a href="http://www.tailopez.com/blog/is-your-life-heaven-or-hell">
+                        <img class="blog_eyecatcher" style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454273903.b1bf6a89fb82e2df19201e312f4603f0.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454273903.b1bf6a89fb82e2df19201e312f4603f0.png" alt="" />
+                    </a>
+                </div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/is-your-life-heaven-or-hell">Is Your Life Heaven Or Hell?</a></h2>
+                    <a href="http://www.tailopez.com/blog/is-your-life-heaven-or-hell" class="view_more">Read more</a>
+                    <div class="clear"></div>
+                </div>
+            </div>-->
+
+
+            <div class="box masonry-brick">
+                <div class="date">January 30, 2016</div>
+                <div class="item"><a href="http://www.tailopez.com/blog/is-your-life-heaven-or-hell"><img class="blog_eyecatcher" style="background:url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454273903.b1bf6a89fb82e2df19201e312f4603f0.png)  repeat scroll center center / cover " src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1454273903.b1bf6a89fb82e2df19201e312f4603f0.png" alt=""></a></div>
+                <div class="desc">
+                    <h2><a style='color:#040404' href="http://www.tailopez.com/blog/is-your-life-heaven-or-hell">Is Your Life Heaven Or Hell?</a></h2>
+                    <a href="http://www.tailopez.com/blog/is-your-life-heaven-or-hell" class="view_more">Read more</a>
+                    <!--<div class="viewer"><i class="fa fa-eye"></i> 16,450</div>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+
+            
+
+
+
+
+
+        </div>
+        <div class="loading" style="display: none;">
+            <span>load more</span>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<div class="best_tai">
+    <div class="container">
+<div class="row">
+    <h3>Best Of Tailopez</h3>
+        <div  class="box">
+        <div class="date">February 13, 2016</div>
+        <div class="item">
+            <a href="http://www.tailopez.com/blog/the-one-secret-to-being-rich">
+            <img class="blog_eyecatcher"  style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455488530.d258d504913a81e4c81d530fd1e45ff6.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455488530.d258d504913a81e4c81d530fd1e45ff6.png" alt="" />
+            </a>
+        </div>
+        <div class="desc">
+            <h2><a style='color:#040404' href="http://www.tailopez.com/blog/the-one-secret-to-being-rich">The One Secret To Being Rich</a></h2>
+            <a href="http://www.tailopez.com/blog/the-one-secret-to-being-rich" class="view_more">Read more</a>
+            <div class="clear"></div>
+        </div>
+    </div>
+        <div  class="box">
+        <div class="date">February 11, 2016</div>
+        <div class="item">
+            <a href="http://www.tailopez.com/blog/chris-paul-tai-lopez">
+            <img class="blog_eyecatcher"  style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455228717.36e6e8b402b91f91bc14066a1be0e7cd.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455228717.36e6e8b402b91f91bc14066a1be0e7cd.png" alt="" />
+            </a>
+        </div>
+        <div class="desc">
+            <h2><a style='color:#040404' href="http://www.tailopez.com/blog/chris-paul-tai-lopez">Chris Paul Playing Tai Lopez H.O.R.S.E</a></h2>
+            <a href="http://www.tailopez.com/blog/chris-paul-tai-lopez" class="view_more">Read more</a>
+            <div class="clear"></div>
+        </div>
+    </div>
+        <div  class="box">
+        <div class="date">February 10, 2016</div>
+        <div class="item">
+            <a href="http://www.tailopez.com/blog/conqueror-or-coward">
+            <img class="blog_eyecatcher"  style="background: url(http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455158898.dd411a2ec8c63773b15d859985f2c16b.png);background-color: #fff;background-position: center center;background-size: cover;" src="http://5d9e9f5f927e41e7a64c-de8da85d2ccee5de1292ed7f6f96d59a.r86.cf1.rackcdn.com/medialib/1455158898.dd411a2ec8c63773b15d859985f2c16b.png" alt="" />
+            </a>
+        </div>
+        <div class="desc">
+            <h2><a style='color:#040404' href="http://www.tailopez.com/blog/conqueror-or-coward">Are You A Conqueror Or A Coward?</a></h2>
+            <a href="http://www.tailopez.com/blog/conqueror-or-coward" class="view_more">Read more</a>
+            <div class="clear"></div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+
+<div id="tai_posts">
+    <div class="container">
+        <div class="row">
+            <h3>Social Media</h3>
+
+            <div class="box">
+                <h2>Instagram Photos</h2>
+                <div class="desc" align="center">
+                    <div style="text-align: center"><a class="ig-b- ig-b-v-24" href="http://instagram.com/tailopez?ref=badge" target="_blank"></a></div>
+                    <iframe src="/plugins/instagram2.php?url=http://instagram.com/tailopez?ref=badge&limit=16" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:346px"></iframe>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <h2>Recent Tweets</h2>
+                <div class="desc" align="center">
+                    <iframe scrolling="no" frameborder="0" id="twitter-widget-0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1384205748.html#_=1384481117901&id=twitter-widget-0&lang=en&screen_name=tailopez&show_count=true&show_screen_name=true&size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 120px; height: 20px;margin-bottom:5px; margin: auto;"></iframe>
+                    <div style="clear: both;"></div>
+                    <a class="twitter-timeline" href="https://twitter.com/tailopez" data-widget-id="476320542446743553">Tweets by @tailopez</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <div class="box">
+                 <h2>Facebook Posts</h2>
+                <div class="desc" align="center">
+                    <div class="fb-page" data-href="https://www.facebook.com/TaiLopezOfficial/" data-height="370" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/TaiLopezOfficial/"><a href="https://www.facebook.com/TaiLopezOfficial/">Tai Lopez</a></blockquote></div></div>
+                    <!--<iframe scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:100%; height:400px;" src="<div class="fb-page" data-href="https://www.facebook.com/TaiLopezOfficial/" data-height="370" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/TaiLopezOfficial/"><a href="https://www.facebook.com/TaiLopezOfficial/">Tai Lopez</a></blockquote></div></div>"></iframe>-->
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .ig-b- { display: inline-block;} .ig-b- img { visibility: hidden; } .ig-b-:hover { background-position: 0 -60px; } .ig-b-:active { background-position: 0 -120px; } .ig-b-v-24 { width: 137px; height: 24px; background: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24.png) no-repeat 0 0; } @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) { .ig-b-v-24 { background-image: url(//badges.instagram.com/static/images/ig-badge-view-sprite-24@2x.png); background-size: 160px 178px; } }
+    
+.fb-page, 
+.fb-page span, 
+.fb-page span iframe[style] { 
+    width: 100% !important; 
+}
+    
+</style>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div id="footer">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 rightBrder">
+                    <div class="helpline">need help Call Us    <span>1.800.604.2587</span></div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="follows">
+                        <span><img width="288" height="23" alt="" src="/controller/themes/magzine/images/follows_head.gif"> </span>
+                        <a target="_blank" class="fb_icon" href="https://www.facebook.com/TaiLopezOfficial">Facebook</a>
+                        <a target="_blank" class="tweet_icon" href="https://twitter.com/tailopez">Facebook</a>
+                        <a target="_blank" class="gplus_icon" href="https://plus.google.com/108976443926254372785/posts">Facebook</a>
+                        <!--<a class="pin_icon" href="javascript:;">Facebook</a>-->
+                        <a target="_blank" class="tube_icon" href="https://www.youtube.com/user/tailopezofficial">Facebook</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="footerNav">
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li class="nobrder" style="width: 68%; margin: auto">
+                                            <a href="https://www.tailopez.com/shop.php?id=1">T-SHIRT</a> |                                             <a href="http://www.tailopez.com/careers">CAREERS</a> |                                             <a href="http://www.tailopez.com/blog/about-tai-lopez">ABOUT</a> |                                             <a href="http://www.tailopez.com/books">BOOKS</a> |                                             <a href="http://www.tailopez.com/blog">BLOG</a> |                                             <a href="http://www.tailopez.com/movies.php">MOVIES</a> |                                             <a href="https://www.tailopez.com/product.php?id=FS-1021&source=topnav">ACCELERATOR</a> |                                             <a href="http://www.tailopez.com/flow.php?id=102&&_wid=4&source=topnav">LIVE TALK</a> |                                             <a href="http://www.tailopez.com/rd/lp=FS-7506">67 STEPS</a> |                                             <a href="http://www.tailopez.com/rd/lp=FS-0929">RETREAT</a> |                                             <a href="http://www.tailopez.com/contact.php">HELP</a> |                                             <a href="http://www.tailopez.com/member.php">LOGIN</a>                                        </li>
+                    <li class="nobrder policy">
+                        Policies:
+                        <a onclick="window.open('http://www.tailopez.com/terms_of_use.php','','height=400,width=1100,top=0,left=0,toolbar=no,menubar=no,scrollbars=yes, resizable=yes,location=no, status=no')" href="javascript:;"> TERMS OF USE</a> |
+                        <a onclick="window.open('http://www.tailopez.com/privacy.php','','height=400,width=1100,top=0,left=0,toolbar=no,menubar=no,scrollbars=yes, resizable=yes,location=no, status=no');" href="javascript:;">PRIVACY POLICY</a>
+                        <span class="copyright">
+                        &copy; 2011-2016 Tailopez.com.
+                        </span>
+                    </li>
+                </ul>
+                <div style="color:#fff;"><div class="footer_year">
+    1.800.604.2587 | <a href="https://www.google.com/maps/place/8581+Santa+Monica+Blvd,+West+Hollywood,+CA+90069/data=!4m2!3m1!1s0x80c2bebb05f8fe33:0xc54d0b9d7d1c1f?sa=X&ei=ZS3TVKnHFcT6oQS3xIDABw&ved=0CB8Q8gEwAA" target="_blank">8581 Santa Monica Blvd # 703 West Hollywood CA 90069</a>
+    <br>
+    <br>
+    <a href="https://www.google.com/maps/place/8581+Santa+Monica+Blvd,+West+Hollywood,+CA+90069/data=!4m2!3m1!1s0x80c2bebb05f8fe33:0xc54d0b9d7d1c1f?sa=X&ei=ZS3TVKnHFcT6oQS3xIDABw&ved=0CB8Q8gEwAA" target="_blank"><img src="https://www.tailopez.com/medialib/1423126304.afb2bff6c0d9451c7e827f3d2efacae1.jpeg" width="256" height="133" /></a>
+    <br>
+   
+</div>
+
+<p class="footer-detail">
+    <strong>IMPORTANT: Earnings and Legal Disclaimers</strong><br><br>
+    Earnings and income representations made by Tai Lopez, tailopez.com, the 67 Steps program, 67 Steps upsell programs, and their advertisers/sponsors (collectively, "67 Steps") are aspirational statements only of your earnings potential.  The success of Tai Lopez, testimonials and other examples used are exceptional results only which are not typical of the average person and are not intended to be and are not a guarantee that you or others will achieve the same results.  Individual results will always vary and yours will depend entirely on your individual capacity, work ethic, business skills and experience, level of motivation, diligence in applying the 67 Steps, the economy, the normal and unforeseen risks of doing business, and other factors.
+    <br>
+    <br>
+    67 Steps is not responsible for your actions.  You are solely responsible for your own moves and decisions and the evaluation and use of our products and services should be based on your own due diligence.  You agree that 67 Steps is not liable to you in any way for your results in using our products and services.  See our <a href="http://www.tailopez.com/terms_of_use.php" > Terms & Conditions </a> for our full disclaimer of liability and other restrictions.
+    <br>
+    <br>
+    67 Steps, including Tai Lopez personally, may receive compensation for products and services they recommend to you.  Tai Lopez personally uses a recommended resource unless it states otherwise.  If you do not want 67 Steps and Tai Lopez to be compensated for a recommendation, then we advise that you search online for the item through a non-affiliate link.
+    <br>
+    <br>
+    Do you have questions about 67 Steps?  Are you wondering if the program will work for you.  Give us a call at 323-602-0687.  If you live outside the U.S., call 800-604-2587.  We will be happy to discuss your goals and how the 67 Steps program may help you."
+   
+</p>
+<br>
+<br>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 948728522;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/948728522/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 979965489;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/979965489/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+<!--All JavaScript Here-->
+
+<script type="text/javascript">
+    if(typeof(site_url)=="undefined")
+    {
+        var site_url = "";
+    }
+</script>
+
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/jquery2.1.0.js"></script>
+<script type="text/javascript" src="/controller/themes/magzine/js/join_js.js"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/bootstrap.js"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/bootstrapValidator.js"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/wow.min.js"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/smoothscroll.js"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/jquery.smooth-scroll.js"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+<script type="text/javascript" src="/controller/themes/tai-bnr-opt1/js/main.js"></script>
+
+<script>
+    setTimeout(
+            function()
+            {
+                $('#helpModal').modal('show');
+            }, 500);
+    $(function(){
+        $.fn.isOnScreen = function(){
+
+            var win = $(window);
+
+            var viewport = {
+                top : win.scrollTop(),
+                left : win.scrollLeft()
+            };
+            viewport.right = viewport.left + win.width();
+            viewport.bottom = viewport.top + win.height();
+
+            var bounds = this.offset();
+            bounds.right = bounds.left + this.outerWidth();
+            bounds.bottom = bounds.top + this.outerHeight();
+
+            return (!(viewport.right<bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+        };
+        var ISLOAD=0;
+        var p=2;
+        var ISEND=0;
+        $(window).scroll(function() {
+            if ($('.best_tai').isOnScreen()&&ISLOAD==0&&ISEND==0) {
+                $('.loading').show();
+                ISLOAD=1;
+                $.ajax({
+                    url:'/controller/plugins/v2/Blog/ajax.php?p=' + p,
+                    success:function(res){
+                        p=p+1;
+                        if(res=='')ISEND=1;
+                        if(res!='')
+                        {
+                            var obj=jQuery.parseJSON(res);
+                            $('#listing').append(obj.str);
+                            $('#listing').masonry({
+                                itemSelector: '.box',
+                                columnWidth: 1,
+                                isAnimated: true
+                            });
+                            $('#listing').masonry('reload');
+                            if(obj.str=='')
+                            {
+                                ISEND=1;
+                            }
+
+                        }
+                    },
+                    complete:function(obj){
+                        ISLOAD=0;
+                        $('.loading').hide();
+                    }
+                });
+            }
+        });
+    })
+
+$(window).resize(function(){
+ setTimeout(function(){
+   $('#listing').masonry('reload');
+ },1000);
+});
+    var player;
+    function onYouTubeIframeAPIReady()
+    {
+        var videoId=$('#banner').data('videoid');
+        if(videoId=='')videoId='7bB_fVDlvhc';
+
+        // if we found our autoplay value set it to that value else the default which is 0 for no autoplay
+        var autoplay = $('#banner').data('autoplay') == '1' ? $('#banner').data('autoplay') : 0;
+        // same logic for controls except the default for show controls is 1 for on
+        var controls = $('#banner').data('controls') == '0' ? $('#banner').data('controls') : 1;
+
+        if($("#youtubeplayer").length > 0)
+        {
+            player = new YT.Player('youtubeplayer', {
+                height: '320',
+                width: '565',
+                videoId:videoId,
+                playerVars: { 'autoplay': autoplay, 'controls': controls },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }else{
+            onPlayerReady();
+        }
+    }
+    var slider_index=0;
+    var pause=false;
+    function onPlayerReady()
+    {
+        setTimeout('playslider()',8000);
+    }
+    function playslider()
+    {
+	if(typeof window.sliderHandle!= "undefined")
+		clearTimeout(window.sliderHandle);
+	delete window.sliderHandle;
+        if(!pause)
+        {
+            $('.carousel').carousel('next');
+            if(slider_index==$('.carousel').children('.carousel-inner').find('.item').length)
+            {
+                slider_index=0;
+            }
+            var _interval =$($('.carousel').children('.carousel-inner').find('.item')[slider_index]).data('interval');
+            slider_index++;
+            window.sliderHandle=setTimeout('playslider()',_interval);
+        }
+    }
+
+    function onPlayerStateChange()
+    {
+        var state=player.getPlayerState();
+        if(state=='3'||state=='1'||state=='-1')
+        {
+            $('.carousel').carousel('pause');
+            pause=true;
+        }else{
+            pause=false;
+            setTimeout('playslider()',8000);
+        }
+    }
+
+    $(function(){
+        $('.join_now').show();
+        onYouTubeIframeAPIReady();
+    })
+
+</script>
+
+<!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('3192-298-10-9167');/*]]>*/</script><noscript><a href="https://www.olark.com/site/3192-298-10-9167/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+<div id="body_pixel" style="display:none;"><script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">twttr.conversion.trackPid('ntg5l', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=ntg5l&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=ntg5l&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+<!--SteelHouse Tracking Pixel-->
+<!-- INSTALL ON ALL PAGES OF SITE-->
+<script type="text/javascript">
+(function(){"use strict";var e=null,b="4.0.0",
+n="11664",
+additional="",
+t,r,i;try{t=top.document.referer!==""?encodeURIComponent(top.document.referrer.substring(0,2048)):""}catch(o){t=document.referrer!==null?document.referrer.toString().substring(0,2048):""}try{r=window&&window.top&&document.location&&window.top.location===document.location?document.location:window&&window.top&&window.top.location&&""!==window.top.location?window.top.location:document.location}catch(u){r=document.location}try{i=parent.location.href!==""?encodeURIComponent(parent.location.href.toString().substring(0,2048)):""}catch(a){try{i=r!==null?encodeURIComponent(r.toString().substring(0,2048)):""}catch(f){i=""}}var l,c=document.createElement("script"),h=null,p=document.getElementsByTagName("script"),d=Number(p.length)-1,v=document.getElementsByTagName("script")[d];if(typeof l==="undefined"){l=Math.floor(Math.random()*1e17)}h="dx.steelhousemedia.com/spx?"+"dxver="+b+"&shaid="+n+"&tdr="+t+"&plh="+i+"&cb="+l+additional;c.type="text/javascript";c.src=("https:"===document.location.protocol?"https://":"http://")+h;v.parentNode.insertBefore(c,v)})()
+</script><!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 943968147;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script async type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/943968147/?value=0&guid=ON&script=0"/>
+</div>
+</noscript>
+</div><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e868546007","applicationID":"3587307","transactionName":"bgAEYBdRD0NVVBYMWVdKM0YMHwheUFIaS0ZRFQ==","queueTime":0,"applicationTime":2028,"atts":"QkcHFl9LHE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-GB" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-GB" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-GB" prefix="og: http://ogp.me/ns#">
+<![endif]-->
+
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.content-loop.com/wp-content/themes/brainsonic/style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,700,400italic' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" type="text/css" media="all" href="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/ie9.css" />
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/html5.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" media="all" href="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/ie8.css" />
+     <![endif]-->
+
+
+	
+        <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
+
+      <!--
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+     -->
+    <script>
+      window.twttr = (function (d,s,id) {
+          var t, js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id=id;
+          js.src="//platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+		}(document, "script", "twitter-wjs"));
+    </script>
+
+
+	    <script type="text/javascript">
+	(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=665818603439650";
+    fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+  	<script src="//platform.linkedin.com/in.js" type="text/javascript">
+		api_key: "vxhfebby3cub"
+		noAuth: true
+		lang: en_US
+	</script>
+	
+
+      <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  </script>
+  <script type="text/javascript">
+    function social_traking(network, action) {
+      ga('send', {
+        'hitType': 'social',
+        'socialNetwork': network,
+        'socialAction': action,
+        'socialTarget': window.location.href,
+        //'page': jQuery(document).find("title").text();
+        'page': jQuery(document).find("title").text()
+      });
+    }
+  </script>
+    <script type="text/javascript">
+    function trackPlusOne(params) {
+      social_traking('Google-PlusOne', jsonParam.state);
+    }
+  </script>
+    <script type="text/javascript">
+    window.fbAsyncInit = function() {
+      FB.Event.subscribe('edge.create', function(href, widget) {
+        social_traking('Facebook', 'Like');
+      });
+      FB.Event.subscribe('edge.remove', function(href, widget) {
+        social_traking('Facebook', 'Unlike');
+      });
+      FB.Event.subscribe('message.send', function(href, widget) {
+        social_traking('Facebook', 'Send');
+      });
+    }
+  </script>
+    <script type="text/javascript">
+    function track_tweet( event ) {
+      if ( event ) {
+        social_traking('Twitter', 'Tweet');
+      }
+    }
+    function track_follow( event ) {
+      if ( event ) {
+        social_traking('Twitter', 'Follow');
+      }
+    }
+    twttr.ready(function (twttr) {
+      twttr.events.bind('tweet', track_tweet);
+      twttr.events.bind('follow', track_follow);
+    });
+  </script>
+    <script type="text/javascript">
+    function trackLinkedInShare() {
+      social_traking('LinkedIn', 'Share');
+    }
+  </script>
+    <script src="http://analytics.newscred.com/analytics_bef35854862f40309fb183c1d015dc99.js"></script>
+
+    
+  
+  
+<!--Plugin WP Missed Schedule 2013.1231.2013 Active - Tag 6707293c0218e2d8b7aa38d418ffa608-->
+
+<!-- This website is patched against a big problem not solved from WordPress 2.5+ to date -->
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.4.24 - http://yoast.com/wordpress/seo/ -->
+<title>Does Social Media Matter? (Yes, Because Its Changing) - Content Loop</title>
+<meta name="description" content="business strategy, Digital Strategies, social media, Technology and Transformation"/>
+<meta name="keywords" content="business strategy, Digital Strategies, social media, Technology and Transformation"/>
+<link rel="canonical" href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Does Social Media Matter? (Yes, Because Its Changing) - Content Loop" />
+<meta property="og:description" content="business strategy, Digital Strategies, social media, Technology and Transformation" />
+<meta property="og:url" content="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/" />
+<meta property="og:site_name" content="Content Loop" />
+<meta property="article:tag" content="business strategy" />
+<meta property="article:tag" content="Digital Strategies" />
+<meta property="article:tag" content="social media" />
+<meta property="article:tag" content="Technology and Transformation" />
+<meta property="article:section" content="Business &amp; Tech" />
+<meta property="article:section" content="Digital Transformation" />
+<meta property="article:section" content="Technology" />
+<meta property="article:published_time" content="2016-02-10T20:46:20+00:00" />
+<meta property="article:modified_time" content="2016-02-11T10:29:53+00:00" />
+<meta property="og:image" content="http://www.content-loop.com/wp-content/uploads/2016/02/wpid-thumbnail-22e0ef2ed04af3d3810f15fceb60466b.jpeg" />
+<meta property="og:image" content="https://pixel.newscred.com/px.gif?key=YXJ0aWNsZT0wNjdiZWMwMGFhOWZmMjI2YWRjYWNiZWMxNzAwY2Y0OQ==" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Content Loop &raquo; Does Social Media Matter? (Yes, Because Its Changing) Comments Feed" href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/feed/" />
+<link rel='stylesheet' id='ayvpp-admin-css'  href='http://www.content-loop.com/wp-content/plugins/automatic-youtube-video-posts/css/style.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='linkedin-oauth2-plugin-styles-css'  href='http://www.content-loop.com/wp-content/plugins/linkedin-oauth2/public/assets/css/public.css?ver=1.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='slideshare-posts-import-plugin-styles-css'  href='http://www.content-loop.com/wp-content/plugins/slideshare-posts-import/public/assets/css/public.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fancybox-style-css'  href='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/jquery.fancybox.css?ver=3.8.1' type='text/css' media='all' />
+<link rel='stylesheet' id='base_styles-css'  href='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/base.css' type='text/css' media='all' />
+<link rel='stylesheet' id='typo_styles-css'  href='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/typography.css' type='text/css' media='all' />
+<link rel='stylesheet' id='grid_styles-css'  href='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bsStyles-css'  href='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='mobile_styles-css'  href='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/css/mobile.css' type='text/css' media='all' />
+<script type="text/javascript">var ayvpp_root = "http://www.content-loop.com";</script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-includes/js/comment-reply.min.js?ver=3.8.1'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js?ver=1.11.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var AjaxParams = {"logout_url":"http:\/\/www.content-loop.com\/wp-admin\/admin-ajax.php?action=linkedin_logout","share_api_url":"http:\/\/www.content-loop.com\/wp-admin\/admin-ajax.php?action=post_linkedin_share","share_nonce":"006a7fcb18"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/plugins/linkedin-oauth2/public/assets/js/public.js?ver=1.1.0'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/plugins/slideshare-posts-import/public/assets/js/public.js?ver=1.0.0'></script>
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js?ver=1.10.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var bsThemeCore = {"analyticsID":"UA-39280363-2","analyticsDomain":"content-loop.com"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/bs-theme-core.js?ver=1.0'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.content-loop.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.content-loop.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 3.8.1" />
+<link rel='shortlink' href='http://www.content-loop.com/?p=163670' />
+<meta name="twitter:card" content="summary">
+<meta name="twitter:url" content="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/">
+<meta name="twitter:title" content="Does Social Media Matter? (Yes, Because Its Changing)">
+<meta name="twitter:description" content="Last week — at an industry event that I helped to organize in Silicon Valley — the great marketing strategist Geoffrey Moore was asked to reflect on the impact of one of the most enduring catch phrases in business. I’m not talking about “crossing the chasm,” the phrase that Moore made famous and that is now part of the general business lexicon. I’m talking about “IT doesn’t matter,” the title of a 2003 HBR article">
+<meta name="twitter:image" content="http://www.content-loop.com/wp-content/uploads/2016/02/wpid-thumbnail-22e0ef2ed04af3d3810f15fceb60466b.jpeg">
+<meta name="twitter:image:width" content="2500">
+<meta name="twitter:image:height" content="1668">
+
+
+  <meta name="keywords" content="business strategy, Digital Strategies, social media, Technology and Transformation"/></head>
+
+<body class="single single-post postid-163670 single-format-standard">
+<div class="super-container full-width" style="">
+
+
+		<div id="topnav" class="full-width">
+		<div class="container nomobile">
+      <a href="http://www.content-loop.com/" data-tracking="{&quot;category&quot;:&quot;ContentLoop Logo&quot;,&quot;label&quot;:&quot;ContentLoop Logo&quot;,&quot;action&quot;:&quot;click&quot;}" class="three full name">Content <span>Loop</span></a>
+
+			<div class="nine full">
+				<ul id="menu-menu-1" class="menu"><li id="menu-item-44663" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-44663"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;Home&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com">Home</a></li>
+<li id="menu-item-44668" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-44668"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nSocial&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/social/">Social</a></li>
+<li id="menu-item-44667" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-44667"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nMobile&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/mobile/">Mobile</a></li>
+<li id="menu-item-45576" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-45576"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nAnalytics&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/analytics/">Analytics</a></li>
+<li id="menu-item-44666" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-44666"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nCloud&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/cloud/">Cloud</a></li>
+</ul>			</div>
+			<div class="three full nomobile search">
+				<form method="get" data-tracking="{&quot;category&quot;:&quot;Header - search&quot;,&quot;label&quot;:&quot;Search&quot;,&quot;action&quot;:&quot;click&quot;}" class="bg2" action="http://www.content-loop.com">
+	<input type="submit" class="button" name="send" value="" />
+	<input type="text" class="field" name="s" value="Find something on Content Loop" style=""/>
+</form>
+			</div>
+      <div class="tooltip_over five full">
+          <span class="text">
+          The only continuous source of technology and business news          </span>
+          <span class="arrow"></span>
+      </div>
+		</div>
+
+		<div class="container mobile">
+			<div class="header_btn_mobile">
+        <a href="http://www.content-loop.com/" data-tracking="{&quot;category&quot;:&quot;ContentLoop Logo&quot;,&quot;label&quot;:&quot;ContentLoop Logo&quot;,&quot;action&quot;:&quot;click&quot;}" class="six full name">Content <span>Loop</span></a>
+
+				<div class="six full btn">
+					<div class="mbtn search_btn"></div>
+					<div class="mbtn menu_btn"></div>
+					<div class="mbtn share_btn"></div>
+				</div>
+
+        <div class="tooltip_over full">
+            <span class="text">
+            The only continuous source of technology and business news            </span>
+            <span class="arrow"></span>
+        </div>
+
+			</div>
+
+			<div class="full header_box_mobile">
+				<img class="logo" src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/logo.png" alt="logo"/>
+        <div class="tooltip_over" >
+          <span class="text">
+          <p><span style="line-height: 1.5em;">With more than 145,000 people in over 40 countries, Capgemini is one of the world&#8217;s foremost providers of consulting, technology and outsourcing services. The Group reported 2014 global revenues of EUR 10.573 billion. Together with its clients, Capgemini creates and delivers business and technology solutions that fit their needs and drive the results they want. A deeply multicultural organization, Capgemini has developed its own way of working, the Collaborative Business Experience</span><sup style="line-height: 1.5em;">TM</sup><span style="line-height: 1.5em;">, and draws on Rightshore</span><sup style="line-height: 1.5em;">®</sup><span style="line-height: 1.5em;">, its worldwide delivery model.</span></p>
+<p>Learn more about us at <a data-tracking="{&quot;category&quot;:&quot;Capgemini logo popin&quot;,&quot;label&quot;:&quot;Capgemini logo popin&quot;,&quot;action&quot;:&quot;click&quot;}"target="_blank"href="http://www.capgemini.com/">http://www.capgemini.com</a>.</p>
+          </span>
+          <span class="arrow"></span>
+        </div>
+				<div class="search_box">
+					<form method="get" data-tracking="{&quot;category&quot;:&quot;Header - search&quot;,&quot;label&quot;:&quot;Search&quot;,&quot;action&quot;:&quot;click&quot;}" class="bg2" action="http://www.content-loop.com">
+	<input type="submit" class="button" name="send" value="" />
+	<input type="text" class="field" name="s" value="Find something on Content Loop" style=""/>
+</form>
+				</div>
+				<div class="menu_box">
+					<ul id="menu-menu-2" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-44663"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;Home&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-44668"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nSocial&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/social/">Social</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-44667"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nMobile&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/mobile/">Mobile</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-45576"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nAnalytics&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/analytics/">Analytics</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-44666"><a data-tracking="{&quot;category&quot;:&quot;Header Menu&quot;,&quot;label&quot;:&quot;\nCloud&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/tag/cloud/">Cloud</a></li>
+</ul>				</div>
+				<div class="share_box">
+					
+<div class="share-container">
+	
+	<ul class="share ab_testing_a ">
+	
+			<li class="share_linkedin">
+			<script type="IN/Share" 
+				data-url="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/"
+				data-counter="right"
+				data-onsuccess="trackLinkedInShare"
+				data-showzero="true">
+			</script>
+			</li>
+			
+			<li class="share_facebook">
+				<div class="fb-like"
+					 data-href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/" 
+					 data-send="false" 
+					 data-layout="button_count" 
+					 data-width="450" 
+					 data-show-faces="false" 
+					 data-action="recommend">
+				</div>
+			</li>
+			
+			
+			<li class="share_twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" 
+					 data-lang="en"
+				 data-via="Capgemini"
+				 data-hashtags="contentloop">
+					 Tweet				</a>
+			</li>
+			
+			<li class="share_gplus">
+				<div class="g-plus" 
+					 data-action="share" 
+					 data-annotation="bubble"
+					 data-callback="trackPlusOne">
+				</div>
+			</li>
+			
+				<li class="share_yammer">
+					<a class="" href="https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F"
+						 onclick="window.open('https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F', '', 'scrollbars=yes,menubar=no,height=480,width=800,resizable=yes,toolbar=no,status=no'); return false;">
+						 <img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/picto_yam.png" width="61" height="20" alt="" />
+					</a>
+				</li>
+		
+			
+	</ul>
+
+
+	<div class="share-box ab_testing_b show">
+		<div class="share-buttons">
+			
+			
+			<div class="share-button-wrap share_googleplus">
+				<div class="share-button" data-service="googleplus">
+					<span class="icon-google-plus icon"></span>
+					<span class="share_btn">
+						<div class="g-plusone" 
+								 data-action="share" 
+							 data-href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/"
+								 data-size="medium"
+								 data-callback="trackPlusOne">
+							</div>
+					</span>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_linkedin">
+				<div class="share-button" data-service="linkedin">
+					<span class="icon-linkedin icon"></span>
+					<span class="share_btn IN-widget">
+						<script type="IN/Share" 
+							data-url="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/"
+							data-counter="right"
+							data-onsuccess="trackLinkedInShare"
+							data-showzero="true">
+						</script>
+					</span>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_twitter">
+				<div class="share-button" data-service="twitter">
+					<span class="icon-twitter icon"></span>
+						<a class="share_btn twitter-share-button" href="https://twitter.com/share" 
+							 data-lang="en"
+						 data-via="Capgemini"
+						 data-hashtags="contentloop">
+							 Tweet						</a>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_facebook">
+				<div class="share-button" data-service="facebook">
+					<span class="icon-facebook icon"></span>
+						<div class="share_btn fb-like"
+							 data-href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/" 
+							 data-send="false" 
+							 data-layout="button_count" 
+							 data-width="450" 
+							 data-show-faces="false" 
+							 data-action="recommend">
+						</div>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_yammer">
+				<div class="share-button" data-service="yammer">
+					<span class="icon-yammer icon"></span>
+							<a class="share_btn" href="https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F"
+								 onclick="window.open('https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F', '', 'scrollbars=yes,menubar=no,height=480,width=800,resizable=yes,toolbar=no,status=no'); return false;">
+								 <img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/picto_yam.png" width="61" height="20" alt="" />
+							</a>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+			
+	
+<div id="fb-root"></div>
+</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="wrap_logo nomobile">
+		<div class="container">
+			<div class="logo">
+				<a href="http://www.capgemini.com" ><img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/logo.png" alt="logo"/></a>
+        <div class="tooltip_over" >
+          <span class="text">
+            <p><span style="line-height: 1.5em;">With more than 145,000 people in over 40 countries, Capgemini is one of the world&#8217;s foremost providers of consulting, technology and outsourcing services. The Group reported 2014 global revenues of EUR 10.573 billion. Together with its clients, Capgemini creates and delivers business and technology solutions that fit their needs and drive the results they want. A deeply multicultural organization, Capgemini has developed its own way of working, the Collaborative Business Experience</span><sup style="line-height: 1.5em;">TM</sup><span style="line-height: 1.5em;">, and draws on Rightshore</span><sup style="line-height: 1.5em;">®</sup><span style="line-height: 1.5em;">, its worldwide delivery model.</span></p>
+<p>Learn more about us at <a data-tracking="{&quot;category&quot;:&quot;Capgemini logo popin&quot;,&quot;label&quot;:&quot;Capgemini logo popin&quot;,&quot;action&quot;:&quot;click&quot;}"target="_blank"href="http://www.capgemini.com/">http://www.capgemini.com</a>.</p>
+          </span>
+          <span class="arrow"></span>
+        </div>
+			</div>
+		</div>
+	</div>
+
+	<div id="main" class="container">
+		    
+<div id="post-163670" class="page_content clearfix"> 
+		
+	<div class="twelve full">
+	
+		<div class="eight full left mbottom main_content_page">
+			
+			<h3 class="mobile title"><div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/forbes.png" alt="Forbes"/><a href="http://www.content-loop.com/source/forbes/" title="Forbes">Forbes</a></div></h3>
+
+			<div class="nomobile">
+				<div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/forbes.png" alt="Forbes"/><a href="http://www.content-loop.com/source/forbes/" title="Forbes">Forbes</a></div>				<div class="meta">
+					<div class="date">02/10/2016</div> / <div class="cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></div> / <div class="views"><span>1,377</span> views</div> / <div class="author">By Giovanni Rodriguez, Contributor</div>				</div>
+				<h1>Does Social Media Matter? (Yes, Because Its Changing)</h1>
+			</div>
+			
+			
+			<div class="full main_content">
+			
+				<div class="full social_share clearfix">
+					
+<div class="share-container">
+	
+	<ul class="share ab_testing_a ">
+	
+			<li class="share_linkedin">
+			<script type="IN/Share" 
+				data-url="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/"
+				data-counter="right"
+				data-onsuccess="trackLinkedInShare"
+				data-showzero="true">
+			</script>
+			</li>
+			
+			<li class="share_facebook">
+				<div class="fb-like"
+					 data-href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/" 
+					 data-send="false" 
+					 data-layout="button_count" 
+					 data-width="450" 
+					 data-show-faces="false" 
+					 data-action="recommend">
+				</div>
+			</li>
+			
+			
+			<li class="share_twitter">
+				<a href="https://twitter.com/share" class="twitter-share-button" 
+					 data-lang="en"
+				 data-via="Capgemini"
+				 data-hashtags="contentloop">
+					 Tweet				</a>
+			</li>
+			
+			<li class="share_gplus">
+				<div class="g-plus" 
+					 data-action="share" 
+					 data-annotation="bubble"
+					 data-callback="trackPlusOne">
+				</div>
+			</li>
+			
+				<li class="share_yammer">
+					<a class="" href="https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F"
+						 onclick="window.open('https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F', '', 'scrollbars=yes,menubar=no,height=480,width=800,resizable=yes,toolbar=no,status=no'); return false;">
+						 <img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/picto_yam.png" width="61" height="20" alt="" />
+					</a>
+				</li>
+		
+			
+	</ul>
+
+
+	<div class="share-box ab_testing_b show">
+		<div class="share-buttons">
+			
+			
+			<div class="share-button-wrap share_googleplus">
+				<div class="share-button" data-service="googleplus">
+					<span class="icon-google-plus icon"></span>
+					<span class="share_btn">
+						<div class="g-plusone" 
+								 data-action="share" 
+							 data-href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/"
+								 data-size="medium"
+								 data-callback="trackPlusOne">
+							</div>
+					</span>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_linkedin">
+				<div class="share-button" data-service="linkedin">
+					<span class="icon-linkedin icon"></span>
+					<span class="share_btn IN-widget">
+						<script type="IN/Share" 
+							data-url="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/"
+							data-counter="right"
+							data-onsuccess="trackLinkedInShare"
+							data-showzero="true">
+						</script>
+					</span>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_twitter">
+				<div class="share-button" data-service="twitter">
+					<span class="icon-twitter icon"></span>
+						<a class="share_btn twitter-share-button" href="https://twitter.com/share" 
+							 data-lang="en"
+						 data-via="Capgemini"
+						 data-hashtags="contentloop">
+							 Tweet						</a>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_facebook">
+				<div class="share-button" data-service="facebook">
+					<span class="icon-facebook icon"></span>
+						<div class="share_btn fb-like"
+							 data-href="http://www.content-loop.com/does-social-media-matter-yes-because-its-changing/" 
+							 data-send="false" 
+							 data-layout="button_count" 
+							 data-width="450" 
+							 data-show-faces="false" 
+							 data-action="recommend">
+						</div>
+				</div>
+			</div>
+			
+			<div class="share-button-wrap share_yammer">
+				<div class="share-button" data-service="yammer">
+					<span class="icon-yammer icon"></span>
+							<a class="share_btn" href="https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F"
+								 onclick="window.open('https://www.yammer.com/messages/new?status=DEFAULT_SHARE_TEXT%20http%3A%2F%2Fwww.content-loop.com%2Fdoes-social-media-matter-yes-because-its-changing%2F', '', 'scrollbars=yes,menubar=no,height=480,width=800,resizable=yes,toolbar=no,status=no'); return false;">
+								 <img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/picto_yam.png" width="61" height="20" alt="" />
+							</a>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+			
+	
+<div id="fb-root"></div>
+</div>
+				</div>
+				<div class="full mbottom right clearfix">
+				
+										<div class="clearfix full post_intro">
+						<img src="http://www.content-loop.com/wp-content/uploads/2016/02/wpid-thumbnail-22e0ef2ed04af3d3810f15fceb60466b-800x450.jpeg" class="thumbnail" alt="Does Social Media Matter? (Yes, Because Its Changing)"/>					</div>
+										
+					<div class="full hentry">
+						<div class="mobile">
+							<div class="full meta_l1">
+								<div class="right date">02/10/2016</div> 
+								<div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/forbes.png" alt="Forbes"/><a href="http://www.content-loop.com/source/forbes/" title="Forbes">Forbes</a></div>							</div>
+							<div class="full meta_l2">
+								<div class="right author">By Giovanni Rodriguez, Contributor</div>								<div class="left">
+									<div class="cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></div> / <div class="views"><span>1,377</span> views</div>
+								</div>
+							</div>
+							<h1>Does Social Media Matter? (Yes, Because Its Changing)</h1>
+						</div>
+						
+						<div class="full content clearfix">
+							<p>Last week — at an industry event that I helped to organize in Silicon Valley — the great marketing strategist Geoffrey Moore was asked to reflect on the impact of one of the most enduring catch phrases in business. I’m not talking about “crossing the chasm,” the phrase that Moore made famous and that is now part of the general business lexicon. I’m talking about “IT doesn’t matter,” the title of a 2003 HBR article written by Nicholas Carr. The point the Carr was making then was that because IT (information technology) was no longer a differentiator because every business had it. At last week’s event, blogger/journalist <a href="http://www.zdnet.com/article/does-it-matter-once-more-is-it-strategic/">Tom Foremski asked if the notion still held true today</a>. Moore agreed that we’re at a point where innovations in tech again have strategic value for the enterprise. We’re just at a different point in a never-ending cycle. Said Moore: “the goal should be at any given time for IT to go from mattering to not mattering.”</p>
+<p>What Moore said was on my mind earlier this week when I first got wind that one of the original groups supporting <a href="http://www.forbes.com/social-media/">social media</a> — the Society for New Communications Research (SNCR) — was <a href="https://www.conference-board.org/sncr/">merging with The Conference Board,</a> an industry consortium of business leaders that is celebrating its first centennial this year.</p>
+<p>Yes — a one-hundred year old organization is joining with a <em>ten-year</em> old organization, and yes, it matters.</p>
+<p>I’ve got some perspective on this. I was a founding fellow at SNCR, The Conference Board is a former client, and I brokered the introduction in 2014. There are at least three things that make this union noteworthy. First, although social media has been adopted by practically every business in the Fortune 1000 (the market that The Conference Board serves), it is being used strategically — i.e., as a true differentiator — at far fewer organizations. The integration of SNCR research — and its network of researchers and consultants — gives members of The Conference Board the opportunity to look fresh at social, particularly in areas that are not yet common practice.</p>
+<p>Second, one area of practice that will soon find its way into the SNCR curriculum could have a profound impact on both marketing and marketing professionals: automation technology. There are two competing narratives that have emerged: (1) robots (automation) will steal your job, or (2) robots will make you a smarter marketer. Because senior social professionals have earned the “brand permission” to advise their organizations on digital disruption, they are uniquely positioned to help lead this important  conversation.</p>
+<p>But what interests me most about the merger has little to do with digital disruption, and more with the approach to engagement that informed both organizations at their inception. For SNCR — which is known for their industry roundtables — its about creating intimate offline experiences that support professional growth. For The Conference Board — which has been doing industry roundtables since the Wilson presidency — it’s the same thing.</p>
+<p>Big difference: The Conference Board has been doing it at scale. In the end, the opportunity for The Conference Board and SNCR may be to accelerate the net wave of online innovation using the more ancient offline tools of community building. That would be a big change indeed, <a href="http://www.forbes.com/sites/giovannirodriguez/2013/07/27/social-medias-older-but-wiser-ancestor-the-native-american-talking-stick/#2052630f38c5">and one that I can believe in.</a></p>
+<p><strong>Related: Shel Holtz posted a podcast about today’s news <a href="http://firpodcastnetwork.com/fir-interview-jen-mcclure-and-alex-parkinson-on-sncr-conference-board-merger/">here.</a></strong></p>
+<br /><p>This article was written by Giovanni Rodriguez from Forbes and was legally licensed through the NewsCred publisher network.</p>
+
+
+<!-- Newscred Content Analytics: eyJhcnRpY2xlX2d1aWQiOiIwNjdiZWMwMGFhOWZmMjI2YWRjYWNiZWMxNzAwY2Y0OSIsImFydGljbGVfdGl0bGUiOiJEb2VzIFNvY2lhbCBNZWRpYSBNYXR0ZXI/IChZZXMsIEJlY2F1c2UgSXQncyBDaGFuZ2luZykiLCJ0b3BpY19uYW1lcyI6IkluZm9ybWF0aW9uIFRlY2hub2xvZ3kgYW5kIFNlcnZpY2VzXztfU2lsaWNvbiBWYWxsZXlfO18iLCJ0b3BpY19ndWlkcyI6Ijc2MjY4NjJlYWRmMjM0ZDlkMGJhMDVjNzg5OTY2YTM1XztfYzc0OGIyZWYyNGYxN2VmZTJiOWM4YWMxNTg0MTU3MDFfO18iLCJhdXRob3JfbmFtZXMiOiJHaW92YW5uaSBSb2RyaWd1ZXosIENvbnRyaWJ1dG9yXztfIiwic291cmNlX25hbWUiOiJGb3JiZXMiLCJzb3VyY2VfZ3VpZCI6ImFhOGVlNzY5NjI4ODcxZmVlYTcwODFlOGM5YjlhYzFhIiwibGljZW5zZWQiOnRydWUsImNhbXBhaWduX2lkIjoiNTVlNWVkMGJjOWMyODE5YjI4OTQ2NDlmIiwiY2FtcGFpZ25fdGl0bGUiOiJCdXNpbmVzcyAmIFRlY2ggKFVTL1VLKSJ9 -->
+<img src="https://pixel.newscred.com/px.gif?key=YXJ0aWNsZT0wNjdiZWMwMGFhOWZmMjI2YWRjYWNiZWMxNzAwY2Y0OQ==" alt="" height="1" width="1" class="nc_pixel" />						</div>
+						
+						<div class="full tags"><a href="http://www.content-loop.com/tag/business-strategy/" rel="tag">business strategy</a>, <a href="http://www.content-loop.com/tag/digital-strategies/" rel="tag">Digital Strategies</a>, <a href="http://www.content-loop.com/tag/social-media/" rel="tag">social media</a>, <a href="http://www.content-loop.com/tag/technology-and-transformation/" rel="tag">Technology and Transformation</a></div>
+					</div>
+				</div>
+				
+			</div>
+
+			
+			<div class="full clearfix mbottom comments">
+				<h3 id="comment-count">Comment this article</h3>
+
+<div class="linkedin">
+	<div class="lk_invite">
+		<form id="add-comment" class="linkedin-disconnected" method="post" action="javascript:postComment()" >
+						<button type="submit" class="disabled">Send</button>
+			<div class="content">
+								<textarea type="text" placeholder="Add a comment..." id="add-comment-message" name="add-comment-message"></textarea>
+			</div>
+      		</form>
+		<div class="comment-infoMessage">
+			<p id="comment-infoMessage-in" class="hidden"></p>
+			<p id="comment-infoMessage-wp" class="hidden"></p>
+		</div>
+				<div id="comment-signin-invite" style="display:none;width:625px;height:20px;padding-top:40px;">
+				<a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"class="linkedin-btn" type="button" href="https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=vxhfebby3cub&scope=r_basicprofile%2Cw_messages%2Crw_nus%2Cr_emailaddress&state=MTQ1NTgxOTQzOQ%3D%3D&redirect_uri=http%3A%2F%2Fwww.content-loop.com%2Fwp-content%2Fplugins%2Flinkedin-oauth2%2Fproxy.php%3Fbsparam%3Dhttp%253A%252F%252Fwww.content-loop.com%252Fdoes-social-media-matter-yes-because-its-changing%252F%253Fplatform%253Dhootsuite">
+		Authenticate	</a>
+			<div class="content" id="signin">Sign in with your LinkedIn profile to post a comment about this article.</div>
+		</div>
+	</div>
+	
+	
+	<ul class="full lk_comments_list">
+		    <script type="text/javascript">
+      window.bsComments = {};
+      window.bsComments.offset = 0;
+    </script>
+    	</ul>
+	
+</div>	
+			</div>
+		</div>
+		
+		
+		<div class="four omega right sidebar">
+		<div class="sidebar_fixed">
+			
+<div class="clearfix mbottom sidebar_related">
+              <div class="full">
+            <h3 class="slideToggle">related articles</h3>
+        </div>
+    	<div class="full slideToggle_wrapper">
+	
+					<div class="full content">
+				<a href="http://www.content-loop.com/apple-reportedly-has-a-secret-team-with-hundreds-of-employees-working-on-vr/" title="Apple reportedly has a ‘secret’ team with hundreds of employees working on VR" data-tracking="{&quot;category&quot;:&quot;Related content&quot;,&quot;label&quot;:&quot;Apple reportedly has a \u2018secret\u2019 team with hundreds of employees working on VR&quot;,&quot;action&quot;:&quot;click&quot;}" class="thumbnail-link"><img src="http://www.content-loop.com/wp-content/uploads/2016/02/wpid-thumbnail-e69d336ff690baf1ead6e501bfa9e1fb-250x140.jpeg" class="thumbnail" alt="Apple reportedly has a ‘secret’ team with hundreds of employees working on VR"/></a>				<div class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Apple reportedly has a \u2018secret\u2019 team with hundreds of employees working on VR&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Apple reportedly has a \u2018secret\u2019 team with hundreds of employees working on VR&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Apple reportedly has a \u2018secret\u2019 team with hundreds of employees working on VR&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></div>
+				<div class="hentry">
+					<div class="right date">02/02/2016</div>
+					<div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/TheNextWeb-logo-20x20.png" alt="The Next Web"/><a data-tracking="{&quot;category&quot;:&quot;Related content&quot;,&quot;label&quot;:&quot;Apple reportedly has a \u2018secret\u2019 team with hundreds of employees working on VR&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/source/the-next-web/" title="The Next Web">The Next Web</a></div>					<h2><a href="http://www.content-loop.com/apple-reportedly-has-a-secret-team-with-hundreds-of-employees-working-on-vr/" data-tracking="{&quot;category&quot;:&quot;Related content&quot;,&quot;label&quot;:&quot;Apple reportedly has a \u2018secret\u2019 team with hundreds of employees working on VR&quot;,&quot;action&quot;:&quot;click&quot;}" title="Apple reportedly has a ‘secret’ team with hundreds of employees working on VR">Apple reportedly has a ‘secret’ team with hundreds of employees working on VR</a></h2>
+				</div>
+			</div>
+					<div class="full content">
+				<a href="http://www.content-loop.com/cybersecurity-much-more-than-a-compliance-exercise/" title="Cybersecurity much more than a compliance exercise" data-tracking="{&quot;category&quot;:&quot;Related content&quot;,&quot;label&quot;:&quot;Cybersecurity much more than a compliance exercise&quot;,&quot;action&quot;:&quot;click&quot;}" class="thumbnail-link"><img src="http://www.content-loop.com/wp-content/uploads/2016/01/wpid-thumbnail-35dafa623d0520813d5f5840e0200e05-250x140.jpeg" class="thumbnail" alt="Cybersecurity much more than a compliance exercise"/></a>				<div class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Cybersecurity much more than a compliance exercise&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Cybersecurity much more than a compliance exercise&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Cybersecurity much more than a compliance exercise&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></div>
+				<div class="hentry">
+					<div class="right date">01/27/2016</div>
+					<div class="editor"><img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/ico.png" alt="CIO"/><a data-tracking="{&quot;category&quot;:&quot;Related content&quot;,&quot;label&quot;:&quot;Cybersecurity much more than a compliance exercise&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/source/cio/" title="CIO">CIO</a></div>					<h2><a href="http://www.content-loop.com/cybersecurity-much-more-than-a-compliance-exercise/" data-tracking="{&quot;category&quot;:&quot;Related content&quot;,&quot;label&quot;:&quot;Cybersecurity much more than a compliance exercise&quot;,&quot;action&quot;:&quot;click&quot;}" title="Cybersecurity much more than a compliance exercise">Cybersecurity much more than a compliance exercise</a></h2>
+				</div>
+			</div>
+		
+		<div class="hentry mobile more">
+			<a href="/all-articles/" class="more_btn">Show more</a>
+		</div>
+
+	
+            <!-- Add banner -->
+            
+        <div class="full content single-square-banner">
+
+        
+                                    <IFRAME SRC="https://ad.doubleclick.net/ddm/adi/N4022.2092314CONTENTLOOP/B9128339.124088095;sz=300x250;ord=[timestamp]?" WIDTH=300 HEIGHT=250 
+
+MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no BORDERCOLOR='#000000'>
+<SCRIPT language='JavaScript1.1' SRC="https://ad.doubleclick.net/ddm/adj/N4022.2092314CONTENTLOOP/B9128339.124088095;abr=!ie;sz=300x250;ord=
+
+[timestamp]?">
+</SCRIPT>
+<NOSCRIPT>
+<A HREF="https://ad.doubleclick.net/ddm/jump/N4022.2092314CONTENTLOOP/B9128339.124088095;abr=!ie4;abr=!ie5;sz=300x250;ord=[timestamp]?">
+<IMG SRC="https://ad.doubleclick.net/ddm/ad/N4022.2092314CONTENTLOOP/B9128339.124088095;abr=!ie4;abr=!ie5;sz=300x250;ord=[timestamp]?" 
+
+BORDER=0 WIDTH=300 HEIGHT=250 ALT=""></A>
+</NOSCRIPT>
+</IFRAME>        
+                
+                    
+        </div>
+
+    
+
+
+
+
+
+
+            <!-- End of add banner -->
+
+	</div>
+
+</div>
+
+
+
+
+
+
+<div class="clearfix mbottom sidebar_news">
+	<div class="full">
+		<h3 class="slideToggle">News</h3>
+	</div>
+	
+	<div class="full hentry slideToggle_wrapper">
+				<div class="full content">
+				<span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;5 Habits Of Creative Working Parents&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business/" title="View all posts in Business" rel="category tag">Business</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;5 Habits Of Creative Working Parents&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/lifestyle/" title="View all posts in Lifestyle" rel="category tag">Lifestyle</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;5 Habits Of Creative Working Parents&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/personal-development-usuk/" title="View all posts in Personal Development" rel="category tag">Personal Development</a></span>
+				<div class="mobile right date">02/18/2016</div><div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/fastcompany1.png" alt="Fast Company"/><a data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;5 Habits Of Creative Working Parents&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/source/fast-company/" title="Fast Company">Fast Company</a></div>				<h2><a href="http://www.content-loop.com/5-habits-of-creative-working-parents/" data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;5 Habits Of Creative Working Parents&quot;,&quot;action&quot;:&quot;click&quot;}" title="5 Habits Of Creative Working Parents">5 Habits Of Creative Working Parents</a></h2>
+			</div>
+					<div class="full content">
+				<span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Get More Responses to Your Emails With These Six Simple Rules&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Get More Responses to Your Emails With These Six Simple Rules&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Get More Responses to Your Emails With These Six Simple Rules&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/personal-development-usuk/" title="View all posts in Personal Development" rel="category tag">Personal Development</a></span>
+				<div class="mobile right date">02/18/2016</div><div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/lifehacker.png" alt="Lifehacker"/><a data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;Get More Responses to Your Emails With These Six Simple Rules&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/source/lifehacker/" title="Lifehacker">Lifehacker</a></div>				<h2><a href="http://www.content-loop.com/get-more-responses-to-your-emails-with-these-six-simple-rules/" data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;Get More Responses to Your Emails With These Six Simple Rules&quot;,&quot;action&quot;:&quot;click&quot;}" title="Get More Responses to Your Emails With These Six Simple Rules">Get More Responses to Your Emails With These Six Simple Rules</a></h2>
+			</div>
+					<div class="full content">
+				<span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Demonstrating leadership in IT is an all-around contest&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Demonstrating leadership in IT is an all-around contest&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/personal-development-usuk/" title="View all posts in Personal Development" rel="category tag">Personal Development</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Demonstrating leadership in IT is an all-around contest&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></span>
+				<div class="mobile right date">02/18/2016</div><div class="editor"><img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/ico.png" alt="CIO"/><a data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;Demonstrating leadership in IT is an all-around contest&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/source/cio/" title="CIO">CIO</a></div>				<h2><a href="http://www.content-loop.com/demonstrating-leadership-in-it-is-an-all-around-contest/" data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;Demonstrating leadership in IT is an all-around contest&quot;,&quot;action&quot;:&quot;click&quot;}" title="Demonstrating leadership in IT is an all-around contest">Demonstrating leadership in IT is an all-around contest</a></h2>
+			</div>
+					<div class="full content">
+				<span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></span>
+				<div class="mobile right date">02/18/2016</div><div class="editor"><img src="http://www.content-loop.com/wp-content/uploads/2014/03/forbes.png" alt="Forbes"/><a data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/source/forbes/" title="Forbes">Forbes</a></div>				<h2><a href="http://www.content-loop.com/does-social-media-actually-reflect-reality/" data-tracking="{&quot;category&quot;:&quot;Sidebar - news&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}" title="Does Social Media Actually Reflect Reality?">Does Social Media Actually Reflect Reality?</a></h2>
+			</div>
+		
+		<div class="hentry mobile more">
+			<a href="http://www.content-loop.com/all-articles/" class="more_btn">Show more</a>
+		</div>
+	
+	</div>
+
+</div>
+
+	
+		</div>
+		</div>
+    
+    <div id="recoWindow" style="display:none">
+                <div class="full content">
+                <div class="five alpha nomobile">
+            <a href="http://www.content-loop.com/does-social-media-actually-reflect-reality/" title="Does Social Media Actually Reflect Reality?" data-tracking="{&quot;category&quot;:&quot;Recommended&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}" class="thumbnail-link"><img src="http://www.content-loop.com/wp-content/uploads/2016/02/wpid-thumbnail-67a17903d1b0ed0b82b28acfd7f3d12b-250x140.jpeg" class="thumbnail" alt="Does Social Media Actually Reflect Reality?"/></a>        </div>
+                <div class="seven">
+            <span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/digital-transformation/" title="View all posts in Digital Transformation" rel="category tag">Digital Transformation</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></span>
+            <h2><a href="http://www.content-loop.com/does-social-media-actually-reflect-reality/" data-tracking="{&quot;category&quot;:&quot;Recommended&quot;,&quot;label&quot;:&quot;Does Social Media Actually Reflect Reality?&quot;,&quot;action&quot;:&quot;click&quot;}" title="Does Social Media Actually Reflect Reality?">Does Social Media Actually Reflect Reality?</a></h2>
+            <div>
+                <span class="date">02/10/2016</span>
+                <span class="pipe">|</span>
+                <span class="viewers">143 views</span>
+            </div>
+        </div>
+    </div>
+                <div class="full content">
+                <div class="five alpha nomobile">
+            <a href="http://www.content-loop.com/avoid-belittling-views-become-less-passive-build-confidence/" title="Avoid Belittling Your Own Views to Become Less Passive and Build Confidence" data-tracking="{&quot;category&quot;:&quot;Recommended&quot;,&quot;label&quot;:&quot;Avoid Belittling Your Own Views to Become Less Passive and Build Confidence&quot;,&quot;action&quot;:&quot;click&quot;}" class="thumbnail-link"><img src="http://www.content-loop.com/wp-content/uploads/2016/02/rsz_1confidence-250x140.jpg" class="thumbnail" alt="Avoid Belittling Your Own Views to Become Less Passive and Build Confidence"/></a>        </div>
+                <div class="seven">
+            <span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business/" title="View all posts in Business" rel="category tag">Business</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/lifestyle/" title="View all posts in Lifestyle" rel="category tag">Lifestyle</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/personal-development-usuk/" title="View all posts in Personal Development" rel="category tag">Personal Development</a></span>
+            <h2><a href="http://www.content-loop.com/avoid-belittling-views-become-less-passive-build-confidence/" data-tracking="{&quot;category&quot;:&quot;Recommended&quot;,&quot;label&quot;:&quot;Avoid Belittling Your Own Views to Become Less Passive and Build Confidence&quot;,&quot;action&quot;:&quot;click&quot;}" title="Avoid Belittling Your Own Views to Become Less Passive and Build Confidence">Avoid Belittling Your Own Views to Become Less Passive and Build Confidence</a></h2>
+            <div>
+                <span class="date">02/10/2016</span>
+                <span class="pipe">|</span>
+                <span class="viewers">353 views</span>
+            </div>
+        </div>
+    </div>
+                <div class="full content">
+                <div class="five alpha nomobile">
+            <a href="http://www.content-loop.com/4-things-cios-need-to-know-about-the-fcc-broadband-and-innovation/" title="4 things CIOs need to know about the FCC, broadband and innovation" data-tracking="{&quot;category&quot;:&quot;Recommended&quot;,&quot;label&quot;:&quot;4 things CIOs need to know about the FCC, broadband and innovation&quot;,&quot;action&quot;:&quot;click&quot;}" class="thumbnail-link"><img src="http://www.content-loop.com/wp-content/uploads/2016/02/wpid-thumbnail-475a0e44d3d405a849980df8cad6bc3a-250x140.jpeg" class="thumbnail" alt="4 things CIOs need to know about the FCC, broadband and innovation"/></a>        </div>
+                <div class="seven">
+            <span class="nomobile cat"><a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business/" title="View all posts in Business" rel="category tag">Business</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/business-tech-usuk/" title="View all posts in Business &amp; Tech" rel="category tag">Business &amp; Tech</a> <a data-tracking="{&quot;category&quot;:&quot;Comments&quot;,&quot;label&quot;:&quot;Does Social Media Matter? (Yes, Because Its Changing)&quot;,&quot;action&quot;:&quot;click&quot;}"href="http://www.content-loop.com/category/technology/" title="View all posts in Technology" rel="category tag">Technology</a></span>
+            <h2><a href="http://www.content-loop.com/4-things-cios-need-to-know-about-the-fcc-broadband-and-innovation/" data-tracking="{&quot;category&quot;:&quot;Recommended&quot;,&quot;label&quot;:&quot;4 things CIOs need to know about the FCC, broadband and innovation&quot;,&quot;action&quot;:&quot;click&quot;}" title="4 things CIOs need to know about the FCC, broadband and innovation">4 things CIOs need to know about the FCC, broadband and innovation</a></h2>
+            <div>
+                <span class="date">02/10/2016</span>
+                <span class="pipe">|</span>
+                <span class="viewers">276 views</span>
+            </div>
+        </div>
+    </div>
+    </div>		
+	</div>
+
+</div>			</div>			
+			<div id="footer" class="twelve full clearfix">
+				<div class="container">
+					<ul class="twelve ">
+						<li class="logo_contentloop"><img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/footer_logo-contentloop.png" alt="content loop logo"/></li>
+            						<li class="full border"><a href="http://www.content-loop.com/contact/" data-tracking="{&quot;category&quot;:&quot;Footer&quot;,&quot;label&quot;:&quot;Contact&quot;,&quot;action&quot;:&quot;click&quot;}">Contact us</a></li>
+            						<li class="full border"><a href="http://www.content-loop.com/about/" data-tracking="{&quot;category&quot;:&quot;Footer&quot;,&quot;label&quot;:&quot;About Content Loop&quot;,&quot;action&quot;:&quot;click&quot;}">About Content Loop</a></li>
+						<li class="full border"><a href="http://www.capgemini.com/legal-information-mentions-legales" data-tracking="{&quot;category&quot;:&quot;Footer&quot;,&quot;label&quot;:&quot;Legal information&quot;,&quot;action&quot;:&quot;click&quot;}" target="_blank">Legal information</a></li>
+						<li class="full"><a href="http://www.capgemini.com/privacy-policy" data-tracking="{&quot;category&quot;:&quot;Footer&quot;,&quot;label&quot;:&quot;Privacy policy&quot;,&quot;action&quot;:&quot;click&quot;}" target="_blank">Privacy policy</a></li>
+						<li class="logo_capgemini">
+							<img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/footer_logo-capgemini.png" alt="content loop logo"/>
+							<a href="http://www.linkedin.com" alt="LinkedIn" title ="LinkedIn" data-tracking="{&quot;category&quot;:&quot;Footer&quot;,&quot;label&quot;:&quot;LinkedIn&quot;,&quot;action&quot;:&quot;click&quot;}" target="_blank"><img src="http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/footer_logo-linkedin.png" alt="linkedin logo"/></a>
+						</li>
+					</ul>
+				</div>
+			</div>	
+			<div class="global_share">
+
+	<div id="slide_share_in" class="slide-out-div">
+		<script type="IN/Share"
+				data-counter="right"
+				data-url="http://www.content-loop.com"
+				data-onsuccess="trackLinkedInShare"
+				data-showzero="true">
+		</script>
+			<a class="handle">LinkedIn</a>
+	</div>
+	
+	
+	<div id="slide_share_fb" class="slide-out-div">
+		<div class="fb-like" 
+				 data-send="false" 
+				 data-layout="button_count" 
+				 data-width="450" 
+				 data-show-faces="false" 
+				 data-href="http://www.content-loop.com">
+			</div>
+			<a class="handle">Facebook</a>
+	</div>
+	
+	
+	<div id="slide_share_tw" class="slide-out-div">
+			<a href="https://twitter.com/share" class="twitter-share-button" 
+				 data-url="http://www.content-loop.com"
+				 data-lang="en"
+				 data-text="Content Loop | The only continuous source of technology and business news"
+			 data-via="Capgemini"
+			 data-hashtags="contentloop">
+				 Tweet			</a>
+			<a class="handle">Tweet</a>
+	</div>
+	
+	
+	<div id="slide_share_gl" class="slide-out-div">
+			<div class="g-plusone" 
+				 data-size="medium"
+				 data-href="http%3A%2F%2Fwww.content-loop.com"
+				 data-callback="trackPlusOne">
+			</div>
+			<a class="handle">Google Plus</a>
+	</div>
+	
+	
+	<div id="slide_share_rss" class="slide-out-div">
+	    <a class="handle" data-tracking="{&quot;category&quot;:&quot;Left Widget&quot;,&quot;label&quot;:&quot;RSS&quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/feed/">RSS</a>
+	</div>
+
+	<div id="slide_share_contact" class="slide-out-div">
+        <a class="handle" data-tracking="{&quot;category&quot;:&quot;Left Widget&quot;,&quot;label&quot;:&quot;Contact &quot;,&quot;action&quot;:&quot;click&quot;}" href="http://www.content-loop.com/contact/">Contact</a>
+        
+	</div>
+	
+	
+	<div id="mask"></div>
+	
+</div>	
+		</div>		
+<!--Plugin WP Missed Schedule 2013.1231.2013 Active - Tag 6707293c0218e2d8b7aa38d418ffa608-->
+
+<!-- This website is patched against a big problem not solved from WordPress 2.5+ to date -->
+
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.46.0-2013.11.21'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.content-loop.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=3.6'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/jquery-scrolltofixed-min.js?ver=1'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/jquery.fancybox.pack.js?ver=1'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/jquery.flexslider.js?ver=2.0'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/jquery.infinitescroll.min.js?ver=2.0'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/jquery.tabSlideOut.js?ver=2.0'></script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/layout.js?ver=3.8.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var bsData = {"shareLinkedInUrl":"http:\/\/www.content-loop.com\/wp-admin\/admin-ajax.php?action=post_linkedin_share","postCommentUrl":"http:\/\/www.content-loop.com\/wp-admin\/admin-ajax.php?action=bsComment","postId":"163670","postTitle":"Does Social Media Matter? (Yes, Because Its Changing)","postUrl":"http:\/\/www.content-loop.com\/does-social-media-matter-yes-because-its-changing\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/js/bs-comment.js?ver=1.3.1'></script>
+			<script>
+			var infinite_scroll = {
+				loading: {
+					img: "http://www.content-loop.com/wp-content/themes/brainsonic/bs/assets/img/ajax-loader.gif",
+					msgText: "Loading the next set of posts...",
+					finishedMsg: "All posts loaded."
+				},
+				"nextSelector":".nav-previous a",
+				"navSelector":".pagination",
+				"itemSelector":".list_item",
+				"contentSelector":".list_list"
+			};
+			jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll );
+			</script>
+			    <!-- BLUKAI TAG -->
+    <!-- Begin BlueKai Tag -->
+<iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+<script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
+<script type="text/javascript">
+ 
+bk_doJSTag(18538, 0);
+ 
+</script>
+<!-- End BlueKai Tag —>    <!-- END OF BLUKAI TAG -->
+    <!-- BIZO TAG -->
+    <script type="text/javascript">   
+    	_bizo_data_partner_id = "7384"; 
+    </script> <script type="text/javascript"> 
+    (function() {   
+    	var s = document.getElementsByTagName("script")[0];   
+    	var b = document.createElement("script");   
+    	b.type = "text/javascript";   
+    	b.async = true;   
+    	b.src = (window.location.protocol === "https:" ? "https://sjs" : "http://js") + ".bizographics.com/insight.min.js";   
+    	s.parentNode.insertBefore(b, s); 
+    })(); 
+    </script> 
+    <noscript>
+    	<img height="1" width="1" alt="" style="display:none;" src="//www.bizographics.com/collect/?pid=7384&fmt=gif" /> 
+    </noscript>
+    <!-- END OF BIZO TAG-->
+	</body>
+</html>

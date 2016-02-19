@@ -1,0 +1,1023 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Prefeitura recebe inscrição de entidades de assistência social para convênio até o dia 12" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://agenciasaoluis.com.br/noticia/16704/" />
+    <meta property="og:image" content="http://agenciasaoluis.com.br/images/agamapa.jpg"/>
+     
+    <meta name="description" content="Agência de Notícias Oficial da Prefeitura de São Luís" />
+<meta name="keywords" content="são luís, agência, notícias, prefeitura, ma, notícia, maranhão" />
+<title>Agência São Luís de Notícias</title>
+<link rel="icon" href="/images/favicon.png" >    
+	<link rel="stylesheet" href="/styles/bootstrap.min.css">
+	<link rel="stylesheet" href="/styles/font-awesome.min.css">
+	<link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" type="text/css" href="/styles/magnific-popup.css">
+    
+    <script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+	//Specify affected tags. Add or remove from list:
+	var tgs = new Array(  );
+	//Specify spectrum of different font sizes:
+	var szs = new Array( '11px','13px','15px','17px','19px','21px','23px' );
+	var startSz = 2;
+	
+	function ts( trgt,inc ) {
+	if (!document.getElementById) return
+	var d = document,cEl = null,sz = startSz,i,j,cTags;
+	sz += inc;
+	if ( sz < 0 ) sz = 0;
+	if ( sz > 7 ) sz = 7;
+	startSz = sz;
+	if ( !( cEl = d.getElementById( trgt ) ) ) cEl = d.getElementsByTagName( trgt )[ 0 ];
+	
+	cEl.style.fontSize = szs[ sz ];
+	
+	for ( i = 0; i < tgs.length; i++ ) {
+	cTags = cEl.getElementsByTagName( tgs[ i ] );
+	for ( j = 0; j < cTags.length; j++ ) cTags[ j ].style.fontSize = szs[ sz ];
+	}
+}
+</script>
+</head>
+<body>
+<script>
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57716711-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script type="text/javascript" src="/scripts/ajax_cad_veiculos.js"></script>
+<script type="text/javascript">
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+
+function validabusca(){
+	if(document.frmPesquisa.txtBusca.value.length < 3){
+		alert("Sua busca deve ter pelo menos 3 caracteres");
+		return false
+	}
+	if(document.frmPesquisa.txtBusca.value == 'Digite sua pesquisa'){
+		alert("Digite uma palavra para sua pesquisa");
+		return false
+	}
+	return true
+}
+
+function validaCadastro(){
+	document.getElementById("cadastro_veiculo").innerHTML = "";	
+	var	nome, entidade, email, veiculo_0, veiculo_1, veiculo_2, veiculo_3;
+	nome = document.formCadastro.TXT_NOME.value;
+	entidade = document.formCadastro.TXT_ENTIDADE.value;
+	email = document.formCadastro.TXT_EMAIL.value;
+	veiculo_0 = document.formCadastro.CHK_VEICULO_0.checked;
+	veiculo_1 = document.formCadastro.CHK_VEICULO_1.checked;
+	veiculo_2 = document.formCadastro.CHK_VEICULO_2.checked;
+	veiculo_3 = document.formCadastro.CHK_VEICULO_3.checked;
+	
+	if (!nome)
+	{
+		alert("Informe o nome do Jornalista");	
+		document.formCadastro.TXT_NOME.focus();
+		return false
+	}
+	
+	if (!entidade)
+	{
+		alert("Informe o nome do Veículo");	
+		document.formCadastro.TXT_ENTIDADE.focus();
+		return false
+	}
+	
+	if (!email)
+	{
+		alert("Informe o e-mail do veículo");
+		document.formCadastro.TXT_EMAIL.focus();
+		return false 
+	}
+	
+	if (validar()==false)
+	{
+		alert("E-Mail inválido");
+		document.formCadastro.TXT_EMAIL.focus();
+		return false 	
+	}
+	
+	if ((veiculo_0==false)&&(veiculo_1==false)&&(veiculo_2==false)&&(veiculo_3==false)){
+		alert("Informe o tipo de veículo");
+		return false
+		}
+	var url = '/ajax_window/cadastro_veiculos.asp';
+	a = cad_veiculos(url, encodeURIComponent(nome), encodeURIComponent(entidade),  email, veiculo_0, veiculo_1, veiculo_2, veiculo_3);
+}
+
+function validar(){
+	var str = document.formCadastro.TXT_EMAIL.value;
+	var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+	if(filter.test(str))
+	{
+	 return true;
+	} else{
+	  
+	  return false;
+	}    
+}
+
+</script>
+<header>
+<div class="row row-sem-margem topo">
+		<div class="container">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<a href="/"><img src="/images/topo/topo_titulo2.png" class="img-responsive" alt="agencia" title="Ir para a página inicial"></a>
+			</div>
+            
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right caixa_busca">
+                 <form method="post" action="/pesquisa_redirect.asp" name="frmPesquisa" id="buscageral" class="form-inline" onsubmit="return validabusca();">
+					<div class="form-group">
+						<input name="txtBusca" type="search" title="Digite sua pesquisa" class="form-control input-sm" id="exampleInputName2" placeholder="Buscar...">
+					</div>
+					<div class="form-group">
+						<select class="form-control input-sm" name="busca_topo">
+							<option value="1">Not&iacute;cias</option>
+                            <option value="2">Notas</option>
+                            <option value="3">Pautas</option>
+                            <option value="4">Fotos</option>
+						</select>
+					</div>
+					<button name="bt_buscar" type="submit" value="buscar" class="btn btn-default btn-group-sm">BUSCAR</button>
+				</form>
+			</div>
+            
+            
+			
+		</div>
+	</div>
+    
+	<div class="row row-sem-margem menu">
+		<div class="container">
+			<nav class="navbar navbar-custom">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+                            <li><a href="/noticias.asp" title="Notícias">Notícias</a></li>
+                            <li><a href="/pautas.asp" title="Pautas">Pautas</a></li>
+                            <li><a href="/notas.asp" title="Notas">Notas</a></li>
+                            <li><a href="/fotos.asp" title="Fotos">Fotos</a></li>
+                            <li><a href="/videos.asp" title="Vídeos">Vídeos</a></li>
+                            <li><a href="/audios.asp" title="Áudios">Áudios</a></li>
+                            <li><a href="/publicacoes.asp" title="Impressos">Impressos</a></li>
+                            <li><a href="/mapas/" title="Mapas">Mapas</a></li>
+                            <li><a href="http://www.saoluis.ma.gov.br/" target="_blank" title="Portal da Prefeitura de São Luís">Portal</a></li>
+                            <!--<li><a href="/boletins.asp" title="Boletins">Boletins</a></li>-->
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+		</div>
+	</div>
+</header>	
+	
+<section>
+    <div class="container">
+		<article>
+			<div class="col-lg-7 col-md-7 col-sm-12 col-sem-margem margintop">
+            
+              <div class="col-lg-12 col-md-12 col-sm-12 col-sem-margem" id="caixa_texto">   
+        		<h4 class="font_verde">Notícias</h4>
+                
+                <div class="col-lg-12 col-sem-margem">
+				07/02/2016&nbsp;13h24 - Atualizado em 05/02/2016&nbsp;13h24
+                </div>
+        
+                <h2 class="font_vermelha margintop">Prefeitura recebe inscrição de entidades de assistência social para convênio até o dia 12</h2>
+                
+                      
+                <div id="creditos_texto" class="fonte12 col-lg-12 col-sem-margem">                
+                  <div id="controle_letras" class="pull-right"><a href="javascript:ts('caixa_texto',-1)" accesskey="K" class="font_dec" title="Diminuir o tamanho das letras do texto">A-</a>&nbsp;<a href="javascript:ts('caixa_texto',1)" accesskey="M" class="font_inc" title="Aumentar o tamanho das letras do texto">A+</a> Tamanho da Letra</div>
+                    Da Redação - Agência São Luís 
+                 </div>                   
+                
+                <div class="col-lg-12 margintop">   </div>
+        
+        		<div class="col-lg-12 col-sem-margem" id="wraper_images">     
+      
+					<p style="text-align: justify;">A Prefeitura de São Luís mantém aberto, até o dia 12 de fevereiro, o prazo de inscrição para seleção de entidades e organizações de assistência social sem fins lucrativos para convênio com a Secretaria Municipal da Criança e Assistência Social (Semcas).</p>
+<p style="text-align: justify;">O edital contempla 27 vagas para grupos que atuarão no Serviço de Convivência e Fortalecimento de Vínculos (SCFV) das áreas São Francisco, Forquilha, Liberdade, Vicente Fialho, Maracanã, Anjo da Guarda, Estiva, Vila Janaína e Vila Palmeira.</p>
+<p style="text-align: justify;">As inscrições devem ser feitas na sede da Semcas, localizada na Avenida Vitorino Freire, nº 29, Edifício Cesário, Anel Viário. Os candidatos deverão entregar, no Protocolo da Secretaria, formulário de inscrição e proposta de trabalho preenchidos e mais anexos, conforme modelo que consta no edital, lançado no dia 25 de janeiro.</p>
+<p style="text-align: justify;">Ressaltando que o convênio reforçar os serviços sociais na gestão do prefeito Edivaldo, a coordenadora do SCFV da Semcas, Deury Moura, explica a parceria. "O papel das entidades é de relevância impar para a execução indireta do Serviço de Convivência e Fortalecimento de Vínculos. Elas dão suporte na realização deste serviço para um número maior de pessoas", destaca ela.</p>
+<p style="text-align: justify;">A seleção acontecerá em duas etapas. A primeira consistirá na análise dos formulários de inscrição e das propostas de trabalho, pela Comissão de Análise e Avaliação, bem como a emissão de Parecer Técnico Conjunto – concedido pelo Conselho Municipal de Assistência Social e pela Semcas – atestando que a entidade ou organização está apta para a execução dos serviços. A lista com as entidades selecionadas para a segunda etapa será divulgada no dia 26 de fevereiro.</p>
+<p style="text-align: justify;">Já a segunda etapa consistirá da entrega de documentos, no período de 2 a 11 de março, conforme lista que consta no anexo do Edital, em envelopes lacrados, na Coordenação de Contratos, Convênios e Prestação de Contas da Semcas. O resultado final será divulgado no dia 14 de março, no site da Prefeitura de São Luís e afixado em mural na sede da Secretaria.</p>
+<p style="text-align: justify;"><strong>PARCERIA</strong></p>
+<p style="text-align: justify;">As atividades realizadas em parceria pela Semcas e pelas entidades conveniadas serão voltadas para crianças e adolescentes em três faixas etárias: de até 6 anos; de 6 a 15, e de 15 a 17 e para pessoas idosas nas áreas referenciadas pelos Centros de Referência de Assistência Social (Cras).</p>
+<p style="text-align: justify;">Atualmente, a Semcas mantém parceria com 53 entidades conveniadas que atendem cerca de 5.500 usuários, entre crianças, adolescentes e idosos nas áreas referenciadas pelos Cras. As entidades são responsáveis pela execução indireta do Serviço de Convivência e Fortalecimento de Vínculos (SCFV), realizando atividades socioeducativas, artísticas e lúdicas que potencializam a convivência familiar e comunitária no processo de proteção social.</p>
+<p style="text-align: justify;"><a id="c7i2X3aNEx" title="Tamanho: 223KB" href="/midias/anexos/16704A_edital_proc_seletivo_proposta_scfv_01_2016_18_de_janeiro_2.pdf" target="_blank">EDITAL PARA REDE CONVENIADA DA SEMCAS</a></p>
+<p><a id="c7i2X3aNEx" title="Tamanho: 207KB" href="/midias/anexos/16704A_anexo_i_1.pdf" target="_blank">ANEXO I</a></p>
+<p><a id="c7i2X3aNEx" title="Tamanho: 93KB" href="/midias/anexos/16704A_anexo_ii_plano_de_trabalho_1.pdf" target="_blank">ANEXO II</a> </p>
+<p><a id="c7i2X3aNEx" title="Tamanho: 100KB" href="/midias/anexos/16704A_anexo_iii_checklist-_para_celebracao_de_convenios_com_entidades1_1.pdf" target="_blank">ANEXO III</a> </p>
+<p><a id="c7i2X3aNEx" title="Tamanho: 179KB" href="/midias/anexos/16704A_anexo_iv_declaracao_negativa_de_vinculo_1.pdf" target="_blank">ANEXO IV</a> </p>
+<p><a id="c7i2X3aNEx" title="Tamanho: 10KB" href="/midias/anexos/16704A_anexo_v_declaracao_negativa_de_debito__art._299_1.pdf" target="_blank">ANEXO V</a></p>
+        
+              </div>
+                
+              </div>
+            </div>
+		</article>
+        
+		<script type="text/javascript" src="/scripts/ajax_cad_boletim.js"></script>
+<script language="JavaScript" type="text/JavaScript">
+function execCadBoletim(){
+	var valida_email = true;
+	var valida_nome = true;
+	
+	if(!document.formBoletim.nome.value){
+		valida_nome = false;
+		alert("Digite o seu nome");
+		return false
+	}
+	if(!document.formBoletim.email.value){
+		valida_email = false;
+		alert("Digite o seu e-mail");
+		return false
+	}
+	
+	if(valida_nome == true && valida_email == true){
+	var email = document.formBoletim.email.value;
+	var nome = document.formBoletim.nome.value;
+	email = encodeURIComponent(email)
+	nome = encodeURIComponent(nome)
+	var url = '/includes/cadastro_boletim.asp?email='+email+'&nome='+nome;
+	a = cadastrar(url);
+	//window.open(url)
+	}
+}
+
+</script>
+<aside>
+    <div class="col-lg-5 col-md-5 col-sm-12 inc_direita">
+        <div class="col-lg-12 col-md-12 bg_azul">
+            <label for="assessorias">Assessorias:</label>
+            <select name="menu1" class="form-control" onChange="MM_jumpMenu('parent',this,1)" id="assessorias">
+            <option>Escolha uma assessoria...</option>
+            	
+            <option value="/assessorias.asp?id_org=30" title="Controladoria Geral do Município">CGM</option>
+            	
+            <option value="/assessorias.asp?id_org=5" title="Central de Licitações">CPL</option>
+            	
+            <option value="/assessorias.asp?id_org=4" title="Fundação Municipal de Patrimônio Histórico">FUMPH</option>
+            	
+            <option value="/assessorias.asp?id_org=34" title="Hospital Municipal Djalma Marques">HMDM</option>
+            	
+            <option value="/assessorias.asp?id_org=26" title="Instituto Municipal de Paisagem Urbana">IMPUR</option>
+            	
+            <option value="/assessorias.asp?id_org=20" title="Instituto da Cidade, Pesquisa e Planejamento Urbano e Rural">INCID</option>
+            	
+            <option value="/assessorias.asp?id_org=31" title="Instituto de Previdência e Assistência do Município ">IPAM</option>
+            	
+            <option value="/assessorias.asp?id_org=29" title="Procuradoria Geral do Município">PGM</option>
+            	
+            <option value="/assessorias.asp?id_org=2" title="Gabinete do Prefeito">PREF</option>
+            	
+            <option value="/assessorias.asp?id_org=32" title="Prefeitura de São Luis">Prefeitura</option>
+            	
+            <option value="/assessorias.asp?id_org=35" title="Secretaria Municipal de Articulação e Desenvolvimento Metropolitano">SADEM </option>
+            	
+            <option value="/assessorias.asp?id_org=3" title="Secretaria Municipal de Comunicação">SECOM</option>
+            	
+            <option value="/assessorias.asp?id_org=27" title="Secretaria Municipal de Cultura">SECULT</option>
+            	
+            <option value="/assessorias.asp?id_org=6" title="Secretaria Municipal de Administração">SEMAD</option>
+            	
+            <option value="/assessorias.asp?id_org=8" title="Secretaria Municipal de Articulação Institucional">SEMAI</option>
+            	
+            <option value="/assessorias.asp?id_org=23" title="Secretaria Municipal Extraordinária de Assuntos Políticos">SEMAP</option>
+            	
+            <option value="/assessorias.asp?id_org=7" title="Secretaria Municipal de Agricultura, Pesca e Abastecimento">SEMAPA</option>
+            	
+            <option value="/assessorias.asp?id_org=14" title="Secretaria Municipal da Criança e Assistência Social">SEMCAS</option>
+            	
+            <option value="/assessorias.asp?id_org=9" title="Secretaria Municipal de Desportos e Lazer">SEMDEL</option>
+            	
+            <option value="/assessorias.asp?id_org=10" title="Secretaria Municipal de Educação">SEMED</option>
+            	
+            <option value="/assessorias.asp?id_org=11" title="Secretaria Municipal de Fazenda">SEMFAZ</option>
+            	
+            <option value="/assessorias.asp?id_org=36" title="Secretaria Municipal Extraordinária de Governança Solidária e Orçamento Particip">SEMGOP</option>
+            	
+            <option value="/assessorias.asp?id_org=28" title="Secretaria Municipal de Governo">SEMGOV</option>
+            	
+            <option value="/assessorias.asp?id_org=13" title="Secretaria Municipal de Informação e Tecnologia">SEMIT</option>
+            	
+            <option value="/assessorias.asp?id_org=16" title="Secretaria Municipal de Meio Ambiente">SEMMAM</option>
+            	
+            <option value="/assessorias.asp?id_org=33" title="Secretaria Municipal de Orçamento Participativo">SEMOP</option>
+            	
+            <option value="/assessorias.asp?id_org=15" title="Secretaria Municipal de Obras e Serviços Públicos">SEMOSP</option>
+            	
+            <option value="/assessorias.asp?id_org=24" title="Secretaria Municipal Extraordinária de Projetos Especiais">SEMPE</option>
+            	
+            <option value="/assessorias.asp?id_org=21" title="Secretaria Municipal de Segurança Alimentar">SEMSA</option>
+            	
+            <option value="/assessorias.asp?id_org=17" title="Secretaria Municipal de Urbanismo e Habitação">SEMURH</option>
+            	
+            <option value="/assessorias.asp?id_org=19" title="Secretaria Municipal de Saúde">SEMUS</option>
+            	
+            <option value="/assessorias.asp?id_org=25" title="Secretaria Municipal de Segurança com Cidadania">SEMUSC</option>
+            	
+            <option value="/assessorias.asp?id_org=18" title="Secretaria Municipal de Planejamento e Desenvolvimento">SEPLAN</option>
+            	
+            <option value="/assessorias.asp?id_org=22" title="Secretaria Municipal de Turismo">SETUR</option>
+            	
+            <option value="/assessorias.asp?id_org=12" title="Secretaria Municipal de Trânsito e Transportes">SMTT</option>
+            		
+            </select>
+        </div>
+        <div class="col-lg-12 col-md-12 margintop col-sem-margem">
+            <h4 class="font_vermelha"> <i class="fa fa-plus"></i> Mais acessados</h4>
+            <div class="bs-example">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#sectionA"><strong><i class="fa fa-camera-retro"></i> Fotos</strong></a></li>
+                    <li><a data-toggle="tab" href="#sectionB"><strong><i class="fa fa-file-text-o"></i> Notícias</strong></a></li>
+                    <li><a data-toggle="tab" href="#sectionC"><strong><i class="fa fa-video-camera"></i> Vídeos</strong></a></li>
+                </ul>            
+                
+                <div class="tab-content">
+                
+                	<div id="sectionA" class="tab-pane fade in active">
+                        <div class="col-lg-12 col-md-12">                            
+							       
+                            <hr class="hr_espaco">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"><a href="/foto/16517/"><img src="/midias/2016/250px/16517_jardimsaoraimundo_19981.jpg" class="img-rounded img-responsive" border="0" title="Honório Moreira"></a></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                    <p><a href="/foto/16517/" >Prefeito visita obras nos bairros Recanto Verde e Jardim São Raimundo</a></p>
+                                </div>
+                            </div>
+                                  
+                            <hr class="hr_espaco">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"><a href="/foto/16516/"><img src="/midias/2016/250px/16516_img_1725.jpg" class="img-rounded img-responsive" border="0" title="Honório Moreira"></a></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                    <p><a href="/foto/16516/" >Prefeito Edivaldo participa da abertura da Campanha da Fraternidade 2016</a></p>
+                                </div>
+                            </div>
+                                  
+                            <hr class="hr_espaco">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"><a href="/foto/16512/"><img src="/midias/2016/250px/16512_vistoria_asfalto_cid_operaria_unid_103_120216_foto_mauricioalexandre11.jpg" class="img-rounded img-responsive" border="0" title="Mauricio Alexandre"></a></div>
+                                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                    <p><a href="/foto/16512/" >Prefeito vistoria recapeamento asfáltico na Unidade 103 da Cidade Operária</a></p>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                
+                    <div id="sectionB" class="tab-pane fade">
+                        <div class="col-lg-12 col-md-12">
+                                                              
+                                  <hr class="hr_espaco">
+                                  <div class="row">                                  
+                                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"> <img src="/images/logo_nova.png" class="img-rounded img-responsive" alt="noticia"> </div>
+                                      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                          <p><a href="/noticia/16612/">Concurso para o cargo de Procurador do Município segue com inscrições até 5 de fevereiro</a></p>
+                                      </div>
+                                  </div>
+                                  
+							                                  
+                                  <hr class="hr_espaco">
+                                  <div class="row">                                  
+                                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"> <img src="/midias/2016/250px/16451_posse_conselho_municipal_desenvolvimento_economico_social_270116_fotobaeta10.jpg" class="img-rounded img-responsive" title="Foto: A. Baeta"> </div>
+                                      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                          <p><a href="/noticia/16652/">Prefeito Edivaldo empossa membros do Conselho Municipal de Desenvolvimento Econômico e Social</a></p>
+                                      </div>
+                                  </div>
+                                  
+							                                  
+                                  <hr class="hr_espaco">
+                                  <div class="row">                                  
+                                      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"> <img src="/midias/2016/250px/16452_desenhoderonilson.jpg" class="img-rounded img-responsive" title="Foto: @Divulgação"> </div>
+                                      <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                          <p><a href="/noticia/16653/">Prefeitura abre exposição sobre quadrinhos com artistas maranhenses na Galeria Trapiche</a></p>
+                                      </div>
+                                  </div>
+                                  
+							
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="sectionC" class="tab-pane fade">
+                        <div class="col-lg-12 col-md-12"> 
+						                            
+                          <hr class="hr_espaco">
+                          <div class="row">
+                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"> <a href="/exibe_video.asp?id_midia=3200"><img src="http://img.youtube.com/vi/kSIYA8NarX8/default.jpg" border="0" class="img-rounded img-responsive" title="Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico" /></a></div>
+                              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                  <p><a href="/exibe_video.asp?id_midia=3200" >Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico</a></p>
+                              </div>
+                          </div>                                  
+                                                    
+                          <hr class="hr_espaco">
+                          <div class="row">
+                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"> <a href="/exibe_video.asp?id_midia=3184"><img src="http://img.youtube.com/vi/AOaGINwY6_U/default.jpg" border="0" class="img-rounded img-responsive" title="Convênio garante reforma e ampliação do Hospital da Criança" /></a></div>
+                              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                  <p><a href="/exibe_video.asp?id_midia=3184" >Convênio garante reforma e ampliação do Hospital da Criança</a></p>
+                              </div>
+                          </div>                                  
+                                                    
+                          <hr class="hr_espaco">
+                          <div class="row">
+                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4"> <a href="/exibe_video.asp?id_midia=3183"><img src="http://img.youtube.com/vi/tUOrLQEhOhM/default.jpg" border="0" class="img-rounded img-responsive" title="Bairro do Maracanã recebe Centro de Saúde reformado" /></a></div>
+                              <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                  <p><a href="/exibe_video.asp?id_midia=3183" >Bairro do Maracanã recebe Centro de Saúde reformado</a></p>
+                              </div>
+                          </div>                                  
+                          
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_vermelha" data-toggle="modal" data-target="#newsletter" style="cursor:pointer">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 margintop">
+                <img src="/images/email.png" class="img-responsive" alt="noticias">
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8">
+                <h4>CADASTRE-SE</h4>
+                <strong>Receba nossos informativos</strong> </div>
+        </div>
+        
+        
+        <!--Modal-->
+        <div class="modal fade" id="newsletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="exampleModalLabel">Cadastro do Boletim Eletrônico</h4>
+            </div>
+            <div class="modal-body" id="box_boletim">
+              <form name="formBoletim">
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">Nome:</label>
+                  <input name="nome" type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">Email:</label>
+                  <input name="email" type="text" class="form-control" id="recipient-name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" onclick="execCadBoletim()">Cadastrar email</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fim do Modal-->
+        
+        
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_azul">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 margintop">
+                <a href="#"><img src="/images/cidade.png" class="img-responsive" alt="noticias"></a>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8">
+                <a href="#" style="color:#FFF; display:block">
+                <h4>NOSSA CIDADE</h4>
+                <strong>A história de São Luís</strong>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_verde">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 margintop">
+                <a href="http://www.agenciasaoluis.com.br/site/cidadejardim"><img src="/images/circulo_cidadejardim.png" class="img-responsive" alt="cidade jardim"></a>
+            </div>
+            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-8">
+                <a href="http://www.agenciasaoluis.com.br/site/cidadejardim" style="color:#FFF; display:block">
+                <h4>SÃO LUÍS - CIDADE JARDIM</h4>
+                <strong>Vamos semear esta idéia</strong>
+                </a>
+            </div>
+        </div>
+    </div>
+</aside>        
+	</div>
+</section>
+    
+	<section>
+<div class="container">
+    <div class="col-lg-6 col-md-6 col-sem-margem">
+        <div class="col-lg-6 col-md-6 col-sm-6 bg_azul caixa-midias">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="caixa-midias-nivelar">
+                <h3><i class="fa fa-camera-retro"></i> FOTOS</h3>                
+                
+                <a href="/foto/16517/" title="Prefeito visita obras nos bairros Recanto Verde e Jardim São Raimundo">
+                <div class="row row-sem-margem" style="min-height:50px">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sem-margem"><img src="/midias/2016/250px/16517_jardimsaoraimundo_19981.jpg" class="img-rounded  img-responsive" border="0" title="Honório Moreira"></div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <p class="font_branca font12">Prefeito visita obras nos bairros Recanto Verde e Jardim São Raimundo</p>
+                    </div>
+                </div>
+                </a>
+               
+                <a href="/foto/16516/" title="Prefeito Edivaldo participa da abertura da Campanha da Fraternidade 2016">
+                <div class="row row-sem-margem" style="min-height:50px">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sem-margem"><img src="/midias/2016/250px/16516_img_1725.jpg" class="img-rounded  img-responsive" border="0" title="Honório Moreira"></div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <p class="font_branca font12">Prefeito Edivaldo participa da abertura da Campanha da Fraternidade 2016</p>
+                    </div>
+                </div>
+                </a>
+               
+                <a href="/foto/16512/" title="Prefeito vistoria recapeamento asfáltico na Unidade 103 da Cidade Operária">
+                <div class="row row-sem-margem" style="min-height:50px">
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sem-margem"><img src="/midias/2016/250px/16512_vistoria_asfalto_cid_operaria_unid_103_120216_foto_mauricioalexandre11.jpg" class="img-rounded  img-responsive" border="0" title="Mauricio Alexandre"></div>
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                        <p class="font_branca font12">Prefeito vistoria recapeamento asfáltico na Unidade 103 da Cidade Operária</p>
+                    </div>
+                </div>
+                </a>
+                          
+                </div>
+                <a href="/fotos.asp" title="Veja a mais Galerias de Fotos">
+                    <button type="button" class="btn btn-default btn-xs btn-block">veja mais ...</button>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 bg_verde caixa-midias">
+          <div class="caixa-midias-nivelar">
+          <h3><i class="fa fa-film"></i> VÍDEOS</h3>
+           
+          <a href="/exibe_video.asp?id_midia=3200" title="Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico">        
+      		<div class="row row-sem-margem" style="min-height:50px">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sem-margem"><img src="http://img.youtube.com/vi/kSIYA8NarX8/default.jpg" border="0" class="img-rounded img-responsive" title="Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico" /></div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <p class="font_branca font12">Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico</p>
+                </div>
+            </div>
+            </a>                            
+		   
+          <a href="/exibe_video.asp?id_midia=3184" title="Convênio garante reforma e ampliação do Hospital da Criança">        
+      		<div class="row row-sem-margem" style="min-height:50px">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sem-margem"><img src="http://img.youtube.com/vi/AOaGINwY6_U/default.jpg" border="0" class="img-rounded img-responsive" title="Convênio garante reforma e ampliação do Hospital da Criança" /></div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <p class="font_branca font12">Convênio garante reforma e ampliação do Hospital da Criança</p>
+                </div>
+            </div>
+            </a>                            
+		   
+          <a href="/exibe_video.asp?id_midia=3183" title="Bairro do Maracanã recebe Centro de Saúde reformado">        
+      		<div class="row row-sem-margem" style="min-height:50px">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 col-sem-margem"><img src="http://img.youtube.com/vi/tUOrLQEhOhM/default.jpg" border="0" class="img-rounded img-responsive" title="Bairro do Maracanã recebe Centro de Saúde reformado" /></div>
+                <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                    <p class="font_branca font12">Bairro do Maracanã recebe Centro de Saúde reformado</p>
+                </div>
+            </div>
+            </a>                            
+		  
+          </div>
+          <a href="/videos.asp" title="Veja mais Galerias de Vídeos">
+              <button type="button" class="btn btn-default btn-xs btn-block">veja mais ...</button>
+          </a>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-sem-margem">
+        <div class="col-lg-6 col-md-6 col-sm-6 bg_amarelo caixa-midias">
+            <div class="caixa-midias-nivelar">
+            <h3><i class="fa fa-volume-up"></i> ÁUDIOS</h3>
+                      
+             <a href="/exibe_audio.asp?id_midia=3201" title="Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico">
+             <div class="row row-sem-margem" style="min-height:50px">
+             <div class="col-lg-12">
+                <p class="font_branca"> </strong>Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico</p>
+            </div>
+            </div>
+            </a>
+                      
+             <a href="/exibe_audio.asp?id_midia=3198" title="Prefeito Edivaldo entrega 24 novos ônibus e apresenta veículo bidirecional da capital">
+             <div class="row row-sem-margem" style="min-height:50px">
+             <div class="col-lg-12">
+                <p class="font_branca"> </strong>Prefeito Edivaldo entrega 24 novos ônibus e apresenta veículo bidirecional da capital</p>
+            </div>
+            </div>
+            </a>
+                      
+             <a href="/exibe_audio.asp?id_midia=3194" title="Prefeito Edivaldo lança o sistema Bilhete Único; serviço beneficiará mais de 760 mil usuários">
+             <div class="row row-sem-margem" style="min-height:50px">
+             <div class="col-lg-12">
+                <p class="font_branca"> </strong>Prefeito Edivaldo lança o sistema Bilhete Único; serviço beneficiará mais de 760 mil usuários</p>
+            </div>
+            </div>
+            </a>
+            
+            </div>
+            <a href="/audios.asp" title="Veja mais Áudios">
+                <button type="button" class="btn btn-default btn-xs btn-block">ouça mais ...</button>
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 bg_vermelha caixa-midias">
+            <div class="caixa-midias-nivelar">
+            <h3><i class="fa fa-file-text-o"></i> IMPRESSOS</h3>            
+            
+			            
+             <div class="row row-sem-margem">
+             <div class="col-lg-12">
+                <p class="font_branca"> <a href="/exibe_publicacao.asp?id_midia=3197">Bilhete Único: linhas participantes e mudanças de sentido  </a></p>
+            </div>
+            </div>
+                        
+             <div class="row row-sem-margem">
+             <div class="col-lg-12">
+                <p class="font_branca"> <a href="/exibe_publicacao.asp?id_midia=3196">Bilhete Único</a></p>
+            </div>
+            </div>
+                        
+             <div class="row row-sem-margem">
+             <div class="col-lg-12">
+                <p class="font_branca"> <a href="/exibe_publicacao.asp?id_midia=3186">Prefeitura & Você - 12ª Edição</a></p>
+            </div>
+            </div>
+                        
+             <div class="row row-sem-margem">
+             <div class="col-lg-12">
+                <p class="font_branca"> <a href="/exibe_publicacao.asp?id_midia=3185">Prefeitura & Você - 11ª Edição</a></p>
+            </div>
+            </div>
+                        
+             <div class="row row-sem-margem">
+             <div class="col-lg-12">
+                <p class="font_branca"> <a href="/exibe_publicacao.asp?id_midia=3149">Prefeitura & Você - 10ª Edição</a></p>
+            </div>
+            </div>
+                        
+             <div class="row row-sem-margem">
+             <div class="col-lg-12">
+                <p class="font_branca"> <a href="/exibe_publicacao.asp?id_midia=3148">Prefeitura & Você - 9ª Edição</a></p>
+            </div>
+            </div>
+            
+			</div>
+            
+            <a href="/publicacoes.asp" title="Veja mais Impressos">
+                <button type="button" class="btn btn-default btn-xs btn-block">leia mais ...</button>
+            </a>
+            
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<section>
+<div class="row row-sem-margem margintop">
+    <div class="container">
+        <div class="col-lg-6 col-md-12 col-sm-12 bg_cinza">
+            <h4 class="font_azul">Últimas Manchetes</h4>
+            <hr class="hr_azul">
+            <div class="col-lg-6 col-md-6 col-sm-12"> 
+            <a href="/noticia/16652/" title="Prefeito Edivaldo empossa membros do Conselho Municipal de Desenvolvimento Econômico e Social">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 col-sem-margem"><img src="/midias/2016/250px/16451_posse_conselho_municipal_desenvolvimento_economico_social_270116_fotobaeta10.jpg" class="img-rounded img-responsive" alt="noticias"></div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9">
+                    <p class="font_azul">Prefeito Edivaldo empossa membros do Conselho Municipal de Desenvol...</p>
+                </div>
+            </div>
+            </a>           
+            
+            <a href="/noticia/16612/" title="Concurso para o cargo de Procurador do Município segue com inscrições até 5 de fevereiro">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 col-sem-margem"><img src="/images/topo_brasao_ap.png" class="img-rounded img-responsive" alt="noticias"></div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9">
+                    <p class="font_azul">Concurso para o cargo de Procurador do Município segue com inscriçõ...</p>
+                </div>
+            </div>
+            </a>           
+            
+            <a href="/noticia/16637/" title="Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 col-sem-margem"><img src="/midias/2016/250px/16443_inauguracao_casa_bairro_centro_220116_fotobaeta3.jpg" class="img-rounded img-responsive" alt="noticias"></div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9">
+                    <p class="font_azul">Prefeito Edivaldo inaugura Casa do Bairro no Centro Histórico</p>
+                </div>
+            </div>
+            </a>           
+            </div><div class="col-lg-6 col-md-6 col-sm-12"> 
+            <a href="/noticia/16527/" title="Prefeitura de São Luís abre concurso para procurador do município">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 col-sem-margem"><img src="/midias/2015/250px/up_ag_16527_up_ag_4002_anuncio_concurso_procurador_municipio_150115_foto_baeta__3.jpg" class="img-rounded img-responsive" alt="noticias"></div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9">
+                    <p class="font_azul">Prefeitura de São Luís abre concurso para procurador do município</p>
+                </div>
+            </div>
+            </a>           
+            
+            <a href="/noticia/16459/" title="Bilhete Único entra em vigor dia 14 de dezembro; entenda como vai funcionar">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 col-sem-margem"><img src="/midias/2015/250px/16327_entrega_onibus_2015_foto_baeta6.jpg" class="img-rounded img-responsive" alt="noticias"></div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9">
+                    <p class="font_azul">Bilhete Único entra em vigor dia 14 de dezembro; entenda como vai f...</p>
+                </div>
+            </div>
+            </a>           
+            
+            <a href="/noticia/16419/" title="Prefeitura de São Luís paga primeira parcela do 13º salário na terça-feira 1°">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-2 col-xs-3 col-sem-margem"><img src="/midias/2015/250px/6413_prefeito_edivaldo_holanda_junior_foto_a.baeta_040.jpg" class="img-rounded img-responsive" alt="noticias"></div>
+                <div class="col-lg-9 col-md-9 col-sm-10 col-xs-9">
+                    <p class="font_azul">Prefeitura de São Luís paga primeira parcela do 13º salário na terç...</p>
+                </div>
+            </div>
+            </a>           
+            </div>            
+        </div>
+        
+        <div class="col-lg-3 col-md-6 col-sm-6 bg_azul">
+            <div class="nivelar-editais-cadastro">
+            <h4><i class="fa fa-file"></i> Editais e Licitações</h4>
+            <hr class="hr_branca">
+                          
+            <a href="/exibe_editais.asp?id_edital=1195">
+            <p class="font_branca">Abertura:&nbsp;05/02/2016&nbsp;8h00 - Situação: Encerrada<br />
+			<strong class="font_branca">Carnaval de Todos 2016: REGULAMENTO Escolas de Samba, Blocos Tradicionais e B...</strong>
+			</p>
+            </a>
+                          
+            <a href="/exibe_editais.asp?id_edital=1194">
+            <p class="font_branca">Abertura:&nbsp;27/01/2016&nbsp;8h00 - Situação: Encerrada<br />
+			<strong class="font_branca">3° EDITAL DE CONVOCAÇAO - 21/01/2016 - PROCESSO SELETIVO n°. 001 de 07/08/201...</strong>
+			</p>
+            </a>
+                          
+            <a href="/exibe_editais.asp?id_edital=1193">
+            <p class="font_branca">Abertura:&nbsp;25/01/2016&nbsp;8h00 - Situação: Encerrada<br />
+			<strong class="font_branca">Edital de Chamamento Público Seleção nº 01 SEMCAS2016</strong>
+			</p>
+            </a>
+            
+            </div>            
+            <a href="/editais.asp" title="Veja mais Editais">
+                <button type="button" class="btn btn-default btn-block">veja mais</button>
+            </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 bg_verde">
+            <form method="post" name="formCadastro">
+            <div class="nivelar-editais-cadastro">
+            <h4><i class="fa fa-user"></i> Para Jornalistas</h4>
+            <hr class="hr_branca">
+            
+                <div id="formCadastro">
+                
+                    <div class="form-group">
+                        <label>Jornalista:</label>
+                        <input type="text" class="form-control input-sm" id="nome" name="TXT_NOME" placeholder="Seu nome ...">
+                    </div>
+                    <div class="form-group">
+                        <label>Veículo:</label>
+                        <input type="text" class="form-control input-sm" id="veiculo" name="TXT_ENTIDADE" placeholder="Véiculo na qual faz parte ...">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" class="form-control input-sm" id="email" name="TXT_EMAIL" placeholder="Seu email ...">
+                    </div>
+                    <div class="col-sem-margem font12">
+                        <label class="radio-inline">
+                            <input type="radio" id="CHK_VEICULO_2" name="CHK_VEICULO" value="Tv" /> TV
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="CHK_VEICULO_3" name="CHK_VEICULO" value="Radio" /> Rádio
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="CHK_VEICULO_0" name="CHK_VEICULO" value="Impresso" /> Impresso </label>
+                        <label class="radio-inline">
+                            <input type="radio" id="CHK_VEICULO_1" name="CHK_VEICULO" value="On-line" /> Online </label>
+                    </div>
+                    
+                </div>
+                
+                
+                
+                </div>
+                <button name="BT_ENVIAR" type="button" value="Enviar" onclick="validaCadastro();" class="btn btn-default btn-block">ENVIAR</button>
+                <div id="cadastro_veiculo" style="text-align:center;"></div>
+            </form>
+            
+            
+            
+           
+        </div>
+    </div>
+</div>
+</section>
+<section>
+<div class="row">
+    <div class="container">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h4><a href="/noticias.asp" class="font_azul"><strong><i class="fa fa-angle-double-right"></i> Notícias</strong></a></h4>
+            <hr class="hr_azul">
+            	             
+            <a href="/noticia/16744/">
+            <strong class="font_azul">Saúde - 16/02&nbsp;18h39</strong>
+            <p>Prefeitura de São Luis reforça combate à hanseníase com Carreta da Saúde</p></a>
+            <hr class="hr_espaco">       
+            	             
+            <a href="/noticia/16742/">
+            <strong class="font_azul">Institucional - 16/02&nbsp;14h22</strong>
+            <p>Prefeito Edivaldo prestigia solenidade de posse de novos secretários do Governo Estadual</p></a>
+            <hr class="hr_espaco">       
+            	             
+            <a href="/noticia/16740/">
+            <strong class="font_azul">Trânsito e Transportes - 16/02&nbsp;13h54</strong>
+            <p>SMTT inicia fiscalização de transporte escolar</p></a>
+            <hr class="hr_espaco">       
+            
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <h4><a href="/pautas.asp" title="Veja mais Pautas" class="font_verde"><strong><i class="fa fa-angle-double-right"></i> Pautas</strong></a></h4>
+            <hr class="hr_verde">
+            
+            
+            <a href="/exibe_pautas.asp?id_pauta=3"><strong class="font_verde">De 30/09&nbsp;14h00 à 31/10&nbsp;00h00</strong>
+            <p>Programação para alunos e professores na FeliS</p></a>
+            <hr class="hr_espaco">
+			
+            <a href="/exibe_pautas.asp?id_pauta=2"><strong class="font_verde">De 01/10&nbsp;08h00 à 31/10&nbsp;00h00</strong>
+            <p>Encerramento da Semana do Idoso</p></a>
+            <hr class="hr_espaco">
+			
+            <a href="/exibe_pautas.asp?id_pauta=6"><strong class="font_verde">De 01/10&nbsp;16h00 à 02/10&nbsp;00h00</strong>
+            <p>Encerramento da Semana do Idoso</p></a>
+            <hr class="hr_espaco">
+			
+            <a href="/exibe_pautas.asp?id_pauta=1"><strong class="font_verde">De 02/10&nbsp;08h00 à 31/10&nbsp;00h00</strong>
+            <p>Alunos recebem vale-compras para aquisição de livros</p></a>
+            <hr class="hr_espaco">
+			
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h4><a href="/notas.asp" class="font_amarela" title="Veja mais Notas"><strong><i class="fa fa-angle-double-right"></i> Notas</strong></a></h4>
+            <hr class="hr_amarelo">
+            
+            
+            <a href="/exibe_notas.asp?id_nota=1218">
+            <strong class="font_amarela">05/02/2016&nbsp;18:15</strong>
+            <p>Apuração do Concurso da Passarela do Samba do Carnaval 2016</p></a>
+            <hr class="hr_espaco">
+            
+            <a href="/exibe_notas.asp?id_nota=1217">
+            <strong class="font_amarela">04/02/2016&nbsp;17:41</strong>
+            <p>COMUNICADO IPAM</p></a>
+            <hr class="hr_espaco">
+            
+            <a href="/exibe_notas.asp?id_nota=1216">
+            <strong class="font_amarela">01/02/2016&nbsp;17:25</strong>
+            <p>Credenciamento Carnaval Passarela do Samba 2016</p></a>
+            <hr class="hr_espaco">
+            
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+            <h4><a href="/lista_emfoco.asp" class="font_vermelha" title="Veja mais temas Em Foco"><strong><i class="fa fa-angle-double-right"></i> Em foco</strong></a></h4>
+            <hr class="hr_vermelho">            
+                        
+            <p><a href="/em_foco.asp?id_acontec=26">Campanha Zica Zero</a></p>
+            <hr class="hr_espaco">
+                        
+            <p><a href="/em_foco.asp?id_acontec=25">Réveillon 2016</a></p>
+            <hr class="hr_espaco">
+                        
+            <p><a href="/em_foco.asp?id_acontec=24">Seminário de Gestão Compartilhada</a></p>
+            <hr class="hr_espaco">
+                        
+            <p><a href="/em_foco.asp?id_acontec=21">Recapeamento Asfáltico</a></p>
+            <hr class="hr_espaco">
+                        
+            <p><a href="/em_foco.asp?id_acontec=22">Mais Asfalto</a></p>
+            <hr class="hr_espaco">
+                        
+            <p><a href="/em_foco.asp?id_acontec=23">Todos por São Luís</a></p>
+            <hr class="hr_espaco">
+            
+        </div>
+    </div>
+</div>
+</section>	<footer>
+    <div class="row row-sem-margem rodape">
+        <div class="container">
+            <h3>Assuntos</h3>
+            <hr>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">    
+					<p><a href="/assunto.asp?area=2" title="Administração">Administração</a></p>    
+				    
+					<p><a href="/assunto.asp?area=21" title="Agricultura, Pesca e Abastecimento">Agricultura, Pesca e Abastecimento</a></p>    
+				    
+					<p><a href="/assunto.asp?area=22" title="Assistência Social">Assistência Social</a></p>    
+				    
+					<p><a href="/assunto.asp?area=15" title="Assuntos Políticos">Assuntos Políticos</a></p>    
+				    
+					<p><a href="/assunto.asp?area=1" title="Comunicação">Comunicação</a></p>    
+				    
+					<p><a href="/assunto.asp?area=19" title="Cultura">Cultura</a></p>    
+				    
+					<p><a href="/assunto.asp?area=11" title="Desenvolvimento">Desenvolvimento</a></p>    
+				</div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">    
+					<p><a href="/assunto.asp?area=3" title="Desportos e Lazer">Desportos e Lazer</a></p>    
+				    
+					<p><a href="/assunto.asp?area=4" title="Educação">Educação</a></p>    
+				    
+					<p><a href="/assunto.asp?area=5" title="Fazenda">Fazenda</a></p>    
+				    
+					<p><a href="/assunto.asp?area=24" title="Governo">Governo</a></p>    
+				    
+					<p><a href="/assunto.asp?area=26" title="Institucional">Institucional</a></p>    
+				    
+					<p><a href="/assunto.asp?area=9" title="Meio Ambiente">Meio Ambiente</a></p>    
+				    
+					<p><a href="/assunto.asp?area=7" title="Obras">Obras</a></p>    
+				</div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">    
+					<p><a href="/assunto.asp?area=28" title="Orçamento Participativo">Orçamento Participativo</a></p>    
+				    
+					<p><a href="/assunto.asp?area=18" title="Paisagem Urbana">Paisagem Urbana</a></p>    
+				    
+					<p><a href="/assunto.asp?area=23" title="Patrimônio Histórico">Patrimônio Histórico</a></p>    
+				    
+					<p><a href="/assunto.asp?area=20" title="Planejamento">Planejamento</a></p>    
+				    
+					<p><a href="/assunto.asp?area=25" title="Previdência ">Previdência </a></p>    
+				    
+					<p><a href="/assunto.asp?area=16" title="Projetos Especiais">Projetos Especiais</a></p>    
+				    
+					<p><a href="/assunto.asp?area=12" title="Saúde">Saúde</a></p>    
+				</div><div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">    
+					<p><a href="/assunto.asp?area=17" title="Segurança">Segurança</a></p>    
+				    
+					<p><a href="/assunto.asp?area=13" title="Segurança Alimentar">Segurança Alimentar</a></p>    
+				    
+					<p><a href="/assunto.asp?area=27" title="Segurança com Cidadania">Segurança com Cidadania</a></p>    
+				    
+					<p><a href="/assunto.asp?area=8" title="Tecnologia">Tecnologia</a></p>    
+				    
+					<p><a href="/assunto.asp?area=6" title="Trânsito e Transportes">Trânsito e Transportes</a></p>    
+				    
+					<p><a href="/assunto.asp?area=14" title="Turismo">Turismo</a></p>    
+				    
+					<p><a href="/assunto.asp?area=10" title="Urbanismo e Habitação">Urbanismo e Habitação</a></p>    
+				</div>
+        </div>
+    </div>
+    <div class="row row-sem-margem rodape2">
+        <div class="container margintop">
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+                <p class="font_branca font12">Prefeitura de São Luís - Secretaria Municipal de Comunicação</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                <a href="http://www.saoluis.ma.gov.br/SEMIT" target="_blank"><img src="/images/semit_logo_h27.png" width="62" height="27" title="Secretaria Municipal de Informação e Tecnologia" /></a>
+            </div>            
+        </div>
+    </div>
+</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="/scripts/bootstrap.min.js"></script>
+    <script src="/scripts/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript">
+		$('#wraper_images').magnificPopup({ 		  
+		  type: 'image',
+		  delegate: 'a#imGs4O0O8',
+		  removalDelay: 300,
+		  gallery:{enabled:true}		  
+		});
+	</script>
+</body>
+</html>

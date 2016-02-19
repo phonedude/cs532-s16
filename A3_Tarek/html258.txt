@@ -1,0 +1,2150 @@
+            <!DOCTYPE html>
+<html class="no-js masonry-supported" lang="en-US" prefix="og: http://ogp.me/ns#">
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAIDWFFVGwICUFVVBAgA"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+    <meta charset="UTF-8">
+    
+    <script>
+                var hs = hs || {};
+        hs.Blog = {
+            subscriptionForms: {
+                subscription: 2645,
+                subscriptionFollowUp: 2646
+            },
+            siteAccess: 'en'
+        };
+    </script>
+    
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>How to Use HootSuite for Social Listening</title>
+<meta name="description" content="Mike Allton explains what social listening is, why it&#039;s important, and how HootSuite can help you do it effectively."/>
+<meta name="news_keywords" content="guest, hootsuite solutions partner, social listening, social media, hootsuite" />
+<link rel="original-source" href="http://blog.hootsuite.com/use-hootsuite-social-listening/" />
+<meta name="robots" content="noodp,noydir"/>
+<link rel="canonical" href="http://blog.hootsuite.com/use-hootsuite-social-listening/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Use HootSuite for Social Listening" />
+<meta property="og:description" content="Mike Allton explains what social listening is, why it&#039;s important, and how HootSuite can help you do it effectively." />
+<meta property="og:url" content="http://blog.hootsuite.com/use-hootsuite-social-listening/" />
+<meta property="og:site_name" content="Hootsuite Social Media Management" />
+<meta property="article:tag" content="Guest" />
+<meta property="article:tag" content="Hootsuite Solutions Partner" />
+<meta property="article:tag" content="social listening" />
+<meta property="article:section" content="Events" />
+<meta property="article:published_time" content="2013-11-22T07:42:14+00:00" />
+<meta property="article:modified_time" content="2014-09-24T11:54:37+00:00" />
+<meta property="og:updated_time" content="2014-09-24T11:54:37+00:00" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/Listen.jpg" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton-150x150.jpg" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/09/Assign-a-Message.gif" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Twitter-Bio-Forbes-310x472.png" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening-310x227.png" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='stylesheet' id='hs-blog-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/css/hs-blog.css?ver=3.1.52' type='text/css' media='all' />
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/livefyre-apps/assets/js/lfapps.js?ver=1.1'></script>
+<script type='text/javascript' src='http://cdn.livefyre.com/Livefyre.js?ver=1.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/libraries/jquery-1.11.3.min.js'></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/libraries/jquery-2.1.4.min.js'></script>
+<!--<![endif]-->
+<script type='text/javascript' src='//cdn.optimizely.com/js/176765137.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var theme = {"uri":"http:\/\/blog.hootsuite.com\/wp-content\/themes\/hootsuite-2.0","ajaxurl":"https:\/\/blog.hootsuite.com\/wp-admin\/admin-ajax.php","thankYouTitle":"You are now subscribed to the Hootsuite blog.","thankYouBodyOne":"We're excited to have you on board! We'd like to give you even more custom content that helps you succeed.","thankYouBodyTwo":"Tell us a bit about yourself, and we'll periodically send you personalized content like:","thankYouLIOne":"Comprehensive tutorial videos and articles;","thankYouLITwo":"Case studies that highlight successes in your industry;","thankYouLIThree":"Tips, tactics, and best practices for companies of your size;","thankYouLIFour":"The latest news from around the social web;","thankYouLIFive":"and much more."};
+var qualaroo = {"send":"Send","requiredField":"Required field"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/scripts-header.min.js?ver=3.1.52'></script>
+<link rel='https://api.w.org/' href='http://blog.hootsuite.com/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="http://blog.hootsuite.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blog.hootsuite.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&#038;format=xml" />
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<meta name="generator" content="WPML ver:3.3.6 stt:1,4,3,27,28,2,25,44;" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="author" content="Hootsuite"><meta name="apple-itunes-app" content="app-id=341249709"><meta name="google-play-app" content="app-id=com.hootsuite.droid.full"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@https://twitter.com/mike_allton"><meta name="twitter:site" content="@hootsuite"><meta name="twitter:title" content="How to Use Hootsuite for Social Listening"><meta name="twitter:description" content="Mike Allton explains what social listening is, why it's important, and how HootSuite can help you do it effectively."><meta name="twitter:domain" content="http://blog.hootsuite.com"><meta name="twitter:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/Listen-150.jpg">    <script src="https://fast.wistia.net/static/E-v1.js" async defer></script>
+</head>
+<body class="single single-post postid-54368 single-format-standard" itemscope itemtype="http://schema.org/WebPage">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-963X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-963X');
+</script>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<div id="m-container" class="m-container">
+    <div class="m-pusher">
+        <div class="m-content">
+            <div class="m-content-inner _smartBannerAdjustInner">
+                <header class="header header--simple _smartBannerAdjust" id="header-simple" aria-hidden="true" role="banner">
+                    <div class="container">
+                        <a class="hs-logo" href="https://hootsuite.com">Hootsuite Media Inc.</a>
+                        <div class="primary-nav">
+                            <nav class="primary-nav__menu menu" role="navigation">
+                            <ul id="menu-main-menu" class="menu"><li id="menu-item-83669" class="menu-item--enterprise menu-item menu-item-type-custom menu-item-object-custom menu-item-83669"><a href="https://hootsuite.com/plans/enterprise" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Hootsuite for Enterprise</a></li>
+<li id="menu-item-83670" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83670"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-83671" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83671"><a href="https://hootsuite.com/products/social-media-engagement" class="" data-navsrc="nav--level2">Engagement</a></li>
+	<li id="menu-item-83672" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83672"><a href="https://hootsuite.com/products/social-media-publishing" class="" data-navsrc="nav--level2">Publishing</a></li>
+	<li id="menu-item-83678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83678"><a href="https://hootsuite.com/products/social-media-analytics" class="" data-navsrc="nav--level2">Analytics</a></li>
+	<li id="menu-item-83679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83679"><a href="https://hootsuite.com/products/campaigns" class="" data-navsrc="nav--level2">Campaigns</a></li>
+	<li id="menu-item-83680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83680"><a href="https://hootsuite.com/products/platform" class="" data-navsrc="nav--level2">Platform</a></li>
+	<li id="menu-item-83681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83681"><a href="https://hootsuite.com/products/extensions" class="" data-navsrc="nav--level2">Extensions</a></li>
+	<li id="menu-item-83682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83682"><a href="https://hootsuite.com/products/mobile-apps" class="" data-navsrc="nav--level2">Mobile</a></li>
+	<li id="menu-item-83683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83683"><a href="https://hootsuite.com/services" class="" data-navsrc="nav--level2">Services</a></li>
+</ul>
+</li>
+<li id="menu-item-83673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83673"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a>
+<ul class="sub-menu">
+	<li id="menu-item-83684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83684"><a href="https://hootsuite.com/plans/free" class="" data-navsrc="nav--level2">Free</a></li>
+	<li id="menu-item-83685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83685"><a href="https://hootsuite.com/plans/pro" class="" data-navsrc="nav--level2">Pro</a></li>
+	<li id="menu-item-83686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83686"><a href="https://hootsuite.com/plans/enterprise" class="" data-navsrc="nav--level2">Enterprise</a></li>
+	<li id="menu-item-83687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83687"><a href="http://hootsuite.com/plans" class="" data-navsrc="nav--level2">Compare Plans</a></li>
+</ul>
+</li>
+<li id="menu-item-83674" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83674" data-auth="out"><a href="https://hootsuite.com/plans" class="btn btn--sm btn--success" data-navsrc="nav--level1">Sign Up</a></li>
+<li id="menu-item-83675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83675" data-auth="out"><a href="https://hootsuite.com/login" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Log In</a></li>
+<li id="menu-item-83676" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83676" aria-hidden="true" data-auth="in"><a href="https://hootsuite.com/dashboard" class="btn btn--sm btn--primary" data-navsrc="nav--level1">Dashboard</a></li>
+<li id="menu-item-83677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83677" aria-hidden="true" data-auth="in"><a href="https://hootsuite.com/logout" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Sign Out</a></li>
+</ul>                            </nav>
+                            <div class="m-trigger-effects">
+                                <button class="menu-icon" data-effect="m-slide-out"><span>Menu</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Start navigation-tab -->
+<div class="toolbar">
+	<div class="container">
+		<p class="toolbar__label tablet-up-only">Blogs</p>
+		<nav class="nav nav-tabs">
+			<ul>
+																																<li class="category--social active"><a id="term-2675" data-term="2675" class="vertical-tab" href="http://blog.hootsuite.com/">Social</a></li>
+																																											<li class="category--innovation"><a id="term-2676" data-term="2676" class="vertical-tab" href="http://blog.hootsuite.com/channel/innovation/">Innovation</a></li>
+																																											<li class="category--hootsuite-life"><a id="term-2677" data-term="2677" class="vertical-tab" href="http://blog.hootsuite.com/channel/hootsuite-life/"><span class="brand">Hootsuite</span> Life</a></li>
+																																</ul>
+		</nav>
+		<div id="search-trigger"></div>
+		<form role="search" method="get" id="searchform" class="searchform" action="http://blog.hootsuite.com/">
+	<label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" placeholder="Search..." name="s" id="s">
+	<input type="submit" id="searchsubmit" value="Search">
+<input type='hidden' name='lang' value='en' /></form>	</div>
+</div>
+<!--End navigation-tab -->                </header>
+        <div class="content-wrapper " role="main">
+        <div class="content-wrapper__inner">
+                            <article class="post-54368 post type-post status-publish format-standard has-post-thumbnail hentry category-events category-hootsuite-life category-social-media-skills category-social tag-guest tag-hootsuite-solutions-partner tag-social-listening language-english" id="post-54368" role="article" itemscope="" itemtype="http://schema.org/Article">
+                    <header>
+                        <h1 class="post__title entry-title" itemprop="name">How to Use Hootsuite for Social Listening</h1>                        <div class="meta">
+                            <p class="vcard"><img src="http://1.gravatar.com/avatar/b618336b76b0d1418a436153816dc557?s=40" itemprop="image" class="author-meta__avatar" height="40" width="40" alt="" /><span class="meta__author author-meta">By <a class="author-meta__name fn" href="http://blog.hootsuite.com/author/mike-alton/">Mike Allton</a></span></p><p class="faded"><span class="meta__date">22 November 2013</span><span class="meta__category"><a href="http://blog.hootsuite.com/channel/social/" class="link">Social</a></span><a href="http://blog.hootsuite.com/use-hootsuite-social-listening/#livefyre-comments" class="meta__comments link livefyre-commentcount" data-lf-site-id="332321" data-lf-article-id="54368" >0 Comments</a></p>                        </div>
+                        <div class="social">
+                            	<a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>HootSuite</span></a>
+	<a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>Twitter</span></a>
+	<a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>Facebook</span></a>
+	<a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>LinkedIn</span></a>
+	<a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>Google +</span></a>
+                        </div>
+                    </header>
+
+                    <div class="post__body" itemprop="articleBody">
+                                                    <figure class="figure header-image--legacy">
+                                <img width="150" height="150" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/Listen-150.jpg" class="attachment-featured-post-thumbnail size-featured-post-thumbnail wp-post-image" alt="Listen 150" />                                                            </figure>
+                                                <figure class="figure aligncenter"><img class="size-full wp-image-54378" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/Listen.jpg" alt="Listen" width="599" height="415" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/11/Listen-250x173.jpg 250w, http://blog.hootsuite.com/wp-content/uploads/2013/11/Listen.jpg 599w" sizes="(max-width: 599px) 100vw, 599px" /><figcaption>Photo by <a href="http://www.flickr.com/photos/ky_olsen/" target="_blank">ky_olsen</a>.</figcaption></figure>
+<p><em>Mike Allton is an Internet Marketing Consultant and certified <a title="Apply to be a HootSuite Solution Partner" href="http://socialbusiness.hootsuite.com/solution-partner.html" target="_blank">HootSuite Solution Partner</a>. This article, on how to schedule social media posts, is the fourth in a series on making the most of your HootSuite account and was originally published on The Social Media Hat</em>. View the original <a title="How to Use HootSuite for Social Listening" href="http://www.thesocialmediahat.com/article/how-use-hootsuite-social-listening" target="_blank">here</a>.</p>
+<h2>What is Social Listening?</h2>
+<figure class="figure alignright"><img class="size-thumbnail wp-image-52314" src="http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton-150x150.jpg" alt="Mike Allton" width="150" height="150" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton-150x150.jpg 150w, http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton.jpg 250w" sizes="(max-width: 150px) 100vw, 150px" /><figcaption>Mike Allton</figcaption></figure>
+<p>Of course, it helps if we&#8217;re all on the same page as to what <a title="Social Listening" href="http://www.thesocialmediahat.com/tags/social-listening" target="_blank">Social Listening</a> means. The details will vary from business to business and industry to industry, but the core principle is that brands will listen to conversations taking place on social media and look for opportunities to participate and engage customers and prospects.</p>
+<p>First, a business will identify specific words and phrases that might be part of a conversation that would apply to the business. For instance, if your business solves specific problems, you would listen for people talking about those kinds of issues. You might find opportunities to provide assistance or resources, or to reach out to individuals in need.</p>
+<p>Second, a business will identify key influencers. These are people who may be well-known in the industry, or perhaps in roles where a referral could go a long way. For instance, gaining the interest and support of someone more established on Twitter, where they may have a much larger following, might result in getting a retweet or mention that helps extend the reach and visibility of your business tremendously.</p>
+<h2>Conversational Listening with Hootsuite</h2>
+<p>To <a title="Start listening for the conversations that matter to your brand with Hootsuite Listening. " href="https://hootsuite.com/products/platform/social-media-listening" target="_blank">begin listening for key conversations</a>, follow these steps:</p>
+<p>1. Identify specific terms to listen for. Do some test searches and refine the terms as needed in order to achieve the kinds of results you&#8217;re looking for.</p>
+<p>2. <a title="Adding Tabs and Streams to HootSuite" href="http://blog.hootsuite.com/adding-tabs-streams-hootsuite/" target="_blank">Create a new Stream</a> for each Term or Phrase. I recommend having a specific Tab set up for Conversations and then you can have up to ten streams within that Tab. Each stream can be a specific term or phrase, and can be set up to search Twitter or Google+ (you can search Facebook and LinkedIn as well, but only conversations from your existing connections, whereas the other platforms will search all Public posts).</p>
+<p>&#8211; You can use the Quick Search in the upper right corner of your HootSuite Dashboard to look for terms and phrases that might work for you. Once you find one, click on the Save as Stream button and it will be added as a stream within your existing tab.<br />
+&#8211; You can click on the Add Stream button and select a network, then select Search, and type in the phrase you want to search on.</p>
+<p>3. Check your Conversations tab at least once a day to see what status updates have been posted that match those search terms, and respond if appropriate.</p>
+<p>I have <a title="How to Craft and Schedule Social Media Posts using HootSuite" href="http://blog.hootsuite.com/hootsuite-review-schedule-social-media/" target="_blank">mentioned before</a> that you can have canned responses set up as templates. Simply open the Compose box, type in your message, and click on the disk icon to save it as a template. You can then call that up whenever needed. This is particularly useful when social listening as you will often be providing the same basic answer and resources. Just make sure to edit your message before sending to customize it for the specific situation and individual.</p>
+<p>You can also <a title="Learn how to assign Tweets and updates to your Team Members with Hootsuite Collaboration" href="https://hootsuite.com/products/platform/social-media-collaboration" target="_blank">send tweets or updates that you find in your search to other Team members</a>. We&#8217;re going to get into Teams in more detail in another article, but the idea here is that larger businesses may have multiple people involved, and certain people may be better suited to respond to specific inquiries. An example I&#8217;ve given before is that of a law office, where an office manager may be responsible for all initial social media monitoring and listening, but any serious enquiries or opportunities would be forwarded to one of the attorneys in the office for a more professional response.</p>
+<p><img class="aligncenter size-full wp-image-51581" src="http://blog.hootsuite.com/wp-content/uploads/2013/09/Assign-a-Message.gif" alt="Assign a Message Gif" width="600" height="338" /></p>
+<p>If your business is restricted to a specific geographic area, say, only the Greater St. Louis Area, then you have the option of <a title="Learn more about geolocating your search results with Hootsuite Listening" href="https://hootsuite.com/products/platform/social-media-listening" target="_blank">geo-locating your search results</a> and only seeing messages posted by people within your area. This will obviously filter out updates from people whom you&#8217;re not interested in targeting as a potential customer.</p>
+<p>Yet another reason for using Conversational Listening is for <a title="Learn more about Hootsuite's Social Customer Service Solution" href="https://hootsuite.com/solutions/social-customer-service" target="_blank">Customer Service</a>. You can set up search streams for instances of where people are talking about you and your company, either directly or indirectly, and engage those customers in whatever way is appropriate. A simple is example would be if someone decided to complain about your brand on Twitter. Unless they happened to mention your Twitter handle, you&#8217;d have no idea that they said anything about you. If you&#8217;re listening though, you can at least give yourself an opportunity to respond and try to make the situation better.</p>
+<p>Brands can also use listening as a means to monitor competitors. By setting up search streams, lists and circles, you can keep an eye on what your competition is doing and make sure that you&#8217;re positioned to respond to any sudden sales or other developments which might affect your own business or customers.</p>
+<p>Keep in mind that you can have up to 50 tabs set up within your HootSuite Dashboard, and each tab can have up to 10 streams saved, so you can create whatever tab and stream combinations you need. Every time you log into your HootSuite account and select one of these tabs, all of the saved streams will update. And you can add or delete streams whenever needed, so don&#8217;t be shy about creating temporary streams that you might only use for a week or even a day, then delete later. When I&#8217;m doing any kind of research into social media activity and conversations, I will save the streams so I can keep referring back to them for as long as I need them. You can do the same thing when researching customers, discussion topics, other brands and so on.</p>
+<h2>Influencer Listening with Hootsuite</h2>
+<p>As we mentioned earlier, it&#8217;s important for every business to begin to identify key influencers and thought leaders in their industry. By doing so, you:</p>
+<ol>
+<li>Follow them and gain insight into your own business and industry as a result of reading what they say and share.</li>
+<li>Create opportunities for you to share and retweet these key thoughts and links to your own followers, creating value.</li>
+<li>By sharing and retweeting, and actively participating in the online conversations happening around these updates and individuals, you begin to link yourself with those individuals.</li>
+<li>The more you engage with and show an interest in these influencers, the more interest they will show in you. But it has to be genuine. Retweeting me 25 times a day is not going to get me to show interest in you and your business.</li>
+</ol>
+<p>Now, there are different kinds of influencers, so you should have specific profiles and goals in mind. Are you looking for leaders in your industry who might help build your reputation through association? Or perhaps you&#8217;re looking for key C-level executives who can help you land critical accounts, or perhaps someone else.</p>
+<p>Finding these influencers is achieved a couple of different ways. You can do a quick search and change to Twitter Users. Type in names or keywords or businesses or whatever makes sense for the kind of person you&#8217;re looking for, and see what comes up. Within the list of Twitter users, you can click on any name and their profile will pop up and you can decide whether or not you want to follow that person. Or, alternatively, you can search on topics and look for people talking about and demonstrating expertise and influence in specific areas.</p>
+<figure class="figure alignright"><img class="size-medium wp-image-54374" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Twitter-Bio-Forbes-310x472.png" alt="A profile bio within HootSuite" width="310" height="472" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Twitter-Bio-Forbes-310x472.png 310w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Twitter-Bio-Forbes-164x250.png 164w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Twitter-Bio-Forbes.png 473w" sizes="(max-width: 310px) 100vw, 310px" /><figcaption>A profile bio within HootSuite</figcaption></figure>
+<p>When looking at someone&#8217;s Twitter bio within HootSuite, you can see how many followers they have, how many updates they&#8217;ve posted, their location and their Bio text. You can also select a Timeline tab to see their latest tweets. The Bio tab also includes an interesting stat: their Klout score. While there&#8217;s non-stop debate over the validity and usefulness of Klout as a measurement, in this instance, I think it&#8217;s tremendously valuable. If you&#8217;re looking for someone in your industry who has demonstrated significant online influence, the higher their Klout score the better. Now, the actual number for the Klout score will vary by industry. Someone who&#8217;s nationally known may have a Klout score of 80+, but you may not need or even want that caliber of influencer. Smaller businesses, particularly local businesses, are going to want to identify and connect with people who are influential, but also approachable. My guess is that you&#8217;ll want to target people with a Klout score between 50 &#8211; 70, but again, your specific business, region and industry may vary.</p>
+<p>Once you&#8217;ve identified someone, following them is just the first step. You should then begin to form a relationship with that individual, and spend an appropriate amount of time compared to what you hope to get out of the relationship. You may want to add that person to a new or existing Twitter List to help keep tabs on the profile, and can do so using the Add to List button at the bottom of the bio box. You can send them a Direct Message if you think it would be appropriate, but generally I advise starting by making it a point to regularly retweet, favorite and reply to the tweets they&#8217;re sending on a daily basis. Begin to start conversations with these individuals, and make intelligent comments. Ask good questions and offer genuine, thoughtful compliments, and you will begin to make an impression. At an appropriate time, Make The Ask &#8211; whatever it is you are hoping they will do for you, whether it&#8217;s to make an introduction, retweet one of your tweets, or something else.</p>
+<p>By laying the groundwork of retweeting, favoriting and other comments, you&#8217;ve created value for the influencer. That way, when you ask them to do something for you, they&#8217;ll feel like they&#8217;re reciprocating, and not just doing you a favor.</p>
+<h2>Mobile Listening</h2>
+<figure class="figure alignright"><img class="size-medium wp-image-54371" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening-310x227.png" alt="Mobile search streams" width="310" height="227" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening-310x227.png 310w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening-620x454.png 620w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening-250x183.png 250w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening-600x439.png 600w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Mobile-Social-Listening.png 640w" sizes="(max-width: 310px) 100vw, 310px" /><figcaption>Mobile search streams</figcaption></figure>
+<p>With the <a title="Discover Hootsuite's mobile apps" href="https://hootsuite.com/products/mobile-apps" target="_blank">Hootsuite mobile app</a>, you can set up and save Twitter searches and streams similar to the Desktop dashboard.</p>
+<p>You can add a new stream and set up to search, or, even easier, start a new search and if you like it, save it as a stream.</p>
+<p>These are the ways businesses can use HootSuite to listen to the conversations taking place on social media, whether about the brand or the industry, and look for opportunities to connect with and engage customers and potential customers.</p>
+                    </div>
+                                                                <div class="post__categories">
+                            <p class="post__categories__list">Filed Under:</p><ul>	<li class="cat-item cat-item-2684"><a href="http://blog.hootsuite.com/channel/hootsuite-life/events/" >Events</a>
+</li>
+	<li class="cat-item cat-item-1948"><a href="http://blog.hootsuite.com/channel/social/social-media-skills/" >Skills</a>
+</li>
+</ul>
+                        </div>
+                                        <section class="cta cta--subscription">
+                        <i class="i i--subscribe i--lg"></i>
+                        <h4 class="h2">Subscribe to our blog newsletter</h4>
+                        <p>Social media strategy, advice, and tips delivered direct to your inbox</p>
+                        <form method="get" action="http://blog.hootsuite.com/" class="faux">
+                            <label class="screen-reader-text" for="email">Email</label>
+                            <input name="email" class="email" placeholder="Enter your email address" maxlength="255" title="" type="email">
+                            <button type="submit" class="btn btn--secondary btn--lg">Subscribe</button>
+                        </form>
+                        <p class="note">Unsubscribe at any time</p>
+                    </section>
+
+                    <footer class="post__footer">
+                        <div class="social">
+                            <p>Share this post via:</p>
+                            	<a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>HootSuite</span></a>
+	<a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>Twitter</span></a>
+	<a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>Facebook</span></a>
+	<a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>LinkedIn</span></a>
+	<a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"><span>Google +</span></a>
+                        </div>
+                        <div class="post__footer__author">
+                            <h6 class="post__footer__section-title">Written by</h6>
+                            <div class="author-meta vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><img src="http://1.gravatar.com/avatar/b618336b76b0d1418a436153816dc557?s=40" itemprop="image" class="author-meta__avatar" height="40" width="40" alt="" /><p><a href="https://plus.google.com/u/0/107499215004519214139/posts" rel="author"></a><span class="author-meta__name fn" itemprop="name"><a class="url" href="http://blog.hootsuite.com/author/mike-alton/">Mike Allton</a><a target="_blank" href="https://twitter.com/mike_allton"><span class="i i--twitter i--xxs i--color i--bg"></span></a></span><span class="author-meta__bio" itemprop="description">I am an Internet Marketing Consultant. I help businesses understand how to use Social Media, Blogging, Marketing, SEO, Mobile Apps and Technology to help grow and promote their business. I am an editor for <a href="http://www.TheSocialMediaHat.com">The Social Media Hat</a> and regularly write articles and stories on these topics.</span></p></div>                        </div>
+                                                    <div class="post__footer__related-posts">
+                                <div class='yarpp-related yarpp-related-none'>
+</div>
+                            </div>
+                                            </footer>
+                </article>
+                <aside class="comments-wrapper" rel="complementary">
+                    <div id="livefyre-comments">
+<div class="fyre fyre-width-large fyre-bootstrap">
+  <div class="fyre-widget">
+    <div class="fyre-stream-stats">
+      <div class="fyre-comment-count">
+        <span>32 comments</span>
+      </div>
+
+      <div class="fyre-divider"></div>
+
+      <div class="fyre-help">
+        <div class="fyre-box-wrapper">
+          <a href="http://livefyre.com" target="_blank"><span class="fyre-logo-drop">&amp;nbsp</span>
+          <img class="fyre-logo-help" src="http://zor.fyre.co/wjs/v3.0/images/lf-logo.png" alt="Livefyre" /></a>
+          
+          <ul class="fyre-box-list">
+            <li><a href="http://livefyre.com" target="_blank" title="Get Livefyre">Get
+            Livefyre</a></li>
+
+            <li><a href="http://support.livefyre.com" target="_blank" title="FAQ">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-auth">
+      <div class="fyre-login-bar"><a rel="nofollow" href="#" class="fyre-user-loggedout">Sign in</a></div>
+    </div>
+
+    <div class="fyre-editor">
+      <div class="fyre-editor-container">
+        <div class="fyre-editor-editable" style="height: 100px"></div>
+
+        <div class="fyre-editor-toolbar">
+          <div class="goog-toolbar goog-toolbar-horizontal" role="toolbar">
+            <div class="goog-inline-block fyre-button-left fyre-format-button" title="" role="button" id=":0">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-mention-button" title="" role="button" id=":1">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-follow-button" title="" role="button" id=":2">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box">
+                  + Follow
+                </div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-button fyre-post-button-enabled" title="" role="button" id=":3">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box">
+                  Post comment
+                </div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-facebook" title="" role="button" id=":4">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-twitter" title="" role="button" id=":5">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-linkedin" title="" role="button" id=":7">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-toolbar-separator goog-inline-block" role="separator" id=":6">
+              &nbsp;
+            </div>
+          </div>
+
+          <div class="fyre-format-toolbar">
+            <div class="goog-toolbar goog-toolbar-horizontal" role="toolbar">
+              <div class="goog-inline-block goog-toolbar-button" title="Bold" role="button" id="+bold">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-bold">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Italic" role="button" id="+italic">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-italic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Underline" role="button" id="+underline">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-underline">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Add or remove link" role="button" id="+link">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-link">
+                      Link
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Numbered list" role="button" id="+insertOrderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-insertOrderedList"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Bullet list" role="button" id="+insertUnorderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-insertUnorderedList"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-comment-stream">
+      <div class="fyre-stream-sort">
+        <a class="fyre-stream-sort-newest">Newest</a> | <a class="fyre-stream-sort-oldest">Oldest</a>
+      </div>
+
+      <div class="fyre-stream-content">      
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/3228b9c4c1131f6933cfef830e43b108/50.jpg?v=1450193161" class="fyre-user-avatar" alt="mjjeffs" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">mjjeffs</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi Hootesuite Team!</p><p><br /></p><p>I'm working on a listening board for a company with multiple social media accounts that I don't have access to. So every listening board is loaded with content generated by the company. Is there any way to eliminate a particular account (or accounts) from your stream while still monitoring conversations relating to them? This would be most helpful in Twitter. </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/96077109/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>mjjeffs</span></a> Hi there, happy to further assist with this. To customize your Tabs and Streams please feel free to see this Help Article here: <a href="https://help.hootsuite.com/hc/en-us/articles/204585760-Add-Streams" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585760-Add-Streams</a> If you need any further assistance please do feel free to Tweet to <a rel="nofollow" href="https://twitter.com/#!/Hootsuite_Help" target="_blank" class="fyre-mention fyre-mention-twitter">@<span>Hootsuite_Help</span></a> or reach out to us on Hootsuite.com/Help</p><p><br />Best,</p><p>Sharin | Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/9b1b8b5a7c4b431d82fa4c5e67e41dcd/50.jpg?v=1444999022" class="fyre-user-avatar" alt="OJ Quevedo" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">OJ Quevedo</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>can i monitor keywords from blogs and other web assets?</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi <a rel="nofollow" href="http://www.livefyre.com/profile/92749373/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>OJ Quevedo</span></a>, great question! Currently the search stream functions are only available for Twitter accounts. However we do explore possibilities of opening up the function to other social networks and the best place to keep tabs on feature updates and also voice what features we should add would be our Feedback Forum: <a href="https://feedback.hootsuite.com/forums/40182--hootsuite-com-web-dashboard" target="_blank" rel="nofollow">https://feedback.hootsuite.com/forums/40182--hootsuite-com-web-dashboard</a> </p><p>This page is monitored and replied actively by our development team! </p><p>Thanks again for reaching out to us. If we can assist further with any questions, please reach out to us on Twitter, @Hootsuite_help or via Private Message on our Facebook Page, <a href="https://www.facebook.com/hootsuite" target="_blank" rel="nofollow">https://www.facebook.com/hootsuite</a> or live chat via www.hootsuite.com<br /></p><p>Best regards,</p><p>Camille H. | Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/51bf25560d89c4077fa973eb1eac2f73/50.jpg?v=1438880509" class="fyre-user-avatar" alt="slipstreamPL" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">slipstreamPL</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi there,</p><p><br /></p><p>can you listen to conversation on Facebook opened groups?</p><p><br /></p><p>Regards</p><p>Bart</p><p><a href="http://slipstream.pl" target="_blank" rel="nofollow">slipstream.pl</a><br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi <a rel="nofollow" href="http://www.livefyre.com/profile/86837151/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>slipstreamPL</span></a> ,</p><p>Thanks for reaching out to us, my name is Camille from the Help Desk and I'd be happy to assist you in this matter!</p><p>This function should work as long as your identified in Facebook natively as an Admin as Facebook has recently updated their API to now include this restriction. To learn more about how Facebook's API would affect functions within Hootsuite have a look at this article: <a href="https://help.hootsuite.com/hc/en-us/articles/204601160-Important-Update-Facebook-Upgrades-to-Graph-API-2-x" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204601160-Important-Update-Facebook-Upgrades-to-Graph-API-2-x</a></p><p>Also should you like a more immediate response please feel free to reach out to us on Twitter, @Hootsuite_help or via Private Message on our Facebook Page, <a href="https://www.facebook.com/hootsuite" target="_blank" rel="nofollow">https://www.facebook.com/hootsuite</a> or live chat via www.hootsuite.com</p><p>Best regards,</p><p>Camille | Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://secure.gravatar.com/avatar/ecd9731315496e9a860ec93e6277f1ea/?s=50&amp;d=https://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg" class="fyre-user-avatar" alt="" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username"></a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Thanks for the post! Is there a way to just see posts that have had a certain amount of engagement? For example, with tweetdeck you can set a stream to show a certain word or tag that shows up in tweets that have been retweeted X amount of times. This really helps cut through the chaff to get to the wheat! </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi there!<br />There's some modules for tracking Mentions (counts and details), Retweets and follower growth, depending on what Engagement aspect you're wanting to look into.<br />Here's a overview for all the available modules:<br /><a href="https://help.hootsuite.com/hc/en-us/articles/204585490-Analytics-Reports-Points-templates-and-modules#3" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585490-Analytics-Reports-Points-templates-and-modules#3</a><br /><br />I hope this helps!<br />Mika | Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi <a rel="nofollow" href="http://www.livefyre.com/profile/77294112/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>NewStreamTweets</span></a>! </p><p><br /></p><p>Thanks for your comment. You can use the Quick Search tool to search by keyword or username to find people to follow with tips from this article:</p><p><br /></p><p><a href="https://help.hootsuite.com/hc/en-us/articles/204585780-Quick-Search-Twitter-or-Facebook" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585780-Quick-Search-Twitter-or-Facebook</a></p><p><br /></p><p>You can also use these instructions to interact with a user's Twitter profile: </p><p><br /></p><p><a href="https://help.hootsuite.com/hc/en-us/articles/204585890-View-Twitter-Timelines-Mentions-Favorites-or-Interaction-History" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585890-View-Twitter-Timelines-Mentions-Favorites-or-Interaction-History</a> </p><p><br /></p><p>And here are steps to follow users on Twitter from the dashboard as well:</p><p><br /></p><p><a href="https://help.hootsuite.com/hc/en-us/articles/204585860-Follow-or-Unfollow-Twitter-Users" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585860-Follow-or-Unfollow-Twitter-Users</a><br /></p><p><br /></p><p>I hope this is helpful! Thanks again!</p><p><br /></p><p>Best,</p><p><br /></p><p>Megan | Senior Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://lfavatar-a.akamaihd.net/a/1/7befaad416a7556ca84426ea8515dab0/50.jpg?v=1429914136" class="fyre-user-avatar" alt="NewStreamTweets" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">NewStreamTweets</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>How can I browse and follow new people on Twitter via Hootsuite </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://lfavatar-a.akamaihd.net/a/1/b8de0e52c49778b954045732ed6b2058/50.jpg?v=1404308127" class="fyre-user-avatar" alt="PeterBrissette" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">PeterBrissette</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Any way to monitor a specific interest list in a stream inside of hootsuite, cause that would totally rock!</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/52218971/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>PeterBrissette</span></a> Hey there!</p><p><br /></p><p>Thank you for reaching out to the Hootsuite Team via our Blog! My name is Gary and I'd be happy to clarify regarding Lists. </p><p><br /></p><p>You can create or add a Twitter List using the steps here: </p><p><br /></p><p><a href="https://help.hootsuite.com/hc/en-us/articles/204585760-Add-Streams#8" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585760-Add-Streams#8</a><br /></p><p><br /></p><p>I hope this helps clarify! </p><p><br /></p><p>Thanks again for reaching out to us. </p><p><br /></p><p>If we can assist further with any questions, please reach out to us on Twitter, @Hootsuite_help or via Private Message on our Facebook Page, <a href="https://www.facebook.com/hootsuite" target="_blank" rel="nofollow">https://www.facebook.com/hootsuite</a>. </p><p><br /></p><p>Kind regards, </p><p><br /></p><p>Gary | @HootSuite_Help | HootSuite Help Desk - <a href="http://ow.ly/dBnBz" target="_blank" rel="nofollow">http://ow.ly/dBnBz</a><br /></p><br /></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://lfavatar-a.akamaihd.net/a/1/d46369f72413804bf19d7245da49cd77/50.jpg?v=1424746964" class="fyre-user-avatar" alt="MelissaHailey" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">MelissaHailey</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>What if I want to "share" a post that I found while "listening" on Google+?  Sort of like a re-tweet but for Google+.  Is that an option?</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/72999414/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>MelissaHailey</span></a> </p><p><br /></p><p>Hi there,</p><p><br /></p><p>Thank you for reaching out to us! </p><p><br /></p><p>Due to the API restrictions on Google+, you cannot share posts on Google+ via Hootsuite. </p><p><br /></p><p>Please don't hesitate to ask if you have any further questions or concerns!</p><p><br /></p><p>Warm regards,</p><p>Emilie | Customer Advocate | hootsuite.com/help</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/15dce5a7ab40731b3af01840ed1570a2/?s=50&amp;d=https%3A//lfavatar-a.akamaihd.net/a/anon/50.jpg" class="fyre-user-avatar" alt="Saurabh K Singh" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Saurabh K Singh</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi Mike,</p><p><br /></p><p>I am Social Media Manager for AskmeBazaar and as the moment we are testing Hootsuite Pro Edition for my organization. Its good for Facebook and Twitter pages however what about the web and blog listenings.</p><p><br /></p><p>Regards,</p><p>Saurabh K Singh</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@Saurabh K Singh </p><p>Hi there,</p><p><br /></p><p>Thank you for reaching out! </p><p><br /></p><p>We have a wide variety of Apps that could help you manage any type of listening. Please see link <a href="https://help.hootsuite.com/entries/21655081-Manage-Your-App-Directory" target="_blank" rel="nofollow">https://help.hootsuite.com/entries/21655081-Manage-Your-App-Directory</a> for managing your App Directory.</p><p><br /></p><p>This link has more information regarding Social Listening:<a href="https://hootsuite.com/products/platform/social-media-listening" target="_blank" rel="nofollow">https://hootsuite.com/products/platform/social-media-listening</a>.</p><p><br /></p><p>Regards,</p><p><br /></p><p>Emilie | Customer Advocate | hootsuite.com/help</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/a8088508317d5a1d21b16fc60feba111/?s=50&amp;d=http://avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="thomasbi" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">thomasbi</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Can you get notifications or alerts from keywords... if you are listening for a specific word? I would ideally like to be notified as it is mentioned.</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/67362910/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>thomasbi</span></a> Hi there! At this time, we do not offer notifications for keywords, but we'd recommend creating a search stream to key an eye on these. Hope this helps!</p><p><br /></p><p>Thanks,</p><p>Megan @Hootsuite_Help - <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a></p><br /></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/f426aaa6c05d50ea72e2671077670ef4/?s=50&amp;d=http://avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="elitadawson" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">elitadawson</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi, your article was nice and interesting.Keep posting some more article. <br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/6fd2fd23ba06df20cffaf8c357587b24/50.jpg?v=1406039435" class="fyre-user-avatar" alt="Theresa Mawson" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Theresa Mawson</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Mike, you have written a very helpful article.  Thank you!  I appreciate your clear information.  There is so much to learn regarding current marketing strategies. I have a long road ahead and appreciate your steps and examples.</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/f44e0129990cc155be6f6b1e7ea15c9c/50.jpg?v=1404985972" class="fyre-user-avatar" alt="ahmiedfadel" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">ahmiedfadel</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>is this tool support Arabic language ????? </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/53212136/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>ahmiedfadel</span></a> </p><p><br /></p><p>Hi there,</p><p><br /></p><p>Thanks for reaching out to us, we're happy to help!</p><p><br /></p><p>To clarify, the Hootsuite Dashboard is available in Arabic. By logging into your dashboard and going to Preferences &gt; Language &gt; Arabic. </p><p><br /></p><p>I hope this helps! Please feel free to contact us on Twitter at <span>@hootsuite_help if you have any further questions.</span></p><p><span><br /></span></p><p>Kind Regards,</p><p>Amy | Customer Advocate | @Hootsuite_Help</p><p><br /></p><p><br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/7336ed2ae70f2d375c2b4d35b8d22726/?s=50&amp;d=http://avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="alex_d13" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">alex_d13</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi <a rel="nofollow" href="http://www.livefyre.com/profile/24381483/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>HootSuite_Help_Desk</span></a>, </p><p>I seem to have trouble setting up a Facebook search for a phrase. I'd like to monitor the phrase "roy morgan" but it brings back any post with Roy and Morgan anywhere in the post. Is there a way to define to phrase so it only brings back posts with the two words together? It only seems to be an issue with Facebook search.</p><p>Cheers,</p><p>Alex<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi <a rel="nofollow" href="http://www.livefyre.com/profile/52048160/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>alex_d13</span></a></p><p><br /></p><p>Thank you for your question - I'm happy to help clarify.</p><p><br /></p><p>The Facebook search results are being generated by Facebook's search feature, which is not able to isolate results that include all the search terms. We certainly understand that this would be an ideal function and will update when it is possible via the Facebook API.</p><p><br /></p><p>Best,</p><p>Kathleen | @Hootsuite_Help | Hootsuite Help Desk - <a href="http://ow.ly/dBnBz" target="_blank" rel="nofollow">http://ow.ly/dBnBz</a></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/148b480a217fa8b9d48efc29971220cd/50.jpg?v=1403876726" class="fyre-user-avatar" alt="carolecapochich" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">carolecapochich</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hey the hootesuite team :)</p><p><br /></p><p>I do love the monitoring skils of Hootesuite, which I use daily to monitor what people are saying about my compagny ( on Facebook and Twitter ).  It perfectly works for Twitter, and it was the same for Facebook until yesterday  :(  I don't undestand why : yesterday my Facebook search stream was full of posts mentioning my company , and this morning everything 's gone ...</p><p><br /></p><p>Do you have a solution ? Because this facebook stream on hootesuite is very helpful . I saw all the public facebook posts about my compagny ... Is there a reason why it suddenly stopped ?</p><p><br /></p><p>carole</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi Carol!<br />Sorry to hear you're seeing issues with your Facebook streams. As a first step, can you please try the following:<br />1. Revoke HootSuite's access to your Facebook by clicking <a href="https://www.facebook.com/settings?tab=applications" target="_blank" rel="nofollow">https://www.facebook.com/settings?tab=applications</a> and the 'x' next to HootSuite. <br />2. Once completed, please proceed to reconnect your Facebook in your HootSuite Dashboard by following all of these steps: <a href="https://help.hootsuite.com/entries/22866475-Reconnecting-Social-Networks#fb" target="_blank" rel="nofollow">https://help.hootsuite.com/entries/22866475-Reconnecting-Social-Networks#fb</a><br />Should issues persist from here, please tweet us at <span>@Hootsuite_Help for us to investigate further!</span><span><br /></span><span>Kind regards,</span><span><br /></span>Paige @Hootsuite_Help - <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a><br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/148b480a217fa8b9d48efc29971220cd/50.jpg?v=1403876726" class="fyre-user-avatar" alt="carolecapochich" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">carolecapochich</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/24381483/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>HootSuite_Help_Desk</span></a>  !</p><p><br /></p><p>I've tried everything you said, with 2 facebook accounts (  private and  public ) but it doesn't work :( </p><p>I'll tweet you @Hootsuite_Help </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/51639512/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>carolecapochich</span></a>  I'm sorry to hear that you're still experiencing this trouble. </p><p><br /></p><p>Could you please reach out to us over Twitter <span>@Hootsuite_Help and we can open a Help Desk Ticket to assist via email? </span></p><p><span><br /></span></p><p><span>Much appreciated,</span></p><p>Kathleen | @Hootsuite_Help | Hootsuite Help Desk - <a href="http://ow.ly/dBnBz" target="_blank" rel="nofollow">http://ow.ly/dBnBz</a><br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/ea453f9ae487edf222a83c963f919830/50.jpg" class="fyre-user-avatar" alt="ashlee" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">ashlee</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Thank you Mike! These tips have been extremely helpful and explained very well! Looking forward to sharing with my list!</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/fdf72fc784b2e4ead770a193de7b92c6/50.jpg?v=1389115585" class="fyre-user-avatar" alt="BrookeS" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">BrookeS</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>This was very helpful. I've set up streams to follow specific Twitter users using the From:(twitter handle) Search Criteria. Some handles show "No Results Found." Is there a reason I can't follow anyone? </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/29531938/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>BrookeS</span></a>  Hi Brooke! There are a few reasons that you might be seeing that in your streams. </p><p>For example, through the API we currently can search up to 7 days back so if that handle hasn't tweeted anything in the past week, you'll get no results. There's also a chance that the user is private or perhaps their tweets aren't being fully indexed by Twitter. You can check this by running the same search on Twitter natively.</p><p>I hope that helps Brooke but if you have any further questions don't hesitate to get in touch with us over Twitter <span>@HootSuite_Help!</span></p><p><span>Best,<br />Nicole @HootSuite_Help - <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a><br /></span></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/06e0ec70ddd87f3eb9e77f09847c8c18/?s=50&amp;d=http%3A//avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="Steve G" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Steve G</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>It's also worth noting that "if appropriate" is something to be considered when engaging via these listening tools. Monitoring relevant, non branded topics looking for sales opportunities crosses an important line among users. Companies may think they're providing value because they've pointed someone who's frustrated with their credit card company to their credit card options, but that sort of thing can really be off-putting. Gathering insights is important, but when to engage and when to simply sit back and listen are important areas to think about when strategizing on social. </p><p>Thanks for a great post with some very useful information! </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>                </aside>
+                    </div>
+        <menu class="social-share" data-fixto=".content-wrapper" data-fixto-top="48" style="">
+            <div class="social-share__share-links">
+                                                    <a class="i i--hootsuite i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"></a>
+                                    <a class="i i--twitter i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"></a>
+                                    <a class="i i--facebook i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"></a>
+                                    <a class="i i--linkedin i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"></a>
+                                    <a class="i i--googleplus i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Use+Hootsuite+for+Social+Listening&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fuse-hootsuite-social-listening%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Use+Hootsuite+for+Social+Listening']);" target="_blank"></a>
+                            </div>
+        </menu>
+    </div>
+                                                        <div class="footer-cta">
+                        <p>Save time managing your social media today</p>
+<p><a class="btn-cta btn-type1" href="https://hootsuite.com/plans/free" target="_blank">Get Started for Free</a></p>
+                    </div>
+                                <footer id="site-footer" class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+                    <div class="container">
+                        <nav class="nav nav--footer" role="navigation">
+                            <ul id="menu-footer-menu" class="menu"><li id="menu-item-70281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70281"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-70283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70283"><a href="https://hootsuite.com/products/social-media-engagement" class="" data-navsrc="nav--level2">Engagement</a></li>
+	<li id="menu-item-70285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70285"><a href="https://hootsuite.com/products/social-media-publishing" class="" data-navsrc="nav--level2">Publishing</a></li>
+	<li id="menu-item-70284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70284"><a href="https://hootsuite.com/products/social-media-analytics" class="" data-navsrc="nav--level2">Analytics</a></li>
+	<li id="menu-item-70287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70287"><a href="https://hootsuite.com/products/campaigns" class="" data-navsrc="nav--level2">Campaigns</a></li>
+	<li id="menu-item-70282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70282"><a href="https://hootsuite.com/products/platform" class="" data-navsrc="nav--level2">Platform</a></li>
+	<li id="menu-item-70286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70286"><a href="https://hootsuite.com/products/extensions" class="" data-navsrc="nav--level2">Extensions</a></li>
+	<li id="menu-item-82390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82390"><a href="https://hootsuite.com/products/mobile-apps" class="" data-navsrc="nav--level2">Mobile</a></li>
+</ul>
+</li>
+<li id="menu-item-70288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70288"><a href="https://hootsuite.com/solutions" class="" data-navsrc="nav--level1">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-70289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70289"><a href="https://hootsuite.com/solutions/social-media-management" class="" data-navsrc="nav--level2">Social Media Management</a></li>
+	<li id="menu-item-70290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70290"><a href="https://hootsuite.com/solutions/social-marketing" class="" data-navsrc="nav--level2">Social Marketing</a></li>
+	<li id="menu-item-70291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70291"><a href="https://hootsuite.com/solutions/social-selling" class="" data-navsrc="nav--level2">Social Selling</a></li>
+	<li id="menu-item-70292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70292"><a href="https://hootsuite.com/solutions/social-customer-service" class="" data-navsrc="nav--level2">Social Customer Service</a></li>
+</ul>
+</li>
+<li id="menu-item-70293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70293"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a>
+<ul class="sub-menu">
+	<li id="menu-item-70294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70294"><a href="https://hootsuite.com/plans/free" class="" data-navsrc="nav--level2">Free</a></li>
+	<li id="menu-item-70295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70295"><a href="https://hootsuite.com/plans/pro" class="" data-navsrc="nav--level2">Pro</a></li>
+	<li id="menu-item-70296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70296"><a href="https://hootsuite.com/plans/enterprise" class="" data-navsrc="nav--level2">Enterprise</a></li>
+	<li id="menu-item-70297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70297"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level2">Compare Plans</a></li>
+</ul>
+</li>
+<li id="menu-item-70298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70298"><a href="https://hootsuite.com/services" class="" data-navsrc="nav--level1">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-70299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70299"><a href="https://hootsuite.com/services/professional-services" class="" data-navsrc="nav--level2">Professional Services</a></li>
+	<li id="menu-item-70301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70301"><a href="https://hootsuite.com/services/education" class="" data-navsrc="nav--level2">Education</a></li>
+	<li id="menu-item-70300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70300"><a href="https://hootsuite.com/services/partner-programs" class="" data-navsrc="nav--level2">Partner Programs</a></li>
+	<li id="menu-item-70302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70302"><a href="https://hootsuite.com/developers/app-directory" class="" data-navsrc="nav--level2">Developers</a></li>
+	<li id="menu-item-70303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70303"><a href="https://hootsuite.com/services/support" class="" data-navsrc="nav--level2">Support</a></li>
+</ul>
+</li>
+<li id="menu-item-70304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70304"><a href="http://blog.hootsuite.com/category/resources/" class="" data-navsrc="nav--level1">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-70305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70305"><a href="http://blog.hootsuite.com/category/resources/" class="" data-navsrc="nav--level2">Resource Library</a></li>
+	<li id="menu-item-70306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70306"><a href="https://hootsuite.com/webinars" class="" data-navsrc="nav--level2">Webinars</a></li>
+	<li id="menu-item-70307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70307"><a href="http://blog.hootsuite.com/" class="" data-navsrc="nav--level2">Blog</a></li>
+	<li id="menu-item-83903" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83903"><a href="https://hootsuite.com/customers" class="" data-navsrc="nav--level2">Customers</a></li>
+	<li id="menu-item-83904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83904"><a href="https://hootsuite.com/help" class="" data-navsrc="nav--level2">Help</a></li>
+</ul>
+</li>
+<li id="menu-item-70308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70308"><a href="https://hootsuite.com/about" class="" data-navsrc="nav--level1">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-70309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70309"><a href="https://hootsuite.com/about/careers" class="" data-navsrc="nav--level2">Careers</a></li>
+	<li id="menu-item-70310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70310"><a href="https://hootsuite.com/about/contact" class="" data-navsrc="nav--level2">Contact Us</a></li>
+	<li id="menu-item-70311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70311"><a href="https://hootsuite.com/about/leadership" class="" data-navsrc="nav--level2">Leadership</a></li>
+	<li id="menu-item-70312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70312"><a href="http://media.hootsuite.com/press-releases/" class="" data-navsrc="nav--level2">Press</a></li>
+	<li id="menu-item-70313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70313"><a href="https://hootsuite.com/about/media-kit" class="" data-navsrc="nav--level2">Media Kit</a></li>
+	<li id="menu-item-70314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70314"><a href="http://media.hootsuite.com/events/" class="" data-navsrc="nav--level2">Events</a></li>
+	<li id="menu-item-70315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70315"><a href="https://hootsuite.com/about/community" class="" data-navsrc="nav--level2">Community</a></li>
+	<li id="menu-item-70316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70316"><a href="https://hootsuite.com/about/hootgiving" class="" data-navsrc="nav--level2">HootGiving</a></li>
+	<li id="menu-item-70317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70317"><a href="http://shop.hootsuite.com" class="" data-navsrc="nav--level2">Hootsuite Shop</a></li>
+	<li id="menu-item-70329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70329"><a href="https://hootsuite.com/security" class="" data-navsrc="nav--level2">Security</a></li>
+</ul>
+</li>
+</ul>                        </nav>
+                        <div class="secondary-links">
+                            <nav class="nav legal-links" role="navigation">
+                                <ul class="utility list-inline">
+                                    <li><a href="https://hootsuite.com/legal/terms">Terms &amp; Conditions</a></li>
+                                    <li><a href="https://hootsuite.com/legal/privacy">Privacy Policy</a></li>
+                                    <li><a href="https://hootsuite.com/legal/copyright">Copyright</a></li>
+                                </ul>
+                            </nav>
+                            <div class="col-md-4">
+                                                                                                    <select class="input-sm _languageSwitcher">
+                                                                                                                                                                                                                            <option value="http://blog.hootsuite.com/use-hootsuite-social-listening/" selected>English</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/fr/?i8ln_id=54368" >Français</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/de/?i8ln_id=54368" >Deutsch</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/id/?i8ln_id=54368" >Bahasa Indonesia</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/it/?i8ln_id=54368" >Italiano</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/ja/?i8ln_id=54368" >日本語</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/pt-br/?i8ln_id=54368" >Português</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/es/?i8ln_id=54368" >Español</option>
+                                                                                                                        </select>
+                                                            </div>
+                            <div class="social social-links">
+                                <a class="rss small" href="http://blog.hootsuite.com/feed/"></a>
+                                                                                                                                            <a target="_bank" class="twitter small" href="https://twitter.com/Hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="facebook small" href="https://www.facebook.com/hootsuite"></a>
+                                                                                                                                                                                                                    <a target="_bank" class="google-plus small" href="https://plus.google.com/+HootSuite/"></a>
+                                                                                                                                                <a target="_bank" class="linkedin small" href="http://www.linkedin.com/company/hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="youtube small" href="https://www.youtube.com/user/hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="instagram small" href="http://instagram.com/hootsuite"></a>
+                                                                                                </div>   
+                        </div>
+                        <div class="row">
+                            <div class="text-center copyright">
+                                <p>&copy; 2016 HootSuite Media Inc. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /m-content-inner -->
+        </div>
+        <!-- /m-content -->
+        <nav id="off-canvas-1" class="menu m-menu" role="navigation">
+          <div class="hs-logins">
+            <ul>
+              <li data-auth="out"><a class="login btn btn-sm btn-success" href="https://hootsuite.com/plans">Sign Up</a></li>
+              <li data-auth="in"><a class="login btn btn-sm btn-success" href="https://hootsuite.com/dashboard">Dashboard</a></li>
+            </ul>
+          </div>
+            <ul id="menu-main-mobile-menu" class="menu"><li id="menu-item-82399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82399"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a></li>
+<li id="menu-item-82400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82400"><a href="https://hootsuite.com/solutions" class="" data-navsrc="nav--level1">Solutions</a></li>
+<li id="menu-item-82401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82401"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a></li>
+<li id="menu-item-82402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82402"><a href="https://hootsuite.com/customers" class="" data-navsrc="nav--level1">Customers</a></li>
+<li id="menu-item-82403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82403"><a href="https://hootsuite.com/resources" class="" data-navsrc="nav--level1">Resources</a></li>
+<li id="menu-item-82404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82404"><a href="https://hootsuite.com/about" class="" data-navsrc="nav--level1">About Us</a></li>
+</ul>            <ul id="menu-utility-mobile-menu" class="sm"><li id="menu-item-82414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82414" data-auth="out"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Free Trial</a></li>
+<li id="menu-item-82415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82415"><a href="http://blog.hootsuite.com/" class="" data-navsrc="nav--level1">Blog</a></li>
+<li id="menu-item-82416" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82416"><a href="https://hootsuite.com/help" class="" data-navsrc="nav--level1">Help</a></li>
+<li id="menu-item-82417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82417"><a href="https://hootsuite.com/about/careers" class="" data-navsrc="nav--level1">Careers</a></li>
+<li id="menu-item-82418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82418"><a href="https://hootsuite.com/about/contact-us" class="" data-navsrc="nav--level1">Contact Us</a></li>
+<li id="menu-item-82419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82419" data-auth="out"><a href="https://hootsuite.com/login" class="" data-navsrc="nav--level1">Log In</a></li>
+<li id="menu-item-82420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82420" data-auth="in"><a href="https://hootsuite.com/logout" class="" data-navsrc="nav--level1">Log Out</a></li>
+</ul>        </nav>
+    </div>
+    <!-- /m-pusher -->
+</div>
+<!-- /m-container -->
+<div id="newsletter-modal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Thank You</h4>
+            </div>
+            <div class="modal-body">
+                <div id="mktoForm-2645" class="marketo-form" data-formid="2645"></div>
+                <div id="mktoForm-2646" class="marketo-form" data-formid="2646"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<!-- /// LOAD CHARTBEAT /// -->
+		<script type="text/javascript">
+		var _sf_async_config={};
+		_sf_async_config.uid = 48619;
+		_sf_async_config.useCanonical = true;
+		
+		(function(){
+		  function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			   (("https:" == document.location.protocol) ? "https://" : "http://") +
+			   "static.chartbeat.com/js/chartbeat.js");
+			document.body.appendChild(e);
+		  }
+		  var oldonload = window.onload;
+		  window.onload = (typeof window.onload != 'function') ?
+			 loadChartbeat : function() { try { oldonload(); } catch (e) { loadChartbeat(); throw e} loadChartbeat(); };
+		})();
+		</script>
+		<script type="text/javascript">
+    var livefyre_auth_loaded = false;
+</script>
+    <script type="text/javascript">
+        var load_livefyre_auth = function() {
+            if(!livefyre_auth_loaded) {
+                Livefyre.require(['auth'], function(auth) {
+                    auth.delegate(auth.createDelegate('http://livefyre.com'));
+                });
+            }
+            livefyre_auth_loaded = true;
+        };
+    </script>
+
+<script type="text/javascript">
+    var networkConfigComments = {
+        network: "livefyre.com"
+    };
+    var convConfigComments54368 = {
+        siteId: "332321",
+        articleId: "54368",
+        el: "livefyre-comments",
+        collectionMeta: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwOlwvXC9ibG9nLmhvb3RzdWl0ZS5jb21cL3VzZS1ob290c3VpdGUtc29jaWFsLWxpc3RlbmluZ1wvIiwidGl0bGUiOiJIb3cgdG8gVXNlIEhvb3RzdWl0ZSBmb3IgU29jaWFsIExpc3RlbmluZyIsImFydGljbGVJZCI6NTQzNjgsInRhZ3MiOlsiR3Vlc3QiLCJIb290c3VpdGUgU29sdXRpb25zIFBhcnRuZXIiLCJzb2NpYWwgbGlzdGVuaW5nIl0sInR5cGUiOiJsaXZlY29tbWVudHMifQ.EVttQZBWVAipzCB7l45RFwrEAxjuQyy_M3akpavTYA4",
+        checksum: "61adbb0b7a05e4f81e725bca81cac67e"
+    };
+    if (typeof (liveCommentsConfig) !== 'undefined') {
+        convConfigComments54368 = Livefyre.LFAPPS.lfExtend(liveCommentsConfig, convConfigComments54368);
+    }
+
+    Livefyre.require(['fyre.conv#3'], function (ConvComments) {
+        load_livefyre_auth();
+        new ConvComments(networkConfigComments,
+                [convConfigComments54368],
+                function (commentsWidget) {
+                    var livecommentsListeners = Livefyre.LFAPPS.getAppEventListeners('livecomments');
+                    if (livecommentsListeners.length > 0) {
+                        for (var i = 0; i<livecommentsListeners.length; i++) {
+                            var livecommentsListener = livecommentsListeners[i];
+                            commentsWidget.on(livecommentsListener.eventName, livecommentsListener.callback);
+                        }
+                    }
+                }
+        );
+    });
+</script><script type="text/javascript" data-lf-domain="livefyre.com" id="ncomments_js" src="http://cdn.livefyre.com/libs/commentcount/v1.0/commentcount.js"></script><link rel='stylesheet' id='slickquiz_css-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/slickquiz/css/slickQuiz.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='slickquiz_front_css-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/css/front.css?ver=4.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/scripts-footer.min.js?ver=3.1.52'></script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icl_vars = {"current_language":"en","icl_home":"http:\/\/blog.hootsuite.com\/","ajax_url":"https:\/\/blog.hootsuite.com\/wp-admin\/admin-ajax.php","url_type":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/slickquiz/js/slickQuiz.js?ver=4.4.2'></script>
+    <script>LF.CommentCount({ replacer: function(element, count) { element.innerHTML = count +' Comment'+ (count === 1 ? '' : 's'); } });</script>
+    <script>
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+<div style="display:none">
+    <script>
+        /* <![CDATA[ */
+        var google_conversion_id = 1004013306;
+        var google_conversion_label = "sVJjCPa2_AQQ-o3g3gM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script src="//www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+        <div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1004013306/?value=0&amp;label=sVJjCPa2_AQQ-o3g3gM&amp;guid=ON&amp;script=0"/></div>
+    </noscript>
+</div>
+<script>
+    (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/125827.js';
+        e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+</script>
+<script>
+    var _kiq = _kiq || [];
+    (function($) {
+        _kiq.push(['eventHandler', 'show', function() {
+
+            var qualarooTimer = setInterval(function(){
+                if($('#qual_ol').length > 0 ) {
+                    //Select the first required field label and button in the survey
+                    var reqField = document.querySelector('.qual_ol_reqd');
+                    var sendBtn = document.getElementById('qual_ol_send');
+
+                    if(reqField !== null && sendBtn !== null) {
+                        reqField.innerHTML = '*' + qualaroo.requiredField;
+                        sendBtn.innerHTML = qualaroo.send + '<div class="qual_ol_btn_dot"><div class="qual_ol_btn_dot_gt"></div></div>';
+                    }
+
+                    //Clear it!
+                    clearInterval(qualarooTimer);
+                }
+            }, 75);
+        }]);
+    })(jQuery);
+</script>
+<!-- Release Notify -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"923a018eb7","applicationID":"12447397","transactionName":"YARbMEBWWUMAVxJZWFlOeAdGXlheTkcPXlBbBA==","queueTime":0,"applicationTime":1082,"atts":"TENYRghMSk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Content Delivery Network via Amazon Web Services: S3: hootsuite-blog-assets.s3.amazonaws.com
+Application Monitoring using New Relic
+
+ Served from: blog.hootsuite.com @ 2016-02-18 10:07:04 by W3 Total Cache -->

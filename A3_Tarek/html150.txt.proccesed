@@ -1,0 +1,261 @@
+   ERROR 403 - FORBIDDEN
+
+[1]Why am I seeing this page?
+
+   403 errors usually mean that the server does not have permission to
+   view the requested file or resource.These errors are often caused by IP
+   Deny rules, File protections, or permission problems.
+
+   In many cases this is not an indication of an actual problem with the
+   server itself but rather a problem with the information the server has
+   been instructed to access as a result of the request. This error is
+   often caused by an issue on your site which may require additional
+   review by our support teams.
+
+   Our support staff will be happy to assist you in resolving this issue.
+   Please contact our Live Support or reply to any Tickets you may have
+   received from our technicians for further assistance.
+
+[2]Is there anything that I can do?
+
+   There are a few common causes for this error code including problems
+   with the individual script that may be executed upon request. Some of
+   these are easier to spot and correct than others.
+
+File and Directory Ownership
+
+   The server you are on runs applications in a very specific way in most
+   cases. The server generally expects files and directories be owned by
+   your specific user cPanel user. If you have made changes to the file
+   ownership on your own through SSH please reset the Owner and Group
+   appropriately.
+
+File and Directory Permissions
+
+   The server you are on runs applications in a very specific way in most
+   cases. The server generally expects files such as HTML, Images, and
+   other media to have a permission mode of 644. The server also expects
+   the permission mode on directories to be set to 755 in most cases.
+
+   (See the Section on Understanding Filesystem Permissions.)
+
+   Note: If the permissions are set to 000, please contact our support
+   team using the ticket system. This may be related to an account level
+   suspension as a result of abuse or a violation of our Terms of Service.
+
+IP Deny Rules
+
+   In the .htaccess file, there may be rules that are conflicting with
+   each other or that are not allowing an IP address access to the site.
+
+   If you would like to check a specific rule in your .htaccess file you
+   can comment that specific line in the .htaccess by adding # to the
+   beginning of the line. You should always make a backup of this file
+   before you start making changes.
+
+   For example, if the .htaccess looks like
+   Order deny,allow
+   allow from all
+   deny from 192.168.1.5
+   deny from 192.168.1.25
+
+   Then try something like this
+   Order allow,deny
+   allow from all
+   #deny from 192.168.1.5
+   deny from 192.168.1.25
+
+   Our server administrators will be able to advise you on how to avoid
+   this error if it is caused by process limitations. Please contact our
+   Live Support or open a Ticket. Be sure to include the steps needed for
+   our support staff to see the 403 error on your site.
+
+[3]Understanding Filesystem Permissions
+
+Symbolic Representation
+
+   The first character indicates the file type and is not related to
+   permissions. The remaining nine characters are in three sets, each
+   representing a class of permissions as three characters. The first set
+   represents the user class. The second set represents the group class.
+   The third set represents the others class.
+
+   Each of the three characters represent the read, write, and execute
+   permissions:
+     * r if reading is permitted, - if it is not.
+     * w if writing is permitted, - if it is not.
+     * x if execution is permitted, - if it is not.
+
+   The following are some examples of symbolic notation:
+     * -rwxr-xr-x a regular file whose user class has full permissions and
+       whose group and others classes have only the read and execute
+       permissions.
+     * crw-rw-r-- a character special file whose user and group classes
+       have the read and write permissions and whose others class has only
+       the read permission.
+     * dr-x------ a directory whose user class has read and execute
+       permissions and whose group and others classes have no permissions.
+
+Numeric Representation
+
+   Another method for representing permissions is an octal (base-8)
+   notation as shown. This notation consists of at least three digits.
+   Each of the three rightmost digits represents a different component of
+   the permissions: user, group, and others.
+
+   Each of these digits is the sum of its component bits As a result,
+   specific bits add to the sum as it is represented by a numeral:
+     * The read bit adds 4 to its total (in binary 100),
+     * The write bit adds 2 to its total (in binary 010), and
+     * The execute bit adds 1 to its total (in binary 001).
+
+   These values never produce ambiguous combinations. each sum represents
+   a specific set of permissions. More technically, this is an octal
+   representation of a bit field - each bit references a separate
+   permission, and grouping 3 bits at a time in octal corresponds to
+   grouping these permissions by user, group, and others.
+
+   Permission mode 0755
+
+   4+2+1=7
+          Read, Write, eXecute
+
+   4+1=5
+          Read, eXecute
+
+   4+1=5
+          Read, eXecute
+
+   Permission mode 0644
+
+   4+2=6
+          Read, Write
+
+   4
+          Read
+
+   4
+          Read
+
+[4]How to modify your .htaccess file
+
+   The .htaccess file contains directives (instructions) that tell the
+   server how to behave in certain scenarios and directly affect how your
+   website functions.
+
+   Redirects and rewriting URLs are two very common directives found in a
+   .htaccess file, and many scripts such as WordPress, Drupal, Joomla and
+   Magento add directives to the .htaccess so those scripts can function.
+
+   It is possible that you may need to edit the .htaccess file at some
+   point, for various reasons.This section covers how to edit the file in
+   cPanel, but not what may need to be changed.(You may need to consult
+   other articles and resources for that information.)
+
+There are Many Ways to Edit a .htaccess File
+
+     * Edit the file on your computer and upload it to the server via FTP
+     * Use an FTP program's Edit Mode
+     * Use SSH and a text editor
+     * Use the File Manager in cPanel
+
+   The easiest way to edit a .htaccess file for most people is through the
+   File Manager in cPanel.
+
+How to Edit .htaccess files in cPanel's File Manager
+
+   Before you do anything, it is suggested that you backup your website so
+   that you can revert back to a previous version if something goes wrong.
+
+Open the File Manager
+
+    1. Log into cPanel.
+    2. In the Files section, click on the File Manager icon.
+    3. Check the box for Document Root for and select the domain name you
+       wish to access from the drop-down menu.
+    4. Make sure Show Hidden Files (dotfiles)" is checked.
+    5. Click Go. The File Manager will open in a new tab or window.
+    6. Look for the .htaccess file in the list of files. You may need to
+       scroll to find it.
+
+To Edit the .htaccess File
+
+    1. Right click on the .htaccess file and click Code Edit from the
+       menu. Alternatively, you can click on the icon for the .htaccess
+       file and then click on the Code Editor icon at the top of the page.
+    2. A dialogue box may appear asking you about encoding. Just
+       click Edit to continue. The editor will open in a new window.
+    3. Edit the file as needed.
+    4. Click Save Changes in the upper right hand corner when done. The
+       changes will be saved.
+    5. Test your website to make sure your changes were successfully
+       saved. If not, correct the error or revert back to the previous
+       version until your site works again.
+    6. Once complete, you can click Close to close the File Manager
+       window.
+
+[5]How to modify file and directory permissions
+
+   The permissions on a file or directory tell the server how in what ways
+   it should be able to interact with a file or directory.
+
+   This section covers how to edit the file permissions in cPanel, but not
+   what may need to be changed.(See the section on what you can do for
+   more information.)
+
+There are Many Ways to Edit a File Permissions
+
+     * Use an FTP program
+     * Use SSH and a text editor
+     * Use the File Manager in cPanel
+
+   The easiest way to edit file permissions for most people is through the
+   File Manager in cPanel.
+
+How to Edit file permissions in cPanel's File Manager
+
+   Before you do anything, it is suggested that you backup your website so
+   that you can revert back to a previous version if something goes wrong.
+
+Open the File Manager
+
+    1. Log into cPanel.
+    2. In the Files section, click on the File Manager icon.
+    3. Check the box for Document Root for and select the domain name you
+       wish to access from the drop-down menu.
+    4. Make sure Show Hidden Files (dotfiles)" is checked.
+    5. Click Go. The File Manager will open in a new tab or window.
+    6. Look for the file or directory in the list of files. You may need
+       to scroll to find it.
+
+To Edit the Permissions
+
+    1. Right click on the file or directory and click Change Permissions
+       from the menu.
+    2. A dialogue box should appear allowing you to select the correct
+       permissions or use the numerical value to set the correct
+       permissions.
+    3. Edit the file permissions as needed.
+    4. Click Change Permissions in the lower left hand corner when done.
+       The changes will be saved.
+    5. Test your website to make sure your changes were successfully
+       saved. If not, correct the error or revert back to the previous
+       version until your site works again.
+    6. Once complete, you can click Close to close the File Manager
+       window.
+
+   [EMBED]
+   This site is hosted by HostGator!
+   [6]CLICK HERE TO GET STARTED
+
+[7]Want to customize this page?
+
+References
+
+   1. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html150.txt
+   2. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html150.txt
+   3. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html150.txt
+   4. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html150.txt
+   5. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html150.txt
+   6. http://www.hostgator.com/?utm_source=internal&utm_medium=link&utm_campaign=page403
+   7. https://support.hostgator.com/articles/cpanel/custom-error-pages

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" > 
+<base href="http://www.poandpo.com/"><title>Sweden proposes age limit for social media use</title><meta name="Keywords" content="News, latest news, US news, headlines, world news, business, finances, politics, companies,  travel, health, design, meantime, cars, yacths, airplane"><meta name="description" content="The Swedish government proposed an age limit for teenagers who want to interact on social media as a result of data protection rules at the European Union (EU) level...."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sweden proposes age limit for social media use"><meta name="twitter:description" content="The Swedish government proposed an age limit for teenagers who want to interact on social media as a result of data protection rules at the European Union (EU) level...."><meta name="twitter:image:src" content="http://www.histerius.com/hs0216/per_bolund.jpg"><script type="text/javascript">
+   function toggle(div) {
+      if (document.getElementById(div).style.display=='') {
+         document.getElementById(div).style.display = 'none';
+         return
+      } document.getElementById(div).style.display = '';
+   }
+
+function DST2(){
+var today = new Date;
+var yr = today.getFullYear();
+var jan = new Date(yr,0);	// January 1
+var jul = new Date(yr,6);	// July 1
+var jelisadadaylight = 'false';
+
+if (jan.getTimezoneOffset() > jul.getTimezoneOffset() && today.getTimezoneOffset() != jan.getTimezoneOffset()){
+	var jelisadadaylight = 'true';
+}
+if (jan.getTimezoneOffset() < jul.getTimezoneOffset() && today.getTimezoneOffset() != jul.getTimezoneOffset()){
+	var jelisadadaylight = 'true';
+}
+
+return jelisadadaylight;
+}
+
+function dajuserzonu(from,to) { 
+var HEMISPHERE_SOUTH = 'SOUTH';
+var HEMISPHERE_NORTH = 'NORTH';
+var HEMISPHERE_UNKNOWN = 'N/A';
+var olson = {}
+
+olson.timezones = {
+    '-720,0'   : new TimeZone('-12:00','Etc/GMT+12', false),
+    '-660,0'   : new TimeZone('-11:00','Pacific/Pago_Pago', false),
+    '-600,1'   : new TimeZone('-11:00','America/Adak',true),
+    '-660,1,s' : new TimeZone('-11:00','Pacific/Apia', true),
+    '-600,0'   : new TimeZone('-10:00','Pacific/Honolulu', false),
+    '-570,0'   : new TimeZone('-10:30','Pacific/Marquesas',false),
+    '-540,0'   : new TimeZone('-09:00','Pacific/Gambier',false),
+    '-540,1'   : new TimeZone('-09:00','America/Anchorage', true),
+    '-480,1'   : new TimeZone('-08:00','America/Los_Angeles', true),
+    '-480,0'   : new TimeZone('-08:00','Pacific/Pitcairn',false),
+    '-420,0'   : new TimeZone('-07:00','America/Phoenix', false),
+    '-420,1'   : new TimeZone('-07:00','America/Denver', true),
+    '-360,0'   : new TimeZone('-06:00','America/Guatemala', false),
+    '-360,1'   : new TimeZone('-06:00','America/Chicago', true),
+    '-360,1,s' : new TimeZone('-06:00','Pacific/Easter',true),
+    '-300,0'   : new TimeZone('-05:00','America/Bogota', false),
+    '-300,1'   : new TimeZone('-05:00','America/New_York', true),
+    '-270,0'   : new TimeZone('-04:30','America/Caracas', false),
+    '-240,1'   : new TimeZone('-04:00','America/Halifax', true),
+    '-240,0'   : new TimeZone('-04:00','America/Santo_Domingo', false),
+    '-240,1,s' : new TimeZone('-04:00','America/Asuncion', true),
+    '-210,1'   : new TimeZone('-03:30','America/St_Johns', true),
+    '-180,1'   : new TimeZone('-03:00','America/Godthab', true),
+    '-180,0'   : new TimeZone('-03:00','America/Argentina/Buenos_Aires,', false),
+    '-180,1,s' : new TimeZone('-03:00','America/Montevideo', true),
+    '-120,0'   : new TimeZone('-02:00','America/Noronha', false),
+    '-120,1'   : new TimeZone('-02:00','Etc/GMT+2', true),
+    '-60,1'    : new TimeZone('-01:00','Atlantic/Azores', true),
+    '-60,0'    : new TimeZone('-01:00','Atlantic/Cape_Verde', false),
+    '0,0'      : new TimeZone('00:00','Africa/Casablanca', false),
+    '0,1'      : new TimeZone('00:00','Europe/London', true),
+    '60,1'     : new TimeZone('+01:00','Europe/Berlin', true),
+    '60,0'     : new TimeZone('+01:00','Africa/Lagos', false),
+    '60,1,s'   : new TimeZone('+01:00','Africa/Windhoek',true),
+    '120,1'    : new TimeZone('+02:00','Asia/Beirut', true),
+    '120,0'    : new TimeZone('+02:00','Africa/Johannesburg', false),
+    '180,1'    : new TimeZone('+03:00','Europe/Moscow', true),
+    '180,0'    : new TimeZone('+03:00','Asia/Baghdad', false),
+    '210,1'    : new TimeZone('+03:30','Asia/Tehran', true),
+    '240,0'    : new TimeZone('+04:00','Asia/Dubai', false),
+    '240,1'    : new TimeZone('+04:00','Asia/Yerevan', true),
+    '270,0'    : new TimeZone('+04:30','Asia/Kabul', false),
+    '300,1'    : new TimeZone('+05:00','Asia/Yekaterinburg', true),
+    '300,0'    : new TimeZone('+05:00','Asia/Karachi', false),
+    '330,0'    : new TimeZone('+05:30','Asia/Kolkata', false),
+    '345,0'    : new TimeZone('+05:45','Asia/Kathmandu', false),
+    '360,0'    : new TimeZone('+06:00','Asia/Dhaka', false),
+    '360,1'    : new TimeZone('+06:00','Asia/Omsk', true),
+    '390,0'    : new TimeZone('+06:30','Asia/Rangoon', false),
+    '420,1'    : new TimeZone('+07:00','Asia/Krasnoyarsk', true),
+    '420,0'    : new TimeZone('+07:00','Asia/Jakarta', false),
+    '480,0'    : new TimeZone('+08:00','Asia/Shanghai', false),
+    '480,1'    : new TimeZone('+08:00','Asia/Irkutsk', true),
+    '525,0'    : new TimeZone('+08:45','Australia/Eucla', true),
+    '525,1,s'  : new TimeZone('+08:45','Australia/Eucla', true),
+    '540,1'    : new TimeZone('+09:00','Asia/Yakutsk', true),
+    '540,0'    : new TimeZone('+09:00','Asia/Tokyo', false),
+    '570,0'    : new TimeZone('+09:30','Australia/Darwin', false),
+    '570,1,s'  : new TimeZone('+09:30','Australia/Adelaide', true),
+    '600,0'    : new TimeZone('+10:00','Australia/Brisbane', false),
+    '600,1'       : new TimeZone('+10:00','Asia/Vladivostok', true),
+    '600,1,s'  : new TimeZone('+10:00','Australia/Sydney', true),
+    '630,1,s'  : new TimeZone('+10:30','Australia/Lord_Howe', true),
+    '660,1'    : new TimeZone('+11:00','Asia/Kamchatka', true),
+    '660,0'    : new TimeZone('+11:00','Pacific/Noumea', false),
+    '690,0'    : new TimeZone('+11:30','Pacific/Norfolk', false),
+    '720,1,s'  : new TimeZone('+12:00','Pacific/Auckland', true),
+    '720,0'    : new TimeZone('+12:00','Pacific/Tarawa', false),
+    '765,1,s'  : new TimeZone('+12:45','Pacific/Chatham', true),
+    '780,0'    : new TimeZone('+13:00','Pacific/Tongatapu', false),
+    '840,0'    : new TimeZone('+14:00','Pacific/Kiritimati', false)
+}
+
+olson.dst_start_dates = {
+    'America/Denver' : new Date(2011, 2, 13, 3, 0, 0, 0),
+    'America/Mazatlan' : new Date(2011, 3, 3, 3, 0, 0, 0),
+    'America/Chicago' : new Date(2011, 2, 13, 3, 0, 0, 0),
+    'America/Mexico_City' : new Date(2011, 3, 3, 3, 0, 0, 0),
+    'Atlantic/Stanley' : new Date(2011, 8, 4, 7, 0, 0, 0),
+    'America/Asuncion' : new Date(2011, 9, 2, 3, 0, 0, 0),
+    'America/Santiago' : new Date(2011, 9, 9, 3, 0, 0, 0),
+    'America/Campo_Grande' : new Date(2011, 9, 16, 5, 0, 0, 0),
+    'America/Montevideo' : new Date(2011, 9, 2, 3, 0, 0, 0),
+    'America/Sao_Paolo' : new Date(2011, 9, 16, 5, 0, 0, 0),
+    'America/Los_Angeles' : new Date(2011, 2, 13, 8, 0, 0, 0),
+    'America/Santa_Isabel' : new Date(2011, 3, 5, 8, 0, 0, 0),
+    'America/Havana' : new Date(2011, 2, 13, 2, 0, 0, 0),
+    'America/New_York' : new Date(2011, 2, 13, 7, 0, 0, 0),
+    'Asia/Gaza' : new Date(2011, 2, 26, 23, 0, 0, 0),
+    'Asia/Beirut' : new Date(2011, 2, 27, 1, 0, 0, 0),
+    'Europe/Minsk' : new Date(2011, 2, 27, 3, 0, 0, 0),
+    'Europe/Istanbul' : new Date(2011, 2, 27, 7, 0, 0, 0),
+    'Asia/Damascus' : new Date(2011, 3, 1, 2, 0, 0, 0),
+    'Asia/Jerusalem' : new Date(2011, 3, 1, 6, 0, 0, 0),
+    'Africa/Cairo' : new Date(2011, 3, 29, 4, 0, 0, 0),
+    'Asia/Yerevan' : new Date(2011, 2, 27, 4, 0, 0, 0),
+    'Asia/Baku'    : new Date(2011, 2, 27, 8, 0, 0, 0),
+    'Pacific/Auckland' : new Date(2011, 8, 26, 7, 0, 0, 0),
+    'Pacific/Fiji' : new Date(2010, 11, 29, 23, 0, 0, 0),
+    'America/Halifax' : new Date(2011, 2, 13, 6, 0, 0, 0),
+    'America/Goose_Bay' : new Date(2011, 2, 13, 2, 1, 0, 0),
+    'America/Miquelon' : new Date(2011, 2, 13, 5, 0, 0, 0),
+    'America/Godthab' : new Date(2011, 2, 27, 1, 0, 0, 0)
+}
+
+olson.ambiguity_list = {
+    'America/Denver' : ['America/Denver','America/Mazatlan'],
+    'America/Chicago' : ['America/Chicago','America/Mexico_City'],
+    'America/Asuncion' : ['Atlantic/Stanley', 'America/Asuncion', 'America/Santiago','America/Campo_Grande'],
+    'America/Montevideo' : ['America/Montevideo', 'America/Sao_Paolo'],
+    'Asia/Beirut' : ['Asia/Gaza','Asia/Beirut', 'Europe/Minsk', 'Europe/Istanbul', 'Asia/Damascus', 'Asia/Jerusalem','Africa/Cairo'],
+    'Asia/Yerevan' : ['Asia/Yerevan', 'Asia/Baku'],
+    'Pacific/Auckland' : ['Pacific/Auckland', 'Pacific/Fiji'],
+    'America/Los_Angeles' : ['America/Los_Angeles', 'America/Santa_Isabel'],
+    'America/New_York' : ['America/Havana','America/New_York'],
+    'America/Halifax' : ['America/Goose_Bay','America/Halifax'],
+    'America/Godthab' : ['America/Miquelon', 'America/Godthab']
+}
+
+
+function TimeZone(offset, olson_tz, uses_dst) {
+    this.utc_offset = offset;
+    this.olson_tz = olson_tz;
+    this.uses_dst = uses_dst;
+}
+
+TimeZone.prototype.display = function() {
+    this.ambiguity_check();
+//    var response_text = this.olson_tz + ' ' + this.utc_offset;
+    var response_text = this.utc_offset;
+    
+    return response_text;
+}
+
+TimeZone.prototype.ambiguity_check = function() {
+    var local_ambiguity_list = olson.ambiguity_list[this.olson_tz];
+    
+    if (typeof(local_ambiguity_list) == 'undefined') {
+        return;
+    }
+    
+    var length = local_ambiguity_list.length;
+    
+    for (var i = 0; i < length; i++) {
+        var tz = local_ambiguity_list[i]
+
+        if (date_is_dst(olson.dst_start_dates[tz])) {
+            this.olson_tz = tz;
+            return;
+        }    
+    }
+}
+
+function date_is_dst(date) {
+    var base_offset = ( (date.getMonth() > 5 ? get_june_offset() : get_january_offset()) )
+    
+    var date_offset = get_date_offset(date);
+    
+    return (base_offset - date_offset) != 0;
+}
+
+function get_date_offset(date) {
+    return -date.getTimezoneOffset();
+}
+
+function get_timezone_info() {
+    var january_offset = get_january_offset();
+    var june_offset = get_june_offset();
+    
+    var diff = january_offset - june_offset;
+
+    if (diff < 0) {
+        return {'utc_offset' : january_offset,
+                'dst':    1,
+                'hemisphere' : HEMISPHERE_NORTH}
+    }
+    else if (diff > 0) {
+        return {'utc_offset' : june_offset,
+                'dst' : 1,
+                'hemisphere' : HEMISPHERE_SOUTH}
+    }
+
+    return {'utc_offset' : january_offset, 
+            'dst': 0, 
+            'hemisphere' : HEMISPHERE_UNKNOWN}
+}
+
+function get_january_offset() {
+    return get_date_offset(new Date(2011, 0, 1, 0, 0, 0, 0));
+}
+
+function get_june_offset() {
+    return get_date_offset(new Date(2011, 5, 1, 0, 0, 0, 0));
+}
+
+function determine_timezone() {
+    var timezone_key_info = get_timezone_info();
+    
+    var hemisphere_suffix = ''
+        
+    if (timezone_key_info.hemisphere == HEMISPHERE_SOUTH) {
+        hemisphere_suffix = ',s';
+    }
+    
+    var tz_key = timezone_key_info.utc_offset + ',' + timezone_key_info.dst + hemisphere_suffix
+    
+    return {'timezone' : olson.timezones[tz_key], 'key' : tz_key}
+}
+
+function show_timezone_info() {
+    var tz_info = determine_timezone();
+    
+    response_text = 'No timezone found for ' + tz_info.key;
+    
+    if (typeof(tz_info.timezone) == 'undefined') {
+        response_text = 'No timezone found for ' + tz_info.key;
+    }
+    else {
+        response_text = tz_info.timezone.display(); 
+    }
+    
+    return response_text;
+}
+
+show_timezone_info();
+
+	var pomakodutc = response_text;
+	
+	var jeliljetno = DST2();
+
+	var totalnipomak = 	pomakodutc + jeliljetno;
+	to.value = totalnipomak;
+
+	}
+</script>
+<meta name="Keywords" content="News, latest news, US news, headlines, world news, business, finances, politics, companies,  travel, health, design, meantime, cars, yacths, airplane">
+<meta name="Robots" content="index,follow">
+<link rel="stylesheet" type="text/css" href="http://res.cloudinary.com/staticassets/raw/upload/novistyle67.css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="rss-articles/">
+<script src="//cdn.jsdelivr.net/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://res.cloudinary.com/staticassets/raw/upload/echo.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bxslider/4.2.5/jquery.bxslider.min.js" ></script>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head> 
+<body>
+ 
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.slider1').bxSlider({
+    slideWidth: 120,
+    minSlides: 1,
+    maxSlides: 7,
+    slideMargin: 21,
+    moveSlides: 5
+  });
+});
+</script>
+<script>
+    echo.init({
+      offset: 100,
+      throttle: 10,
+      unload: false,
+      callback: function (element, op) {
+        console.log(element, 'has been', op + 'ed')
+      }
+    });
+</script>
+<div class="sveopcicontainer">
+<div id="container">
+
+	<div class="toppanelnazivcenter">
+		<div class="uglavilijevo"> 
+			<a href="http://www.poandpo.com/home/rss/">RSS</a>&nbsp;&nbsp;&nbsp;<a href="http://www.poandpo.com/newsletter">Newsletter</a>&nbsp;&nbsp;&nbsp;<a href="http://www.poandpo.com/contact">Contact</a>&nbsp;&nbsp;&nbsp;<a href="http://www.poandpo.com/home/advertise-with-us">Advertise with us</a>
+			<div class="desno">
+<script>
+var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+var monthNames = new Array("January","February","March","April","May","June","July","August","September","October","November","December");
+var now = new Date();
+document.write(dayNames[now.getDay()] + ", " + 
+monthNames[now.getMonth()] + " " + 
+now.getDate() + ", " + now.getFullYear());
+</script>
+			</div>
+		</div>
+
+		<div class="uglavidesno2"> 
+				<form id="search_engine" method="post" action="http://www.poandpo.com/home/search-results-page" accept-charset="UTF-8">
+		<input class="searchfield" name="search_query" type="text" id="keywords" value="Search Keywords" onfocus="document.forms['search_engine'].keywords.value='';" onblur="if (document.forms['search_engine'].keywords.value == '') document.forms['search_engine'].keywords.value='Search Keywords';">
+		<input class="searchbutton" name="submit" type="submit" value="Search">
+	</form>
+ 
+ 		</div> 
+
+		<div class="obrisisve"> </div>
+
+		<div class="zaglavuizemlju">
+			<a href="http://www.poandpo.com"><img src="http://res.cloudinary.com/staticassets/image/upload/glavacrvenablue.png" class="glava" alt="Post Online Media" title="Post Online Media"></a>
+		</div>
+
+		<div class="menu">
+			<a href="http://www.poandpo.com"><p class="worldbusinessfleka">WORLD BUSINESS</p></a>
+			<ul>
+			<li><a href="http://www.poandpo.com/who-is-promoted" class="">Careers</a></li>			<li><a href="http://www.poandpo.com/business-as-usual" class="">Business</a></li>			<li><a href="http://www.poandpo.com/economy" class="">Economy</a></li>			<li><a href="http://www.poandpo.com/politics" class="current">Politics</a></li>			<li><a href="http://www.poandpo.com/companies" class="">Companies</a></li>			<li><a href="http://www.poandpo.com/earnings" class="">Earnings</a></li>			<li><a href="http://www.poandpo.com/leadership" class="">Leadership</a></li>			<li><a href="http://www.poandpo.com/agrifish" class="">Agrifish</a></li>			<li><a href="http://www.poandpo.com/home/economic-calendar" class="">Economic Calendar</a></li>		<li><a href="http://www.poandpo.com/thingsnstuff" class="boldtekst"> | Things'n'Stuff >>></a></li>
+			</ul>
+  		</div> 
+	</div>  <!-- kraj od toppanelnazivcenter, gornji dio glava s menijem  -->
+
+
+
+
+
+
+<!-- ako je things'n'stuff prikazuj ovo --> 
+
+
+	<!-- ovdje sad prikazuje cijeli article -->
+	 
+		<div class="contentgore"> 
+			<br>
+
+    	<div class="main_leftcol_tekst" itemscope itemtype="http://schema.org/NewsArticle">
+    	
+						<meta itemprop="inLanguage" content="en-US"><meta itemprop="isFamilyFriendly" content="True"><meta itemprop="articleSection" content="Politics "><span itemscope itemprop="author" itemtype="http://schema.org/Person"><span itemprop="name"><a itemprop="url" href="https://plus.google.com/+Poandpo"></a><a itemprop="sameAs" href="https://twitter.com/poandpo"></a></span></span><span class="egida">Social networks&nbsp;&nbsp;</span><span class="nadnaslov"> Swedish authorities will consider an age limit</span><div class="listamalirazmak"> </div><h1 itemprop="name headline">Sweden proposes age limit for social media use</h1><div class="boksposaljidesno"><a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>&nbsp;&nbsp; <script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-counter="right"></script></div><meta itemprop="datePublished" content="Thursday February 11, 2016 4:35AM"/><span class="datumiznadteksta">Thursday February 11, 2016 4:35AM ET<br></span><div class="listamalirazmak"> </div><img itemprop="image" src="http://res.cloudinary.com/cmyallfiles/image/upload/chs0216/per_bolund.jpg" class="slikadesno540" title="Per Bolund" alt="Per Bolund"><meta itemprop="description" content="The Swedish government proposed an age limit for teenagers who want to interact on social media as a result of data protection rules at the European Union (EU) level...."><span class="prviodlomak">The Swedish government proposed an age limit for teenagers who want to interact on social media as a result of data protection rules at the European Union (EU) level.<div class="obrisisve"> </div><br></span>
+Swedish authorities will consider an age limit between 13 and 16 as a result of a data protection directive finalized by the EU in December, according to Consumer Minister Per Bolund.<br><br>
+"It is a binding directive, so somewhere in that range is where the Swedish rules will end up," Bolund told public broadcaster Swedish Television.<br><br>
+Children who have not yet reached the age limit will need their guardian's consent to use social media applications or websites, Swedish Television reported.<br><br>
+"I might question whether these rules are necessary at all, but we are not at liberty to choose since this is an EU directive due for implementation at the national level," Bolund told daily newspaper Dagens Nyheter.<br><br>
+Sweden's Data Inspectorate agency said the EU law would be drafted and turned into Swedish law by April or May of this year.<span class="crvenaslova"> ■</span><br><br>
+			 
+
+			<script>
+var idcomments_acct = '2fe75e586211ff5b2e574ba07ce6c54c';
+var idcomments_post_id;
+var idcomments_post_url;
+			</script>
+			<span id="IDCommentsPostTitle" style="display:none"></span>
+			<script type='text/javascript' src='http://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+			
+ 		</div> <!-- main_leftcol_tekst --> 
+
+		<div id="main_rightcol"> 
+
+						<div class="regular_section330">
+			<ins class="adsbygoogle"
+style="display:inline-block;width:336px;height:280px"
+data-ad-client="ca-pub-9731984355189214"
+data-ad-slot="9878850848"></ins>
+			<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</div>
+			<div class="obrisisve"> </div>
+			
+			<div class="desnonajcitanije">
+				
+				<div class="mostreadboks">
+											<h2 class="naslovrubrikemostread">MOST READ FROM THIS SECTION</h2>
+													</div>
+				<br><ul><li><a href="http://www.poandpo.com/politics/institutionalized-persons-are-our-first-priority-for-rental-subsidy-28-12-2015/" title="Institutionalized persons are our first priority for rental subsidy"><span class="egida">Interview</span> DHS, Office of Social Programs, Executive Housing Coordinator Jonathan McVey: Institutionalized persons are our first priority for rental subsidy</a></li><li><a href="http://www.poandpo.com/politics/brazilian-and-african-governments-discuss-investments-6-2-2016/" title="Brazilian and African governments discuss investments">Brazilian and African governments discuss investments</a></li><li><a href="http://www.poandpo.com/politics/adb-president-announces-10-billion-funding-for-indonesia-13-2-2016/" title="ADB president announces $10 billion funding for Indonesia">ADB president announces $10 billion funding for Indonesia</a></li><li><a href="http://www.poandpo.com/politics/brazil-announces-international-partnership-to-produce-zika-vaccine-13-2-2016/" title="Brazil announces international partnership to produce Zika vaccine">Brazil announces international partnership to produce Zika vaccine</a></li><li><a href="http://www.poandpo.com/politics/many-countries-keen-to-build-nuclear-power-plants-in-iran-13-2-2016/" title="Many countries keen to build nuclear power plants in Iran">Many countries keen to build nuclear power plants in Iran</a></li></ul><br>
+				
+			</div>
+
+			<div class="obrisisve"> </div>
+			<div class="razmak20px"> </div>
+
+						<div class="mostreadboks">
+				<h2 class="naslovrubrikemostread">&nbsp;More from this section</h2>
+				<br><br>
+				<div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/nicolas_maduro.jpg" class="slikadesnosa101" title="Nicolas Maduro" alt="Nicolas Maduro"><br><a href="http://www.poandpo.com/politics/venezuela-increases-gasoline-price-for-first-time-in-20-years-18-2-2016/" title="Venezuela increases gasoline price for first time in 20 years">Venezuela increases gasoline price for first time in 20 years</a></div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/small_town.jpg" class="slikadesnosa101" title="Small town" alt="Small town"><br><a href="http://www.poandpo.com/politics/local-officials-see-their-website-integral-to-overall-communications-18-2-2016/" title="Local officials see their website integral to overall communications">Local officials see their website integral to overall communications</a></div><div class="obrisisve"> </div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/oregon_disaster.jpg" class="slikadesnosa101" title="Oregon disaster" alt="Oregon disaster"><br><a href="http://www.poandpo.com/politics/president-obama-signs-oregon-disaster-declaration-18-2-2016/" title="President Obama signs Oregon disaster declaration">President Obama signs Oregon disaster declaration</a></div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/irisl.jpg" class="slikadesnosa101" title="IRISL" alt="IRISL"><br><a href="http://www.poandpo.com/politics/iran-germany-to-set-up-joint-shipping-line-18-2-2016/" title="Iran, Germany to set up joint shipping line">Iran, Germany to set up joint shipping line</a></div><div class="obrisisve"> </div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/nha_trang.jpg" class="slikadesnosa101" title="Nha Trang" alt="Nha Trang"><br><a href="http://www.poandpo.com/politics/vietnam-restarts-megaport-project-in-central-coast-town-18-2-2016/" title="Vietnam restarts mega-port project in central coast town">Vietnam restarts mega-port project in central coast town</a></div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/michel_sapin.jpg" class="slikadesnosa101" title="Michel Sapin" alt="Michel Sapin"><br><a href="http://www.poandpo.com/politics/finance-minister-france-resumed-growth-but-is-insufficient-18-2-2016/" title="Finance Minister: France resumed growth, but is insufficient">Finance Minister: France resumed growth, but is insufficient</a></div><div class="obrisisve"> </div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/singapore_us.jpg" class="slikadesnosa101" title="Singapore U.S" alt="Singapore U.S"><br><a href="http://www.poandpo.com/politics/singapore-us-ink-agreement-to-strengthen-aviation-safety-17-2-2016/" title="Singapore, U.S. ink agreement to strengthen aviation safety">Singapore, U.S. ink agreement to strengthen aviation safety</a></div><div class="malavijestzalatest"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/zahnfiles/image/upload/hs0216/undersecretariat.jpg" class="slikadesnosa101" title="Undersecretariat" alt="Undersecretariat"><br><a href="http://www.poandpo.com/politics/argentina-creates-antidrug-agency-drug-war-undersecretariat-17-2-2016/" title="Argentina creates anti-drug agency Drug War Undersecretariat">Argentina creates anti-drug agency Drug War Undersecretariat</a></div><div class="obrisisve"> </div>			</div>
+
+						<div class="regular_section330">
+			<div class="razmak20px"> </div>
+			<div class="razmak20px"> </div>
+			<ins class="adsbygoogle"
+style="display:inline-block;width:336px;height:280px"
+data-ad-client="ca-pub-9731984355189214"
+data-ad-slot="9878850848"></ins>
+			<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</div>
+			
+			
+			<br>
+      	</div> <!-- kraj od main_rightcol --> 
+		</div> <!-- kraj od contentgore --> 
+			<div class="obrisisve"> </div>
+
+		<div class="razmak20px"> </div>
+		<h10>&nbsp;&nbsp;Latest from <span class="crvenaslova">all sections</span></h10>
+		<div class="razmak10px"> </div>
+
+		<div class="slider1">
+			<div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/kelvin dushnisky.jpg" class="slikadesno120" title="Kelvin Dushnisky" alt="Kelvin Dushnisky"><br> <a href="http://www.poandpo.com/who-is-promoted/barrick-appoints-kelvin-dushnisky-to-board-of-directors-18-2-2016/" title="Barrick appoints Kelvin Dushnisky to board of directors">Barrick appoints Kelvin Dushnisky to board of directors</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/reykjavik.jpg" class="slikadesno120" alt="Reykjavik" title="Reykjavik"><br> <a href="http://www.poandpo.com/places-to-go/iceland-the-splitting-land-of-sea-ice-and-calmness-6-2-2016/" title="Iceland, the splitting land of sea, ice and calmness">Iceland, the splitting land of sea, ice and calmness</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/nissan_titan.jpg" class="slikadesno120" title="Nissan Titan" alt="Nissan Titan"><br> <a href="http://www.poandpo.com/on-sea-land-and-in-the-air/titans-from-nissan-will-fight-for-your-attention-17-2-2016/" title="Titans from Nissan will fight for your attention">Titans from Nissan will fight for your attention</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/rooftop.jpg" class="slikadesno120" title="Rooftop" alt="Rooftop"><br> <a href="http://www.poandpo.com/design-art-and-nice-stuff/make-your-rooftop-a-sanctuary-for-a-lot-of-fun-13-2-2016/" title="Make your rooftop a sanctuary for a lot of fun">Make your rooftop a sanctuary for a lot of fun</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/lenovo_k4_note.jpg" class="slikadesno120" title="Lenovo Vibe K4 Note" alt="Lenovo Vibe K4 Note"><br> <a href="http://www.poandpo.com/small-devices-for-fun/new-lenovo-vibe-k4-note-was-made-for-multimedia-12-2-2016/" title="New Lenovo Vibe K4 Note was made for multimedia">New Lenovo Vibe K4 Note was made for multimedia</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/vascular_surgery.jpg" class="slikadesno120" title="Vascular surgery" alt="Vascular surgery"><br> <a href="http://www.poandpo.com/in-sickness-and-health/vascular-surgery-safer-than-stenting-for-older-patients-with-carotid-stenosis-18-2-2016/" title="Vascular surgery safer than stenting for older patients with carotid stenosis">Vascular surgery safer than stenting for older patients with carotid stenosis</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/new_york_highway.jpg" class="slikadesno120" title="New York highway" alt="New York highway"><br> <a href="http://www.poandpo.com/business-as-usual/367-million-highway-improvement-projects-in-new-york-completed-18-2-2016/" title="$367 million highway improvement projects in New York completed">$367 million highway improvement projects in New York completed</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/fast.jpg" class="slikadesno120" title="FAST" alt="FAST"><br> <a href="http://www.poandpo.com/in-the-meantime/china-to-evacuate-9000-for-worlds-largest-radio-telescope-18-2-2016/" title="China to evacuate 9,000 for world&#039;s largest radio telescope">China to evacuate 9,000 for world&#039;s largest radio telescope</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/anglo.jpg" class="slikadesno120" title="Anglo" alt="Anglo"><br> <a href="http://www.poandpo.com/companies/anglo-american-credit-rating-cut-to-junk-for-third-time-this-week-18-2-2016/" title="Anglo American credit rating cut to junk for third time this week">Anglo American credit rating cut to junk for third time this week</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/perrigo.jpg" class="slikadesno120" title="Perrigo" alt="Perrigo"><br> <a href="http://www.poandpo.com/earnings/perrigo-net-sales-for-calendar-year-increased-28-18-2-2016/" title="Perrigo net sales for calendar year increased 28%">Perrigo net sales for calendar year increased 28%</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/nicolas_maduro.jpg" class="slikadesno120" title="Nicolas Maduro" alt="Nicolas Maduro"><br> <a href="http://www.poandpo.com/politics/venezuela-increases-gasoline-price-for-first-time-in-20-years-18-2-2016/" title="Venezuela increases gasoline price for first time in 20 years">Venezuela increases gasoline price for first time in 20 years</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/incentive_pay.jpg" class="slikadesno120" alt="Incentive pay" title="Incentive pay"><br> <a href="http://www.poandpo.com/leadership/incentive-pay-not-motivating-enough-for-some-managers-18-2-2016/" title="Incentive pay not motivating enough for some managers">Incentive pay not motivating enough for some managers</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/us_wholesale_inventories.jpg" class="slikadesno120" title="U.S. wholesale inventories" alt="U.S. wholesale inventories"><br> <a href="http://www.poandpo.com/economy/us-industrial-production-increased-housing-starts-declined-18-2-2016/" title="U.S. industrial production increased, housing starts declined">U.S. industrial production increased, housing starts declined</a></div><div class="slide"><img src="img/blank.gif" data-echo="http://res.cloudinary.com/liamfiles/image/upload/hs0216/healthy_food.jpg" class="slikadesno120" title="Healthy food" alt="Healthy food"><br> <a href="http://www.poandpo.com/agrifish/usda-wants-to-improve-healthy-food-access-for-lowincome-americans-18-2-2016/" title="USDA wants to improve healthy food access for low-income Americans">USDA wants to improve healthy food access for low-income Americans</a></div> 
+		</div>
+
+	
+	<div class="razmak20px"> </div>
+	<div id="footer">  
+		<p><a href="http://www.poandpo.com/who-is-promoted">Careers</a>| &nbsp;
+		<a href="http://www.poandpo.com/business-as-usual">Business</a>| &nbsp;
+		<a href="http://www.poandpo.com/economy">Economy</a>| &nbsp;
+		<a href="http://www.poandpo.com/politics">Politics</a>| &nbsp;
+		<a href="http://www.poandpo.com/companies">Companies</a>| &nbsp;
+		<a href="http://www.poandpo.com/earnings">Earnings</a>| &nbsp;
+		<a href="http://www.poandpo.com/leadership">Leadership</a>| &nbsp;
+		<a href="http://www.poandpo.com/agrifish">Agrifish</a>| &nbsp;
+		<a href="http://www.poandpo.com/home/economic-calendar">Economic Calendar</a>| 
+		<a href="http://www.poandpo.com/places-to-go">Travel</a>| &nbsp;
+		<a href="http://www.poandpo.com/on-sea-land-and-in-the-air">Sea, Land, Air</a>| 
+		<a href="http://www.poandpo.com/design-art-and-nice-stuff">Design</a></p>
+		<p><a href="http://www.poandpo.com/small-devices-for-fun">Gadgets</a>|
+		<a href="http://www.poandpo.com/in-sickness-and-health">Health</a>| &nbsp;
+		<a href="http://www.poandpo.com/in-the-meantime">Meantime</a>| &nbsp;
+		<a href="http://www.poandpo.com/home/widgets" class="current">Widgets</a>| &nbsp;
+		<a href="http://www.poandpo.com/home/weather" class="current">Weather</a>| &nbsp;
+		<a href="http://www.poandpo.com/newsletter" class="current">Newsletter</a>| 
+		<a href="http://www.poandpo.com/archive/">Site Map</a>| &nbsp;
+		<a href="http://www.poandpo.com/contact">Contact</a>| &nbsp;
+		<a href="http://www.poandpo.com/home/advertise-with-us">Advertise with us</a>| &nbsp;
+		<a href="http://www.poandpo.com/home/cookies-and-how-we-use-them">Privacy Policy</a></p>
+		<p><a href="https://plus.google.com/100973834748233408114" rel="publisher">Google+</a>| &nbsp;
+		<a href="https://twitter.com/poandpo">Twitter</a>| &nbsp;
+		<a href="http://www.linkedin.com/company/3055508">LinkedIn</a>
+		</p> 
+
+		<p><span class="footersivi">Copyright 2016 Histerius Company | Registered office: Livadiceva 9, 10000 Zagreb, Croatia</span></p>
+		<br><br>
+
+	</div> 
+
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<div style="background:#dddddd; position: fixed; bottom: 0; z-index:100;"><div style="padding-bottom:8px;"><div style="width:1024px; margin:0px auto; font-size:12px; height:15px"><p class="maintext" style="float:left; font-family: Helvetica, Arial, sans-serif; text-align: left; width:800px; padding-left:5px; ">We use cookies to ensure that we give you the best experience on our website. Please allow cookies for fully-functioning website.</p><p style="float:left; font-family: Helvetica, Arial, sans-serif; text-align: left; width:185px; margin-left:20px;"><a href="http://www.poandpo.com" class="cookiebuttons" onClick="SetCookie(&#39;eucookie&#39;,&#39;eucookie&#39;,&#39;time()+31556926&#39;)"><strong>Allow Cookies</strong></a> <a href="http://www.poandpo.com/home/cookies-and-how-we-use-them">Privacy Policy</a></p></div></div></div>
+<script>
+function SetCookie(c_name,value,expiredays)
+{
+var exdate=new Date()
+exdate.setDate(exdate.getDate()+expiredays)
+document.cookie=c_name+ "=" +escape(value)+
+((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div> <!-- kraj od contntgore u kojem je naslovna -->
+</div> <!-- kraj od container --> 
+</div> <!-- kraj od sveopcicontainer --> 
+</body>
+</html>

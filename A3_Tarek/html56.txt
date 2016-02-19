@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html class="skyscanner  legacy-button " lang="ru-RU" prefix="ya: http://webmaster.yandex.ru/vocabularies/">
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<meta http-equiv="Content-Language" content="ru" />
+
+    <meta name="theme-color" content="#34363D" />
+<meta name="msapplication-TileColor" content="#21c4d9" />
+<meta name="msapplication-TileImage" content="/framework/images/icons/mstile-144x144.png" pagespeed_no_transform />
+<link rel="manifest" href="/android-chrome-manifest.json">
+<link rel="apple-touch-icon" sizes="57x57" href="/framework/images/icons/apple-touch-icon-57x57.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="60x60" href="/framework/images/icons/apple-touch-icon-60x60.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="72x72" href="/framework/images/icons/apple-touch-icon-72x72.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="76x76" href="/framework/images/icons/apple-touch-icon-76x76.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="114x114" href="/framework/images/icons/apple-touch-icon-114x114.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="120x120" href="/framework/images/icons/apple-touch-icon-120x120.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="144x144" href="/framework/images/icons/apple-touch-icon-144x144.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="152x152" href="/framework/images/icons/apple-touch-icon-152x152.png" pagespeed_no_transform />
+<link rel="apple-touch-icon" sizes="180x180" href="/framework/images/icons/apple-touch-icon-180x180.png" pagespeed_no_transform />
+<link rel="mask-icon" href="/framework/images/icons/website_icon.svg" color="#454750">
+<link rel="icon" type="image/png" href="/framework/images/icons/favicon-16x16.png" sizes="16x16" pagespeed_no_transform />
+<link rel="icon" type="image/png" href="/framework/images/icons/favicon-32x32.png" sizes="32x32" pagespeed_no_transform />
+<link rel="icon" type="image/png" href="/framework/images/icons/favicon-96x96.png" sizes="96x96" pagespeed_no_transform />
+<link rel="icon" type="image/png" href="/framework/images/icons/android-chrome-192x192.png" sizes="192x192"  pagespeed_no_transform />
+    <script>window["adrum-app-key"] = "AD-AAB-AAA-SVY";
+window['adrum-start-time'] = new Date().getTime();</script>
+
+
+
+<script type="text/javascript">
+    (function() {
+        var executeImmediately = false;
+
+        window.addLoadEventHandler = function (fn) {
+            executeImmediately ? setTimeout(function () {
+                fn(); }, 0) : window.addEventListener ? window.addEventListener('load', fn, false) : window.attachEvent ? window.attachEvent('onload', fn) : void 0;
+        }
+        addLoadEventHandler(function () { executeImmediately = true; });
+
+        window.injectScript = function (src, callback, type) {
+            var an = document.createElement('script');
+            an.type = type || 'text/javascript';
+            an.async = true;
+            if (callback) an.onload = callback;
+            an.src = src.indexOf('//') === 0 ? src : src.indexOf('http') == 0 ? src : ('https:' == document.location.protocol ? 'https://' : 'http://') + document.location.host + src;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(an, s);
+        }
+    })();
+</script>
+  
+    <link rel="dns-prefetch" href="http://api.mixpanel.com">
+<link rel="dns-prefetch" href="https://secure.skyscanner.net">
+<link rel="dns-prefetch" href="http://www.google-analytics.com">
+<link rel="dns-prefetch" href="http://cdn.mxpnl.com">
+<link rel="dns-prefetch" href="http://www.googletagservices.com">
+ 
+
+<link rel="stylesheet" type="text/css" href="//css.skyscnr.com/framework/scaffolding/cache/css/core.c6c821ab.css"/>    
+    <!-- media queries css -->
+    
+    <style type="text/css">
+    .page-builder strong em {
+        font-weight: bold;
+    }
+    .page-builder em strong {
+        font-style: italic;
+    }
+    .article {
+    font-family: sans-serif;
+}
+.article .wrap {
+    width: 93%;
+}
+.article .breadcrumbs {
+    display: none;
+}
+.article .hero {
+    max-height: 200px;
+    overflow: hidden;
+}
+    .article .hero img {
+        width: 100%;
+    }
+.article h1 {
+    color: #21c4d9;
+    font-size: 2.2em;
+    margin: 0px 0 6px 0;
+    position: inherit;
+    text-align: left;
+    width: auto;
+}
+.article a {
+    color: #21C4D9;
+}
+.article .published-date {
+    color: #767982;
+}
+.article .author-inline {
+    box-shadow: 38px 0 0 #E2E2E2, -38px 0 0 #E2E2E2;
+    margin-top: 20px;
+}
+.article .author {
+    background-color: #E2E2E2;
+    padding: 6px 0;
+    color: #767982;
+}
+.article .author .author-details {
+    overflow: hidden;
+}
+.article .author .author-name {
+    font-size: 1.6em;
+    margin-bottom: 2px;
+}
+.article .author .author-title {
+    font-size: 1.1em;
+}
+.article .author a {
+    color: #767982;
+}
+.article .author a:hover {
+    text-decoration: none;
+    color: #eee;
+}
+.article .author-image-wrapper {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border: 2px solid #eee;
+    overflow: hidden;
+    height: 42px;
+    width: 42px;
+    float: left;
+    margin-right: 12px;
+}
+    .article .author-image-wrapper img {
+        width: 100%;
+    }
+
+.article .social-buttons-wrapper {
+    margin-top: 20px;
+}
+.article .content-wrapper {
+    margin-top: 12px;
+}
+.article .main-content {
+    overflow: hidden;
+    color: #34363D;
+    margin: 10px 0 20px 0;
+}
+    .article .main-content .summary p {
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 1.15em;
+    }
+    .article .main-content h2 {
+        line-height: 1.4em;
+        font-size: 2em;
+        font-weight: 400;
+        margin: 20px 0;
+    }
+    .article .main-content h3 {
+        line-height: 1.4em;
+        font-size: 1.5em;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+    .article .main-content h4 {
+        line-height: 1.4em;
+        font-size: 1.25em;
+        font-weight: 400;
+        margin: 10px 0;
+    }
+    .article .main-content p {
+        line-height: 1.8em;
+        margin: 10px 0;
+        font-size: 1.2em;
+        font-weight: 200;
+        white-space: pre-line;
+    }
+    .article .main-content hr {
+        border: none;
+        background-color: #A0A3AA;
+        height: 1px;
+        margin: 18px 0;
+    }
+    .article .main-content img {
+        margin: 14px 0;
+        max-width: 100%;
+    }
+        .article .main-content img.img-with-credit {
+            margin-bottom: 0;
+        }
+    .article .main-content .img-credit {
+        font-size: 0.9em;
+        margin-top: 0;
+    }
+    .article .main-content a.button-primary-action {
+        display: inline-block;
+        margin: 10px 0;
+        padding: 10px 24px;
+        background-color: #B8D800;
+        color: #34363D;
+        font-size: 1.2em;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        font-style: normal;
+    }
+    .article .main-content a.button-primary-action:visited {
+        color: #34363D;
+    }
+.article .sidebar {
+    display: none;
+}
+
+.article .embed-container {
+    position: relative;
+    padding-top: 30px; height: 0; overflow: hidden;
+    margin: 20px 0;
+}
+.article .embed-container.youtube,
+.article .embed-container.vimeo {
+    padding-bottom: 56.25%;
+}
+.article .embed-container.instagram {
+  padding-bottom: 115%;
+}
+.article .embed-container.facebook-image,
+.article .embed-container.facebook-post {
+    height: auto;
+}
+.article .embed-container iframe,
+.article .embed-container object,
+.article .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.article .search-controls-wrapper {
+    margin: 20px 0;
+    max-width: 800px;
+}
+@media screen and (min-width: 800px) {
+    .article .wrap {
+        margin: 0 auto;
+        position: relative;
+    }
+    .article .hero {
+        max-height: 280px;
+    }
+        .article .hero img {
+            width: 100%;
+        }
+    .article .content-wrapper {
+        max-width: 800px;
+        margin-top: 20px;
+    }
+    .article h1 {
+        font-size: 2.8em;
+    }
+    .article .main-content .summary p {
+        font-size: 1.8em;
+        font-weight: 400;
+        line-height: 1.5em;
+    }
+    .article .published-date {
+        margin-top: 10px;
+        font-size: 1.4em;
+        font-weight: 200;
+    }
+    .article .author {
+        padding: 10px 0;
+    }
+        .article .author .author-details {
+            padding-top: 4px;
+        }
+        .article .author .author-image-wrapper {
+            width: 50px;
+            height: 50px;
+            border-width: 2px;
+        }
+        .article .author .author-title {
+            font-size: 1.2em;
+        }
+    .article .main-content {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+        .article .main-content p {
+            font-size: 1.3em;
+        }
+    .article .embed-container.instagram {
+      padding-bottom: 108%;
+    }
+}
+.article table th {
+    border: 1px solid #4F5159;
+}
+.article table th[align=center] {
+    text-align: center;
+}
+.article table th[align=left] {
+    text-align: left;
+}
+.article table th[align=right] {
+    text-align: right;
+}
+@media screen and (min-width: 1090px) {
+    .article .wrap {
+        width: 1048px;
+    }
+    .article .breadcrumbs {
+        display: block;
+        background-color: #E2E2E2;
+        color: #0094B8;
+        padding: 5px 0;
+    }
+        .article .breadcrumbs ul {
+            list-style: none;
+            padding: 0;
+            font-size: 1.1em;
+        }
+        .article .breadcrumbs li {
+            display: inline;
+            margin-left: 0;
+        }
+        .article .breadcrumbs li+li:before {
+            content: ">";
+            padding: 0 8px;
+            font-weight: normal;
+            font-size: 10px;
+            color: #0094B8;
+        }
+        .article .breadcrumbs a {
+            color: #0094B8;
+        }
+        .article .breadcrumbs a:hover {
+            text-decoration: none;
+            color: #006982;
+        }
+    .article .hero {
+        max-height: 350px;
+    }
+    .article h1 {
+        font-size: 3.2em;
+    }
+    .article .author-inline {
+        display: none;
+    }
+    .article .sidebar {
+        display: block;
+        float: right;
+        width: 300px;
+    }
+        .article .sidebar .page-widget {
+            margin: 40px 0;
+        }
+        .article .sidebar .page-widget:first-child {
+            margin-top: 30px;
+        }
+        .article .sidebar .page-widget:last-child {
+            margin-bottom: 0;
+        }
+    .article .content-wrapper {
+        width: auto;
+        margin-right: 370px;
+        overflow: hidden;
+        margin-top: 30px;
+    }
+    .article .author {
+        text-align: center;
+        padding: 20px;
+        background-color: #E2E2E2;
+    }
+    .article .author .author-image-wrapper {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border-width: 3px;
+        margin: 0;
+        float: none;
+    }
+    .article .author .author-name {
+        margin-top: 10px;
+        font-size: 1.8em;
+    }
+        .article .author .author-name a {
+            color: #21C4D9;
+        }
+    .article .author .author-title {
+        font-size: 1.2em;
+        margin-top: 6px;
+    }
+    .article .search-controls-wrapper {
+        margin: 40px 0;
+    }
+    .article .main-content p {
+        line-height: 1.6em;
+    }
+}
+
+</style>
+
+
+
+    
+    <title>Дешевые страны для путешествий в 2016 году</title>
+<meta name="description" content="Куда поехать и где недорого отдохнуть за границей в 2016 году." />
+
+    
+        <meta property="og:description" content="Дешевый отпуск в 2016 году: cамые недорогие страны для отдыха." />
+    
+
+    
+
+    
+        <meta property="og:image" content="http://content.skyscnr.com/2b9c0fa5cbe6b0e73db5641acedce188/plane-sky-hero.png" />
+    
+
+    
+        <meta property="og:title" content="Где дешево отдохнуть за границей в 2016 году" />
+    
+
+
+
+  
+    <link rel="canonical" href="http://www.skyscanner.ru/news/deshevye-strany-dlia-puteshestvii-v-2016-godu" />
+
+    
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+<meta name="google-site-verification" content="1Mgl3kLdh4K8GaxObkYcjcY44By5CiAKHHKylkYQHbE" />
+
+
+
+    <meta property="ya:interaction" content="XML_FORM" />
+    <meta property="ya:interaction:url" content="http://partners.api.skyscanner.net/apiservices/metadata/yandexgeo/ru.xml" />
+
+
+<meta name="apple-itunes-app" content="app-id=415458524" /><meta name="msApplication-ID" content="App"/> <meta name="msApplication-PackageFamilyName" content="Skyscanner.Skyscanner_623c9he0pwcym"/> <meta name="msApplication-MinVersion" content="1.2.0.0"/>    
+
+    
+<script type="text/javascript" src="/jp67.js" defer></script><style type="text/css">#d__fFH{position:absolute;top:-5000px;left:-5000px}#d__fF{font-family:serif;font-size:200px;visibility:hidden}#wwrfywsstwaacvrbtxt{display:none!important}</style></head>
+<body id="category-" class="lang-ru page-defaultpage action-index   default-layout"><noscript>
+    <div class="no-js-msg">
+        <p>Для корректной работы системы Skyscanner должен быть включен JavaScript. К сожалению, ваш браузер не поддерживает JavaScript или эта функция отключена. Пожалуйста, активируйте поддержку JavaScript и попробуйте снова.</p>
+    </div>
+</noscript>
+<div id="pagewrap" class="clearfix">
+
+    <!-- Rendered by PB -->
+
+        
+    <header id="header">
+        <div class="wrap clearfix">
+            <div id="secondary-nav">
+                <ul class="secondary-nav-items clearfix">
+
+                        <li id="trip-planning-nav" class="trip-planning-nav-mobile-refresh">
+                            <span id="history-toggle" class = "history-toggle-mobile-refresh" title="История поиска">История поиска</span>
+                        </li>
+                        <li class="help-link des">
+                            <a id="ss-header-links-faq" target="_blank" href="https://help.skyscanner.net/hc/ru/?skyDBG=1">Справка</a>
+                        </li>
+
+                        <li id="culture-info" class="culture-info clearfix">
+                            <img id="culture-flag-image"
+                                 src="//images.skyscnr.com/images/country/flag/header/ru.png"
+                                 alt="Россия"
+                                 title="RU"/>
+
+                            <span class="culture-currency-info">p. RUB <span>▼</span></span>
+                            <span class="culture-additional-info">Русский (RU) RUB - p. Поменять <span class="toggle-indicator">▼</span></span>
+                        </li>
+
+
+                    <li id="login-button-container" class="desktop-nav-only desktop-last hidden">
+                        <a id="authentication-link" class="login"></a>
+                        <span class="login-caret"></span>
+                    </li>
+
+                    <li>
+                        <a class="account-controls-init hidden">
+                            Личный кабинет
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" id="toggle-touch-menu" class="cim-b-touch-menu-toggle">
+                <span class="visually-hidden">меню</span>
+            </button>
+            <div id="identity">
+                <a href="/" title="Дешевые авиабилеты на Skyscanner" class="skyscanner-logo"></a>
+                <span id="current-category">авиабилеты</span>
+            </div>
+                <ul id="main-nav">
+                            <li class="item-1 airli">
+                                <a id="airli" class="clearfix" data-analytics-name="flights"  href="/">
+                                    <span class="main-nav-icon"></span>
+                                    <span class="main-nav-text">авиабилеты</span>
+                                </a>
+                            </li>
+                            <li class="item-2 skhot">
+                                <a id="skhot" class="clearfix" data-analytics-name="hotels"  href="/hotels">
+                                    <span class="main-nav-icon"></span>
+                                    <span class="main-nav-text">oтели</span>
+                                </a>
+                            </li>
+                            <li class="item-3 carhi">
+                                <a id="carhi" class="clearfix" data-analytics-name="carhire"  href="/carhire">
+                                    <span class="main-nav-icon"></span>
+                                    <span class="main-nav-text">прокат автомобилей</span>
+                                </a>
+                            </li>
+                </ul>
+
+        </div>
+
+    </header>
+    
+    <!-- START Content -->
+    <div id="trip-shortlist" class="hidden">
+    </div>
+    <div id="container-trip-planning-refactor" class="trip-planning hidden">
+    </div>
+    <div id="content-wrap" class="clearfix">
+
+
+	    
+
+
+	    
+
+
+
+
+
+
+
+<div class="page-builder">
+    <div class="content">
+    <div class="article">
+        <div class="breadcrumbs">
+            <ul class="wrap">
+                
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="/" itemprop="url"><span itemprop="title">Главная</span></a>
+                    </li>
+                
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="/news" itemprop="url"><span itemprop="title">Новости о путешествиях</span></a>
+                    </li>
+                
+                
+                
+                    <li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="current">
+                        <a href="/news/deshevye-strany-dlia-puteshestvii-v-2016-godu" itemprop="url"><span itemprop="title">Дешевые страны для путешествий в 2016 году</span></a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+            <div class="hero">
+                
+                    <img src="http://content.skyscnr.com/2b9c0fa5cbe6b0e73db5641acedce188/plane-sky-hero.png?crop=1600px:420px&quality=75" title="Дешевые страны для путешествий в 2016 году" alt="Дешевые страны для путешествий в 2016 году" />
+                
+            </div>
+        
+        <div class="wrap clearfix">
+            
+                <div class="sidebar">
+                    
+                    <div class="page-widget">
+                        <style media="screen">
+    .page-builder .google-cse-container .gsc-input-box  table {
+        margin: 0;
+    }
+    .page-builder .google-cse-container .gsc-search-box > tbody > tr > td,
+    .page-builder .google-cse-container .gsc-results-wrapper-overlay td,
+    .page-builder .google-cse-container .gsc-input-box  table td {
+        border: 0;
+    }
+    .page-builder .google-cse-container .gsc-control-cse.gsc-control-cse-en {
+        padding: 0 !important;
+        border: 0 !important;
+    }
+    .page-builder .google-cse-container .gsc-search-box.gsc-search-box-tools,
+    .page-builder .google-cse-container .gsc-search-box,
+    .page-builder .google-cse-container .gsc-input {
+        margin: 0 !important;
+    }
+    .page-builder .google-cse-container .gsc-search-box .gsib_b {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    .page-builder .google-cse-container .gsc-search-box > tbody > tr > .gsc-input {
+        padding: 0;
+    }
+    .page-builder .google-cse-container .gsc-search-button {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        width: 16px;
+        height: 16px;
+        margin-top: 3px;
+    }
+</style>
+<div class="google-cse-container sidebar-widget">
+    <script>
+      (function() {
+        var cx = '007971303802644917140:bllpgkzphiw';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+</div>
+                    </div>
+                    <div class="page-widget">
+                        <div class="google-ads-container sidebar-widget">
+    <script type="text/javascript">
+        (function(){
+            window.adSlots = [
+                {
+                    'containerId': 'article-primary-mpu',
+                    'advertType': 'primaryMpu',
+                    'dimensions': [[300, 250], [300, 600]],
+                    'priority': 1
+                }
+            ];
+            window.runnerOptions = {
+                'isSearchPage': false,
+                'usePageLocation': true,
+                'adUnit': 'news/top'
+            };
+        })();
+    </script>
+    <div id="article-primary-mpu"></div>
+</div>
+                    </div>
+                    <div class="page-widget">
+                        <div class="add-this-recommended-content sidebar-widget">
+    <h2>Вам может быть интересно:</h2>
+    <div class="addthis_recommended_vertical"></div>
+    <script type="text/javascript">
+        (function () {
+            addLoadEventHandler(function () {
+                injectScript('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5270dc1225ed43c5');
+            });
+        })();
+    </script>
+</div>
+                    </div>
+                    <div class="page-widget">
+                        <div class="facebook-page-plugin-container sidebar-widget">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4&appId=856100211142399";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-page" data-href="https://www.facebook.com/SkyscannerRussia" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/SkyscannerRussia"><a href="https://www.facebook.com/SkyscannerRussia">Skyscanner</a></blockquote></div></div>
+</div>
+                    </div>
+                    <div class="page-widget">
+                        <style>
+    .page-builder .twitter-wrapper {
+        position: relative;
+        border: 2px solid #eeeeee;
+        padding: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .page-builder .twitter-wrapper .twitter-logo-blue-32 {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+    .page-builder .twitter-wrapper h2 {
+        margin-left: 30px;
+    }
+    .page-builder .twitter-wrapper p {
+        padding: 1em 0;
+    }
+</style>
+<div class="twitter-wrapper">
+    <img class="twitter-logo-blue-32" src="/landing/pagebuilder/static/images/twitter-logo-blue-32.png" alt="Twitter">
+    <h2>@Skyscanner_RU on Twitter</h2>
+    <p></p>
+    <a href="https://twitter.com/Skyscanner_RU" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Skyscanner_RU</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</div>
+                    </div>
+                </div>
+            
+            <div class="content-wrapper">
+                
+                    <h1>Дешевые страны для путешествий в 2016 году</h1>
+                
+                
+                    <div class="published-date">
+                        <meta itemprop="datePublished" content="2016-01-15T00:00:00.00Z">пятница, 15 января 2016 г.
+                    </div>
+                
+                <div class="social-buttons-wrapper">
+                    <div class="addthis_responsive_sharing"></div>
+<script type="text/javascript">
+    (function () {
+        addLoadEventHandler(function () {
+            injectScript('//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5270dc1225ed43c5');
+        });
+    })();
+</script>
+                </div>
+                
+                <div class="main-content">
+                    
+                        <div class="summary">
+                            <h2>Дешево путешествовать за границу можно даже в кризис. Просто следуйте трем правилам: откажитесь от услуг турагентств, выбирайте недорогие страны и бронируйте все заранее. Скайсканер поможет разобраться, <a href="http://www.skyscanner.ru/news/kogda-aviabilety-stoyat-deshevle-i-kogda-vygodnee-letat" onclick="trackOutboundLink(Skyscanner.analyticsPageName, &quot;text-link-click&quot;, &quot;1_когда выгоднее покупать билеты&quot;)">когда выгоднее покупать билеты</a>, а в этой статье собраны 15 мест, где можно недорого отдохнуть в 2016 году.</h2>
+                        </div>
+                    
+                    <p>Мы изучили путеводители, форумы, отчеты блогеров, системы бронирования, сайты с ценами на продукты и выбрали самые доступные страны для отпуска. Для каждой рассчитали бюджет на двоих в день и перевели его в доллары. Это средняя сумма для пары путешественников, которые живут в одном номере, не любят тратить лишнего и во всем придерживаются золотой середины. Ведь под комфортом все понимают разное: одним хватит койки в хостеле, другие и среди пятизвездочных отелей еще повыбирают. Поэтому мы не брали в расчет шикарные гостиницы и рестораны, а выяснили, сколько стоит перекусить в обычных местных кафе и пожить в гестхаусах, мини-отелях или квартирах на Airbnb.</p>
+<div id="infogram-content-cheapest_destinations_article"></div>
+<p>В некоторых странах расходы легко урезаются в полтора-два раза, если пользоваться общественным транспортом, есть в нетуристических местах и искать гостиницы по принципу «нам только переночевать». Для Индии и Индонезии, например, мы рекомендуем дневной бюджет 40-50 $, но по этим странам можно путешествовать вдвоем за 20 $ в день.</p>
+<h2>Дешевые страны без визы</h2>
+<h2><a href="http://www.skyscanner.ru/flights-to/am/cheap-flights-to-armenia.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "1_Армения")'>Армения</a></h2>
+<h3>Дневной бюджет на двоих: 70-80 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Сытно и дешево перекусить в Армении можно на каждом шагу: хачапури в Ереване стоят до 500 драмов (1 $), ламаджо (лепешка с острой мясной начинкой) — до 1,7 $, а кебаб из раков у озера Севан — примерно 3 $. Средний счет в простецком кафе — 3-4 $, а за ужин на двоих в туристическом ресторане заплатите 7-30 $.</p>
+<p>В столице Армении есть недорогие гостиницы с двухместными номерами по 25-30 $. Если нравится домашний уют в отпуске, снимите симпатичную студию в тихом районе за 20 $ или квартиру в центре города на Airbnb за 30-40 $ в сутки. За пределами столицы цены чуть ниже. В Армении, как и в Грузии, незнакомец может пригласить вас на кофе, на ужин или даже на ночлег. Соглашайтесь: это не мошенничество, а гостеприимство.
+<img alt="Сушеные фрукты на рынке в Ереване, Армения" src="http://content.skyscnr.com/fef89cf887dfd78a57fc0638e8845797/680-dried-fruits-yerevan-market-armenia.jpg?resize=800px:99999px&quality=75" title="Сушеные фрукты на рынке в Ереване, Армения"/>
+<em>Фото: salajean/iStock Editorial/Thinkstock</em></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Ереван и окрестности; озеро Севан; Ванадзор и Лорийское ущелье; монастырь Хор Вирап с видами на Арарат; долина Воротана и Татевский монастырь.</p>
+<p><strong>Виза:</strong></p>
+<p>Без визы в Армению можно въезжать на срок до 180 дней в течение года. Хотите больше — узнайте, как оформить <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=armenia" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "2_армянскую визу")'>армянскую визу</a>.
+<img alt="Гора Арарат, Армения" src="http://content.skyscnr.com/b33e951d68fce9033d4ea3c4ff5e0087/680-mountain-ararat-armenia.jpg?resize=800px:99999px&quality=75" title="Гора Арарат, Армения"/></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/ge/cheap-flights-to-georgia.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "3_Грузия")'>Грузия</a></h2>
+<h3>Дневной бюджет на двоих: 80-90 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Уличной еды как таковой в Грузии нет. Перехватить на ходу можно разве что свежие хачапури или лобиани, которые продают на каждом углу за 2-3 лари (1 $). Обед в кафе обойдется в 6 $, а за щедрый ужин с вином заплатите от 8 $. Промежуточный вариант — хинкали: долго искать их не придется, одна штука стоит 60-70 тетри (0,25-0,30 $). Десятка хинкали с салатом и кружкой пива (за все — 4 $) хватит, чтобы наесться на весь день. </p>
+<p>Скромный двухместный номер в <a href="http://www.skyscanner.ru/hotels/tbs/tbilisi-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "4_Тбилиси")'>Тбилиси</a> и <a href="http://www.skyscanner.ru/hotels/bus/batumi-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "5_Батуми")'>Батуми</a> стоит от 40 $ в сутки. На 10 $ дешевле обойдется аренда квартиры в приятном районе недалеко от центра столицы. В приморском Батуми снять небольшие апартаменты в частном секторе в 2016 году можно за 20-25 $. Цены здесь крепко привязаны к сезону: квартира у моря со свежим ремонтом и всеми удобствами в середине лета стоит около 40 $ в день. В менее туристических местах вы без труда найдете гостевые дома с комнатами за 15-30 $.
+<img alt="Старый город в Тбилиси" src="http://content.skyscnr.com/620945d45c676ceacf27c5540f1e40e6/680-old-town-tbilisi-georgia.jpg?resize=800px:99999px&quality=75" title="Старый город в Тбилиси"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Тбилиси; Мцхета и Военно-Грузинская дорога; пещерный город в Вардзиа; Сигнаги и Кахетия; Сванетия; Батуми и черноморское побережье. Если время позволяет, можно брать билет в Грузию в один конец, ехать дальше по земле в Армению или Турцию и улетать домой уже оттуда.</p>
+<p><strong>Виза:</strong></p>
+<p>Граждане России могут провести в Грузии без <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=georgia" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "6_визы")'>визы</a> целый год.
+<img alt="Сванские башни в Сванетии, Грузия" src="http://content.skyscnr.com/229ce8dfbfc576362112a2b4d5afe9f0/680-village-adishi-georgia-svaneti.jpg?resize=800px:99999px&quality=75" title="Сванские башни в Сванетии, Грузия"/></p>
+<p><strong>Еще по теме:</strong> <a href="http://www.skyscanner.ru/news/kuda-poekhat-i-chto-posmotret-v-gruzii" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "7_Куда поехать и что посмотреть в Грузии")'>Куда поехать и что посмотреть в Грузии</a></p>
+<blockquote>
+<p>Если вы любите знакомиться с местными жителями и не любите чувствовать себя туристом в новых городах, попробуйте <a href="https://www.couchsurfing.com" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "8_каучсерфинг")' target="_blank">каучсерфинг</a>. Это сервис для поиска радушных хозяев, которым так нравится общаться с новыми людьми, что ночлег они предоставляют бесплатно. А иногда даже кормят своих гостей и показывают им город — частенько из каучсерфинга вырастает настоящая дружба.</p>
+</blockquote>
+<h2>Абхазия</h2>
+<h3>Дневной бюджет на двоих: 65-75 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Шампур ароматного куриного шашлыка в Абхазии стоит около 200 рублей (2,7 $), чебурек с сыром и мясом — 70 рублей (1 $). Обед в кафе у моря обойдется в 5-12 $ на двоих, а сытный ужин в апацхе (ресторане национальной кухни) — в 9,5-13,5 $. За полуторалитровую бутылку домашнего абхазского вина отдадите примерно 2,7 $. </p>
+<p>На Airbnb комнату в доме у моря в Сухуми можно снять за 10 $ в сутки, а квартиру в центре города — за 37 $ в день. Если рискнете искать жилье на месте, может выйти еще дешевле: комнату в частном доме в Гагре можно арендовать за 9 $, а под Пицундой есть варианты за 8 $ на двоих. Номер в неплохом приморском отеле в Абхазии стоит 20-33  $ в сутки.
+<img alt="Вид сверху на Новый Афон и Черное море в Абхазии" src="http://content.skyscnr.com/608148e60d9c403671c172e45e68892a/novy-afon-abkhazia.jpg?resize=800px:99999px&quality=75" title="Вид сверху на Новый Афон и Черное море"/>
+<em>Фото: <a href="https://www.flickr.com/photos/d1mkavetrov/5872221953/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "9_d1mka vetrov")' target="_blank">d1mka vetrov</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "10_CC BY-NC-ND 2.0")' target="_blank">CC BY-NC-ND 2.0</a></em></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Ботанический сад, Келасурская стена и руины замка Баграта в Сухуми; монастырь и подземная карстовая пещера в Новом Афоне; пляжи Гудауты, Пицунды и Гагры; заповедник у озера Рица.</p>
+<p><strong>Виза:</strong></p>
+<p>Для въезда в Абхазию россиянам <strong>не нужны ни виза, ни загранпаспорт</strong> — достаточно обычного. Летите до <a href="http://www.skyscanner.ru/flights-to/aer/cheap-flights-to-sochi-airport.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "11_Адлера")'>Адлера</a> — оттуда всего 10 км до абхазской границы, которая проходит по реке Псоу.
+<img alt="Озеро Рица в Абхазии" src="http://content.skyscnr.com/195dc55399d68433f1dc2106fc03ab2e/alpine-lake-ritsa-abkhazia.jpg?resize=800px:99999px&quality=75" title="Озеро Рица в Абхазии"/></p>
+<p><strong>Еще по теме:</strong> <a href="http://www.skyscanner.ru/news/kuda-poekhat-za-granitsu-bez-zagranpasporta" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "12_Куда поехать за границу без загранпаспорта")'>Куда поехать за границу без загранпаспорта</a> </p>
+<h2><a href="http://www.skyscanner.ru/flights-to/la/cheap-flights-to-laos.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "13_Лаос")'>Лаос</a></h2>
+<h3>Дневной бюджет на двоих: 55-65 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Обед в уличных кафе стоит от 12 до 50 тысяч кипов (1,5-6 $), в туристическом кафе или ресторане — 50-100 тысяч (6-12 $). В среднем простой двухместный номер обойдется где-то в 12 $ в сутки. В деревушке Ванг Вьенг можно поторговаться на месте и поселиться за эту сумму в номере с чудесным видом на горы. А вот в столице — Вьентьяне — дешевле бронировать <a href="http://www.skyscanner.ru/hotels/vte/vientiane-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "14_гостиницу")'>гостиницу</a> заранее: снимете уютный номер за 15-17 $. </p>
+<p>Почти все достопримечательности Лаоса — платные, хоть и стоят очень дешево: например, вход в пещеры Паку обойдется в 2,5 $. До этих буддийских пещер можно добраться на лодке по Меконгу — 8 $ вы заплатите за дорогу туда-обратно и остановку в «деревне виски». Аренда мотобайка с ручной коробкой передач на целый день в Лаосе стоит около 70 000 кипов — за 9 $ вы совершенно свободны в передвижениях по стране.
+<img alt="Пастух в Лаосе" src="http://content.skyscnr.com/e199d7a1c1d1aae4f08b32ecad33af64/680-buffalo-shepherd-rice-field-laos.jpg?resize=800px:99999px&quality=75" title="Пастух в Лаосе"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Вьентьян; Луангпрабанг; трекинг в национальном парке Бокэу и/или сплав по живописной реке У; Паксе и водопады плато Болавен; круиз по Меконгу на юг, к Си Пхан Дон или до «4000 островов». Продолжить приключения можно в Камбодже или, если двигаться в обратном направлении, в Таиланде.</p>
+<p><strong>Виза:</strong></p>
+<p>Если едете в Лаос меньше чем на 15 дней, виза не нужна. Единственное требование — загранпаспорт должен быть действительным в течение 6 месяцев с момента въезда.
+<img alt="Река в окрестностях Ванг Вьенг, Лаос" src="http://content.skyscnr.com/0da5cbf9d8d05cd1e74e6f7459b39e3d/680-van-vieng-laos.jpg?resize=800px:99999px&quality=75" title="Река в окрестностях Ванг Вьенг, Лаос"/></p>
+<p><strong>Еще по теме:</strong> <a href="http://www.skyscanner.ru/news/leto-kruglyi-god-kak-uekhat-na-zimu-v-tailand-i-skolko-eto-stoit" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "15_Лето круглый год — как уехать на зиму в Таиланд и сколько это стоит")'>Лето круглый год — как уехать на зиму в Таиланд и сколько это стоит</a></p>
+<blockquote>
+<p>Мы не включили в расчеты стоимость перелета, потому что Россия — самая большая по площади страна в мире и цены авиабилетов в одну и ту же точку из Москвы, Владивостока и Калининграда иногда отличаются на порядок. Зная, сколько одни и те же вещи стоят в разных странах, вы сможете выбрать то место, куда дешевле всего лететь именно из вашего города. Так отпуск получится не только интересным, но и недорогим.</p>
+</blockquote>
+<h2><a href="http://www.skyscanner.ru/flights-to/id/cheap-flights-to-indonesia.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "16_Индонезия")'>Индонезия</a></h2>
+<h3>Дневной бюджет на двоих: 40-50 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Уличная еда в Индонезии стоит копейки: наси горенг или ми горенг (жареный рис или лапша) обойдутся не дороже 1,5-2 $. Позавтракать и пообедать в местных кафе можно за 2,5-4,5 $, а обильный ужин стоит 5-8 $ в зависимости от уровня заведения. Приличный номер в гестхаусе на Суматре вы снимете за 10 $, на Яве — за 10-15 $, а на Бали — за 15-20 $. Перемещаться между островами тоже дешево — проезд на пароме стоит около 3 $.</p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Раз уж вы пролетели 9 000 км, просидеть весь отпуск на Бали, как бы прекрасен он ни был, — значит лишить себя многих впечатлений. Перед вами 17 000 островов на выбор — от крошечных райских уголков вроде Гили до Суматры площадью с Испанию. Не пропустите Боробудур и вулкан Бромо на Яве, побывайте на озере Тоба или сходите в трек по джунглям на Борнео.
+<img alt="Побережье на острове Борнео, Индонезия" src="http://content.skyscnr.com/dc1b63912ccc0797f427f28eed97f594/680-sabah-borneo-scenic-view.jpg?resize=800px:99999px&quality=75" title="Побережье на острове Борнео"/></p>
+<p><strong>Виза:</strong></p>
+<p>Граждане РФ могут въезжать в Индонезию без визы на 30 дней через международные аэропорты Джакарты, Сурабаи, Медана, Денпасара, острова Батам, а также через четыре морских порта. На других пограничных пунктах россияне могут получить <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=indonesia" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "17_визу по прибытии")'>визу по прибытии</a> на срок 30 дней. </p>
+<blockquote>
+<p>Чтобы сэкономить на перелете в Индонезию, состыкуйте два рейса с пересадкой в безвизовом Таиланде. Обычно перелет из Москвы на Бали обходится на несколько тысяч дороже, чем сумма билетов из Москвы <a href="http://www.skyscanner.ru/flights-to/th/cheap-flights-to-thailand.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "18_в Бангкок")'>в Бангкок</a> и из Бангкока <a href="http://www.skyscanner.ru/transport/flights/th/id/cheapest-flights-from-thailand-to-indonesia.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "19_в Денпасар")'>в Денпасар</a>.</p>
+</blockquote>
+<p><img alt="Храм Боробудур на Яве, Индонезия" src="http://content.skyscnr.com/ff3d91dd9d6deaa4701720f52e546dbe/680-borobudur-temple-indonesia.jpg?resize=800px:99999px&quality=75" title="Храм Боробудур на Яве"/></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/vn/cheap-flights-to-vietnam.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "20_Вьетнам")'>Вьетнам</a></h2>
+<h3>Дневной бюджет на двоих: 45-55 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Сэндвичи бань ми во Вьетнаме продаются на каждом шагу за 10-15 тысяч донгов (0,5-0,7 $), столько же стоят соки во фруктовых лавках. За тарелку супа фо в кафе заплатите 1-2 $, а за 0,5 литра домашнего пива биа хой — 1 $. В локальных забегаловках кормят за копейки: две порции рыбы или курицы, обжаренной в имбирном соусе, с тарелкой риса и миской супа — 2 $. В презентабельном ресторане эти суммы умножаются на 2-3. Сытный ужин из морепродуктов в туристическом заведении с вьетнамской кухней обойдется в 12-20 $. Если соскучитесь по европейским блюдам, спасет пицца за 5 $. Подкрепиться в фастфудной Lotteria бургером, картошкой фри и газировкой можно за 3 $. Импортный алкоголь во вьетнамских магазинах стоит не дороже, чем в дьюти-фри, а бутылку местного рома можно купить за 3-4 $. </p>
+<p>Двухместный номер в ханойском отеле вы снимете за 11-15 $, в поселке Муйне цены начинаются от 10 $ за бунгало с душем и кондиционером у самого моря, а в Нячанге пока еще можно снять приятный номер с удобствами за 6-10 $. Сервис во вьетнамских гостиницах на высоте вне зависимости от звездности. Завтрак включен в стоимость в девяти случаях из десяти.
+<img alt="Добыча соли на закате, Вьетнам" src="http://content.skyscnr.com/aea242cf4715362825ce0acc9be74477/production-of-salt-vietnam.jpg?resize=800px:99999px&quality=75" title="Добыча соли на закате во Вьетнаме"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Ханой; бухта Халонг Бэй; музей чамской скульптуры в Дананге; Нячанг; поселок Муйне; Далат; город-музей Хойан; остров Фукуок у побережья Камбоджи.</p>
+<p><strong>Виза:</strong></p>
+<p>Граждане РФ могут отдыхать во Вьетнаме <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=vietnam" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "21_без визы")'>без визы</a> до 15 дней.
+<img alt="Рисовые террасы во Вьетнаме" src="http://content.skyscnr.com/80f8cde100cca594b8046f35dec68454/terraced-rice-field-in-vietnam.jpg?resize=800px:99999px&quality=75" title="Рисовые террасы во Вьетнаме"/></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/rs/cheap-flights-to-serbia.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "22_Сербия")'>Сербия</a></h2>
+<h3>Дневной бюджет на двоих: 70-80 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Сербские аналоги фастфуда — сырный пирог гибаница, пряные колбаски чевапчичи, плескавицы (котлеты с гарниром или в булке) — стоят не дороже 200 динаров (2 $). Причем, чтобы наесться, хватит одной плескавицы. Пообедать вдвоем в приличном ресторане можно за 7-9 $. </p>
+<p>Простой двухместный номер в <a href="http://www.skyscanner.ru/hotels/beg/belgrade-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "23_отелях Белграда")'>отелях Белграда</a> стоит около 30 $ в день. За 16 $ можно снять номер в хостеле, а за 25-35 $ — квартиру в центре.
+<img alt="Озеро Заовине, гора Тара, Сербия" src="http://content.skyscnr.com/3512bb825536dfda6cb187d0b3be8ffa/zaovine-lake-serbia.jpeg?resize=800px:99999px&quality=75" title="Озеро Заовине в сербском национальном парке «Тара»"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Белград; Нови Сад; Смедерево; нацпарки Тара или Фрушка-Гора; Баина-Башта или другие городки по течению живописной реки Дрины; Дрвенград — этническая деревня из фильмов Кустурицы. Можно заехать в еще более дешевую Македонию.</p>
+<p><strong>Виза:</strong></p>
+<p>Для путешествия в Сербию гражданам России не нужна <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=serbia" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "24_виза")'>виза</a>, если поездка укладывается в 30 дней.
+<img alt="Улица в Белграде, Сербия" src="http://content.skyscnr.com/477d626af37efff2559b4be8576e4296/680-skadarlija-district-belgrade-serbia.jpg?resize=800px:99999px&quality=75" title="Улица в Белграде, Сербия"/></p>
+<p><strong>Читайте также:</strong> <a href="http://www.skyscanner.ru/news/15-idei-dlya-puteshestviya-po-serbii" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "25_15 идей для путешествия по Сербии")'>15 идей для путешествия по Сербии</a></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/me/cheap-flights-to-montenegro.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "26_Черногория")'>Черногория</a></h2>
+<h3>Дневной бюджет на двоих: 80-90 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Любимый национальный фастфуд у черногорцев — бурек (круглый пирог или трубочки с овощной, сырной или мясной начинкой) — продается по 1 $ в пекарах и на пляжах. Щедрая порция чевапчичи с картошкой и питой стоит 5-9 $ — и ее хватает на двоих. Еще дешевле перекусить в месаре. В этих мясных лавках продают полуфабрикаты, но можно попросить поджарить те же чевапчичи на месте — это называется «сделать на роштиле». Основательно позавтракать в черногорском кафе вдвоем можно за 7-10 $, а ресторанный ужин из трех блюд обойдется в 25-30 $. Если отойдете от прибрежных заведений буквально на 500 метров, сэкономите до 50 %.</p>
+<p>Самый дорогой город с точки зрения жилья — Будва: в пик сезона простенькие однокомнатные квартиры у моря сдают за 35-45 $ в сутки. Но и в Будве даже летом можно снять опрятный номер в гестхаусе или небольшую студию за 20 $, если бронировать заранее. Зимой в Черногории цены на <a href="http://www.skyscanner.ru/hotels/q/?q=%D0%A7%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D0%B8%D1%8F&amp;bpt_eid=o_29475395" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "27_отели")'>отели</a> и апартаменты падают почти вдвое.</p>
+<p><img alt="Вечерний Котор, Черногория" src="http://content.skyscnr.com/cb97267a4f5ccacec83b3028d1a14a41/kotor-montenegro.jpeg?resize=800px:99999px&quality=75" title="Вечерний Котор, Черногория"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Подгорица; курорты Которского залива (Котор, Пераст, Рисан, Коштаница, Тиват, Херцег-Нови); курорты Адриатического побережья (Будва, Бечичи, Рафаиловичи, Свети-Стефан, Петровац, Бар); монастырь Острог; национальные парки Ловчен и Дурмитор с каньоном реки Тары.</p>
+<p><strong>Виза:</strong></p>
+<p>Граждане РФ могут находиться на территории Черногории <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=montenegro" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "28_без визы")'>без визы</a> 30 дней подряд.
+<img alt="Пляж на курорте Свети-Стефан, Черногория" src="http://content.skyscnr.com/687f9b62b1dbf6bb8b488e9d6d1b8a4d/beach-near-island-sveti-stefan-montenegro.jpg?resize=800px:99999px&quality=75" title="Пляж на курорте Свети-Стефан, Черногория"/></p>
+<p><strong>Узнайте больше:</strong> <a href="http://www.skyscanner.ru/news/gde-otdokhnut-v-chernogorii" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "29_Где отдохнуть в Черногории")'>Где отдохнуть в Черногории</a></p>
+<h2>Дешевые страны с визой по прибытии или онлайн</h2>
+<h2><a href="http://www.skyscanner.ru/flights-to/in/cheap-flights-to-india.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "30_Индия")'>Индия</a></h2>
+<h3>Дневной бюджет на двоих: 40-45 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Уличная еда в Индии не стоит практически ничего: порция вегетарианского тали (рис, тушеные овощи, чечевица и лепешка) обойдется в 50 рупий (0,8 $), а сытно пообедать в местной забегаловке можно за 150 рупий (2,3 $). Средний счет в туристических ресторанчиках — 3-6 $. </p>
+<p>С жильем ситуация похожая: практически везде за 5-8 $ вы получите комплект из кровати, стен и крыши, за 10-15 $ — приличный номер с кондиционером. В Мумбаи, Гоа и Керале цены в пик сезона — с декабря по февраль — вырастают в 2-3 раза. Арендовать скутер на день можно за 200-250 рупий (3-4 $). Если едете надолго, скутер лучше брать сразу на неделю или на месяц — выйдет еще дешевле, около 150 рупий в день, к тому же сможете посмотреть соседние штаты.
+<img alt="Тадж-Махал на рассвете, Агра, Индия" src="http://content.skyscnr.com/ce1e6a4d21f9112eab5d899a67019244/680-sunrise-taj-mahal-agra-india.jpg?resize=800px:99999px&quality=75" title="Тадж-Махал на рассвете, Агра, Индия"/></p>
+<blockquote>
+<p>Когда правительство Индии установило черту бедности в 32 рупии (0,5 $) в сутки, двое индийцев из богатых семей поставили <a href="http://travel.cnn.com/mumbai/life/imagine-living-rs-32-dayin-india-081690/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "31_эксперимент")' target="_blank">эксперимент</a>. Неделю они жили на полдоллара в день в Керале, а потом еще три — на месячную зарплату среднего индийца, 4500 рупий (68 $), в Бангалоре. Там они пили колодезную воду, ходили пешком и жили в каморке, но продержались месяц и с голоду не умерли. Средний бюджет комфортного путешествия, по данным Скайсканера, в 40 раз больше, чем тратили юноши.</p>
+</blockquote>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Дели; Агра; круг по городам и деревням Раджастана или путешествие по предгорьям Гималаев в Химачал Прадеш и Уттаракханд; и дальше — по интересам: либо в Варанаси и в Непал, либо на юг, в Мумбаи и Гоа или в Кералу. Если время позволяет, побывайте в Панджабе (Амритсар), Кашмире и Ладаке.</p>
+<p><strong>Виза:</strong></p>
+<p>Если въезжаете в Индию через аэропорты Ченнаи, Дели, Гоа, Мумбаи, Бангалор, Колката, Кочин, Хайдарабад и Тривандрум, визу можно оформить <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=india" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "32_онлайн")'>онлайн</a>. 
+<img alt="Река Ганг в Варанаси, Индия" src="http://content.skyscnr.com/13f87333d9562cfa8830d616a8d272a9/680-ganges-river-varanasi-india.jpg?resize=800px:99999px&quality=75" title="Река Ганг в Варанаси, Индия"/></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/np/cheap-flights-to-nepal.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "33_Непал")'>Непал</a></h2>
+<h3>Дневной бюджет на двоих: на треке в горах — около 40 $; в остальной части страны — 45-50 $.</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>В Непале сытно пообедать вдвоем в уличной забегаловке можно за 400-500 рупий (4-5 $). В туристических кафе цены в 2-3 раза выше, обед на двоих будет стоить ближе к 15 $. </p>
+<p>Двухместный номер в дешевом гестхаусе c душем и туалетом на этаже вы снимете за 5-8 $ в день. За 15-20 $ можно жить в приличном <a href="http://www.skyscanner.ru/hotels/ktm/kathmandu-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "34_отеле в Катманду")'>отеле в Катманду</a>. Средняя стоимость небольшого комфортного номера на двоих в Нагаркоте — от 15 $ за ночь, а в Покхаре — от 10 $.
+<img alt="Ступа Боднатх в Катманду, Непал" src="http://content.skyscnr.com/43f36bf6b7ffe2e0c4f17bd3f8f5eef8/680-boudhanath-kathmandu-nepal.jpg?resize=800px:99999px&quality=75" title="Ступа Боднатх в Катманду, Непал"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Катманду и окрестности (Бхактапур, Нагаркот); несколько дней в заповеднике Читван; Люмбини; Покхара и походы в горы — к Эвересту, Аннапурне, Манаслу и т. д.</p>
+<p><strong>Виза:</strong></p>
+<p><a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=nepal" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "35_Непальскую визу")'>Непальскую визу</a> можно получить как в Посольстве в Москве, так и в аэропорту по прилете. Просто заполните онлайн-анкету за 15 дней до поездки и предъявите ее на границе.
+<img alt="Непальские Гималаи" src="http://content.skyscnr.com/e62fd56e906880058f1036c25d63705d/680-annapurna-base-camp-nepal.jpg?resize=800px:99999px&quality=75" title="Непальские Гималаи"/></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/kh/cheap-flights-to-cambodia.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "36_Камбоджа")'>Камбоджа</a></h2>
+<h3>Дневной бюджет на двоих: 70-80 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Жареного паука, килограмм манго или связку бананов в Камбодже вы купите за 1 $. Две порции запеченных мидий с салатом обойдутся в 6 $. Столько же стоит сытный ужин со свиным стейком, картошкой и овощами, а за огромную пиццу на двоих в обычном кафе вы отдадите около 5 $. Стакан местного пива в приморских барах стоит 0,5 $, кувшин принесут за 2 $. На духовную пищу в Камбодже вы потратите больше, чем на обычную: <a href="http://www.tourismcambodia.com/attractions/angkor.htm" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "37_билет в Ангкор")' target="_blank">билет в Ангкор</a> на 1 день — 20 $, на 3 дня — 40 $, на неделю — 60 $. За подъем над Ангкор-Ватом на желтом воздушном шаре заплатите 20 $. </p>
+<p>Комнату с двуспальной кроватью, кондиционером и душем в гестхаусе на курорте Сиануквиль можно снять за 12-15 $ в день, а комфортные номера в гостиницах Пномпеня стоят 15-20 $ за ночь. Торговаться кхмеры не любят, бронировать <a href="http://www.skyscanner.ru/hotels/rep/siem-reap-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "38_жилье")'>жилье</a> лучше заранее. 
+<img alt="Мальчик на лодке в Камбодже" src="http://content.skyscnr.com/e87871dc336f5155444c003f1ad42d6b/boy-on-boat-cambodia.jpg?resize=800px:99999px&quality=75" title="Мальчик на лодке в Камбодже"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Сиемреап и храмовый комплекс Ангкор; озеро Топлесап с плавучими деревнями, пляжи Сиануквиля (Очутел-Серендипити, Отрес); остров Ко Ронг; национальный парк Пном Бокор; Пномпень.</p>
+<p><strong>Виза:</strong></p>
+<p>Получить визу в Камбоджу можно сразу по прибытии или заранее — <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=cambodia" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "39_через интернет")'>через интернет</a>. 
+<img alt="Храм Та Пром в Камбодже" src="http://content.skyscnr.com/08151be1250433c716231046b0512aa5/ta-prohm-cambodia.jpg?resize=800px:99999px&quality=75" title="Храм Та Пром в Камбодже"/></p>
+<p><strong>Читайте также:</strong> <a href="http://www.skyscanner.ru/news/10-veshchei-kotorye-kazhdyi-dolzhen-sdelat-v-kambodzhe" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "40_10 вещей, которые каждый должен сделать в Камбодже")'>10 вещей, которые каждый должен сделать в Камбодже</a></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/lk/cheap-flights-to-sri-lanka.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "41_Шри-Ланка")'>Шри-Ланка</a></h2>
+<h3>Дневной бюджет на двоих: 60-70 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Еда на Шри-Ланке похожа на южноиндийскую и по вкусу, и по ценам. Роти (блинчики с начинкой) стоят от 40 ланкийских рупий (0,28 $) за вегетарианский вариант до 120 рупий (0,8 $) за треугольник с курицей и сыром. За связку бананов отдадите 0,14 $, за питьевой кокос — 0,25 $, за килограмм папайи — 0,42 $. Королевские креветки на рынке Хиккадувы продаются за 7 $/кг, а 0,75-литровую бутылку красного рома купите за 10 $. Котту (нечто вроде нашинкованного гамбургера) в нетуристических кафе стоит 1,5-2 $. Две порции ужина из морепродуктов, риса с карри, салата и пива в ресторане обойдутся в 7-10 $.</p>
+<p>Средняя цена за номер с горячей водой и вентилятором в гестхаусе — 14-20 $ в сутки. В тусовочных местах вроде Мириссы и Унаватуны на южном побережье цены выше — под Новый год и до марта местные сдают жилье по 28-55 $ за ночь. От 25 $ стартуют цены на двухместные номера в <a href="http://www.skyscanner.ru/hotels/cmba/colombo-hotels.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "42_отелях Коломбо")'>отелях Коломбо</a>, за 16 $ можно переночевать в хостеле. Если планируете пробыть на Шри-Ланке долго, разумнее снять дом или квартиру за 330 $ в месяц (вместе с коммунальными платежами) на месте.
+<img alt="Львиная скала, Сигирия, Шри-Ланка" src="http://content.skyscnr.com/f0b899cefbd3d34b0245951c3dcba215/sigiriya-rock-fortress-sri-lanka.jpg?resize=800px:99999px&quality=75" title="Львиная скала, Сигирия, Шри-Ланка"/>
+<em>Фото: pilesasmiles/iStock/Thinkstock</em></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Коломбо; слоновий питомник Пиннавела; Храм Зуба Будды в Канди, Львиная скала в Сигирии, другие буддийские достопримечательности в Анурадхапуре и Полоннаруве; чайные плантации Нувара-Элия; национальный заповедник в лесу Синхараджа.</p>
+<p><strong>Виза:</strong></p>
+<p>Получить <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=sri-lanka" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "43_визу в Шри-Ланку")'>визу в Шри-Ланку</a> можно тремя способами — в Посольстве в Москве, по прибытии в аэропорт или онлайн.
+<img alt="Поезд в Канди, идущий через чайные плантации Нувара-Элия, Шри-Ланка" src="http://content.skyscnr.com/6a1a38618b92e7f957ea4d86c4eaf5d9/train-to-kandy-through-tea-plantations-eliya-nuwara-sri-lanka.jpg?resize=800px:99999px&quality=75" title="Поезд в Канди, идущий через чайные плантации Нувара-Элия"/>
+<em>Фото: <a href="https://www.flickr.com/photos/oscarminyo/21982577161/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "44_Oscar Miño Peralta")' target="_blank">Oscar Miño Peralta</a>, <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "45_CC BY-NC-ND 2.0")' target="_blank">CC BY-NC-ND 2.0</a></em></p>
+<h2>Дешевые визовые страны</h2>
+<h2><a href="http://www.skyscanner.ru/flights-to/ro/cheap-flights-to-romania.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "46_Румыния")'>Румыния</a></h2>
+<h3>Дневной бюджет на двоих: 80-90 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Уличной еды в азиатском понимании термина в Румынии не встретишь. В дешевом кафе или фастфуде можно пообедать примерно за 10-30 леев (2,5-7 $). В 12-14 $ обойдется плотный обед в ресторанчиках Брашова и Сигишоары. Ужин в разрекламированном заведении Бухареста выльется в 100 леев (24 $). </p>
+<p>В среднем по стране простой двухместный номер в гестхаусе или двухзвездочной гостинице стоит 20-30 $. Квартиру в сердце Бухареста можно снять за 30-40 $ в сутки, в Брашове ориентируйтесь на 35-45 $.
+<img alt="Улица в Сигишоаре, Румыния" src="http://content.skyscnr.com/ab4b42aae7c7339aa9f2a642f4c22b55/680-cobblestone-street-sighisoara-romania.jpg?resize=800px:99999px&quality=75" title="Улица в Сигишоаре, Румыния"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Бухарест; дельта Дуная; Мамая и другие черноморские курорты; замки Пелеш и Бран («замок Дракулы»); средневековый Брашов; трансильванские городки Сигишоара и Сибиу. Если путешествуете <a href="http://www.skyscanner.ru/carhire/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "47_на машине")'>на машине</a>, не пропустите красивейшую горную Трансфэгэрашскую трассу.
+<img alt="Трансфэгэрашское шоссе вечером, Румыния" src="http://content.skyscnr.com/fb34e5367d69dc2c496fa10a526a421f/transfagarasan-romania.jpg?resize=800px:99999px&quality=75" title="Трансфэгэрашское шоссе вечером, Румыния"/></p>
+<p><strong>Виза:</strong></p>
+<p>Румыния входит в Евросоюз, а вот Шенгенское соглашение не подписывала. С национальной визой можно не только путешествовать по стране, но и съездить в Болгарию, Хорватию и на Кипр. Если у вас уже есть долгосрочное разрешение на въезд в эти страны или многократная шенгенская виза, получать отдельную визу для Румынии не придется. В остальных случаях нужно оформить <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=romania" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "48_румынскую визу")'>румынскую визу</a>.</p>
+<p><strong>Смотрите также:</strong> <a href="http://www.skyscanner.ru/news/20-samykh-krasivykh-zamkov-evropy" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "49_20 самых красивых замков Европы")'>20 самых красивых замков Европы</a></p>
+<h2><a href="http://www.skyscanner.ru/flights-to/hu/cheap-flights-to-hungary.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "50_Венгрия")'>Венгрия</a></h2>
+<h3>Дневной бюджет на двоих: 85-95 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Знаменитый венгерский гуляш стоит от 950 форинтов (3,3 $). Перекусить вдвоем в недорогом кафе можно на 10 $, а основательно поужинать в ресторане — за 28 $. Внушительная пицца обойдется в 5 $, а чашечку кофе с нежным пирожным в венгерских цукраздах (кондитерских) оценивают всего в 2,5 $. </p>
+<p>Уютные квартирки в самом центре Будапешта на Airbnb стоят от 35-45 $ за ночь, в гестхаусах на окраине можно жить в комфортных номерах за 25 $. Апартаменты возле озера Балатон обойдутся еще на 5 $ дешевле.
+<img alt="Базилика святого Иштвана в Будапеште" src="http://content.skyscnr.com/1fe4f9adcad24707e681f154d08fd06f/st-stephens-basilica-budapest.jpeg?resize=800px:99999px&quality=75" title="Базилика святого Иштвана в Будапеште"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p><a href="http://www.skyscanner.ru/news/luchshie-zanyatiya-v-budapeshte" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "51_Будапешт")'>Будапешт</a> с его купальнями; парк медведей Medveotthon в Верешедьхазе; этномузей под открытым небом <a href="http://www.skanzen.hu/hu" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "52_Скансен")' target="_blank">Скансен</a> недалеко от города Сентендре; древний Секешфехервар; аббатство Паннонхальма; озеро Балатон и еще <a href="http://www.skyscanner.ru/news/10-idei-korotkikh-puteshestvii-iz-budapeshta" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "53_10 идей коротких путешествий из Будапешта")'>10 идей коротких путешествий из Будапешта</a>.</p>
+<p><strong>Виза:</strong></p>
+<p>Для въезда в Венгрию нужна <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=hungary" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "54_шенгенская виза")'>шенгенская виза</a>.
+<img alt="Купальни Сечени в Будапеште, Венгрия" src="http://content.skyscnr.com/b38544a0e0473fe0c526af9634ca1ec2/budapest-szechenyi-spa.jpg?resize=800px:99999px&quality=75" title="Купальни Сечени в Будапеште"/></p>
+<blockquote>
+<p>Сориентироваться в ценах на продукты и услуги в большинстве стран мира помогут сайты <a href="http://www.numbeo.com/cost-of-living/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "55_numbeo.com")' target="_blank">numbeo.com</a>, <a href="http://www.priceoftravel.com/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "56_priceoftravel.com")' target="_blank">priceoftravel.com</a> и <a href="http://www.budgetyourtrip.com/" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "57_budgetyourtrip.com")' target="_blank">budgetyourtrip.com</a>.</p>
+</blockquote>
+<h2><a href="http://www.skyscanner.ru/flights-to/bg/cheap-flights-to-bulgaria.html" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "58_Болгария")'>Болгария</a></h2>
+<h3>Дневной бюджет на двоих: 80-90 $</h3>
+<p><strong>Примерные цены:</strong></p>
+<p>Чашка кофе в Болгарии стоит от 0,8 до 1,5 левов (0,5-0,8 $), тарелка супа (пилешка — куриный или топчета — с фрикадельками) — около 1 $, а шопский салат — 2-3 $. Позавтракать в кафе Софии можно за 10 $ на двоих. Ужин из трех блюд с напитками в неплохом столичном ресторане обойдется примерно в 20-22 $. </p>
+<p>Двухместный номер в гестхаусах в центре города стоит от 16 $ за ночь. За 18 $ можно снять комнату с душем, кондиционером и холодильником в Кошарице и Равде. Номер-студио в трехзвездочном апарт-отеле на курорте Солнечный берег стоит где-то 26 $. Через Airbnb отличную квартиру у моря с бассейном во дворе вы снимете за 25-35 $.
+<img alt="Летний пляж в Болгарии" src="http://content.skyscnr.com/a4d596cbea79241392949b1a70f89c7b/beach-bulgarian-seaside-landscapes.jpg?resize=800px:99999px&quality=75" title="Летний пляж в Болгарии"/></p>
+<p><strong>Стандартный маршрут:</strong></p>
+<p>Cамые <a href="http://www.skyscanner.ru/news/12-samykh-yarkikh-mest-bolgarii" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "59_яркие места в Болгарии")'>яркие места в Болгарии</a>: София и гора Витоша; Копривштица; Пловдив и Перперикон; Долина роз; Рильский монастырь и Семь озер; Несебр; крошечный Мелник; пляжи Солнечного берега.</p>
+<p><strong>Виза:</strong></p>
+<p>Болгария не входит в Шенгенскую зону, но в эту страну можно въезжать по двукратной или многократной шенгенской визе. Также вы можете посетить Болгарию, если в паспорте стоят действующие многократные визы Румынии, Хорватии или Кипра. В других случаях нужно получить <a href="http://www.skyscanner.ru/travel-information/visas?visadestinationname=bulgaria" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "60_болгарскую визу")'>болгарскую визу</a>.
+<img alt="Часовня Иоанна Крестителя в селе Поцъ̀рненци, Болгария" src="http://content.skyscnr.com/ecdae1fdab551be75146f0339ba616f6/saint-joan-letni-chapel-bulgaria.jpg?resize=800px:99999px&quality=75" title="Часовня Иоанна Крестителя в селе Поцъ̀рненци, Болгария"/></p>
+<p><strong>Не пропустите:</strong> </p>
+<p><a href="http://www.skyscanner.ru/news/kogda-aviabilety-stoyat-deshevle-i-kogda-vygodnee-letat" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "61_Когда авиабилеты стоят дешевле и когда выгоднее летать")'><strong>Когда авиабилеты стоят дешевле и когда выгоднее летать</strong></a></p>
+<p><a href="http://www.skyscanner.ru/news/15-samykh-goriachikh-turisticheskikh-napravlenii-2016-goda" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "62_15 самых горячих туристических направлений 2016 года")'><strong>15 самых горячих туристических направлений 2016 года</strong></a></p>
+<p><a href="http://www.skyscanner.ru/news/kogda-i-kuda-ne-nado-ekhat-otdykhat-letom" onclick='trackOutboundLink(Skyscanner.analyticsPageName, "text-link-click", "63_Когда и куда НЕ надо ехать отдыхать летом")'><strong>Когда и куда НЕ надо ехать отдыхать летом</strong></a></p><script type="text/javascript">window['InfogramEmbeds']={script:'//e.infogr.am/js/dist/embed-loader-min.js',list:[{id:'cheapest_destinations_article',title:'',container:document.getElementById('infogram-content-cheapest_destinations_article'),type:'interactive'}]};addLoadEventHandler(function(){injectScript('//e.infogr.am/js/dist/embed-loader-min.js')});</script>
+                    
+                        <div class="newsletter-signup-widget-email newsletter-signup">
+</div>
+                    
+                    
+                    <style media="screen">
+   .related-content-widget .item {
+       display: table;
+       overflow: hidden;
+       width: 100%;
+       height: 140px;
+       padding: 1em 0;
+       text-decoration: none;
+   }
+   .related-content-widget .item h3 {
+       margin: 0;
+       color: #21C4D9;
+       font-size: 1.4em;
+       font-weight: normal;
+       text-align: left;
+   }
+   .related-content-widget .item-image {
+       display: table-cell;
+       position: relative;
+       overflow: hidden;
+       width: 30%;
+   }
+   .related-content-widget .item-image img {
+       position: absolute;
+       width: auto;
+       height: 140px;
+       max-width: none;
+       margin: 0;
+   }
+   .related-content-widget .item-content {
+       display: table-cell;
+       padding: 0 0 0 1em;
+       font-size: 14px;
+       color: #555555;
+       position: relative;
+   }
+   .related-content-widget .item-content p {
+       margin: 0;
+       line-height: 1.4em;
+       font-size: 1.3em;
+       white-space: normal;
+   }
+   .related-content-widget .item .full-story-button {
+       position: absolute;
+       display: block;
+       padding: 0 20px;
+       bottom: 0;
+       color: #21C4D9;
+       text-decoration: none;
+       text-align: center;
+       font-weight: bold;
+       font-size: 14px;
+       line-height: 2em;
+       border: 1px solid #21C4D9;
+       -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+       border-radius: 5px;
+   }
+   @media (max-width: 800px) {
+       .related-content-widget .item h3 {
+           font-size: 1.3em;
+       }
+       .related-content-widget .item-content {
+           padding: 0 0 0 0.6em;
+       }
+       .related-content-widget .item-content p{
+        font-size: 1.2em;
+        line-height: 1.5em;
+       }
+   }
+   @media (max-width: 600px) {
+       .related-content-widget .item h3 {
+           font-size: 1.2em;
+       }
+       .related-content-widget .item-content p{
+        font-size: 1.1em;
+        line-height: 1.3em;
+       }
+   }
+   @media (max-width: 500px) {
+       .related-content-widget .item-content p{
+           font-size: 1em;
+           line-height: 1.4em;
+       }
+   }
+   @media (max-width: 400px) {
+       .related-content-widget .item {
+           overflow: visible;
+           height: auto;
+       }
+       .related-content-widget .item-content{
+           display: block;
+           width: 100%;
+           padding: 0;
+           font-size: 13px;
+       }
+
+       .related-content-widget .item-image{
+           display: block;
+           width: 100%;
+           max-width: none;
+           max-height: none;
+       }
+
+       .related-content-widget .item-image img{
+           position: static;
+           width: 100%;
+           height: auto;
+           -ms-transform: none;
+           -webkit-transform: none;
+           transform: none;
+       }
+
+       .related-content-widget .item-content p{
+           display: none;
+       }
+
+       .related-content-widget .item-content .full-story-button{
+           display: none;
+       }
+   }
+</style>
+<div class="related-content-widget">
+   
+       <a class="item" href="http://www.skyscanner.ru/news/inspiration/8-luchshikh-prikliuchenii-na-8-marta/">
+           <div class="item-image"><img src="http://content.skyscnr.com/2e8a72c25b43a08588db1b9a81b2d562/pink-tulips-white-vintage-suitcase.jpg?crop=360px:200px&quality=75" /></div>
+           <div class="item-content">
+               <h3>8 лучших приключений на 8 марта</h3>
+               <p>
+                   Четыре выходных в честь 8 марта — отличный повод отправиться в путешествие. Скайсканер составил 8 пл ...
+               </p>
+               <span class="full-story-button">
+                   Подробнее
+               </span>
+           </div>
+       </a>
+   
+       <a class="item" href="http://www.skyscanner.ru/news/12-veshchei-kotorye-nuzhno-sdelat-v-kazani">
+           <div class="item-image"><img src="http://content.skyscnr.com/dbbdd2165333eb202d43e3fe24e8b534/kazan-flower-peacock.jpg?crop=360px:200px&quality=75" /></div>
+           <div class="item-content">
+               <h3>12 вещей, которые нужно сделать в Казани</h3>
+               <p>
+                   Рассказываем, какие достопримечательности посмотреть и что попробовать в Казани. Вы и не знали, что  ...
+               </p>
+               <span class="full-story-button">
+                   Подробнее
+               </span>
+           </div>
+       </a>
+   
+       <a class="item" href="http://www.skyscanner.ru/news/goroskop-puteshestvennika-na-2016-god">
+           <div class="item-image"><img src="http://content.skyscnr.com/ffd4838df7ff5d27ba2a5fcb489aec2a/horoscope-hero.jpg?crop=360px:200px&quality=75" /></div>
+           <div class="item-content">
+               <h3>Гороскоп путешественника на 2016 год</h3>
+               <p>
+                   2016 — год Огненной Обезьяны, для которой нет ничего лучше суеты, беспорядка и неожиданных приключен ...
+               </p>
+               <span class="full-story-button">
+                   Подробнее
+               </span>
+           </div>
+       </a>
+   
+       <a class="item" href="http://www.skyscanner.ru/news/inspiration/13-luchshikh-zaniatii-v-estonii/">
+           <div class="item-image"><img src="http://content.skyscnr.com/b20b019e8e03ef92bb70327283511794/old-town-view-tallinn-estonia.jpg?crop=360px:200px&quality=75" /></div>
+           <div class="item-content">
+               <h3>13 лучших занятий в Эстонии</h3>
+               <p>
+                   Эстония — доступная Европа: ехать близко, все дешевле, чем в соседней Скандинавии, языкового барьера ...
+               </p>
+               <span class="full-story-button">
+                   Подробнее
+               </span>
+           </div>
+       </a>
+   
+</div>
+                    
+                        <div class="search-controls-wrapper">
+                            
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/framework/homepage/cache/70202/css/search_controls.css"/>   
+
+
+
+
+
+
+
+
+
+<section id="js-search-controls-container" class="search-controls   ">
+    <form action="#" class="clearfix">
+        <h2 class="visuallyhidden">Поиск авиабилетов</h2>
+        <section id="js-trip-type" class="search-controls-trip-type multi-city-enabled">
+            <div class="mobile-container">
+                <input type="radio" id="js-is-return-input" name="trip-type" value="return" class="visuallyhidden" tabindex="1" />
+                <label for="js-is-return-input" class="return-trip">Туда-обратно</label>
+                <input type="radio" id="js-one-way-input" name="trip-type" value="oneway" class="visuallyhidden" tabindex="1" />
+                <label for="js-one-way-input" class="one-way-trip">В одну сторону</label>
+                    <input type="radio" id="js-multi-city-input" name="trip-type" value="multicity" class="visuallyhidden" tabindex="1" />
+                    <label for="js-multi-city-input" class="multi-city-trip">Сложный маршрут</label>
+            </div>
+        </section>
+        <section class="traditional-search clearfix">
+            <div id="js-places" class="search-controls-places clearfix">
+                <button type="button" id="js-map-link" class="map-button">поиск на карте</button>
+                <div class="origin-place">
+                    <label for="js-origin-input" class="place-label">Откуда</label>
+                    <input type="text" id="js-origin-input" tabindex="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" dir="auto">
+                    <label class="nearby-alts sc-checkbox">
+                        <input type="checkbox" id="js-outbound-alts" class="visuallyhidden" />
+                        Добавить аэропорты поблизости
+                    </label>
+                </div>
+                <button type="button" id="js-places-toggle" class="swap-button" title="Кликните здесь, чтобы поменять пункты назначения местами">
+                    <span class="visuallyhidden">Кликните здесь, чтобы поменять пункты назначения местами</span>
+                </button>
+                <div class="destination-place">
+                    <label for="js-destination-input" class="place-label">Куда</label>
+                    <input type="text" id="js-destination-input" placeholder="Введите страну, город или аэропорт" tabindex="2" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" dir="auto">
+                    <label class="nearby-alts sc-checkbox">
+                        <input type="checkbox" id="js-inbound-alts" class="visuallyhidden" />
+                        Добавить аэропорты поблизости
+                    </label>
+                </div>
+            </div>
+            <div id="js-dates" class="search-controls-dates">
+                <div class="depart">
+                    <label for="js-depart-input">Туда</label>
+                    <input type="text" id="js-depart-input" tabindex="3" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="">
+                </div>
+                <div class="return ">
+                    <label for="js-return-input">Обратно</label>
+                    <input type="text" id="js-return-input" tabindex="3" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="">
+                </div>
+                <span id="js-depart-summary" class="date-summary"></span>
+                <span id="js-return-summary" class="date-summary"></span>
+            </div>
+            <div id="js-pax-cabin-class" class="search-controls-pax-cabin-class">
+                <label for="js-trad-cabin-class-travellers-toggle">Класс обслуживания и пассажиры</label>
+                <button type="button" id="js-trad-cabin-class-travellers-toggle" class="cabin-class-travellers-trigger" tabindex="1">
+                    <span class="down-arrow">▼</span>
+                    <span class="adult-icon"></span>
+                </button>
+            </div>
+            <label class="sc-checkbox prefer-directs">
+                <input type="checkbox" id="js-prefer-directs" class="visuallyhidden" tabindex="1"> Только рейсы без пересадок
+            </label>
+            <button class="js-search-button wc-button-large wc-button-spinner" type="button" tabindex="1">
+              <span class="wc-button-point" role="presentation" aria-hidden="true"></span>
+              <span class="wc-button-text">Hайти</span>
+            </button>
+        </section>
+    </form>
+</section>
+
+
+
+
+                        </div>
+                    
+                    <div>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'skyscanner-ru';
+        var disqus_identifier = '67471089-5f47-46a9-9300-5cf589b722aa';
+        var disqus_config = function () {
+            this.language = "ru";
+        };
+
+        window.addLoadEventHandler(function() {
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        });
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+    </div>
+    <!-- END Content -->
+
+<footer id="footer">
+    
+    <div class="footer-content">
+        <div class="wrap clearfix">
+            <section id="explore-block">
+                <h3>Подробнее</h3>
+
+                    <ul>
+                            <li><a id="ss-footer-links-city-links" href="/flights-to/cheap-flights-to-cities-all.html">Города</a>
+                                    <span class="toggle-indicator">+</span>
+                                    <ul id="city-links" class="asian-lang-font-reset clearfix hidden">
+                                            <li><a id="ss-footer-links-FlightsCity-MOSC" href="/flights-to/mosc/cheap-flights-to-moscow.html">Москва</a></li>
+                                            <li><a id="ss-footer-links-FlightsCity-ADLE" href="/flights-to/aer/cheap-flights-to-sochi-airport.html">Сочи</a></li>
+                                            <li><a id="ss-footer-links-FlightsCity-PETE" href="/flights-to/led/cheap-flights-to-st-petersburg-pulkovo-airport.html">Санкт Петербург</a></li>
+                                            <li><a id="ss-footer-links-FlightsCity-SIMF" href="/flights-to/sip/cheap-flights-to-simferopol-airport.html">Симферополь</a></li>
+                                            <li><a id="ss-footer-links-FlightsCity-KRAT" href="/flights-to/krr/cheap-flights-to-krasnodar-airport.html">Краснодар</a></li>
+                                            <li><a id="ss-footer-links-FlightsCity-EKAT" href="/flights-to/svx/cheap-flights-to-ekaterinburg-airport.html">Екатеринбург</a></li>
+                                            <li><a id="ss-footer-links-FlightsCity-OVBA" href="/flights-to/ovb/cheap-flights-to-novosibirsk-airport.html">Новосибирск</a></li>
+                                    </ul>
+                            </li>
+                            <li><a id="ss-footer-links-airports" href="/airports/airports-of-the-world.html">Аэропорты</a>
+                            </li>
+                            <li><a id="ss-footer-links-country-links" href="/flights-to/cheap-flights-to-countries-all.html">Страны</a>
+                                    <span class="toggle-indicator">+</span>
+                                    <ul id="country-links" class="asian-lang-font-reset clearfix hidden">
+                                            <li><a id="ss-footer-links-FlightsCountry-ru" href="/flights-to/ru/cheap-flights-to-russia.html">Россия</a></li>
+                                            <li><a id="ss-footer-links-FlightsCountry-es" href="/flights-to/es/cheap-flights-to-spain.html">Испания</a></li>
+                                            <li><a id="ss-footer-links-FlightsCountry-de" href="/flights-to/de/cheap-flights-to-germany.html">Германия</a></li>
+                                    </ul>
+                            </li>
+                            <li><a id="ss-footer-links-airlines" href="/airlines-all.html">Авиакомпании</a>
+                            </li>
+                            <li><a id="ss-footer-links-flights" href="/">Авиабилеты</a>
+                            </li>
+                            <li><a id="ss-footer-links-hotels" href="/hotels">Отели</a>
+                            </li>
+                            <li><a id="ss-footer-links-car-hire" href="/carhire">Прокат автомобилей</a>
+                            </li>
+                    
+                            <li><a href="/travel-information/visas">Визовая информация</a></li>
+                        
+                        <li><a id="ss-footer-links-apps" href="/mobile.html">Мобильные приложения</a></li>
+                    </ul>
+            </section>
+            <section id="tools-block">
+                <h3>Партнерам</h3>
+                <ul>
+                        <li><a id="ss-footer-links-affiliate" href="http://business.skyscanner.net/portal/en-GB/AffiliateNetwork">Панель поиска</a></li>
+                        <li><a id="ss-footer-links-api" href="http://ww2.business.skyscanner.net/products/travel-apis">API для туризма</a></li>
+                        <li><a id="ss-footer-links-whitelabel" href="http://ww2.business.skyscanner.net/products/white-label">Whitelabel</a></li>
+                        <li><a id="ss-footer-links-widgets" href="http://www.skyscanner.ru/news/kak-zarabotat-na-svoem-saite-s-partnerkoi-skyscanner">Виджеты для туризма</a></li>
+                        <li><a id="ss-footer-links-travelinsight" href="http://ww2.business.skyscanner.net/products/travel-insight">Все для туризма</a></li>
+                        <li><a id="ss-footer-links-travelrankings" href="http://ww2.business.skyscanner.net/products/travel-rankings">Туристические рейтинги</a></li>
+                        <li><a id="ss-footer-links-partneranalytics" href="http://ww2.business.skyscanner.net/products/partner-analytics">Аналитика от партнеров</a></li>
+                        <li><a id="ss-footer-links-workwithus" href="https://help.skyscanner.net/hc/en-gb/articles/201798302-How-can-we-appear-in-Skyscanner-s-search-results-">Сотрудничество</a></li>
+                        <li><a id="ss-footer-links-footeradvertising" href="https://help.skyscanner.net/hc/en-gb/articles/200934052-How-do-I-advertise-with-Skyscanner-">Реклама</a></li>
+                </ul>
+            </section>
+            <section id="company-block">
+                <h3>О нас</h3>
+                <ul>
+                    <li><a href="/aboutskyscanner.aspx">Компания</a></li>
+                    <li><a href="http://www.skyscanner.net/jobs">Вакансии</a></li>
+                        <li><a id="ss-footer-links-media" rel="nofollow" href="/media">Информация для СМИ</a></li>
+                        <li><a id="news-link" href="/news/">Советы путешественникам</a></li>
+                    <li><a href="/cookiepolicy.aspx" id="ss-footer-links-cookie" rel="nofollow">Политика использования файлов cookie</a></li>
+                    <li><a href="/privacypolicy.aspx" id="ss-footer-links-privacy" rel="nofollow">Политика конфиденциальности</a></li>
+                    <li><a href="/termsofservice.aspx" id="ss-footer-links-terms">Условия предоставления услуг</a></li>
+                </ul>
+            </section>
+            <section id="help-block">
+                <h3>Помощь</h3>
+                <ul>
+                    <li><a id="ss-footer-links-faq" target="_blank" href="https://help.skyscanner.net/hc/ru/?skyDBG=1">Справка</a></li>
+                </ul>
+            </section>
+            <span class="footer-logo"></span>
+        </div>
+    </div>
+     
+    
+    
+    <div class="wrap clearfix">
+          
+    </div>
+    
+    
+   
+</footer>
+     <div class="legal-info">
+
+<p id="copyright" class="asian-lang-font-reset">
+
+    <span>&copy; Skyscanner Ltd 2002-2016</span>
+</p>
+
+</div>
+</div>
+           
+    <div id="authentication-widgets">
+        <div id="account-login-widget" class="clearfix hide">
+
+            <div class="account-widget-content">
+                <span id ="login-close" class="account-widget-button-close"><span class="hide">Закрыть</span></span>
+            
+                <div id="account-widget-summary">
+                    <h2>Выполните вход или зарегистрируйтесь</h2>
+                </div>
+
+                <iframe id="widget-frame" style="width: 100%" height="416" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div id="account-settings-widget" class="clearfix hide">
+            <div class="account-widget-content">
+                <span id="account-close" class="account-widget-button-close"><span class="hide">Закрыть</span></span>
+                <div align="center">
+                    <h2>Выполнен вход под именем</h2>
+                    <div id="userEmail"><h2></h2></div>
+                
+                    <a href="#" id="manage-price-alerts" class="button">Уведомления об изменении цен</a>
+
+                    <a href="#" id="account-settings" class="button">Настройки кабинета</a>
+                    <a href="#" id="manage-subscriptions" class="button">Подписки</a>
+                    <a href="#" id="logout" class="button">Выйти из кабинета</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="notifications">
+    <div class="cabin-class-tooltip hidden">
+        <p><strong>По вашему запросу доступны только цены для эконом-класса.</strong></p>
+        <p>Чтобы выбрать салон другого класса, укажите города и даты поездки.</p>
+    </div>
+
+    <div class="prices-found-tooltip theme-dark hidden">
+        <p>Мы упорно работаем над тем, чтобы цена, которую вы видите на сайте Skyscanner, была именно той ценой, которую вы заплатите авиакомпании.</p>
+        <p>Цены на сайте Skyscanner всегда включают примерную стоимость всех <em>обязательных</em> налогов и сборов. Окончательная стоимость билетов может отличаться, если включены дополнительные услуги, предлагаемые авиакомпанией, например, провоз дополнительного багажа или страхование пассажиров.</p>
+    </div>
+</div>
+<div id="overlay" class="hide lightbox darkbg"></div>
+<script id="confirmation-dialog-template" type="text/template">
+	<div id="confirmation-dialog-frame">
+		<a class="close"><span class="hide">Закрыть</span></a>
+		<div id="confirmation-dialog-content">
+			<img src="<%= Image %>" alt="<%= ImageAlt %>" />
+			<p><%= Prompt %></p>
+		</div>				
+		<div class="confirmation-dialog-submit">
+			<input type="submit" id="confirmation-dialog-apply" name="apply" value="<%= ApplyLabel %>">
+			<input type="submit" id="confirmation-dialog-cancel" name="cancel" value="Отменить">
+		</div>
+	</div>
+</script>
+
+<div id="confirmation-dialog" class="hidden"></div>
+
+
+<script type="text/javascript">
+    if (typeof Skyscanner === "undefined") {
+        Skyscanner = {};
+    }
+
+        Skyscanner.ComponentContext = {"market":"RU","locale":"ru-RU","currency":"RUB","destinationId":"","destinationIataCode":"unknown","destinationCityId":"unknown","destinationCountryId":"unknown","destinationName":"unknown","destinationCityName":"unknown","destinationType":"World","originId":"RU","originIataCode":"unknown","originCityId":"unknown","originCountryId":"unknown","originName":"Россия","originCityName":"unknown","originType":"World","outboundDate":"","inboundDate":"","outboundAlts":false,"inboundAlts":false,"ipAddress":"128.82.21.219","internalUser":"false","tablet":"false","mobile":"false","desktop":"true","osVersion":"unknown","browserVersion":"unknown","displayPPI":"unknown","devicePixelRatio":"unknown","displayWidth":"unknown","displayHeight":"unknown","diagonalScreenSize":"unknown","tripType":"return","legs":[],"cabinclass":"Economy","preferDirects":false,"adults":1,"children":0,"infants":0,"originGeoId":null,"associateId":"SOC_FCB_00640_00020\r","region":"","nearestAirport":"ORF","priceAlertId":"","pickUpId":"unknown","pickUpDateTime":"unknown","dropOffId":"unknown","dropOffDateTime":"unknown","driverAge":"unknown","pickUpIataCodeCarHire":"unknown","dropOffIataCodeCarHire":"unknown","pickUpCityCodeCarHire":"unknown","tld":"ru","homeAirport":"unknown","userLoggedIn":"false","encryptedTimestamp":"0rBkcK7rK/3/ipKe05URtg=="};
+
+
+    SS = {
+        data: {},
+        util: {},
+        widgets: {},
+        services: {},
+        lookupdata: {}
+    };
+
+        Skyscanner.scaffoldversion = '70200';
+        Skyscanner.scaffoldNode = 'FLPVWNL1NWF016';
+        Skyscanner.lang = 'RU';
+        Skyscanner.ucy = 'RU';
+        Skyscanner.userCountry = 'RU';
+        Skyscanner.market = 'RU';
+        Skyscanner.marketName = 'Россия';
+        Skyscanner.pageType = 'DefaultPage';
+        Skyscanner.EnableScaffoldItinerary = false;
+        Skyscanner.ExecuteDeeplink = false;
+        Skyscanner.urlCultureEnabled = false;
+        Skyscanner.ccy = 'RUB';
+        Skyscanner.ancillary = 'airli';
+        Skyscanner.view = 'DefaultPage';
+        Skyscanner.view_action = 'Index';
+        Skyscanner.analyticsPageName = 'page-builder';
+        Skyscanner.uaPageView = '';
+        Skyscanner.gaPageView = '';
+        Skyscanner.isDebugMode = false;
+        Skyscanner.funnelDebugParameters = '';
+        Skyscanner.textsDebug = false;
+        Skyscanner.CurrentDomainIsMainDomain = false;
+        Skyscanner.constants = {"culture":"ru-RU","GAWebPropertyId":"UA-XXXXXX-YY","ancillaryConfiguration":[{"name":"hotl2","remoteUrl":"http://hotels.skyscanner.com/","localUrl":"/hotels.html","seoMarkets":["UK","FR","DE","ES","IT","SE","NO","DK","RU","US"],"seoLanguages":["en","fr","de","es","it","sv","no","da","ru"]},{"name":"skhot","remoteUrl":"/hotels","localUrl":"/hotels","seoMarkets":null,"seoLanguages":null},{"name":"carhi","remoteUrl":"/carhire/","localUrl":"/carhire/","seoMarkets":null,"seoLanguages":null},{"name":"buses","remoteUrl":"http://bus.skyscanner.co.in/","localUrl":null,"seoMarkets":null,"seoLanguages":null}],"availableAncillaries":["airli","skhot","carhi"],"tlds":[{"Key":"GR","Value":"gr.skyscanner.com"},{"Key":"AT","Value":"www.skyscanner.at"},{"Key":"CA","Value":"www.skyscanner.ca"},{"Key":"CH","Value":"www.skyscanner.ch"},{"Key":"ID","Value":"www.skyscanner.co.id"},{"Key":"IN","Value":"www.skyscanner.co.in"},{"Key":"KR","Value":"www.skyscanner.co.kr"},{"Key":"NZ","Value":"www.skyscanner.co.nz"},{"Key":"TH","Value":"www.skyscanner.co.th"},{"Key":"US","Value":"www.skyscanner.com"},{"Key":"AU","Value":"www.skyscanner.com.au"},{"Key":"BR","Value":"www.skyscanner.com.br"},{"Key":"HK","Value":"www.skyscanner.com.hk"},{"Key":"MY","Value":"www.skyscanner.com.my"},{"Key":"PH","Value":"www.skyscanner.com.ph"},{"Key":"SG","Value":"www.skyscanner.com.sg"},{"Key":"TR","Value":"www.skyscanner.com.tr"},{"Key":"TW","Value":"www.skyscanner.com.tw"},{"Key":"UA","Value":"www.skyscanner.com.ua"},{"Key":"VN","Value":"www.skyscanner.com.vn"},{"Key":"CZ","Value":"www.skyscanner.cz"},{"Key":"DE","Value":"www.skyscanner.de"},{"Key":"DK","Value":"www.skyscanner.dk"},{"Key":"ES","Value":"www.skyscanner.es"},{"Key":"FI","Value":"www.skyscanner.fi"},{"Key":"FR","Value":"www.skyscanner.fr"},{"Key":"GG","Value":"www.skyscanner.gg"},{"Key":"HU","Value":"www.skyscanner.hu"},{"Key":"IE","Value":"www.skyscanner.ie"},{"Key":"IT","Value":"www.skyscanner.it"},{"Key":"JP","Value":"www.skyscanner.jp"},{"Key":"GB","Value":"www.skyscanner.net"},{"Key":"NL","Value":"www.skyscanner.nl"},{"Key":"NO","Value":"www.skyscanner.no"},{"Key":"PL","Value":"www.skyscanner.pl"},{"Key":"PT","Value":"www.skyscanner.pt"},{"Key":"RO","Value":"www.skyscanner.ro"},{"Key":"RU","Value":"www.skyscanner.ru"},{"Key":"SE","Value":"www.skyscanner.se"},{"Key":"CN","Value":"www.tianxun.com"},{"Key":"MX","Value":"www.skyscanner.com.mx"},{"Key":"AE","Value":"www.skyscanner.ae"},{"Key":"GB","Value":"www.skyscanner.net"}],"nonLatinLanguages":["gr","ja","ko","zh","zw","th","ru","uk","vi"],"jqueryRegional":{"closeText":"","prevText":"","nextText":"","currentText":"","monthNames":["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"],"monthNamesShort":["янв","фев","мар","апр","май","июн","июл","авг","сен","окт","ноя","дек"],"dayNames":["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],"dayNamesShort":["вс","пн","вт","ср","чт","пт","сб"],"dayNamesMin":["Во","По","Вт","Ср","Че","Пя","Су"],"weekHeader":"","dateFormat":"dd.MM.yy","isRTL":false,"yearSuffix":""}};
+        Skyscanner.ancillaryRootUrlOverrides = {};
+        Skyscanner.compareUnitsUnsupportedBrowsersRegExp = 'iphone|ipod|android.*mobile|windows phone|blackberry|opera';
+        Skyscanner.tripPlanningCulture = "ru-RU";
+        Skyscanner.userAuthenticationEnabled = true;
+        Skyscanner.disableTldRedirects = false;
+
+SS.advertData = SS.advertData || {"InboundCountryIATA":null,"InboundCountryNameLocal":null,"InboundCountryName":null,"OutboundCountryName":null,"OutboundCountryIATA":null,"OutboundCountryNameLocal":null,"InboundRegionNameLocal":null,"InboundRegionName":null,"OutboundRegionName":null,"OutboundRegionNameLocal":null,"InboundCityIATA":null,"InboundCityNameLocal":null,"InboundCityName":null,"OutboundCityName":null,"OutboundCityIATA":null,"OutboundCityNameLocal":null,"InboundAirportIATA":null,"InboundAirportNameLocal":null,"InboundAirportName":null,"OutboundAirportName":null,"OutboundAirportIATA":null,"OutboundAirportNameLocal":null,"OutboundCode":"","InboundCode":"","OutboundDate":"2016-02-18","InboundDate":"2016-02-19","OutboundDateString":"","InboundDateString":"","InboundContinentNameLocal":null,"InboundContinentName":null,"OutboundContinentNameLocal":null,"DisplayText":{"To":"в","From":"от","OneWay":"в одну сторону","Return":"oбратно","Book":"Бронировать","TermsAndConditions":"Применяются правила и условия","LoadingMessage":"Просматривайте цены и экономьте","HotelsFormat":"Отели: {0}","Night":"сутки","Stars":"звезд(ы)","FlightAndHotelMessage":"Авиабилет + Отель","PerPerson":"на одного человека","Total":""}};
+SS.advertData.Ancillary = Skyscanner.ancillary;
+SS.advertData.Desktop = Skyscanner.ComponentContext.desktop;
+
+
+SS.advertData.UserCountry = Skyscanner.ComponentContext.market;
+SS.advertData.Locale = Skyscanner.ComponentContext.locale;
+SS.advertData.Currency = Skyscanner.ComponentContext.currency;
+
+SS.advertData.Adults = Skyscanner.ComponentContext.adults;
+SS.advertData.Children = Skyscanner.ComponentContext.children;
+SS.advertData.Infants = Skyscanner.ComponentContext.infants;
+
+SS.advertData.TripType = Skyscanner.ComponentContext.tripType;
+SS.advertData.IsReturn = Skyscanner.ComponentContext.tripType == "return";
+SS.advertData.CabinClass = Skyscanner.ComponentContext.cabinclass;
+
+SS.advertData.formatCurrency = function (price) { return Skyscanner.Api.localisation.formatCurrency(parseInt(price), 'c0'); };        var google_afs_query = null;
+        var googleAFSQuery = Skyscanner.view.toLowerCase() == "carhire" ? 'Прокат автомобиля: ' : google_afs_query;
+        Skyscanner.pageHandlesCurrencyReload = false;
+        Skyscanner.abtest = {};
+        Skyscanner.config = {
+         globalizeCultureName : 'ru-RU',
+         currencyInfo : {"Code":"RUB","Symbol":"p.","ThousandsSeparator":" ","DecimalSeparator":",","PositiveCurrencyFormat":"{n} p.","NegativeCurrencyFormat":"-{n} p.","SymbolOnLeft":false,"SpaceBetweenAmountAndSymbol":true,"DecimalDigits":2,"IsEmpty":false},
+         cldrInfo : {"main":{"ru-RU":{"dates":{"calendars":{"gregorian":{"months":{"format":{"abbreviated":{"1":"янв.","2":"февр.","3":"марта","4":"апр.","5":"мая","6":"июня","7":"июля","8":"авг.","9":"сент.","10":"окт.","11":"нояб.","12":"дек."},"wide":{"1":"января","2":"февраля","3":"марта","4":"апреля","5":"мая","6":"июня","7":"июля","8":"августа","9":"сентября","10":"октября","11":"ноября","12":"декабря"}},"stand-alone":{"wide":{"1":"январь","2":"февраль","3":"март","4":"апрель","5":"май","6":"июнь","7":"июль","8":"август","9":"сентябрь","10":"октябрь","11":"ноябрь","12":"декабрь"}}},"days":{"format":{"abbreviated":{"sun":"вс","mon":"пн","tue":"вт","wed":"ср","thu":"чт","fri":"пт","sat":"сб"},"short":{"sun":"вс","mon":"пн","tue":"вт","wed":"ср","thu":"чт","fri":"пт","sat":"сб"},"wide":{"sun":"воскресенье","mon":"понедельник","tue":"вторник","wed":"среда","thu":"четверг","fri":"пятница","sat":"суббота"}},"stand-alone":{"wide":{"sun":"Воскресенье","mon":"Понедельник","tue":"Вторник","wed":"Среда","thu":"Четверг","fri":"Пятница","sat":"Суббота"}}},"dayPeriods":{"format":{"wide":{"am":"AM","noon":"полдень","pm":"PM"}}},"eras":{"eraAbbr":{"0":"до н. э.","0-alt-variant":"BCE","1":"н. э.","1-alt-variant":"CE"}},"dateFormats":{"full":"EEEE, d MMMM y 'г'.","long":"d MMMM y 'г'.","medium":"d MMM y 'г'.","short":"dd.MM.yyyy","yearMonth":"LLLL yyyy","monthDay":"MMMM dd","yearMonthAbbr":"MMM yyyy","fullAbbr":"EEEE, d MMM y 'г'.","monthDayAbbr":"d MMM"},"timeFormats":{"full":"H:mm:ss zzzz","long":"H:mm z","medium":"H:mm:ss","short":"H:mm"},"dateTimeFormats":{"full":"{1}, {0}","long":"{1}, {0}","medium":"{1}, H:mm","short":"{1}, {0}"}}},"timeZoneNames":{"hourFormat":"+HH:mm;-HH:mm","gmtFormat":"GMT{0}","gmtZeroFormat":"GMT"}},"numbers":{"defaultNumberingSystem":"latn","symbols-numberSystem-latn":{"decimal":",","group":" ","list":";","percentSign":"%","plusSign":"+","minusSign":"-","exponential":"E","superscriptingExponent":"×","perMille":"‰","infinity":"∞","nan":"не число","timeSeparator":":"},"decimalFormats-numberSystem-latn":{"standard":"#,##0.###","long":null,"short":null},"numberFormats":{"addition":"+{0}","subtraction":"-{0}"}}}},"supplemental":{"numberingSystems":{"arab":{"_digits":"٠١٢٣٤٥٦٧٨٩","_type":"numeric"}},"weekData":{"firstDay":{"RU":"mon"},"daysOfWeek":[{"name":"Понедельник","nameAbbr":"пн","nameShort":"пн","index":1,"cldrKey":"mon","isWeekend":false},{"name":"Вторник","nameAbbr":"вт","nameShort":"вт","index":2,"cldrKey":"tue","isWeekend":false},{"name":"Среда","nameAbbr":"ср","nameShort":"ср","index":3,"cldrKey":"wed","isWeekend":false},{"name":"Четверг","nameAbbr":"чт","nameShort":"чт","index":4,"cldrKey":"thu","isWeekend":false},{"name":"Пятница","nameAbbr":"пт","nameShort":"пт","index":5,"cldrKey":"fri","isWeekend":false},{"name":"Суббота","nameAbbr":"сб","nameShort":"сб","index":6,"cldrKey":"sat","isWeekend":true},{"name":"Воскресенье","nameAbbr":"вс","nameShort":"вс","index":0,"cldrKey":"sun","isWeekend":true}],"daysOfWeekUnordered":[{"name":"Воскресенье","nameAbbr":"вс","nameShort":"вс","index":0,"cldrKey":"sun","isWeekend":true},{"name":"Понедельник","nameAbbr":"пн","nameShort":"пн","index":1,"cldrKey":"mon","isWeekend":false},{"name":"Вторник","nameAbbr":"вт","nameShort":"вт","index":2,"cldrKey":"tue","isWeekend":false},{"name":"Среда","nameAbbr":"ср","nameShort":"ср","index":3,"cldrKey":"wed","isWeekend":false},{"name":"Четверг","nameAbbr":"чт","nameShort":"чт","index":4,"cldrKey":"thu","isWeekend":false},{"name":"Пятница","nameAbbr":"пт","nameShort":"пт","index":5,"cldrKey":"fri","isWeekend":false},{"name":"Суббота","nameAbbr":"сб","nameShort":"сб","index":6,"cldrKey":"sat","isWeekend":true}]},"likelySubtags":{"und":"ru-RU"},"dateInput":{"inputFormat":"DDMMYYYY","uiMask":"99.99.9999","placeholder":"DD.MM.YYYY"}},"DebugItems":null,"RootTiming":null},
+         useLayout : false,
+         zendesk : {
+           enabledForMarket : true,
+           showTab : false,
+           url: 'https://help.skyscanner.net/hc/ru/?skyDBG=1',
+           helpText: 'Помощь'
+         },
+         geoMessageExperiment : {
+			 group_A_origin_Domain: null,
+			 group_B1_origin_Domain: null
+		 },
+         globalConfig : {
+            enablePreferNonCreditCardProviders: false,
+            enableShowPreTaxRates: false,
+            nearbyAltsRadiusInKm: 450,
+            disableRouteSponsors: false,
+            disableNeedAlts: false,
+            enableAirportTransfers: true,
+            showNoResultsOptions: false,
+            enableRecentSearchesOnHomePage: false
+         },
+         tracking : {
+          userTrackingType: 'request',
+          mixpanelToken: '2434748954c30ccc5017faa456fa3d38',
+          showCookiePolicyMessage: false,
+          enableGrapplerMPLogging : true
+         },
+         traveller : {
+          dataEnabled : true,
+          url : "https://secure.skyscanner.net/account/travellercontext"
+         },
+         featureTests : {"UtidTravellerIdentity":"b","UtidTravellerIdentity_V11":"b","scaffold_wireup_dont_delete":"b","scaffold_wireup_dont_delete_V1":"b","Car_LocationAutosuggest":"a","Car_LocationAutosuggest_V1":"a","Main_Push_Service_Android":"khpush","Main_Push_Service_Android_V2":"khpush","Hfe_DetailOnNewTab":"a","Hfe_DetailOnNewTab_V1":"a","AAExperiment":"b","AAExperiment_V6":"b","Fss_BPLiveUpdate":"b","Fss_BPLiveUpdate_V4":"b","Hsc_EnableTkgAutosuggest":"b","Hsc_EnableTkgAutosuggest_V9":"b","FlightsiOSProdTest":"b","FlightsiOSProdTest_V1":"b","Apacrfs_NoResultsNdv":"b","Apacrfs_NoResultsNdv_V8":"b","Fss_BackButton":"b","Fss_BackButton_V7":"b","FlightsAndroidProdTest":"a","FlightsAndroidProdTest_V1":"a","Main_Push_Service_iOS":"fbpush","Main_Push_Service_iOS_V3":"fbpush","Fss_MonthViewButton":"f","Fss_MonthViewButton_V4":"f","Fss_BPRestyle":"b","Fss_BPRestyle_V3":"b","WebApps_MobileHomePage":"a1","WebApps_MobileHomePage_V6":"a1","fps_pqs":"b","fps_pqs_V5":"b","WebApps_GrapplerRawLogging":"b","WebApps_GrapplerRawLogging_V1":"b","Car_AATest":"b","Car_AATest_V4":"b","BS_INS_1504":"b","BS_INS_1504_V5":"b","WebApps_GrapplerMPLogging":"b","WebApps_GrapplerMPLogging_V9":"b","TurnFeatureTests":"on"},
+         remoteConfiguration :  {"FlightSearch":{"fss_pc_simple":false,"fss_pc_exit":"a","fss_promote_airlines":"a","fss_details_button":"a","fss_remove_itineraries":false,"fss_show_pqs_stars":false,"fss_main_select_text":"a"},"TravellerOnboarding":{"FBAppId":"269769129817122","OnboardingContentShow":false}}
+
+,
+         queryParameters : {"utm_source":"facebook","utm_campaign":"ru-article","utm_id":"56b3342ef789b819388b45bb"},
+         auth : {
+          authEnabled : true,
+          accountsDomain: "secure.skyscanner.net",
+          accountsProtocol: "https",
+          market: "RU",
+          locale: "ru-RU",
+          dynamicLoginLink: true,
+          styleUrls: ["//js.skyscnr.com/framework/scaffolding/cache/css/account-controls.f1486126.css"],
+          scriptUrls: ["//js.skyscnr.com/framework/scaffolding/cache/js/account-controls.62c3bcc6.js"]
+         },
+         onboarding: {
+          showOnboardingMessenger: true,
+          onboardingMessengerUrl: "//www.skyscanner.net/svcs/onboarding/component/onboarding-messenger/release/onboarding-messenger.min.js"
+         },
+         newsletter: {
+            enabled: true,
+            variant: 'a1',
+            js: 'http://www.skyscanner.net/svcs/onboarding/component/newsletter/dist/newsletter-ru-ru.js',
+            css: 'http://www.skyscanner.net/svcs/onboarding/component/newsletter/dist/css/newsletter.min.embed.css',
+            settings: {
+              market: 'RU',
+              locale: 'ru-RU',
+              currency: 'RUB',
+             campaign: 'Growth'
+           }
+         },
+	     adverts : {
+             enabled: true,
+             afsEnabled: true,
+    
+isTextOnlyAdverts : false,
+isTianxun : false,
+includeTags : false,
+targeting : {'lang':'RU','cc':'Economy','adults':'1','children':'0','isreturn':'true','triptype':'holiday'},
+adUnitMainName : 'skyscanner.ru'	    },
+         afsOptions : {
+            flightsFrom : 'Авиабилеты из',
+            flightsTo : 'Авиабилеты в',
+            flightsToAlternative : '', 
+            flightsSelectionEnabled : false,
+            adsByGoogleText : 'Рекламные ссылки',
+            afsQueryCarHire : 'Прокат автомобиля: '
+         },
+         tags : [{"Url":"//css.skyscnr.com/framework/scaffolding/cache/js/criteo-news-pages.a7349324.js"},{"Url":"//css.skyscnr.com/framework/scaffolding/cache/js/google-conversion.0021187e.js"},{"Url":"//css.skyscnr.com/framework/scaffolding/cache/js/yandex-metrica.7b00a2ca.js"},{"Url":"//css.skyscnr.com/framework/scaffolding/cache/js/adara.bdf7d2eb.js"}]
+        };
+
+			   
+
+Skyscanner.config.featureFlags = {"enableNearbyAlternatives":false,"redirectionFromCustomTLDsEnabled":false,"enableNewRedirectionFilter":false,"enableRequirementsEndpoint":true,"useCannedDataSet":false,"enableLocationClear":false,"showCubaMessages":false};
+
+    
+(function (f, b) {
+    if (!b.__SV) {
+        var a, e, i, g; window.mixpanel = b; b._i = []; b.init = function (a, e, d) {
+            function f(b, h) { var a = h.split("."); 2 == a.length && (b = b[a[0]], h = a[1]); b[h] = function () { b.push([h].concat(Array.prototype.slice.call(arguments, 0))) } } var c = b; "undefined" !== typeof d ? c = b[d] = [] : d = "mixpanel"; c.people = c.people || []; c.toString = function (b) { var a = "mixpanel"; "mixpanel" !== d && (a += "." + d); b || (a += " (stub)"); return a }; c.people.toString = function () { return c.toString(1) + ".people (stub)" }; i = "disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for (g = 0; g < i.length; g++) f(c, i[g]); b._i.push([a, e, d])
+        }; b.__SV = 1.2;
+    }
+})(document, window.mixpanel || []);
+mixpanel.init(Skyscanner.config.tracking.mixpanelToken);
+if (Skyscanner.config.tracking.enableGrapplerMPLogging) {
+    mixpanel.init(Skyscanner.config.tracking.mixpanelToken, { 'api_host': "//slipstream.skyscanner.net" }, "grappler");
+}
+
+    
+
+    Skyscanner.Tracking =
+    {
+        WebNode: 'PROD1038',
+        SvnBuildRevision: '70200',
+        CurrentUserLanguage: 'RU',
+        GAFeatureTestString: 'UtidTravellerIdentity_V11-b_scaffold_wireup_dont_delete_V1-b_Car_LocationAutosuggest_V1-a_Main_Push_Service_Android_V2-khpush_Hfe_DetailOnNewTab_V1-a_AAExperiment_V6-b_Fss_BPLiveUpdate_V4-b_Hsc_EnableTkgAutosuggest_V9-b_FlightsiOSProdTest_V1-b_Apacrfs_NoResultsNdv_V8-b_Fss_BackButton_V7-b_FlightsAndroidProdTest_V1-a_Main_Push_Service_iOS_V3-fbpush_Fss_MonthViewButton_V4-f_Fss_BPRestyle_V3-b_WebApps_MobileHomePage_V6-a1_fps_pqs_V5-b_WebApps_GrapplerRawLogging_V1-b_Car_AATest_V4-b_BS_INS_1504_V5-b_WebApps_GrapplerMPLogging_V9-b_TurnFeatureTests-on',
+        ShouldLogGaFeatureSetInDimension: true,
+        VarnishABGroup: '58160174',
+        GaSkyscannerDomains: ["skyscanner.net","skyscanneraffiliate.net","hotels.skyscanner.com","redirect.datahc.com","www.goeverywhere.sg","bus.skyscanner.co.in","skyscanner.squarespace.com","perfectflight.skyscanner.com","vaiovunque.it","lomejorespana.skyscanner.es","pinkandblack-skyscanner.net","sommergewinnspiel.skyscanner.de","bienvenue.skyscanner.fr","abdbileti.skyscanner.com.tr","damonandjo.skyscanner.com","goeverywhere.skyscanner.com","smiles.skyscanner.com","skyscanner.tpromo.it","www.oisbende.skyscanner.com.tr","miami.skyscanner.com","codevoyagers.com","winnen.skyscanner.nl","www.kazan.skyscanner.com.tr","www.apideeplink.com","www.erbjudanden.skyscanner.se","dach.skyscanner.de","tianxun.hotelscombined.cn","hotels.skyscanner.co.kr","gr.skyscanner.com","www.skyscanner.at","www.skyscanner.ca","www.skyscanner.ch","www.skyscanner.co.id","www.skyscanner.co.in","www.skyscanner.co.kr","www.skyscanner.co.nz","www.skyscanner.co.th","www.skyscanner.com","www.skyscanner.com.au","www.skyscanner.com.br","www.skyscanner.com.hk","www.skyscanner.com.my","www.skyscanner.com.ph","www.skyscanner.com.sg","www.skyscanner.com.tr","www.skyscanner.com.tw","www.skyscanner.com.ua","www.skyscanner.com.vn","www.skyscanner.cz","www.skyscanner.de","www.skyscanner.dk","www.skyscanner.es","www.skyscanner.fi","www.skyscanner.fr","www.skyscanner.gg","www.skyscanner.hu","www.skyscanner.ie","www.skyscanner.it","www.skyscanner.jp","www.skyscanner.net","www.skyscanner.nl","www.skyscanner.no","www.skyscanner.pl","www.skyscanner.pt","www.skyscanner.ro","www.skyscanner.ru","www.skyscanner.se","www.tianxun.com","www.skyscanner.com.mx","www.skyscanner.ae"]
+    };
+
+
+        
+Skyscanner.abtest =
+    {
+        abgroup : '58160174'
+    };
+
+</script>
+
+
+
+ 
+
+<script type="text/javascript"  src="//js.skyscnr.com/framework/scaffolding/cache/js/common_ru-ru.d67b5c24.js"></script>
+
+
+    <script type="text/javascript">
+    Skyscanner.analyticsPageName = 'news';
+    Skyscanner.uaPageView = '/news/дешевые-страны-для-путешествий-в-2016-году';
+    Skyscanner.gaPageView = '/news/дешевые-страны-для-путешествий-в-2016-году';
+    // Client side Google Analytics event tracking
+    // Data is a per-event object
+
+    var trackOutboundLink = function(category, action, label) {
+            var gaData = {
+                category : category,
+                action : action,
+                label : label,
+                value : ''
+            };
+            Skyscanner.Common.observer.publish('tracking-event', { ga : [gaData] });
+        };
+</script>
+
+    
+
+
+
+<script>
+    var Skyscanner = window.Skyscanner || {};
+    Skyscanner.ComponentContext = Skyscanner.ComponentContext || {};
+    var featureTests = (Skyscanner.config || {}).featureTests || {};
+    var localisation = (Skyscanner.Api || {}).localisation || {};
+    var globalConfig = (Skyscanner.config || {}).globalConfig || {};
+
+    var firstDay = localisation.getFirstDay ? localisation.getFirstDay() : 1;
+    var months = localisation.monthNames ? localisation.monthNames() : [];
+    var weekdays = localisation.dayNamesUnordered ? localisation.dayNamesUnordered() : [];
+    var weekdaysShort = localisation.dayNamesUnordered ? localisation.dayNamesUnordered('short') : [];
+    
+    Skyscanner.SearchSummaryOptions = {
+        firstDay: firstDay,
+        months: months,
+        weekdays: weekdays,
+        weekdaysShort: weekdaysShort,
+        dateFormatter: localisation.formatDate,
+        searchControlsScriptUrl: '/framework/homepage/cache/70202/js/search_controls_ru-RU.js'
+    };
+    
+    Skyscanner.SearchControlsParameters = {
+        locale: 'ru-RU',
+        market: 'RU',
+        currency: Skyscanner.ComponentContext.currency,
+        originId: Skyscanner.ComponentContext.originId,
+        originName: Skyscanner.ComponentContext.originName,
+        originCityId: Skyscanner.ComponentContext.originCityId,
+        originCountryId: Skyscanner.ComponentContext.originCountryId,
+        originCountryName: Skyscanner.ComponentContext.originCountryName,
+        destinationId: Skyscanner.ComponentContext.destinationId,
+        destinationName: Skyscanner.ComponentContext.destinationName,
+        destinationCityId: Skyscanner.ComponentContext.destinationCityId,
+        destinationCountryId: Skyscanner.ComponentContext.destinationCountryId,
+        destinationCountryName: Skyscanner.ComponentContext.destinationCountryName,
+        outboundDate: Skyscanner.ComponentContext.outboundDate,
+        inboundDate: Skyscanner.ComponentContext.inboundDate,
+        outboundAlts: {
+            value: false
+        },
+        inboundAlts: {
+            value: false
+        },
+        originAlts: extractNearbyAlts('alternativeorigins'),
+        destinationAlts: extractNearbyAlts('alternativedestinations'),
+        tripType: Skyscanner.ComponentContext.tripType,
+        legs: Skyscanner.ComponentContext.legs,
+        adults: Skyscanner.ComponentContext.adults,
+        children: Skyscanner.ComponentContext.children,
+        infants: Skyscanner.ComponentContext.infants,
+        cabinClass: Skyscanner.ComponentContext.cabinclass,
+        preferDirects: Skyscanner.ComponentContext.preferDirects,
+        showCompareUnits: true,
+        populateViaStorage: false,
+        firstDay: firstDay,
+        months: months,
+        weekdays: weekdays,
+        weekdaysShort: weekdaysShort,
+        nearbyAltsLimit: 3,
+        maxDistanceKm: globalConfig.nearbyAltsRadiusInKm,
+        dateFormatter: localisation.formatDate,
+        featureFlags: {
+            multiCityEnabled: true,
+            autosuggestV2Enabled: true,
+            homeAirportEnabled: featureTests.Hsc_HomeAirportEnabled,
+            locationPickerVariant: featureTests.Hsc_NearbyAltsV2Variant,
+            surfaceMonthViewVariant: featureTests.Hsc_SurfaceMonthViewVariant,
+            sendPeopleToMap: featureTests.INS1427_SendPeopleToMap,
+            oneLineSearchControls: false,
+            opaqueSearchControls: false
+        },
+        homNodeName: 'flpvwnl1hom001',
+        homCodeVersion: '70202',
+        homeAirport: Skyscanner.ComponentContext.homeAirport 
+    };
+
+    function extractNearbyAlts(property_name) {
+        var regex, results;
+        regex = new RegExp('[\\?&]' + property_name + '=([^&#]*)');
+        if (!(results = regex.exec(window.location.search))) {
+            return null;
+        }
+        return decodeURIComponent(results[1].replace(/\+/g, ' ')).toUpperCase().split(',');
+    };
+
+</script>
+
+<script type="text/javascript"  src="/framework/homepage/cache/70202/js/search_controls_ru-RU.js"></script>
+
+
+
+<script type="text/javascript">
+    Skyscanner.config.newsletter.enabled = true;
+    Skyscanner.config.newsletter.variant = "c";
+    Skyscanner.config.newsletter.settings.campaign = "PublishingPlatform";
+</script>
+
+    
+        <script type="text/javascript" src="/landing/pagebuilder/static/js/jquery.scrolldepth.min.js?v=2.0.818"></script>
+    
+
+    
+        <script type="text/javascript" src="/landing/pagebuilder/static/js/riveted.min.js?v=2.0.818"></script>
+    
+
+    
+        <script>
+            addLoadEventHandler(window.injectScript("/landing/pagebuilder/static/js/main.js"));
+        </script>
+    
+
+
+
+
+
+    <input id="ftpid" type="hidden" value="flights_RU_RU"/>
+
+
+
+
+
+ 
+
+<script type="text/javascript">
+(function () {
+var an = document.createElement('script');
+an.type = 'text/javascript';
+an.async = true;
+an.src = '//js.skyscnr.com/framework/scaffolding/cache/js/common_async_ru-ru.5da8995a.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(an, s);
+})();
+  </script>
+
+
+
+
+</body> </html> 

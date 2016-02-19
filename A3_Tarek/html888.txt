@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="/images/apple/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon"/>
+    <link href="/images/apple/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon"/>
+    <link href="/images/apple/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon"/>
+    <link href="/images/apple/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon"/>
+    <meta charset="UTF-8"/>
+    <title>Invalid - Linkis.com</title><meta name="title" content="Invalid - Linkis.com" />
+<meta name="keywords" content="Invalid, Linkis.com" />
+<meta name="description" content="Linkis.com - Invalid page!" /><link href="/favicon.ico" rel="icon" type="image/png" />
+<link href="/js/prod/production.css?947" media="all" rel="stylesheet" type="text/css" />
+    <script>
+
+        var customAuthRedirect = null;
+
+            </script>
+
+    
+    <script type="text/javascript">
+
+
+    function __log(val){}
+
+    function hihit(id) {
+        if (id) {
+            var url = "http://stat.linkis.com/log.php?id=" + id + "&r=" + Math.round(100000 * Math.random());
+            var im = new Image();
+            im.src = url;
+        }
+    }
+
+
+function refreshPage()
+{
+    location.href = location.href.split('#')[0];
+    setTimeout(function(){
+        if (window.hihit) hihit(2580);
+    }, 10000);
+}
+function redirectPage(url)
+{
+    location.href = url;
+}
+function restoreUserAvatar(img, uid)
+{
+    img.onerror = null;
+    img.setAttribute('data-orig-image', img.src);
+    img.src = '/index/restore-avatar/uid/' + uid;
+
+}
+function lnEvent(action, label, category)
+{
+    
+    if($.isArray(action)) {
+        var hash   = lnEventGenerateHash((action[0][0] || '') + (action[0][1] || '') + (action[0][2] || ''));
+            action = JSON.stringify(action);
+    } else {
+        var hash = lnEventGenerateHash((action || '') + (label || '') + (category || ''));
+    }
+
+    var path = ['', 'index', 'ln-event'].join('/');
+    var e = function(str){ return str ? encodeURIComponent(str) : ''; };
+    var theme = window.LinkData ? LinkData.curTheme : 0;
+    var linkId = LnProf.page == 'index/show' && window.LinkData ? LinkData.id : 0;
+    var profId = LnProf.profId ? LnProf.profId : 0;
+    (new Image()).src = path +
+        '?c=' + e(category) +
+        '&a=' + e(action) +
+        '&l=' + e(label) +
+        '&t=' + e(theme) +
+        '&li=' + e(linkId) +
+        '&id=' + e(profId) +
+        '&h='  + hash +
+        '&r=' + Math.random();
+}
+
+function lnEventGenerateHash(str) {
+    var hash = '';
+    var length = str.length;
+    var step = (length < 5) ? 2 : Math.floor(length / 5);
+
+    var codeSumFunction = function(codeSum) {
+        var num = 0;
+        for(var j = 0; j < codeSum.toString().length; j++) {
+            num += parseInt(codeSum.toString().substr(j, 1), 10);
+        }
+
+        return num;
+    };
+
+    var codeSum = 0;
+    for(var i = 0; i < length; i++) {
+        var char = str.substr(i, 1);
+
+        if(i % step == 0 && char != ' ') {
+            var num = codeSumFunction(codeSum);
+            hash += num + '' + char;
+            codeSum = 0;
+        } else {
+            codeSum += str.charCodeAt(i);
+        }
+    }
+
+    if(codeSum) hash += codeSumFunction(codeSum);
+
+    return hash;
+}
+
+</script>
+
+<script type="text/javascript">
+window.NL_APP_DATA = {
+    user:{
+        isLogged: false,
+        type: '',
+        hasTw: false
+    },
+    redirect_after_auth: '/',
+    controller: 'index',
+    action: 'invalid',
+    cookies:{
+        notification_enabled: 'notification_enabled'
+    },
+    show_notify_popup: 0,
+
+        
+    show_silent_popup_old_usr: 0,
+    stat_id: "1-102913829",
+    nopopups: 0,
+    addThisSrc: 'http://s7.addthis.com/js/300/addthis_widget.js#async=1&pubid=',
+    addThisId: 'ra-513082ca32a826c6',
+    referrer_link: '',
+    referrer_name: '',
+    referrer_type: 0,
+    cookie_domain: '.linkis.com',
+	sessCookieName: 'LNSID',
+    popupsHtml: {}
+};
+var LnProf = {
+    profId: 0,
+    enabled: 1,
+    startedAt: 0,
+    startDuration: 0,
+    theme: 0,
+    err: [],
+    path: ['', 'index', 'save-ln-prof?'], // prevent simple url parsing
+    iframeLoad: false,
+    page: 'index/invalid',
+    recordId: 0,
+    reqQueue: [], // we use queue to send ajax requests one by one
+    reqProcessing: false,
+
+    request: function(src, startProfRequest)
+    {
+        if (LnProf.reqProcessing) {
+            // other request is active now -> just add our task to the queue and exit
+            this.reqQueue.push(src);
+            return;
+        }
+
+        LnProf.reqProcessing = true;
+
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.open('GET', src + '&id=' + LnProf.profId, true);
+
+        xmlhttp.onreadystatechange = function() {
+
+            if (!startProfRequest) {
+                LnProf.reqProcessing = false;
+            }
+
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                var response = JSON.parse(xmlhttp.responseText);
+
+                if (startProfRequest && response.profId) {
+                    // get `profId` from first response
+                    LnProf.profId        = response.profId;
+                    LnProf.startDuration = (new Date()).getTime() - LnProf.startedAt;
+
+                    // reset flag only if `start` request is ok
+                    LnProf.reqProcessing = false;
+                }
+            }
+
+            if (LnProf.reqQueue.length && !LnProf.reqProcessing) {
+                // there are other tasks in queue -> process next
+                LnProf.request(LnProf.reqQueue.shift());
+            }
+        };
+
+        xmlhttp.send(null);
+    },
+
+    // receive profId in this function
+    start: function()
+    {
+        LnProf.startedAt = (new Date()).getTime() ;
+
+        if (!LnProf.enabled)
+            return;
+
+        var src = LnProf.path.join('/') + 'type=start&page=' +
+            LnProf.page + '&time=' + LnProf.startedAt +
+            '&uri=' + encodeURIComponent(location.pathname + location.search + location.hash) + '&theme=' +
+            LnProf.theme + '&ref=' + NL_APP_DATA.referrer_link;
+
+        LnProf.request(src, true);
+    },
+    prodLoad: function(minifyVersion)
+    {
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        var browser  = $.browser.platform + ' ' + $.browser.name + ' ' + $.browser.versionNumber;
+        var time     = (new Date()).getTime() - LnProf.startedAt;
+        var recordId = LnProf.recordId ? LnProf.recordId : 0;
+
+        var src = LnProf.path.join('/') + 'type=prod&browser=' + encodeURIComponent(browser) +
+            '&time=' + time + '&ver=' + (minifyVersion || '') + '&dur=' + LnProf.startDuration + '&recid=' + recordId;
+
+        LnProf.request(src);
+    },
+    stopApp: function()
+    {
+        hihit(3292);
+
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        LnProf.request(LnProf.path.join('/') + 'type=stop-app&rnd=' + LnProf._rnd());
+    },
+    iframe: function()
+    {
+        var time = (new Date()).getTime() - LnProf.startedAt;
+        this.iframeLoad = time;
+
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        LnProf.request(LnProf.path.join('/') + 'type=iframe&time=' + time + '&rnd=' + LnProf._rnd());
+    },
+    adblock: function()
+    {
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        LnProf.request(LnProf.path.join('/') + 'type=adblock&adblock=1' + '&rnd=' + LnProf._rnd());
+    },
+    blocked: function(block)
+    {
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        LnProf.request(LnProf.path.join('/') + 'type=blocked&block=' + block + '&rnd=' + LnProf._rnd());
+    },
+    popup: function(popup)
+    {
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        var name;
+        if (typeof popup == 'string') {
+            name = popup;
+        } else if (popup && typeof popup == 'object') {
+            try {
+                name = popup.name || (popup.popupClass ? popup.popupClass.prototype.name : null);
+            } catch (e) {}
+        }
+
+        LnProf.request(LnProf.path.join('/') + 'type=popup&name=' + encodeURIComponent(name || 'noname') + '&rnd=' + LnProf._rnd());
+    },
+    onError: function(msg, file, line, col)
+    {
+        hihit(3282);
+        LnProf.err.push(msg+' in file '+file+' on line '+line+':'+col);
+        if (!LnProf.profId || !LnProf.enabled)
+            return;
+
+        var now   = (new Date()).getTime();
+        var error = JSON.stringify(arguments);
+
+        LnProf.request(LnProf.path.join('/') + 'type=error&time=' + now + '&error=' + encodeURIComponent(error));
+    },
+    getErrors: function()
+    {
+        return LnProf.err.join("\n");
+    },
+    _rnd: function() { return Math.round(100000 * Math.random()); }
+};
+
+LnProf.start();
+window.onerror = LnProf.onError;
+
+</script>
+<script type="text/javascript">
+    /*
+     * use Ga array lika goole gaq array
+     * Later all this array will be pushed to gaq with Ga object (app/tools/ga.js)
+     */
+    var Ga = Ga || [];
+    Ga.push(['_trackPageview']);
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter20560528 = new Ya.Metrika({id:20560528,
+                    accurateTrackBounce:true});
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20560528" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+</head>
+<body
+    data-controller="index"
+    data-action="invalid"
+    class="">
+
+<div class="service-page-holder">
+    <div class="service-page-insider">
+        <div class="service-footer">
+            <a href="/">Go Home</a>
+        </div>
+        <div class="service-page-content">
+            <div class="service-page-content-insider">
+                <h1>This page isn’t available!</h1>
+                <h3>The link you followed may be broken or the page may have been removed</h3>
+                <a class="service-button" href="/">Get to know <img src="/images/button-logo.png" alt="Linkis" />Linkis</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <script type='text/javascript'> steal = { loaded:["prod/production.css"] }; </script>
+    <script src="/js/steal/steal.production.js?prod/production.js&823"></script>
+
+
+<!-- UserVoice JavaScript SDK (only needed once on a page) -->
+<script>(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/KUBNH3g4sCUtmVUMMrmmA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})()</script>
+
+<!-- A tab to launch the Classic Widget -->
+<script>
+    UserVoice = window.UserVoice || [];
+    UserVoice.push(['showTab', 'classic_widget', {
+        mode: 'full',
+        primary_color: '#cc6d00',
+        link_color: '#007dbf',
+        default_mode: 'support',
+        forum_id: 217881,
+        tab_label: 'Feedback',
+        tab_color: '#008bcc',
+        tab_position: 'middle-right',
+        tab_inverted: false
+    }]);
+</script>
+
+
+</body>
+</html>

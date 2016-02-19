@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!--<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr">-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#" xml:lang="en-gb" lang="en-gb" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	  <base href="http://www.atlanticcouncil.org/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQ8FV1NVGwUCUlZTBQg="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+  <meta name="keywords" content="international affairs, foreign relations, transatlantic relations, think tank" />
+  <meta name="author" content="Atlantic Council" />
+  <meta name="description" content="The Atlantic Council promotes constructive leadership and engagement in international affairs based on the central role of the Atlantic Community in meeting global challenges.
+
+Founded in 1961, the Council provides an essential forum for navigating the dramatic shifts in economic and political influence that are shaping the twenty-first century by educating and galvanizing its uniquely influential, nonpartisan network of international political, business, and intellectual leaders. Through the papers we write, the ideas we promote, and the communities we build, the Council's ten regional centers and functional programs shape today's policy choices and foster transatlantic strategies to advance international security and global economic prosperity." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Dutch Likely to Hand Putin a Major Symbolic Victory in Referendum on EU-Ukraine Association Agreement</title>
+  <link href="http://www.atlanticcouncil.org/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement?utm_content=buffer9160b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer%20" rel="canonical" />
+  <link href="/templates/acus/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="http://www.atlanticcouncil.org/component/search/?utm_content=buffer9160b&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer%20&amp;Itemid=176&amp;catid=19&amp;id=28558&amp;format=opensearch" rel="search" title="Search Atlantic Council" type="application/opensearchdescription+xml" />
+  <link rel="stylesheet" href="/components/com_rsform/assets/calendar/calendar.css" type="text/css" />
+  <link rel="stylesheet" href="/components/com_rsform/assets/css/front.css" type="text/css" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/acus/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/acus/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="http://www.atlanticcouncil.org/media/mod_ninja_accordion/styles/styles.css" type="text/css" />
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/components/com_rsform/assets/js/script.js" type="text/javascript"></script>
+  <script src="/media/jui/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="http://www.atlanticcouncil.org/media/mod_ninja_accordion/js/jquery.cookie.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+		jQuery.noConflict();
+		jQuery(document).ready(function($) {
+			jQuery(".naccordion dd").hide();
+ 	 		if (jQuery.cookie("accordOpenElement100")) {
+ 	 			var openElement = jQuery.cookie("accordOpenElement100");
+ 	 			jQuery(".naccordion dd."+openElement).slideDown();
+ 	 		}
+ 	 		jQuery(".naccordion dt").click(function(){
+ 				activeElement = jQuery(this).attr("class");
+ 				jQuery.cookie("accordOpenElement100", activeElement);
+ 	 			jQuery(".naccordion dt").removeClass("active");
+ 	 			jQuery(this).addClass("active");
+ 	 			jQuery(".naccordion dd").slideUp();
+ 	 			jQuery(this).next().slideDown("slow");
+ 	 		});
+		});
+  </script>
+  <!-- Perfect Link with Article Images on Facebook PRO -->
+  <meta property="og:title" content="Dutch Likely to Hand Putin a Major Symbolic Victory in Referendum on EU-Ukraine Association Agreement"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="http://www.atlanticcouncil.org/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement?utm_content=buffer9160b&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer%0D"/>
+  <meta property="og:site_name" content="Atlantic Council"/>
+  <meta property="og:description" content="There is something odd about the upcoming Dutch plebiscite on the EU-Ukraine Association Agreement. On April 6, the Netherlands will hold a national referendum on a treaty between Brussels and Kyiv that was signed in 2014 and ratified in 2015. Yet,..."/>
+  <meta property="og:image" content="http://www.atlanticcouncil.org/images/reuters/thumbnails/20160209umland_thumb.jpg"/>
+  <meta property="og:image" content="http://www.atlanticcouncil.org/images/reuters/2016/20160209umland_large.jpg"/>
+  <noscript><style>#nac-100 dd {display:block}</style></noscript>
+
+	<!--[if lt IE 9]>
+		<script src="/media/jui/js/html5.js"></script>
+	<![endif]-->
+
+<!-- Webclip Icons -->
+<link rel="apple-touch-icon-precomposed" href="/images/apple/57x57_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="29x29" href="/images/apple/29x29_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="50x50" href="/images/apple/50x50_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple/57x57_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="58x58" href="/images/apple/58x58_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple/72x72_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="100x100" href="/images/apple/100x100_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple/114x114_AC.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple/144x144_AC.png" />
+
+<!-- Browser Version Check -->
+<script type="text/javascript">
+var $buoop = {vs:{i:8,f:15,o:,s:4,n:9}} 
+$buoop.ol = window.onload; 
+window.onload=function(){ 
+ try {if ($buoop.ol) $buoop.ol();}catch (e) {} 
+ var e = document.createElement("script"); 
+ e.setAttribute("type", "text/javascript"); 
+ e.setAttribute("src", "http://browser-update.org/update.js"); 
+ document.body.appendChild(e); 
+} 
+</script> 
+</head>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42996383-1', 'atlanticcouncil.org');
+  ga('send', 'pageview');
+
+</script>
+
+<script type='text/javascript'>
+if (typeof jQuery != 'undefined') {
+	var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+	var baseHref = '';
+	if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+	var hrefRedirect = '';
+	jQuery('body').on('click', 'a', function(event) {
+		var el = jQuery(this);
+		var track = true;
+		var href = (typeof(el.attr('href')) != 'undefined' ) ? el.attr('href') : '';
+		var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+		if (!href.match(/^javascript:/i)) {
+			var elEv = []; elEv.value=0, elEv.non_i=false;
+			if (href.match(/^mailto\:/i)) {
+				elEv.category = 'email';
+				elEv.action = 'click';
+				elEv.label = href.replace(/^mailto\:/i, '');
+				elEv.loc = href;
+			}
+			else if (href.match(filetypes)) {
+				var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+				elEv.category = 'download';
+				elEv.action = 'click-' + extension[0];
+				elEv.label = href.replace(/ /g,'-');
+				elEv.loc = baseHref + href;
+			}
+			else if (href.match(/^https?\:/i) && !isThisDomain) {
+				elEv.category = 'external';
+				elEv.action = 'click';
+				elEv.label = href.replace(/^https?\:\/\//i, '');
+				elEv.non_i = true;
+				elEv.loc = href;
+			}
+			else if (href.match(/^tel\:/i)) {
+				elEv.category = 'telephone';
+				elEv.action = 'click';
+				elEv.label = href.replace(/^tel\:/i, '');
+				elEv.loc = href;
+			}
+			else track = false;
+
+			if (track) {
+				var ret = true;
+				if((elEv.category == 'external' || elEv.category == 'download') && (el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') ) {
+					hrefRedirect = elEv.loc;
+					ga('send','event', elEv.category.toLowerCase(),elEv.action.toLowerCase(),elEv.label.toLowerCase(),elEv.value,{
+						'nonInteraction': elEv.non_i ,
+						'hitCallback':gaHitCallbackHandler
+					});
+					ret = false;
+				}
+				else {
+					ga('send','event', elEv.category.toLowerCase(),elEv.action.toLowerCase(),elEv.label.toLowerCase(),elEv.value,{
+						'nonInteraction': elEv.non_i
+					});
+				}
+				return ret;
+			}
+		}
+	});
+	gaHitCallbackHandler = function() {
+		window.location.href = hrefRedirect;
+	}
+}
+</script>
+<body class="site com_content view-article layout-default no-task itemid-176">
+<!-- Google Analytics -->
+
+
+
+	<!-- Body -->
+	<div class="mainbody"><a name='top'></a>
+		<div class="container">
+			<!-- Header -->
+			<div class="header">
+				<div class="header-inner clearfix">
+					<a class="brand pull-left" href="/">
+						<img src="/templates/acus/images/logo.png" alt="Atlantic Council" />
+					</a>
+					<div class="header-right pull-right hidden-phone">
+						<ul class="nav menu nav-pills topmenu">
+<li class="item-101"><a href="/" >Home</a></li><li class="item-119 parent"><a href="/about" >About</a></li><li class="item-120 parent"><a href="/careers/employment-internships" >Careers</a></li><li class="item-121"><a href="/press" >Press</a></li><li class="item-2070"><a href="/subscribe" >Subscribe</a></li><li class="item-122"><a href="/contact" >Contact</a></li></ul>
+<div class="search pull-right">
+    <form action="/blogs/new-atlanticist" method="post" class="form-inline">
+    		<input name="searchword" id="mod-search-searchword" maxlength="50"  class="inputbox search-query" type="text" size="50" value="Search..."  onblur="if (this.value=='') this.value='Search...';" onfocus="if (this.value=='Search...') this.value='';" /> <button class="button btn btn-primary" onclick="this.form.searchword.focus();"><i class="icon-search icon-white"></i></button>    	<input type="hidden" name="task" value="search" />
+    	<input type="hidden" name="option" value="com_search" />
+    	<input type="hidden" name="Itemid" value="190" />
+    </form>
+</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="navbar ">
+			    <div class="navbar-inner">
+						<div class="visible-phone">
+							<a class="phone-nav pull-left" href="/">Home</a>
+							<a class="phone-nav pull-right" href="/search">Search</a>
+						</div>					    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+					    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span>Menu</span></a>
+						<!-- Everything you want hidden at 940px or less, place within here -->
+					    <div class="nav-collapse collapse">
+									<div class="moduletable_menu">
+					<ul class="nav menu nav-pills">
+<li class="item-134 deeper parent"><a href="/programs" >Programs</a><ul class="nav-child unstyled small"><li class="item-144 deeper parent"><a href="/programs/brent-scowcroft-center" >Brent Scowcroft Center</a><ul class="nav-child unstyled small"><li class="item-2457"><a href="/programs/brent-scowcroft-center" >Brent Scowcroft Center Home</a></li><li class="item-197"><a href="/programs/brent-scowcroft-center/about-the-center" >About the Center</a></li><li class="item-292"><a href="/programs/brent-scowcroft-center/analysis" >Analysis</a></li><li class="item-2458"><a href="/blogs/natosource" >NATOSource</a></li><li class="item-293"><a href="/programs/brent-scowcroft-center/publications" >Publications</a></li><li class="item-1991"><a href="/programs/brent-scowcroft-center/recent-events" >Recent Events</a></li><li class="item-2459"><span class="nav-header">Top News</span></li><li class="item-291"><a href="/programs/brent-scowcroft-center/news-and-updates" >News</a></li><li class="item-2515"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/commanders-series" >Commanders Series</a></li><li class="item-2195"><a href="/isis-and-the-crumbling-middle-east" >ISIS and the Crumbling Middle East</a></li><li class="item-170 deeper parent"><a href="/programs/brent-scowcroft-center/strategic-foresight-forum" >Strategic Foresight Forum</a><ul class="nav-child unstyled small"><li class="item-304"><a href="/programs/brent-scowcroft-center/strategic-foresight-forum/forum-sponsorship" >Forum Sponsorship</a></li><li class="item-305"><a href="/programs/brent-scowcroft-center/strategic-foresight-forum/forum-agenda" >Forum Agenda</a></li><li class="item-306"><a href="/programs/brent-scowcroft-center/strategic-foresight-forum/about-the-forum" >About the Forum</a></li><li class="item-329"><a href="/programs/brent-scowcroft-center/strategic-foresight-forum/2013-speakers" >2013 Speakers</a></li><li class="item-337"><a href="/programs/brent-scowcroft-center/strategic-foresight-forum/2013-sponsors" >2013 Sponsors</a></li></ul></li><li class="item-2205"><a href="/road-to-wales-2014-nato-summit" >Wales NATO Summit 2014 </a></li><li class="item-284"><span class="nav-header">Initiatives</span></li><li class="item-206 deeper parent"><a href="/programs/brent-scowcroft-center/strategic-foresight" >Strategic Foresight</a><ul class="nav-child unstyled small"><li class="item-248"><a href="/programs/brent-scowcroft-center/strategic-foresight/about-the-initiative" >About the Initiative</a></li><li class="item-2114"><a href="/programs/brent-scowcroft-center/strategic-foresight/news" >News</a></li><li class="item-2112"><a href="/programs/brent-scowcroft-center/strategic-foresight/publications" >Publications</a></li><li class="item-2113"><a href="/programs/brent-scowcroft-center/strategic-foresight/recent-events" >Recent Events</a></li><li class="item-2042"><span class="nav-header">Projects</span></li><li class="item-269"><a href="/programs/brent-scowcroft-center/strategic-foresight/a-transatlantic-partnership-for-the-global-future" >A Transatlantic Partnership for the Global Future</a></li><li class="item-270"><a href="/programs/brent-scowcroft-center/strategic-foresight/emerging-technologies-and-society" >Emerging Technologies and Society</a></li><li class="item-271"><a href="/programs/brent-scowcroft-center/strategic-foresight/urban-world-2030" >Urban World 2030</a></li><li class="item-272"><a href="/programs/brent-scowcroft-center/strategic-foresight/us-china-joint-assessment-project" >US-China Joint Assessment Project</a></li></ul></li><li class="item-2326 deeper parent"><a href="/programs/brent-scowcroft-center/strategy-initiative" >Strategy Initiative</a><ul class="nav-child unstyled small"><li class="item-2327"><a href="/programs/brent-scowcroft-center/strategy-initiative" >Strategy Initiative Home</a></li><li class="item-2474"><a href="/programs/brent-scowcroft-center/strategy-initiative/about-the-initiative" >About the Initiative</a></li><li class="item-2328"><a href="/programs/brent-scowcroft-center/strategy-initiative/2015-02-13-20-44-54" >America's Role in the World</a></li><li class="item-2475"><a href="/programs/brent-scowcroft-center/strategy-initiative/atlantic-council-strategy-papers" >Atlantic Council Strategy Papers</a></li><li class="item-2345 deeper parent"><a href="/programs/brent-scowcroft-center/strategy-initiative/global-strategy-forum" >Global Strategy Forum</a><ul class="nav-child unstyled small"><li class="item-2346"><a href="/programs/brent-scowcroft-center/strategy-initiative/global-strategy-forum/global-strategy-forum-agenda" >Global Strategy Forum Agenda</a></li><li class="item-2397"><a href="/programs/brent-scowcroft-center/strategy-initiative/global-strategy-forum/speaker-bios" >Speaker Bios</a></li></ul></li><li class="item-2476"><a href="/programs/brent-scowcroft-center/strategy-initiative/strategy-consortium" >Strategy Consortium</a></li><li class="item-2477"><a href="/programs/brent-scowcroft-center/strategy-initiative/the-d-10-strategy-forum" >The D-10 Strategy Forum</a></li><li class="item-2478"><a href="/programs/brent-scowcroft-center/strategy-initiative/the-strategy-lab" >The Strategy Lab</a></li></ul></li><li class="item-212 deeper parent"><a href="/programs/brent-scowcroft-center/transatlantic-security" >Transatlantic Security</a><ul class="nav-child unstyled small"><li class="item-250"><a href="/programs/brent-scowcroft-center/transatlantic-security/about-the-initiative" >About the Initiative</a></li><li class="item-2038"><a href="/programs/brent-scowcroft-center/transatlantic-security/blogs" >Blogs</a></li><li class="item-2039"><a href="/programs/brent-scowcroft-center/transatlantic-security/publications" >Publications</a></li><li class="item-2040"><a href="/programs/brent-scowcroft-center/transatlantic-security/recent-events" >Recent Events</a></li><li class="item-2044"><span class="nav-header">Projects</span></li><li class="item-276"><a href="/programs/brent-scowcroft-center/transatlantic-security/nato-forum" >NATO Forum</a></li><li class="item-2403"><a href="/programs/brent-scowcroft-center/transatlantic-security/charting-nato-s-future" >Charting NATO's Future</a></li><li class="item-2115"><a href="/programs/brent-scowcroft-center/transatlantic-security/europe-whole-and-free" >Toward a Transatlantic Strategy for Europe's East</a></li><li class="item-281"><a href="/programs/brent-scowcroft-center/transatlantic-security/transatlantic-initiative-on-nordic-baltic-security" >Nordic-Baltic Security</a></li><li class="item-279"><a href="/programs/brent-scowcroft-center/transatlantic-security/becoming-nato-s-next-ally" >Becoming NATO's Next Ally</a></li></ul></li><li class="item-207 deeper parent"><a href="/programs/brent-scowcroft-center/asia-security" >Asia Security</a><ul class="nav-child unstyled small"><li class="item-251"><a href="/programs/brent-scowcroft-center/asia-security/about-the-initiative" >About the Initiative</a></li><li class="item-2052"><a href="/programs/brent-scowcroft-center/asia-security/news" >News</a></li><li class="item-2053"><a href="/programs/brent-scowcroft-center/asia-security/blogs" >Blogs</a></li><li class="item-2054"><a href="/programs/brent-scowcroft-center/asia-security/publications" >Publications</a></li><li class="item-2055"><a href="/programs/brent-scowcroft-center/asia-security/recent-events" >Recent Events</a></li><li class="item-2056"><span class="nav-header">Projects</span></li><li class="item-287"><a href="/programs/brent-scowcroft-center/asia-security/strengthening-us-extended-deterrence-in-east-asia" >Strengthening US Extended Deterrence in East Asia</a></li><li class="item-285"><a href="/programs/brent-scowcroft-center/asia-security/cross-strait-seminar-series" >Cross Strait Seminar Series</a></li><li class="item-286"><a href="/programs/brent-scowcroft-center/asia-security/geopolitics-of-energy-in-the-asia-pacific" >Geopolitics of Energy in the Asia-Pacific</a></li><li class="item-2293"><a href="/programs/brent-scowcroft-center/asia-security/project-on-shaping-the-asia-pacific-future" >Project on Shaping the Asia-Pacific Future </a></li></ul></li><li class="item-204 deeper parent"><a href="/programs/brent-scowcroft-center/cyber-statecraft" >Cyber Statecraft</a><ul class="nav-child unstyled small"><li class="item-2244"><a href="/programs/brent-scowcroft-center/cyber-statecraft" >Cyber Statecraft Home</a></li><li class="item-249"><a href="/programs/brent-scowcroft-center/cyber-statecraft/about-the-initiative" >About the Initiative</a></li><li class="item-2034"><a href="/programs/brent-scowcroft-center/cyber-statecraft/news" >News</a></li><li class="item-2035"><a href="/programs/brent-scowcroft-center/cyber-statecraft/blogs" >Blogs</a></li><li class="item-2036"><a href="/programs/brent-scowcroft-center/cyber-statecraft/publications" >Publications</a></li><li class="item-2033"><a href="/programs/brent-scowcroft-center/cyber-statecraft/recent-events" >Recent Events</a></li><li class="item-2037"><span class="nav-header">Projects</span></li><li class="item-205 deeper parent"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12" >Cyber 9/12 Student Challenge</a><ul class="nav-child unstyled small"><li class="item-2245"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12" >Cyber 9/12 Home</a></li><li class="item-1994"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/about-the-cyber-9-12-student-challenge" >About the Challenge</a></li><li class="item-2247"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/cyber-9-12-student-challenge-rules" >Rules</a></li><li class="item-2248"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/cyber-9-12-student-challenge-faqs" >FAQs</a></li><li class="item-2483"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/timeline" >Timeline</a></li><li class="item-2484 deeper parent"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/past-challenges" >Past Challenges</a><ul class="nav-child unstyled small"><li class="item-2486"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/past-challenges/2015-us-student-challenge" >2015 US Student Challenge</a></li><li class="item-2251"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/past-challenges/2014-09-29-17-30-54" >2014 US Student Challenge</a></li><li class="item-2252"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/past-challenges/2014-09-29-17-34-05" >2013 US Student Challenge</a></li><li class="item-2485"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/past-challenges/2015-european-student-challenge" >2015 European Student Challenge</a></li></ul></li><li class="item-2266"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/2014-cyber-9-12-student-challenge-gallery" >Gallery</a></li><li class="item-2496"><a href="/programs/brent-scowcroft-center/cyber-statecraft/cyber-9-12/contact-us" >Contact Us</a></li></ul></li><li class="item-1815"><a href="/programs/brent-scowcroft-center/cyber-statecraft/global-aggregation-of-cyber-risk" >Global Aggregation of Cyber Risk</a></li><li class="item-1816"><a href="/programs/brent-scowcroft-center/cyber-statecraft/history-of-cyber-conflict" >History of Cyber Conflict</a></li><li class="item-1817"><a href="/programs/brent-scowcroft-center/cyber-statecraft/series-on-governance-and-cybersecurity" >Series on Governance and Cybersecurity</a></li><li class="item-2389"><span class="nav-header">Year in Review</span></li><li class="item-2388"><a href="/programs/brent-scowcroft-center/cyber-statecraft/2014-year-in-review" >2014 Year in Review</a></li><li class="item-1993"><a href="/programs/brent-scowcroft-center/cyber-statecraft/2013-year-in-review" >2013 Year in Review</a></li></ul></li><li class="item-247 deeper parent"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges" >Emerging Defense Challenges</a><ul class="nav-child unstyled small"><li class="item-259"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/about-emerging-defense-challenges" >About Emerging Defense Challenges</a></li><li class="item-2047"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/news" >News</a></li><li class="item-2050"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/recent-events" >Recent Events</a></li><li class="item-2051"><span class="nav-header">Projects</span></li><li class="item-507"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/atlantic-council-captains-of-industry-series" >Atlantic Council Captains of Industry Series</a></li><li class="item-2314"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/art-of-future-warfare-events" >Art of Future Warfare Events</a></li><li class="item-2315"><a href="http://artoffuturewarfare.org/" >Art of Future Warfare Website</a></li><li class="item-1814"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/commanders-series" >Commanders Series</a></li><li class="item-2313"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/corporate-strategy-forum" >Corporate Strategy Forum</a></li><li class="item-2312"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges/defense-industrial-policy-series" >Defense-Industrial Policy Series</a></li><li class="item-2316"><a href="/blogs/defense-industrialist" >Defense Industrialist Blog</a></li></ul></li><li class="item-2233 deeper parent"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative" >Middle East Peace and Security</a><ul class="nav-child unstyled small"><li class="item-2238"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative" >Middle East Peace and Security Home</a></li><li class="item-2239"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative/about-the-initiative" >About the Initiative</a></li><li class="item-2240"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative/featured-experts" >Featured Experts</a></li><li class="item-2234"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative/news" >News</a></li><li class="item-2235"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative/events" >Events</a></li><li class="item-2236"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative/publications" >Publications</a></li><li class="item-2399"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative/road-to-camp-david" >Road to Camp David</a></li><li class="item-2505"><a href="/abu-dhabi-strategic-debate-2015" >Abu Dhabi Strategic Debate 2015</a></li><li class="item-2237"><a href="/programs/brent-scowcroft-center" >Brent Scowcroft Center</a></li></ul></li></ul></li><li class="item-147 deeper parent"><a href="/programs/rafik-hariri-center-for-the-middle-east" >Rafik Hariri Center for the Middle East</a><ul class="nav-child unstyled small"><li class="item-2263"><a href="/programs/rafik-hariri-center-for-the-middle-east" >Rafik Hariri Center Home</a></li><li class="item-193"><a href="/programs/rafik-hariri-center-for-the-middle-east/about-the-center" >About the Center</a></li><li class="item-2519"><a href="/programs/rafik-hariri-center-for-the-middle-east/about-rafik-hariri" >About Rafik Hariri</a></li><li class="item-1837"><a href="/programs/rafik-hariri-center-for-the-middle-east/news-and-updates" >News</a></li><li class="item-1838"><a href="/programs/rafik-hariri-center-for-the-middle-east/blogs" >Blogs</a></li><li class="item-1839"><a href="/programs/rafik-hariri-center-for-the-middle-east/publications" >Publications</a></li><li class="item-1997"><a href="/programs/rafik-hariri-center-for-the-middle-east/recent-events" >Recent Events</a></li><li class="item-2196"><a href="/isis-and-the-crumbling-middle-east" >ISIS and the Crumbling Middle East</a></li><li class="item-2363 deeper parent"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force" >Middle East Strategy Task Force</a><ul class="nav-child unstyled small"><li class="item-2402"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force" >Middle East Strategy Task Force Home</a></li><li class="item-2401"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/about-the-middle-east-strategy-task-force" >About the Middle East Strategy Task Force</a></li><li class="item-2366"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/co-chairs" >Co-Chairs</a></li><li class="item-2367"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/senior-advisers" >Senior Advisers</a></li><li class="item-2368"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/working-groups" >Working Groups</a></li><li class="item-2369"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/executive-team" >Executive Team</a></li><li class="item-2370"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/news" >News</a></li><li class="item-2371"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/analysis" >Analysis</a></li><li class="item-2372"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/events" >Events</a></li><li class="item-2373"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/book" >Book</a></li><li class="item-2405"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force/subscribe-to-mest-events-publications" >Subscribe to MEST Events/Publications</a></li><li class="item-2364"><a href="/programs/rafik-hariri-center-for-the-middle-east" >Rafik Hariri Center for the Middle East</a></li></ul></li><li class="item-2528 deeper parent"><a href="/programs/rafik-hariri-center-for-the-middle-east/future-of-iraq" >Future of Iraq</a><ul class="nav-child unstyled small"><li class="item-2530"><a href="/programs/rafik-hariri-center-for-the-middle-east/future-of-iraq/about-future-of-iraq" >About Future of Iraq</a></li><li class="item-2529"><a href="/programs/rafik-hariri-center-for-the-middle-east/future-of-iraq/task-force-members" >Task Force Members</a></li></ul></li><li class="item-2024"><span class="nav-header">Countries in Focus</span></li><li class="item-2025"><a href="/yemen/transitions-in-focus-yemen" >Yemen</a></li><li class="item-2422"><a href="/syria" >Syria</a></li><li class="item-2026"><a href="/libya/transitions-in-focus-libya" >Libya</a></li><li class="item-2027"><a href="/egypt/transitions-in-focus-egypt" >Egypt</a></li><li class="item-2028"><a href="/tunisia/transitions-in-focus-tunisia" >Tunisia</a></li></ul></li><li class="item-143 deeper parent"><a href="/programs/adrienne-arsht-latin-america-center" >Adrienne Arsht Latin America Center</a><ul class="nav-child unstyled small"><li class="item-2261"><a href="/programs/adrienne-arsht-latin-america-center" >Latin America Center Home</a></li><li class="item-191"><a href="/programs/adrienne-arsht-latin-america-center/about-the-center" >About the Center</a></li><li class="item-1840"><a href="/programs/adrienne-arsht-latin-america-center/news-and-updates" >News</a></li><li class="item-1842"><a href="/programs/adrienne-arsht-latin-america-center/publications" >Publications</a></li><li class="item-1998"><a href="/programs/adrienne-arsht-latin-america-center/recent-events" >Recent Events</a></li><li class="item-2262"><a href="/programs/adrienne-arsht-latin-america-center/subscribe-to-arsht-events" >Subscribe to Arsht Events</a></li><li class="item-2270"><a href="/a-new-day-for-cuba" >A New Day for Cuba</a></li></ul></li><li class="item-145 deeper parent"><a href="/programs/dinu-patriciu-eurasia-center" >Dinu Patriciu Eurasia Center</a><ul class="nav-child unstyled small"><li class="item-2450"><a href="/programs/dinu-patriciu-eurasia-center" >Dinu Patriciu Eurasia Center Home</a></li><li class="item-198"><a href="/programs/dinu-patriciu-eurasia-center/about-the-center" >About the Center</a></li><li class="item-1843"><a href="/programs/dinu-patriciu-eurasia-center/news-and-updates" >News</a></li><li class="item-1844"><a href="/programs/dinu-patriciu-eurasia-center/blogs" >Blogs</a></li><li class="item-1845"><a href="/programs/dinu-patriciu-eurasia-center/publications" >Publications</a></li><li class="item-1999"><a href="/programs/dinu-patriciu-eurasia-center/recent-events" >Recent Events</a></li><li class="item-2198"><a href="/isis-and-the-crumbling-middle-east" >ISIS and the Crumbling Middle East</a></li><li class="item-1987"><span class="nav-header">Initiatives</span></li><li class="item-2133"><a href="/ukraine" >Ukraine in Europe Initiative</a></li></ul></li><li class="item-150 deeper parent"><a href="/programs/south-asia-center" >South Asia Center</a><ul class="nav-child unstyled small"><li class="item-2456"><a href="/programs/south-asia-center" >South Asia Center Home</a></li><li class="item-195"><a href="/programs/south-asia-center/about-the-center" >About the Center</a></li><li class="item-1855"><a href="/programs/south-asia-center/news-and-updates" >News</a></li><li class="item-1856"><a href="/programs/south-asia-center/analysis" >Analysis</a></li><li class="item-1857"><a href="/programs/south-asia-center/publications" >Publications</a></li><li class="item-2000"><a href="/programs/south-asia-center/recent-events" >Recent Events</a></li><li class="item-303"><span class="nav-header">Initiatives</span></li><li class="item-2433 deeper parent"><a href="/programs/south-asia-center/afghanistan-rising" >Afghanistan Rising</a><ul class="nav-child unstyled small"><li class="item-2440"><a href="/programs/south-asia-center/afghanistan-rising" >Afghanistan Rising Home</a></li><li class="item-2434"><a href="/programs/south-asia-center/afghanistan-rising/afghanistan-rising-2" >About Afghanistan Rising</a></li><li class="item-2435"><a href="/programs/south-asia-center/afghanistan-rising/news" >News</a></li><li class="item-2436"><a href="/programs/south-asia-center/afghanistan-rising/analysis" >Analysis</a></li><li class="item-2437"><a href="/programs/south-asia-center/afghanistan-rising/publications" >Publications</a></li><li class="item-2438"><a href="/programs/south-asia-center/afghanistan-rising/events" >Events</a></li><li class="item-2439"><a href="/programs/south-asia-center" >South Asia Center</a></li></ul></li><li class="item-2425 deeper parent"><a href="/programs/south-asia-center/future-of-iran" >Future of Iran</a><ul class="nav-child unstyled small"><li class="item-2427"><a href="/programs/south-asia-center/future-of-iran" >Future of Iran Home</a></li><li class="item-268"><a href="/programs/south-asia-center/future-of-iran/about-the-iran-task-force" >About the Future of Iran</a></li><li class="item-2428"><a href="/programs/south-asia-center/future-of-iran/new" >News</a></li><li class="item-2429"><a href="/programs/south-asia-center/future-of-iran/events" >Events</a></li><li class="item-2430"><a href="/programs/south-asia-center/future-of-iran/publications" >Publications</a></li><li class="item-2431"><a href="/programs/south-asia-center/future-of-iran/analysis" >Analysis</a></li><li class="item-2432"><a href="/programs/south-asia-center" >South Asia Center</a></li></ul></li><li class="item-264"><a href="http://www.elpak.org" >Emerging Leaders of Pakistan</a></li><li class="item-2522"><a href="/programs/south-asia-center/call-for-applications-emerging-leaders-of-pakistan" >Call for Applications – Emerging Leaders of Pakistan</a></li><li class="item-263"><a href="/programs/south-asia-center/india-pakistan-track-ii-water-dialogue" >India-Pakistan Track II Water Dialogue</a></li><li class="item-267"><a href="/programs/south-asia-center/india-pakistan-trade-and-business-forum" >India-Pakistan Trade and Business Forum</a></li><li class="item-2341 deeper parent"><a href="/india-us-2015-partnering-for-peace-and-prosperity-conference" >India-US 2015: Partnering for Peace and Prosperity Conference</a><ul class="nav-child unstyled small"><li class="item-2342"><a href="/programs/south-asia-center" >South Asia Center</a></li></ul></li><li class="item-2468"><a href="/the-megacity-security-conference" >The Megacity Security Conference</a></li></ul></li><li class="item-149 deeper parent"><a href="/programs/africa-center" >Africa Center</a><ul class="nav-child unstyled small"><li class="item-2455"><a href="/programs/africa-center" >Africa Center Home</a></li><li class="item-194"><a href="/programs/africa-center/about-the-center" >About the Center</a></li><li class="item-1846"><a href="/programs/africa-center/news-and-updates" >News</a></li><li class="item-2139"><a href="/blogs/africasource" >AfricaSource Blog</a></li><li class="item-1848"><a href="/programs/africa-center/publications" >Publications</a></li><li class="item-2001"><a href="/programs/africa-center/recent-events" >Recent Events</a></li><li class="item-2178"><a href="/us-africa-leaders-summit" >US-Africa Leaders Summit</a></li><li class="item-2304"><a href="/nigeria-in-focus" >Nigeria in Focus</a></li></ul></li><li class="item-151 deeper parent"><a href="/programs/millennium-leadership-program" >Millennium Leadership Program</a><ul class="nav-child unstyled small"><li class="item-2290"><a href="/programs/millennium-leadership-program" >Millennium Leadership Program Home</a></li><li class="item-1861"><a href="/programs/millennium-leadership-program/news-and-updates" >News</a></li><li class="item-1863"><a href="/programs/millennium-leadership-program/publications" >Publications</a></li><li class="item-2291"><a href="/programs/millennium-leadership-program/recent-events" >Recent Events</a></li><li class="item-2292"><span class="nav-header">Initiatives</span></li><li class="item-203 deeper parent"><a href="/programs/millennium-leadership-program/about-the-program" >Millennium Fellow Program</a><ul class="nav-child unstyled small"><li class="item-2289"><a href="/programs/millennium-leadership-program/about-the-program/millennium-fellowship-application" >Apply Now</a></li><li class="item-2395"><a href="/programs/millennium-leadership-program/about-the-program/millennium-fellowship-2015-bios" >2015 Millennium Fellowship Bios</a></li><li class="item-2517"><a href="http://millenniumfellowship.org/" >Millennium Fellowship Website</a></li></ul></li><li class="item-2260 deeper parent"><a href="/programs/millennium-leadership-program/veterans-take-point-initiative" >Veterans Take Point Initiative</a><ul class="nav-child unstyled small"><li class="item-2412"><a href="/programs/millennium-leadership-program/veterans-take-point-initiative/2014-fellows-bios" >2014 Fellows Bios</a></li><li class="item-2487"><a href="/programs/millennium-leadership-program/veterans-take-point-initiative/2015-fellows-bios" >2015 Fellows Bios</a></li><li class="item-2518"><a href="/programs/millennium-leadership-program/veterans-take-point-initiative/take-point-university" >Take Point University</a></li></ul></li><li class="item-2142 deeper parent"><a href="/programs/millennium-leadership-program/eleep" >Emerging Leaders in Environmental and Energy Policy (ELEEP) Network</a><ul class="nav-child unstyled small"><li class="item-2409"><a href="/programs/millennium-leadership-program/eleep/2015-eleep-fellowship-application" >2015 ELEEP Fellowship Application</a></li></ul></li><li class="item-2482"><a href="/programs/millennium-leadership-program/transatlantic-core-group" >Transatlantic Core Group</a></li><li class="item-2393"><a href="/programs/millennium-leadership-program/young-professionals-day-2015" >Young Professionals Day 2015</a></li><li class="item-2151"><a href="/road-to-wales-2014-nato-summit" >2014 Wales NATO Summit</a></li></ul></li><li class="item-142 deeper parent"><a href="/programs/global-business-and-economics" >Global Business and Economics</a><ul class="nav-child unstyled small"><li class="item-2454"><a href="/programs/global-business-and-economics" >Global Business and Economics Program Home</a></li><li class="item-192"><a href="/programs/global-business-and-economics/about-the-center" >About the Program</a></li><li class="item-1852"><a href="/programs/global-business-and-economics/news-and-updates" >News</a></li><li class="item-1853"><a href="/programs/global-business-and-economics/blogs" >Blogs</a></li><li class="item-1854"><a href="/programs/global-business-and-economics/publications" >Publications</a></li><li class="item-2002"><a href="/programs/global-business-and-economics/recent-events" >Recent Events</a></li><li class="item-1988"><a href="/blogs/ttipaction" >Blog: TTIP Action</a></li><li class="item-295 deeper parent"><a href="/programs/global-business-and-economics/transatlantic-finance-initiative" >Transatlantic Finance Initiative</a><ul class="nav-child unstyled small"><li class="item-2104"><a href="/programs/global-business-and-economics/transatlantic-finance-initiative/news" >News</a></li><li class="item-2105"><a href="/programs/global-business-and-economics/transatlantic-finance-initiative/recent-events" >Recent Events</a></li></ul></li><li class="item-2311"><a href="/blogs/econographics" >EconoGraphics</a></li><li class="item-2420"><a href="/europe-after-greece" >Europe after Greece </a></li></ul></li><li class="item-146 deeper parent"><a href="/programs/global-energy-center" >Global Energy Center</a><ul class="nav-child unstyled small"><li class="item-2267"><a href="/programs/global-energy-center" >Global Energy Center Home</a></li><li class="item-199"><a href="/programs/global-energy-center/about-the-center" >About the Center</a></li><li class="item-1849"><a href="/programs/global-energy-center/news-and-updates" >News</a></li><li class="item-1850"><a href="/programs/global-energy-center/blogs" >Blogs</a></li><li class="item-1851"><a href="/programs/global-energy-center/publications" >Publications</a></li><li class="item-2003"><a href="/programs/global-energy-center/recent-events" >Recent Events</a></li><li class="item-1990"><a href="/initiatives/eurasian-energy-futures" >Eurasian Energy Futures</a></li><li class="item-2361"><a href="/subscribe" >Subscribe to Our Newsletter</a></li></ul></li><li class="item-148 deeper parent"><a href="/programs/future-europe-initiative" >Future Europe Initiative</a><ul class="nav-child unstyled small"><li class="item-2453"><a href="/programs/future-europe-initiative" >Future Europe Initiative Home</a></li><li class="item-196"><a href="/programs/future-europe-initiative/about-the-center" >About the Program</a></li><li class="item-1858"><a href="/programs/future-europe-initiative/news-and-updates" >News</a></li><li class="item-1859"><a href="/programs/future-europe-initiative/analysis" >Analysis</a></li><li class="item-2452"><a href="/blogs/eusource" >EUSource</a></li><li class="item-1860"><a href="/programs/future-europe-initiative/publications" >Publications</a></li><li class="item-2004"><a href="/programs/future-europe-initiative/recent-events" >Recent Events</a></li><li class="item-2324"><a href="/us-german-next-generation-project" >US-German Next Generation Project</a></li><li class="item-169"><a href="/programs/future-europe-initiative/geremek-lecture" >Geremek Lecture</a></li><li class="item-168"><a href="/programs/future-europe-initiative/makins-lecture" >Makins Lecture</a></li></ul></li></ul></li><li class="item-135 deeper parent"><a href="/initiatives" >Initiatives</a><ul class="nav-child unstyled small"><li class="item-2441"><a href="/programs/south-asia-center/afghanistan-rising" >Afghanistan Rising</a></li><li class="item-262"><a href="http://www.elpak.org" >Emerging Leaders of Pakistan</a></li><li class="item-156 deeper parent"><a href="/initiatives/eurasian-energy-futures" >Eurasian Energy Futures</a><ul class="nav-child unstyled small"><li class="item-2449"><a href="/initiatives/eurasian-energy-futures" >Eurasian Energy Futures Home</a></li><li class="item-2030"><a href="/initiatives/eurasian-energy-futures/about-the-eurasian-energy-futures-initiative" >About the Initiative</a></li><li class="item-2045"><a href="/initiatives/eurasian-energy-futures/blogs" >Blogs</a></li><li class="item-2046"><a href="/initiatives/eurasian-energy-futures/publications" >Publications</a></li><li class="item-2031"><a href="/initiatives/eurasian-energy-futures/recent-events" >Recent Events</a></li><li class="item-2448"><a href="/programs/dinu-patriciu-eurasia-center" >Dinu Patriciu Eurasia Center</a></li></ul></li><li class="item-2419"><a href="/europe-after-greece" >Europe after Greece</a></li><li class="item-2426"><a href="/programs/south-asia-center/future-of-iran" >Future of Iran</a></li><li class="item-2531"><a href="/programs/rafik-hariri-center-for-the-middle-east/future-of-iraq" >Future of Iraq</a></li><li class="item-2365"><a href="/programs/rafik-hariri-center-for-the-middle-east/middle-east-strategy-task-force" >Middle East Strategy Task Force</a></li><li class="item-2043"><a href="/programs/global-business-and-economics/transatlantic-finance-initiative" >Transatlantic Finance</a></li><li class="item-2134"><a href="/ukraine" >Ukraine in Europe Initiative</a></li><li class="item-2242"><span class="nav-header">Brent Scowcroft Center Initiatives</span></li><li class="item-153"><a href="/programs/brent-scowcroft-center/cyber-statecraft" >Cyber Statecraft</a></li><li class="item-159"><a href="/programs/brent-scowcroft-center/strategic-foresight" >Strategic Foresight</a></li><li class="item-152"><a href="/programs/brent-scowcroft-center/asia-security" >Asia Security</a></li><li class="item-211"><a href="/programs/brent-scowcroft-center/transatlantic-security" >Transatlantic Security</a></li><li class="item-2243"><a href="/programs/brent-scowcroft-center/emerging-defense-challenges" >Emerging Defense Challenges</a></li><li class="item-2241"><a href="/programs/brent-scowcroft-center/middle-east-peace-and-security-initiative" >Middle East Peace and Security</a></li><li class="item-2354"><a href="/programs/brent-scowcroft-center/strategy-initiative" >Strategy Initiative</a></li></ul></li><li class="item-136"><a href="/about/experts" >Experts</a></li><li class="item-137 deeper parent"><a href="/publications" >Publications</a><ul class="nav-child unstyled small"><li class="item-173"><a href="/publications/issue-briefs" >Issue Briefs</a></li><li class="item-174"><a href="/publications/reports" >Reports</a></li><li class="item-172"><a href="/publications/articles" >Articles</a></li><li class="item-175"><a href="/publications/books" >Books</a></li></ul></li><li class="item-138 active deeper parent"><a href="/blogs" >Blogs</a><ul class="nav-child unstyled small"><li class="item-176 current active deeper parent"><a href="/blogs/new-atlanticist" >New Atlanticist</a><ul class="nav-child unstyled small"><li class="item-225"><a href="/blogs/new-atlanticist/about-new-atlanticist" >About New Atlanticist</a></li><li class="item-226"><a href="/blogs/new-atlanticist/blog-policies" >Blog Policies</a></li></ul></li><li class="item-177 deeper parent"><a href="/blogs/natosource" >NATOSource</a><ul class="nav-child unstyled small"><li class="item-213"><a href="/blogs/natosource/about-natosource" >About NATOSource</a></li><li class="item-2460"><a href="/programs/brent-scowcroft-center/about-the-center" >About the Brent Scowcroft Center</a></li></ul></li><li class="item-178 deeper parent"><a href="/blogs/egyptsource" >EgyptSource</a><ul class="nav-child unstyled small"><li class="item-220"><a href="/blogs/egyptsource/about-egyptsource" >About EgyptSource</a></li><li class="item-221"><a href="/blogs/egyptsource/egyptian-politics" >Egyptian Politics</a></li><li class="item-2503"><a href="/blogs/egyptsource/egypt-elections" >Egypt Elections</a></li><li class="item-222"><a href="/blogs/egyptsource/useful-links" >Useful Links</a></li><li class="item-223"><a href="/blogs/egyptsource/recommended-blogs" >Recommended Blogs</a></li><li class="item-1811"><a href="/blogs/egyptsource/top-news" >Top News</a></li><li class="item-1818"><a href="/blogs/egyptsource/timeline-arab-transitions" >Timeline: Arab Transitions</a></li><li class="item-2408"><a href="/blogs/egyptsource/sisi-s-first-year" >Sisi's First Year</a></li><li class="item-2499"><a href="/blogs/syriasource" >SyriaSource</a></li><li class="item-2500"><a href="/blogs/menasource" >MENASource</a></li></ul></li><li class="item-179 deeper parent"><a href="/blogs/menasource" >MENASource</a><ul class="nav-child unstyled small"><li class="item-224"><a href="/blogs/menasource/about-menasource" >About MENASource</a></li><li class="item-1812"><a href="/blogs/menasource/top-news" >Top News</a></li><li class="item-1813"><a href="/blogs/menasource/econsource" >EconSource</a></li><li class="item-1819"><a href="/blogs/menasource/timeline-arab-transitions" >Timeline: Arab Transitions</a></li><li class="item-2502"><a href="/blogs/syriasource" >SyriaSource</a></li><li class="item-2501"><a href="/blogs/egyptsource" >EgyptSource</a></li></ul></li><li class="item-2490 deeper parent"><a href="/blogs/syriasource" >SyriaSource</a><ul class="nav-child unstyled small"><li class="item-2491"><a href="/blogs/syriasource/about-syriasource" >About SyriaSource</a></li><li class="item-2492"><a href="/blogs/syriasource/top-news" >Top News</a></li><li class="item-2493"><a href="/blogs/syriasource/civil-society-and-local-governance" >Civil Society and Local Governance</a></li><li class="item-2494"><a href="/blogs/syriasource/islamism-and-extremism" >Islamism and Extremism</a></li><li class="item-2495"><a href="/blogs/syriasource/military-dynamics" >Military Dynamics</a></li><li class="item-2497"><a href="/blogs/egyptsource" >EgyptSource</a></li><li class="item-2498"><a href="/blogs/menasource" >MENASource</a></li></ul></li><li class="item-180"><a href="/blogs/futuresource" >FutureSource</a></li><li class="item-252 deeper parent"><a href="/blogs/defense-industrialist" >Defense Industrialist</a><ul class="nav-child unstyled small"><li class="item-253"><a href="/blogs/defense-industrialist/about-defense-industrialist" >About Defense Industrialist</a></li></ul></li><li class="item-2286 deeper parent"><a href="/blogs/ttipaction" >TTIP Action</a><ul class="nav-child unstyled small"><li class="item-2288"><a href="/blogs/ttipaction/about-ttip-action" >About TTIP Action</a></li><li class="item-2287"><a href="/blogs/ttipaction/blog-policies" >Blog Policies</a></li></ul></li><li class="item-2310"><a href="/blogs/econographics" >EconoGraphics</a></li><li class="item-2162 deeper parent"><a href="/blogs/eusource" >EUSource</a><ul class="nav-child unstyled small"><li class="item-2343"><a href="/blogs/eusource" >EUSource Home</a></li><li class="item-2344"><a href="/blogs/eusource/about-eusource" >About EUSource</a></li></ul></li><li class="item-2124"><a href="/blogs/africasource" >AfricaSource</a></li></ul></li><li class="item-139 deeper parent"><a href="/events/upcoming-events" >Events</a><ul class="nav-child unstyled small"><li class="item-162"><a href="/events/upcoming-events" >Upcoming Events</a></li><li class="item-327"><a href="/events/webcasts" >Webcasts</a></li><li class="item-163"><a href="/events/past-events" >Past Events</a></li><li class="item-2479"><span class="nav-header">Flagship Events</span></li><li class="item-164 deeper parent"><a href="/events/distinguished-leadership-awards" >Distinguished Leadership Awards</a><ul class="nav-child unstyled small"><li class="item-2375"><a href="/events/distinguished-leadership-awards" >Distinguished Leadership Awards Home</a></li><li class="item-1821"><a href="/events/distinguished-leadership-awards/about-the-awards" >About the Awards</a></li><li class="item-2374 deeper parent"><a href="/events/distinguished-leadership-awards/2015-honorees" >2015 Honorees </a><ul class="nav-child unstyled small"><li class="item-2376"><a href="/events/distinguished-leadership-awards/2015-honorees/ashraf-ghani" >Ashraf Ghani</a></li><li class="item-2377"><a href="/events/distinguished-leadership-awards/2015-honorees/marillyn-a-hewson" >Marillyn A. Hewson</a></li><li class="item-2378"><a href="/events/distinguished-leadership-awards/2015-honorees/philip-m-breedlove" >Philip M. Breedlove</a></li><li class="item-2379"><a href="/events/distinguished-leadership-awards/2015-honorees/mr-toby-keith" >Mr. Toby Keith</a></li><li class="item-2097"><a href="/events/distinguished-leadership-awards/honorees/chuck-hagel" >Chuck Hagel</a></li><li class="item-2094"><a href="/events/distinguished-leadership-awards/honorees/jose-manuel-barroso" >José Manuel Barroso</a></li><li class="item-2096"><a href="/events/distinguished-leadership-awards/honorees/thomas-enders" >Thomas Enders</a></li><li class="item-2098"><a href="/events/distinguished-leadership-awards/honorees/ruslana-lyzhychko" >Ruslana Lyzhychko</a></li><li class="item-2095"><a href="/events/distinguished-leadership-awards/honorees/joseph-f-dunford-jr" >Joseph F. Dunford Jr.</a></li></ul></li><li class="item-2398"><a href="/events/distinguished-leadership-awards/2015-gallery" >2015 Gallery</a></li><li class="item-2400"><a href="/events/distinguished-leadership-awards/2015-video" >2015 Videos</a></li><li class="item-2516"><a href="http://www.atlanticcouncil.org/images/publications/STD_DLA_web.pdf" >2016 Distinguished Leadership Awards</a></li></ul></li><li class="item-1980"><a href="http://www.acsummit.org" target="_blank" >Energy &amp; Economic Summit</a></li><li class="item-165 deeper parent"><a href="/events/global-citizen-awards" >Global Citizen Awards</a><ul class="nav-child unstyled small"><li class="item-2218"><a href="/events/global-citizen-awards" >Global Citizen Awards Home</a></li><li class="item-2489 deeper parent"><a href="/events/global-citizen-awards/2015-global-citizen-awards" >2015 Global Citizen Awards</a><ul class="nav-child unstyled small"><li class="item-2473"><a href="/events/global-citizen-awards/2015-global-citizen-awards/2015-honorees" >2015 Honorees </a></li><li class="item-2480"><a href="/events/global-citizen-awards/2015-global-citizen-awards/2015-speakers" >2015 Speakers</a></li><li class="item-2228"><a href="/events/global-citizen-awards/2015-global-citizen-awards/media-advisory" >Media Advisory</a></li><li class="item-2488"><a href="/events/global-citizen-awards/2015-global-citizen-awards/2015-global-citizen-awards-videos-and-transcripts" >2015 Global Citizen Awards Videos and Transcripts</a></li></ul></li><li class="item-2471 deeper parent"><a href="/events/global-citizen-awards/2014-global-citizen-awards" >2014 Global Citizen Awards</a><ul class="nav-child unstyled small"><li class="item-2216"><a href="/events/global-citizen-awards/2014-global-citizen-awards/2014-honorees" >2014 Honorees</a></li><li class="item-2232"><a href="/events/global-citizen-awards/2014-global-citizen-awards/global-citizen-awards-ceremony-videos" >2014 Global Citizen Awards Videos and Transcripts</a></li><li class="item-2231"><a href="/events/global-citizen-awards/2014-global-citizen-awards/2014-global-citizen-awards-gallery" >2014 Global Citizen Awards Gallery</a></li><li class="item-2230"><a href="/events/global-citizen-awards/2014-global-citizen-awards/president-poroshenko-award-ceremony" >2014 President Poroshenko Award Ceremony</a></li></ul></li><li class="item-2472 deeper parent"><a href="/events/global-citizen-awards/2013-global-citizen-awards" >2013 Global Citizen Awards</a><ul class="nav-child unstyled small"><li class="item-2217"><a href="/events/global-citizen-awards/2013-global-citizen-awards/2013-global-citizen-awards-gallery" >2013 Global Citizen Awards Gallery</a></li></ul></li></ul></li><li class="item-2295 deeper parent"><a href="/events/toward-a-transatlantic-strategy-for-europe-s-east" >Toward a Transatlantic Strategy for Europe’s East</a><ul class="nav-child unstyled small"><li class="item-2297"><a href="/events/toward-a-transatlantic-strategy-for-europe-s-east/about" >About</a></li><li class="item-2296"><a href="/events/toward-a-transatlantic-strategy-for-europe-s-east/agenda" >Agenda</a></li><li class="item-2300"><a href="/events/toward-a-transatlantic-strategy-for-europe-s-east/analysis" >Analysis</a></li><li class="item-2301"><a href="http://www.atlanticcouncil.org/events/upcoming-events/detail/transatlantic01302015" >Register Here</a></li><li class="item-2298"><a href="/events/toward-a-transatlantic-strategy-for-europe-s-east/speaker-bios" >Speaker Bios</a></li><li class="item-2299"><a href="/events/toward-a-transatlantic-strategy-for-europe-s-east/webcasts" >Webcasts</a></li></ul></li><li class="item-167 deeper parent"><a href="/events/wroclaw-global-forum" >Wroclaw Global Forum</a><ul class="nav-child unstyled small"><li class="item-2348"><a href="/events/wroclaw-global-forum" >Wroclaw Global Forum Home</a></li><li class="item-2349"><a href="/events/wroclaw-global-forum/news" >News</a></li><li class="item-2520"><a href="/events/wroclaw-global-forum/2015-wroclaw-global-forum-gallery" >2015 Gallery</a></li><li class="item-2353"><a href="/events/wroclaw-global-forum/2014-wroclaw-global-forum-gallery" >2014 Gallery</a></li><li class="item-2406"><a href="/events/wroclaw-global-forum/full-coverage-wroclaw-global-forum" >Videos and Webcasts</a></li><li class="item-2350"><a href="/events/wroclaw-global-forum/transcripts-and-event-recaps" >Transcripts and Event Recaps</a></li><li class="item-2352"><a href="http://www.wroclawglobalforum.com/" >Wroclaw Global Forum Website</a></li><li class="item-261 deeper parent"><a href="/events/wroclaw-global-forum/freedom-awards" >Freedom Awards</a><ul class="nav-child unstyled small"><li class="item-2386"><a href="/events/wroclaw-global-forum/freedom-awards" >Freedom Awards Home</a></li><li class="item-2381"><a href="/events/wroclaw-global-forum/freedom-awards/news" >News</a></li><li class="item-2411"><a href="/events/wroclaw-global-forum/freedom-awards/full-coverage-wroclaw-global-forum" >Videos and Webcasts</a></li><li class="item-2383"><a href="/events/wroclaw-global-forum/freedom-awards/transcripts-and-event-recaps" >Transcripts and Event Recaps</a></li><li class="item-2387"><a href="/events/wroclaw-global-forum/freedom-awards/gallery" >Gallery</a></li><li class="item-2385"><a href="http://www.wroclawglobalforum.com/" >Wroclaw Global Forum Website</a></li></ul></li></ul></li></ul></li><li class="item-140 deeper parent"><a href="/news" >News</a><ul class="nav-child unstyled small"><li class="item-182"><a href="/news/in-the-news" >In the News</a></li><li class="item-184"><a href="/news/press-releases" >Press Releases</a></li><li class="item-2394"><a href="/news/transcripts" >Transcripts</a></li></ul></li><li class="item-141 deeper parent"><a href="https://www.atlanticcouncil.org/support" >Support</a><ul class="nav-child unstyled small"><li class="item-2214"><a href="/support/intellectual-independence-policy" >Intellectual Independence Policy</a></li><li class="item-2213"><a href="/support/government-funding-review-process" >Government Funding Review Process</a></li><li class="item-2413"><a href="/support/donor-acceptance-and-disclosure-policy" >Donor Acceptance and Disclosure Policy</a></li><li class="item-2276"><span class="nav-header">Individual Support</span></li><li class="item-186 deeper parent"><a href="/support/members-program" >Members Program</a><ul class="nav-child unstyled small"><li class="item-2469"><a href="/support/members-program" >Members Program Home</a></li><li class="item-2280"><a href="/support/members-program/member-levels-and-benefits" >Membership Levels</a></li><li class="item-2285"><a href="/support/members-program/members-program-roster" >Membership Roster</a></li><li class="item-2282"><a href="/support/members-program/join-us" >Join Us</a></li><li class="item-2470"><a href="/contact" >Contact Us</a></li></ul></li><li class="item-2277"><span class="nav-header">Corporate Support</span></li><li class="item-2279"><a href="/support/corporate-membership" >Corporate Membership</a></li><li class="item-2278"><span class="nav-header">Other Support</span></li><li class="item-188"><a href="/support/supporters" >Honor Roll of Contributors</a></li></ul></li></ul>
+		</div>
+	
+					    </div>
+			    </div>
+			</div>
+												<div class="row">
+				<div id="left" class="span3 ">
+					<div class="padding">
+						<a class="btn btn-navbar visible-phone haschildren" data-toggle="collapse" data-target=".subnav-collapse"><span>New Atlanticist</span></a>
+						<div class="subnav-collapse collapse">
+									<div class="moduletable_menu span3">
+					<ul class="nav menu">
+<li class="item-176 current active deeper parent"><a href="/blogs/new-atlanticist" >New Atlanticist</a><ul class="nav-child unstyled small"><li class="item-225"><a href="/blogs/new-atlanticist/about-new-atlanticist" >About New Atlanticist</a></li><li class="item-226"><a href="/blogs/new-atlanticist/blog-policies" >Blog Policies</a></li></ul></li><li class="item-177 parent"><a href="/blogs/natosource" >NATOSource</a></li><li class="item-178 parent"><a href="/blogs/egyptsource" >EgyptSource</a></li><li class="item-179 parent"><a href="/blogs/menasource" >MENASource</a></li><li class="item-2490 parent"><a href="/blogs/syriasource" >SyriaSource</a></li><li class="item-180"><a href="/blogs/futuresource" >FutureSource</a></li><li class="item-252 parent"><a href="/blogs/defense-industrialist" >Defense Industrialist</a></li><li class="item-2286 parent"><a href="/blogs/ttipaction" >TTIP Action</a></li><li class="item-2310"><a href="/blogs/econographics" >EconoGraphics</a></li><li class="item-2162 parent"><a href="/blogs/eusource" >EUSource</a></li><li class="item-2124"><a href="/blogs/africasource" >AfricaSource</a></li></ul>
+		</div>
+			<div class="moduletable_menu span3">
+					<ul class="nav menu">
+<li class="item-101"><a href="/" >Home</a></li><li class="item-119 parent"><a href="/about" >About</a></li><li class="item-120 parent"><a href="/careers/employment-internships" >Careers</a></li><li class="item-121"><a href="/press" >Press</a></li><li class="item-2070"><a href="/subscribe" >Subscribe</a></li><li class="item-122"><a href="/contact" >Contact</a></li></ul>
+		</div>
+	
+					    </div>
+						<div class="hidden-phone">
+									<div class="moduletable">
+					
+
+<div class="custom"  >
+	<html>
+  <script data-cfasync="false" type="text/javascript" src="//filamentapp.s3.amazonaws.com/555a54c3ec9fb875220f208ca3f31acd.js" async="async"></script>
+ 
+</html> </div>
+		</div>
+			<div class="moduletable span3">
+					
+
+<div class="custom span3"  >
+	<a href="https://www.atlanticcouncil.org/support"><img class="noformat" style="float: left;" src="/images/logos/make_a_contribution.jpg" alt="make a contribution" width="218" height="141" /></a>
+<p style="text-align: left;">&nbsp;</p></div>
+		</div>
+			<div class="moduletable span3">
+					
+
+<div class="custom span3"  >
+	<a href="/europe-after-greece"><img class="noformat" style="float: left;" src="/images/logos/Europe_After_Greece-logo.jpg" alt="Europe After Greece-logo" width="218" height="77" /></a><br style="clear: both;" />
+<p style="text-align: left;"><a href="/europe-after-greece" class="filelink">FULL COVERAGE</a></p></div>
+		</div>
+			<div class="moduletable span 3">
+					
+
+<div class="custom span 3"  >
+	<a href="http://www.youtube.com/atlanticcouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_youtube_lg.gif" alt="YouTube" width="28" height="28" /></a><a href="http://www.facebook.com/AtlanticCouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_facebook_lg.gif" alt="Facebook" width="28" height="28" /></a><a href="http://www.twitter.com/AtlanticCouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_twitter_lg.gif" alt="Twitter" width="28" height="28" /></a><a href="https://instagram.com/atlanticcouncil/" target="_blank"><img src="/images/content/instagram.jpg" alt="instagram" width="28" height="28" /></a><a href="https://www.flickr.com/photos/atlanticcouncil/" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_flickr.jpg" alt="Flickr" width="28" height="28" /></a><a href="/about/atlanticcouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_rss_lg.gif" alt="RSS" width="28" height="28" /></a><a href="https://itunes.apple.com/us/podcast/atlantic-council-events-podcast/id977650212?mt=2" target="_blank"><img src="/images/content/podcast2.jpg" alt="podcast2" width="27" height="27" /></a></div>
+		</div>
+			<div class="moduletable span3 accordion">
+					
+<dl id="nac-100" class="naccordion nac-original">
+			 						
+        	
+        	<dt class = "item0"><span>OUR PROGRAMS</span></dt>		 						
+            	<dd class = "item0">
+                	
+                	                    	<div class="nac-padding">
+                    		<div>
+                    			<ul>
+<li><a href="/programs/africa-center"></a><a href="/programs/brent-scowcroft-center">Brent Scowcroft Center on International Security</a></li>
+<li><a href="/programs/rafik-hariri-center-for-the-middle-east">Rafik Hariri Center for the Middle East</a></li>
+<li><a href="/programs/adrienne-arsht-latin-america-center">Adrienne Arsht Latin America Center</a></li>
+<li><a href="/programs/dinu-patriciu-eurasia-center">Dinu Patriciu Eurasia Center</a></li>
+<li><a href="/programs/south-asia-center">South Asia Center</a></li>
+<li><a href="/programs/africa-center">Africa Center</a></li>
+<li><a href="/programs/millennium-leadership-program">Millennium Leadership Program</a></li>
+<li><a href="/programs/global-business-and-economics" style="line-height: inherit; background-color: transparent;">Global Business and Economics Program</a></li>
+<li><a href="/programs/global-energy-center">Global Energy Center</a></li>
+<li><a href="/programs/future-europe-initiative" style="line-height: inherit; background-color: transparent;"></a><a href="/programs/future-europe-initiative">Future Europe Initiative</a></li>
+</ul>                    		</div>
+                    	</div>
+                	              	</dd>		 				
+        		 						
+        	
+        	<dt class = "item1"><span>OUR BLOGS</span></dt>		 						
+            	<dd class = "item1">
+                	
+                	                    	<div class="nac-padding">
+                    		<div>
+                    			<ul>
+<li><a href="/blogs/new-atlanticist">New Atlanticist</a></li>
+<li><a href="/blogs/natosource">NATOSource</a></li>
+<li><a href="/blogs/egyptsource">EgyptSource</a></li>
+<li><a href="/blogs/menasource">MENASource</a></li>
+<li><a href="/blogs/syriasource">SyriaSource</a></li>
+<li><a href="/blogs/futuresource">FutureSource</a></li>
+<li><a href="/blogs/defense-industrialist">Defense Industrialist</a></li>
+<li><a href="/blogs/defense-industrialist"></a><a href="/blogs/ttipaction">TTIP Action</a></li>
+<li><a href="/blogs/southasiasource">SouthAsiaSource</a></li>
+<li><a href="/blogs/africasource">AfricaSource</a></li>
+</ul>                    		</div>
+                    	</div>
+                	              	</dd>		 				
+        </dl>	  
+		</div>
+	
+						</div>
+					</div>
+				</div>
+								<div id="content" class="span6 ">
+					<div id="main">
+						<div id="system-message-container">
+	</div>
+
+						<div class="item-page">
+							<div class="create">
+		February 9, 2016	</div>
+				<div class="page-header">
+		<h1>
+															<!--<a href="/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement"> Dutch Likely to Hand Putin a Major Symbolic Victory in Referendum on EU-Ukraine Association Agreement</a>-->
+					Dutch Likely to Hand Putin a Major Symbolic Victory in Referendum on EU-Ukraine Association Agreement									</h1>
+							<div class="createdby">
+													By Andreas Umland							</div>
+		
+	</div>
+		
+			<!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox top">
+			<a class="addthis_button_email"><img src="/templates/acus/images/icon_email_gray.gif" /></a>
+			<a href="/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement?tmpl=component&print=1" title="Print" class="modal" rel="{handler: 'iframe', size: {x: 640, y: 480}}"><img src="/templates/acus/images/icon_print_gray.gif" /></a>
+			<a class="addthis_button_twitter"><img src="/templates/acus/images/icon_twitter_gray.gif" /></a>
+			<a class="addthis_button_facebook"><img src="/templates/acus/images/icon_facebook_gray.gif" /></a>
+		</div>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a34d9b6b1b72b6"></script>
+		<!-- AddThis Button END -->
+			
+				<div class="item-image"> <img
+	class="caption" title="The reconstructed wreckage of the MH17 airplane is seen after the presentation of the final report into the crash of July 2014 of Malaysia Airlines flight MH17 over Ukraine, in Gilze Rijen, the Netherlands, October 13, 2015. Malaysian Airlines Flight 17 was shot down over eastern Ukraine by a Russian-made Buk missile, the Dutch Safety Board said in its final report on the July 2014 crash that killed all 298 aboard. REUTERS/Michael Kooren "	src="/images/reuters/2016/20160209umland_large.jpg" alt=""/> </div>
+	<div class='clearfix'></div>
+	
+			
+			There is something odd about the upcoming Dutch plebiscite on the EU-Ukraine Association Agreement. On April 6, the Netherlands will hold a national referendum on a treaty between Brussels and Kyiv that was signed in 2014 and ratified in 2015. Yet, the European Union and the European Community have, during the last sixty years, concluded dozens of association, free trade, stabilization, and cooperation agreements with countries around the world. Association and similar arrangements are neither new nor exceptional; they are a standard tool of EU foreign policy, and are practiced by other international organizations as well. For good reasons, they are mostly ignored by the general public in Europe and elsewhere.<br /><br />It is true that the recent association agreements with Ukraine, Moldova, and Georgia are larger than previous EU treaties. They include provisions to establish so-called Deep and Comprehensive Free Trade Areas between the three countries and the EU. While one can argue that these treaties are somewhat novel, this is hardly enough ground to elevate the EU-Ukraine Association Agreement to an issue suitable for a national referendum. In view of the agreements' relative inconsequentiality for the Netherlands' future, organizing a popular vote on one of these treaties is just plain bizarre.<br /> <br />It's even more unusual when one considers that the EU's new agreement with Ukraine—like those with Moldova and Georgia—does not include an explicit EU membership perspective. The new European covenants remain classical international treaties that, so far, do not envisage a fundamental change of the EU itself. Why do Dutch citizens suddenly care to vote on an EU association agreement that does not mention a membership perspective? It would make more sense to hold referenda on the EU's older association agreements with Turkey or the Western Balkan states that do include membership perspectives, and are thus potentially more consequential for Dutch citizens.<br /><br />It is also true that one day Ukraine could become a member of the EU, and that many Ukrainians see this agreement as a stepping stone toward EU accession, even though they know that this can only happen in the distant future. It is also true that each new member country changes the EU to one degree or another; indirectly, it also shifts the Netherlands' place in world affairs.<br /><br />Yet why did neither Holland nor any other EU member state bother to conduct a popular vote on the accession of other countries to the EU or EC? Why did the Dutch apparently not care enough about the simultaneous accession of ten East European countries between 2004 and 2007, yet in April they will express their national will on a mere foreign treaty with another East European country?<br /><br />Over the last two years, Russia and other enemies of the Ukrainian nation have been proclaiming loudly that the EU's association agreement with Kyiv violates Russian interests and thus destabilizes European security. Yet this agreement is mainly about trade; it is not an anti-Russian pact. It does not prevent Ukraine from having free trade and other far-reaching agreements with third parties, including Russia. Russia's wish that Ukraine enter a Moscow-dominated trade and customs bloc, like the Eurasian Economic Union, never had any significant support among Ukraine's political elite, not even in the former relatively pro-Russian administrations of Ukrainian Presidents Leonid Kuchma and Viktor Yanukovych.<br /><br />The Kremlin's aggressive resistance to the treaty is not about economics, but politics. The Europeanization of Ukraine through its association with the EU would be a dangerous countermodel to Putin's authoritarian system. If Ukraine succeeds, Russians may start to question their own kleptocratic order and attempt to follow the example of their fellow Eastern Slavs.<br /><br />On July 17, 2014, the crew of flight MH17 and 298 passengers, most of them Dutch, became victims of Russian leaders' ruthless resistance to the spread of democracy and freedom in Eastern Europe. Today, few informed observers would question the Kremlin's full responsibility for this horrible event.<br /><br />The high-tech anti-aircraft missile that hit the airliner at an altitude of over 10 km must have been of Russian origin, and could only have been operated by well-trained, i.e. Russian soldiers. Naïve commentators in the Netherlands and elsewhere still blame the Ukrainian state for not quickly identifying the emerging threat to civilian air transport in the Donbas. What they forget, however, is that the Ukrainian state was no longer present in, and had incomplete information on, the so-called "separatist" territories where the Russian high-tech installation appeared shortly before the incident.<br /><br />Nevertheless, if <a href="http://www.politico.eu/article/poll-netherlands-ratification-association-agreement-ukraine/" target="_blank">recent opinion polls</a> are correct, Dutch citizens are, in their upcoming referendum, about to present the Kremlin with a major symbolic victory in its hybrid war against Ukraine. To be sure, a Dutch popular rejection of the EU-Ukraine Association Agreement should have few practical consequences for the foreign and domestic affairs of either the EU or the Netherlands. The referendum may not reach the 30 percent minimum turnout needed, and in any event, it will not cancel the association agreement.<br /><br />However, a rejection of the association agreement by the Dutch people will be a propaganda triumph for Putin, a lasting embarrassment for the Dutch nation, and a public humiliation for millions of Ukrainians who, in recent years, have been fighting for their national liberation and European integration.<br /><br /><em>Andreas Umland is Senior Research Fellow at the Institute for Euro-Atlantic Cooperation in Kyiv, as well as general editor of the book series Soviet and Post-Soviet Politics and Society.</em>
+			
+			<div class="tags">
+																	<span class="tag-7 tag-list0">
+					<a href="/component/tags/tag/7-new-atlanticist" class="label label-info">
+						New Atlanticist					</a>
+				</span>
+																				<span class="tag-34 tag-list1">
+					<a href="/regions/asia/russia" class="label label-info">
+						Russia					</a>
+				</span>
+																				<span class="tag-72 tag-list2">
+					<a href="/original" class="label label-info">
+						 Original					</a>
+				</span>
+																				<span class="tag-101 tag-list3">
+					<a href="/component/tags/tag/101-patriciu-eurasia-center" class="label label-info">
+						Dinu Patriciu Eurasia Center					</a>
+				</span>
+																				<span class="tag-336 tag-list4">
+					<a href="/regions/europe/eastern-europe/ukraine" class="label label-info">
+						Ukraine					</a>
+				</span>
+																				<span class="tag-457 tag-list5">
+					<a href="/component/tags/tag/457-ukrainealert" class="label label-info">
+						UkraineAlert					</a>
+				</span>
+						</div>
+	
+			<!-- AddThis Button BEGIN -->
+		<div class="addthis_toolbox bottom">
+			<div class="scroll"><a href="#top"><img src="/templates/acus/images/icon_backtotop.gif" /></a></div>
+			<a class="addthis_button_email"><img src="/templates/acus/images/icon_email_white.gif" /></a>
+			<a href="/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement?tmpl=component&print=1" title="Print" class="modal" rel="{handler: 'iframe', size: {x: 640, y: 480}}"><img src="/templates/acus/images/icon_print_white.gif" /></a>
+			<a class="addthis_button_twitter"><img src="/templates/acus/images/icon_twitter_white.gif" /></a>
+			<a class="addthis_button_facebook"><img src="/templates/acus/images/icon_facebook_white.gif" /></a>
+		</div>
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52a34d9b6b1b72b6"></script>
+		<!-- AddThis Button END -->
+	
+
+	
+						 </div>
+
+					</div>
+					<div id="bottom">
+														<div class="moduletable span6 similartags newsblock">
+					<h3>RELATED CONTENT</h3>
+					
+
+
+<ul>
+		<li>
+		<div class="date"></div>
+		<div class="title"><a href="/blogs/new-atlanticist/ukraine-s-crisis-in-2015-what-to-expect">Ukraine's Crisis in 2015: What to Expect</a>
+		</div>
+		<div class="intro">Donbas War Will Last All Year; May Be Settled With Early...</div>
+		<div class="link"><a class="btn" href="/blogs/new-atlanticist/ukraine-s-crisis-in-2015-what-to-expect">Read More</a>
+		</div>
+	</li>
+		<li>
+		<div class="date"></div>
+		<div class="title"><a href="/blogs/new-atlanticist/russian-special-forces-and-regular-troops-lead-moscow-s-biggest-direct-offensive-in-ukraine-since-august">Russian Troops Lead Moscow’s Biggest Direct Offensive in Ukraine Since August</a>
+		</div>
+		<div class="intro">As Kremlin Escalates, the War Costs Ukraine $6 Million-Plus Daily, Atlantic...</div>
+		<div class="link"><a class="btn" href="/blogs/new-atlanticist/russian-special-forces-and-regular-troops-lead-moscow-s-biggest-direct-offensive-in-ukraine-since-august">Read More</a>
+		</div>
+	</li>
+		<li>
+		<div class="date"></div>
+		<div class="title"><a href="/blogs/new-atlanticist/russias-military-advance-in-ukraine-wins-it-advantages-in-new-truce-deal">Russia’s Ukraine War Wins it the Advantage in New Truce Deal</a>
+		</div>
+		<div class="intro">‘Minsk II’ Accord Will Let Moscow Keep Pumping Arms, Fighters into...</div>
+		<div class="link"><a class="btn" href="/blogs/new-atlanticist/russias-military-advance-in-ukraine-wins-it-advantages-in-new-truce-deal">Read More</a>
+		</div>
+	</li>
+	</ul>
+
+
+
+
+
+		</div>
+	
+											</div>
+				</div>
+				<div id="right" class="span3 hidden-phone ">
+					<div class="padding">
+														<div class="moduletable blue span3">
+					<h3>ABOUT NEW ATLANTICIST</h3>
+					
+
+<div class="custom blue span3"  >
+	Expert analysis on the most pressing issues facing the transatlantic community from the Council's staff, board, affiliated scholars, and friends.<em><br /><br />The views expressed in New Atlanticist are solely those of the authors and do not necessarily reflect the views of the Atlantic Council, its staff, or its supporters.</em><br /><br /></div>
+		</div>
+			<div class="moduletable span3 gray">
+					<h3>MOST POPULAR: NEW ATLANTICIST</h3>
+					<ul class="mostread span3 gray">
+	<li>
+		<div class="date">February 5, 2016</div>
+		<div class="title"><a href="/blogs/new-atlanticist/putin-corners-himself-in-ukraine-we-would-be-crazy-to-placate-him-now">Putin Corners Himself in Ukraine. We Would Be Crazy to Placate Him Now</a></div>
+			</li>
+	<li>
+		<div class="date">February 9, 2016</div>
+		<div class="title"><a href="/blogs/new-atlanticist/dutch-likely-to-hand-putin-a-major-symbolic-victory-in-april-referendum-on-the-eu-ukraine-association-agreement">Dutch Likely to Hand Putin a Major Symbolic Victory in Referendum on EU-Ukraine Association Agreement</a></div>
+			</li>
+	<li>
+		<div class="date">January 22, 2016</div>
+		<div class="title"><a href="/blogs/new-atlanticist/what-the-falling-oil-price-means-for-russia-and-ukraine">What Falling Oil Prices Mean for Russia and Ukraine</a></div>
+			</li>
+	<li>
+		<div class="date">February 9, 2016</div>
+		<div class="title"><a href="/blogs/new-atlanticist/actually-no-russia-and-ukraine-are-not-equally-delinquent-when-it-comes-to-fulfilling-minsk">Actually, No. Russia and Ukraine Are Not Equally Delinquent When It Comes to Fulfilling Minsk</a></div>
+			</li>
+	<li>
+		<div class="date">February 3, 2016</div>
+		<div class="title"><a href="/blogs/new-atlanticist/why-do-ukraine-s-reform-ministers-keep-quitting">Why Do Ukraine’s Reform Ministers Keep Quitting? </a></div>
+			</li>
+</ul>
+		</div>
+			<div class="moduletable span3 grad last">
+					<h3>COUNCIL IN THE NEWS</h3>
+					<ul class="span3">
+<li>
+	<div class="date">February 18, 2016</div>
+	<div class="title"><a href="/news/in-the-news/stein-quoted-by-dpa-international-on-kurdish-military-involvement-in-syria-and-turkey">Stein Quoted by DPA International on Kurdish Military Involvement in Syria and Turkey</a></div>		
+</li>	
+<li>
+	<div class="date">February 18, 2016</div>
+	<div class="title"><a href="/news/in-the-news/pham-quoted-by-foreign-policy-on-us-involvement-in-ugandan-elections">Pham Quoted by Foreign Policy on US Involvement in Ugandan Elections</a></div>		
+</li>	
+<li>
+	<div class="date">February 18, 2016</div>
+	<div class="title"><a href="/news/in-the-news/nordenman-quoted-by-cnn-on-military-operations-between-norway-and-russia">Nordenman Quoted by CNN on Military Operations Between Norway and Russia</a></div>		
+</li>	
+<li>
+	<div class="date">February 18, 2016</div>
+	<div class="title"><a href="/news/in-the-news/munich-security-conference-cyber-dinner-event-featured-in-washington-post">Munich Security Conference Cyber Dinner Event Featured in Washington Post</a></div>		
+</li>	
+<li>
+	<div class="date">February 18, 2016</div>
+	<div class="title"><a href="/news/in-the-news/atlantic-council-edelman-trust-barometer-event-featured-in-inc-magazine">Atlantic Council Edelman Trust Barometer Event Featured in Inc. Magazine</a></div>		
+</li>	
+</ul>
+
+		</div>
+	
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-content row">
+				<div id="footer-left" class="span3">
+					<div class="padding">
+								<div class="moduletable copyright">
+					
+
+<div class="custom copyright"  >
+	Copyright © 2016 Atlantic Council.<br />All Rights Reserved.<br /><br />
+<div><a href="http://www.youtube.com/atlanticcouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_youtube_lg.gif" alt="YouTube" width="28" height="28" /></a><a href="http://www.facebook.com/AtlanticCouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_facebook_lg.gif" alt="Facebook" width="28" height="28" /></a><a href="http://www.twitter.com/AtlanticCouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_twitter_lg.gif" alt="Twitter" width="28" height="28" /></a><a href="/about/atlanticcouncil" target="_blank"><img class="icon" style="margin-right: 2px;" src="/images/content/icon_rss_lg.gif" alt="RSS" width="28" height="28" /></a></div></div>
+		</div>
+	
+					</div>
+				</div>
+				<div id="footer-center" class="span6">
+					<div class="padding">
+								<div class="moduletable footerlinks">
+					
+
+<div class="custom footerlinks"  >
+	<table>
+<tbody>
+<tr>
+<td><strong>Programs</strong>
+<ul>
+<li><a href="/programs/brent-scowcroft-center">Brent Scowcroft Center on International Security</a></li>
+<li><a href="/programs/rafik-hariri-center-for-the-middle-east">Rafik Hariri Center for the Middle East</a></li>
+<li><a href="/programs/adrienne-arsht-latin-america-center">Adrienne Arsht Latin America Center</a></li>
+<li><a href="/programs/dinu-patriciu-eurasia-center">Dinu Patriciu Eurasia Center</a></li>
+<li><a href="/programs/south-asia-center">South Asia Center</a></li>
+</ul>
+</td>
+<td><strong>&nbsp;</strong><br />
+<ul>
+<li><a href="/programs/africa-center">Africa Center</a></li>
+<li><a href="/programs/millennium-leadership-program">Millennium Leadership Program</a></li>
+<li><a href="/programs/global-business-and-economics">Global Business &amp; Economics Program</a></li>
+<li><a href="/programs/global-energy-center"></a><a href="/programs/global-energy-center">Global Energy Center</a></li>
+<li><a href="/programs/future-europe-initiative"></a><a href="/programs/future-europe-initiative">Future Europe Initiative</a></li>
+</ul>
+</td>
+<td><strong>Blogs</strong>
+<ul>
+<li><a href="/blogs/new-atlanticist">New Atlanticist</a></li>
+<li><a href="/blogs/natosource">NATOSource</a></li>
+<li><a href="/blogs/egyptsource">EgyptSource</a></li>
+<li><a href="/blogs/menasource">MENASource</a></li>
+<li><a href="/blogs/futuresource">FutureSource</a></li>
+<li><a href="/blogs/defense-industrialist">Defense Industrialist</a></li>
+<li><a href="/component/content/category/blogs/ttip-action?layout=blog" style="line-height: inherit; background-color: transparent;">TTIP Action</a></li>
+</ul>
+</td>
+<td><strong>&nbsp;</strong><br />
+<ul>
+<li><a href="/blogs/econographics">EconoGraphics</a></li>
+<li><a href="/component/content/category/blogs/southasiasource?layout=blog" style="line-height: inherit; background-color: transparent;">SouthAsiaSource</a></li>
+<li><a href="/blogs/africasource">AfricaSource</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table></div>
+		</div>
+	
+					</div>
+				</div>
+				<div id="footer-right" class="span3">
+					<div class="padding">
+								<div class="moduletable quickfind">
+					
+
+<div class="custom quickfind"  >
+	<strong>Quick Find</strong>
+<ul>
+<li><a href="/publications">Publications</a></li>
+<li><a href="/about/experts">Experts</a></li>
+<li><a href="/about">About Us</a></li>
+<li><a href="/contact">Contact Us</a></li>
+<li><a href="/careers/employment-internships">Careers</a></li>
+<li><a href="/subscribe">Subscribe</a></li>
+</ul></div>
+		</div>
+	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+<script type="text/javascript" src="http://6208503.collect.igodigital.com/collect.js"></script> 
+<script type="text/javascript"> _etmc.push(["setOrgId", "6208503"]); _etmc.push(["trackPageView"]); </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0c26160d49","applicationID":"6267129,6325217","transactionName":"MwZWZUtTD0ZUUhAIXgpMdVJNWw5bGnILD0UBDUByVlwVR1pdCARDSwddQkleAEw=","queueTime":0,"applicationTime":1770,"atts":"H0FVEwNJHEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

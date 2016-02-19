@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQ8AV1VaGwICXFNRAQQF"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+        <title>ChemistDirect | Fragrances Competition</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!--<link rel="stylesheet" href="http://d1quzj2w3xzul2.cloudfront.net/v2/css/normalize.min.css?v=nj1dmjsh1
+">-->
+        <!-- <link rel="stylesheet" href="http://d1quzj2w3xzul2.cloudfront.net/v2/css/slick.css?v=nj1dmjsh1
+"> -->
+        <link rel="stylesheet" href="http://d1quzj2w3xzul2.cloudfront.net/v2/css/main.css?v=nj1dmjsh1
+">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href="http://d1quzj2w3xzul2.cloudfront.net/v2/assets/favicon.ico?v=1" />
+        <meta content="True" name="HandheldFriendly">
+                        
+                                <!--<script type="text/javascript">
+            // include loadCSS here...
+            function loadCSS(e,n,o,t){"use strict";var d=window.document.createElement("link"),i=n||window.document.getElementsByTagName("script")[0],s=window.document.styleSheets;return d.rel="stylesheet",d.href=e,d.media="only x",t&&(d.onload=t),i.parentNode.insertBefore(d,i),d.onloadcssdefined=function(n){for(var o,t=0;t<s.length;t++)s[t].href&&s[t].href.indexOf(e)>-1&&(o=!0);o?n():setTimeout(function(){d.onloadcssdefined(n)})},d.onloadcssdefined(function(){d.media=o||"all"}),d}
+            // load a file
+            loadCSS("http://d1quzj2w3xzul2.cloudfront.net/v2/css/main.css?v=nj1dmjsh1
+");
+        </script>-->
+        <script type="text/javascript">
+            /**
+            * @preserve HTML5 Shiv 3.7.3-pre | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+            */
+            !function(a,b){function c(a,b){var c=a.createElement("p"),d=a.getElementsByTagName("head")[0]||a.documentElement;return c.innerHTML="x<style>"+b+"</style>",d.insertBefore(c.lastChild,d.firstChild)}function d(){var a=t.elements;return"string"==typeof a?a.split(" "):a}function e(a,b){var c=t.elements;"string"!=typeof c&&(c=c.join(" ")),"string"!=typeof a&&(a=a.join(" ")),t.elements=c+" "+a,j(b)}function f(a){var b=s[a[q]];return b||(b={},r++,a[q]=r,s[r]=b),b}function g(a,c,d){if(c||(c=b),l)return c.createElement(a);d||(d=f(c));var e;return e=d.cache[a]?d.cache[a].cloneNode():p.test(a)?(d.cache[a]=d.createElem(a)).cloneNode():d.createElem(a),!e.canHaveChildren||o.test(a)||e.tagUrn?e:d.frag.appendChild(e)}function h(a,c){if(a||(a=b),l)return a.createDocumentFragment();c=c||f(a);for(var e=c.frag.cloneNode(),g=0,h=d(),i=h.length;i>g;g++)e.createElement(h[g]);return e}function i(a,b){b.cache||(b.cache={},b.createElem=a.createElement,b.createFrag=a.createDocumentFragment,b.frag=b.createFrag()),a.createElement=function(c){return t.shivMethods?g(c,a,b):b.createElem(c)},a.createDocumentFragment=Function("h,f","return function(){var n=f.cloneNode(),c=n.createElement;h.shivMethods&&("+d().join().replace(/[\w\-:]+/g,function(a){return b.createElem(a),b.frag.createElement(a),'c("'+a+'")'})+");return n}")(t,b.frag)}function j(a){a||(a=b);var d=f(a);return!t.shivCSS||k||d.hasCSS||(d.hasCSS=!!c(a,"article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}mark{background:#FF0;color:#000}template{display:none}")),l||i(a,d),a}var k,l,m="3.7.3-pre",n=a.html5||{},o=/^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i,p=/^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i,q="_html5shiv",r=0,s={};!function(){try{var a=b.createElement("a");a.innerHTML="<xyz></xyz>",k="hidden"in a,l=1==a.childNodes.length||function(){b.createElement("a");var a=b.createDocumentFragment();return"undefined"==typeof a.cloneNode||"undefined"==typeof a.createDocumentFragment||"undefined"==typeof a.createElement}()}catch(c){k=!0,l=!0}}();var t={elements:n.elements||"abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video",version:m,shivCSS:n.shivCSS!==!1,supportsUnknownElements:l,shivMethods:n.shivMethods!==!1,type:"default",shivDocument:j,createElement:g,createDocumentFragment:h,addElements:e};a.html5=t,j(b),"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:this,document);
+        </script>
+        <script type="text/javascript">
+        var _root = 'http://www.chemistdirect.co.uk/';
+        var isMobile = false;
+        </script>
+
+        
+        
+                    <script type="text/javascript">
+            var fullsearch = 'no';
+            var new_rac = "yes";
+            var sliJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+            document.write(unescape('%3Clink rel="stylesheet" type="text/css" href="' + sliJsHost + 'assets.resultspage.com/js/rac/sli-rac.1.4.css" /%3E'));
+            document.write(unescape('%3Clink rel="stylesheet" type="text/css" href="' + sliJsHost + 'chemistdirect-uk.resultspage.com/rac/sli-rac_redesign.css?rev=182429" /%3E'));
+            </script>
+        
+                <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+                     <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=ssyqua4pblxpl2ur7ldrj6lqoa"></script>
+        
+        <script type="text/javascript" src="//dd6zx4ibq538k.cloudfront.net/smartserve-4140.js"></script>
+	    </head>
+    <body class="template-brands  ">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <script type="text/javascript">var dataLayer = [];</script>
+
+                
+                        
+                
+                        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TWJBFH"
+        height="0" width="0" style="display:none;visibility:hidden" sandbox></iframe></noscript>
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TWJBFH');</script>
+        <!-- End Google Tag Manager -->
+
+        <!--googleoff: index-->
+       
+                <!--googleon: index-->
+        <!-- Cookies drop down -->
+        <!--googleoff: index-->
+        <div class="cookies">
+            <div class="cd-container clearfix">
+                <a class="closecookie" rel="noindex,nofollow">x</a>
+                <p>Our website uses cookies so that we can make your shopping experience as simple and enjoyable as possible. You can read all about how we use them in our <a href="/privacy-and-cookies">Cookies Policy.</a> To accept this you don't need to do anything just carry on shopping, have fun. <a class="cookieaccept">Close</a>
+            </div>
+        </div>
+        <!--googleon: index-->
+        
+                <!-- top promo bar begin -->
+        <div class="cd-top-bar">
+            <p id="strip-banner" style="font-size:15px;">
+                  <span class="mobile-hidden">10% OFF our top selling products - This Weekend Only! - With code: <strong>FEB10OFF</strong><span class="cd-bf-button"><a href="/search/ppc/February-Code:FEB10OFF&format=department">View All</a></span></span>
+                  <span class="desktop-hidden">10% OFF <a href="/search/ppc/February-Code:FEB10OFF&format=department" style="color:#f05f22;text-decoration:underline;">top sellers</a> with code: <strong>FEB10OFF</strong></span>
+              </p>
+        </div>
+        <!-- top promo bar end -->
+        
+        <div class="cd-wrapper">
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <!-- header begin -->
+            <header class="cd-header" id="cd-header">
+                <div class="cd-header-fixed">
+                    <div class="cd-header-inner">
+                        <a href="#" class="cd-navbar-toggle">
+                            <span class="cd-icon"></span>
+                        </a>
+                        <a href="/" class="cd-logo"><img src="http://d1quzj2w3xzul2.cloudfront.net/v2/img/cd-logo-new.png" alt="UKs #1 Online Pharmacy - Chemist Direct" /></a>
+                        <div class="cd-search-account-basket">
+                            <a href="#" class="cd-search-button">
+                                <span class="cd-icon cd-search-mobile"></span>
+                            </a>
+                            <!-- account flyout begin --> 
+<div class="cd-header-account">
+            <a href="https://secure.chemistdirect.co.uk/signin" class="cd-account " rel="nofollow"><span class="cd-icon cd-account-mobile"></span><span class="mobile-hidden">Sign Up/In</span></a>
+    </div>
+<!--END account flyout begin -->                            <!-- basket starts here -->
+                            <!-- basket flyout begin -->
+<div class="cd-header-basket">
+    <a href="javascript:;" class="cd-basket-button">
+        <span class="cd-icon-basket"></span>
+        <span class="cd-basket-amount mobile-hidden" id="cd-basket-amount">&pound;0.00</span>
+        <span class="cd-basket-number" id="cd-basket-number">0</span>
+    </a>
+    <div class="cd-basket-flyout" id="cd-basket-flyout">
+        <div class="cd-basket-flyout-top">
+            <a href="http://www.chemistdirect.co.uk/delivery-information" class="cd-bf-note"><span class="cd-icon"></span>
+	                                Free UK Shipping in &pound;40.00
+                            </a>
+                    </div>
+        <div class="cd-bf-products-block">
+            <ul class="cd-bf-products-list">
+                            </ul>
+        </div>
+        <div class="cd-basket-flyout-bottom">
+            <span class="cd-bf-subtotal"><strong>Subtotal</strong>&pound;<span id="subtotal">0.00</span></span>
+            <div class="cd-bf-buttons">
+                <a href="http://www.chemistdirect.co.uk/basket" class="cd-bf-view cd-button">View Basket</a>
+                <a href="https://secure.chemistdirect.co.uk/checkout/delivery" class="cd-bf-checkout cd-button cd-button-green">Checkout</a>
+            </div>
+        </div>
+        <span class="cd-bf-arrow"></span>
+    </div>
+</div>
+<!-- basket flyout end -->
+                            <!-- basket ends here -->
+                        </div>
+						<script type="text/javascript">
+						    function validateSli() {
+						        if (document.getElementById("sli_search_1").value != "") {
+						            return true;
+						       }
+						       return false;
+						    }
+						</script>
+                        <!-- search form starts here -->
+                        <form method="get" id="search" action="http://www.chemistdirect.co.uk/search/go" class="cd-search-form" onsubmit="return validateSli();">
+                            <p>
+                                <input type="submit" value="" id="search_magnifier" class="cd-search-magnifier" />
+                                <input type="text" name="w" autocomplete="off" placeholder="Search by product, brand or condition" id="sli_search_1" class="cd-search-field" required/>
+                            </p>
+                        </form>
+                        <!-- search form ends here -->
+                                                <script type="text/javascript">
+                            var sliJsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+                            document.write(unescape('%3Cscript src="' + sliJsHost + 'chemistdirect-uk.resultspage.com/rac/sli-rac.config.js?rev=182429" type="text/javascript"%3E%3C/script%3E'));
+                        </script>
+                                            </div>
+                </div>
+            </header>
+            <!-- header end -->
+            <!-- top navigation begin -->
+            <div class="cd-nav-holder">
+                <nav class="cd-top-nav">
+    <ul class="cd-top-nav-list">
+                        <li class="cd-top-nav-li first">
+            <a href="/pharmacy-services" data-id="pharmacy-services" title="Online Doctor and Prescriptions"><i class="fa fa-caret-right"></i>Online Doctor &amp; Prescriptions</a>
+            <div class="cd-top-nav-drop cd-online-doctor-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                <li class="cd-top-nav-li">
+            <a href="/medicines" data-id="medicines" title="Medicines"><i class="fa fa-caret-right"></i>Medicines</a>
+            <div class="cd-top-nav-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                <li class="cd-top-nav-li">
+            <a href="/healthcare" data-id="healthcare" title="Healthcare, Mother and Baby"><i class="fa fa-caret-right"></i>Healthcare &amp; Baby</a>
+            <div class="cd-top-nav-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                <li class="cd-top-nav-li">
+            <a href="/vitamins-and-supplements" data-id="vitamins-and-supplements" title="Vitamins and Supplements"><i class="fa fa-caret-right"></i>Vitamins &amp; Health Packs</a>
+            <div class="cd-top-nav-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                <li class="cd-top-nav-li">
+            <a href="/toiletries" data-id="toiletries" title="Toiletries and Fragrances"><i class="fa fa-caret-right"></i>Toiletries</a>
+            <div class="cd-top-nav-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                <li class="cd-top-nav-li">
+            <a href="/skin-care" data-id="skin-care" title="Skincare"><i class="fa fa-caret-right"></i>Skincare</a>
+            <div class="cd-top-nav-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                <li class="cd-top-nav-li">
+            <a href="/pets" data-id="pets" title="Pet Food and Pet Health"><i class="fa fa-caret-right"></i>Pet Health</a>
+            <div class="cd-top-nav-drop">
+                <span class="cd-loader"></span>
+            </div>
+        </li>
+                                                                                                                                                                                                    </ul>
+</nav>
+            </div>
+            <!-- top navigation end -->
+            <!-- container begin -->
+            <div class="cd-container">
+                        <!-- breadcrumbs begin -->
+<ul class="cd-breadcrums-list" itemprop="breadcrumb">
+                        <li class="cd-breadcrumb-home"><a href="/" title="Home"></a><span class="sep"></span></li>
+                
+        
+		    	        <li>Social Email</li>
+	    	</ul>
+<!-- breadcrumbs end -->                            <!-- why chemist direct top bar begin -->
+        <div class="cd-block">
+                            <div class="cd-why-bar">
+<ul class="cd-why-bar-list">
+<li class="cd-why-bar-delivery"><a rel="nofollow" href="/delivery-information"> <span class="cd-icon"></span> <span class="cd-way-info"> <strong>Free UK Delivery</strong> On orders over £40*</span> </a></li>
+<li class="cd-why-bar-save"><a rel="nofollow" href="/trust-us"> <span class="cd-icon"></span> <span class="cd-way-info"> <strong>Trust Us</strong>Why shop with us</span> </a></li>
+<li class="cd-why-bar-clearance"><a href="tel: 01215411800"> <span class="cd-icon"></span> <span class="cd-way-info"> <strong>0121 541 1800</strong> Call our UK team to order</span> </a></li>
+</ul>
+</div>
+                    </div>
+        <!-- why chemist direct top bar end -->
+
+    
+    <div class="cd-content cd-block">
+        <div class="cd-main">
+                            <!-- carousel begin -->
+                                    <a class="cd-carousel-item-link" onclick="dataLayer.push({'event':'GAE', 'GAE':{'category':'header', 'action':'click', 'label':'Social Email-Fragrance+Competition+Email+Sign+Up-Hero-720.jpg', 'value':''}});"><img alt="Fragrance Social Header Image" src="//cdn.chemistdirect.co.uk/img/Promotional_landing_pages/Social+Email+Signup/Fragrance+Competition+Email+Sign+Up-Hero-720.jpg"></a>
+                                <!-- carousel end -->
+                        
+            <!-- products row begin -->
+            <section>
+                                
+                                                                                    <section><div class="cd-main-content"><header></header><h2 class="highlight">Win 1 of 8 Valentine's Day fragrances for her worth up to &pound;38.99!</h2>
+<p>In the run up to the most romantic day of the year, we&rsquo;re giving you the chance to win 1 of 8 special Valentine&rsquo;s Day fragrances for her every day for the next 8 days, worth up to &pound;38.99! Fragrances included in the competition are from Calvin Klein, Davidoff, Elizabeth Ardern, Issey Miyake, DKNY and Vera Wang</p>
+<p>To be in with a chance of winning, simply enter your email into the box below and we&rsquo;ll be in touch if you&rsquo;re one of our daily lucky winners. Best of all, we&rsquo;ll get the bundle to you in time for Valentine&rsquo;s Day!</p>
+<iframe width="680" height="640" style="max-width: 680px; width: 100%;" src="https://docs.google.com/forms/d/1EtrIZUSj15WO2eY6ID_k486smKkrdkkZR_uIzXznJYw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+<p>For more great competitions, deals and health news follow us on <a href="https://twitter.com/ChemistDirect" onclick="dataLayer.push({'event':'GAE', 'GAE':{'category':'contentfirst', 'action':'click', 'label':'Social Email', 'value':''}});">Twitter</a> and like us on <a href="https://www.facebook.com/chemistdirect/" onclick="dataLayer.push({'event':'GAE', 'GAE':{'category':'contentfirst', 'action':'click', 'label':'Social Email', 'value':''}});">Facebook</a>.</p>
+<p></p>
+</div>
+</section>
+                                                    </section>
+            <!-- products row end -->
+            
+            <!-- products row begin -->
+            <section>
+                                
+                                                                                    <section><div class="cd-main-content"><header></header><h2 class="highlight">Terms and Conditions</h2>
+<p>By submitting your email address you agree to receive a monthly email Newsletter from Chemist Direct. You can unsubscribe at any time by clicking on the unsubscribe link at the bottom of each email.</p>
+<p></p>
+</div>
+</section>
+                                                    </section>
+            <!-- products row end -->
+            
+            <!-- products row begin -->
+                <section>
+                                                
+                                            </section>
+
+            <!-- products row begin -->
+            <section>
+                                
+                                            </section>
+            <!-- products row end -->
+            
+            <!-- products row begin -->
+            <section>
+                                
+                                            </section>
+            <!-- products row end -->
+        </div>
+        <div class="cd-left">
+                                                            <nav class="cd-department-nav">
+<h1>Valentines Day Offers</h1>
+<ul class="cd-department-list">
+<li><a href="/toiletries/fragrance/fragrance-for-him/cat-b1m?sort=savings&order=desc">Fragrances for Him <br />up to 20% Off</a></li>
+<li><a href="/toiletries/fragrance/fragrance-for-her/cat-b1n?sort=savings&order=desc">Fragrances for Her <br />up to 20% Off</a></li>
+<li><a href="/brands/pasante/bnd-2ug">Pasante Buy 1 Get 1 FREE</a></li>
+<li><a href="/search/ppc/Garnier+Pure">Garnier Pure up to 25% Off</a></li>
+<li><a href="/brands/maxbido/bnd-2kq">Maxbido up to 50% Off</a></li>
+<li><a href="/brands/fembido/bnd-9cu">Fembido up to 50% Off</a></li>
+</ul>
+</nav>
+                                    </div>
+    </div>
+    
+            
+                    </div>
+            <!-- container end -->
+            
+            
+            <!-- footer begin -->
+            <footer class="cd-footer">
+                <div class="cd-footer-top"><ul class="cd-footer-top-list"><li class="cd-footer-top-li"><span class="cd-footer-top-li-heading">Help &amp; Support<span class="cd-icon"></span></span><ul class="mobile-hidden"><li><a href="http://www.chemistdirect.co.uk/contact-us" >Customer Service</a></li><li><a href="http://www.chemistdirect.co.uk/delivery-information" rel="nofollow">Deliveries</a></li><li><a href="http://www.chemistdirect.co.uk/returns" rel="nofollow">Returns</a></li><li><a href="http://www.chemistdirect.co.uk/how-to-shop" rel="nofollow">How to Shop</a></li><li><a href="http://www.chemistdirect.co.uk/faqs" >FAQs</a></li></ul></li><li class="cd-footer-top-li"><span class="cd-footer-top-li-heading">Our Services<span class="cd-icon"></span></span><ul class="mobile-hidden"><li><a href="http://www.chemistdirect.co.uk/online-doctor" rel="nofollow">Online Doctor</a></li><li><a href="http://www.chemistdirect.co.uk/prescriptions" rel="nofollow">Prescriptions</a></li><li><a href="http://www.chemistdirect.co.uk/prescription/pet" rel="nofollow">Pet Prescriptions</a></li><li><a href="http://www.chemistdirect.co.uk/tips-and-advice" >Tips and Advice</a></li></ul></li><li class="cd-footer-top-li"><span class="cd-footer-top-li-heading">About Us<span class="cd-icon"></span></span><ul class="mobile-hidden"><li><a href="http://www.chemistdirect.co.uk/company" >Our Company</a></li><li><a href="http://www.chemistdirect.co.uk/company/management-team" rel="nofollow">Our Team</a></li><li><a href="http://www.chemistdirect.co.uk/work-with-us" rel="nofollow">Careers</a></li><li><a href="http://www.chemistdirect.co.uk/affiliates" rel="nofollow">Affiliates</a></li></ul></li><li class="cd-footer-top-li"><span class="cd-footer-top-li-heading mobile-hidden">Social</span><ul class="cd-social-icon-holder"><li class="cd-fb-link"><a href="https://www.facebook.com/chemistdirect" rel="nofollow"><span class="cd-icon"></span><span class="mobile-hidden">Facebook</span></a></li><li class="cd-twitter-link"><a href="https://twitter.com/ChemistDirect" rel="nofollow"><span class="cd-icon"></span><span class="mobile-hidden">Twitter</span></a></li><li class="cd-google-link"><a href="https://plus.google.com/+chemistdirect" rel="nofollow"><span class="cd-icon"></span><span class="mobile-hidden">Google+</span></a></li><li class="cd-blog-link"><a href="http://www.chemistdirect.co.uk/blog"><span class="cd-icon"></span><span class="mobile-hidden">Blog</span></a></li></ul></li></ul></div><div class="cd-footer-middle clearfix"><div class="cd-footer-middle-innner"><ul><li><span class="cd-footer-logo-holder"><a class="cd-registered-logo"target="_blank" href="http://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/1101588" >Registered pharmacy</a><a class="cd-mhra-logo" href="http://medicine-seller-register.mhra.gov.uk/search-registry/190" target="_blank" rel="nofollow"><img src="https://pclportal.mhra.gov.uk/analytics/LogoSancoInternet_UK_B-336.png" /></a><a rel="nofollow" href="https://uk.trustpilot.com/review/www.chemistdirect.co.uk?utm_medium=trustboxes&utm_source=MicroStar" data-ng-href="https://uk.trustpilot.com/review/www.chemistdirect.co.uk?utm_medium=trustboxes&utm_source=MicroStar" target="_blank" class="cd-tp-footer-icon"><img src="http://cdn.chemistdirect.co.uk/v2/img/trustPilot_footer.png" width="88" height="60" alt="trust pilot" /></a><!--
+	                				<div class="cd-trustpilot-logo"><div class="trustpilot-widget" data-locale="en-GB" data-template-id="5419b732fbfb950b10de65e5" data-businessunit-id="4782b51a00006400050210a1" data-style-height="60px" data-style-width="100%" data-theme="light"></div></div>
+                                    --><a class="cd-mcafee-logo" target="_blank" href="https://www.mcafeesecure.com/verify?host=www.chemistdirect.co.uk"><img class="mfes-trustmark mfes-trustmark-hover" border="0" src="//cdn.ywxi.net/meter/www.chemistdirect.co.uk/102.gif?w=84" width="84" height="35" title="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" alt="McAfee SECURE sites help keep you safe from identity theft, credit card fraud, spyware, spam, viruses and online scams" oncontextmenu="alert('Copying Prohibited by Law - McAfee Secure is a Trademark of McAfee, Inc.'); return false;"></a></span></li><li><span class="cd-payment-logo"></span></li></ul></div></div><!-- bottom strip --><div class="cd-footer-bottom"><div class="cd-footer-bottom-inner"><span class="cd-reserved">&copy; 2016 Chemistdirect.co.uk All rights reserved</span><ul class="cd-footer-bottom-list"><li><a href="/privacy-and-cookies" rel="nofollow" title="Privacy">Privacy</a><span class="sep">|</span></li><li><a href="/terms-and-conditions" rel="nofollow" title="Terms &amp; conditions">Terms &amp; conditions</a><span class="sep">|</span></li><li><a href="/sitemap" title="Site Map">Site map</a><!-- <li><a href="/how-to-shop" title="Secure shopping">Secure shopping</a></li> --></ul></div></div><!-- bottom strip -->            </footer>
+            <!-- footer end -->
+            <input type="hidden" id="refreshed" value="no">
+        </div>
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/vendor/modernizr-2.6.2.min.js?v=nj1dmjsh1
+"></script>
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/vendor/picturefill-srcset.js" async></script>
+
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/main.js?v=nj1dmjsh1
+"></script>
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/site.js?v=nj1dmjsh1
+"></script>
+
+        <!-- begin page specific scripts -->
+                <!-- end page specific scripts -->
+        <script src="//www.dwin1.com/2102.js" type="text/javascript" defer="defer"></script>
+
+
+        <!--
+        <script type="text/javascript">
+            // refresh page when back is pressed
+            onload=function(){
+                var e=document.getElementById("refreshed");
+                if(e.value=="no") {
+                    e.value="yes";
+                } else {
+                    e.value="no";
+                    location.reload();
+                }
+            }
+        </script>
+        -->
+                    <!-- begin SnapEngage code -->
+            <script type="text/javascript">
+                (function() {
+                    var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+                    se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/a7e4fe21-4bb4-449f-9397-07928600d4f3.js';
+                    var done = false;
+                    se.onload = se.onreadystatechange = function() {
+                        if (!done&&(!this.readyState||this.readyState==='loaded'||this.readyState==='complete'))
+                        {
+                            done = true; // Place your SnapEngage JS API code below
+                            // SnapEngage.allowChatSound(true); // Example JS API: Enable sounds for Visitors.
+                        }
+                    };
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+                })();
+            </script>
+            <!-- end SnapEngage code -->
+                
+                            
+        <script type="text/javascript" async src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
+
+        <!-- BEGIN Sailthru related js scripts -->
+        <script type="text/javascript" src="//ak.sail-horizon.com/scout/v1.js"></script>
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/sailthru.scout.templates.js?v=nj1dmjsh1
+"></script>
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/sailthru.scout.js?v=nj1dmjsh1
+"></script>
+        <script type="text/javascript" src="http://d1quzj2w3xzul2.cloudfront.net/v2/js/sailthru.horizon.js?v=nj1dmjsh1
+"></script>
+        <script type="text/javascript">
+            Horizon.init(0, isMobile);
+            Scout.init();
+        </script>
+        <!-- END Sailthru related js scripts -->
+        <!--- BEGIN QUBIT SCRIPT --->
+        <script type="text/javascript" id="qubitScript">
+
+    window.universal_variable = {
+        "page": {
+            "breadcrumb" : "[\"home\"]",             "type" :  "content" ,
+            "environment": "production"
+        },
+                                    "user": {
+                "language": "en-gb"
+            },
+                                "version" : "1.2.1"
+    }
+
+</script>
+        <script src="//d3c3cq33003psk.cloudfront.net/opentag-134163-2034234.js" async defer></script>
+        <!--- END QUBIT SCRIPT --->
+
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"aecd40c8cd","applicationID":"12823652","transactionName":"ZQQDMRAHXkNQAUZZWFxOIAYWD19eHjFbRFJxDg8REAlcXFQQHVNYXBUECxY=","queueTime":0,"applicationTime":182,"atts":"SUMAR1gdTU0=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>

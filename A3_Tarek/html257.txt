@@ -1,0 +1,2279 @@
+            <!DOCTYPE html>
+<html class="no-js masonry-supported" lang="en-US" prefix="og: http://ogp.me/ns#">
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAIDWFFVGwICUFVVBAgA"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+    <meta charset="UTF-8">
+    
+    <script>
+                var hs = hs || {};
+        hs.Blog = {
+            subscriptionForms: {
+                subscription: 2645,
+                subscriptionFollowUp: 2646
+            },
+            siteAccess: 'en'
+        };
+    </script>
+    
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>How to Bulk Schedule Messages in HootSuite</title>
+<meta name="description" content="Mike Allton explains how to bulk schedule messages in HootSuite using spreadsheets, and the various uses for this technique."/>
+<meta name="news_keywords" content="bulk scheduling, guest, hootsuite solutions partner, video, social media, hootsuite" />
+<link rel="original-source" href="http://blog.hootsuite.com/how-to-bulk-schedule/" />
+<meta name="robots" content="noodp,noydir"/>
+<link rel="canonical" href="http://blog.hootsuite.com/how-to-bulk-schedule/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Bulk Schedule Messages in HootSuite" />
+<meta property="og:description" content="Mike Allton explains how to bulk schedule messages in HootSuite using spreadsheets, and the various uses for this technique." />
+<meta property="og:url" content="http://blog.hootsuite.com/how-to-bulk-schedule/" />
+<meta property="og:site_name" content="Hootsuite Social Media Management" />
+<meta property="article:tag" content="bulk scheduling" />
+<meta property="article:tag" content="Guest" />
+<meta property="article:tag" content="Hootsuite Solutions Partner" />
+<meta property="article:tag" content="Video" />
+<meta property="article:section" content="Events" />
+<meta property="article:published_time" content="2013-11-14T06:50:09+00:00" />
+<meta property="article:modified_time" content="2014-09-24T12:03:33+00:00" />
+<meta property="og:updated_time" content="2014-09-24T12:03:33+00:00" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton-150x150.jpg" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-Post-620x407.png" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-620x492.png" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='stylesheet' id='hs-blog-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/css/hs-blog.css?ver=3.1.52' type='text/css' media='all' />
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/livefyre-apps/assets/js/lfapps.js?ver=1.1'></script>
+<script type='text/javascript' src='http://cdn.livefyre.com/Livefyre.js?ver=1.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/libraries/jquery-1.11.3.min.js'></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/libraries/jquery-2.1.4.min.js'></script>
+<!--<![endif]-->
+<script type='text/javascript' src='//cdn.optimizely.com/js/176765137.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var theme = {"uri":"http:\/\/blog.hootsuite.com\/wp-content\/themes\/hootsuite-2.0","ajaxurl":"https:\/\/blog.hootsuite.com\/wp-admin\/admin-ajax.php","thankYouTitle":"You are now subscribed to the Hootsuite blog.","thankYouBodyOne":"We're excited to have you on board! We'd like to give you even more custom content that helps you succeed.","thankYouBodyTwo":"Tell us a bit about yourself, and we'll periodically send you personalized content like:","thankYouLIOne":"Comprehensive tutorial videos and articles;","thankYouLITwo":"Case studies that highlight successes in your industry;","thankYouLIThree":"Tips, tactics, and best practices for companies of your size;","thankYouLIFour":"The latest news from around the social web;","thankYouLIFive":"and much more."};
+var qualaroo = {"send":"Send","requiredField":"Required field"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/scripts-header.min.js?ver=3.1.52'></script>
+<link rel='https://api.w.org/' href='http://blog.hootsuite.com/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="http://blog.hootsuite.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blog.hootsuite.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&#038;format=xml" />
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<meta name="generator" content="WPML ver:3.3.6 stt:1,4,3,27,28,2,25,44;" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="author" content="Hootsuite"><meta name="apple-itunes-app" content="app-id=341249709"><meta name="google-play-app" content="app-id=com.hootsuite.droid.full"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@https://twitter.com/mike_allton"><meta name="twitter:site" content="@hootsuite"><meta name="twitter:title" content="How to Bulk Schedule Messages Using Hootsuite"><meta name="twitter:description" content="Mike Allton explains how to bulk schedule messages in HootSuite using spreadsheets, and the various uses for this technique."><meta name="twitter:domain" content="http://blog.hootsuite.com"><meta name="twitter:image" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/scheduler-150.jpeg">    <script src="https://fast.wistia.net/static/E-v1.js" async defer></script>
+</head>
+<body class="single single-post postid-54337 single-format-standard" itemscope itemtype="http://schema.org/WebPage">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-963X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-963X');
+</script>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<div id="m-container" class="m-container">
+    <div class="m-pusher">
+        <div class="m-content">
+            <div class="m-content-inner _smartBannerAdjustInner">
+                <header class="header header--simple _smartBannerAdjust" id="header-simple" aria-hidden="true" role="banner">
+                    <div class="container">
+                        <a class="hs-logo" href="https://hootsuite.com">Hootsuite Media Inc.</a>
+                        <div class="primary-nav">
+                            <nav class="primary-nav__menu menu" role="navigation">
+                            <ul id="menu-main-menu" class="menu"><li id="menu-item-83669" class="menu-item--enterprise menu-item menu-item-type-custom menu-item-object-custom menu-item-83669"><a href="https://hootsuite.com/plans/enterprise" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Hootsuite for Enterprise</a></li>
+<li id="menu-item-83670" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83670"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-83671" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83671"><a href="https://hootsuite.com/products/social-media-engagement" class="" data-navsrc="nav--level2">Engagement</a></li>
+	<li id="menu-item-83672" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83672"><a href="https://hootsuite.com/products/social-media-publishing" class="" data-navsrc="nav--level2">Publishing</a></li>
+	<li id="menu-item-83678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83678"><a href="https://hootsuite.com/products/social-media-analytics" class="" data-navsrc="nav--level2">Analytics</a></li>
+	<li id="menu-item-83679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83679"><a href="https://hootsuite.com/products/campaigns" class="" data-navsrc="nav--level2">Campaigns</a></li>
+	<li id="menu-item-83680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83680"><a href="https://hootsuite.com/products/platform" class="" data-navsrc="nav--level2">Platform</a></li>
+	<li id="menu-item-83681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83681"><a href="https://hootsuite.com/products/extensions" class="" data-navsrc="nav--level2">Extensions</a></li>
+	<li id="menu-item-83682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83682"><a href="https://hootsuite.com/products/mobile-apps" class="" data-navsrc="nav--level2">Mobile</a></li>
+	<li id="menu-item-83683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83683"><a href="https://hootsuite.com/services" class="" data-navsrc="nav--level2">Services</a></li>
+</ul>
+</li>
+<li id="menu-item-83673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83673"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a>
+<ul class="sub-menu">
+	<li id="menu-item-83684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83684"><a href="https://hootsuite.com/plans/free" class="" data-navsrc="nav--level2">Free</a></li>
+	<li id="menu-item-83685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83685"><a href="https://hootsuite.com/plans/pro" class="" data-navsrc="nav--level2">Pro</a></li>
+	<li id="menu-item-83686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83686"><a href="https://hootsuite.com/plans/enterprise" class="" data-navsrc="nav--level2">Enterprise</a></li>
+	<li id="menu-item-83687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83687"><a href="http://hootsuite.com/plans" class="" data-navsrc="nav--level2">Compare Plans</a></li>
+</ul>
+</li>
+<li id="menu-item-83674" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83674" data-auth="out"><a href="https://hootsuite.com/plans" class="btn btn--sm btn--success" data-navsrc="nav--level1">Sign Up</a></li>
+<li id="menu-item-83675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83675" data-auth="out"><a href="https://hootsuite.com/login" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Log In</a></li>
+<li id="menu-item-83676" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83676" aria-hidden="true" data-auth="in"><a href="https://hootsuite.com/dashboard" class="btn btn--sm btn--primary" data-navsrc="nav--level1">Dashboard</a></li>
+<li id="menu-item-83677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83677" aria-hidden="true" data-auth="in"><a href="https://hootsuite.com/logout" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Sign Out</a></li>
+</ul>                            </nav>
+                            <div class="m-trigger-effects">
+                                <button class="menu-icon" data-effect="m-slide-out"><span>Menu</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Start navigation-tab -->
+<div class="toolbar">
+	<div class="container">
+		<p class="toolbar__label tablet-up-only">Blogs</p>
+		<nav class="nav nav-tabs">
+			<ul>
+																																<li class="category--social active"><a id="term-2675" data-term="2675" class="vertical-tab" href="http://blog.hootsuite.com/">Social</a></li>
+																																											<li class="category--innovation"><a id="term-2676" data-term="2676" class="vertical-tab" href="http://blog.hootsuite.com/channel/innovation/">Innovation</a></li>
+																																											<li class="category--hootsuite-life"><a id="term-2677" data-term="2677" class="vertical-tab" href="http://blog.hootsuite.com/channel/hootsuite-life/"><span class="brand">Hootsuite</span> Life</a></li>
+																																</ul>
+		</nav>
+		<div id="search-trigger"></div>
+		<form role="search" method="get" id="searchform" class="searchform" action="http://blog.hootsuite.com/">
+	<label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" placeholder="Search..." name="s" id="s">
+	<input type="submit" id="searchsubmit" value="Search">
+<input type='hidden' name='lang' value='en' /></form>	</div>
+</div>
+<!--End navigation-tab -->                </header>
+        <div class="content-wrapper " role="main">
+        <div class="content-wrapper__inner">
+                            <article class="post-54337 post type-post status-publish format-standard has-post-thumbnail hentry category-events category-hootsuite-life category-social-media-skills category-social tag-bulk-scheduling tag-guest tag-hootsuite-solutions-partner tag-video language-english" id="post-54337" role="article" itemscope="" itemtype="http://schema.org/Article">
+                    <header>
+                        <h1 class="post__title entry-title" itemprop="name">How to Bulk Schedule Messages Using Hootsuite</h1>                        <div class="meta">
+                            <p class="vcard"><img src="http://1.gravatar.com/avatar/b618336b76b0d1418a436153816dc557?s=40" itemprop="image" class="author-meta__avatar" height="40" width="40" alt="" /><span class="meta__author author-meta">By <a class="author-meta__name fn" href="http://blog.hootsuite.com/author/mike-alton/">Mike Allton</a></span></p><p class="faded"><span class="meta__date">14 November 2013</span><span class="meta__category"><a href="http://blog.hootsuite.com/channel/social/" class="link">Social</a></span><a href="http://blog.hootsuite.com/how-to-bulk-schedule/#livefyre-comments" class="meta__comments link livefyre-commentcount" data-lf-site-id="332321" data-lf-article-id="54337" >0 Comments</a></p>                        </div>
+                        <div class="social">
+                            	<a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>HootSuite</span></a>
+	<a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>Twitter</span></a>
+	<a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>Facebook</span></a>
+	<a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>LinkedIn</span></a>
+	<a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>Google +</span></a>
+                        </div>
+                    </header>
+
+                    <div class="post__body" itemprop="articleBody">
+                                                    <figure class="figure header-image--legacy">
+                                <img width="150" height="150" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/scheduler-150.jpeg" class="attachment-featured-post-thumbnail size-featured-post-thumbnail wp-post-image" alt="scheduler-150" />                                                            </figure>
+                                                <p><iframe src="http://fast.wistia.net/embed/iframe/c5hzb14jqz?controlsVisibleOnLoad=true&amp;version=v1&amp;videoHeight=338&amp;videoWidth=600&amp;volumeControl=true" name="wistia_embed" width="600" height="338" frameborder="0" scrolling="no"></iframe><br />
+<em>Mike Allton is an Internet Marketing Consultant and certified <a title="Apply to be a HootSuite Solution Partner" href="ttp://socialbusiness.hootsuite.com/solution-partner.html" target="_blank">HootSuite Solution Partner</a>. This article, on how to schedule social media posts, is the fourth in a series on making the most of your HootSuite account and was originally published on The Social Media Hat</em>. View the original <a title="How to Bulk Schedule Using HootSuite" href="http://www.thesocialmediahat.com/article/how-bulk-schedule-messages-using-hootsuite" target="_blank">here</a>.</p>
+<h2>What is HootSuite Bulk Scheduling?</h2>
+<figure class="figure alignright"><img class="size-thumbnail wp-image-52314" src="http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton-150x150.jpg" alt="Mike Allton" width="150" height="150" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton-150x150.jpg 150w, http://blog.hootsuite.com/wp-content/uploads/2013/09/MikeAllton.jpg 250w" sizes="(max-width: 150px) 100vw, 150px" /><figcaption>Mike Allton</figcaption></figure>
+<p>Within HootSuite, we have covered how you can use the Compose tool to <a title="How to Craft and Schedule Social Media Posts using HootSuite" href="http://www.thesocialmediahat.com/article/how-craft-and-schedule-social-media-posts-using-hootsuite">create a message that gets sent out to one or more selected social networks</a>. And we also covered how you can choose a specific date and time for the post to be published, or use HootSuite&#8217;s AutoSchedule to pick a time within the next 2 &#8211; 12 hours when it&#8217;s more likely that your network&#8217;s followers will be online. But what is this Bulk Schedule option that keeps coming up?</p>
+<p>Bulk Schedule is when you set up multiple posts to be published, all at once. It&#8217;s achieved by uploading a special spreadsheet, which we will dig into in a moment, and that tells HootSuite the time and content of every post you want to schedule.</p>
+<p>There is a maximum of 350 total scheduled messages across all of your networks for your HootSuite account, and you can specify multiple social networks when uploading your spreadsheet. However, if you&#8217;re going to bulk schedule messages it&#8217;s probably best that you have different spreadsheets with different times for different social networks, so keep that overall limit of 350 scheduled messages in mind.</p>
+<h2>What <em>can</em> you Bulk Schedule with HootSuite?</h2>
+<p>With your trusty spreadsheet, you can set specific date and times and specify text and a link to share at that time. Links are automatically shortened using your default HootSuite link shortener. Your total post, including both text and the link, is limited in characters by whichever network you&#8217;re posting to. Since it&#8217;s likely that you will be posting to Twitter, that means a limit of 140 characters. When you upload the spreadsheet, all posts in the sheet are scheduled for the selected networks, so you can create one spreadsheet for Twitter and a different one for Facebook where you a greater character allowance.</p>
+<p>Links are optional, so you can share plain text messages whenever you wish.</p>
+<h2>What <em>can&#8217;t</em> you Bulk Schedule with HootSuite?</h2>
+<p>One drawback to Bulk Scheduling is that you cannot include images. Normally, if you have a HootSuite Pro account, you can Compose a post, drop an image onto the post, and have that image posted as an image to Twitter or Facebook, rather than just a link preview. The uploaded spreadsheet for bulk scheduling offers no such option.</p>
+<p>You may not bulk schedule duplicate messages, though you can use the same spreadsheet later on to reschedule posts if it makes sense to do so.</p>
+<h2>How to set up HootSuite Bulk Scheduling</h2>
+<figure class="figure aligncenter"><img class="size-large wp-image-54356" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-Post-620x407.png" alt="How to get to the bulk scheduler" width="600" height="393" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-Post-310x203.png 310w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-Post-620x407.png 620w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-Post-250x164.png 250w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-Post-600x394.png 600w" sizes="(max-width: 600px) 100vw, 600px" /><figcaption>How to get to the bulk scheduler</figcaption></figure>
+<p>Bulk Scheduling obviously starts with the spreadsheet. Your HootSuite dashboard will provide you with a template, or you can use <a title="HootSuite Bulk Schedule Sample File" href="http://www.thesocialmediahat.com/sites/default/files/bulk-schedule-sample.csv">this one</a>. You can also go to <a title="Online Bulk Schedule CSV Creator for HootSuite" href="http://www.sonixstudio.com/blog/item/139-sonix-studios-csv-builder-app-for-hootsuite-free" target="_blank">this website</a> and create a spreadsheet online, which is worlds easier. That service, recommended by <a href="https://plus.google.com/u/0/111580156430232633252" target="_blank">+Jason Bahamundi</a>, can also schedule your posts within a timeframe parameter, and randomize them. If you want to edit your own spreadsheet, here&#8217;s how:</p>
+<p>The spreadsheet has three columns: Date, Message, Link. You do not need to label the columns. Each row is a new scheduled post, so if you want to schedule 15 posts your spreadsheet should have 15 rows of information. As mentioned earlier, the Message and Link column text needs to be limited in characters for whatever network you&#8217;re posting to, but otherwise can say whatever you want.</p>
+<p>The Date column data is what&#8217;s tricky, as the date must be in a very specific format of mm/dd/yyyy hh:mm or dd/mm/yyyy hh:mm. You&#8217;ll need to tell Excel that that data in column is Text and not to be changed or it will try to convert your dates into a different display that will fail your upload.</p>
+<p>Post times must end in a 5 or 0, like 10:00 or 10:45. If you put an odd time into your spreadsheet HootSuite will round up and then post. You also need to set all times to be at least ten minutes into the future so make sure you&#8217;re giving yourself enough time to schedule the activity.</p>
+<p>Save your spreadsheet as a CSV (comma separated values) and then upload it. HootSuite will either accept it or tell you that there are errors to fix.</p>
+<p>To upload, you can open a Compose box, click on the Schedule button and then click on the &#8220;bulk schedule posts&#8221; link. You can also go to the Publisher tab and click on the &#8220;Schedule in Bulk&#8221; button in the upper left.</p>
+<p>This will open the Bulk Scheduling dialogue box where you can upload your CSV file, select the format you chose to use for your post dates, and select one or more social networks.</p>
+<figure class="figure aligncenter"><img class="size-large wp-image-54358" src="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-620x492.png" alt="HootSuite-Bulk-Schedule" width="600" height="476" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-310x246.png 310w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-620x492.png 620w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-250x198.png 250w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule-600x476.png 600w, http://blog.hootsuite.com/wp-content/uploads/2013/11/HootSuite-Bulk-Schedule.png 864w" sizes="(max-width: 600px) 100vw, 600px" /><figcaption>A look at the bulk scheduling tool within the HootSuite dashboard</figcaption></figure>
+<p>If there are any issues with your uploaded file, HootSuite will tell you what the problems are and on which lines. For instance, if your posting to Twitter and you have a status update that is too long, HootSuite will tell you that row #2 has too many characters for Twitter. At that point, no posts will be scheduled, just in case it&#8217;s critical that the post(s) with an error be scheduled. You will need to correct or delete the status update(s) indicated, and then resubmit your CSV file.</p>
+<p>This is, of course, the point where most users get frustrated, and where that website I referenced earlier can come in handy. You may run into a bunch of errors, particularly if you&#8217;re uploading a lot of updates at once, and have trouble getting them all corrected. The first time you try the bulk scheduler, I recommend scheduling just a couple of posts so you can make sure that your spreadsheet format is correct, and you get the hang of the system.</p>
+<p>And be patient. Take the time to craft valuable and meaningful updates, and take the time to assemble and correct your spreadsheet, and you may be richly rewarded with an incredible savings of time in the long run.</p>
+<p>Now that you have the basic technique and tools to set up bulk scheduling, let&#8217;s look at some of the viable ways businesses might use this HootSuite feature.</p>
+<h2>Uses for HootSuite Bulk Scheduling</h2>
+<p>You can use HootSuite bulk scheduling to craft and share messages and activity using your old content. Make sure, of course, that the article information is still valid and appropriate.</p>
+<p>Another easy use case for bulk scheduling is when you or your social media manager are going to be out of the office, say for a week&#8217;s vacation, you can bulk schedule daily posts and updates to ensure that specific messages are being shared throughout the week. If you&#8217;re going to do this, I would still encourage you or a representative to continue to monitor your social networks so that you can respond to comments and feedback in a timely manner.</p>
+<p>Businesses who are active in content marketing, social media marketing and content curation often actually forget to simply mention themselves ands what they do. Is certainly OK to talk about yourself now and then on social networks and remind people who you are and what you do. Bulk Schedule is a great way to do this because you can decide in advance what you&#8217;re going to say, how often you&#8217;re going to say it, and then schedule it. This ensures regular communication but keeps it in line and in proportion to everything else that you&#8217;re saying.</p>
+<p>By the same token, if your business is regularly going to be closed or unavailable due to holidays, conferences or other circumstances, you can pre-schedule appropriate messages so your followers and customers know what to expect. You can create an Out of Office spreadsheet with all of the year&#8217;s holidays and special dates by row, and a custom message for each.</p>
+<p>Speaking of holidays, how about having some fun and wishing everyone a Happy Boxing Day or Happy Groundhog Day! You could set up reminders for yourself of course, or just have another spreadsheet that you load up and and update each January with the coming year&#8217;s dates and messages.</p>
+<p>Do you find yourself regularly sharing the same messages or reminders? Perhaps you&#8217;re hosting or attending a weekly Twitter chat, or maybe at the end of every month it&#8217;s helpful for you to remind your followers and customers to send in their information or files. Plug that into a Bulk Schedule so that you can be assured that it will go every time you need it to, leaving you free to concentrate on more important things.</p>
+<p>As you can see, there are a LOT of uses for Bulk Scheduling social media posts. What you aren&#8217;t seeing in this list are replacements for normal, day-to-day activity. Social media activity needs to be genuine and meaningful. But when we&#8217;re simply communicating information, like our hours on Christmas Eve, it&#8217;s almost better to schedule that well in advance and know that it&#8217;s taken care of.</p>
+<p>One final word on scheduling: always be mindful of what you have scheduled to post at any given time. You can open your HootSuite Dashboard and click on Publisher to see what&#8217;s scheduled to go out. If something happens and it would suddenly be inappropriate to be sharing the messages you have scheduled, make sure you log in and reschedule or delete them.</p>
+<p>These are the ways businesses can use HootSuite to schedule and maintain a consistent presence on social media that provides real value to your followers and potential customers</p>
+<p><span itemprop="video" itemscope itemtype="http://schema.org/VideoObject"><meta itemprop="name" content="How to Bulk Schedule Messages Using Hootsuite"><meta itemprop="thumbnailURL" content="http://blog.hootsuite.com/wp-content/uploads/2013/11/how-to-bulk-schedule-messages-using-hootsuite-hootsuite-social-media-management-310x174.jpg"><meta itemprop="description" content="Mike Allton explains how to bulk schedule messages in HootSuite using spreadsheets, and the various uses for this technique."><meta itemprop="uploadDate" content="2013-11-14T06:50:09+00:00"><meta itemprop="contentURL" content="http://embed.wistia.com/deliveries/4cfa1b9ad49620715e792c0d834e514b28ab3222/file.mp4"><meta itemprop="duration" content="PT3M23S"></span></p>
+                    </div>
+                                                                <div class="post__categories">
+                            <p class="post__categories__list">Filed Under:</p><ul>	<li class="cat-item cat-item-2684"><a href="http://blog.hootsuite.com/channel/hootsuite-life/events/" >Events</a>
+</li>
+	<li class="cat-item cat-item-1948"><a href="http://blog.hootsuite.com/channel/social/social-media-skills/" >Skills</a>
+</li>
+</ul>
+                        </div>
+                                        <section class="cta cta--subscription">
+                        <i class="i i--subscribe i--lg"></i>
+                        <h4 class="h2">Subscribe to our blog newsletter</h4>
+                        <p>Social media strategy, advice, and tips delivered direct to your inbox</p>
+                        <form method="get" action="http://blog.hootsuite.com/" class="faux">
+                            <label class="screen-reader-text" for="email">Email</label>
+                            <input name="email" class="email" placeholder="Enter your email address" maxlength="255" title="" type="email">
+                            <button type="submit" class="btn btn--secondary btn--lg">Subscribe</button>
+                        </form>
+                        <p class="note">Unsubscribe at any time</p>
+                    </section>
+
+                    <footer class="post__footer">
+                        <div class="social">
+                            <p>Share this post via:</p>
+                            	<a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>HootSuite</span></a>
+	<a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>Twitter</span></a>
+	<a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>Facebook</span></a>
+	<a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>LinkedIn</span></a>
+	<a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"><span>Google +</span></a>
+                        </div>
+                        <div class="post__footer__author">
+                            <h6 class="post__footer__section-title">Written by</h6>
+                            <div class="author-meta vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><img src="http://1.gravatar.com/avatar/b618336b76b0d1418a436153816dc557?s=40" itemprop="image" class="author-meta__avatar" height="40" width="40" alt="" /><p><a href="https://plus.google.com/u/0/107499215004519214139/posts" rel="author"></a><span class="author-meta__name fn" itemprop="name"><a class="url" href="http://blog.hootsuite.com/author/mike-alton/">Mike Allton</a><a target="_blank" href="https://twitter.com/mike_allton"><span class="i i--twitter i--xxs i--color i--bg"></span></a></span><span class="author-meta__bio" itemprop="description">I am an Internet Marketing Consultant. I help businesses understand how to use Social Media, Blogging, Marketing, SEO, Mobile Apps and Technology to help grow and promote their business. I am an editor for <a href="http://www.TheSocialMediaHat.com">The Social Media Hat</a> and regularly write articles and stories on these topics.</span></p></div>                        </div>
+                                                    <div class="post__footer__related-posts">
+                                <div class='yarpp-related yarpp-related-none'>
+</div>
+                            </div>
+                                            </footer>
+                </article>
+                <aside class="comments-wrapper" rel="complementary">
+                    <div id="livefyre-comments">
+<div class="fyre fyre-width-large fyre-bootstrap">
+  <div class="fyre-widget">
+    <div class="fyre-stream-stats">
+      <div class="fyre-comment-count">
+        <span>35 comments</span>
+      </div>
+
+      <div class="fyre-divider"></div>
+
+      <div class="fyre-help">
+        <div class="fyre-box-wrapper">
+          <a href="http://livefyre.com" target="_blank"><span class="fyre-logo-drop">&amp;nbsp</span>
+          <img class="fyre-logo-help" src="http://zor.fyre.co/wjs/v3.0/images/lf-logo.png" alt="Livefyre" /></a>
+          
+          <ul class="fyre-box-list">
+            <li><a href="http://livefyre.com" target="_blank" title="Get Livefyre">Get
+            Livefyre</a></li>
+
+            <li><a href="http://support.livefyre.com" target="_blank" title="FAQ">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-auth">
+      <div class="fyre-login-bar"><a rel="nofollow" href="#" class="fyre-user-loggedout">Sign in</a></div>
+    </div>
+
+    <div class="fyre-editor">
+      <div class="fyre-editor-container">
+        <div class="fyre-editor-editable" style="height: 100px"></div>
+
+        <div class="fyre-editor-toolbar">
+          <div class="goog-toolbar goog-toolbar-horizontal" role="toolbar">
+            <div class="goog-inline-block fyre-button-left fyre-format-button" title="" role="button" id=":0">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-mention-button" title="" role="button" id=":1">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-follow-button" title="" role="button" id=":2">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box">
+                  + Follow
+                </div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-button fyre-post-button-enabled" title="" role="button" id=":3">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box">
+                  Post comment
+                </div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-facebook" title="" role="button" id=":4">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-twitter" title="" role="button" id=":5">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-linkedin" title="" role="button" id=":7">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-toolbar-separator goog-inline-block" role="separator" id=":6">
+              &nbsp;
+            </div>
+          </div>
+
+          <div class="fyre-format-toolbar">
+            <div class="goog-toolbar goog-toolbar-horizontal" role="toolbar">
+              <div class="goog-inline-block goog-toolbar-button" title="Bold" role="button" id="+bold">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-bold">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Italic" role="button" id="+italic">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-italic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Underline" role="button" id="+underline">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-underline">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Add or remove link" role="button" id="+link">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-link">
+                      Link
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Numbered list" role="button" id="+insertOrderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-insertOrderedList"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Bullet list" role="button" id="+insertUnorderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-insertUnorderedList"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-comment-stream">
+      <div class="fyre-stream-sort">
+        <a class="fyre-stream-sort-newest">Newest</a> | <a class="fyre-stream-sort-oldest">Oldest</a>
+      </div>
+
+      <div class="fyre-stream-content">      
+        
+            
+
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/0b5f5bd9a9bc9e3ddd0e035108f8b590/50.jpg" class="fyre-user-avatar" alt="phisqb" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">phisqb</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hello -</p><p><br /></p><p>If you bulk schedule and you do not specify images (functionality not available), will the social networking sites look at the URL and grab the image associated with it (if it has og:image tags)?</p><p><br /></p><p>Thanks!</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/1733316/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>phisqb</span></a> Hi there, currently Bulk Scheduling does not generate a link preview. <span>As a workaround, you can upload your CSV file then edit the messages by following these steps:</span></p><p><a href="https://help.hootsuite.com/entries/21723363-Managing-Scheduled-Messages" target="_blank" rel="nofollow">https://help.hootsuite.com/entries/21723363-Managing-Scheduled-Messages</a>.  </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/ac67460d696c227c61b3271658c48b3f/50.jpg?v=1451337226" class="fyre-user-avatar" alt="Corobori" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Corobori</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/24381483/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>Hootsuite_Help_Desk</span></a> <a rel="nofollow" href="http://www.livefyre.com/profile/1733316/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>phisqb</span></a> True that editing each message allow to upload an image but in my case I would spend way to much time on this to make it worth. Or in another words I could spend more $ if Hootsuite would allow this. </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://secure.gravatar.com/avatar/3d50a6ffd36bdb7a6625f56e8cc0d728/?s=50&amp;d=https://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg" class="fyre-user-avatar" alt="BLRaftery" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">BLRaftery</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>For some reason Excel 2003 does not allow CSV to retain the mm/dd/yy hh:mm. The CSV format will not retain the information. And when I change it to text, it changes to a long numerical sequence. What am I doing wrong?</p><p><br /></p><p>Here is an example: I have it set up as mm/dd/yy hh:mm<br /></p><p>
+  11/13/2015 08:45 (the zero is dropped before the 8:45 - time)</p><p><br /></p><p>If I make it text it translates to:</p>
+  42321.51042
+<p>For some reason I can make it save as 11/13/2015 08:45</p><p>Please help? <br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/94180558/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>BLRaftery</span></a> </p><p><br /></p><p><br /></p><p>Hi there,</p><p><br /></p><p>Thanks for reaching out! </p><p><br /></p><p>As it turns out that Excel does not support exporting to UTF-8 as of 2010. In short, Excel is exporting to a format called ANSI. When you upload a CSV formatted in ANSI, or open it in TextEditor, it is read as UTF-8 which results in unusual characters in bits that don't translate between the two formats. This includes accented characters, apostrophes, and the like.</p><p><br /><span>To fix this, we strongly advise using a plain text program such as TextEdit or Google Sheets to create CSV files. Instructions on how to do so can be found here: <a href="https://help.hootsuite.com/hc/en-us/articles/204585120-Create-csv-Files-and-Schedule-in-Bulk#4" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585120-Create-csv-Files-and-Schedule-in-Bulk#4</a></span><br /><br /></p>If you run into any further issues please reach out to us over Twitter @Hootsuite_Help<br /><br />Best,Jocelyne | Customer Advocate | hootsuite.com/help</p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/ad7691c851a2c21560b951dab376e9b5/?s=50&amp;d=https%3A//dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg" class="fyre-user-avatar" alt="progressiveapps" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">progressiveapps</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@Hootsuite_Help_Desk @Hootsuite_Help How to include new lines in .csv file to be properly interpreted by Bulk Uploader? \n or \r in .csv file interrupt upload. Using &lt;br/&gt; is interpreted literally. Facebook, Google, LinkedIn all allow newlines / line breaks in posts. Is there a special trick, or is this a limitation of the bulk uploader? Thanks! </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@progressiveapps Hi! Thank you for reaching out with your question.  When creating a new line for your CSV file in Google Docs, you would need to do so manually when editing the file.  </p><p><br /></p><p>For an overview of how best to create your CSV file for use with the Bulk Uploader, please see the Help Desk article at the following link: <span><a href="http://ow.ly/RcBoK" target="_blank" rel="nofollow">http://ow.ly/RcBoK</a></span></p><p><span><br /></span></p><p><span>If you have any other questions regarding this process, please connect with our twitter support team <span>@hootsuite_help.</span></span></p><p><span><span><br /></span></span></p><p>Kind Regards,</p><p>Daniel | Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/d9ac93ac1007024acdff06b98c607f0a/?s=50&amp;d=https%3A//lfavatar-a.akamaihd.net/a/anon/50.jpg" class="fyre-user-avatar" alt="Memory Man" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Memory Man</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Is there a way to upload bulk tweets without dates included? Auto-scheduled tweets is all we're looking for.</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@Memory Man Hello, thanks for your post!</p><p><br /></p><p>As it turns out, when bulk scheduling, date and time must be specified. To have the system pick the optimal time to post the messages, Auto scheduler feature would be the best way to go.</p><p><br /></p><p>You'll be able to AutoSchedule from the Compose Message Box:  <a href="http://ow.ly/PzxFk" target="_blank" rel="nofollow">http://ow.ly/PzxFk</a></p><p><br /></p><p>I hope this helps.</p><p><br /></p><p>Mika | Customer Advocate | hootsuite.com/help<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://lfavatar-a.akamaihd.net/a/1/a269a8708b4e14a6bb77fe58ab56096b/50.jpg?v=1435137904" class="fyre-user-avatar" alt="Piotr R" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Piotr R</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi there,</p><p><br /></p><p>is it possible to set geotargeting for scheduled tweets through bulk upload? If not, do you plan to add this feature in future?</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi <a rel="nofollow" href="http://www.livefyre.com/profile/82642551/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>Piotr R</span></a>,</p><p>Thanks for reaching out to us, my name is Camille from the Help Desk and I'd be happy to assist you in this matter!</p><p>As it turns out this isn't a featured offered with bulk uploads. Though that sounds like a great idea to post in our Feedback Forum in which our development team provide daily updates on features which we plan to add/remove. I invite you to throw your suggestion (I tried to have a look at the boards and this suggestion hasn't been made yet) via <a href="https://feedback.hootsuite.com" target="_blank" rel="nofollow">https://feedback.hootsuite.com</a>!</p><p>Sincerely,</p><p>Camille | Customer Advocate | hootsuite.com/help<br /></p><p><br /></p><p><br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/65396c7aaf96e668f4f079a1562ace6d/?s=50&amp;d=https%3A//lfavatar-a.akamaihd.net/a/anon/50.jpg" class="fyre-user-avatar" alt="Sunny" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Sunny</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Is there a way to post an image with the bulk upload feature?  </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@Sunny </p><p><br /></p><p>Hi there,</p><p><br /></p><p>Thank you for reaching out, my name is Monika and I'm more than happy to help you.<br /></p><p><br /></p><p>As it turns out, scheduling images via the Bulk Scheduler is not supported. </p><p><br /></p><p>If you do have any more questions or concerns please reach out to us either via Facebook private message or via Twitter (@Hootsuite_Help). </p><p><br /></p><p>Regards,</p><p><br /></p><p>Monika | Customer Advocate | hootsuite.com/help</p><p><br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://secure.gravatar.com/avatar/0306a7b33575331b84fcfd9ecfc14e1a/?s=50&amp;d=https://lfavatar-a.akamaihd.net/a/anon/50.jpg" class="fyre-user-avatar" alt="HeidiKJ" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">HeidiKJ</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi,</p><p><br /></p><p>I've used your bulk uploader before and got on with it just fine.  But for some reason when I've gone to use it in the last 24 hours it will only let me set one per day and nothing for the day that we're in.  Is this a glitch or what am I doing wrong?</p><p><br /></p><p>Thanks.</p><p><br /></p><p>HJ</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/77238333/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>HeidiKJ</span></a> Hi Heidi,</p><p><br /></p><p>I am sorry to hear of this issue you've been experiencing. First, could you please ensure that you are set to the correct time zone? If it needs to be changed, please follow the steps in the link below: </p><p><br /></p><p><a href="https://help.hootsuite.com/hc/en-us/articles/204585130-Change-the-Time-Zone-from-Publisher" target="_blank" rel="nofollow">https://help.hootsuite.com/hc/en-us/articles/204585130-Change-the-Time-Zone-from-Publisher</a><br /></p><p><br /></p><p>If the issue continues after checking that, please let us know by tweeting us at <a rel="nofollow" href="https://twitter.com/#!/Hootsuite_Help" target="_blank" class="fyre-mention fyre-mention-twitter">@<span>Hootsuite_Help</span></a> or send us a Private Message. From there, we'll be able to create a HelpDesk email ticket for you and investigate the issue! </p><p><br /></p><p>Kind Regards,</p><p><br /></p><p>Stefanie | Customer Advocate | hootsuite.com/help</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://lfavatar-a.akamaihd.net/a/1/3f402aa9115d8d57e8e67daf67436bbd/50.jpg?v=1429799437" class="fyre-user-avatar" alt="Luiz Ribeirinho" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Luiz Ribeirinho</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi there! Is there any problem if I place the URLs on the third coluwn already shrunk, prior to generating my .csv file? Thanks in advance!</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/77149187/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>Luiz Ribeirinho</span></a> Hi Luiz,</p><p><br /></p><p>You can certainly use pre-shrunken links if you'd like! There is no need to take the extra time to do that though, since the links will get shrunk once the .csv file is uploaded. </p><p><br /></p><p>Hope that helps! If you have any other questions, please tweet us at <a rel="nofollow" href="https://twitter.com/#!/Hootsuite_Help" target="_blank" class="fyre-mention fyre-mention-twitter">@<span>Hootsuite_Help</span></a> or send us a Private Message on Facebook. We would be happy to assist!</p><p><br /></p><p>Kind Regards,</p><p><br /></p><p>Stefanie | Customer Advocate | hootsuite.com/help</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/e8e449066b85db133590e7ae5b59944a/?s=50&amp;d=https%3A//lfavatar-a.akamaihd.net/a/anon/50.jpg" class="fyre-user-avatar" alt="JY" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">JY</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi</p><p>Can tags be added to bulk uploads.  If so, how?</p>Thanks. </p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@JY Hello!  <br /></p><p>I'm afraid tags aren't able to be added to a .CSV for bulk scheduling, and tags aren't supposed through Hootsuite at this time.  My apologies for any inconvenience.</p><p>If you have more questions, please feel free to reach out to us via Twitter <span>@Hootsuite_Help !<br />Kind regards, Taavi | hootsuite.com/help</span></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://secure.gravatar.com/avatar/fb9d866a4d845b3bce0eccbd66c55f3c/?s=50&amp;d=https://lfavatar-a.akamaihd.net/a/anon/50.jpg" class="fyre-user-avatar" alt="Amartinez2324" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Amartinez2324</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>When using bulk scheduling is there anyway to add images to send out with each post?  </p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/74605304/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>Amartinez2324</span></a> </p><p><br /></p><p>Hi there,</p><p><br /></p><p>Thank you for reaching out to us through our blog! </p><p><br /></p><p>At this time, it is not possible to attach images to your messages directly in csv files. That said, once you have uploaded your csv file, you can edit the messages and attach images prior to the message posting. </p><p><br /></p><p>Please see here for the steps to edit scheduled posts:</p><p><a href="https://help.hootsuite.com/entries/21723363-Managing-Scheduled-Messages#edit" target="_blank" rel="nofollow">https://help.hootsuite.com/entries/21723363-Managing-Scheduled-Messages#edit</a><br /></p><p><br /></p><p>I hope this helps! If you have any further questions, please tweet us at <span>@hootsuite_help </span></p><p><span><br /></span></p><p><span>Thank you!</span></p><p><span><br /></span></p><p><span><span>Amy | Customer Advocate | hootsuite.com/help</span><br /></span></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/92a7004873d2ce68cd44f12f6bbd6a36/50.jpg?v=1423306155" class="fyre-user-avatar" alt="PeterAden" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">PeterAden</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Has bulk editing been removed from free accounts?  Every time I click the button I get told to upgrade.<br /></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/72106878/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>PeterAden</span></a> Hi there! Bulk scheduling isn't an available feature for Hootsuite Free, which is why there is a prompt to upgrade to Pro.  If you have more questions, feel free to tweet us <span>@Hootsuite_Help !</span></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/203d6556a811198ed90845a76ddf890d/50.jpg?v=1411572668" class="fyre-user-avatar" alt="AmyEndeavour" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">AmyEndeavour</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi,</p><p><br /></p><p>I have just set up a new account for my business on HootSuite. We have multiple Twitter accounts we want to add, but it seems an intern in the past may have added them to their personal HootSuite and it is not letting me add any of them. I have no way of finding out which intern it was and contacting them. But we need to add these twitter accounts to our hootsuite account. Please can you advise me on what to do.</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/65318410/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>AmyEndeavour</span></a> Hey there!</p><p><br /></p><p>Thanks for reaching out to us!</p><p><br /></p><p>Can you please try to reclaim the Twitter accounts using the steps here: </p><p><br /></p><p><a href="https://help.hootsuite.com/entries/21824509-Transferring-and-Reclaiming-Social-Networks#reclaim" target="_blank" rel="nofollow">https://help.hootsuite.com/entries/21824509-Transferring-and-Reclaiming-Social-Networks#reclaim</a><br /></p><p><br /></p><p>If you run into difficulties, please reach out to us <span>@Hootsuite_Help for further assistance. </span></p><p><span><br /></span></p><p><span>Kind regards, </span></p><p><span><br /></span></p><p>Gary @Hootsuite_Help - <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a></p><br /></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/ab1b3ecc86d3bcd1e0ac2b6784845053/?s=50&amp;d=http%3A//avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="ingridvonburg" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">ingridvonburg</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Does anyone else have problems with the date stamp format requiring 4 digits in the year? My MS Excel only does it with 2 digits when I require the time!!!</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@ingridvonburg Hi there! <span>With Excel, please go to Format&gt; Cell&gt; Custom, select HH:MM and then when inputting your time it will auto-format to military time! I hope this helps feel free to tweet us <a rel="nofollow" href="https://twitter.com/#!/Hootsuite_Help" target="_blank" class="fyre-mention fyre-mention-twitter">@<span>Hootsuite_Help</span></a> if you have any further questions!  Best, </span>Sharin | @Hootsuite_Help | <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/dd9e339ac4f36db4a15e33fb8ae7b3f8/?s=50&amp;d=http%3A//avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="vikki" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">vikki</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p> I have no problem uploading file and when I look at the publisher tab all my tweets look correct but they are not appearing on my account ... any suggestions on where I am going wrong?</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@vikki Hi Vikki, sorry to hear this! When you go to Publisher&gt;Past Scheduled messages do you see any appearing in red?  Clicking on it would reveal an error message!  If you are still experiencing issues, please tweet to us <a rel="nofollow" href="https://twitter.com/#!/Hootsuite_help" target="_blank" class="fyre-mention fyre-mention-twitter">@<span>Hootsuite_help</span></a> and on of our Support Owls will be able to assist!  Thanks, Sharin | @Hootsuite_Help | <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://avatars.fyre.co/a/1/473ea998b920ba53fdcb45348dab27ea/50.jpg?v=1398330037" class="fyre-user-avatar" alt="VoucherCodeGuru" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">VoucherCodeGuru</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Nice article!</p><p><br /></p><p>Is the 350 limit an overall total or a limit per upload? In other words is it ever possible to schedule more than 350 messages at any given time?</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p><a rel="nofollow" href="http://www.livefyre.com/profile/40129237/" target="_blank" class="fyre-mention fyre-mention-livefyre">@<span>VoucherCodeGuru</span></a>  Thanks!  Happy to clarify, this is the overall total limit and not the limit per upload.  It is not possible to schedule more than 350 messages by bulk scheduling.  Should you have any follow up questions, please send us a tweet to @HootSuite_Help and we'll be happy to assist further there!  Best, Sharin | @HootSuite_Help | <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Hi Phillip,<br /><br />Thank you for reaching out to the HootSuite help team! We are happy to help with your request!<br /><br />Thank you for providing feedback on the bulk scheduler. At this time, this feature is not on our current product roadmap, however it may be reexamined at a later date. <br /><span><br /></span></p><p><span>Thank you for your patience and understanding! If you have any further questions, please contact us on Twitter <span>@HootSuite_Help.<br /><br /></span></span></p><p>Kind Regards,</p><p>Amy | Customer Advocate | @HootSuite_Help</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/c394be8383e375ffe7dc17fd21387806/?s=50&amp;d=http%3A//avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="Phillip" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Phillip</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Are there any plans to include the link preview image in the bulk posting via a csv file? Or sharing of images via url? I love the bulk posting via a spreadsheet but I cant stand that it doesn't allow a link preview. It makes my status updates so ugly. Same with the hootsuite mobile app. Why does it not allow the link preview either? That makes the mobile app lose a ton of functionality in my opinion.</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://dpstvy7p9whsy.cloudfront.net/a/1/c83152c3e5e42303db354888af12d1d0/50.jpg?v=1383609935" class="fyre-user-avatar" alt="Hootsuite_Help_Desk" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Hootsuite_Help_Desk</a> 
+    <span class="fyre-user-level fyre-comment-author-tag fyre-moderator">moderator</span>
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>@Phillip  <br /><br />Hi Phillip,<br /><br />Thank you you for reaching out to us! This is currently not on our product road map, but we are always looking at ways to improve our dashboard functionality.<br /><br />Thank you for your feedback! If you have any further questions, please feel free to contact us onTwitter <span>@HootSuite_Help.</span></p><p><span><br /></span></p><p><span>Kind regards,<br /><br />Amy @HootSuite_Help - <a href="http://hootsuite.com/help" target="_blank" rel="nofollow">http://hootsuite.com/help</a><br /></span></p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="http://gravatar.com/avatar/e042e0a45617649c8042e478edf93f36/?s=50&amp;d=http%3A//avatars.fyre.co/a/anon/50.jpg" class="fyre-user-avatar" alt="Jaleel Hamid" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Jaleel Hamid</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>Big Thanks!</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>                </aside>
+                    </div>
+        <menu class="social-share" data-fixto=".content-wrapper" data-fixto-top="48" style="">
+            <div class="social-share__share-links">
+                                                    <a class="i i--hootsuite i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"></a>
+                                    <a class="i i--twitter i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"></a>
+                                    <a class="i i--facebook i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"></a>
+                                    <a class="i i--linkedin i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"></a>
+                                    <a class="i i--googleplus i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Bulk+Schedule+Messages+Using+Hootsuite&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-bulk-schedule%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Bulk+Schedule+Messages+Using+Hootsuite']);" target="_blank"></a>
+                            </div>
+        </menu>
+    </div>
+                                                        <div class="footer-cta">
+                        <p>Save time managing your social media today</p>
+<p><a class="btn-cta btn-type1" href="https://hootsuite.com/plans/free" target="_blank">Get Started for Free</a></p>
+                    </div>
+                                <footer id="site-footer" class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+                    <div class="container">
+                        <nav class="nav nav--footer" role="navigation">
+                            <ul id="menu-footer-menu" class="menu"><li id="menu-item-70281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70281"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-70283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70283"><a href="https://hootsuite.com/products/social-media-engagement" class="" data-navsrc="nav--level2">Engagement</a></li>
+	<li id="menu-item-70285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70285"><a href="https://hootsuite.com/products/social-media-publishing" class="" data-navsrc="nav--level2">Publishing</a></li>
+	<li id="menu-item-70284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70284"><a href="https://hootsuite.com/products/social-media-analytics" class="" data-navsrc="nav--level2">Analytics</a></li>
+	<li id="menu-item-70287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70287"><a href="https://hootsuite.com/products/campaigns" class="" data-navsrc="nav--level2">Campaigns</a></li>
+	<li id="menu-item-70282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70282"><a href="https://hootsuite.com/products/platform" class="" data-navsrc="nav--level2">Platform</a></li>
+	<li id="menu-item-70286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70286"><a href="https://hootsuite.com/products/extensions" class="" data-navsrc="nav--level2">Extensions</a></li>
+	<li id="menu-item-82390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82390"><a href="https://hootsuite.com/products/mobile-apps" class="" data-navsrc="nav--level2">Mobile</a></li>
+</ul>
+</li>
+<li id="menu-item-70288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70288"><a href="https://hootsuite.com/solutions" class="" data-navsrc="nav--level1">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-70289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70289"><a href="https://hootsuite.com/solutions/social-media-management" class="" data-navsrc="nav--level2">Social Media Management</a></li>
+	<li id="menu-item-70290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70290"><a href="https://hootsuite.com/solutions/social-marketing" class="" data-navsrc="nav--level2">Social Marketing</a></li>
+	<li id="menu-item-70291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70291"><a href="https://hootsuite.com/solutions/social-selling" class="" data-navsrc="nav--level2">Social Selling</a></li>
+	<li id="menu-item-70292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70292"><a href="https://hootsuite.com/solutions/social-customer-service" class="" data-navsrc="nav--level2">Social Customer Service</a></li>
+</ul>
+</li>
+<li id="menu-item-70293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70293"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a>
+<ul class="sub-menu">
+	<li id="menu-item-70294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70294"><a href="https://hootsuite.com/plans/free" class="" data-navsrc="nav--level2">Free</a></li>
+	<li id="menu-item-70295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70295"><a href="https://hootsuite.com/plans/pro" class="" data-navsrc="nav--level2">Pro</a></li>
+	<li id="menu-item-70296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70296"><a href="https://hootsuite.com/plans/enterprise" class="" data-navsrc="nav--level2">Enterprise</a></li>
+	<li id="menu-item-70297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70297"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level2">Compare Plans</a></li>
+</ul>
+</li>
+<li id="menu-item-70298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70298"><a href="https://hootsuite.com/services" class="" data-navsrc="nav--level1">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-70299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70299"><a href="https://hootsuite.com/services/professional-services" class="" data-navsrc="nav--level2">Professional Services</a></li>
+	<li id="menu-item-70301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70301"><a href="https://hootsuite.com/services/education" class="" data-navsrc="nav--level2">Education</a></li>
+	<li id="menu-item-70300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70300"><a href="https://hootsuite.com/services/partner-programs" class="" data-navsrc="nav--level2">Partner Programs</a></li>
+	<li id="menu-item-70302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70302"><a href="https://hootsuite.com/developers/app-directory" class="" data-navsrc="nav--level2">Developers</a></li>
+	<li id="menu-item-70303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70303"><a href="https://hootsuite.com/services/support" class="" data-navsrc="nav--level2">Support</a></li>
+</ul>
+</li>
+<li id="menu-item-70304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70304"><a href="http://blog.hootsuite.com/category/resources/" class="" data-navsrc="nav--level1">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-70305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70305"><a href="http://blog.hootsuite.com/category/resources/" class="" data-navsrc="nav--level2">Resource Library</a></li>
+	<li id="menu-item-70306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70306"><a href="https://hootsuite.com/webinars" class="" data-navsrc="nav--level2">Webinars</a></li>
+	<li id="menu-item-70307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70307"><a href="http://blog.hootsuite.com/" class="" data-navsrc="nav--level2">Blog</a></li>
+	<li id="menu-item-83903" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83903"><a href="https://hootsuite.com/customers" class="" data-navsrc="nav--level2">Customers</a></li>
+	<li id="menu-item-83904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83904"><a href="https://hootsuite.com/help" class="" data-navsrc="nav--level2">Help</a></li>
+</ul>
+</li>
+<li id="menu-item-70308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70308"><a href="https://hootsuite.com/about" class="" data-navsrc="nav--level1">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-70309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70309"><a href="https://hootsuite.com/about/careers" class="" data-navsrc="nav--level2">Careers</a></li>
+	<li id="menu-item-70310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70310"><a href="https://hootsuite.com/about/contact" class="" data-navsrc="nav--level2">Contact Us</a></li>
+	<li id="menu-item-70311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70311"><a href="https://hootsuite.com/about/leadership" class="" data-navsrc="nav--level2">Leadership</a></li>
+	<li id="menu-item-70312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70312"><a href="http://media.hootsuite.com/press-releases/" class="" data-navsrc="nav--level2">Press</a></li>
+	<li id="menu-item-70313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70313"><a href="https://hootsuite.com/about/media-kit" class="" data-navsrc="nav--level2">Media Kit</a></li>
+	<li id="menu-item-70314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70314"><a href="http://media.hootsuite.com/events/" class="" data-navsrc="nav--level2">Events</a></li>
+	<li id="menu-item-70315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70315"><a href="https://hootsuite.com/about/community" class="" data-navsrc="nav--level2">Community</a></li>
+	<li id="menu-item-70316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70316"><a href="https://hootsuite.com/about/hootgiving" class="" data-navsrc="nav--level2">HootGiving</a></li>
+	<li id="menu-item-70317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70317"><a href="http://shop.hootsuite.com" class="" data-navsrc="nav--level2">Hootsuite Shop</a></li>
+	<li id="menu-item-70329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70329"><a href="https://hootsuite.com/security" class="" data-navsrc="nav--level2">Security</a></li>
+</ul>
+</li>
+</ul>                        </nav>
+                        <div class="secondary-links">
+                            <nav class="nav legal-links" role="navigation">
+                                <ul class="utility list-inline">
+                                    <li><a href="https://hootsuite.com/legal/terms">Terms &amp; Conditions</a></li>
+                                    <li><a href="https://hootsuite.com/legal/privacy">Privacy Policy</a></li>
+                                    <li><a href="https://hootsuite.com/legal/copyright">Copyright</a></li>
+                                </ul>
+                            </nav>
+                            <div class="col-md-4">
+                                                                                                    <select class="input-sm _languageSwitcher">
+                                                                                                                                                                                                                            <option value="http://blog.hootsuite.com/how-to-bulk-schedule/" selected>English</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/fr/?i8ln_id=54337" >Français</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/de/?i8ln_id=54337" >Deutsch</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/id/?i8ln_id=54337" >Bahasa Indonesia</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/it/?i8ln_id=54337" >Italiano</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/ja/?i8ln_id=54337" >日本語</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/pt-br/?i8ln_id=54337" >Português</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/es/?i8ln_id=54337" >Español</option>
+                                                                                                                        </select>
+                                                            </div>
+                            <div class="social social-links">
+                                <a class="rss small" href="http://blog.hootsuite.com/feed/"></a>
+                                                                                                                                            <a target="_bank" class="twitter small" href="https://twitter.com/Hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="facebook small" href="https://www.facebook.com/hootsuite"></a>
+                                                                                                                                                                                                                    <a target="_bank" class="google-plus small" href="https://plus.google.com/+HootSuite/"></a>
+                                                                                                                                                <a target="_bank" class="linkedin small" href="http://www.linkedin.com/company/hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="youtube small" href="https://www.youtube.com/user/hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="instagram small" href="http://instagram.com/hootsuite"></a>
+                                                                                                </div>   
+                        </div>
+                        <div class="row">
+                            <div class="text-center copyright">
+                                <p>&copy; 2016 HootSuite Media Inc. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /m-content-inner -->
+        </div>
+        <!-- /m-content -->
+        <nav id="off-canvas-1" class="menu m-menu" role="navigation">
+          <div class="hs-logins">
+            <ul>
+              <li data-auth="out"><a class="login btn btn-sm btn-success" href="https://hootsuite.com/plans">Sign Up</a></li>
+              <li data-auth="in"><a class="login btn btn-sm btn-success" href="https://hootsuite.com/dashboard">Dashboard</a></li>
+            </ul>
+          </div>
+            <ul id="menu-main-mobile-menu" class="menu"><li id="menu-item-82399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82399"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a></li>
+<li id="menu-item-82400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82400"><a href="https://hootsuite.com/solutions" class="" data-navsrc="nav--level1">Solutions</a></li>
+<li id="menu-item-82401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82401"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a></li>
+<li id="menu-item-82402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82402"><a href="https://hootsuite.com/customers" class="" data-navsrc="nav--level1">Customers</a></li>
+<li id="menu-item-82403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82403"><a href="https://hootsuite.com/resources" class="" data-navsrc="nav--level1">Resources</a></li>
+<li id="menu-item-82404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82404"><a href="https://hootsuite.com/about" class="" data-navsrc="nav--level1">About Us</a></li>
+</ul>            <ul id="menu-utility-mobile-menu" class="sm"><li id="menu-item-82414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82414" data-auth="out"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Free Trial</a></li>
+<li id="menu-item-82415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82415"><a href="http://blog.hootsuite.com/" class="" data-navsrc="nav--level1">Blog</a></li>
+<li id="menu-item-82416" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82416"><a href="https://hootsuite.com/help" class="" data-navsrc="nav--level1">Help</a></li>
+<li id="menu-item-82417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82417"><a href="https://hootsuite.com/about/careers" class="" data-navsrc="nav--level1">Careers</a></li>
+<li id="menu-item-82418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82418"><a href="https://hootsuite.com/about/contact-us" class="" data-navsrc="nav--level1">Contact Us</a></li>
+<li id="menu-item-82419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82419" data-auth="out"><a href="https://hootsuite.com/login" class="" data-navsrc="nav--level1">Log In</a></li>
+<li id="menu-item-82420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82420" data-auth="in"><a href="https://hootsuite.com/logout" class="" data-navsrc="nav--level1">Log Out</a></li>
+</ul>        </nav>
+    </div>
+    <!-- /m-pusher -->
+</div>
+<!-- /m-container -->
+<div id="newsletter-modal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Thank You</h4>
+            </div>
+            <div class="modal-body">
+                <div id="mktoForm-2645" class="marketo-form" data-formid="2645"></div>
+                <div id="mktoForm-2646" class="marketo-form" data-formid="2646"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<!-- /// LOAD CHARTBEAT /// -->
+		<script type="text/javascript">
+		var _sf_async_config={};
+		_sf_async_config.uid = 48619;
+		_sf_async_config.useCanonical = true;
+		
+		(function(){
+		  function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			   (("https:" == document.location.protocol) ? "https://" : "http://") +
+			   "static.chartbeat.com/js/chartbeat.js");
+			document.body.appendChild(e);
+		  }
+		  var oldonload = window.onload;
+		  window.onload = (typeof window.onload != 'function') ?
+			 loadChartbeat : function() { try { oldonload(); } catch (e) { loadChartbeat(); throw e} loadChartbeat(); };
+		})();
+		</script>
+		<script type="text/javascript">
+    var livefyre_auth_loaded = false;
+</script>
+    <script type="text/javascript">
+        var load_livefyre_auth = function() {
+            if(!livefyre_auth_loaded) {
+                Livefyre.require(['auth'], function(auth) {
+                    auth.delegate(auth.createDelegate('http://livefyre.com'));
+                });
+            }
+            livefyre_auth_loaded = true;
+        };
+    </script>
+
+<script type="text/javascript">
+    var networkConfigComments = {
+        network: "livefyre.com"
+    };
+    var convConfigComments54337 = {
+        siteId: "332321",
+        articleId: "54337",
+        el: "livefyre-comments",
+        collectionMeta: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwOlwvXC9ibG9nLmhvb3RzdWl0ZS5jb21cL2hvdy10by1idWxrLXNjaGVkdWxlXC8iLCJ0aXRsZSI6IkhvdyB0byBCdWxrIFNjaGVkdWxlIE1lc3NhZ2VzIFVzaW5nIEhvb3RzdWl0ZSIsImFydGljbGVJZCI6NTQzMzcsInRhZ3MiOlsiYnVsayBzY2hlZHVsaW5nIiwiR3Vlc3QiLCJIb290c3VpdGUgU29sdXRpb25zIFBhcnRuZXIiLCJWaWRlbyJdLCJ0eXBlIjoibGl2ZWNvbW1lbnRzIn0.QFPveHFMk1QBi1Q5N5YfOnmebL8gTl_VEl_Zzz9NVms",
+        checksum: "df4dba314c43c79848385d9adbdebc79"
+    };
+    if (typeof (liveCommentsConfig) !== 'undefined') {
+        convConfigComments54337 = Livefyre.LFAPPS.lfExtend(liveCommentsConfig, convConfigComments54337);
+    }
+
+    Livefyre.require(['fyre.conv#3'], function (ConvComments) {
+        load_livefyre_auth();
+        new ConvComments(networkConfigComments,
+                [convConfigComments54337],
+                function (commentsWidget) {
+                    var livecommentsListeners = Livefyre.LFAPPS.getAppEventListeners('livecomments');
+                    if (livecommentsListeners.length > 0) {
+                        for (var i = 0; i<livecommentsListeners.length; i++) {
+                            var livecommentsListener = livecommentsListeners[i];
+                            commentsWidget.on(livecommentsListener.eventName, livecommentsListener.callback);
+                        }
+                    }
+                }
+        );
+    });
+</script><script type="text/javascript" data-lf-domain="livefyre.com" id="ncomments_js" src="http://cdn.livefyre.com/libs/commentcount/v1.0/commentcount.js"></script><link rel='stylesheet' id='slickquiz_css-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/slickquiz/css/slickQuiz.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='slickquiz_front_css-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/css/front.css?ver=4.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/scripts-footer.min.js?ver=3.1.52'></script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icl_vars = {"current_language":"en","icl_home":"http:\/\/blog.hootsuite.com\/","ajax_url":"https:\/\/blog.hootsuite.com\/wp-admin\/admin-ajax.php","url_type":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/slickquiz/js/slickQuiz.js?ver=4.4.2'></script>
+    <script>LF.CommentCount({ replacer: function(element, count) { element.innerHTML = count +' Comment'+ (count === 1 ? '' : 's'); } });</script>
+    <script>
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+<div style="display:none">
+    <script>
+        /* <![CDATA[ */
+        var google_conversion_id = 1004013306;
+        var google_conversion_label = "sVJjCPa2_AQQ-o3g3gM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script src="//www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+        <div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1004013306/?value=0&amp;label=sVJjCPa2_AQQ-o3g3gM&amp;guid=ON&amp;script=0"/></div>
+    </noscript>
+</div>
+<script>
+    (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/125827.js';
+        e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+</script>
+<script>
+    var _kiq = _kiq || [];
+    (function($) {
+        _kiq.push(['eventHandler', 'show', function() {
+
+            var qualarooTimer = setInterval(function(){
+                if($('#qual_ol').length > 0 ) {
+                    //Select the first required field label and button in the survey
+                    var reqField = document.querySelector('.qual_ol_reqd');
+                    var sendBtn = document.getElementById('qual_ol_send');
+
+                    if(reqField !== null && sendBtn !== null) {
+                        reqField.innerHTML = '*' + qualaroo.requiredField;
+                        sendBtn.innerHTML = qualaroo.send + '<div class="qual_ol_btn_dot"><div class="qual_ol_btn_dot_gt"></div></div>';
+                    }
+
+                    //Clear it!
+                    clearInterval(qualarooTimer);
+                }
+            }, 75);
+        }]);
+    })(jQuery);
+</script>
+<!-- Release Notify -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"923a018eb7","applicationID":"12447397","transactionName":"YARbMEBWWUMAVxJZWFlOeAdGXlheTkcPXlBbBA==","queueTime":0,"applicationTime":405,"atts":"TENYRghMSk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Content Delivery Network via Amazon Web Services: S3: hootsuite-blog-assets.s3.amazonaws.com
+Application Monitoring using New Relic
+
+ Served from: blog.hootsuite.com @ 2016-02-18 09:56:10 by W3 Total Cache -->

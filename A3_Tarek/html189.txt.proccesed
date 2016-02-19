@@ -1,0 +1,303 @@
+   #[1]Tighten.co Blog Atom Feed [2]home
+
+   [3]Tighten Co. Logo
+     * [4]About Us
+     * [5]Blog
+     * [6]Contact Us
+
+Craft CMS: Building Complex Queries by Extending the ElementCriteriaModel
+
+   [7]Keith Damiani
+   9 minute read 1 week ago
+
+   [craft-gimme.png] One of the great things about [8]Craft, from a
+   developer's point of view, is the amount of flexibility it provides
+   when it comes to working with your site's data, giving you the power to
+   accomplish things that would be difficult or impossible in other CMSes.
+   Sometimes, though, you might run into limitations of Craft's built-in
+   query methods when trying to retrieve data to display in a template.
+   Fortunately, Craft provides a tool that is useful for building complex
+   queries when the need arises, by using buildElementsQuery to extend an
+   ElementCriteriaModel.
+
+The ElementCriteriaModel
+
+   Out of the box, Craft makes it simple to retrieve a collection of
+   elements--whether entries, assets, users, tags, or categories--for
+   display in a template. More importantly, it makes it easy to narrow and
+   sort your results by a variety of criteria.
+
+   In order to construct the database query that fetches and sorts the
+   data you're interested in, Craft uses an object called the
+   ElementCriteriaModel. This model hides the underlying database query
+   logic behind an easy-to-understand API; so, for instance, calling
+   craft.entries in a template returns an ElementCriteriaModel object to
+   which you can apply a variety of parameters, such as:
+craft.entries.section('blog').status('pending').limit(20).find()
+
+   Under the hood, Craft does the work of translating your search criteria
+   into a database query in order to fetch the elements that you are
+   interested in.
+
+   Coming from a Laravel background, I think of the ElementCriteriaModel
+   as being similar, in many ways, to the Eloquent ORM.
+
+   In most cases, these built-in methods of interacting with your data are
+   sufficient, and the query parameters available in Craft offer quite
+   flexible and powerful functionality--allowing you to easily obtain
+   related elements with the relatedTo parameter, to perform full-text
+   search for data using a robust syntax, to order by various values, etc.
+   But occasionally, you might encounter a more complicated instance where
+   the built-in query parameters won't get you what you want. For example,
+   you may want to:
+     * include data from a third-party plugin in your query
+     * perform a complex join involving data from several tables
+     * optimize a complex search in order to reduce the number of database
+       queries performed
+     * group and aggregate results at the database level rather than using
+       the group filter in your Twig template
+
+   Coming from a Laravel background, I think of the ElementCriteriaModel
+   as being similar, in many ways, to the Eloquent ORM. And just as
+   Eloquent allows you to take advantage of the lower-level Query Builder
+   when you need to customize or extend a query, Craft gives you the
+   ability to extend the ElementCriteriaModel when you need to construct
+   more complex queries.
+
+   The key to doing this is using the buildElementsQuery() method, and
+   following these 3 steps:
+    1. Start by setting up an ElementCriteriaModel
+    2. Modify or extend the query using Craft's buildElementsQuery()
+       method
+    3. Execute your customized query and return the results
+
+   These steps are described below, followed by an example of how to
+   perform a custom query that includes columns from a third-party
+   plugin's table.
+     __________________________________________________________________
+
+     Note: Extending the ElementCriteriaModel involves interacting with
+     Craft's underlying classes, and consequently requires a basic
+     understanding of Craft's plugin framework. But fear not, the
+     [9]plugin documentation is very thorough. Plus, we've created an
+     open-source plugin called [10]BuildQuery to demonstrate these
+     techniques, which can be used as a starting point for building your
+     own custom queries.
+     __________________________________________________________________
+
+Step 1: Obtaining an ElementCriteriaModel
+
+   So to begin with, you must first obtain an instance of the
+   ElementCriteriaModel for whichever element type you are interested in.
+   If searching for a particular set of entries, for example, you can call
+   this:
+craft()->elements->getCriteria(ElementType::Entry)
+
+   ... and it will generate an ElementCriteriaModel that contains the
+   query logic necessary to collect entries from Craft's database. (This
+   is the same object you would get if you called craft.entries from
+   within a template.) Possible ElementTypes include Entry, Asset,
+   Category, Tag, User, MatrixBlock, and GlobalSet. From there, you can
+   add various search criteria to your model using Craft's built-in query
+   parameters--again, just as you would from within your templates.
+
+   To mimic this template query:
+craft.entries.section('blog').status('pending').limit(20)
+
+   You would do the following in your plugin:
+$criteria = craft()->elements->getCriteria(ElementType::Entry);
+$criteria->section = 'blog';
+$criteria->status = 'pending';
+$criteria->limit = 20;
+
+   At this point, you haven't actually obtained any records--rather,
+   you've set up the queries that Craft will eventually run once you call
+   a fetching method like find() or first(). If you're dealing with a
+   relatively simple query, your work is done; calling find() will give
+   you a model that contains your query results (in this case, the results
+   would be an instance of EntryModel, since we are searching for
+   entries). However, if you need to add criteria to your query that isn't
+   available with the parameters for your ElementType, then your next stop
+   is buildElementsQuery().
+
+Step 2: Extending the ElementCriteriaModel with buildElementsQuery()
+
+   Like the getCriteria() method that we initially called to set up our
+   model, buildElementsQuery() is a method of Craft's [11]ElementsService
+   class, an instance of which is globally available using
+   craft()->elements. The function buildElementsQuery() accepts our
+   prepared ElementCriteriaModel as a parameter, so calling this:
+$dbCommand = craft()->elements->buildElementsQuery($criteria);
+
+   ... will take our ElementCriteriaModel (which is primed and ready to
+   fetch 20 pending entries from the blog section), and convert it into a
+   [12]DbCommand object. Craft is built on the Yii framework, and
+   DbCommand is an extension of Yii's [13]CDbCommand class; DbCommand is
+   the lower-level object that Craft uses to build and execute the SQL
+   query. Having converted the ElementCriteriaModel into a DbCommand
+   object, you are now free to continue adding criteria to your query,
+   using any of the methods that are available to DbCommand.
+
+   Note that once buildElementsQuery() is called, Craft executes the
+   initial ElementType query, along with any full-text search criteria
+   that were added to the ElementCriteriaModel. So if $dbCommand comes
+   back null, there's no point in continuing by further limiting our
+   query. Instead, we can immediately return an empty set of entries:
+if (! $dbCommand) {
+    return EntryModel::populateModels(null);
+}
+
+   If, however, buildElementsQuery() returns a result, then we can
+   continue adding our complex query criteria to the resulting DbCommand.
+   We have access to [14]all the methods available on the DbCommand class;
+   so, for example, we can join tables from a third-party plugin by adding
+   $dbCommand->leftJoin(...), select unique elements with setDistinct(),
+   add complex GROUP BY or HAVING clauses with setGroup() or setHaving(),
+   build nested sub-queries, etc.
+
+Step 3: Obtaining an Craft element model with our results
+
+   Once we've modified the DbCommand object, calling
+   $dbCommand->queryAll() will execute our query and return the results as
+   an array. [15]*
+
+   There's one final step remaining: we need to convert the result array
+   into an element model that Craft can work with in a template. The
+   simplest way to do that is by passing the array of results to the
+   populateModels method of the element's base model; in our case, since
+   we have been searching for entries, we would use an EntryModel, and
+   return:
+return EntryModel::populateModels($dbCommand->queryAll());
+
+   At this point, we have a result model just as if we had called find()
+   on our original ElementCriteriaModel, but which takes into account the
+   additional query criteria that we specified after calling
+   buildElementsQuery(). We can pass this model to our template, and loop
+   over it to display our results.
+
+   Alternatively, we can populate a custom model that extends
+   EntryModel--this is useful if, for instance, we need to add some custom
+   attributes to our model. The example query performed in the
+   [16]BuildQuery plugin adds a workCount attribute to the results, so we
+   need to set the strictAttributes parameter on our model to false so
+   that we have access to the new workCount attribute. Take a look at the
+   [17]BuildQueryModel to see this in action.
+     __________________________________________________________________
+
+Real world example
+
+   A common use case for using buildElementsQuery() is to search for data
+   from a table that is used by a third-party plugin.
+
+   For a recent project, we used the [18]SmartMap plugin to store location
+   data--address information and latitude/longitude coordinates--for our
+   entries, allowing us to take advantage of SmartMap's excellent mapping
+   and distance-based search capabilities. However, we also needed to
+   build queries for entries that took into account other search criteria
+   in addition to SmartMap's address fields. For instance, we needed to
+   build a query for all entries from a particular category, with
+   particular tags, grouped by a subtitle field, and with a particular
+   state or zip code. State and zip code data are stored in the SmartMap
+   plugin's table, not in Craft's content table.
+
+   Using buildElementsQuery(), we were able to start with our
+   mostly-populated ElementCriteriaModel, then join SmartMap's table
+   craft_smartmap_addresses so that we could include the state or zip code
+   criteria in our query:
+$criteria = craft()->elements->getCriteria(ElementType::Entry);
+$criteria->state = 'addresses.IL';
+$criteria->relatedTo = ...
+$dbCommand = craft()->elements->buildElementsQuery($criteria);
+$dbCommand->leftJoin("craft_smartmap_addresses", "addresses.elementId = entries.
+id");
+
+return EntryModel::populateModels($dbCommand->queryAll());
+
+   When it comes to the query power that is now available to you, this is
+   only the tip of the proverbial iceberg; complex joins, optimized
+   searches, aggregated group-by's and complicated nested queries are all
+   within your grasp. Using this method, for example, we were able to
+   build a single query that grouped results by a particular field, sorted
+   them by location data obtained from a third-party table, and paginated
+   them in a manner that took into account the number of parent records,
+   while ignoring the children:
+5 results per page:
+
+    Parent 1
+        Child a
+        Child b
+    Parent 2
+    Parent 3
+        Child c
+    Parent 4
+        Child d
+        Child e
+        Child f
+    Parent 5
+        Child g
+
+< 1 2 3 4 ... 10 11 >
+
+Bonus! Using buildElementsQuery() for query troubleshooting
+
+   Queries can quickly become very complex. Fortunately, the DbCommand
+   object that is obtained when calling buildElementsQuery() offers an
+   extremely useful getText() method, allowing you to view the underlying
+   SQL statement that you have been building. In addition, the DbCommand
+   object's params property contains an associative array of the
+   parameters that are bound to your current query. So this line:
+Craft::dd(
+    str_replace(
+        array_keys($dbCommand->params),
+        array_values($dbCommand->params), $dbCommand->getText()
+    )
+);
+
+   will dump the entire prepared SQL statement for whatever query you are
+   building, which can be very helpful for debugging convoluted queries
+   involving join, group by, or having clauses. Even if you're not
+   extending your query, it can often be useful to convert your
+   ElementCriteriaModel to a DbCommand and run getText() to see the full
+   SQL query that's hiding underneath.
+
+     * Prior to Craft version 2.5, buildElementsQuery() would strip out
+     any order, limit, and offset elements form the ElementCriteriaModel
+     when it was converted to a DbCommand, requiring that those be added
+     back in before calling queryAll(). This has been fixed in version
+     2.5.
+     __________________________________________________________________
+
+     *
+     *
+     *
+
+   Copyright 2016 [19]Tighten Co.
+
+References
+
+   Visible links
+   1. file:///feed
+   2. http://tighten.co/
+   3. http://tighten.co/
+   4. https://tighten.co/about-us
+   5. file:///
+   6. http://tighten.co/?contact-us
+   7. file:///authors/keith-damiani
+   8. https://craftcms.com/
+   9. https://craftcms.com/docs/plugins/introduction
+  10. https://github.com/tightenco/craft-build-query
+  11. https://craftcms.com/classreference/services/ElementsService
+  12. https://craftcms.com/classreference/etc/db/DbCommand
+  13. http://www.yiiframework.com/doc/api/1.1/CDbCommand
+  14. https://craftcms.com/classreference/etc/db/DbCommand
+  15. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html189.txt#craft-25-footnote
+  16. https://github.com/tightenco/craft-build-query
+  17. https://github.com/tightenco/craft-build-query/blob/master/buildquery/models/BuildQueryModel.php#L12
+  18. https://craftpl.us/plugins/smart-map/
+  19. http://tighten.co/
+
+   Hidden links:
+  21. http://twitter.com/tightenco
+  22. http://github.com/tightenco
+  23. http://www.builtinchicago.org/company/tighten-co
+  24. http://tighten.co/
