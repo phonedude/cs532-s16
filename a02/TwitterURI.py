@@ -60,10 +60,10 @@ def add_links(ts, key_words):
 
 # it's about time to create a TwitterSearch object with our secret tokens
 ts = TwitterSearch(
-    consumer_key='w11PMTOUlj5sGIKjnSII7AcT9',
-    consumer_secret='4if8m3WWrWvHFZ4wHKRXAgrb7mBuRBRboHKUDwoT4AfuoL97hB',
-    access_token='3348219965-FBcGASapNIvNxFNGbaIZw1XuE7s4NUIWBwEMN9i',
-    access_token_secret='v2SD9GCRNqr6GTSntP3HgCg14ijw9zMwA0NJ4cPym82TC'
+    consumer_key='consumerkey',
+    consumer_secret='consumersecrete',
+    access_token='access_token',
+    access_token_secret='accesstokensecret'
 )
 
 # find tweets for a particular key word
