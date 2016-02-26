@@ -308,16 +308,16 @@ Dr. Nelson's total \textbf{number-of-friends} in the structure was \textcolor{re
 \caption{Dr. Nelson's Facebook Friends Graph}\label{fig:1}
 \center
 \includegraphics[scale=.5]{images/facebook-paradox.pdf}
-\caption*{\scriptsize The data was sorted by \textbf{Number-of-Friends} field (see Table \ref{tab:table1}), the graph shows characteristics of a power-law distribution. The \textbf{Number-of-Friends} corresponding to $mln$ is \textcolor{red}{165} and $mln$ is position at the left side of the median \textcolor{red}{259}. Then, the friendship paradox holds true for $mln$ Facebook account.}
+\caption*{\scriptsize The data was sorted by \textbf{Number-of-Friends} field (see Table \ref{tab:table1}), the graph shows characteristics of a power-law distribution. The \textbf{Number-of-Friends} corresponding to $mln$ is \textcolor{red}{165} and $mln$ is positioned at the left side of the median \textcolor{red}{259}.  Thus, the friendship paradox holds true for $mln$ Facebook account.}
 \end{figure}
 \newpage
-The mean, standard deviation, and median was computed using R. The file $<facebook.R>$ is the script that makes the computation and graph plotting. The file is attached to this document.Calculation for the number of friends that $mln$ friends has:\\
+The mean, standard deviation, and median were computed using R. The file $<facebook.R>$ is the script that makes the computation and graph plotting. The file is attached to this document. Following is the calculation for the number of friends that $mln$ friends has:\\
 \begin{itemize}
 	\item Mean: \textcolor{red}{358.2}\
 	\item $\sigma$: \textcolor{red}{259}
 	\item Median: \textcolor{red}{370.7}
 \end{itemize}
-$\sigma$ has a high value. It is skew to the magnitude of the last 5 friends. See Table \ref{tab:table1}. However, even if we were to disregard this data,  $mln$'s Number of Friends are so far left from the mean and the median that the friendship paradox holds true for $mln$ Facebook account, in which his friends have more friends than him.
+$\sigma$ has a high value. It is skewed due to the magnitude of the last 5 friends. See Table \ref{tab:table1}. However, even if we were to disregard this data,  $mln$'s Number of Friends are so far left from the mean and the median that the friendship paradox holds true for $mln$ Facebook account, in which his friends have more friends than he.
 \end{homeworkProblem}
 
 %----------------------------------------------------------------------------------------
@@ -340,7 +340,7 @@ If you do not have followers on Twitter (or don't have more than 50), then use m
 
 \textbf{EXTRACTING DATA}\\
 
-My sister Twitter account was employed to test if the paradox holds. A REST Twitter API \cite{api}. A $cURL$ command was used to execute the request:\\
+My sister's Twitter account was employed to test if the paradox holds. A REST Twitter API \cite{api} $cURL$ command was used to execute the request:\\
 
 \begin{verbatim}
  curl --get 'https://api.twitter.com/1.1/followers/list.json' --data
@@ -374,9 +374,9 @@ An iterable object was formed with the regular expression \texttt{`\textbackslas
 \caption{Sister's Twitter Followers Graph}\label{fig:2}
 \center
 \includegraphics[scale=.5]{images/twitter-paradox.pdf}
-\caption*{\scriptsize The data was sorted by \textbf{Number-of-Friends}, the graph shows characteristics of a power-law distribution. The \textbf{Number-of-Friends} corresponding to $sis$ is \textcolor{red}{32} (see Table \ref{tab:table2}). Since $my\ sister$ on the x-axis is positioned at the left side of the median \textcolor{red}{259} and the mean  \textcolor{red}{5287}, then the friendship paradox holds for my sister Twitter account, in which her friends have more followers than her.}
+\caption*{\scriptsize The data was sorted by \textbf{Number-of-Friends}, the graph shows characteristics of a power-law distribution. The \textbf{Number-of-Friends} corresponding to $sis$ is \textcolor{red}{32} (see Table \ref{tab:table2}). Since $my\ sister$ on the x-axis is positioned at the left side of the median \textcolor{red}{259} and the mean  \textcolor{red}{5287}, then the friendship paradox holds for my sister Twitter account, in which her friends have more followers than she.}
 \end{figure}
-The mean, standard deviation, and median was computed using R. The file $<twitter.R>$ is the script that makes the computation and graph plotting. The file is attached to this document. Calculation for the number of friends that my sister's friends have:\\
+The mean, standard deviation, and median were computed using R. The file $<twitter.R>$ is the script that makes the computation and graph plotting. The file is attached to this document. Following is the calculation for the number of friends that my sister's friends have:\\
 \begin{itemize}
 	\item Mean: \textcolor{red}{5,287.35}\
 	\item $\sigma$: \textcolor{red}{22,623}
@@ -392,7 +392,7 @@ The mean, standard deviation, and median was computed using R. The file $<twitte
 \begin{homeworkProblem}[Problem 3 Extra Credit]
 Repeat question \#1, but with your LinkedIn profile.
 \subsection{3.1 Approach}
-All the connections from my wife's LinkedIn account were downloaded in file $<source.txt>$. I couldn't cross reference the internal connection ID with their public ID, so a manual computation on the number of connection was employed to get the data.
+All the connections from my wife's LinkedIn account were downloaded in file $<source.txt>$. I couldn't cross reference the internal connection ID with their public ID, so a manual computation on the number of connections were employed to get the data.
 
 \subsection{3.1 Solution}
 
@@ -400,8 +400,15 @@ All the connections from my wife's LinkedIn account were downloaded in file $<so
 \caption{Wife Linkedin Connection Graph}\label{fig:3}
 \center
 \includegraphics[scale=.45]{images/linkedin-paradox.pdf}
-\caption*{\scriptsize The data was sorted by \textbf{Connection Count}. The \textbf{Connection Count} corresponding to $Wife$ is \textcolor{red}{68} and $my\ wife$ is positioned at the left side of the median \textcolor{red}{359}. Then, the friendship paradox holds for my wife Linkedin account in which her connections have  more connections than her.}
+\caption*{\scriptsize The data was sorted by \textbf{Connection Count}. The \textbf{Connection Count} corresponding to $Wife$ is \textcolor{red}{68} (see Table \ref{tab:table3}) and $my\ wife$ is positioned at the left side of the median \textcolor{red}{359}. Then, the friendship paradox holds for my wife's Linkedin account in which her connections have  more connections than her.}
 \end{figure}
+
+The mean, standard deviation, and median was computed using R. The file $<linkedin.R>$ is the script that makes the computation and graph plotting. The file is attached to this document. Below the calculation results:\\
+\begin{itemize}
+	\item Mean: \textcolor{red}{333.67}\
+	\item $\sigma$: \textcolor{red}{163.2}
+	\item Median: \textcolor{red}{359}
+\end{itemize}
 
 \end{homeworkProblem}
 
@@ -412,7 +419,7 @@ All the connections from my wife's LinkedIn account were downloaded in file $<so
 \begin{homeworkProblem}[Problem 3 Extra Credit]
 Repeat question \#2, but change \enquote{followers} to {following}?  In other words, are the people I am following following more people?
 \subsection{4.1 Approach}
-The same approach as in 2.1 was followed. The only difference was that instead of using \textbf{follower\_count} as in the $regex$ filter we used \textbf{friends\_count} which points to the number of particular person may be following. See listing below:
+The same approach as in 2.1 was followed. The only difference was that instead of using \textbf{follower\_count} as in the $regex$ filter, we used \textbf{friends\_count} which points to the number of particular person may be following. See listing below:
 
 \lstinputlisting[language=Python,
                  style=mybox, 
@@ -430,10 +437,10 @@ The same approach as in 2.1 was followed. The only difference was that instead o
 \caption{Sister's Twitter Following Friends Graph}\label{fig:4}
 \center
 \includegraphics[scale=.5]{images/twitter-paradox2.pdf}
-\caption*{\scriptsize Plotting the data sorted by \textbf{Number-Following}, the graph shows characteristics of a power-law distribution. The \textbf{Number-Following} corresponding to $sis$ is \textcolor{red}{71} and $my\ sister$ is position at the left side of the median \textcolor{red}{243}. Then, the friendship paradox holds for my sister Twitter account in which her friends are following more people than her.}
+\caption*{\scriptsize Plotting the data sorted by \textbf{Number-Following}, the graph shows characteristics of a power-law distribution. The \textbf{Number-Following} corresponding to $sis$ is \textcolor{red}{71} and $my\ sister$ is position at the left side of the median \textcolor{red}{243}. Then, the friendship paradox holds for my sister Twitter account in which her friends are following more people than she.}
 \end{figure}
 
-The mean, standard deviation, and median was computed using R. The file $<twitter2.R>$ is the script that makes the computation and graph plotting. The file is attached to this document. Calculation for the number of friends that my sister's friends have:\\
+The mean, standard deviation, and median were computed using R. The file $<twitter2.R>$ is the script that makes the computation and graph plotting. The file is attached to this document. Following is the calculation for the number of friends that my sister's friends have:\\
 \begin{itemize}
 	\item Mean: \textcolor{red}{3,892.94}\
 	\item $\sigma$: \textcolor{red}{17,449}
