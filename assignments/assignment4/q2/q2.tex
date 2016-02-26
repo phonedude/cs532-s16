@@ -5,12 +5,12 @@
 \input{q2/a4}
 
 \subsection{Answer}
-Using Dr. Michael Nelson's Twitter account and the Twitter API \cite{api:twitter}, specifically the GET friends/list \cite{api:twitter_followerslist} request, all of Dr. Nelson's Twitter friends were obtained and saved to the file called {\tt followers}. This method also uses the API's paginating scheme: when there are a large number of results for a query, the API will send a cursor index to show that there are more results to process and that more requests are needed. The code to do this is in Listing \ref{listing:get_followers}. 
+Using Dr. Michael Nelson's Twitter account and the Twitter API \cite{api}, specifically the GET friends/list \cite{followinglist} request, all of Dr. Nelson's Twitter friends were obtained and saved to the file called {\tt followers}. This method also uses the API's paginating scheme: when there are a large number of results for a query, the API will send a cursor index to show that there are more results to process and that more requests are needed. The code to do this is in Listing \ref{listing:get_followers}. 
 
 \lstinputlisting[language=Python, caption={get\_followers.py}, label=listing:get_followers]{q2/get_followers.py}
 
 \clearpage
-To reduce the impact of high HTTP traffic, the Twitter API rate-limits most requests -- the one needed to obtain a user's friends list has a limit of fifteen message per fifteen minutes. Any requests received from a user or service that has reached the limit will be denied.
+To reduce the impact of high HTTP traffic, the Twitter API\cite{api} rate-limits most requests -- the one needed to obtain a user's friends list\cite{followerslist} has a limit of fifteen message per fifteen minutes. Any requests received from a user or service that has reached the limit will be denied.
 \\
 The friends of Dr. Nelson's friends were then obtained with the same {\tt get\_followers} method from Listing \ref{listing:get_followers} and stored in a file called {\tt followers\_counts}, each on a single line preceded by their friend count. All of these operations were controlled by a main method, which is shown in Listing \ref{listing:get_followers}.
 \\
