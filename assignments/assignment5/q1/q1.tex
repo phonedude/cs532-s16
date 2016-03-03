@@ -1,0 +1,74 @@
+\section{Problem 1}
+
+\subsection{Question}
+\vspace*{10pt}
+\input{q1/a5}
+\clearpage
+\subsection{Answer}
+As was illustrated in the original study of Zachary's karate club, \cite{wzach77}, a prediction of the structure of the club if a separation were to occur can be made with a high degree of accuracy using weighted edges based on the perceived ``strength'' of each relationship it modeled. The prediction method outlined in the original paper was an implementation of the \textit{maximum flow-minimum cut labeling procedure} \cite{forful62}. The pickled \cite{py:pickle} dataset of the existing karate club, with weights for each edge, was obtained from \url{http://nexus.igraph.org/api/dataset_info?id=1&format=html} and used to create the graph shown in Figure \ref{fig:existing_graph}.
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[scale=0.65]{q1/initial_karate_graph.pdf}}
+\caption{The Existing Graph}
+\label{fig:existing_graph}
+\end{figure}
+
+\clearpage
+
+The actual structure of the two resulting clubs after the split are shown in Figure \ref{fig:actual}.
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[scale=0.65]{q1/actual_after_split.pdf}}
+\caption{Actual Graph After Split}
+\label{fig:actual}
+\end{figure}
+
+To predict a separation of the existing graph into two or more distinct community components a pair of community detection algorithms will be employed and the results will be compared to the actual results of the split from Zachary's original study \cite{wzach77}. Community Detection was chosen as a means for predicting the results of fission events because it is logical that a given community would less likely be split along strong inter-community edges than those weaker, community-spanning edges.
+
+\clearpage
+
+The first algorithm used was the Edge Betweenness algorithm, developed by Girvan and Newman \cite{girnew04}. This is a divisive algorithm that removes edges that have the highest betweenness measure because these tend to be community-spanning edges. 
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[scale=0.5]{q1/clust_eb.pdf}}
+\caption{Prediction of Edge Betweenness Algorithm}
+\label{fig:graph_eb}
+\end{figure}
+
+\begin{verbatim}
+Edge Betweenness method results: 
+Variant elements:
+	[3, 14]
+94.12% accuracy
+\end{verbatim}
+
+As you can see this method is fairly accurate, with over 94\% of the prediction being correct.
+
+\clearpage
+
+The second method used was the Leading Eigenvector algorithm developed my M. Newman \cite{new06}. This method uses a special matrix, called the modularity matrix, to determine which edges to remove.
+
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[scale=0.5]{q1/clust_le.pdf}}
+\caption{Prediction of Leading Eigenvector Algorithm}
+\label{fig:graph_le}
+\end{figure}
+
+\begin{verbatim}
+Leading Eigenvector method results: 
+Variant elements:
+	[]
+100.0 % accuracy
+\end{verbatim}
+
+This method proves 100\% efficacy in its prediction.
+
+\clearpage
+
+The python code to produce these graphs is shown in Listing \ref{listing:karate}.
+
+\lstinputlisting[language=Python, caption={Finding Communities in Zachary's Karate Club}, label=listing:karate]{q1/karate.py}
