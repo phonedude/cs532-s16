@@ -2,10 +2,10 @@
 
 import pickle
 import igraph
-from igraph import plot
+from igraph import *
+import cairo
 
 FILENAME = 'karate.pickle'
-
 # load the graph
 data = pickle.loads(open(FILENAME).read())['karate']
 
@@ -38,13 +38,16 @@ if __name__ == '__main__':
 		clusters=2, 
 		directed=False, 
 		weights=data.es['weight'])
+        print(com_eb)
 	clust_eb = com_eb.as_clustering()
+        print(clust_eb)
 	res_eb, acc_eb = compare(clust_eb.membership)
 	plot(clust_eb, "clust_eb.pdf", vertex_label=data.vs['name'], margin=25)
 	print_results("Edge Betweenness", res_eb, acc_eb)
 		
 	# Newman Leading Eigenvector method
 	clust_le = data.community_leading_eigenvector(clusters=2, weights=data.es['weight'])
+        print(clust_le)
 	res_le, acc_le = compare(clust_le.membership)
 	plot(clust_le, "clust_le.pdf", vertex_label=data.vs['name'], margin=25)
 	print_results("Leading Eigenvector", res_le, acc_le)
@@ -55,4 +58,5 @@ if __name__ == '__main__':
 			clusters=i, 
 			directed=False,
 			weights=data.es['weight']).as_clustering()
+                print (cluster)
 		plot(cluster, "cluster" + str(i) + ".pdf", vertex_label=data.vs['name'], margin=25)
