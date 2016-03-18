@@ -290,7 +290,7 @@ Note: for getting GitHub to serve HTML (and other media types), see: \url{http:/
 Be sure to include the URI(s) for your D3 graph in your report. \\
 
 \subsection{1.1 Approach}
-The twitter account for \textbf{Jose Antonio Olvera}, whom follows Dr. Nelson, was used as our data-set \textbf{\textit{S}} for problem 1. This problem was divided into two sub-problems: extracting the data and plotting the graph.
+The Twitter account for \textbf{Jose Antonio Olvera}, whom follows Dr. Nelson, was used as our data-set \textbf{\textit{S}} for problem 1. This problem was divided into two sub-problems: extracting the data and plotting the graph.
 
 \subsubsection{1.1.1 Extracting the data}
 Listing \ref{lst:twitterapi}  is a python program implemented to extract the data. It accomplishes the following:
@@ -299,7 +299,7 @@ Listing \ref{lst:twitterapi}  is a python program implemented to extract the dat
 	\item All IDs, including $S$, are placed into an array \textbf{\textit{A}}. Lines 20-21.
 	\item Iterates through all elements in $A$, extracting its followers and other important information, such as name, screen name, number of friends, etc. Followers of each element are placed into an array \textbf{\textit{B}}. Lines 28-56
 	\item Only $B$'s friends in $A$ are needed, then $B = A \cup B$. Lines 36-39. 
-	\item The collection of all $B$s arrays are saved into a JSON file. Lines 59-61.
+	\item The collection of all $B$ arrays are saved into a JSON file. Lines 59-61.
 \end{enumerate}
 
 \lstinputlisting[language=Python,
@@ -312,19 +312,19 @@ Listing \ref{lst:twitterapi}  is a python program implemented to extract the dat
                  ]
 {../../lib/TwitterAPI.py}
 \newpage
-At the time our data-set has retrieved its size was of 53 elements. There is a request number limitations of 15,  to extract Twitter's user information.  Lines 50-52 catches that error and wait for 15 minutes to continue with the information extraction.\\
+At the time our data-set was retrieved, its size was of 53 elements. There is a request number limitations of 15,  to extract Twitter's user information.  Lines 50-52 catch that error and wait for 15 minutes to continue with the information extraction.\\
 
 Some Twitter users may have privacy settings in their accounts, so their information cannot be retrieved through the API. See section Excluded Data. Lines 68-74.
 
 \subsubsection{1.1.2 Plotting the Graph}
-Although we have the data from 1.1.1 to plot the graph, it does not have detail information on how nodes link. $<ReshapeData.py>$ accomplishes the job. It creates within a file two JSON dictionaries: \textbf{nodes}, containing all elements characteristics and \textbf{links}, a source pointing to a target. It also adds a new characteristic to the node: color. It determines how close is the friendship between any node with \textbf{\textit{A}}. 
+Although we have the data from 1.1.1 to plot the graph, it does not have detailed information on how nodes link. $<ReshapeData.py>$ accomplishes this job. It creates  two JSON dictionaries within a file: \textbf{nodes}, containing all element characteristics and \textbf{links}, a source pointing to a target. It also adds a new characteristic to the node: color. It determines how close the friendship is between any node with \textbf{\textit{A}}. 
 
 
 \begin{figure}[!h]
 \center
 \caption{Color Scheme} \label{fig:1}
 \includegraphics[scale=.85]{images/graph-color.pdf}
-\caption*{\scriptsize Figure \ref{fig:1} represents a color scheme showing how similar is any particular node with data-set $A$ in relation to its followers.}
+\caption*{\scriptsize Figure \ref{fig:1} represents a color scheme showing how similar any particular node with data-set $A$ is in relation to its followers.}
 \end{figure}
 
 \lstinputlisting[language=Python,
@@ -338,17 +338,17 @@ Although we have the data from 1.1.1 to plot the graph, it does not have detail 
 {../ReshapeData.py}
 
 \vspace*{5mm}
-In order to make the graph appealing in terms of friendship colors some test were conducted to capture different similarity levels. As a result, if any particular node has:
+In order to make the graph appealing in terms of friendship colors, some tests were conducted to capture different similarity levels. As a result, if any particular node has:
 
 \begin{enumerate}[a. ]
-	\item If $>$ 20\% of $N$ followers are are also following $A$, then $N$ is color coded as having similar followers as $A$.
-	\item If node $N$ has $>$ 14\% and $<$ 20\% of $A$ followers then $N$ is color coded as having most of its followers following $A$.
-	\item If node $N$ has $>$ 10\% and $<$ 14\% of $A$ followers then $N$ is color coded as having some its followers are following $A$.	
+	\item If $>$ 20\% of $N$ followers are also following $A$, then $N$ is color coded as having similar followers as $A$.
+	\item If node $N$ has $>$ 14\% and $<$ 20\% of $A$ followers, then $N$ is color coded as having most of its followers following $A$.
+	\item If node $N$ has $>$ 10\% and $<$ 14\% of $A$ followers, then $N$ is color coded as having some its followers following $A$.	
 	\item If node $N$'s has $>$ 4\% and $<$ 14\% of $A$ followers then $N$ is color coded as having few followers following $A$.
-		\item If node $N$'s has $<$ 4\% of $A$ followers then $N$ is color coded as very few of $N$'s followers are following $A$.
+		\item If node $N$'s has $<$ 4\% of $A$ followers, then $N$ is color coded as very few of $N$'s followers following $A$.
 \end{enumerate}
 
-The color code scheme is implemented in lines 49-62 of $<ReshapeData.py>$. The rest of the code just dump the data into \textbf{\textit{jose.json}}, which is the input file for our Data-Driven Document. \textbf{The color code scheme is not accurate in a English grammar context, but it gives a quick view how closer are their followers network}\\
+The color code scheme is implemented in lines 55-64 of $<ReshapeData.py>$. The rest of the code just dump the data into \textbf{\textit{jose.json}}, which is the input file for our Data-Driven Document. \textbf{The color code scheme is not accurate in an English grammatical context, but it gives a quick view of how close the followers are in the network}\\
 
 \textbf{Data Visualization:}\\
 Various features from different D3JS sites were used to enhance graph appearance.\\
@@ -357,11 +357,79 @@ Various features from different D3JS sites were used to enhance graph appearance
 	Zooming and dragging & \url{http://bl.ocks.org/mbostock/6123708} \cite{zooming}\\
     Mouseover Tip-tool &  \url{ http://bl.ocks.org/Caged/6476579} \cite{tip-tool}\\
 	Directed graph & \url{http://bl.ocks.org/mbostock/1153292}\cite{directed}\\
-	Mouseover link hightlight & \url{http://p.migdal.pl/wizualizacja-wolnych-lektur/polish_books_themes.html} \cite{polish-books}\\
+	Mouseover link highlight & \url{http://p.migdal.pl/wizualizacja-wolnych-lektur/polish_books_themes.html} \cite{polish-books}\\
 	D3 Markers & \url{http://bl.ocks.org/dustinlarimer/5888271}	\cite{d3-markers}
 \end{tabular} 
 
-\newpage
+\vspace{7mm}
+\textbf{D3 Markers} obtained from \cite{d3-markers} defines a relationship direction between two nodes using an arrow. An arrow pointing to a node means the target is a source's follower. This feature is included as D3-JavaScript in the html page. See below:
+
+\lstinputlisting[language=html,
+                 style=mybox, 
+                 captionpos=t,
+                 caption={Placing D3 Markers in d3directed.hmtl},
+                 label={lst:d3markers},
+				 linerange={75-87},
+				 firstnumber=75                 
+                 ]
+{../../D3/d3directed.html}
+
+The attribute \enquote{RefX} line 82 points out how far from the target the arrow is going to be placed. We use this attribute to make a larger separation between any regular node and the main node $A$.\\
+
+\textbf{Mouseover link highlight} obtained from \cite{polish-books} highlights the links and nodes related to the node when the mouse hovers over it. This feature modifies the CSS characteristic of link-nodes by iterating over all the nodes in the graph, filtering the modifications to those having a relationship with the node where the mouse is hovering. Below D3-JavaScript coding to create this effect:
+
+\lstinputlisting[language=html,
+                 style=mybox, 
+                 captionpos=t,
+                 caption={Highlighting Links and Nodes in d3directed.hmtl},
+                 label={lst:link-highlight},
+				 linerange={152-182},
+				 firstnumber=152                
+                 ]
+{../../D3/d3directed.html}
+
+\vspace{5mm}
+\textbf{Directed Graph} is the main D3 template obtained from \cite{directed} to generate our solution. The major difference between the template and our solution is the incorporation of extra features not included in the template, and using an outside data source file instead of being embedded with in the JavaScript. The data is loaded at the beginning for the external JSON file: jose.json. See below:
+
+\lstinputlisting[language=html,
+                 style=mybox, 
+                 captionpos=t,
+                 caption={Loading JSON file into d3directed.hmtl},
+                 label={lst:loading-json},
+				 linerange={19-24},
+				 firstnumber=19              
+                 ]
+{../../D3/d3directed.html}
+
+\vspace{5mm}
+\textbf{Mouseover Tip-tool} is a mouse-over effect feature obtained from \cite{tip-tool} that pops information of a node as the user hovers the mouse over it. The function is included in the mouseover effect, adding a \enquote{CSS} attribute to our DOM object to include the desired node information:
+
+\lstinputlisting[language=html,
+                 style=mybox, 
+                 captionpos=t,
+                 caption={Poping Node info in d3directed.hmtl},
+                 label={lst:tip-tool},
+				 linerange={99-109},
+				 firstnumber=99                
+                 ]
+{../../D3/d3directed.html}
+
+\vspace{5mm}
+\textbf{Zooming and dragging} is an interesting and useful effect obtained from \cite{zooming}, but at the point when this document was edited, it only worked in Mozilla FireFox Web-Browsers. The description of its operation is listed below:
+
+\lstinputlisting[language=html,
+                 style=mybox, 
+                 captionpos=t,
+                 caption={Zooming and Dragging d3directed.hmtl},
+                 label={lst:zooming},
+				 linerange={199-220},
+				 firstnumber=199            
+                 ]
+{../../D3/d3directed.html}
+
+\vspace{5mm}
+The DOM graph object is modified as the mouse while is been rotated. A good and detailed explanation of this effect can be found at \cite{zooming-explained}
+
 \subsection{1.2 Excluded Data}
 \vspace*{50mm}
 %----------------------------------------------------------------------------------------
@@ -375,13 +443,13 @@ Various features from different D3JS sites were used to enhance graph appearance
 \center
 \caption{Jose A. Olvera Followers Network Graph} \label{fig:graph}
 \includegraphics[scale=.85]{images/directed-graph.png}
-\caption*{\scriptsize Figure \ref{fig:graph} represents a color scheme showing how similar are the followers of any particular node with $A$ followers. Node $A$ (Jose Antonio Olvera) has a larger radius and a yellow stripe around to distinguish it from the rest of the nodes in the graph.}
+\caption*{\scriptsize Figure \ref{fig:graph} shows ($A$) Jose A. Olvera's Followers' Twitter Network Graph featuring a color scheme representing how similar the followers of any particular node are with $A$ followers. Node $A$ (Jose Antonio Olvera) has a larger radius and a yellow stripe around to distinguish it from the rest of the nodes in the graph. \textbf{URI:} \url{http://test-mysite.us/d3directed.html}}
 \end{figure}
-
+\centerline{\textbf{URI:}\url{http://test-mysite.us/d3directed.html}}
 \end{homeworkProblem}
 
 %----------------------------------------------------------------------------------------
-%	Problem 2 Extra Credit 1 Point
+%	Problem 2 
 %----------------------------------------------------------------------------------------
 \newpage
 \begin{homeworkProblem}
@@ -412,7 +480,7 @@ We we used the same data generated in problem 1 to solve this problem. However, 
 {../GetGender.py}
 
 \vspace{5mm}
-The result file can be seen on Table \ref{tab:likely-gender}. To complete our graph and generate a solution we use the same approach as in 1.1.2, but we added an extra field to the nodes: gender, and we placed all linking edges into a set, thus eliminating the extra edge between two nodes having a bi-directional relationship. Since the JSON generation file approach is the same as in previous problem, only where they differ will be pointed out.
+The result file can be seen on Table \ref{tab:likely-gender}. To complete our graph and generate a solution we use the same approach as in 1.1.2, but we added an extra field to the nodes: gender, and we placed all linking edges into a set, thus eliminating the extra edge between two nodes having a bi-directional relationship. Since the JSON generation file approach is the same as in the previous problem, only where they differ will be pointed out.
 
 \lstinputlisting[language=Python,
                  style=mybox, 
@@ -424,10 +492,10 @@ The result file can be seen on Table \ref{tab:likely-gender}. To complete our gr
                  ]
 {../GenerateGenderJSON.py}
 
-As mentioned before, a set object was created in line 53 and we check in both sides of linked nodes (lines 55-56) to verify if the relationship exists.
+As mentioned before, a set object was created in line 53 and we checked in both sides of the linked nodes (lines 55-56) to verify if the relationship exists.
 
 \textbf{Data Visualization:}\\
-We used same approach as in 1.1.2, difference our color scheme was base on two colors: male (blue) and female (pink).
+We used the same approach as in 1.1.2, the difference is our color scheme was based on two colors: male (blue) and female (pink).
 
 \subsection{2.2 Excluded Data}
 %----------------------------------------------------------------------------------------
@@ -451,12 +519,12 @@ We used same approach as in 1.1.2, difference our color scheme was base on two c
 \center
 \caption{Gender Graph for Jose A. Olvera Twitter Followers} \label{fig:gender}
 \includegraphics[scale=.85]{images/gender-graph.png}
-\caption*{\scriptsize Figure \ref{fig:gender} visualize gender relationship among Jose Olvera Followers.}
+\caption*{\scriptsize Figure \ref{fig:gender} visualize gender relationship among Jose Olvera Followers. URI: \url{http://test-mysite.us/d3undirected.html}}
 \end{figure}
-
+\centerline{\textbf{URI}: \url{http://test-mysite.us/d3undirected.html}}
 \subsubsection{2.3.3 Test for Gender Homophily}
 \vspace{5mm}
-To test our graph for gender homophily we implemented $<homophily.py>$. The result of running the program is shown below:\\
+To test our graph for gender homophily, we implemented $<homophily.py>$. The result of running the program is shown below:\\
 
 \begin{lstlisting}[style=nonumbers]
 	Starting Time: Wed,  Mar 16, 2016 at 21:50:36
@@ -503,6 +571,22 @@ As we can see 2pq $<$ cross-edges, 0.375 $<$ 0.385 $\therefore$ there is no evid
 \end{homeworkProblem}
 
 %----------------------------------------------------------------------------------------
+%	Problem 3 - Extra Credit
+%----------------------------------------------------------------------------------------
+\newpage
+\begin{homeworkProblem}
+Using D3, create a graph of the Karate club before and after the split.
+\begin{itemize}
+	\item Weight the edges with the data from:\\
+	\url{http://vlado.fmf.uni-lj.si/pub/networks/data/ucinet/zachary.dat}
+
+	\item Have the transition from before/after the split occur on a mouse
+	click.  This is a toggle, so the graph will go back and forth between
+	connected and disconnected.
+\end{itemize}
+\end{homeworkProblem}
+
+%----------------------------------------------------------------------------------------
 %	Bibliography
 %----------------------------------------------------------------------------------------
 \newpage
@@ -527,5 +611,8 @@ Polish Books. (n.d.) Retrieved March 10, 2016, from \url{http://p.migdal.pl/wizu
 
 \bibitem{d3-markers}
 D3 Markers. (n.d.) Retrieved March 10, 2016, from \url{http://bl.ocks.org/dustinlarimer/5888271}
+
+\bibitem{zooming-explained}
+Explaining D3 Zooming and Dragging. (n.d.) Retrieved March 13, 2016, from \url{http://stackoverflow.com/questions/21344340/sematic-zooming-of-force-directed-grap}
 \end{thebibliography}
 \end{document}
