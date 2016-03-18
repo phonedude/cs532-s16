@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Webscience and Digital Libraries Twitter Vis</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!--<link type="text/css" rel="stylesheet" href="css/main.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="css/normalize.css">-->
+    <link type="text/css" rel="stylesheet"  href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/underscore.js"></script>
+    <script type="text/javascript" src="js/d3.js"></script>
+    <script type="text/javascript" src="js/Tooltip.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.1.js"></script>
+</head>
+<body>
+<div id="container" class="container">
+    <header>
+        <h1>WSDL Research Group Twitter Follower Friend Graph</h1>
+        <p>
+            Nodes represent unique twitter handles and are colored by the group they belong:
+            <span class="wsdl">WSDL Group</span>,
+            <span class="diglib">Digital Libraries</span>,
+            <span class="odu">ODU</span>,
+            <span class="r">Regular People</span> .
+        </p>
+
+    </header>
+    <div id="linkShow" class="control">
+        <h3>Links</h3>
+        <select id="link_select">
+            <option value=16>All Follow WSDL</option>
+            <option value=17>All Edges</option>
+            <option value=0>Regular Follows Regular</option>
+            <option value=1>Regular Follows WSDL</option>
+            <option value=2>Regular Follows Digital Library</option>
+            <option value=3>Regular Follows ODU</option>
+            <option value=4>WSDL Follows Regular</option>
+            <option value=5>WSDL Follows WSDL</option>
+            <option value=6>WSDL Follows Digital Library</option>
+            <option value=7>WSDL Follows ODU</option>
+            <option value=8>Digital Library Follows Regular</option>
+            <option value=9>Digital Library Follows WSDL</option>
+            <option value=10>Digital Library Follows Digital Library</option>
+            <option value=11>Digital Library Follows ODU</option>
+            <option value=12>ODU Follows Regular</option>
+            <option value=13>ODU Follows WSDL</option>
+            <option value=15>ODU Follows ODU</option>
+        </select>
+    </div>
+
+</div>
+<div id="main" role="main">
+    <div id="vis"></div>
+</div>
+<script type="text/javascript" src="js/wsdlGraph.js">
+
+</script>
+</body>
+</html>

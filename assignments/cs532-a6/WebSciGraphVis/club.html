@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<body>
+<head>
+    <title>Karate Club</title>
+    <style>
+        .link {
+            stroke: #666;
+            opacity: 0.6;
+            stroke-width: 1.5px;
+        }
+        .node circle {
+            stroke: #fff;
+            opacity: 0.6;
+            stroke-width: 1.5px;
+        }
+        text {
+            font: 15px serif;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+    </style>
+    <script src=http://d3js.org/d3.v3.min.js></script>
+</head>
+
+<script>
+    /*
+     This was auto generated except for the titles, show what, switch functino and width height
+
+     */
+
+    var titles =["Karate Club Prior To Split","Karate Club After Split"];
+    var showWhat = 1;
+
+    function original() {
+        var links = [ { "source" : "Mr Hi", "target" : "Actor 2" }, { "source" : "Mr Hi", "target" : "Actor 3" }, { "source" : "Mr Hi", "target" : "Actor 4" }, { "source" : "Mr Hi", "target" : "Actor 5" }, { "source" : "Mr Hi", "target" : "Actor 6" }, { "source" : "Mr Hi", "target" : "Actor 7" }, { "source" : "Mr Hi", "target" : "Actor 8" }, { "source" : "Mr Hi", "target" : "Actor 9" }, { "source" : "Mr Hi", "target" : "Actor 11" }, { "source" : "Mr Hi", "target" : "Actor 12" }, { "source" : "Mr Hi", "target" : "Actor 13" }, { "source" : "Mr Hi", "target" : "Actor 14" }, { "source" : "Mr Hi", "target" : "Actor 18" }, { "source" : "Mr Hi", "target" : "Actor 20" }, { "source" : "Mr Hi", "target" : "Actor 22" }, { "source" : "Mr Hi", "target" : "Actor 32" }, { "source" : "Actor 2", "target" : "Actor 3" }, { "source" : "Actor 2", "target" : "Actor 4" }, { "source" : "Actor 2", "target" : "Actor 8" }, { "source" : "Actor 2", "target" : "Actor 14" }, { "source" : "Actor 2", "target" : "Actor 18" }, { "source" : "Actor 2", "target" : "Actor 20" }, { "source" : "Actor 2", "target" : "Actor 22" }, { "source" : "Actor 2", "target" : "Actor 31" }, { "source" : "Actor 3", "target" : "Actor 4" }, { "source" : "Actor 3", "target" : "Actor 8" }, { "source" : "Actor 3", "target" : "Actor 9" }, { "source" : "Actor 3", "target" : "Actor 10" }, { "source" : "Actor 3", "target" : "Actor 14" }, { "source" : "Actor 3", "target" : "Actor 28" }, { "source" : "Actor 3", "target" : "Actor 29" }, { "source" : "Actor 3", "target" : "Actor 33" }, { "source" : "Actor 4", "target" : "Actor 8" }, { "source" : "Actor 4", "target" : "Actor 13" }, { "source" : "Actor 4", "target" : "Actor 14" }, { "source" : "Actor 5", "target" : "Actor 7" }, { "source" : "Actor 5", "target" : "Actor 11" }, { "source" : "Actor 6", "target" : "Actor 7" }, { "source" : "Actor 6", "target" : "Actor 11" }, { "source" : "Actor 6", "target" : "Actor 17" }, { "source" : "Actor 7", "target" : "Actor 17" }, { "source" : "Actor 9", "target" : "Actor 31" }, { "source" : "Actor 9", "target" : "Actor 33" }, { "source" : "Actor 9", "target" : "John A" }, { "source" : "Actor 10", "target" : "John A" }, { "source" : "Actor 14", "target" : "John A" }, { "source" : "Actor 15", "target" : "Actor 33" }, { "source" : "Actor 15", "target" : "John A" }, { "source" : "Actor 16", "target" : "Actor 33" }, { "source" : "Actor 16", "target" : "John A" }, { "source" : "Actor 19", "target" : "Actor 33" }, { "source" : "Actor 19", "target" : "John A" }, { "source" : "Actor 20", "target" : "John A" }, { "source" : "Actor 21", "target" : "Actor 33" }, { "source" : "Actor 21", "target" : "John A" }, { "source" : "Actor 23", "target" : "Actor 33" }, { "source" : "Actor 23", "target" : "John A" }, { "source" : "Actor 24", "target" : "Actor 26" }, { "source" : "Actor 24", "target" : "Actor 28" }, { "source" : "Actor 24", "target" : "Actor 30" }, { "source" : "Actor 24", "target" : "Actor 33" }, { "source" : "Actor 24", "target" : "John A" }, { "source" : "Actor 25", "target" : "Actor 26" }, { "source" : "Actor 25", "target" : "Actor 28" }, { "source" : "Actor 25", "target" : "Actor 32" }, { "source" : "Actor 26", "target" : "Actor 32" }, { "source" : "Actor 27", "target" : "Actor 30" }, { "source" : "Actor 27", "target" : "John A" }, { "source" : "Actor 28", "target" : "John A" }, { "source" : "Actor 29", "target" : "Actor 32" }, { "source" : "Actor 29", "target" : "John A" }, { "source" : "Actor 30", "target" : "Actor 33" }, { "source" : "Actor 30", "target" : "John A" }, { "source" : "Actor 31", "target" : "Actor 33" }, { "source" : "Actor 31", "target" : "John A" }, { "source" : "Actor 32", "target" : "Actor 33" }, { "source" : "Actor 32", "target" : "John A" }, { "source" : "Actor 33", "target" : "John A" } ] ;
+        var nodes = {};
+
+        // Compute the distinct nodes from the links.
+        links.forEach(function(link) {
+            link.source = nodes[link.source] ||
+                (nodes[link.source] = {name: link.source});
+            link.target = nodes[link.target] ||
+                (nodes[link.target] = {name: link.target});
+            link.value = +link.value;
+        });
+
+        var width = 960,
+        height = 800;
+
+        var force = d3.layout.force()
+            .nodes(d3.values(nodes))
+            .links(links)
+            .size([width, height])
+            .linkDistance(100)
+            .charge(-200)
+            .on("tick", tick)
+            .start();
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        svg.append("text")
+            .attr("font-size", 55)
+            .attr("x", 100)
+            .attr("y", 100)
+            .text(titles[0]);
+        var link = svg.selectAll(".link")
+            .data(force.links())
+            .enter().append("line")
+            .attr("class", "link");
+
+        var node = svg.selectAll(".node")
+            .data(force.nodes())
+            .enter().append("g")
+            .attr("class", "node")
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout)
+            .on("click", click)
+            .on("dblclick", dblclick)
+            .call(force.drag);
+
+        node.append("circle")
+            .attr("r", 8)
+            .style("fill", "#3182bd");
+
+        node.append("text")
+            .attr("x", 12)
+            .attr("dy", ".35em")
+            .style("fill", "#3182bd")
+            .text(function(d) { return d.name; });
+
+        function tick() {
+            link
+                .attr("x1", function(d) { return d.source.x; })
+                .attr("y1", function(d) { return d.source.y; })
+                .attr("x2", function(d) { return d.target.x; })
+                .attr("y2", function(d) { return d.target.y; });
+
+            node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+        }
+
+        function mouseover() {
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .attr("r", 16);
+        }
+
+        function mouseout() {
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .attr("r", 8);
+        }
+        // action to take on mouse click
+        function click() {
+            d3.select(this).select("text").transition()
+                .duration(750)
+                .attr("x", 22)
+                .style("stroke-width", ".5px")
+                .style("opacity", 1)
+                .style("fill", "#E34A33")
+                .style("font", "17.5px serif");
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .style("fill", "#E34A33")
+                .attr("r", 16)
+        }
+
+        // action to take on mouse double click
+        function dblclick() {
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .attr("r", 6)
+                .style("fill", "#E34A33");
+            d3.select(this).select("text").transition()
+                .duration(750)
+                .attr("x", 12)
+                .style("stroke", "none")
+                .style("fill", "#E34A33")
+                .style("stroke", "none")
+                .style("opacity", 0.6)
+                .style("font", "7px serif");
+        }
+    }
+
+    function splitGraph() {
+        var links = [ { "source" : "Mr Hi", "target" : "Actor 2" }, { "source" : "Mr Hi", "target" : "Actor 4" }, { "source" : "Mr Hi", "target" : "Actor 5" }, { "source" : "Mr Hi", "target" : "Actor 6" }, { "source" : "Mr Hi", "target" : "Actor 7" }, { "source" : "Mr Hi", "target" : "Actor 8" }, { "source" : "Mr Hi", "target" : "Actor 11" }, { "source" : "Mr Hi", "target" : "Actor 12" }, { "source" : "Mr Hi", "target" : "Actor 13" }, { "source" : "Mr Hi", "target" : "Actor 18" }, { "source" : "Mr Hi", "target" : "Actor 20" }, { "source" : "Mr Hi", "target" : "Actor 22" }, { "source" : "Actor 2", "target" : "Actor 4" }, { "source" : "Actor 2", "target" : "Actor 8" }, { "source" : "Actor 2", "target" : "Actor 20" }, { "source" : "Actor 2", "target" : "Actor 22" }, { "source" : "Actor 3", "target" : "Actor 9" }, { "source" : "Actor 3", "target" : "Actor 10" }, { "source" : "Actor 3", "target" : "Actor 14" }, { "source" : "Actor 3", "target" : "Actor 28" }, { "source" : "Actor 3", "target" : "Actor 29" }, { "source" : "Actor 3", "target" : "Actor 33" }, { "source" : "Actor 4", "target" : "Actor 8" }, { "source" : "Actor 4", "target" : "Actor 13" }, { "source" : "Actor 5", "target" : "Actor 7" }, { "source" : "Actor 5", "target" : "Actor 11" }, { "source" : "Actor 6", "target" : "Actor 7" }, { "source" : "Actor 6", "target" : "Actor 11" }, { "source" : "Actor 6", "target" : "Actor 17" }, { "source" : "Actor 7", "target" : "Actor 17" }, { "source" : "Actor 9", "target" : "Actor 31" }, { "source" : "Actor 9", "target" : "Actor 33" }, { "source" : "Actor 9", "target" : "John A" }, { "source" : "Actor 10", "target" : "John A" }, { "source" : "Actor 14", "target" : "John A" }, { "source" : "Actor 15", "target" : "Actor 33" }, { "source" : "Actor 15", "target" : "John A" }, { "source" : "Actor 16", "target" : "Actor 33" }, { "source" : "Actor 16", "target" : "John A" }, { "source" : "Actor 19", "target" : "Actor 33" }, { "source" : "Actor 19", "target" : "John A" }, { "source" : "Actor 21", "target" : "Actor 33" }, { "source" : "Actor 21", "target" : "John A" }, { "source" : "Actor 23", "target" : "Actor 33" }, { "source" : "Actor 23", "target" : "John A" }, { "source" : "Actor 24", "target" : "Actor 26" }, { "source" : "Actor 24", "target" : "Actor 28" }, { "source" : "Actor 24", "target" : "Actor 30" }, { "source" : "Actor 24", "target" : "Actor 33" }, { "source" : "Actor 24", "target" : "John A" }, { "source" : "Actor 25", "target" : "Actor 26" }, { "source" : "Actor 25", "target" : "Actor 28" }, { "source" : "Actor 25", "target" : "Actor 32" }, { "source" : "Actor 26", "target" : "Actor 32" }, { "source" : "Actor 27", "target" : "Actor 30" }, { "source" : "Actor 27", "target" : "John A" }, { "source" : "Actor 28", "target" : "John A" }, { "source" : "Actor 29", "target" : "Actor 32" }, { "source" : "Actor 29", "target" : "John A" }, { "source" : "Actor 30", "target" : "Actor 33" }, { "source" : "Actor 30", "target" : "John A" }, { "source" : "Actor 31", "target" : "Actor 33" }, { "source" : "Actor 31", "target" : "John A" }, { "source" : "Actor 32", "target" : "Actor 33" }, { "source" : "Actor 32", "target" : "John A" }, { "source" : "Actor 33", "target" : "John A" } ] ;
+        var nodes = {};
+
+// Compute the distinct nodes from the links.
+        links.forEach(function(link) {
+            link.source = nodes[link.source] ||
+                (nodes[link.source] = {name: link.source});
+            link.target = nodes[link.target] ||
+                (nodes[link.target] = {name: link.target});
+            link.value = +link.value;
+        });
+
+        var width = 960,
+            height = 800;
+
+        var force = d3.layout.force()
+            .nodes(d3.values(nodes))
+            .links(links)
+            .size([width, height])
+            .linkDistance(100)
+            .charge(-200)
+            .on("tick", tick)
+            .start();
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+        svg.append("text")
+            .attr("font-size", 1000)
+            .attr("x", 100)
+            .attr("y", 100)
+            .text(titles[1]);
+        var link = svg.selectAll(".link")
+            .data(force.links())
+            .enter().append("line")
+            .attr("class", "link");
+
+        var node = svg.selectAll(".node")
+            .data(force.nodes())
+            .enter().append("g")
+            .attr("class", "node")
+            .on("mouseover", mouseover)
+            .on("mouseout", mouseout)
+            .on("click", click)
+            .on("dblclick", dblclick)
+            .call(force.drag);
+
+        node.append("circle")
+            .attr("r", 8)
+            .style("fill", "#3182bd");
+
+        node.append("text")
+            .attr("x", 12)
+            .attr("dy", ".35em")
+            .style("fill", "#3182bd")
+            .text(function(d) { return d.name; });
+
+        function tick() {
+            link
+                .attr("x1", function(d) { return d.source.x; })
+                .attr("y1", function(d) { return d.source.y; })
+                .attr("x2", function(d) { return d.target.x; })
+                .attr("y2", function(d) { return d.target.y; });
+
+            node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+        }
+
+        function mouseover() {
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .attr("r", 16);
+        }
+
+        function mouseout() {
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .attr("r", 8);
+        }
+// action to take on mouse click
+        function click() {
+            d3.select(this).select("text").transition()
+                .duration(750)
+                .attr("x", 22)
+                .style("stroke-width", ".5px")
+                .style("opacity", 1)
+                .style("fill", "#E34A33")
+                .style("font", "17.5px serif");
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .style("fill", "#E34A33")
+                .attr("r", 16)
+        }
+
+// action to take on mouse double click
+        function dblclick() {
+            d3.select(this).select("circle").transition()
+                .duration(750)
+                .attr("r", 6)
+                .style("fill", "#E34A33");
+            d3.select(this).select("text").transition()
+                .duration(750)
+                .attr("x", 12)
+                .style("stroke", "none")
+                .style("fill", "#E34A33")
+                .style("stroke", "none")
+                .style("opacity", 0.6)
+                .style("font", "7px serif");
+        }
+
+    }
+
+    function doSwitch(){
+        d3.selectAll("svg").remove();
+        if(showWhat == 1){
+            splitGraph();
+            showWhat = 0;
+        } else {
+            original();
+            showWhat = 1;
+        }
+    }
+    original();
+    d3.select("body").on("dblclick",doSwitch);
+</script>
+</body>
