@@ -1,0 +1,21 @@
+%----------------------------------------------------------------------------------------
+%	Table Top 5 Correlated Subustitute Me
+%----------------------------------------------------------------------------------------
+\begin{table}[!htbp]
+	\caption{Top 5 Correlated Subustitute Me} \label{tab:top-corr}
+	\begin{center}
+	\vspace{-5mm}
+		\begin{tabular}{ c c }
+			\hline
+			\multicolumn{1}{c}{Movie\_id} & \multicolumn{1}{c}{Correlation}\\
+			\hline
+			369    &     1.000 \\
+			651    &     0.878 \\
+			841    &     0.866 \\
+			341    &     0.866 \\
+			149    &     0.818 \\
+			\hline
+		\end{tabular}
+	\caption*{\scriptsize Values were obtained by running \textit{GetCorr.py} and retrieving the 5 bottom values of table \textit{corr\_table}. The very last value is actually user \textcolor{blue}{378} with a correlation value of 1. The very first row (user \textcolor{blue}{369}) has a correlation of 0.99999, but is rounded to 1.000 after formatting the data.}
+	 \end{center}
+\end{table}
