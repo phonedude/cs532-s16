@@ -9,3 +9,4 @@
 \contentsline {lstlisting}{\numberline {9}get\_avg functions}{12}{lstlisting.9}
 \contentsline {lstlisting}{\numberline {10}Question 4 code}{12}{lstlisting.10}
 \contentsline {lstlisting}{\numberline {11}pearson movie function}{12}{lstlisting.11}
+\contentsline {lstlisting}{\numberline {12}all code used}{16}{lstlisting.12}
