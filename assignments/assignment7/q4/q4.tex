@@ -1,0 +1,53 @@
+\section{Problem 4}
+
+\subsection{Question}
+\vspace*{10pt}
+\input{q4/a7}
+
+\subsection{Answer}
+\vspace{5mm}
+Question 4 was solved using the code shown in Listing \ref{listing:q4},, with the {\tt pearson} and the {\tt get\_avg} functions from Listings \ref{listing:mpearson} and \ref{listing:avg}, respectively. The {\tt get\_avg} function uses the {\tt mean} function from the numpy python library \cite{py:numpy}.\\
+\\
+The results for Question 4 are shown in Table \ref{tab:fav} and \ref{tab:nfav}. \\
+\vspace{5mm}
+\lstinputlisting[language=Python, caption={get\_avg functions}, label=listing:avg, linerange={252-259}, firstnumber={252}]{recommendations.py}
+
+\lstinputlisting[language=Python, caption={Question 4 code}, label=listing:q4, linerange={432-446}, firstnumber={432}]{recommendations.py}
+
+\lstinputlisting[language=Python, caption={pearson movie function}, label=listing:mpearson, linerange={347-372}, firstnumber={347}]{recommendations.py}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+Title & Person's r \\
+\hline
+Gang Related (1997) & 1.0 \\
+Love and Other Catastrophes (1996) & 1.0 \\
+Rhyme \& Reason (1997) & 1.0 \\
+When We Were Kings (1996) & 1.0 \\
+Dark City (1998) & 1.0 \\
+\hline
+\end{tabular}
+\caption{Most Favourite Movie \textcolor{blue}{Godfather, The (1972)} Correlated}
+\label{tab:fav}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+Title & Person's r \\
+\hline
+Paris, France (1993) & -1.0 \\
+ Hugo Pool (1997) & -1.0 \\
+ Naked in New York (1994) & -1.0 \\
+ Turbo: A Power Rangers Movie (1997) & -1.0 \\
+ Heavyweights (1994) & -1.0\\
+\hline
+\end{tabular}
+\caption{Least Favourite Movie \textcolor{blue}{Godfather, The (1972)} Correlated}
+\label{tab:nfav}
+\end{table}
+
+The recommendations results are not amazing to me. As expressed in {\tt User \textcolor{blue}{135} was selected as substitute me}\ref{tab:substitute} arrangement user \textcolor{blue}{135} is nearest to me of course. Be that as it may, the outcomes are close in wording how I feel about {\tt substitute me} ranking. I hate all movies not recommended and the recommended ones I would rate them somewhere around 2 and 3, like the most astounding ranking for user \textcolor{blue}{135}.

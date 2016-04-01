@@ -6,19 +6,21 @@
 
 \subsection{1.1 Answer}
 
-Each question was answered by using some combination of the existing functions from {\tt recommendations.py} and some functions that were added. All of the tables provided were created using the {\tt tabulate} function (with some minor edits), which is shown in Listing \ref{listing:tab}.\\
+Each question was answered by using some combination of the existing functions from {\tt recommendations.py} and some functions that were added. All of the tables provided were created using the {\tt tabulate} function (with some minor edits), which is shown in Listing \ref{listing:tab}. All of the code used can be found in Appendix A, which contains Listing \ref{listing:all}.\\
 \\
-Question 1 was solved using the code in Listing \ref{listing:q1}, which utilizes the added {\tt flatten} and {\tt get\_top} functions, which are found in Listing \ref{listing:avgtop} and \ref{listing:flatten}.
+Question 1 was solved using the code in Listing \ref{listing:q1}, which utilizes the added {\tt flatten} and {\tt get\_top} functions, which are found in Listing \ref{listing:avgtop} and \ref{listing:flatten}.\\
+\\
+The results for Question 1 are shown in Tables \ref{tab:close-match}, \ref{tab:topfavorite}, \ref{tab:bottomfavorite} and \ref{tab:substitute}. 
 
 \clearpage
 
-\lstinputlisting[language=Python, caption={tabulate function}, label=listing:tab, linerange={241-255}, firstnumber={241}]{q1/recommendations.py}
+\lstinputlisting[language=Python, caption={tabulate function}, label=listing:tab, linerange={286-300}, firstnumber={286}]{recommendations.py}
 
-\lstinputlisting[language=Python, caption={Question 1 code}, label=listing:q1, linerange={435-457}, firstnumber={435}]{q1/recommendations.py}
+\lstinputlisting[language=Python, caption={Question 1 code}, label=listing:q1, linerange={382-404}, firstnumber={382}]{recommendations.py}
 
-\lstinputlisting[language=Python, caption={get\_top functions}, label=listing:avgtop, linerange={217-226}, firstnumber={217}]{q1/recommendations.py}
+\lstinputlisting[language=Python, caption={get\_top functions}, label=listing:avgtop, linerange={262-271}, firstnumber={262}]{recommendations.py}
 
-\lstinputlisting[language=Python, caption={flatten function}, label=listing:flatten, linerange={430-431}, firstnumber={430}]{q1/recommendations.py}
+\lstinputlisting[language=Python, caption={flatten function}, label=listing:flatten, linerange={377-378}, firstnumber={377}]{recommendations.py}
 
 \clearpage
 \subsubsection{1.1.1 3-Users Closest to Me in Terms of Age, Gender, and Occupation}
@@ -128,7 +130,7 @@ User & Rating & Movie \\
 \clearpage
 \subsubsection{1.1.4 Substitute Me}
 \vspace{2mm}
-\justify
+
 Selecting substitute me was a difficult choice. I couldn't relate to user \textcolor{blue}{33, 37, 66, 391, 706, 838}, despite the fact that I would rank \enquote{Titanic (1997)} similarly with a 5.\\
 \\
 I am greatly removed from user \textcolor{blue}{33, 37, 66, 391, 706, 838} all the most maximum ranked movies by \textcolor{blue}{33, 37, 66, 391, 706, 838} would be in my minimum ranked movies determination.\\

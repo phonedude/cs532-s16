@@ -1,0 +1,53 @@
+\section{Problem 3}
+
+\subsection{Question}
+\vspace*{10pt}
+\input{q3/a7}
+
+\subsection{Answer}
+\vspace{2mm}
+Question 3 was solved using the code shown in Listing \ref{listing:q3}, with the {\tt movies\_not\_rated} function from Listings \ref{listing:notrated}, respectively. The outcome is put away in variable {\tt movie\_rated1} which will contain the ranking of movies not yet seen by  {\tt substitute me} sorted from slightest no doubt sought recommended preference to the probably recommended preference.\\
+\\
+The results for Question 3 are shown in Table \ref{tab:recommtop} and \ref{tab:recommleast}. 
+
+\lstinputlisting[language=Python, caption={Question 3 code}, label=listing:q3, linerange={423-431}, firstnumber={423}]{recommendations.py}
+
+\lstinputlisting[language=Python, caption={movies\_not\_rated  function}, label=listing:notrated, linerange={302-345}, firstnumber={302}]{recommendations.py}
+
+\subsubsection{3.1.1 Top 5 Recommendations of Unseen films for Substitute Me }
+\vspace{5mm}
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+Title & Ranking \\
+\hline
+Stranger in the House (1997) & 5.0 \\
+Killer (Bulletproof Heart) (1994) & 5.0 \\
+Gaslight (1944) & 5.0 \\
+Office Killer (1997) & 5.0 \\
+Unforgettable (1996) & 5.0 \\
+\hline
+\end{tabular}
+\caption{Top 5 unseen movies recommendations}
+\label{tab:recommtop}
+\end{table}
+
+\subsubsection{3.1.2 Bottom 5 Recommendations of Unseen films for Substitute Me}
+\vspace{5mm}
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+Title & Ranking \\
+\hline
+Jaws 2 (1978) & 2.0 \\
+Star Trek III: The Search for Spock (1984) & 2.0 \\
+Highlander (1986) & 2.0 \\
+Hard Target (1993) & 2.0 \\
+Tales From the Crypt Presents: Demon Knight (1995) & 2.0 \\
+\hline
+\end{tabular}
+\caption{Least 5 unseen movies recommendations}
+\label{tab:recommleast}
+\end{table}

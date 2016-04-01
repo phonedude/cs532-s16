@@ -18,7 +18,7 @@ critics={'Lisa Rose': {'Lady in the Water': 2.5, 'Snakes on a Plane': 3.5,
  'The Night Listener': 3.0, 'Superman Returns': 5.0, 'You, Me and Dupree': 3.5},
 'Toby': {'Snakes on a Plane':4.5,'You, Me and Dupree':1.0,'Superman Returns':4.0}}
 
-
+import math
 from math import sqrt
 from numpy import mean
 from operator import itemgetter
@@ -189,7 +189,43 @@ def loadMovieLens():
 	for line in open('u.item'):
 		(id,title)=line.split('|')[0:2]
 		movies[id]=title
-		movies[id]=title
+	genre = {}
+	for line in open('u.item'):
+		(id, title, release, video, url, unknown, action, adventure, animation, childrens, comedy, crime, documentary, drama, fantasy, filmnoir, horror,musical, mystery, romance, scifi,  thriller, war, western)= line.split('|')[0:46]
+		if int(action) == 1:
+			genre[title]= 'action'
+		elif int(adventure) == 1:
+			genre[title]= 'adventure'
+		elif int(animation) == 1:
+			genre[title]= 'animation'
+		elif int(childrens) == 1:
+			genre[title]= 'childrens'
+		elif int(comedy) == 1:
+			genre[title]= 'comedy'
+		elif int(crime) == 1:
+			genre[title]= 'crime'
+		elif int(documentary) == 1:
+			genre[title]= 'documentary'
+		elif int(drama) == 1:
+			genre[title]= 'drama'
+		elif int(fantasy) == 1:
+			genre[title]= 'fantasy'
+		elif int(filmnoir) == 1:
+			genre[title]= 'filmnoir'
+		elif int(horror) == 1:
+			genre[title]= 'horror'
+		elif int(musical) == 1:
+			genre[title]= 'musical'
+		elif int(romance) == 1:
+			genre[title]= 'romance'
+		elif int(thriller) == 1:
+			genre[title]= 'thriller'
+		elif int(scifi) == 1:
+			genre[title]= 'scifi'
+		elif int(western) == 1:
+			genre[title]= 'western'
+		elif int(war) == 1:
+			genre[title]= 'war'
 	# Load data
 	prefs={}
 	for line in open('u.data'):
@@ -202,7 +238,16 @@ def loadMovieLens():
 		(user, age, gender, job, zipcode) = line.split('|')
 		users.setdefault(user, {})
 		users[user] = {'age': age, 'gender': gender, 'job': job, 'zipcode': zipcode}
-	return prefs, movies, genre, users
+	
+	mfavs = {}
+	lfavs={}
+	for line in open(r'u.item'):
+		(id,title)= line.split('|')[0:2]
+		if str(title) == 'Godfather, The (1972)':
+			mfavs.setdefault(title)
+		elif str(title) == 'Shawshank Redemption, The (1994)':
+			lfavs.setdefault(title)
+	return prefs, movies, genre, users, mfavs, lfavs
 
 def get_avg(prefs, mid, user_filter=lambda x: True):
 	ratings = []
@@ -253,179 +298,81 @@ def tabulate(tuples, caption, label, colnames, output):
 	output.write('\\caption{{{0}}}\n'.format(caption))
 	output.write('\\label{{tab:{0}}}\n'.format(label))
 	output.write('\\end{table}\n\n')	
-print "Parsing data"
 
 def movies_not_rated(prefs, movies, userid, movie_type):
 	userRatings = prefs[userid]
 	count = 0
-	num = 0
-	
+	movie_rated = {}
 	for id, title in movies.items():
 		temp = 0
-		for item,rating  in userRatings.items():
+		for item, rating  in userRatings.items():
 			if title == item:
 				temp = 1
-				filename = r"AllRated.txt"
-				outfile = open(filename, 'a')
-				outfile.write(str(title) +" "+str(rating))
-				outfile.write("\n")
-				outfile.close()	
+				movie_rated.setdefault(title, rating)	
 		for name, genre in movie_type.items():
 			if title == name:
 				if temp == 0:
 					try:
 						if genre == 'comedy':
-							filename = r"AllRated.txt"
-							outfile = open(filename, 'a')
-							outfile.write(str(title) +" 2.0")
-							outfile.write("\n")
-							outfile.close()	
+							movie_rated[title] = '3.0'
 							temp = 0
 						elif genre == 'action':
-							filename = r"AllRated.txt"
-							outfile = open(filename, 'a')
-							outfile.write(str(title) +" 1.0")
-							outfile.write("\n")
-							outfile.close()	
+							movie_rated[title] = '3.0'	
 							temp = 0
 						elif genre == 'crime':
-							filename = r"AllRated.txt"
-							outfile = open(filename, 'a')
-							outfile.write(str(title) +" 4.0")
-							outfile.write("\n")
-							outfile.close()	
+							movie_rated[title] = '3.0'	
 							temp = 0
 						elif genre == 'drama':
-							filename = r"AllRated.txt"
-							outfile = open(filename, 'a')
-							outfile.write(str(title) +" 5.0")
-							outfile.write("\n")
-							outfile.close()	
+							movie_rated[title] = '4.0'	
 							temp = 0
+						elif genre == 'thriller':
+							movie_rated[title] = '5.0'	
+							temp = 0
+						elif genre == 'scifi':
+							movie_rated[title] = '4.0'	
+							temp = 0
+						elif genre == 'war':
+							movie_rated[title] = '3.0'	
+							temp = 0
+						elif genre == 'mystery':
+							movie_rated[title] = '3.0'	
+							temp = 0							
 						else:
-							filename = r"AllRated.txt"
-							outfile = open(filename, 'a')
-							outfile.write(str(title) +" 3.0")
-							outfile.write("\n")
-							outfile.close()	
+							movie_rated[title] = '1.0'	
 							temp = 0
 					except:
 						pass
+	return movie_rated
 	
-	print(len(movies))
+def pearson(avg1,avg2,prefs, movie1, movie2, movies):
+	r={}
+	r=0
+	top = 0
+	rbtm = 0
+	lbtm = 0
 	
-def movie_type_notrated(prefs, movie_type, user):
-	userRatings = prefs[user]
-	action1 = 0
-	adventure1 = 0
-	animation1 = 0
-	comedy1 = 0
-	crime1 = 0
-	drama1 = 0
-	fantasy1 = 0
-	mystery1 = 0
-	thriller1 = 0
-	scifi1 = 0
-	western1 = 0
-	war1 = 0
-	
-	action2 = 0
-	adventure2 = 0
-	animation2 = 0
-	comedy2 = 0
-	crime2 = 0
-	drama2 = 0
-	fantasy2 = 0
-	mystery2 = 0
-	thriller2 = 0
-	scifi2 = 0
-	western2 = 0
-	war2 = 0
-	for id, name in movie_type.items():
+	for user, movie in prefs.items():
+		userRatings = prefs[user]
 		for item, rating in userRatings.items():
-			if id == item:
-				if rating == 5.0 and rating == 4.0:
-					if name == 'action':
-						action1+=1
-					if name == 'adventure':
-						adventure1+=1
-					if name== 'animation':
-						animation1+=1
-					if name== 'comedy':
-						comedy1+=1
-					if name== 'crime':
-						crime1+=1
-					if name== 'drama':
-						drama1+=1
-					if name == 'fantasy':
-						fantasy1+=1
-					if name == 'mystery':
-						mystery1+=1
-					if name== 'thriller':
-						thriller1+=1
-					if name == 'scifi':
-						scifi1+=1
-					if name == 'western':
-						western1+=1
-					if name == 'war':
-						war1+=1
-				if rating <= 2.0:
-					if name == 'action':
-						action2+=1
-					if name == 'adventure':
-						adventure2+=1
-					if name== 'animation':
-						animation2+=1
-					if name== 'comedy':
-						comedy2+=1
-					if name== 'crime':
-						crime2+=1
-					if name== 'drama':
-						drama2+=1
-					if name == 'fantasy':
-						fantasy2+=1
-					if name == 'mystery':
-						mystery2+=1
-					if name== 'thriller':
-						thriller2+=1
-					if name == 'scifi':
-						scifi2+=1
-					if name == 'western':
-						western2+=1
-					if name == 'war':
-						war2+=1
-			
-	filename = r"favmovietypes.txt"
-	outfile = open(filename, 'a')
-	outfile.write("action " +str(action1) +" adventure"+str(adventure1))
-	outfile.write("\n")
-	outfile.write("animation " +str(animation1) +" comedy"+str(comedy1))
-	outfile.write("\n")
-	outfile.write("crime " +str(crime1) +" drama"+str(drama1))
-	outfile.write("\n")
-	outfile.write("fantasy " +str(fantasy1) +" mystery"+str(mystery1))
-	outfile.write("\n")
-	outfile.write("thriller " +str(thriller1) +" scifi"+str(scifi1))
-	outfile.write("\n")
-	outfile.write("war " +str(war1) +" western"+str(western1))
-	outfile.write("\n")
-	outfile.write("action " +str(action2) +" adventure"+str(adventure2))
-	outfile.write("\n")
-	outfile.write("animation " +str(animation2) +" comedy"+str(comedy2))
-	outfile.write("\n")
-	outfile.write("crime " +str(crime2) +" drama"+str(drama2))
-	outfile.write("\n")
-	outfile.write("fantasy " +str(fantasy2) +" mystery"+str(mystery2))
-	outfile.write("\n")
-	outfile.write("thriller " +str(thriller2) +" scifi"+str(scifi2))
-	outfile.write("\n")
-	outfile.write("war " +str(war2) +" western"+str(western2))
-	outfile.write("\n")
-	outfile.close()
+			if movie1 == movies[item]:
+				for user1, move in prefs.items():
+					userRatings = prefs[user1]
+					for item1, rating1 in userRatings.items():
+						if movie2 == movies[item1]:
+							if user1 == user:
+								top += (rating-avg1)*(rating1-avg2)
+								lbtm +=  (rating-avg1)*(rating-avg1)
+								rbtm += (rating1-avg2)*(rating1-avg2)
 	
-
-prefs, movies, genre, users = loadMovieLens()
-movie_type_notrated(prefs, genre, '135')
+	if lbtm == 0 or rbtm == 0:
+		r = 5
+		return r
+	else:
+		r = top/(math.sqrt(lbtm)* math.sqrt(rbtm))
+	return r
+	
+print "Parsing data"
+prefs, movies, genre, users, mfavs, lfavs = loadMovieLens()
 
 def flatten(tup, f=lambda x: (x[0], x[1][0][1], x[1][0][0])):
 	return f(tup)
@@ -473,21 +420,27 @@ if __name__ == '__main__':
 		tabulate(sorted_most_correlated, 'Most Correlated', 'most', ('User', 'Pearson\'s r'), outfile)
 		tabulate(sorted_least_correlated, 'Least Correlated', 'least', ('User', 'Pearson\'s r'), outfile)
 		print "done with 2"
+		movie_rated1 = {}
 		for user, rest in users.iteritems():
 			if int(user) == 135:
-				movies_not_rated(prefs, movies, user, genre)
-	# my_user = 135
-	# for user, user_ratings in prefs.iteritems():
-		# recommendations = getRecommendations(user, my_user)
-		# for top_recom in recommendations[:5]:
-			# for mid, movie in movies.iteritems():
-				# if mid == top_recom:
-					# print movie(top_recom)
-	
-	# for user, user_ratings in prefs.iteritems():
-		# recommendations = getRecommendations(user, my_user)
-		# for bottom_recom in recommendations[:5]:
-			# for mid, movie in movies.iteritems():
-				# if mid == bottom_recom:
-					# print movie(bottom_recom)
-					
+				movie_rated1 = movies_not_rated(prefs, movies, user, genre)
+		sorted_most_recomm = sorted(movie_rated1.items(), key=itemgetter(1), reverse=False)[len(movie_rated1) - 6:-1]
+		sorted_least_recomm = sorted(movie_rated1.items(), key=itemgetter(1), reverse=True)[len(movie_rated1) - 6:-1]
+		tabulate(sorted_most_recomm, 'Top 5 unseen movies recommendations', 'recommtop', ('Title', 'Recomm Ranking'), outfile)
+		tabulate(sorted_least_recomm, 'Least 5 unseen movies recommendations', 'recommleast', ('Title', 'Recomm Ranking'), outfile)
+		print "done with 3"
+		fav_cor = {}
+		nfav_cor ={}
+		avg1 = get_avg(prefs, mfavs)
+		for id, title in movies.items():
+			avg2 = get_avg(prefs, id)
+			r = pearson(avg1, avg2, prefs, mfavs, title)
+			if r == 1.0:
+				fav_cor.setdefault(str(title), str(r))
+			elif r == -1.0:
+				nfav_cor.setdefault(str(title), str(r))
+		sorted_fav_correlated = sorted(fav_cor.items(), key=itemgetter(0), reverse=False)[len(fav_cor) - 6:-1]
+		sorted_nfav_correlated = sorted(nfav_cor.items(), key=itemgetter(0), reverse=False)[len(nfav_cor) - 6:-1]
+		tabulate(sorted_fav_correlated, 'Most Favourite Movie \textcolor{blue}{Godfather, The (1972)} Correlated', 'fav', ('Title', 'Pearson\'s r'), outfile)
+		tabulate(sorted_nfav_correlated, 'Least Favourite Movie \textcolor{blue}{Godfather, The (1972)} Correlated', 'nfav', ('Title', 'Pearson\'s r'), outfile)
+		print "done with 4"
