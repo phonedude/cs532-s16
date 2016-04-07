@@ -9,6 +9,11 @@
 \contentsline {lstlisting}{\numberline {9}loading the data}{5}{lstlisting.9}
 \contentsline {lstlisting}{\numberline {10}building the master wordlist}{5}{lstlisting.10}
 \contentsline {lstlisting}{\numberline {11}writing the data}{5}{lstlisting.11}
-\contentsline {lstlisting}{\numberline {12}get\_uris.py}{6}{lstlisting.12}
-\contentsline {lstlisting}{\numberline {13}matrix.py}{7}{lstlisting.13}
-\contentsline {lstlisting}{\numberline {14}clusters.py}{9}{lstlisting.14}
+\contentsline {lstlisting}{\numberline {12}creating the dendrograms}{6}{lstlisting.12}
+\contentsline {lstlisting}{\numberline {13}creating the dendrograms}{6}{lstlisting.13}
+\contentsline {lstlisting}{\numberline {14}hcluster function}{6}{lstlisting.14}
+\contentsline {lstlisting}{\numberline {15}printclust function}{7}{lstlisting.15}
+\contentsline {lstlisting}{\numberline {16}drawdendrogram function}{7}{lstlisting.16}
+\contentsline {lstlisting}{\numberline {17}get\_uris.py}{9}{lstlisting.17}
+\contentsline {lstlisting}{\numberline {18}matrix.py}{10}{lstlisting.18}
+\contentsline {lstlisting}{\numberline {19}clusters.py}{12}{lstlisting.19}
