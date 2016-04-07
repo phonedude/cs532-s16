@@ -34,11 +34,10 @@ class slides.
 Be sure to upload the raw data (Atom or RSS) to your github account.
 
 2.  Manually classify the first 50 entries, and then classify (using
-the fisher classifier) the remaining 50 entries. Report the cprob()
-values for the 50 titles as well.
+the fisher classifier) the remaining 50 entries. 
 
-Create a table with the title, the string used for classification,
-cprob(), fisherprob(), predicted category, and actual category.
+Create a table with the title, predicted category, actual category,
+and cprob() and fisherprob() for the actual category.
 
 3.  Assess the performance of your classifier in each of your
 categories by computing precision, recall, and F-measure.  
@@ -56,7 +55,7 @@ and pp. 136--138.
 
 5.  A 1:1 split for training:test data typically not a good split;
 5:1 or even 10:1 is preferable.  We also typically use something
-called "10 fold cross validation" to make sure we spread the training
+called "10-fold cross validation" to make sure we spread the training
 out and don't "overfit" on a particular sequence of tranining data.
 
 Rerun questions 2 & 3, but manually classifying all 100 documents,
