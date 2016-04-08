@@ -1,0 +1,324 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document Author: Plinio H. Vargas
+% Course: CS-532, Spring 2016 at Old Dominion University
+%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original template author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{floatrow}
+\usepackage{graphicx} % Required to insert images
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[bookmarks,bookmarksopen,bookmarksdepth=2]{hyperref} % for bookmarks
+\usepackage{enumerate}
+\usepackage{csquotes} % for quoting things
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{navigator}
+\usepackage{caption}
+\usepackage[shortlabels]{enumitem}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolo
+\usepackage{longtable}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{import}
+\usepackage{dashrule} % for dashline
+\usepackage{keystroke}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+\newcommand*{\meda}{\mathbin{\scalebox{1.5}{a}}}% increase size of letter a
+\newcommand\multibrace[3]{\rdelim\}{#1}{3mm}[\pbox{#2}{#3}]}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkShortTitle} % Top center header
+%\rhead{\firstxmark} % Top right header
+\rhead{} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Assignment\ \#1} % Assignment title
+\newcommand{\hmwkShortTitle}{Assignment 1} % Assignment title
+\newcommand{\hmwkDueDate}{Thursday,\ January\ 28,\ 2016} % Due date
+\newcommand{\hmwkClass}{CS-532 Web Science} % Course/class
+\newcommand{\hmwkClassTime}{- Spring 2016} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Dr.  Michael L. Nelson} % Teacher/lecturer
+\newcommand{\hmwkAuthorName}{Plinio Vargas} % Your name
+\newcommand{\hmwkAuthorEmail}{pvargas@cs.odu.edu} % Your name
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ }}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName} \\ \hmwkAuthorEmail}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+%	EMBEDDED FILE
+%----------------------------------------------------------------------------------------
+\embeddedfile{a1py}{../a1_v1.1.py}
+\embeddedfile{a1html}{../a1.html}
+\embeddedfile{a1php}{../a1.php}
+%----------------------------------------------------------------------------------------
+%	START OF DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\clearpage\maketitle
+\thispagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\clearpage\tableofcontents
+\listoffigures
+%\listoftables
+
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+%----------------------------------------------------------------------------------------
+%	Question 1
+%----------------------------------------------------------------------------------------
+\begin{homeworkProblem} % Custom section title
+\vspace*{10pt} % Question
+Demonstrate that you know how to use \enquote{curl} well enough to
+correctly POST data to a form.  Show that the HTML response that
+is returned is \enquote{correct}.  That is, the server should take the
+arguments you POSTed and build a response accordingly.  Save the
+HTML response to a file and then view that file in a browser and
+take a screen shot.\\
+\vspace*{5mm}
+\\
+\centerline{SOLUTION}
+http://curl.haxx.se\cite{Manual -- curl usage explained} was an excellent resource to unveil the power of \textbf{\textit{curl}} command. The are many options available with \textit{curl}, including  passing of cookies, which are intensely used by current servers for Cross-Site Request Forgery (CSRF). Then, in order to simplify our demonstration I created a simple html page in my local server that takes two fields: \textit{number1} and \textit{number2}. I named this resource \textit{a1.html}:\\
+\\
+\import{./}{a1_1.tex}
+\newpage
+\centerline{\textbf{Screen Shot of html page}}
+\begin{center}
+	\includegraphics[scale=.6]{images/a1_1.png}
+\end{center}
+\vspace*{5mm}
+Below, is the action script $<$\textit{a1.php}$>$ run by the server when the form is submitted:
+\import{./}{a1_1b.tex}
+\vspace*{5mm}
+\\
+If we type from the command line: \textbf{curl -d number1=14 -d number2=11 http://192.168.1.2/a1.php -o a1\_1\_result.html}, the -d option will combine the field names \textit{number1} and \textit{number2} similar to GET method which is in the format]\cite{Manual -- curl usage explained}
+$$<variable1>=<data1>\&<variable2>=<data2>\&...$$
+The -o option places the response into a given file-name: $<a1\_1\_result.html>$
+\newpage
+\centerline{\textbf{Screen Shot of curl POST usage}}
+\begin{center}
+	\includegraphics[scale=.6]{images/a1_1b.png}
+\end{center}
+
+\vspace*{10mm}
+\centerline{\textbf{Screen Shot of saved HTML response}}
+\begin{center}
+	\includegraphics[scale=.6]{images/a1_html_result.png}
+\end{center}
+\end{homeworkProblem}
+\newpage
+%----------------------------------------------------------------------------------------
+%	Question 2
+%----------------------------------------------------------------------------------------
+\begin{homeworkProblem}
+Write a Python program that:
+\begin{enumerate}
+\item takes as a command line argument a web page
+\item extracts all the links from the page
+\item lists all the links that result in PDF files, and prints out
+     the bytes for each of the links.  (note: be sure to follow
+     all the redirects until the link terminates with a "200 OK".)
+\item show that the program works on 3 different URIs, one of which
+     needs to be: \\
+     http://www.cs.odu.edu/~mln/teaching/cs532-s16/test/pdfs.html\\
+\\
+Python program below (\textbf{\textit{a1\_v1.1.py}}) is attached to this file:\\
+\import{./}{a1_2.tex}
+\end{enumerate}
+In the previous version of \textit{a1.py} line \textbf{60} had the statement $r = requests.get(uri)$. This was causing object $r$ to behave as web-browser deal with re-direction. All URIs were getting STATUS 200 regardless if the URI was getting re-directed. Figure 2 shows all resources pointing to a PDF application, including the ones with STATUS CODE 301 or 302. After correcting line \textbf{60} with the statement $r = requests.get(uri)$ the code was able to obtain all redirect, but after running code for required URI: url{http://www.cs.odu.edu/~mln/teaching/cs532-s16/test/pdfs.htm}, the number of resources appeared to change. See figure 1.\\
+\\
+Below is the result of testing \textit{a1.py} on 3 different URIs: \\
+\begin{figure}[!htb]
+\caption{Test of \textit{a1\_v1.1.py} at \url{http://www.cs.odu.edu/\string~mln/teaching/cs532-s16/test/pdfs.html} with updated code}
+\hspace*{-10mm}\includegraphics[scale=.5]{images/cs-532S16_pdf_New.png}
+\end{figure}
+\newpage
+\begin{figure}[!htb]
+\caption{Test of \textit{a1.py} at \url{http://www.cs.odu.edu/\string~mln/teaching/cs532-s16/test/pdfs.html} with original code}
+\hspace*{-10mm}\includegraphics[scale=.5]{images/cs-532S16_pdf.png}
+\end{figure}
+\begin{figure}[!htb]
+\caption{Test of \textit{a1.py} at \url{http://www.cs.odu.edu/} }
+\hspace*{-10mm}\includegraphics[scale=.5]{images/cs_odu_pdf.png}
+\end{figure}
+
+\newpage
+\begin{figure}[!h]
+\caption{Test of \textit{a1.py} at \url{http://www.vbschools.com/curriculum/gifted/} }
+\hspace*{-10mm}\includegraphics[scale=.5]{images/vs_schools_gifted_pdf.png}
+\end{figure}
+\end{homeworkProblem}
+\newpage
+%----------------------------------------------------------------------------------------
+%	Question 3
+%----------------------------------------------------------------------------------------
+\begin{homeworkProblem}
+Consider the "bow-tie" graph in the Broder et al. paper (fig 9):\\
+http://www9.org/w9cdrom/160/160.html\\
+\\
+Now consider the following graph:\\
+\begin{figure}[!htb]
+\CenterFloatBoxes
+\begin{floatrow}
+
+\ttabbox
+{\begin{tabular}{c c c}
+    A &$\to$& B\\
+    B & $\to$ & C\\
+    C & $\to$ & D\\
+    C & $\to$ & A\\
+    C & $\to$ & G\\
+    E & $\to$ & F\\
+    G & $\to$ & C\\
+    G & $\to$ & H\\
+    I & $\to$ & H\\
+    I & $\to$ & J\\
+    I & $\to$ & K\\
+    J & $\to$ & D\\
+    L & $\to$ & D\\
+    M & $\to$ & A\\
+    M & $\to$ & N\\
+    N & $\to$ & D\\
+    O & $\to$ & A\\
+    P & $\to$ & G
+\end{tabular}
+}
+
+\ffigbox
+{\caption{Bow-Tie Graph Representation} \label{fig:1}}
+{\includegraphics[scale=0.25]{images/bow-tie.jpg}}
+
+\end{floatrow}
+\end{figure}
+\vspace*{5mm}
+\\
+    For the above graph, give the values for:\\
+    
+\begin{tabular}{l l}
+    \textbf{IN}: \{\textcolor{blue}{M,O,P}\} & \enquote{pages that can reach the SCC, but cannot be reached from it}\cite{Graph structure in the web}\\  
+\\    
+    \textbf{SCC}: \{\textcolor{blue}{A,B,C,G}\} & \multicolumn{1}{m{12cm}}{\enquote{central core, all of whose pages can reach one another along directed links -- this "giant strongly connected component" (SCC) is at the heart of the web}.}\cite{Graph structure in the web}\\
+\\    
+    \textbf{OUT}: \{\textcolor{blue}{D,H}\} & \enquote{pages that are accessible from the SCC, but do not link back to it}\cite{Graph structure in the web}\\ 
+\\    
+    \textbf{Tendrils}: \{\textcolor{blue}{I,J,K,L}\} & \enquote{ pages that cannot reach the SCC, and cannot be reached from the SCC}\cite{Graph structure in the web}\\ 
+\\    
+    \textbf{Tubes}: \{\textcolor{blue}{N}\} & \enquote{passage from a portion of IN to a portion of OUT without touching SCC}\cite{Graph structure in the web}\\ 
+\\    
+    \textbf{Disconnected}:\ \{\textcolor{blue}{E,F}\} & Everything NOT fitting all criteria above.\\
+\end{tabular}
+\end{homeworkProblem}
+\begin{thebibliography}{9}
+\bibitem{Manual -- curl usage explained} 
+Graph structure in the web. (n.d.) Retrieved January 23, 2016, from \url{http://curl.haxx.se/docs/manual.html}
+\bibitem{Graph structure in the web}
+Graph structure in the web. (n.d.) Retrieved January 23, 2016, from \url{http://http://www9.org/w9cdrom/160/160.html}
+\end{thebibliography}
+\end{document}
