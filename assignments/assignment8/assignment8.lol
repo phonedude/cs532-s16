@@ -21,6 +21,9 @@
 \contentsline {lstlisting}{\numberline {21}scaledown function}{15}{lstlisting.21}
 \contentsline {lstlisting}{\numberline {22}draw2d function}{16}{lstlisting.22}
 \contentsline {lstlisting}{\numberline {23}scaledown output}{17}{lstlisting.23}
-\contentsline {lstlisting}{\numberline {24}get\_uris.py}{18}{lstlisting.24}
-\contentsline {lstlisting}{\numberline {25}matrix.py}{19}{lstlisting.25}
-\contentsline {lstlisting}{\numberline {26}clusters.py}{21}{lstlisting.26}
+\contentsline {lstlisting}{\numberline {24}use of tfidf function}{18}{lstlisting.24}
+\contentsline {lstlisting}{\numberline {25}writing the data}{18}{lstlisting.25}
+\contentsline {lstlisting}{\numberline {26}tf idf functions}{18}{lstlisting.26}
+\contentsline {lstlisting}{\numberline {27}get\_uris.py}{22}{lstlisting.27}
+\contentsline {lstlisting}{\numberline {28}matrix.py}{23}{lstlisting.28}
+\contentsline {lstlisting}{\numberline {29}clusters.py}{25}{lstlisting.29}
