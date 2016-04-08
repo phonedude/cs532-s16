@@ -266,7 +266,7 @@
 \clearpage\tableofcontents
 \listoffigures
 \lstlistoflistings
-\listoftables
+%\listoftables
 
 \thispagestyle{empty}
 \newpage
@@ -287,7 +287,7 @@ blog URIs, both in the report and in github..\\
 Use the blog title as the identifier for each blog (and row of the matrix).  Use the terms from every item/title (RSS) or entry/title (Atom) for the columns of the matrix.  The values are the frequency of occurrence.  Essentially you are replicating the format of the \enquote{blogdata.txt} file included with the PCI book code.  Limit the number of terms to the most \enquote{popular} (i.e., frequent) 500 terms, this is *after* the criteria on p. 32 (slide 7) has been satisfied.\\
 
 \subsection{1.1 Approach}
-A great deal of code was obtain from \cite{ci} in order to complete this assignment. All the codes in \cite{ci} are implemented in Python 2.7, while the implementation in this work is based using Python 3.4. There were minor changes to adapt to and will not be detailed to explain this approach, only major modifications will be pointed out.\\
+A great deal of code was obtain from \cite{ci} in order to complete this assignment. All the codes in \cite{ci} are implemented in Python 2.7, while the implementation in this work is based using Python 3.4. There were minor changes to adapt into a different version, and they will not be detailed; only major modifications will be pointed out.\\
 
 \textbf{\textit{BlogMatrix.py}} is the \textit{Python} code implemented to answer this problem. To form the Matrix, we created a \textit{set} object (\textit{urilist}) containing 98 generated blog titles. Two required blogs were added in lines 42-43.
 
@@ -296,18 +296,18 @@ A great deal of code was obtain from \cite{ci} in order to complete this assignm
                  captionpos=t,
                  caption={Creating Blog Matrix: BlogMatrix.py},
                  label={lst:create-matrix},
-				 linerange={37-77},
+				 linerange={37-95},
 				 firstnumber=37              
                  ]
 {../BlogMatrix.py}
 
 \vspace{5mm}
-We proceed to find the remaining URL(s) for our matrix. We re-utilized the coded developed on assignment 2 to find what is the ultimate location to the HTTP redirection (line 59).\\
+We proceeded to find the remaining URL(s) for our matrix. We re-utilized the code developed on assignment 2 to find the HTTP redirection ultimate location(line 59).\\
 
-We removed undesired strings from the returned URL, using regular expression (line 63), discarding any URL without a title (line 66). Finally, we include the URL in a \textit{list} object (line 73), in order to provide all URLs used for this assignment. The remaining of the code was an extraction from \cite{ci}\\
+We removed undesired strings from the returned URL by using regular expression (line 63) and discarding any URL without a title (line 66). Finally, we included the URL in a \textit{list} object (line 73) in order to provide all URLs used for this assignment. The remaining of the code was an extraction from \cite{ci}.\\
 
 
-A major difference between this implementation and \cite{ci} is that the latest does not account for all the web-pages in a blog. Only the first blog page is taken in consideration for word-counts.\\
+A major difference between this implementation and \cite{ci} is that the latest does not account for all the web-pages in a blog. Only the first blog page is taken into consideration for word-counts.\\
 
 In order to account for all the pages in the blog, we created two functions in \textbf{\textit{BlogMatrix.py}}: \textit{getallpages} and \textit{linkpages}.\\
 
@@ -321,11 +321,11 @@ In order to account for all the pages in the blog, we created two functions in \
                  ]
 {../BlogMatrix.py}
 \vspace{5mm}
-For each URL generated a call is made to  \textit{getallpages}(see line 46 Listing \ref{lst:create-matrix}) which has the purpose of passing all the words and title from a particular blog, back to the main function(line 114).\\
+For each URL generated, a call is made to  \textit{getallpages}(see line 46 Listing \ref{lst:create-matrix}) which has the purpose of passing all the words and title from a particular blog back to the main function(line 114).\\
 
-\textit{linkpages} actually counts all words and their frequencies in a blog. This is accomplished by inspecting the link tag with \textcolor{red}{rel='next'}. Using the same scheme as \cite{1}, adding the initial values of the first page in the title word count variable \textit{twc} (lines 119-121).\\
+\textit{linkpages} actually counts all words and their frequencies in a blog. This is accomplished by inspecting the link tag with \textcolor{red}{rel='next'} and using the same scheme as \cite{ci}, adding the initial values of the first page in the title word count variable \textit{twc} (lines 119-121).\\
 
-Each page word count will be added to \textit{twc} until there are no more \textcolor{red}{rel='next'} links (line 127-142). The iteration will continue until all generated URLs are processed. The remaining of the code is a replica from \cite{1}, but is worthy to mention that to find the \textcolor{blue}{500} terms from the blog, we just selected the first \textcolor{blue}{500} column in our \\
+Each blog page word count will be added to \textit{twc} until there are no more \textcolor{red}{rel='next'} links (line 127-142). The iteration will continue until all generated URLs are processed. The remaining code is a replica from \cite{ci}, but is worthy to mention that to find the \textcolor{blue}{500} terms from the blog, we selected the first \textcolor{blue}{500} columns by trunking the variable \textbf{wordlist} (line 86).\\
 \newpage
 \subsection{1.2 Solution}
 \begin{enumerate}[a. ]
