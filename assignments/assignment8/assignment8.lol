@@ -17,6 +17,10 @@
 \contentsline {lstlisting}{\numberline {17}kclustering main}{10}{lstlisting.17}
 \contentsline {lstlisting}{\numberline {18}kcluster function}{10}{lstlisting.18}
 \contentsline {lstlisting}{\numberline {19}output of kclustering algorithm}{11}{lstlisting.19}
-\contentsline {lstlisting}{\numberline {20}get\_uris.py}{15}{lstlisting.20}
-\contentsline {lstlisting}{\numberline {21}matrix.py}{16}{lstlisting.21}
-\contentsline {lstlisting}{\numberline {22}clusters.py}{18}{lstlisting.22}
+\contentsline {lstlisting}{\numberline {20}main for scaledown}{15}{lstlisting.20}
+\contentsline {lstlisting}{\numberline {21}scaledown function}{15}{lstlisting.21}
+\contentsline {lstlisting}{\numberline {22}draw2d function}{16}{lstlisting.22}
+\contentsline {lstlisting}{\numberline {23}scaledown output}{17}{lstlisting.23}
+\contentsline {lstlisting}{\numberline {24}get\_uris.py}{18}{lstlisting.24}
+\contentsline {lstlisting}{\numberline {25}matrix.py}{19}{lstlisting.25}
+\contentsline {lstlisting}{\numberline {26}clusters.py}{21}{lstlisting.26}
