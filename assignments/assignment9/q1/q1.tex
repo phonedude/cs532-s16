@@ -1,0 +1,22 @@
+\section{Problem 1}
+
+\subsection{Question}
+\input{q1/a9}
+
+\subsection{Answer}
+
+To obtain the blog entries required for this assignment, the {\tt matrix.py} script was again used to download the blog entries from ``Kevin's XL \& Disc Golf Chronicles'', a blog written by Kevin Morrow about his motorcycling and disc golfing exploits. The categories I came up with for each blog entry are as follows:
+
+\begin{enumerate}
+	\item game: recreational game(s) of disc golf
+	\item tourney: tournament round(s)
+	\item motorcycles: anything related to riding/owning motorcycles
+	\item event: community events/cookouts
+	\item diy: disc dyes/graphic design
+\end{enumerate}
+
+\clearpage
+
+The script downloaded entries from the atom feed \cite{atom} of the blog until a total of 100 entries were retrieved. It parsed each entry's title and saved them as a list to the {\tt blog\_content} file which will later be used for training the fisher classifier in Question 2.
+
+\lstinputlisting[language=Python,caption={matrix.py},label=listing:matrix]{matrix.py}
