@@ -1,0 +1,9 @@
+classEntry:insert into feed values ('%s','%s', '%s', '%s','%s', '%s')
+insert_newFeature:insert into feature_count values ('%s','%s',1)
+increment_feature:update feature_count set count=%d where feature='%s' and category='%s'
+count_Feature:select count from feature_count where feature='%s' and category='%s'
+insert_cat:insert into category_count values ('%s',1)
+increment_cat:update category_count set count=%d where category='%s'
+count_cat:select count from category_count where category='%s'
+get_cat:select category from category_count
+total_cat_count:select sum(count) from category_count
