@@ -443,6 +443,12 @@ average of all 10 values.  What was the change, if any, in precision
 and recall (and thus F-Measure)?
 \end{verbatim}
 \subsection*{Answer}
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
 \begin{tabular}{lr}
 \hline
  metric    &     mean \\
@@ -452,7 +458,12 @@ and recall (and thus F-Measure)?
  recall    & 0.386904 \\
 \hline
 \end{tabular}
-
+\caption{Dr Nelson Ten Fold All}
+\label{tab:10falldr} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
 \begin{tabular}{lr}
 \hline
  metric    &     mean \\
@@ -462,6 +473,44 @@ and recall (and thus F-Measure)?
  recall    & 0.357708 \\
 \hline
 \end{tabular}
+ \caption{Dr Nelson Ten Fold Hundred} 
+ \label{tab:10f100dr} 
+\end{minipage}
+\end{table}
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ metric    &      mean \\
+\hline
+ precision & 0.0378548 \\
+ f1        & 0.0582969 \\
+ recall    & 0.177919  \\
+\hline
+\end{tabular}
+\caption{Genre Ten Fold All}
+\label{tab:10fallg} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\begin{tabular}{lr}
+\hline
+ metric    &      mean \\
+\hline
+ precision & 0.0848377 \\
+ f1        & 0.110486  \\
+ recall    & 0.206     \\
+\hline
+\end{tabular}
+ \caption{Genre Ten Fold Hundred} 
+ \label{tab:10f100g} 
+\end{minipage}
+\end{table}
+
 
 \begin{table}[H]
  \begin{adjustbox}{max width=\linewidth}
