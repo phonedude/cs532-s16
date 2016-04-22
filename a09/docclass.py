@@ -82,12 +82,23 @@ class classifier:
     return res[0]
 
 
-  def add_training_data(self, data):
-    sql_text = "INSERT INTO training_tb (trn_id, words) VALUES "
-    for k in range(len(data)):
-      sql_text += ("(%d, '%s')," % ((k + 1), " ".join(data[k + 1])))
+  def add_training_data(self, data, key):
+    sql_text = "INSERT INTO training_tb (trn_id, words, title) VALUES "
+
+    k = 0
+    for title in key:
+      k += 1
+      sql_text += ("(%d, '%s', '%s')," % (k, " ".join(data[title]), title))
     idx = len(sql_text) - 1
     sql_text = sql_text[:idx] + ';'
+    print(sql_text)
+
+    self.con.execute(sql_text)
+    self.conn.commit()
+
+
+  def update_fisher_cat(self, idx, fisher_cat):
+    sql_text = ("UPDATE training_tb SET fisher_cat = %d WHERE trn_id = %d;" % (fisher_cat, idx))
     print(sql_text)
 
     self.con.execute(sql_text)
