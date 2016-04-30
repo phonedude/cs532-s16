@@ -2,7 +2,7 @@
   <content>
 # A10 Web Science CS-532
 
-This folder and subfolders contain submission files required for assignment 9.
+This folder and subfolders contain submission files required for assignment 10.
 
 ## Due Date
 
