@@ -77,3 +77,6 @@ difference in the processed (as per A3, Q1) results.
 Of the URIs that still terminate in a "200 OK" response, pick the
 top 3 most changed (processed) pairs of pages and use the Unix
 "diff" command to explore the differences in the version pairs.
+
+
+NOTE - For question 2 - made attempts...mostly possible destroyed/corrupted data.
