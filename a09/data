@@ -1,0 +1,37 @@
+SELECT attname, format_type(atttypid, atttypmod) AS type
+FROM   pg_attribute
+WHERE  attrelid = 'category_tb'::regclass
+AND    attnum > 0
+AND    NOT attisdropped
+ORDER  BY attnum;
+
+
+CREATE TABLE IF NOT EXISTS
+       category_tb (cat_id INT PRIMARY KEY,
+                    description VARCHAR);
+
+CREATE TABLE IF NOT EXISTS
+       training_tb (trn_id INT,
+                    words VARCHAR,
+                    cat_id INT
+                    DEFAULT 1
+                    REFERENCES category_tb (cat_id),
+                    fisher_cat INT DEFAULT Null
+                    );
+
+INSERT INTO category_tb (cat_id, description) VALUES
+    (1, 'roster'),
+    (2, 'awards'),
+    (3, 'injury'),
+    (4, 'record setting'),
+    (5, 'advice'),
+    (6, 'strategy'),
+    (7, 'staff'),
+    (8, 'standings');
+
+
+select * from training_tb;
+
+UPDATE training_tb SET cat_id = 1 WHERE trn_id = 1;
+
+ALTER TABLE fc DROP COLUMN category;

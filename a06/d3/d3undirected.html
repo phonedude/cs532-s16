@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CS-532 A6 Problem-2</title>
+        <script type="text/javascript" src="javascripts/d3/d3.v3.min.js"></script>
+        <script type="text/javascript" src="javascripts/d3/d3.tip.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/d3undirected.css">
+</head>
+<body>
+    <div id="container" class="container">
+        <header class="center">
+        <h1>Jose A.Olvera Twitter Network</h1>
+        <p>Most likely gender connections among Jose A. Olvera twitter account followers.</p>
+        </header>
+
+        <script>
+        d3.json("jose-gender.json", function(error, json) {
+          if (error) return console.warn(error);
+          var data = json['links'];
+          var vertices = json['nodes'];
+          visualize(data, vertices);
+        });
+
+        function visualize(links, vertices){
+
+            var nodes = {};
+
+            // Compute the distinct nodes from the links.
+            links.forEach(function(link) {
+                link.source = nodes[link.source] || (nodes[link.source] = {id: link.source, type: link.type});
+                link.target = nodes[link.target] || (nodes[link.target] = {id: link.target, type: link.type});
+            });
+
+            var width = screen.width - 50,
+                height = 700;
+
+            var zoom = d3.behavior.zoom()
+                .scaleExtent([1, 10])
+                .on("zoom", zoomed);
+
+            var slider = d3.select("header").append("p").append("input")
+              .datum({})
+              .attr("type", "range")
+              .attr("value", zoom.scaleExtent()[0])
+              .attr("min", zoom.scaleExtent()[0])
+              .attr("max", zoom.scaleExtent()[1])
+              .attr("step", (zoom.scaleExtent()[1] - zoom.scaleExtent()[0]) / 100)
+              .on("input", slided);
+
+            var color = d3.scale.category20();
+
+            var force = d3.layout.force()
+                .nodes(d3.values(nodes))
+                .links(links)
+                .size([width, height])
+                .linkDistance(250)
+                .gravity(0.15)
+                .charge(-300)
+                .friction(0.3)
+                .on("tick", tick)
+                .start();
+
+            var drag = force.drag()
+                .origin(function(d) { return d; })
+                .on("dragstart", dragstarted)
+                .on("drag", dragged)
+                .on("dragend", dragended);
+
+            var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .call(zoom);;
+
+            var path = svg.append("g").selectAll("line")
+                .data(force.links())
+                .enter().append("line")
+                .attr("stroke-opacity", 0.2)
+                .attr("class", function(d) { return "link " + d.type + " " + d['source'].id ; })
+
+
+            var tip = d3.tip()
+                .attr('class', 'd3-tip')
+                .offset([-10, 0])
+                .html(function(d) {
+                    var index = vertices.findIndex(x => x.id==d.id);
+                    return "<strong>Name:</strong> <span style='color:yellow'>" + vertices[index].name + "</span><br>" +
+                           "<strong>Pseudo:</strong> <span style='color:yellow'>" + vertices[index].screen_name + "</span><br>" +
+                           "<strong>Followers:</strong> <span style='color:yellow'>" + vertices[index].followers_count + "</span><br>" +
+                           "<strong>Following:</strong> <span style='color:yellow'>" + vertices[index].friends_count + "</span><br>" +
+                           "<img src='" + vertices[index].avatar + "'>";
+                    });
+
+            svg.call(tip);
+
+            //------------------------------------------------
+            //             creating nodes
+            //------------------------------------------------
+            var circle = svg.append("g").selectAll("circle")
+                .data(force.nodes())
+                .enter().append("circle")
+                .attr("class", function(d) { var index = vertices.findIndex(x => x.id==d.id);
+                                                         if (d.id == 365952591)
+                                                            return "zero";
+                                                         else
+                                                            return "node " + vertices[index].gender; })
+                .attr("r", function(d) { if (d.id == 365952591) return 15; else return 10; })
+                .call(force.drag)
+                //.on('mouseover', function(d){
+                //    tip.show(d);
+                // })
+                .on('mouseover', function(d) { mouseover(d); })
+                .on('mouseout', function(d) { tip.hide(); mouseout(d); });
+
+            var text = svg.append("g").selectAll("text")
+                .data(force.nodes())
+                .enter().append("text")
+                .attr("x", 8)
+                .attr("y", ".31em")
+                .text(function(d) { var index = vertices.findIndex(x => x.id==d.id); return vertices[index].name; });
+
+            // Use line to connect nodes.
+            function tick() {
+              path.attr("x1", function(d) { return d.source.x; })
+                  .attr("y1", function(d) { return d.source.y; })
+                  .attr("x2", function(d) { return d.target.x; })
+                  .attr("y2", function(d) { return d.target.y; })
+              circle.attr("transform", transform);
+              text.attr("transform", transform);
+            }
+
+            function linkArc(d) {
+              var dx = d.target.x - d.source.x,
+                  dy = d.target.y - d.source.y,
+                  dr = Math.sqrt(dx * dx + dy * dy);
+              return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+            }
+
+            function transform(d, i) {
+              //if (i>52) force.stop();
+              return "translate(" + d.x + "," + d.y + ")";
+            }
+
+            //------------------------------------------------
+            //             mouse-over
+            //------------------------------------------------
+            var mouseover = function(z){
+                tip.show(z);
+                var neighbors = {};
+                neighbors[z.index] = true;
+
+                path.filter(function(d){
+                    if (d.source == z) {
+                        neighbors[d.target.index] = true
+                        return true
+                    } else if (d.target == z) {
+                        neighbors[d.source.index] = true
+                        return true
+                    } else {
+                        return false
+                    }
+                })
+                    .style("stroke-opacity", 1);
+
+                circle.filter(function(d){ return neighbors[d.index] })
+                    .style("stroke-width", 3);
+
+               text.filter(function(d){ return !neighbors[d.index] })
+                    .style("fill-opacity", 0.2);
+
+               text.filter(function(d){ return neighbors[d.index] })
+                    .style("font-size", 16 + "px")
+
+            };
+
+            //------------------------------------------------
+            //             mouse-out
+            //------------------------------------------------
+            var mouseout = function(z){
+                path.style("stroke-opacity", 0.2);
+
+                circle.style("stroke-width", 1.5)
+
+                text
+                  .style("font-size", 10 + "px")
+                  .style("fill-opacity", 1)
+
+            };
+
+
+            function zoomed() {
+              svg.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+              slider.property("value",  d3.event.scale);
+            }
+
+            function dragstarted(d) {
+              d3.event.sourceEvent.stopPropagation();
+              d3.select(this).classed("dragging", true);
+            }
+
+            function dragged(d) {
+             d3.select(this).attr("transform", transform);
+            }
+
+            function dragended(d) {
+              d3.select(this).classed("dragging", false);
+            }
+
+            function slided(d){
+              zoom.scale(d3.select(this).property("value"))
+                .event(svg);
+            }
+        }
+        </script>
+    </div>
+    </body>
+</html>
