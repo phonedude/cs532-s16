@@ -4,7 +4,7 @@ Instructor: [Michael L. Nelson](http://www.cs.odu.edu/~mln/) <mln@cs.odu.edu>
 Office Hours: Thursdays 3-4 and by appointment
 
 Time: Thursdays 4:20pm - 7:00pm
-
+ 
 Place: E&CS bldg, r. 2120
 
 [Syllabus](https://raw.githubusercontent.com/phonedude/cs532-s16/master/syllabus.txt)
