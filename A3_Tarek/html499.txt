@@ -1,0 +1,2123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="http://www.vip-teatres.ru/">
+	<script type="text/javascript">
+		var WAROOT_URL = 'http://www.vip-teatres.ru/';//ok
+	</script>
+	
+<!-- Head start -->
+<title>Академический малый драматический театр - театр Европы. Театр Льва Додина - гастроли в Москве 2015.</title>
+<meta name="description" content="Академический малый драматический театр - театр Европы. Театр Льва Додина - гастроли в Москве 2015. Купить билеты с бесплатной доставкой по Москве.">
+<meta name="keywords" content="лев додин, гастроли в москве лев додин, мдт театр европы в москве, театр европы лев додин, лев додин,лев додин в москве 2014,гастроли театра льва додина в москве 2014,театр европы гастроли в москве 2014,театр европы билеты,театр льва додина в москве,театр" >
+
+<script type="text/javascript" src="/published/SC/html/scripts/js/niftycube.js"></script>
+
+<link rel="stylesheet" href="/published/SC/html/scripts/js/calendar/css/core.css" type="text/css">
+<link rel="stylesheet" href="/published/SC/html/scripts/js/ui/css/smoothness/jquery-ui-1.7.2.custom.css" type="text/css">
+<link rel="stylesheet" href="/published/SC/html/scripts/js/facebox/facebox.css" type="text/css">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" language="JavaScript" type="text/javascript"></script> 
+ <script type="text/javascript" src="/published/SC/html/scripts/js/ui/js/jquery-ui-1.7.2.custom.min.js"></script>
+ <script type="text/javascript" src="/published/SC/html/scripts/js/ui/js/ui.datepicker-ru.js"></script>
+
+
+ 
+ <script type="text/javascript" src="/published/SC/html/scripts/js/calendar/js/jMonthCalendar.js"></script>
+ <script type="text/javascript" src="/published/SC/html/scripts/js/facebox/facebox.js"></script>
+ <script type="text/javascript" src="/scr/vip.js"></script>
+
+
+ <script type="text/javascript" src="published/publicdata/TICKET/attachments/SC/themes/shopping/iepngfix_tilebg.js"></script>  
+
+
+ <script type="text/javascript">
+        $().ready(function() {
+			
+      // ITeamo <<<
+      $('a.showSectionTicketsTable').click(function(){                        
+        var sectionKey;
+        sectionKey = $(this).attr('sectionKey');
+        $("tr[sectionKey=" + sectionKey + "]").toggle();
+        return false;        
+      });       
+      // >>> ITeamo
+      
+      var options = {
+				height: 200,
+				width: 200,
+				navHeight: 20,
+				labelHeight: 20,
+				firstDayOfWeek: 1,
+    
+    navLinks: {
+	enableToday: false,
+	enableNextYear: false,
+	enablePrevYear: false,
+	p:'&lsaquo;', 
+	n:'&rsaquo;', 
+	t:'сегодня',
+	showMore: 'больше'
+    },
+
+				onMonthChanging: function(dateIn) {
+					//this could be an Ajax call to the backend to get this months events
+					//var events = [ 	{ "EventID": 7, "StartDate": new Date(2009, 1, 1), "Title": "10:00 pm - EventTitle1", "URL": "#", "Description": "This is a sample event description", "CssClass": "Birthday" },
+					//				{ "EventID": 8, "StartDate": new Date(2009, 1, 2), "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" }
+					//];
+					//$.jMonthCalendar.ReplaceEventCollection(events);
+					return true;
+				},			
+				onDayLinkClick: function(date) { 
+					
+var d=date.getDate();
+var m=date.getMonth() + 1;
+var y=1900+date.getYear() ;
+if(m<10)m='0'+m;
+if(d<10)d='0'+d;
+
+document.location = '/search/?sdate='+y+'-'+m+'-'+d;
+					return false; 
+				},
+				onDayCellClick: function(date) { 
+var d=date.getDate();
+if(m<10)m='0'+m;
+if(d<10)d='0'+d;
+var m=date.getMonth() + 1;
+var y=1900+date.getYear() ;
+					document.location = '/search/?sdate='+y+'-'+m+'-'+d;
+					return false; 
+				},
+onEventBlockClick: function(event) { document.location = '/search/?sdate='+event.Description;return false; },
+
+				locale: {
+	days: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+	daysShort: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+	daysMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+	months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+	monthsShort: ["Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"],
+	weekMin: 'wk'
+    }
+
+			};
+			
+			
+var events = [];
+
+/*
+$.getJSON("/ajax.php?action=events", null, function(events) {
+var result = events;
+$.jMonthCalendar.Initialize(options, events);
+});
+*/
+
+$.jMonthCalendar.Initialize(options, events);
+			
+$('#extra_param').datepicker({dateFormat: 'yy-mm-dd'});
+$('#extra_param').datepicker($.datepicker.regional['ru']);
+
+	
+	
+
+$('#scheme').bind('click', function(){
+$.facebox.settings.opacity = 0.5;
+$.facebox({ image: $('#scheme').attr('img') });
+return false;
+	});
+})
+    </script>
+
+
+
+
+
+
+
+<!-- Head end -->
+
+	<link rel="stylesheet" href="/published/publicdata/TICKET/attachments/SC/themes/shopping/overridestyles.css" type="text/css">	<script type="text/javascript" src="/published/publicdata/TICKET/attachments/SC/themes/shopping/head.js"></script>
+	<link rel="stylesheet" href="/published/publicdata/TICKET/attachments/SC/themes/shopping/main.css" type="text/css">
+	<link rel="stylesheet" href="/published/SC/html/scripts/css/general.css" type="text/css">
+	<script type="text/javascript" src="/published/SC/html/scripts/js/functions.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/behavior.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/widget_checkout.js"></script>
+	<script type="text/javascript" src="/published/SC/html/scripts/js/frame.js"></script>
+	<script type="text/javascript">
+<!--		
+
+var defaultCurrency = {
+	display_template: '{value} руб.',
+	decimal_places: '0',
+	decimal_symbol: '.',
+	thousands_delimiter: '',
+	getView: function (price){return this.display_template.replace(/\{value\}/, number_format(price, this.decimal_places, this.decimal_symbol, this.thousands_delimiter));}
+	};
+
+var ORIG_URL = 'http://www.vip-teatres.ru/';
+var ORIG_LANG_URL = '/';
+window.currDispTemplate = defaultCurrency.display_template;
+var translate = {};
+translate.cnfrm_unsubscribe = 'Вы уверены, что хотите удалить вашу учетную запись в магазине?';
+translate.err_input_email = 'Введите правильный электронный адрес';
+translate.err_input_nickname = 'Пожалуйста, введите Ваш псевдоним';
+translate.err_input_message_subject = 'Пожалуйста, введите тему сообщения';
+translate.err_input_price = 'Цена должна быть положительным числом';
+function position_this_window(){
+	var x = (screen.availWidth - 600) / 2;
+	window.resizeTo(600, screen.availHeight - 100);
+	window.moveTo(Math.floor(x),50);
+}		
+//-->
+</script>
+	</head>
+	<body >
+<!--  BODY -->
+<div id="wrapper">
+<!-- #header-->
+	<div id="header"  style="width:100%;">
+				<!--Таблица1 логотип, баннер, телефоны -->
+			<div id="logo--left" style="position:absolute; left: 10px;">
+						<a href="/" style="position: relative;"><img src="published/publicdata/TICKET/attachments/SC/themes/shopping/img/logo3.png"></a>
+			</div>
+					<div id="logo--right">
+ 		</div>
+				<div id="header-menu-content">
+					<!-- #top-menu-->
+				<!-- Таблица2 иконки и меню-->
+					<table  cellSpacing="0" cellPadding="0" width="100%" border="0" style="height:80px; margin-bottom:25px;">
+					<tr>
+					<td  align="right" valign="top" width="350"></td>
+					<td valign="top"  align="center">
+					<img src="published/publicdata/TICKET/attachments/SC/themes/shopping/img/telefoni.gif" align="middle">
+					<div class="menuverh">
+								<div id="menu2-content">	
+								<!-- cpt_container_start --><!-- cpt_container_end -->
+										<ul class="">
+											<li><a href="/place/concerts">~&nbsp;&nbsp;Концерты</a></li>
+                                                                                        <li><a href="/auxpage_teatrs/">Театры</a></li>
+											<li><a href="/place/circus/">Цирк</a></li>
+											<li><a href="/place/deti/">Детям</a></li>
+											<li><a href="/place/rekomenduem/">Популярное! </a></li>
+                                                                                        <li class="last"><a href="/place/premiers">Премьеры!&nbsp;&nbsp;~</a></li>
+										</ul>
+								</div>
+						</div>
+						<div id="search-block">
+						</div>
+						</td>
+					<td width:"350"  vertical-align:top;">
+						<div  style="text-align:right; border:0px solid#454545; margin-left:85px; font-style: italic; font-family:Times New Roman, serif; font-size:120%; padding:5px; color:#5F0002; ">
+	<!-- cpt_container_start -->
+<div class="cpt_product_search"><form action="/search/" method="post">
+<input type="text" id="searchstring" name="searchstring" value='Поиск представлений' rel="Поиск представлений" class="input_message" />
+<input id="search-button" type="submit" value="" />
+<!--<input id="search-button" type="submit" value="Найти" />-->
+</form></div>
+<!-- cpt_container_end -->
+										</div><br />
+					</td>
+						</tr>
+					</table>
+					<!-- #top-menu-->
+				</div>
+	</div><!-- #header-->
+	<div class="head-column-l"><div class="head-column-r"></div></div>
+	<div id="content-wrapper" style="">
+		<table cellpadding="0" cellspacing="0" border="0" width="100%" id="content-table" >
+  			<tr>
+      				<td id="content-col">
+						<!-- #content-->
+						<div style="margin-left:240px; text-align:center;" >
+							<div  id="content"> 
+								<div style="padding:10px; margin:10px;">
+							<!-- cpt_container_start -->
+<div class="cpt_maincontent"><script type="text/javascript" src="/published/SC/html/scripts/js/category.js"></script>
+<div class="clearfix" id="cat_path">
+<table cellpadding="0" border="0" width="100%" class="cat_path_in_productpage">
+	<tr>
+	<td><a href="/">Театральные билеты</a> &raquo;
+				
+				<a href='/place/lev-dodin-mdt-teatr-europi/'>Гастроли в Москве. МДТ-Театр Европы. Лев Додин</a>		
+			</td>
+	
+</tr></table>
+	</div>
+	<div class="clearfix" id="cat_top_tree">
+
+		<div id="cat_info_left_block">
+				<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/levdodinmdtteatreuropi06.jpg" alt="Гастроли в Москве. МДТ-Театр Европы. Лев Додин" title="Гастроли в Москве. МДТ-Театр Европы. Лев Додин" align="left"/>&nbsp; 			<div id="cat-descr">
+									<h1><span style="color: #800000;">Академический малый драматический театр - театр Европы. Театр Льва Додина - гастроли в Москве 2015.</span></h1>
+<p><span style="color: #ff0000;">Стоимость билетов на спектакли МДТ Театр Европы Льва Додина (гастроли в Москве 2015)</span></p>
+<p class="extra_category_description"><span style="color: #800000;">
+</span></p>
+<p class="extra_category_description"><span style="color: #800000;"><strong>Театр Льва Додина в Москве</strong>. <strong>Гастроли театра Льва Додина в Москве 2015</strong> пройдут в сентябре-октябре и будут представлены спектаклями: «<a href="/event/tri-sestry-mdt-teatr-evropy-lev-dodin/">Три сестры</a>», «<a href="/event/kovarstvo-i-ljubov-mdt-teatr-evrop-lev-dodin/">Коварство и любовь</a>», «<a href="/event/vrag-naroda-mdt-teatr-evropy-lev-dodin/">Враг народа</a>», «<a href="/event/zhizn-i-sudba-mdt-teatr-evropy-lev-dodin/">Жизнь и судьба</a>», «<a href="/event/besy-mdt-teatr-evropy-lev-dodin/">Бесы</a>». Театр Европы Льва Додина находится в Санкт - Петербурге (Малый драматический театр), где в 1975 году вышел первый спектакль Додина - «Разбойник» по пьесе Карела Чапека.<br />Лев Абрамович Додин - советский, российский театральный режиссер, педагог, театральный деятель. Он родился в 1944 году в профессорской ленинградской семье. Театром увлекся еще в школе, посещал Ленинградский театр Юношеского Творчества во Дворце пионеров. Затем была учеба в театральном институте на курсе Бориса Зона, годы работы вторым режиссером в ТЮЗе у Зиновия Корогодского, преподавание в ЛГИТМ и К (Ленинградский Государственный Институт Театра, Музыки и Кинематографии), приход в МДТ в 1974 году, где <em>Лев Додин</em> является художественным руководителем. На сцене Малого драматического театра были поставлены такие спектакли как: «Дом», «Братья и сестры» по Ф.Абрамову, «Повелитель мух» по У.Голдингу, «Бесы» по Ф.Достоевскому, «Любовь под вязами» Ю. О Нила, «Вишневый сад», «Пьеса без названия», «Чайка» А.Чехова, «Чевенгур» по А.Платонову, «Молли Суини « Б.Фрида. В 1995 году на музыкальном Пасхальном Фестивале в Зальцбурге была представлена опера «Электра» Рихарда Штрауса, поставленная <em>Львом Додиным</em>, которая имела большой успех на Западе. Это была первая постановка за рубежом. Теперь один спектакль следует за другим: «Пиковая дама» во Флоренции и Амстердаме, «Катерина Измайлова» во Флоренции, «Мазепа» в «Ла Скала» (дирижер М. Ростропович), «Демон» в театре Шатле в Париже и др. В творческом багаже Льва Додина более пятидесяти постановок на сценах российских и зарубежных театров. В сентябре 1998 года театр Льва Додина получил статус «Театра Европы» и стал третьим после театра Одеон в Париже и театра Пикколо в Милане. Лауреат Государственных премий, Лауреат Премии «Золотая Маска», театральной премии «Европа – Театру», независимой премии «Триумф», Премии Президента России 2001 года, Лауреат многочисленных престижных международных премий. Выдающийся режиссер <em>Лев Додин</em> ставит спектакли о блужданиях человеческой души, неустанно культивирует в себе и актерах стремление к правде, каждый его спектакль на сцене МДТ необходим и не случаен. <strong>Театр Европы Льва Додина</strong> опирается на великолепную труппу актеров. Сегодня в основной состав театра входят ученики Льва Додина разных лет: Татьяна Шестакова, Петр Семак, Игорь Иванов, Наталья Акимова, Сергей Власов, Сергей Курышев, Наталья Фоменко, Ирина Тычинина, Владимир Селезнев, Елизавета Боярская, Данила Козловский, Дарья Румянцева и многие другие громкие имена. <strong>Театр Европы билеты</strong>.<br />Осенью <strong>Лев Додин в Москве 2015</strong> представит несколько своих спектаклей. Москвичи-театралы с большим нетерпением ждут встречи с актерами <strong>театра Европы. Билеты</strong> на спектакли уже поступили в продажу. Наше агентство VIP-TeatreS поможет всем желающим в приобретении билетов любой категории. Смотрите информацию о гастролях <strong>Театра Европы Льва Додина в Москве 2015</strong> на сайте нашего агентства и заказывайте лучшие билеты на представленные спектакли.</span></p>
+<p> </p>
+<h2><span style="color: #800000;">Гастроли Театра Европы Льва Додина в Москве 2015 г- купить билеты с бесплатной доставкой по Москве.</span></h2>
+<p> </p>
+			</div>
+
+								</div>
+		</div>
+		
+</div>
+
+
+
+
+
+
+
+
+	
+<table cellpadding="0" width="100%" border="0" >
+  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6580" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6580" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/vishnevyj-sad-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/vishnevyj-sad-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin_thm.jpg" alt="билеты Вишневый Сад (гастроли в Москве МДТ - Театр Европы. Лев Додин)" title="билеты Вишневый Сад (гастроли в Москве МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/vishnevyj-sad-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/'>Вишневый Сад (гастроли в Москве МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka">  <p>
+    
+                            <a href="/place/premiers/">ПРЕМЬЕРА</a>        
+            </p>
+  <p>
+    
+                            <a href="/place/zolotaja-maska/">ЗОЛОТАЯ МАСКА российская национальная премия и фестиваль</a>        
+            </p>
+</div>
+		<a href="/event/vishnevyj-sad-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>16+   Купить билеты на спектакль "Вишневый Сад". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина</strong>
+ (Санкт-Петербург) на сайте билетного агентства VIP-TeatreS.</p> <a  href='/event/vishnevyj-sad-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6176" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6176" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/tri-sestry-mdt-teatr-evropy-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/tri-sestry-mdt-teatr-evropy-lev-dodin_thm.jpg" alt="билеты Три сестры (гастроли в Москве МДТ - Театр Европы. Лев Додин)" title="билеты Три сестры (гастроли в Москве МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/tri-sestry-mdt-teatr-evropy-lev-dodin/'>Три сестры (гастроли в Москве МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka"></div>
+		<a href="/event/tri-sestry-mdt-teatr-evropy-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>Купить билеты на спектакль "Три сестры". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина</strong> (Санкт-Петербург) на сайте билетного агентства VIP-TeatreS.</p> <a  href='/event/tri-sestry-mdt-teatr-evropy-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6177" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6177" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/kovarstvo-i-ljubov-mdt-teatr-evrop-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/kovarstvo-i-ljubov-mdt-teatr-evrop-lev-dodin_thm.jpg" alt="билеты Коварство и любовь (МДТ - Театр Европы. Лев Додин)" title="билеты Коварство и любовь (МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/kovarstvo-i-ljubov-mdt-teatr-evrop-lev-dodin/'>Коварство и любовь (МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka"></div>
+		<a href="/event/kovarstvo-i-ljubov-mdt-teatr-evrop-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>16+ Купить билеты на спектакль "Коварство и Любовь". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина </strong>(Санкт-Петербург) на сайте билетного агентства VIP-TeatreS. Продолжительность спектаклья 2 часа 20 минут.</p> <a  href='/event/kovarstvo-i-ljubov-mdt-teatr-evrop-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6178" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6178" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/vrag-naroda-mdt-teatr-evropy-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/vrag-naroda-mdt-teatr-evropy-lev-dodin_thm.jpg" alt="билеты Враг народа (МДТ - Театр Европы. Лев Додин)" title="билеты Враг народа (МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/vrag-naroda-mdt-teatr-evropy-lev-dodin/'>Враг народа (МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka"></div>
+		<a href="/event/vrag-naroda-mdt-teatr-evropy-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>16+   Купить билеты на спектакль "Враг народа". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина</strong> (Санкт-Петербург) на сайте билетного агентства VIP-TeatreS.</p> <a  href='/event/vrag-naroda-mdt-teatr-evropy-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6179" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6179" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/zhizn-i-sudba-mdt-teatr-evropy-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zhizn-i-sudba-mdt-teatr-evropy-lev-dodin_thm.jpg" alt="билеты Жизнь и судьба (гастроли в Москве МДТ - Театр Европы. Лев Додин)" title="билеты Жизнь и судьба (гастроли в Москве МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/zhizn-i-sudba-mdt-teatr-evropy-lev-dodin/'>Жизнь и судьба (гастроли в Москве МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka"></div>
+		<a href="/event/zhizn-i-sudba-mdt-teatr-evropy-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>16+   Купить билеты на спектакль "Жизнь и судьба". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина</strong> (Санкт-Петербург) на сайте билетного агентства VIP-TeatreS.</p> <a  href='/event/zhizn-i-sudba-mdt-teatr-evropy-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6180" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6180" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/besy-mdt-teatr-evropy-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/besy-mdt-teatr-evropy-lev-dodin_thm.jpg" alt="билеты Бесы (гастроли в Москве МДТ - Театр Европы. Лев Додин)" title="билеты Бесы (гастроли в Москве МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/besy-mdt-teatr-evropy-lev-dodin/'>Бесы (гастроли в Москве МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka"></div>
+		<a href="/event/besy-mdt-teatr-evropy-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>16+   Купить билеты на спектакль "Бесы". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина</strong> (Санкт-Петербург) на сайте билетного агентства VIP-TeatreS. Продолжительность первого спектакля 2 часа 40 минут, второго и третьего 2 часа. Перерыв между частями 1 час.</p> <a  href='/event/besy-mdt-teatr-evropy-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  	<tr>	<td valign="top" width="100%">
+		
+<div class="product_brief_block">
+<form class="" action='/cart/' method="post" rel="6699" >
+	<input name="action" value="add_product" type="hidden" />
+	<input name="productID" value="6699" type="hidden" />
+	<input class="product_price" value="0" type="hidden" />
+		
+	
+	<div >
+
+	<table cellpadding="0" cellspacing="0" border="0"  width="100%">
+	<tr> 
+		<td align="center" style="vertical-align:top; width: 120px; height: 120px;">
+<div style=" ">
+	<!-- Thumbnail -->
+	<a  href='/event/bratja-i-sestry-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/'>			<img src="/published/publicdata/TICKET/attachments/SC/products_pictures/bratia-teatr-evropy-lev-dodin2_thm.jpg" alt="билеты Братья и сестры (гастроли в Москве МДТ - Театр Европы. Лев Додин)" title="билеты Братья и сестры (гастроли в Москве МДТ - Театр Европы. Лев Додин)" />
+		</a>
+		</div>
+
+		
+	</td>
+	
+	<td style="vertical-align:top; padding:0 5px 0 5px;">
+		<div class="prdbrief_name"><a  href='/event/bratja-i-sestry-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/'>Братья и сестры (гастроли в Москве МДТ - Театр Европы. Лев Додин)</a>
+							<div style="">
+			<span class="b">
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			   			Гастроли в Москве. МДТ-Театр Европы. Лев Додин
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    			        
+    			    
+    						</span>
+    			</div>
+		</div>
+
+		
+		
+	 	    		<div class="prdbrief_options">
+		<table border="0" cellpadding="0" cellspacing="0" >
+		<div class="dopmetka">  <p>
+    
+                            <a href="/place/premiers/">ПРЕМЬЕРА</a>        
+            </p>
+</div>
+		<a href="/event/bratja-i-sestry-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+		
+								<tr>                    
+            	<td style="vertical-align:top;"  >
+              	 <span class="b">в ближайшее время даты не указаны в афише театра:</span>&nbsp;
+           	</td>
+           	<td>
+			       		
+                                   	         	
+                
+            	</td>
+       	 	</tr>
+        	        	        	        	</table>
+    		</div>
+    		
+		<div class="prdbrief_brief_description"><p>16+   Купить билеты на спектакль "Братья и сестры". <strong>Гастроли Академического малого драматического театра - ТЕАТР ЕВРОПЫ под руководством Льва Додина</strong>
+ (Санкт-Петербург) на сайте билетного агентства VIP-TeatreS.</p> <a  href='/event/bratja-i-sestry-gastroli-v-moskve-mdt-teatr-evropy-lev-dodin/'>подробнее >></a></div>
+		
+		
+
+		
+	
+	
+
+
+	</td>
+	</tr>
+	</table>
+	</div>
+	
+	
+
+
+
+
+
+
+
+	
+	
+		
+	
+
+		
+  
+   
+	
+
+	
+</form>
+
+<div style="clear:both;"></div>
+</div>	</td>
+	</tr>  </table>
+ 
+
+
+
+
+<!-- !!!!!!!!!!! -->
+
+<div id="extra_category_description">
+</div>
+
+<script>
+
+  var extra_category_description_div = document.getElementById ('extra_category_description');
+  var extra_category_description_elements = getElementsByClass ('extra_category_description');
+  if (extra_category_description_elements){
+    for (var i = 0; i < extra_category_description_elements.length; i++){
+      extra_category_description_div.appendChild (extra_category_description_elements[i]);
+    }
+  }
+
+</script></div>
+<!-- cpt_container_end -->
+								</div>
+							</div>
+						</div>
+						<!-- #content-->
+						<!-- #left-->
+						<div id="left-content"> 
+							<div style="padding:15px; border:0px solid #454545; ">
+							<div id="col_header_cat"></div>
+							<!-- cpt_container_start --><div class="cpt_category_tree"><ul> 
+      	<li class="leftitem">
+		<a href='/auxpage_teatrs/' title='Все театры Москвы- АФИША' >ТЕАТРЫ >></a> 
+		</li>
+    <li class="parent"> 
+<a href='/place/bolshoi_teatr/'>Большой театр</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/lenkom/'>Ленком</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/malyj_teatr/'>Малый театр</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/satirikon/'>Сатирикон</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/sovremennik/'>Современник</a> 
+</li>
+    <li class="parent"> 
+<a href='/place/mhat/'>МХТ Чехова</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/satiry/'>Театр Сатиры</a> 
+</li> 
+   <li class="parent"> 
+<a href='/place/masterskaja-fomenko/'>Мастерская Фоменко</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/nacij_teatr/'>Театр Наций</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/ramt/'>РАМТ</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/studia_tabakova/'>Студия Табакова</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/vahtangova/'>Театр Вахтангова</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/mayakovskogo/'>Театр им. В. Маяковского</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/na_maloi_bronnoi/'>Театр на Малой Бронной</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/na_taganke/'>Театр на Таганке</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/operetty_teatr/'>Театр Оперетты</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/sac_teatr/'>Театр Сац</a> 
+</li> 
+   <li class="parent"> 
+<a href='/place/mossoveta/'>Театр Моссовета</a> 
+</li> 
+        <li class="parent"> 
+<a href='/place/muz_teatr_stanislavskogo_i_nemirovicha-danchenko/'>Муз. театр Станиславского и Немировича-Данченко</a> 
+</li> 
+		<div class="col_footer"></div>
+<li class="leftitem">
+<a href='/place/concerts/' title='Все концерты Москвы' >КОНЦЕРТНЫЕ ЗАЛЫ >></a> 
+</li>
+    <li class="parent"> 
+<a href='/place/kremlevskij_dvorec/'>Кремлевский Дворец</a> 
+</li>
+<li class="parent"> 
+<a href='/place/koncertnyj-zal-imchajkovskogo/'>КЗ им.Чайковского</a> 
+</li>
+<li class="parent"> 
+<a href='/place/konservatoria/'>Консерватория</a> 
+</li>
+<li class="parent"> 
+<a href='/place/kz_krokus_siti_holl/'>КЗ Крокус Сити Холл</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/dom_muzyki/'>Дом Музыки</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/sk_olimpijskij/'>СК Олимпийский</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/luzniki/'>ДC Лужники</a> 
+</li> 
+		<div class="col_footer"></div>
+<li class="leftitem">
+<a href='/place/circus/' title='Все цирки- АФИША' >ЦИРКИ >></a> 
+</li>
+    <li class="parent"> 
+<a href='/place/zirk_du_soleil/'>ЦИРК ДЮ СОЛЕЙ</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/cirk_na_tsvetnom/'>Цирк на Цветном бульваре</a> 
+</li> 
+    <li class="parent"> 
+<a href='/place/vernadskogo/'>Цирк на проспекте Вернадского</a> 
+</li> 
+<div class="col_footer"></div>
+    <li class="leftitem"> 
+<a href='/auxpage_places/' title='Все площадки- АФИША' >ВСЕ ПЛОЩАДКИ >></a> 
+</li> 
+<div class="col_footer"></div>
+    <li class="leftitem"> 
+<a href='/auxpage_oferta/' title='Оферта vip-teatres.ru' >Оферта>></a> 
+</li>
+<a href="http://yandex.ru/cy?base=0&amp;host=vip-teatres.ru"><img src="http://www.yandex.ru/cycounter?vip-teatres.ru" width="88" height="31" alt="Яндекс цитирования" border="0" /></a>
+
+<!-- Yandex.Metrika informer -->
+<a href="https://metrika.yandex.ru/stat/?id=27732243&amp;from=informer"
+target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/27732243/3_0_D5C662FF_B5A642FF_0_pageviews"
+style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:27732243,lang:'ru'});return false}catch(e){}"/></a>
+<!-- /Yandex.Metrika informer -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter27732243 = new Ya.Metrika({id:27732243,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/27732243" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+  </ul></div> <!-- cpt_container_end -->
+
+							</div>
+													</div>
+						<!-- #left-->
+				</td>
+				<!-- #right-->
+      				<td id="right-col">
+						<div id="right-content">
+							<div style="padding:15px; border:0px solid #454545;">
+							<!-- cpt_container_start -->
+<div class="cpt_"></div>
+
+<div class="cpt_custom_html"><div id="jMonthCalendar"></div></div>
+<!-- cpt_container_end -->
+							<div class="col_footer"></div>
+       							<!-- cpt_container_start -->
+<div class="cpt_product_lists">
+
+
+
+
+
+
+    
+</div>
+
+<div class="cpt_product_lists"><ins class="thumbnail">
+  <div class="r">
+        	    <b>Большой театр. Купить билеты онлайн на балет "Сильфида" с бесплатной доставкой по Москве в пределах МКАД на сайте билетного агентства VIP-TeatreS. Большой театр -афиша, информация о спектаклях, схема зала.</b>				<a href="/event/silfida/"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/silfida65_thm.jpg" class="product"/></a>                <a href="/event/silfida/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+				<a href="/event/silfida/">Большой театр. Балет Сильфида</a>
+			    <div class="prdbrief_brief_description"><p>12+   Балет в двух действиях на музыку Х.С.Левенскольда. Либретто А.Нурри и Ф.Тальони. Продолжительность спектакля - 2 часа, с 1 антрактом. Купить билеты в Большой театр на балет "Сильфида" с бесплатной доставкой по Москве в пределах МКАД на сайте билетного агентства VIP-TeatreS. <strong>Большой театр -афиша</strong>, информация о спектаклях, схема зала.</p></div></div>
+</ins>
+<ins class="thumbnail">
+  <div class="r">
+        	    <b>Купить билеты в Цирк Дю Солей (Cirgue du Soleil) на шоу Varekai (Варекай) онлайн. Москва, апрель 2016. Бесплатная доставка по Москве.</b>				<a href="/event/cirque_du_soleil/"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/cirque_du_soleil_varekai_thm.jpg" class="product"/></a>                <a href="/event/cirque_du_soleil/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+				<a href="/event/cirque_du_soleil/">Цирк Дю Солей. Купить билеты на шоу Varekai (Варекай)</a>
+			    <div class="prdbrief_brief_description"><p>Всемирно известный<strong> Цирк Дю Солей в Москве 2016</strong> c очередной сногшибательной программой Varekai (Варекай)</p></div></div>
+</ins>
+<ins class="thumbnail">
+  <div class="r">
+        	    <b>Купить билеты на концерт Земфиры с бесплатной доставкой по Москве в пределах МКАД.</b>				<a href="/event/zemfira/"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zemfira_thm.jpg" class="product"/></a>                <a href="/event/zemfira/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+				<a href="/event/zemfira/">Земфира. Концерт в СК Олимпийский</a>
+			    <div class="prdbrief_brief_description"><p>Купить билеты на концерт Земфиры в СК Олимпийский 1 апреля 2016 года</p></div></div>
+</ins>
+<ins class="thumbnail">
+  <div class="r">
+        	    <b>МХТ Чехова- афиша. На нашем сайте Вы можете заказать билеты on-line в МХТ им.Чехова на спектакль Номер 13D или позвонив по телефонам (495) 518-8248, 784-3711.</b>				<a href="/event/spektakl_13/"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/spektakll_13re_thm.jpg" class="product"/></a>                <a href="/event/spektakl_13/" title="Заказать билет"><img src="/published/publicdata/TICKET/attachments/SC/products_pictures/zakazatbilet.gif" alt="Заказать билет" width="120" height="20" /></a>
+				<a href="/event/spektakl_13/">МХТ Чехова. Номер 13D</a>
+			    <div class="prdbrief_brief_description"><p><strong>Билеты в театр МХТ им.Чехова</strong> на спектакль "№ 13D". Пьеса Р.Куни. Английская комедия в двух действиях. Переводчик - М.Мишин. Продолжительность спектакля - 2ч 20м, с 1 антрактом. <strong>МХТ Чехова- афиша.</strong></p></div></div>
+</ins>
+
+
+
+
+
+
+
+    
+</div>
+
+<div class="cpt_custom_html"></div>
+<!-- cpt_container_end -->						
+							</div>
+						</div>
+				</td>
+				<!-- #right-->
+    			</tr>
+    		</table>
+		<div class="foot-column-l"><div class="foot-column-r"></div></div>	
+				<div id="footer-col">
+					<div id="footer-bg"></div>
+					<div id="footer">
+						<div id="menu">
+							<!-- cpt_container_start --><!-- cpt_container_end -->
+									<ul class="">
+										</ul>
+						</div>	
+						<div class="shp_copyright">&copy; <a href="http://www.vip-teatres.ru/#niz"><u>билеты на футбол, билеты в большой театр, ленком билеты</u></a>
+					</div><!-- #footer -->
+				</div>
+	</div><!-- #content-->
+</div><!-- #wrapper -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter20272006 = new Ya.Metrika({id:20272006,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/20272006" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<!--  END -->
+
+	</body>
+</html>

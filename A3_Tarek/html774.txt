@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<!--
+                             _ _
+ _ __   __ _ _ __   ___ _ __| (_)
+| '_ \ / _` | '_ \ / _ \ '__| | |
+| |_) | (_| | |_) |  __/ | _| | |
+| .__/ \__,_| .__/ \___|_|(_)_|_|
+|_|         |_|
+
+
+-->
+<html
+  lang="en"
+  class="no-js"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://ogp.me/ns/fb#"
+  xmlns:paperli="http://paper.li/ns#">
+  
+  <head>
+    
+    <title>Social Media 101 Where the Pros Go</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+          <meta content="Social Media 101 Where the Pros Go" property="og:title" />
+  <meta content="Social Media 101 Where the Pros Go, by Angela Runs Amuck: updated automatically with a curated selection of articles, blog posts, videos and photos." property="og:description" />
+  <meta content="paper_li:newspaper" property="og:type" />
+  <meta content="http://paper.li/AngelaRunsAmuck/1306522382" property="og:url" />
+  <meta content="http://d197nsfq0bri0.cloudfront.net/images/fb-post-logo-new.png" property="og:image" />
+  <meta content="paper.li" property="og:site_name" />
+  <meta content="362293833600" property="fb:app_id" />
+  
+  <meta content="en_US" property="og:locale" />
+
+      <meta content="en_US" property="og:locale:alternate" />
+      <meta content="de_DE" property="og:locale:alternate" />
+      <meta content="es_ES" property="og:locale:alternate" />
+      <meta content="fr_FR" property="og:locale:alternate" />
+      <meta content="ja_JP" property="og:locale:alternate" />
+      <meta content="pt_PT" property="og:locale:alternate" />
+  
+  <link href="http://d197nsfq0bri0.cloudfront.net/images/fb-post-logo-new.png" rel="image_src" />
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <link rel="apple-touch-icon-precomposed" href="/favicon.ico">
+
+    
+  <link rel="dns-prefetch" href="//img.paper.li">
+  <link rel="dns-prefetch" href="//d38hokjm2drjyk.cloudfront.net">
+  <link rel="dns-prefetch" href="//d2k854fi3lpqb8.cloudfront.net">
+  <link rel="dns-prefetch" href="//ppr.li">
+  <link rel="dns-prefetch" href="//ads.paper.li">
+  <link rel="dns-prefetch" href="//connect.facebook.net">
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//platform.twitter.com">
+
+    
+    <script type="text/javascript">
+      paperli = window.paperli || {};
+      paperli.locale = 'en';
+      paperli.logged_in = false;
+      paperli.host = 'paper.li';
+      paperli.imageproxy_token = {"tokenValidity":"1455820992544","token":"72591d283358ab9d10cb808aa3ad7f7a2a69db3c"};
+      paperli.images_host = "d38hokjm2drjyk.cloudfront.net";
+    </script>
+
+    <link href="//d2k854fi3lpqb8.cloudfront.net/assets/application-326d4999be2807079bf15a5019d5765e.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="//d2k854fi3lpqb8.cloudfront.net/assets/icons-e6eb71ca0f2a31f9cccf67f9f8e13139.css" media="all" rel="stylesheet" type="text/css" />
+    
+    <script>
+  "seo ignore"; // seo hint;
+  
+  var _ga = _ga || {};
+  
+  _ga.getSocialActionTrackers_ = function(socialNetwork, socialAction, socialTarget) {
+    return function() {
+      var trackers = ga.getAll();
+      for (var i = 0, tracker; tracker = trackers[i]; i++) {
+        tracker.send('social', socialNetwork, socialAction, socialTarget);
+      }
+    };
+  };
+  
+  _ga.trackFacebook = function() {
+    try {
+      if (FB && FB.Event && FB.Event.subscribe) {
+        FB.Event.subscribe('edge.create', function(targetUrl) {
+          ga(_ga.getSocialActionTrackers_('facebook', 'like', targetUrl));
+        });
+        FB.Event.subscribe('edge.remove', function(targetUrl) {
+          ga(_ga.getSocialActionTrackers_('facebook', 'unlike', targetUrl));
+        });
+        FB.Event.subscribe('message.send', function(targetUrl) {
+          ga(_ga.getSocialActionTrackers_('facebook', 'send', targetUrl));
+        });
+      }
+    } catch (e) {}
+  };
+  
+  
+  _ga.trackTwitterHandler_ = function(intent_event) {
+    var targetUrl = ''; // must be present
+    if (intent_event && intent_event.type == 'tweet' || intent_event.type == 'click') {
+      if (intent_event.target.nodeName == 'IFRAME') {
+        targetUrl = _ga.extractParamFromUri_(intent_event.target.src, 'url');
+      }
+      var socialAction = intent_event.type + ((intent_event.type == 'click') ? '-' + intent_event.region : ''); //append the type of click to action
+      ga(_ga.getSocialActionTrackers_('twitter', socialAction, targetUrl));
+    }
+  };
+  
+  _ga.trackTwitter = function() {
+    intent_handler = function(intent_event) {
+      _ga.trackTwitterHandler_(intent_event);
+    };
+  
+    //bind twitter Click and Tweet events to Twitter tracking handler
+    twttr.events.bind('click', intent_handler);
+    twttr.events.bind('tweet', intent_handler);
+  };
+  
+  
+  _ga.extractParamFromUri_ = function(uri, paramName) {
+    if (!uri) {
+      return;
+    }
+    var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
+    var params = regex.exec(uri);
+    if (params != null) {
+      return unescape(params[1]);
+    }
+    return;
+  };    
+</script>    
+
+    <script type="text/javascript">
+  "seo ignore"; // seo hint;
+  
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));
+  
+  // Wait for the asynchronous resources to load
+  twttr.ready(function(twttr) {
+    _ga.trackTwitter(); //Google Analytics tracking
+  });
+</script>
+
+
+    <!-- vendor plugins -->
+    <script src="//d2k854fi3lpqb8.cloudfront.net/assets/vendor-5474affe5c6cfbf4cc1872e748e60f66.js" type="text/javascript"></script>
+
+    <!-- language -->
+    <script src="//d2k854fi3lpqb8.cloudfront.net/assets/i18n/en-cd5bf67e2d6ecdfdc948c25638aa55fe.js" type="text/javascript"></script>
+    <script src="//d2k854fi3lpqb8.cloudfront.net/assets/i18n/left-sidebar/en-e12ed02310020be8faeff5f943f2e1b4.js" type="text/javascript"></script>
+    <script src="//d2k854fi3lpqb8.cloudfront.net/assets/i18n/i18n-b7fb7788d0db87c7a1285ccc95fce495.js" type="text/javascript"></script>
+
+    <!-- plugin language initialization -->
+    
+    
+
+    
+    <!-- main inclusion -->
+    <script src="//d2k854fi3lpqb8.cloudfront.net/assets/app-6a4897c6aff2c6eabb3427d0b43b01cc.js" type="text/javascript"></script>
+
+    <meta content="Angela Runs Amuck" name="author" /><meta content="Social Media 101 Where the Pros Go, by Angela Runs Amuck: updated automatically with a curated selection of articles, blog posts, videos and photos." name="description" /><meta content="!" name="fragment" />  
+  <link href="//d2k854fi3lpqb8.cloudfront.net/assets/paper.view-7be62046a8d18d422a9b8325b672dd78.css" media="all" rel="stylesheet" type="text/css" />
+    
+<style id="paper_cust">
+  body{
+    
+    background-position: center top;
+    
+    
+    background-repeat: repeat;
+    
+    background-attachment: fixed;
+  }
+
+  
+
+</style>
+  
+<style id="color_scheme">
+  .cust-cs.active > a, .cust-cs.open > a, .cust-cs.cust-cs-color, .cust-cs.cust-cs-color-a a, .cust-cs.cust-cs-color-span span, .cust-cs.cust-cs-hover > a:hover, .cust-cs.cust-cs-hover-all a:hover {
+    color: #fa4b2a !important;
+  }
+  
+  .cust-cs.cust-cs-border {
+    border-color:  #fa4b2a !important;
+  }
+  .cust-cs-border.active {
+    border-color:  #fa4b2a;
+  }
+  .cust-cs.active > a b, .cust-cs.open > a b, .cust-cs.cust-cs-hover > a:hover b {
+    border-top-color: #fa4b2a !important;
+  }
+  .cust-cs.cust-cs-color.cust-cs-hover-darker:hover {
+    color: #eb2a06 !important;
+  }
+  .cust-cs.cust-cs-background {
+    background-color: #fa4b2a !important;
+  }
+  .cust-cs.cust-cs-background.cust-cs-hover-darker:hover {
+    background-color: #eb2a06 !important;
+  }
+  
+  .cust-cs.dropdown-menu li > a:hover, .cust-cs.dropdown-menu li > a:focus, .cust-cs.dropdown-submenu:hover > a {
+  background-color: #f94320;
+  background-image: -moz-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fa4b2a), to(#f93611));
+  background-image: -webkit-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -o-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: linear-gradient(to bottom, #fa4b2a, #f93611);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa4725', endColorstr='#f9320c', GradientType=0); }
+ 
+  .cust-cs.dropdown-menu .active > a, .cust-cs.dropdown-menu .active > a:hover {
+  background-color: #f94320;
+  background-image: -moz-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fa4b2a), to(#f93611));
+  background-image: -webkit-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -o-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: linear-gradient(to bottom, #fa4b2a, #f93611);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa4725', endColorstr='#f9320c', GradientType=0); }
+ 
+</style>
+  
+
+  <script src="//d2k854fi3lpqb8.cloudfront.net/assets/i18n/paper-view/en-643e463bd7131da88fb96a3a135864c1.js" type="text/javascript"></script>
+  <script src="//d2k854fi3lpqb8.cloudfront.net/assets/paper.view-6825aa96c1bfa17da4408a6c419e445c.js" type="text/javascript"></script>
+  <script type="text/javascript">
+      var addthis_config = {
+        data_track_clickback: false
+      };
+      var addthis_share = {
+        url: 'http://paper.li/AngelaRunsAmuck/1306522382' // keep
+      };
+  </script>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5135cc42378c0c26" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    OA_zones = {"mplb":14,"mptxt":16,"mpbox":15,"tpl1":4,"glob1":24};
+    OA_source = 'Technology Internet';
+  </script>
+  <script src="//ads.paper.li/delivery/spcjs.php?id=1" type="text/javascript"></script>
+  
+    <link href="//d2k854fi3lpqb8.cloudfront.net/assets/overlay/paper.subscribe-overlay-78272854bd34052918c1c7c232ebd4ff.css" media="all" rel="stylesheet" type="text/css" />
+
+    <script src="//d2k854fi3lpqb8.cloudfront.net/assets/paper.subscribe_overlay-9f2d7f98c5a50e380286fd518c5c0882.js" type="text/javascript"></script>
+
+    
+
+    <script>
+  if (!window.paperli) {
+    window.paperli = {};
+  }
+
+  paperli.origin_data = {
+    identifier: 'paper.li:main',
+    kiosk: false,
+    paper_on_domain_alias: false,
+    assets_host: 'd2k854fi3lpqb8.cloudfront.net'
+  };
+  
+</script>
+  </head>
+  <body class=" ">
+    <script>
+  "seo ignore"; // seo hint;
+  dataLayer = [];
+  
+</script>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PNLXQC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WHR7NJ');</script>
+<!-- End Google Tag Manager -->
+
+    <div id="fb-root"></div>
+<script>
+  "seo ignore"; // seo hint;
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: 362293833600,
+      version: 'v2.2',
+      status: true,
+      cookie: true,
+      xfbml: true,
+    });
+
+    // Additional initialization code here
+    $(document).trigger('fb.init');
+    
+    _ga.trackFacebook(); // Google Analytics tracking
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+</script>
+    <div class="page-wrapper">
+      <!-- WEBSITE MAIN WRAPPER -->
+      <div id="wrapper" class="page-frame">
+          <!-- Main header with sidebar controls -->
+          <div class="nav-controls">
+  <div class="controls-left">
+    <a id="ls_control" href="#" class="cnt-sidebar"><i class="fa fa-bars fa-lg"></i>
+      <span class="rollover hidden-phone" >
+        <img class="paperli-logo" alt="Paper.li" src="//d2k854fi3lpqb8.cloudfront.net/assets/logos/logo_paperli_dark-1cfc1b0d6386adfef2f13e42608f8045.png" />
+        <span class="menu">Menu</span>
+      </span>
+    </a>
+  </div>
+  
+  <div class="controls-right">
+  </div>
+</div>
+
+          
+          <!-- Custom header -->
+  
+        <!-- Sticky container for flash messages -->
+        <div id="sticky-container">
+          
+          <div id="flash-message-js"></div>
+        </div>
+    
+        <!-- Main content -->
+        
+
+
+
+
+
+
+
+
+<div id="paper" class="clearfix"></div>
+
+
+
+
+
+
+
+  
+        <!-- ALERTS AND NOTIFICATIONS AREA -->
+        <div id="alerts">
+          
+<div id="info_banner" class="m-banner m-warning">
+  <div class="message"></div>
+</div>
+          
+<div id="ie_banner" class="m-banner m-warning">
+  <a class="close hide-me pull-right" href="#"><i class="fa fa-times"></i></a>
+  <div class="message"></div>
+</div>
+
+          <noscript>
+  <div class="container">
+    <div class="hero-unit center-text margin-top-100px">
+      <h2>Social Media 101 Where the Pros Go</h2>
+      <p>Social Media 101 Where the Pros Go, by Angela Runs Amuck: updated automatically with a curated selection of articles, blog posts, videos and photos.</p>
+      <p class="muted">Please enable Javascript to correctly display the content on Paper.li</p>
+    </div>
+  </div>
+</noscript>
+        </div>
+  
+        <div id="push"></div>
+      </div>
+      <!-- Main footer -->
+      <div id="footer" class="page-row">
+        <div class="footer">
+  <div class="container">
+    <div class="row footer-row">
+      <div class="span12">
+        <div class="row">
+          <ul class="footer-menu">
+            <li><a href="/introduction.html">About Paper.li</a></li>
+            <li><a href="http://blog.paper.li" target="_blank">Blog</a></li>
+            <li><a href="http://support.paper.li" target="_blank">Help</a></li>
+            <li><a href="/stop-mentions.html">Stop mentions</a></li>
+            <li><a href="/terms.html">Terms</a></li>
+            <li><a href="/privacy.html">Privacy</a> </li>
+            
+            <li><a href="http://twitter.com/paper_li" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="http://www.facebook.com/pages/Paperli/199618576802286" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="http://plus.google.com/u/0/113796188089361585143" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="http://blog.paper.li/feed/" target="_blank"><i class="fa fa-rss"></i></a></li>
+          </ul>
+        </div>
+        <div class="row">
+          <ul class="footer-languages" >
+            <li><a href="/AngelaRunsAmuck/1306522382?lang=en" class="current">EN</a></li>
+            <li><a href="/AngelaRunsAmuck/1306522382?lang=de" class="">DE</a></li>
+            <li><a href="/AngelaRunsAmuck/1306522382?lang=fr" class="">FR</a></li>
+            <li><a href="/AngelaRunsAmuck/1306522382?lang=es" class="">ES</a></li>
+            <li><a href="/AngelaRunsAmuck/1306522382?lang=pt" class="">PT</a></li>
+            <li><a href="/AngelaRunsAmuck/1306522382?lang=ja" class="">日本語</a></li>
+          </ul>
+        </div>
+       
+        <div class="row copyright">
+          <p>© SmallRivers 2016</p>
+        </div>
+      </div>
+    </div>            
+  </div>
+ </div>
+      </div>
+    </div>
+
+    <!-- Specific page javascripts -->
+    <script type="text/javascript">
+  $(document).ready(function() {
+      paperli.event.trackPageview();
+    var options = {"paper":{"id":"f0c045d0-82ed-012f-25ad-12313d16b843","path":"\/AngelaRunsAmuck\/1306522382","external_url":null,"domain_alias":null,"title":"Social Media 101 Where the Pros Go","title_appearance":null,"styled_title":"<strong>Social Media 101<\/strong> <sup>Where the Pros Go<\/sup>","description":null,"name":"Angela Runs Amuck","publisher_id":"e41da400-82e7-012f-25ad-12313d16b843","featured_for":null,"created_at":"2011\/05\/27 18:53:02 +0000","next_edition":"2016\/02\/18 19:53:02 +0000","feed":null,"private":false,"draft_edition_id":null,"suggested_edition_id":null,"share_shown":true},"access_rights":{"editor":false,"curator":false,"owner":false},"logo":null,"ads":{},"twitter_widget":null,"mailchimp_signup_widget":false,"edition":{"id":"3b5a83d0-d0f9-11e5-b9fb-0cc47a0d164b\r","published_at":null,"archived":true},"pro":false,"subscribe_box_disabled":false,"admin_controls_event":"paper-settings-btn-shown"};
+
+    $('#paper').paper(options);
+    
+  });
+</script>
+
+  <script src="//d2k854fi3lpqb8.cloudfront.net/assets/analytics-6d4295776a1f2e1c4170045a91730753.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  "seo ignore"; // seo hint;
+  
+  try {
+    var srTracker = Paperli.Tracker.getTracker("/~api/analytics");
+  } catch( err ) {}
+  </script>
+  <script>
+      $(document).ready(function() {
+        if (navigator.cookieEnabled === false) {
+          $('#info_banner')
+            .find('.message').html('We detect your cookies are disabled. For an optimal experience on paper.li, please enable cookies in your browser.').end()
+            .slideDown();
+        }
+      });
+  </script>
+  <script>
+    $(document).ready(function(){
+      if ($.browser.msie && parseInt($.browser.version) <= 7){
+        $('#ie_banner')
+          .find('.message').html(paperli.util.translate('message.ie_not_supported')).end()
+          .show();
+        
+        $('#ie_banner .close').click(function(e){
+          e && e.preventDefault();
+          $('#ie_banner').slideUp();
+        });
+      };        
+    });
+  </script>
+
+
+    <script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
+<script type="text/javascript">
+  "seo ignore"; // seo hint;
+
+  if (_.isFunction(_.deep(window, 'twttr.conversion.trackPid')))
+    twttr.conversion.trackPid('l5nw3', { tw_sale_amount: 0, tw_order_quantity: 0 });
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l5nw3&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+  <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l5nw3&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+</noscript>
+
+  </body>
+</html>

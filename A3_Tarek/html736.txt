@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js oldie"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQYAWVNWChABVVFXAQQHUg=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+  <title>Predator vs. Alien: Sharpton RIPS Sanders | Daily Wire</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name='parsely-metadata' content='{"nid":"3314","image_style_urls":{"169small":"http://www.dailywire.com/sites/default/files/styles/169small/public/uploads/2016/02/sanders_sharpton.jpg?itok=BmN4xFpB","169medium":"http://www.dailywire.com/sites/default/files/styles/169medium/public/uploads/2016/02/sanders_sharpton.jpg?itok=nXAwbm3e","169large":"http://www.dailywire.com/sites/default/files/styles/169large/public/uploads/2016/02/sanders_sharpton.jpg?itok=9MIw8mnk","11medium":"http://www.dailywire.com/sites/default/files/styles/11medium/public/uploads/2016/02/sanders_sharpton.jpg?itok=aC6Y8Adz","11small":"http://www.dailywire.com/sites/default/files/styles/11small/public/uploads/2016/02/sanders_sharpton.jpg?itok=B0_JIyCu"},"exclusive":"0"}'><link rel="shortcut icon" href="http://www.dailywire.com/sites/all/themes/dailywire/favicon.ico" type="image/vnd.microsoft.icon" />
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"NewsArticle","articleId":"3314","headline":" Predator vs. Alien: Sharpton RIPS Sanders","url":"http://www.dailywire.com/news/3314/predator-vs-alien-sharpton-rips-sanders-robert-kraychik","thumbnailUrl":"http://www.dailywire.com/sites/default/files/uploads/2016/02/sanders_sharpton.jpg","dateCreated":"2016-02-11T17:56:18Z","articleSection":"News","creator":["Robert Kraychik"],"keywords":[]}</script><meta name="description" content="Professional racial agitator Al Sharpton seemed to challenge Senator Bernie Sanders to be more overt in his demagoguery around “racial justice.” Joining MSNBC’s Morning Joe on Thursday, Sharpton said that Sanders was insufficiently direct in addressing the “race element” as it pertains to “income inequality.”&amp;#13; &amp;#13;  &amp;#13; &amp;#13; Recalling his breakfast with Sanders on Wednesday, Sharpton recalled their discussion." />
+<meta name="abstract" content="Professional racial agitator Al Sharpton seemed to challenge Senator Bernie Sanders to be more overt in his demagoguery around “racial justice.” Joining MSNBC’s Morning Joe on Thursday, Sharpton said that Sanders was insufficiently direct in addressing the “race element” as it pertains to “income inequality.”&amp;#13; &amp;#13;  &amp;#13; &amp;#13; Recalling his breakfast with Sanders on Wednesday, Sharpton recalled their discussion." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://www.dailywire.com/news/3314/predator-vs-alien-sharpton-rips-sanders-robert-kraychik" />
+<link rel="shortlink" href="http://www.dailywire.com/node/3314" />
+<meta property="og:site_name" content="Daily Wire" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.dailywire.com/news/3314/predator-vs-alien-sharpton-rips-sanders-robert-kraychik" />
+<meta property="og:title" content="Predator vs. Alien: Sharpton RIPS Sanders" />
+<meta property="og:description" content="Professional racial agitator Al Sharpton seemed to challenge Senator Bernie Sanders to be more overt in his demagoguery around “racial justice.” Joining MSNBC’s Morning Joe on Thursday, Sharpton said that Sanders was insufficiently direct in addressing the “race element” as it pertains to “income inequality.”&amp;#13; &amp;#13;  &amp;#13; &amp;#13; Recalling his breakfast with Sanders on Wednesday, Sharpton recalled their discussion." />
+<meta property="og:updated_time" content="2016-02-11T09:56:18-08:00" />
+<meta property="og:image" content="http://www.dailywire.com/sites/default/files/styles/169large/public/uploads/2016/02/sanders_sharpton.jpg?itok=9MIw8mnk" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="900" />
+<meta property="article:section" content="News" />
+<meta property="article:published_time" content="2016-02-11T09:56:18-08:00" />
+<meta property="article:modified_time" content="2016-02-11T09:56:18-08:00" />
+  <meta property="fb:admins" content="1392721063" />
+  <link rel="icon" type="image/png" href="/sites/all/themes/dailywire/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/sites/all/themes/dailywire/favicon-16x16.png" sizes="16x16" />
+  <link type="text/css" rel="stylesheet" href="http://www.dailywire.com/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.dailywire.com/sites/default/files/css/css_FrHLNtCrMn2eyjzF453QlHIh2iagd37DmRlfscXQB_Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.dailywire.com/sites/default/files/css/css_SVxythDyWkD38lM8Fqr32eBhGnys5q6U8eRRxvPu7a4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.dailywire.com/sites/default/files/css/css_raf538iRGBxvKvFy-QzqAwffXbwuBYF5l56sajdSjwE.css" media="all" />
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/2.1/jquery.min.js'>\x3C/script>")
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://www.dailywire.com/sites/default/files/js/js_VQDZOy1hA1tFrT4zcPGKpswkTr0fecW46haXB9DyqBk.js"></script>
+<script type="text/javascript" src="http://www.dailywire.com/sites/default/files/js/js_H7q2xORKmR9AN8Qx5spKEIBp7R_wG2apAswJoCUZY7I.js"></script>
+<script type="text/javascript" src="http://www.dailywire.com/sites/default/files/js/js_ptR1ZjZnexk8gj2Q9mIgM2M_6ztR4ckK-i_6gzFmlNM.js"></script>
+<script type="text/javascript" src="http://www.dailywire.com/sites/default/files/js/js_tzEGTRyjbSNo4GS4Eh6_ZJb5BgaDvQF9UshkdxwThp0.js"></script>
+<script type="text/javascript" src="http://www.dailywire.com/sites/default/files/js/js_x_mfrDwBzbiCTG7TRheQgUCLra_up1t-bJZz7anaDLA.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"dailywire","theme_token":"djhL0RayEqZfZF_U8BNyDL9yjzQzk_QrjzFPCioKyM4","js":{"\/\/s7.addthis.com\/js\/300\/addthis_widget.js#pubid=ra-55c650b9a63c0ea4":1,"sites\/all\/modules\/custom\/dailywire_parsely\/post_detail.js":1,"sites\/all\/modules\/custom\/dailywire_parsely\/recommendations.js":1,"sites\/all\/modules\/custom\/dailywire_parsely\/hotwire.js":1,"sites\/all\/themes\/dailywire\/js\/owlcarousel\/owl.carousel.js":1,"\/\/platform.twitter.com\/widgets.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/2.1.4\/jquery.min.js":1,"0":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/fitvids\/jquery.fitvids.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/fitvids\/fitvids.js":1,"sites\/all\/modules\/contrib\/disqus\/disqus.js":1,"sites\/all\/themes\/dailywire\/js\/modernizr.min.js":1,"sites\/all\/themes\/dailywire\/js\/tooltipster\/jquery.tooltipster.min.js":1,"sites\/all\/themes\/dailywire\/js\/jquery-watch.min.js":1,"sites\/all\/themes\/dailywire\/js\/responsive.js":1,"sites\/all\/themes\/dailywire\/js\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/custom\/dailywire_admin_menu\/admin_menu.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/fitvids\/fitvids.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/genpass\/genpass.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/default\/files\/honeypot\/honeypot.css":1,"sites\/all\/modules\/contrib\/field_group\/field_group.field_ui.css":1,"sites\/all\/themes\/dailywire\/system.menus.css":1,"sites\/all\/themes\/dailywire\/system.messages.css":1,"sites\/all\/themes\/dailywire\/system.theme.css":1,"sites\/all\/themes\/dailywire\/js\/owlcarousel\/assets\/owl.carousel.css":1,"sites\/all\/themes\/dailywire\/js\/owlcarousel\/assets\/owl.theme.default.css":1,"sites\/all\/themes\/dailywire\/js\/tooltipster\/css\/tooltipster.css":1,"sites\/all\/themes\/dailywire\/css\/styles.css":1,"sites\/all\/themes\/dailywire\/css\/dev.css":1}},"disqus":{"domain":"thedailywire","url":"http:\/\/www.dailywire.com\/news\/3314\/predator-vs-alien-sharpton-rips-sanders-robert-kraychik","title":" Predator vs. Alien: Sharpton RIPS Sanders","identifier":"node\/3314"},"parsely":{"site":"dailywire.com"},"fitvids":{"custom_domains":["iframe[src^=\u0027https:\/\/w.soundcloud.com\u0027]","iframe[src^=\u0027\/\/player.theplatform.com\u0027]","iframe[src^=\u0027\/\/www.funnyordie.com\u0027]","iframe[src^=\u0027http:\/\/www.dailymail.co.uk\u0027]","iframe[src^=\u0027https:\/\/s.embed.live.huffingtonpost.com\u0027]","iframe[src^=\u0027http:\/\/livestream.com\u0027]","iframe[src^=\u0027https:\/\/vid.me\u0027]","iframe[src^=\u0027http:\/\/www.liveleak.com\u0027]"],"selectors":["body"],"simplifymarkup":1},"urlIsAjaxTrusted":{"https:\/\/www.dailywire.com\/user\/register":true},"disqusComments":"thedailywire","clientsideValidation":{"general":{"months":{"January":1,"Jan":1,"February":2,"Feb":2,"March":3,"Mar":3,"April":4,"Apr":4,"May":5,"June":6,"Jun":6,"July":7,"Jul":7,"August":8,"Aug":8,"September":9,"Sep":9,"October":10,"Oct":10,"November":11,"Nov":11,"December":12,"Dec":12}}}});
+//--><!]]>
+</script>
+  <!-- Taboola Head -->
+  <script type="text/javascript">
+    window._taboola = window._taboola || []; _taboola.push({article:'auto'});
+    !function (e, f, u) {
+      e.async = 1;
+      e.src = u;
+      f.parentNode.insertBefore(e, f);
+    }(document.createElement('script'),
+    document.getElementsByTagName('script')[0],
+    '//cdn.taboola.com/libtrc/dailywire/loader.js');
+  </script>
+  <!-- End Taboola Head -->
+  <!--[if lt IE 9]>
+  <script src="/sites/all/themes/dailywire/js/respond.js"></script>
+  <script src="http://html5shiv-printshiv.googlecode.com/svn/trunk/html5shiv-printshiv.js"></script>
+  <![endif]-->
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-3314 node-type-article article-category-news" >
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MMVZXC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MMVZXC');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- End Facebook SDK -->
+  <!-- AdSupply -->
+  <script data-cfasync="false" type="text/javascript">(function(s,o,l,v,e,d){if(s[o]==null&&s[l+e]){s[o]="loading";s[l+e](d,l=function(){s[o]="complete";s[v+e](d,l,!1)},!1)}})(document,"readyState","add","remove","EventListener","DOMContentLoaded");(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="//cdn.engine.4dsply.com/Scripts/infinity.js.aspx?guid=1307c901-7748-4f3a-8b41-14333afb0858";s.id="infinity";s.setAttribute("data-guid","1307c901-7748-4f3a-8b41-14333afb0858");s.setAttribute("data-version","async");var e=document.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e)})();</script>
+  <!-- End AdSupply -->
+    
+<header id="header">
+
+                  <h1 id="site-name">
+          <a href="/" title="Home" rel="home"><span>Daily Wire</span></a>
+        </h1>
+              
+    
+
+<nav id="main-menu"   role="navigation" tabindex="-1">
+  <a href="#main-menu" id="main-menu-toggle"><span></span></a>
+    <h2>Main Menu</h2>
+    <div class="menu-block-wrapper menu-block-1 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-217"><a href="/" title="">Home</a></li>
+<li class="leaf menu-mlid-676"><a href="/news" title="">News</a></li>
+<li class="leaf menu-mlid-672"><a href="/videos" title="">Videos</a></li>
+<li class="leaf menu-mlid-679"><a href="/podcasts" title="">Podcasts</a></li>
+<li class="leaf menu-mlid-662"><a href="/authors" title="">Authors</a></li>
+<li class="leaf menu-mlid-777"><a href="/search/site" title="">Search</a></li>
+<li class="last leaf menu-mlid-681"><a href="/subscribe" title="Become a Daily Wire Subscriber">Subscribe</a></li>
+</ul></div>
+</nav>
+<div id="block-system-user-menu" class="block block-system block-menu">
+      <h2>User menu</h2>
+      <ul class="menu"><li class="first last leaf"><a href="/user/login" title="">Login</a></li>
+</ul></div>
+<div id="block-block-2" class="block block-block">
+         <div class="fb-like" data-href="https://www.facebook.com/DailyWire/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div></div>
+<div id="block-bean-header-ad" class="block block-bean block-bean-image-advertisment">
+        <div class="entity entity-bean bean-image-advertisment">
+      <div class="field-code">
+            <script type='text/javascript'>
+<!--//<![CDATA[
+   document.MAX_ct0 ='';
+   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("zoneid=285904");document.write("&amp;nodis=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location).substring(0,1600));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   
+   document.write ("'></scr"+"ipt>");
+//]]>--></script>    </div>
+  </div>
+</div>
+
+</header>
+
+<section id="main">
+
+    
+  <div id="content">
+              <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+        <div class="dailywire-article">
+  <div class="left">
+    <article  class="ds-1col node node-article node-promoted view-mode-full clearfix">
+
+  
+  <div class="field-title">
+            <h1> Predator vs. Alien: Sharpton RIPS Sanders</h1>    </div>
+<div class="field-video">
+            <div id="file-4636" class="file file-video file-video-oembed">
+
+        <h2 class="element-invisible"><a href="/file/al-sharpton-meeting-bernie-sanders-2-11-2016">Al Sharpton on meeting Bernie Sanders; 2-11-2016</a></h2>
+    
+  
+  <div class="content">
+    
+<iframe width="800" height="450" src="https://www.youtube.com/embed/r2wQy4g9AmQ?feature=oembed" frameborder="0" allowfullscreen></iframe>  </div>
+
+  
+</div>
+    </div>
+<div class="field-authors inline">
+      <div class="field-label">By:</div>
+            <a href="/authors/robert-kraychik">Robert Kraychik</a>    </div>
+<div class="field-published-on">
+            February 11, 2016    </div>
+<div class="field-share-bar">
+            <div class="addthis_toolbox">
+<a class="addthis_button_facebook"><i class="fa fa-facebook"></i></a>
+<a class="addthis_button_twitter"><i class="fa fa-twitter"></i></a>
+<a class="addthis_button_more"><i class="fa fa-plus-square"></i></a>
+<a class="comment-count" style="default;"><i class="fa fa-comment"></i></a><span><a href="http://www.dailywire.com/news/3314/predator-vs-alien-sharpton-rips-sanders-robert-kraychik#disqus_thread" data-disqus-identifier="node/3314"></a></span>
+<a href="#"  style="default;" class="views"><i class="fa fa-eye"></i></span>
+<a class="addthis_button_email"><i class="fa fa-envelope"></i></a>
+<a class="addthis_button_print"><i class="fa fa-print"></i></a>
+</div>
+<script>
+if (/[?]utm/.test(location.href)) {
+    var addthis_share = {
+        url: location.href + "-share",
+        title: " Predator vs. Alien: Sharpton RIPS Sanders"
+    }
+}
+</script>    </div>
+<div class="field-body">
+            <p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Professional racial agitator Al Sharpton seemed to challenge Senator Bernie Sanders to be more overt in his demagoguery around “racial justice.” Joining MSNBC’s Morning Joe on Thursday, Sharpton said that Sanders was insufficiently direct in addressing the “race element” as it pertains to “income inequality.”</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Recalling his breakfast with Sanders on Wednesday, Sharpton recalled their discussion.</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">“We gotta deal with income inequality, and wages, yeah fine, but what about the race element of that?” said Sharpton, “There’s racism involved.”</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">“What did [Sanders] tell you?” asked Joe Scarborough.</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">“He did not address that directly, that’s what I was pressing him on. Are you gonna talk about affirmative action? are you gonna talk about racial disparities in terms of promotions and access to capital? And these are the things to discuss with him,” replied Sharpton.</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Sharpton will be meeting with Hillary Clinton next Tuesday.</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Declaring that the Democratic presidential candidates cannot take “the black vote” for granted in competition with one another, Sharpton said, “the vote is earned.”</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Both Clinton and Sanders </span><a href="http://www.dailywire.com/news/2154/blacklivesmatter-clinton-and-sanders-trash-america-robert-kraychik">have expressed support</a> for anti-American racial agitation movements such as Black Lives Matter. Hyping the narrative framing blacks as an oppressed class of people in America, both presidential hopefuls seek to benefit from the left-wing cultivation of perceptions of grievance among blacks.</p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Left-wing media has framed black Democrats in the south as a “firewall” for Clinton, seemingly admitting that Sanders’s Brooklyn accent and Jewish ethnicity will be off-putting to this crucial demographic of Democratic support.</span></p>
+
+
+
+<p dir="ltr"><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Attempting to outflank one another on the angle of racial grievance-mongering, both Clinton and Sanders have </span><a href="http://www.dailywire.com/news/2002/democrats-endorse-blacklivesmatter-chase-phantoms-robert-kraychik">chased phantoms</a> of “systemic racism” and “white privilege.”</p>
+
+<p><br />
+<em><span id="docs-internal-guid-82a90ec4-d175-51fe-88c0-49dc67815981">Follow Robert Kraychik on </span><a href="https://twitter.com/kr3ch3k">Twitter</a>.</em></p>
+    </div>
+<div class="field-addthis-compact">
+            <div class="addthis_toolbox"><a class="addthis_button_facebook" title="Facebook" href="#"><strong>Share this on</strong> <i class="fa fa-facebook-official"></i></a> </div>
+<div class="next-article"><a href="#"><strong>Next Article</strong> <i class="fa fa-chevron-right"></i></a></div>
+    </div>
+</article>
+
+<div id="block-bean-in-content-ad" class="block block-bean block-bean-image-advertisment">
+        <div class="entity entity-bean bean-image-advertisment">
+      <div class="field-code">
+            <!-- dw_article_body -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5818549255355271"
+     data-ad-slot="6741349941"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>    </div>
+  </div>
+</div>
+<div  id="rv-smallvid-mobile"  >
+  
+      
+  
+  <div id="video622697982345" style="width:300px;height:250px;">
+<script src="http://p.algovid.com/player/tlvplayer.js?p=62269798&sid=dailywire_1&cb=2345&d=dailywire.com" type="text/javascript"></script>
+<noscript><img src="http://p.algovid.com/ppx/error?en=1&em=nojs&p=62269798&sid=dailywire_1&cb=2345&domain=dailywire.com" width="1" height="1" /></noscript>
+</div>
+  
+  </div>
+<div id="block-dailywire-parsely-recommendations" class="block block-dailywire-parsely">
+        <div id="in-article-related-content"><h3>Recommended for You</h3><ul></ul></div></div>
+<div   >
+  
+      
+  
+  <div id="criteo-native-mobile">
+  <div class="outer">
+    <div class="inner">
+      <script type='text/javascript'>
+        <!--//<![CDATA[
+        document.MAX_ct0 = '';
+        var m3_u = (location.protocol == 'https:' ? 'https://cas.criteo.com/delivery/ajs.php?' : 'http://cas.criteo.com/delivery/ajs.php?');
+        var m3_r = Math.floor(Math.random() * 99999999999);
+        document.write("<scr" + "ipt type='text/javascript' src='" + m3_u);
+        document.write("zoneid=367905");
+        document.write("&amp;nodis=1");
+        document.write('&amp;cb=' + m3_r);
+        if (document.MAX_used != ',') document.write("&amp;exclude=" + document.MAX_used);
+        document.write(document.charset ? '&amp;charset=' + document.charset : (document.characterSet ? '&amp;charset=' + document.characterSet : ''));
+        document.write("&amp;loc=" + escape(window.location).substring(0, 1600));
+        if (document.context) document.write("&context=" + escape(document.context));
+        if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0, 4) == 'http')) {
+          document.write("&amp;ct0=" + escape(document.MAX_ct0));
+        }
+        if (document.mmm_fo) document.write("&amp;mmm_fo=1");
+        document.write("'></scr" + "ipt>");
+        //]]>-->
+      </script>
+      </script>
+    </div>
+  </div>
+</div>
+
+<div id="criteo-native-desktop">
+  <div class="outer">
+    <div class="inner">
+      <script type='text/javascript'>
+        <!--//<![CDATA[
+        document.MAX_ct0 = '';
+        var m3_u = (location.protocol == 'https:' ? 'https://cas.criteo.com/delivery/ajs.php?' : 'http://cas.criteo.com/delivery/ajs.php?');
+        var m3_r = Math.floor(Math.random() * 99999999999);
+        document.write("<scr" + "ipt type='text/javascript' src='" + m3_u);
+        document.write("zoneid=367903");
+        document.write("&amp;nodis=1");
+        document.write('&amp;cb=' + m3_r);
+        if (document.MAX_used != ',') document.write("&amp;exclude=" + document.MAX_used);
+        document.write(document.charset ? '&amp;charset=' + document.charset : (document.characterSet ? '&amp;charset=' + document.characterSet : ''));
+        document.write("&amp;loc=" + escape(window.location).substring(0, 1600));
+        if (document.context) document.write("&context=" + escape(document.context));
+        if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0, 4) == 'http')) {
+          document.write("&amp;ct0=" + escape(document.MAX_ct0));
+        }
+        if (document.mmm_fo) document.write("&amp;mmm_fo=1");
+        document.write("'></scr" + "ipt>");
+        //]]>-->
+      </script>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  #criteo-native-mobile {
+    text-align: center;
+    border-top: 1px solid #c3c3c3;
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+  #criteo-native-desktop {
+    border: 1px solid #c3c3c3;
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    border-width: 1px 0;
+  }
+  #criteo-native-mobile.hide,
+  #criteo-native-desktop.hide {
+    /* display: none !important; */
+  }
+  div#criteo-native-desktop .outer {
+    line-height: 0;
+    position: relative;
+    display: table;
+    margin: 50px auto 40px;
+  }
+  div#criteo-native-desktop .inner:after,
+  div#criteo-native-desktop .inner:before,
+  div#criteo-native-desktop .outer:after,
+  div#criteo-native-desktop .outer:before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+  }
+  div#criteo-native-desktop .outer:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+  div#criteo-native-desktop .outer:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  div#criteo-native-desktop .inner:before {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+  div#criteo-native-desktop .inner:after {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 3px;
+  }
+  @media (max-width: 47.99em) {
+    #criteo-native-mobile {
+      display: block;
+    }
+    #criteo-native-desktop {
+      display: none;
+    }
+  }
+  @media (min-width: 48em) {
+    #criteo-native-mobile {
+      display: none;
+    }
+    #criteo-native-desktop {
+      display: block;
+    }
+  }
+</style>
+
+<script>
+(function ($) {
+  "use strict";
+  if (!$('#criteo-native-desktop').find('iframe').length) {
+   $('#criteo-native-desktop').addClass('hide');
+  }
+  if (!$('#criteo-native-mobile').find('iframe').length) {
+   $('#criteo-native-mobile').addClass('hide');
+  }
+})(jQuery);
+</script>
+  
+  </div>
+<div id="taboola-below-article-thumbnails"></div>
+<script type="text/javascript">
+  window._taboola = window._taboola || [];
+  _taboola.push({
+    mode: 'thumbnails-a',
+    container: 'taboola-below-article-thumbnails',
+    placement: 'Below Article Thumbnails',
+    target_type: 'mix'
+  });
+</script><div id="block-disqus-disqus-comments" class="block block-disqus">
+      <div id="disqus_toggle">What's <strong>your reaction?</strong> <a class="btn">View Comments</a></div>  <div id="disqus_thread"><noscript><p><a href="http://thedailywire.disqus.com/?url=http%3A%2F%2Fwww.dailywire.com%2Fnews%2F3314%2Fpredator-vs-alien-sharpton-rips-sanders-robert-kraychik">View the discussion thread.</a></p></noscript></div></div>
+  </div>
+  <div class="right">
+    <div id="block-bean-sidebar-ad1" class="block block-bean block-bean-image-advertisment">
+        <div class="entity entity-bean bean-image-advertisment">
+      <div class="field-code">
+            <script type='text/javascript'>
+<!--//<![CDATA[
+   document.MAX_ct0 ='';
+   var m3_u = (location.protocol=='https:'?'https://cas.criteo.com/delivery/ajs.php?':'http://cas.criteo.com/delivery/ajs.php?');
+   var m3_r = Math.floor(Math.random()*99999999999);
+   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+   document.write ("zoneid=285910");document.write("&amp;nodis=1");
+   document.write ('&amp;cb=' + m3_r);
+   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+   document.write ("&amp;loc=" + escape(window.location).substring(0,1600));
+   if (document.context) document.write ("&context=" + escape(document.context));
+   if ((typeof(document.MAX_ct0) != 'undefined') && (document.MAX_ct0.substring(0,4) == 'http')) {
+       document.write ("&amp;ct0=" + escape(document.MAX_ct0));
+   }
+   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+   document.write ("'></scr"+"ipt>");
+//]]>--></script>    </div>
+  </div>
+</div>
+<div id="join-the-mailing-list">
+<h5><strong>Hot Off The Wire</strong> <br> <small>Daily Wire Email Updates</small></h5>
+<a href="/join-mailing-list" class="btn">Join Mailing List</a>
+</div><div  id="rv-smallvid"  >
+  
+      
+  
+  <div id="video648554031234" style="width:300px;height:250px;">
+<script src="http://p.algovid.com/player/tlvplayer.js?p=64855403&sid=dailywire&cb=1234&d=dailywire.com&w=300&h=250" type="text/javascript"></script>
+<noscript><img src=“http://p.algovid.com/ppx/error?en=1&em=nojs&p=64855403&sid=dailywire&cb=1234&domain=dailywire.com” width="1" height="1" /></noscript>
+</div>
+  
+  </div>
+<div id="block-dailywire-parsely-hotwire" class="block block-dailywire-parsely">
+      <h2>Hot Wire</h2>
+      <ul class="owl-carousel hotwire"></ul></div>
+  </div>
+  </div>
+</div>
+</div>
+  </div>
+    </div>
+
+
+</section>
+
+<footer id="footer">
+      <div class="region region-footer-1">
+    <div id="block-views-podcast-shows-block-1" class="block block-views">
+      <h2>Podcasts</h2>
+      <div class="view view-podcast-shows view-id-podcast_shows view-display-id-block_1 view-dom-id-3976862c18be056fcd8a89a1c6ee438d">
+        
+  
+  
+      <div class="view-content">
+          <div class="podcast-show">
+        
+          <div class="img"><a href="/podcasts/show/ben-shapiro-show"><img src="http://www.dailywire.com/sites/default/files/styles/11medium/public/uploads/2015/09/podcast-ben-shapiro-show.jpg?itok=LdznjsWP" width="160" height="160" alt="The Ben Shapiro Show" /></a></div>
+<div class="episodes">
+<h4>The Ben Shapiro Show</h4>
+<ul class="podcast-show-episode-titles" data-show="9"></ul>
+</div>      </div>
+      <div class="podcast-show">
+        
+          <div class="img"><a href="/podcasts/show/andrew-klavan-show"><img src="http://www.dailywire.com/sites/default/files/styles/11medium/public/uploads/2015/09/podcast-andrew-klavan-show-square.jpg?itok=_gWyhyry" width="160" height="160" alt="The Andrew Klavan Show" /></a></div>
+<div class="episodes">
+<h4>The Andrew Klavan Show</h4>
+<ul class="podcast-show-episode-titles" data-show="116"></ul>
+</div>      </div>
+      </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+<div id="block-dailywire-subscriptions-subscribe-closer" class="block block-dailywire-subscriptions">
+        <form class="user-info-from-cookie" enctype="multipart/form-data" action="https://www.dailywire.com/user/register" method="post" id="user-register-form" accept-charset="UTF-8"><div><input type="hidden" name="form_build_id" value="form-1HoP3bsl9dwE1-Oc1TEikrCmWX5xQ69IdWlJuh1dO40" />
+<input type="hidden" name="form_id" value="user_register_form" />
+<h2>Get Exclusive Video Podcasts</h2><h3>Start your FREE 30-day trial</h3><div id="edit-account" class="form-wrapper"><input class="username" type="hidden" name="name" value="email_registration_eAW8Em3gYo" />
+<div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input placeholder="your email address" type="text" id="edit-mail" name="mail" value="" size="60" maxlength="254" class="form-text required" />
+</div>
+</div><div class="url-textfield"><div class="form-item form-type-textfield form-item-url">
+  <label for="edit-url">Leave this field blank </label>
+ <input autocomplete="off" type="text" id="edit-url" name="url" value="" size="20" maxlength="128" class="form-text" />
+</div>
+</div><div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Get Started" class="form-submit" /></div><p class="login">Already a Member? <a href="/user/login">Login Now</a></p></div></form></div>
+  </div>
+      <div class="region region-footer-2">
+    <div id="block-menu-block-2" class="block block-menu-block">
+        <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf menu-mlid-217"><a href="/" title="">Home</a></li>
+<li class="leaf menu-mlid-676"><a href="/news" title="">News</a></li>
+<li class="leaf menu-mlid-672"><a href="/videos" title="">Videos</a></li>
+<li class="leaf menu-mlid-679"><a href="/podcasts" title="">Podcasts</a></li>
+<li class="leaf menu-mlid-662"><a href="/authors" title="">Authors</a></li>
+<li class="leaf menu-mlid-777"><a href="/search/site" title="">Search</a></li>
+<li class="last leaf menu-mlid-681"><a href="/subscribe" title="Become a Daily Wire Subscriber">Subscribe</a></li>
+</ul></div>
+</div>
+<div id="block-menu-menu-footer-menu" class="block block-menu">
+        <ul class="menu"><li class="first leaf"><a href="https://www.facebook.com/DailyWire" title="">Facebook</a></li>
+<li class="leaf"><a href="https://www.youtube.com/channel/UCaeO5vkdj5xOQHp4UmIN6dw" title="">YouTube</a></li>
+<li class="leaf"><a href="/rss.xml" title="">RSS Feed</a></li>
+<li class="last leaf"><a href="/join-mailing-list" title="">Join Mailing List</a></li>
+</ul></div>
+<div id="block-block-1" class="block block-block">
+        <div class="left">
+  &copy; COPYRIGHT 2015, THE DAILY WIRE
+</div>
+<div class="middle">
+  <a href="#">PRIVACY POLICY</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#">TERMS OF USE</a>
+</div>
+<div class="right">
+  <a href="#top">BACK TO TOP</a>
+</div></div>
+  </div>
+</footer>
+    <div class="region region-page-bottom">
+    <!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="dailywire.com"></div>
+</div>
+<script>
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+    e=d.getElementById(i), r=d.getElementById(p+"-root"),
+    u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+    :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include: Standard -->  </div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55c650b9a63c0ea4"></script>
+<script type="text/javascript" src="http://www.dailywire.com/sites/default/files/js/js__L36zgjxaujsPtyLTBRw6-25kiVYdlLa41elEHbXe9M.js"></script>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+  <!-- Google Adsense -->
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- End Google Adsense -->
+  <!-- Taboola Footer -->
+  <script type="text/javascript">
+    window._taboola = window._taboola || []; _taboola.push({flush: true}); window._ttf = window._ttf || [];
+    _ttf.push({
+      pid          : 45241
+      ,lang        : "en"
+      ,slot        : '.node-article .field-body > p'
+      ,format      : "inread"
+      ,components  : { skip: {delay : 0}}
+      ,css         : "margin: 15px auto; max-width: 640px"
+    });
+  </script>
+  <!-- End Taboola Footer -->
+  <!-- Teads -->
+  <script type="text/javascript">
+    (function (d) {
+      var js, s = d.getElementsByTagName('script')[0];
+      js = d.createElement('script');
+      js.async = true;
+      js.src = '//cdn.teads.tv/media/format.js';
+      s.parentNode.insertBefore(js, s);
+    })(window.document);
+  </script>
+  <!-- End Teads -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"7dd9c83691","applicationID":"11056504","transactionName":"ZlFVNhEDCkcFUUNfCV8bdgEXCwtaS0JWUQNuWVYMAgUBRjtcWFIDbkJeBxQ9FFUDVw==","queueTime":0,"applicationTime":296,"ttGuid":"","agentToken":"","atts":"ShZWQFkZGUk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

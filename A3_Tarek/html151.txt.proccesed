@@ -1,0 +1,401 @@
+   #[1]Freakcode » Feed [2]Freakcode » RSS de los comentarios [3]Freakcode
+   » Python para rellenar formularios automáticamente RSS de los
+   comentarios [4]alternate [5]alternate [6]Freakcode » Feed [7]Freakcode
+   » RSS de los comentarios [8]Freakcode » Python para rellenar
+   formularios automáticamente RSS de los comentarios [9]alternate
+   [10]alternate
+
+   [11]Skip to content
+     * [12]Inicio
+     * [13]Preguntas
+     * [14]Acerca de Nosotros
+
+   [15]Top Menu
+   [16]Freakcode
+     * [17]Inicio
+     * [18]Programación
+     * [19]Friki
+     * [20]Tips
+     * [21]Noticias
+     * [22]sysadmin
+
+   [23]Main Menu
+   ____________________ Search
+
+Python para rellenar formularios automáticamente
+
+   [24]26 julio, 201528 julio, 2015[25]Victor Villalobos
+   pythbook pythbook
+
+   Python es un lenguaje maravilloso para casi todo, es flexible y limpio,
+   simple de entender y poderosísimo. La idea es enseñarles un poco como
+   hacer web scrapping con el. Lo anterior es una simple forma bonita de
+   decir "automatización de relleno de formularios web", y de verdad que
+   si es mas bonita. Wikipedia es tu amiga y te lo define mejor:
+
+     Web scraping es una técnica utilizada mediante programas de software
+     para extraer información de sitios web. Usualmente, estos programas
+     simulan la navegación de un humano en la World Wide Web ya sea
+     utilizando el protocolo HTTP manualmente, o incrustando un navegador
+     en una aplicación.
+
+     El web scraping está muy relacionado con la indexación de la web, la
+     cual indexa la información de la web utilizando un robot y es una
+     técnica universal adoptada por la mayoría de los motores de
+     búsqueda. Sin embargo, el web scraping se enfoca más en la
+     transformación de datos sin estructura en la web (como el formato
+     HTML) en datos estructurados que pueden ser almacenados y analizados
+     en una base de datos central...
+
+     [26]Wikipedia ~ porque no hay nada que te haga mejor las tareas.
+
+   ¿Para qué alguien quisiera hacer esto? Motivos hay tantos como ideas en
+   el mundo, [DEL: yo lo uso para spammear sitios y ganar plata(?) :DEL]
+   ... cada quien verá el por qué. ¿Por qué lo estamos enseñando? ¡Porque
+   siempre es bueno aprender algo nuevo!
+
+Take me to your code!
+
+pip install mechanize
+
+# Nuestro código quedaría asi:
+
+import mechanize
+br = mechanize.Browser()
+br.open("http://freakcode.info/formulario_estupido.php")
+br.select_form(nr=1)
+br.form["titulo"]="Pongamos algún titulo lindo"
+br.form["descripcion"]="Y acá pongamos todo lo que queremos que valla acá"
+br.submit()
+print br.response().read()
+
+
+   Vamos por pasos. Por supuesto lo primero que debemos hacer es  importar
+   la librería recién instalada:
+import mechanize
+
+# Creamos el objeto browser.
+
+br = mechanize.Browser()
+
+# Con este invocamos el método open del objeto browser que creamos anteriormente
+
+br.open("http://freakcode.info/formulario_estupido.php")
+
+# Seleccionamos el formulario.
+
+br.select_form(nr=1)
+
+# Ahora lo importante, rellenamos cada campo del formulario usando el form que s
+elecionamos anteriormente.
+
+br.form["titulo"]="Pongamos algún titulo lindo"
+br.form["descripcion"]="Y acá pongamos todo lo que queremos que valla acá"
+
+# Y luego ejecutamos el submit:
+
+br.submit()
+
+# Si necesitan leer la respuesta usamos el método read de la siguiente forma.
+
+print br.response().read()
+
+   Y básicamente ya está. Esto es solo el principio, ¡Pueden aprender más
+   si nos siguen!
+     * [27]About
+     * [28]Latest Posts
+
+   [29]Victor Villalobos Victor Villalobos
+   Sigueme
+
+[30]Victor Villalobos
+
+   Developer at [31]Firesoft
+   Developer de corazón, amante de la tecnología en general, en estos
+   momentos jefe de la creciente orquesta llamada Firesoft,adicto al
+   anime, ex-player de todo y por ultimo afortunado de seruno de los tipos
+   raros que fundaron esta web.
+   [32]Victor Villalobos Victor Villalobos
+   Sigueme
+
+Latest posts by Victor Villalobos ([33]see all)
+
+     * [34]Python para rellenar formularios automáticamente - 26 julio,
+       2015
+
+   Valoracion:
+
+Compártelo:
+
+     * [35]Haz clic para compartir en Twitter (Se abre en una ventana
+       nueva)
+     * [36]Comparte en Facebook (Se abre en una ventana nueva)
+     * [37]Haz clic para compartir en Google+ (Se abre en una ventana
+       nueva)
+     * [38]Haz clic para compartir en Tumblr (Se abre en una ventana
+       nueva)
+     * [39]Haz clic para compartir en Reddit (Se abre en una ventana
+       nueva)
+     * [40]Pincha para compartir en Pocket (Se abre en una ventana nueva)
+     * [41]Haz clic para compartir en Pinterest (Se abre en una ventana
+       nueva)
+     * [42]Haz clic aquí para compartir en LinkedIn (Se abre en una
+       ventana nueva)
+     * [43]Hac clic para enviar por correo electrónico a un amigo (Se abre
+       en una ventana nueva)
+     *
+
+Relacionado
+
+   Posted Under
+   [44]Programación
+   Tagged
+   [45]automático [46]bookscrapping [47]code [48]formulario [49]mechanize
+   [50]python
+
+Post navigation
+
+   [51]Git es cool, ¡Y te decimos por qué!
+   [52]Javascript como primer lenguaje
+     * Gonnza Cabrera
+       Y si quisiera leer la respuesta de una etiqueta HTML en particular,
+       osea al final no leer todo el codigo HTML, sino filtrar los
+       resultados del form. Gracias, excelente post.
+
+
+          + Victor Villalobos
+            Buenas Gonnza Cabrera
+            Para filtrar debes utillizar una libreria como BeautifulSoup4,
+            se te hare mas facil filtrar el response, tiene una increible
+            documentacion aca :
+            [53]http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+            O si te llevas bien con REGEX puedes buscar las etiquetas
+            manualmente en el response que te da el metodo read().
+            Saludos, gracias por comentar.
+
+
+     * j2596939
+       Hola, un cordial saludo a todos... Muy buen articulo, me surge una
+       inquietud.
+       Por ejemplo... en el
+       br.form["titulo"]
+       "titulo" hace referencia, a un tag cuyo nombre es "titulo".
+       Cuando en los tag's y no se usa el atributo (name), como se puede
+       hacer referencia a ellos.
+       Por ejemplo:
+       Enviar
+       ¿Existe alguna forma de seleccionar el formulario y las entradas a
+       traves de otra propiedad (class por ejemplo)?
+       Agradezco su tiempo y colaboración.
+
+
+Buscar
+
+   Buscar: ____________________ Buscar
+
+Nuestras redes
+
+   [54]RSS
+   [55]Follow by Email
+   [56]Facebook
+   [57]Google+
+   [58]Google+
+   http://www.freakcode.info/python-para-rellenar-formularios-automaticame
+   nte/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldP
+   ost%0D">
+   [59]Twitter
+   [60]Follow
+
+Lo mas visto
+
+     * [61]pythbook
+    [62]Python para rellenar formularios automáticamente
+       [view_icon.png] 5909[63] [comment_icon.png] 3
+     * [64]bitnami-web
+    [65]Bitnami, usando stacks para desarrollar en PHP
+       [view_icon.png] 3984[66] [comment_icon.png] 2
+     * [67]stylus
+    [68]Crea tu framework css con Jeet, Axis, Rupture y Stylus
+       [view_icon.png] 3889[69] [comment_icon.png] 2
+
+Comentarios recientes
+
+     * j2596939 [70]j2596939
+       [71]Python para rellenar formularios automáticamente
+       [72]Hola, un cordial saludo a todos... Muy buen articulo, me surge
+       una inquietud. Por ejemplo... en el br.form["titulo"] "titulo" hace
+       referencia, a un tag ____________________ cuyo nombre es "titulo".
+       Cuando...
+       17/1/2016
+     * Victor Villalobos [73]Victor Villalobos
+       [74]Python para rellenar formularios automáticamente
+       [75]Buenas Gonnza Cabrera Para filtrar debes utillizar una libreria
+       como BeautifulSoup4, se te hare mas facil filtrar el response,
+       tiene una increible documentacion aca :...
+       6/1/2016
+     * Gonnza Cabrera [76]Gonnza Cabrera
+       [77]Python para rellenar formularios automáticamente
+       [78]Y si quisiera leer la respuesta de una etiqueta HTML en
+       particular, osea al final no leer todo el codigo HTML, sino filtrar
+       los resultados del form. Gracias, excelente post.
+       6/1/2016
+     * Jorge García [79]Jorge García
+       [80]Migración de un server local a remoto de tu sitio WordPress
+       [81]Hola Nano, muchas gracias por el tutorial. Una pregunta: la
+       segunda parte donde se sube el archivo MySQL (se importa) entiendo
+       que es ya desde cpanel en el servidor verdad? Borrar la del
+       servidor e...
+       20/9/2015
+     * nanotime [82]nanotime
+       [83]Crea tu framework css con Jeet, Axis, Rupture y Stylus
+       [84]Te puedo decir que en su hilo de issues en Github son bastante
+       buena gente, y de hecho pretendo preparar un sample-code para estas
+       herramientas y mostrar acá.
+       4/9/2015
+
+Publicidad
+
+   [85][sponsor.gif]
+
+Quédate con Nosotros
+
+     [86][lazy_placeholder.gif] [social5.png] [87][lazy_placeholder.gif]
+         [email1311.png] [88][lazy_placeholder.gif] [google110.png]
+     [89][lazy_placeholder.gif] [logo221.png] [90][lazy_placeholder.gif]
+                              [facebook31.png]
+
+Acerca de
+
+   Freakcode es una prensa digital formada por freaks para freaks (o para
+   quién sea que desee leernos), que buscan compartir sus conocimientos y
+   algunos que otros datos no tan relevantes. Somos apasionados por la
+   comunicación y el conocimiento, la tecnología, el código y el buen wifi
+   del vecino internet.
+
+Suscríbete al blog por correo electrónico
+
+   Introduce tu correo electrónico para suscribirte a FreakCode y recibir
+   las ultimas noticias.
+
+   Únete a 1 suscriptor
+
+   Dirección de email ____________________
+
+   Suscribir
+   Copyright Freakcode. Todos los derechos reservados
+
+   Enviar a dirección de correo electrónico ____________________ Su Nombre
+   ____________________ Tu dirección de correo electrónico
+   ____________________ _________________________ loading
+   Enviar correo electrónico [91]Cancelar
+   La entrada no fue enviada. ¡Comprueba tus direcciones de correo
+   electrónico!
+   Error en la comprobación de email. Por favor, vuelve a intentarlo
+   Lo sentimos, tu blog no puede compartir entradas por correo
+   electrónico.
+
+References
+
+   Visible links
+   1. http://freakcode.info/feed/
+   2. http://freakcode.info/comments/feed/
+   3. http://freakcode.info/python-para-rellenar-formularios-automaticamente/feed/
+   4. http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F
+   5. http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F&format=xml
+   6. http://freakcode.info/feed/
+   7. http://freakcode.info/comments/feed/
+   8. http://freakcode.info/python-para-rellenar-formularios-automaticamente/feed/
+   9. http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F
+  10. http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F&format=xml
+  11. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html151.txt#content
+  12. http://freakcode.info/
+  13. http://ANSPRESS_PAGE_URL_BASE/
+  14. http://freakcode.info/acerca-de-nosotros/
+  15. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html151.txt
+  16. http://freakcode.info/
+  17. http://freakcode.info/
+  18. http://freakcode.info/temas/programacion/
+  19. http://freakcode.info/temas/friki/
+  20. http://freakcode.info/temas/tips-y-recomendaciones/
+  21. http://freakcode.info/temas/noticias/
+  22. http://freakcode.info/temas/sysadmin/
+  23. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html151.txt
+  24. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  25. http://freakcode.info/author/vvillalobos/
+  26. https://es.wikipedia.org/wiki/Web_scraping
+  27. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html151.txt#abh_about
+  28. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html151.txt#abh_posts
+  29. http://www.victorvillalobos.com.ve/
+  30. http://www.victorvillalobos.com.ve/
+  31. http://www.firesoft.com.ve/
+  32. http://www.victorvillalobos.com.ve/
+  33. http://freakcode.info/author/vvillalobos/
+  34. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  35. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=twitter
+  36. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=facebook
+  37. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=google-plus-1
+  38. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=tumblr
+  39. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=reddit
+  40. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=pocket
+  41. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=pinterest
+  42. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=linkedin
+  43. http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=email
+  44. http://freakcode.info/temas/programacion/
+  45. http://freakcode.info/tag/automatico/
+  46. http://freakcode.info/tag/bookscrapping/
+  47. http://freakcode.info/tag/code/
+  48. http://freakcode.info/tag/formulario/
+  49. http://freakcode.info/tag/mechanize/
+  50. http://freakcode.info/tag/python/
+  51. http://freakcode.info/git-es-cool-y-te-decimos-por-que/
+  52. http://freakcode.info/javascript-como-primer-lenguaje/
+  53. http://www.crummy.com/software/BeautifulSoup/bs4/doc/
+  54. http://freakcode.info/feed
+  55. http://www.specificfeeds.com/widget/emailsubscribe/MTYzOTcy/OA==/
+  56. javascript:void(0)
+  57. javascript:void(0)
+  58. http://google.com/+FreakcodeInfo15
+  59. javascript:void(0)
+  60. https://twitter.com/freakcode_
+  61. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  62. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  63. http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comments
+  64. http://freakcode.info/bitnami-usando-stacks-para-desarrollar-en-php/
+  65. http://freakcode.info/bitnami-usando-stacks-para-desarrollar-en-php/
+  66. http://freakcode.info/bitnami-usando-stacks-para-desarrollar-en-php/#comments
+  67. http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/
+  68. http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/
+  69. http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/#comments
+  70. https://disqus.com/by/j2596939/
+  71. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  72. http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comment-2463703734
+  73. https://disqus.com/by/revxfire/
+  74. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  75. http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comment-2442567481
+  76. https://disqus.com/by/gonnzacabrera/
+  77. http://freakcode.info/python-para-rellenar-formularios-automaticamente/
+  78. http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comment-2442271868
+  79. https://disqus.com/by/disqus_V6ElscMTlV/
+  80. http://freakcode.info/migracion-wordpress-local-a-remoto/
+  81. http://freakcode.info/migracion-wordpress-local-a-remoto/#comment-2264435780
+  82. https://disqus.com/by/nanotime/
+  83. http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/
+  84. http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/#comment-2235850084
+  85. http://www.firesoft.org/
+  86. http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_rss.png
+  87. http://www.specificfeeds.com/widget/emailsubscribe/MTYzOTcy/OA==/
+  88. http://google.com/+FreakcodeInfo15
+  89. https://twitter.com/freakcode_
+  90. https://www.facebook.com/freakcode
+  91. file:///Users/mohamedshaaban/Desktop/Tarek_Fouda/html151.txt#cancel
+
+   Hidden links:
+  93. http://facebook.com/freakcode
+  94. http://twitter.com/freacode_
+  95. http://freakcode.info/feed/
+  96. http://twitter.com/f3nixdeveloper
+  97. http://twitter.com/f3nixdeveloper
+  98. javascript:void(0)
+  99. javascript:void(0)
+ 100. javascript:void(0)
+ 101. http://twitter.com/share

@@ -1,0 +1,837 @@
+                        <!DOCTYPE html>
+<html class="no-js masonry-supported" lang="en-US" prefix="og: http://ogp.me/ns#">
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAIDWFFVGwICUFVVBAgA"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+    <meta charset="UTF-8">
+    
+    <script>
+                var hs = hs || {};
+        hs.Blog = {
+            subscriptionForms: {
+                subscription: 2645,
+                subscriptionFollowUp: 2646
+            },
+            siteAccess: 'en'
+        };
+    </script>
+    
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>7 Simple Best Practices for Sharing Content Across Social Networks</title>
+<meta name="description" content="Social media success is within everyone&#039;s reach. Explore 7 best practices for sharing content across networks and maximizing your engagement."/>
+<meta name="news_keywords" content="social media, hootsuite" />
+<link rel="original-source" href="http://blog.hootsuite.com/podium-best-practices-for-sharing-content-across-social-networks/" />
+<meta name="robots" content="noodp,noydir"/>
+<link rel="canonical" href="http://blog.hootsuite.com/podium-best-practices-for-sharing-content-across-social-networks/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="7 Simple Best Practices for Sharing Content Across Social Networks" />
+<meta property="og:description" content="Social media success is within everyone&#039;s reach. Explore 7 best practices for sharing content across networks and maximizing your engagement." />
+<meta property="og:url" content="http://blog.hootsuite.com/podium-best-practices-for-sharing-content-across-social-networks/" />
+<meta property="og:site_name" content="Hootsuite Social Media Management" />
+<meta property="article:section" content="Skills" />
+<meta property="article:published_time" content="2015-10-29T04:00:30+00:00" />
+<meta property="article:modified_time" content="2015-10-28T13:43:52+00:00" />
+<meta property="og:updated_time" content="2015-10-28T13:43:52+00:00" />
+<meta property="og:image" content="http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks.jpeg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='stylesheet' id='hs-blog-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/css/hs-blog.css?ver=3.1.52' type='text/css' media='all' />
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/livefyre-apps/assets/js/lfapps.js?ver=1.1'></script>
+<script type='text/javascript' src='http://cdn.livefyre.com/Livefyre.js?ver=1.1'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/libraries/jquery-1.11.3.min.js'></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/libraries/jquery-2.1.4.min.js'></script>
+<!--<![endif]-->
+<script type='text/javascript' src='//cdn.optimizely.com/js/176765137.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var theme = {"uri":"http:\/\/blog.hootsuite.com\/wp-content\/themes\/hootsuite-2.0","ajaxurl":"https:\/\/blog.hootsuite.com\/wp-admin\/admin-ajax.php","thankYouTitle":"You are now subscribed to the Hootsuite blog.","thankYouBodyOne":"We're excited to have you on board! We'd like to give you even more custom content that helps you succeed.","thankYouBodyTwo":"Tell us a bit about yourself, and we'll periodically send you personalized content like:","thankYouLIOne":"Comprehensive tutorial videos and articles;","thankYouLITwo":"Case studies that highlight successes in your industry;","thankYouLIThree":"Tips, tactics, and best practices for companies of your size;","thankYouLIFour":"The latest news from around the social web;","thankYouLIFive":"and much more."};
+var qualaroo = {"send":"Send","requiredField":"Required field"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/scripts-header.min.js?ver=3.1.52'></script>
+<link rel='https://api.w.org/' href='http://blog.hootsuite.com/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="http://blog.hootsuite.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://blog.hootsuite.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&#038;format=xml" />
+
+<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+<meta name="generator" content="WPML ver:3.3.6 stt:1,4,3,27,28,2,25,44;" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="author" content="Hootsuite"><meta name="apple-itunes-app" content="app-id=341249709"><meta name="google-play-app" content="app-id=com.hootsuite.droid.full"><meta name="twitter:card" content="summary"><meta name="twitter:creator" content="@evanlepage"><meta name="twitter:site" content="@hootsuite"><meta name="twitter:title" content="7 Simple Best Practices for Sharing Content Across Social Networks"><meta name="twitter:description" content="Social media success is within everyone's reach. Explore 7 best practices for sharing content across networks and maximizing your engagement."><meta name="twitter:domain" content="http://blog.hootsuite.com"><meta name="twitter:image" content="http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks.jpeg">    <script src="https://fast.wistia.net/static/E-v1.js" async defer></script>
+</head>
+<body class="single single-post postid-89379 single-format-standard" itemscope itemtype="http://schema.org/WebPage">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<noscript>
+    <iframe src="//www.googletagmanager.com/ns.html?id=GTM-963X" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<script>
+    (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-963X');
+</script>
+    <div id="fb-root"></div>
+    <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+<div id="m-container" class="m-container">
+    <div class="m-pusher">
+        <div class="m-content">
+            <div class="m-content-inner _smartBannerAdjustInner">
+                <header class="header header--simple _smartBannerAdjust" id="header-simple" aria-hidden="true" role="banner">
+                    <div class="container">
+                        <a class="hs-logo" href="https://hootsuite.com">Hootsuite Media Inc.</a>
+                        <div class="primary-nav">
+                            <nav class="primary-nav__menu menu" role="navigation">
+                            <ul id="menu-main-menu" class="menu"><li id="menu-item-83669" class="menu-item--enterprise menu-item menu-item-type-custom menu-item-object-custom menu-item-83669"><a href="https://hootsuite.com/plans/enterprise" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Hootsuite for Enterprise</a></li>
+<li id="menu-item-83670" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83670"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-83671" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83671"><a href="https://hootsuite.com/products/social-media-engagement" class="" data-navsrc="nav--level2">Engagement</a></li>
+	<li id="menu-item-83672" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83672"><a href="https://hootsuite.com/products/social-media-publishing" class="" data-navsrc="nav--level2">Publishing</a></li>
+	<li id="menu-item-83678" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83678"><a href="https://hootsuite.com/products/social-media-analytics" class="" data-navsrc="nav--level2">Analytics</a></li>
+	<li id="menu-item-83679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83679"><a href="https://hootsuite.com/products/campaigns" class="" data-navsrc="nav--level2">Campaigns</a></li>
+	<li id="menu-item-83680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83680"><a href="https://hootsuite.com/products/platform" class="" data-navsrc="nav--level2">Platform</a></li>
+	<li id="menu-item-83681" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83681"><a href="https://hootsuite.com/products/extensions" class="" data-navsrc="nav--level2">Extensions</a></li>
+	<li id="menu-item-83682" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83682"><a href="https://hootsuite.com/products/mobile-apps" class="" data-navsrc="nav--level2">Mobile</a></li>
+	<li id="menu-item-83683" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83683"><a href="https://hootsuite.com/services" class="" data-navsrc="nav--level2">Services</a></li>
+</ul>
+</li>
+<li id="menu-item-83673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-83673"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a>
+<ul class="sub-menu">
+	<li id="menu-item-83684" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83684"><a href="https://hootsuite.com/plans/free" class="" data-navsrc="nav--level2">Free</a></li>
+	<li id="menu-item-83685" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83685"><a href="https://hootsuite.com/plans/pro" class="" data-navsrc="nav--level2">Pro</a></li>
+	<li id="menu-item-83686" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83686"><a href="https://hootsuite.com/plans/enterprise" class="" data-navsrc="nav--level2">Enterprise</a></li>
+	<li id="menu-item-83687" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83687"><a href="http://hootsuite.com/plans" class="" data-navsrc="nav--level2">Compare Plans</a></li>
+</ul>
+</li>
+<li id="menu-item-83674" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83674" data-auth="out"><a href="https://hootsuite.com/plans" class="btn btn--sm btn--success" data-navsrc="nav--level1">Sign Up</a></li>
+<li id="menu-item-83675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83675" data-auth="out"><a href="https://hootsuite.com/login" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Log In</a></li>
+<li id="menu-item-83676" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83676" aria-hidden="true" data-auth="in"><a href="https://hootsuite.com/dashboard" class="btn btn--sm btn--primary" data-navsrc="nav--level1">Dashboard</a></li>
+<li id="menu-item-83677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83677" aria-hidden="true" data-auth="in"><a href="https://hootsuite.com/logout" class="btn btn--sm btn--outline" data-navsrc="nav--level1">Sign Out</a></li>
+</ul>                            </nav>
+                            <div class="m-trigger-effects">
+                                <button class="menu-icon" data-effect="m-slide-out"><span>Menu</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Start navigation-tab -->
+<div class="toolbar">
+	<div class="container">
+		<p class="toolbar__label tablet-up-only">Blogs</p>
+		<nav class="nav nav-tabs">
+			<ul>
+																																<li class="category--social active"><a id="term-2675" data-term="2675" class="vertical-tab" href="http://blog.hootsuite.com/">Social</a></li>
+																																											<li class="category--innovation"><a id="term-2676" data-term="2676" class="vertical-tab" href="http://blog.hootsuite.com/channel/innovation/">Innovation</a></li>
+																																											<li class="category--hootsuite-life"><a id="term-2677" data-term="2677" class="vertical-tab" href="http://blog.hootsuite.com/channel/hootsuite-life/"><span class="brand">Hootsuite</span> Life</a></li>
+																																</ul>
+		</nav>
+		<div id="search-trigger"></div>
+		<form role="search" method="get" id="searchform" class="searchform" action="http://blog.hootsuite.com/">
+	<label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" value="" placeholder="Search..." name="s" id="s">
+	<input type="submit" id="searchsubmit" value="Search">
+<input type='hidden' name='lang' value='en' /></form>	</div>
+</div>
+<!--End navigation-tab -->                </header>
+            <div class="header-image header-image--post">
+            <img width="1200" height="550" src="http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Image by Davide Ragusa" srcset="http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks-310x142.jpeg 310w, http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks-620x284.jpeg 620w, http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks-625x286.jpeg 625w, http://blog.hootsuite.com/wp-content/uploads/2015/10/Best-Practices-for-Sharing-Content-Across-Social-Networks.jpeg 1200w" sizes="(max-width: 1200px) 100vw, 1200px" />                            <span class="header-image__caption"><i>Image by <a href="https://unsplash.com/davideragusa">Davide Ragusa</a></i></span>
+                    </div>
+        <div class="content-wrapper content-wrapper--has-lg-header" role="main">
+        <div class="content-wrapper__inner">
+                            <article class="post-89379 post type-post status-publish format-standard has-post-thumbnail hentry category-social-media-skills category-social category-social-media-strategy language-english" id="post-89379" role="article" itemscope="" itemtype="http://schema.org/Article">
+                    <header>
+                        <h1 class="post__title entry-title" itemprop="name">7 Simple Best Practices for Sharing Content Across Social Networks</h1>                        <div class="meta">
+                            <p class="vcard"><img src="http://0.gravatar.com/avatar/0cbdc41dee32d438ef5b6916df4a87c1?s=40" itemprop="image" class="author-meta__avatar" height="40" width="40" alt="" /><span class="meta__author author-meta">By <a class="author-meta__name fn" href="http://blog.hootsuite.com/author/evan-lepage/">Evan LePage</a></span></p><p class="faded"><span class="meta__date">29 October 2015</span><span class="meta__category"><a href="http://blog.hootsuite.com/channel/social/" class="link">Social</a></span><a href="http://blog.hootsuite.com/podium-best-practices-for-sharing-content-across-social-networks/#livefyre-comments" class="meta__comments link livefyre-commentcount" data-lf-site-id="332321" data-lf-article-id="89379" >0 Comments</a></p>                        </div>
+                        <div class="social">
+                            	<a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>HootSuite</span></a>
+	<a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>Twitter</span></a>
+	<a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>Facebook</span></a>
+	<a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>LinkedIn</span></a>
+	<a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>Google +</span></a>
+                        </div>
+                    </header>
+
+                    <div class="post__body" itemprop="articleBody">
+                                                <p dir="ltr">Creating content and getting that content seen are two very different struggles, and marketers know both all too well. Social media has only increased the complexity of these processes, by adding a series of essential channels, each with its own audiences and content types.</p>
+<p dir="ltr">Standing out on social media and getting your content seen and shared takes effort and dedication. But with a few key best practices, social media success is within the reach of anyone.</p>
+<p dir="ltr">Below we explore seven best practices for sharing content across social networks and maximizing your reach and engagement.</p>
+<p dir="ltr"><em>Sign up today for <a href="http://ow.ly/TGun4" target="_blank">Podium</a>, Hootsuite’s free social media education platform, for a more in-depth look at best practices for sharing on each major social network.</em></p>
+<p dir="ltr" style="text-align: center;"><a class="btn-cta btn-type1" href="http://ow.ly/TGun4">SIGN UP FREE</a></p>
+<h3>A strong headline or message is key to grabbing people’s attention</h3>
+<p dir="ltr">Everyone knows the importance of the headline or social media message when it comes to getting clicks and shares. At the same time, people seem to forget that finding the right headline takes time. Don’t fall back on click-baity formats you think will draw clicks. You need to strike a balance between being clear, and being emotionally evocative. The worst thing you can do is get someone to click on your message and send them to content that doesn’t deliver.</p>
+<p dir="ltr">Make sure you take the time to brainstorm a few variations of the copy. Once you’ve established multiple good options, you can then test your messaging. Try pushing the same content with different messages and track what performs. Get to know what kinds of messaging work best with your audience, but never stop testing.</p>
+<h3>When sharing the same piece of content across multiple networks, optimize it for each one</h3>
+<p dir="ltr"><img class="aligncenter size-full wp-image-61748" src="http://blog.hootsuite.com/wp-content/uploads/2014/05/header-socialnetworks.jpg" alt="header-socialnetworks" width="600" height="250" srcset="http://blog.hootsuite.com/wp-content/uploads/2014/05/header-socialnetworks-310x129.jpg 310w, http://blog.hootsuite.com/wp-content/uploads/2014/05/header-socialnetworks.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p dir="ltr">We understand the urge to simply post the same message to five different social networks all at once. It’s such a time saver, and the content is good, right? The truth is, while posting the same thing to multiple networks isn’t the end of the world, you’re also not giving your content its best opportunity for success.</p>
+<p dir="ltr">Each social network is unique in many ways, and your content should reflect those intricacies. Twitter messages are restricted to 140 characters or less, but your Facebook audience might expect a little more substance. Your audience may check their Instagram feeds after work and their Pinterest feeds in the morning. You really can’t throw paint at the wall and hope it sticks. You need to test, and treat all of your audiences with the same degree of attention and respect.</p>
+<h3>Vary your content regularly</h3>
+<figure class="figure aligncenter"><img class="size-large wp-image-71273" src="http://blog.hootsuite.com/wp-content/uploads/2015/05/Content-Marketing-Strategy-620x310.jpg" alt="How to create a content marketing strategy" width="600" height="300" srcset="http://blog.hootsuite.com/wp-content/uploads/2015/05/Content-Marketing-Strategy-310x155.jpg 310w, http://blog.hootsuite.com/wp-content/uploads/2015/05/Content-Marketing-Strategy-620x310.jpg 620w, http://blog.hootsuite.com/wp-content/uploads/2015/05/Content-Marketing-Strategy-625x313.jpg 625w, http://blog.hootsuite.com/wp-content/uploads/2015/05/Content-Marketing-Strategy.jpg 650w" sizes="(max-width: 600px) 100vw, 600px" /><figcaption><i> Image adapted from &#8220;Post-it time!&#8221; by <a href="https://www.flickr.com/photos/3oheme/">Ignacio Palomo Duarte</a> under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></i></figcaption></figure>
+<p dir="ltr">Many of us fall into a rhythm on social media. We find things that work well and they become second nature. As much as you might think this is a positive, everything could change in an instant. People get bored, or their interests change, and suddenly your followers become less engaged. It falls on you to keep up.</p>
+<p dir="ltr">With that in mind, you should regularly be switching up your content. You can’t only post a blog post with one style of image and one style of messaging day-in and day-out. We all know visuals increase engagement, but try a gif or a video instead of a static image. Try asking people questions or pushing them to polls instead of your regular content updates. The important thing is that you’re monitoring your audience and general internet trends, and that you’re flexible enough to adjust as needed.</p>
+<h3>Don’t post too many updates at once</h3>
+<p dir="ltr"><img class="aligncenter size-large wp-image-45930" src="http://blog.hootsuite.com/wp-content/uploads/2013/05/bees-620x413.jpg" alt="bees" width="600" height="400" srcset="http://blog.hootsuite.com/wp-content/uploads/2013/05/bees-620x413.jpg 620w, http://blog.hootsuite.com/wp-content/uploads/2013/05/bees-600x400.jpg 600w, http://blog.hootsuite.com/wp-content/uploads/2013/05/bees.jpg 640w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p dir="ltr">We’ve all experienced it before. You open up a social network and see a stream of five or six updates for one person or brand. Regardless of the content, this kind of ‘stream take-over’ is usually pretty annoying. If you think I’m going to click the sixth link in your stream of nine messages, you’re sadly mistaken.</p>
+<p dir="ltr">Don’t post too many updates at once. Instead, make each message you send substantive and important in its own right. Usually, if you need 10 Tweets to get your message across, you’re probably doing it wrong.</p>
+<p dir="ltr">Keep your social media publishing to a schedule. A social media management tool allows you to schedule messages in advance so you’re not a slave to your calendar. Doing so helps you ensure you’re posting at regular intervals rather than in bursts. Once people learn your schedule, they’ll start checking in when they can expect new content from you, building a certain degree of loyalty. This will in turn increase your click-through and engagement.</p>
+<h3>End your post with a clear call-to-action</h3>
+<figure class="figure aligncenter"><img class="size-large wp-image-68400" src="http://blog.hootsuite.com/wp-content/uploads/2015/02/8623052784_ef30dd62b0_z-620x411.jpg" alt="Photo by Tom" width="600" height="398" srcset="http://blog.hootsuite.com/wp-content/uploads/2015/02/8623052784_ef30dd62b0_z-620x411.jpg 620w, http://blog.hootsuite.com/wp-content/uploads/2015/02/8623052784_ef30dd62b0_z.jpg 640w" sizes="(max-width: 600px) 100vw, 600px" /><figcaption>Photo by <a href="https://flic.kr/p/e8ZpaS">Tom</a></figcaption></figure>
+<p dir="ltr">So your followers have seen your message, now what? None of us want our interactions to end there. Social media serves to support broader business goals, so your messages should ultimately be tied to a larger purpose beyond being seen or liked.</p>
+<p dir="ltr">With that in mind, end your social posts with a strong call-to-action. Examples of good social media CTAs include:</p>
+<ul>
+<li dir="ltr">Offering up more information on the topic in a blog post or resource</li>
+<li dir="ltr">Encouraging them to sign up for a free trial of your product</li>
+<li dir="ltr">Asking them to use a special social media code for a discount in store</li>
+<li dir="ltr">Offering the potential of a prize for a specific action, like following and sharing</li>
+</ul>
+<h3>Keep self-promotional content at around one-third</h3>
+<p dir="ltr"><img class="aligncenter size-large wp-image-63864" src="http://blog.hootsuite.com/wp-content/uploads/2014/08/Content-curation-rule-for-social-media-content-sharing-Rule-of-Thirds-620x212.png" alt="Content curation rule for social media content sharing - Rule of Thirds" width="600" height="205" srcset="http://blog.hootsuite.com/wp-content/uploads/2014/08/Content-curation-rule-for-social-media-content-sharing-Rule-of-Thirds-310x106.png 310w, http://blog.hootsuite.com/wp-content/uploads/2014/08/Content-curation-rule-for-social-media-content-sharing-Rule-of-Thirds-620x212.png 620w, http://blog.hootsuite.com/wp-content/uploads/2014/08/Content-curation-rule-for-social-media-content-sharing-Rule-of-Thirds.png 622w" sizes="(max-width: 600px) 100vw, 600px" /></p>
+<p dir="ltr">While your audience follows you because they’re interested in your products and services, they don’t want to hear the sales spiel day after day after day. Focus instead on building rapport and loyalty instead of constantly pushing product. You’ll find this will pay dividends over the long haul.]</p>
+<p dir="ltr">If you’re unsure about how much salesly content to share, we try and follow what we call the <a href="http://blog.hootsuite.com/social-media-rule-of-thirds/" target="_blank">social media rule of thirds</a>, which dictates that a maximum of one-third of your social content directly works to promote your business, convert readers, and generate profit. The other two-thirds should focus on providing value and keeping people coming back.</p>
+<h3>Encourage employees to share your content</h3>
+<figure class="figure aligncenter"><img class="size-full wp-image-71810" src="http://blog.hootsuite.com/wp-content/uploads/2015/05/Amplify-Social-Content-with-the-Content-Library.jpg" alt="&quot;Wall of Sound&quot; image adapted from 55Laney69 under CC BY 2.0" width="600" height="250" srcset="http://blog.hootsuite.com/wp-content/uploads/2015/05/Amplify-Social-Content-with-the-Content-Library-310x129.jpg 310w, http://blog.hootsuite.com/wp-content/uploads/2015/05/Amplify-Social-Content-with-the-Content-Library.jpg 600w" sizes="(max-width: 600px) 100vw, 600px" /><figcaption><i>&#8220;Wall of Sound&#8221; image adapted from <a href="https://www.flickr.com/photos/hansel5569/">55Laney69</a> under <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></i></figcaption></figure>
+<p dir="ltr">Finally, if you work at a business with colleagues who use social media personally (read: every business), than don’t be afraid to ask them for support. Encouraging employees to share your content is an effective way of magnifying brand messaging without spending too much time talking about yourself on corporate accounts.</p>
+<p dir="ltr"><a href="http://blog.hootsuite.com/why-your-colleagues-wont-share-your-blog-post/" target="_blank">It’s not always easy to convince your colleagues to share</a> business content on personal accounts. You need to be courteous, show them how it benefits them and the business, and also make it easy for them to do, with a tool like <a href="https://hootsuite.com/products/amplify" target="_blank">Hootsuite Amplify</a> to help.</p>
+<p dir="ltr">While there are many other elements to consider in regards to your content strategy, these best practices are a great starting point on your way to social media success.</p>
+<p dir="ltr"><em>For more insights like these, <a href="http://ow.ly/TGun4" target="_blank">sign up for Podium for free today</a>.</em></p>
+                    </div>
+                                                                <div class="post__categories">
+                            <p class="post__categories__list">Filed Under:</p><ul>	<li class="cat-item cat-item-1788"><a href="http://blog.hootsuite.com/channel/social/social-media-strategy/" >Strategy</a>
+</li>
+	<li class="cat-item cat-item-1948"><a href="http://blog.hootsuite.com/channel/social/social-media-skills/" >Skills</a>
+</li>
+</ul>
+                        </div>
+                                        <section class="cta cta--subscription">
+                        <i class="i i--subscribe i--lg"></i>
+                        <h4 class="h2">Subscribe to our blog newsletter</h4>
+                        <p>Social media strategy, advice, and tips delivered direct to your inbox</p>
+                        <form method="get" action="http://blog.hootsuite.com/" class="faux">
+                            <label class="screen-reader-text" for="email">Email</label>
+                            <input name="email" class="email" placeholder="Enter your email address" maxlength="255" title="" type="email">
+                            <button type="submit" class="btn btn--secondary btn--lg">Subscribe</button>
+                        </form>
+                        <p class="note">Unsubscribe at any time</p>
+                    </section>
+
+                    <footer class="post__footer">
+                        <div class="social">
+                            <p>Share this post via:</p>
+                            	<a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>HootSuite</span></a>
+	<a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>Twitter</span></a>
+	<a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>Facebook</span></a>
+	<a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>LinkedIn</span></a>
+	<a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"><span>Google +</span></a>
+                        </div>
+                        <div class="post__footer__author">
+                            <h6 class="post__footer__section-title">Written by</h6>
+                            <div class="author-meta vcard" itemprop="author" itemscope itemtype="http://schema.org/Person"><img src="http://0.gravatar.com/avatar/0cbdc41dee32d438ef5b6916df4a87c1?s=40" itemprop="image" class="author-meta__avatar" height="40" width="40" alt="" /><p><a href="https://plus.google.com/104408630735148079379/posts" rel="author"></a><span class="author-meta__name fn" itemprop="name"><a class="url" href="http://blog.hootsuite.com/author/evan-lepage/">Evan LePage</a><a target="_blank" href="https://twitter.com/evanlepage"><span class="i i--twitter i--xxs i--color i--bg"></span></a></span><span class="author-meta__bio" itemprop="description">Evan is a Blog Specialist for Hootsuite. He writes features, news items, releases and all things Hootsuite.</span></p></div>                        </div>
+                                                    <div class="post__footer__related-posts">
+                                <div class='yarpp-related'>
+<h6 class="post__footer__section-title">Articles similar to this</h6>
+<div class="block-grid block-grid--sm-3 block-grid--xs-1">
+    <ul>
+    	    		                		<li>
+<article class="card card--sm card--related-post" role="article" itemtype="http://schema.org/Article" itemscope>
+                <figure class="card__image figure ">
+            <a href="http://blog.hootsuite.com/are-infographics-still-relevant/" title="Are Infographics Still Relevant?">
+                                <img class="" itemprop="image" src="http://blog.hootsuite.com/wp-content/uploads/2015/10/blog-header1-280x165.jpg" width="280" height="165" alt="" title=""/>
+            </a>
+                                </figure>
+        <div class="card__meta ">
+        <div class="card__meta__title-wrapper">
+            <h3 class="card__meta__title-wrapper__title entry-title"><a href="http://blog.hootsuite.com/are-infographics-still-relevant/" title="Are Infographics Still Relevant?" itemprop="name">Are Infographics Still Relevant?</a></h3>        </div>
+                <div class="card__meta__meta-wrapper">
+                        <div class="card__meta__meta-wrapper__post-meta"><p><span class="updated">4 months ago</span></p></div>
+            <div class="share-link">Share</div>
+            <div class="share-links share horizontal social">
+                    <a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=Are+Infographics+Still+Relevant%3F&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fare-infographics-still-relevant%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'Are+Infographics+Still+Relevant%3F']);" target="_blank"><span>HootSuite</span></a>
+    <a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=Are+Infographics+Still+Relevant%3F&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fare-infographics-still-relevant%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'Are+Infographics+Still+Relevant%3F']);" target="_blank"><span>Twitter</span></a>
+    <a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=Are+Infographics+Still+Relevant%3F&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fare-infographics-still-relevant%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'Are+Infographics+Still+Relevant%3F']);" target="_blank"><span>Facebook</span></a>
+    <a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=Are+Infographics+Still+Relevant%3F&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fare-infographics-still-relevant%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'Are+Infographics+Still+Relevant%3F']);" target="_blank"><span>LinkedIn</span></a>
+    <a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=Are+Infographics+Still+Relevant%3F&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fare-infographics-still-relevant%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'Are+Infographics+Still+Relevant%3F']);" target="_blank"><span>Google +</span></a>
+            </div>
+        </div>
+    </div>
+    <a class="cover" href="http://blog.hootsuite.com/are-infographics-still-relevant/" title=""></a>
+</article>
+</li>
+    		    	    		                		<li>
+<article class="card card--sm card--related-post" role="article" itemtype="http://schema.org/Article" itemscope>
+                <figure class="card__image figure ">
+            <a href="http://blog.hootsuite.com/6-social-media-marketing-lessons-from-the-rugby-world-cup-2015/" title="6 Social Media Marketing Lessons from the Rugby World Cup 2015">
+                                <img class="" itemprop="image" src="http://blog.hootsuite.com/wp-content/uploads/2015/10/RugbyWorldCup-1200x550-280x165.jpg" width="280" height="165" alt="" title=""/>
+            </a>
+                                </figure>
+        <div class="card__meta ">
+        <div class="card__meta__title-wrapper">
+            <h3 class="card__meta__title-wrapper__title entry-title"><a href="http://blog.hootsuite.com/6-social-media-marketing-lessons-from-the-rugby-world-cup-2015/" title="6 Social Media Marketing Lessons from the Rugby World Cup 2015" itemprop="name">6 Social Media Marketing Lessons from the Rugby World Cup 2015</a></h3>        </div>
+                <div class="card__meta__meta-wrapper">
+                        <div class="card__meta__meta-wrapper__post-meta"><p><span class="updated">4 months ago</span></p></div>
+            <div class="share-link">Share</div>
+            <div class="share-links share horizontal social">
+                    <a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015&amp;link=http%3A%2F%2Fblog.hootsuite.com%2F6-social-media-marketing-lessons-from-the-rugby-world-cup-2015%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', '6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015']);" target="_blank"><span>HootSuite</span></a>
+    <a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015&amp;link=http%3A%2F%2Fblog.hootsuite.com%2F6-social-media-marketing-lessons-from-the-rugby-world-cup-2015%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', '6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015']);" target="_blank"><span>Twitter</span></a>
+    <a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015&amp;link=http%3A%2F%2Fblog.hootsuite.com%2F6-social-media-marketing-lessons-from-the-rugby-world-cup-2015%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', '6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015']);" target="_blank"><span>Facebook</span></a>
+    <a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015&amp;link=http%3A%2F%2Fblog.hootsuite.com%2F6-social-media-marketing-lessons-from-the-rugby-world-cup-2015%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', '6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015']);" target="_blank"><span>LinkedIn</span></a>
+    <a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015&amp;link=http%3A%2F%2Fblog.hootsuite.com%2F6-social-media-marketing-lessons-from-the-rugby-world-cup-2015%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', '6+Social+Media+Marketing+Lessons+from+the+Rugby+World+Cup+2015']);" target="_blank"><span>Google +</span></a>
+            </div>
+        </div>
+    </div>
+    <a class="cover" href="http://blog.hootsuite.com/6-social-media-marketing-lessons-from-the-rugby-world-cup-2015/" title=""></a>
+</article>
+</li>
+    		    	    		                		<li>
+<article class="card card--sm card--related-post" role="article" itemtype="http://schema.org/Article" itemscope>
+                <figure class="card__image figure ">
+            <a href="http://blog.hootsuite.com/how-to-get-more-instagram-followers-the-ultimate-guide/" title="How to Get More Instagram Followers: The Ultimate Guide">
+                                <img class="" itemprop="image" src="http://blog.hootsuite.com/wp-content/uploads/2015/10/header-image-280x165.jpg" width="280" height="165" alt="" title=""/>
+            </a>
+                                </figure>
+        <div class="card__meta ">
+        <div class="card__meta__title-wrapper">
+            <h3 class="card__meta__title-wrapper__title entry-title"><a href="http://blog.hootsuite.com/how-to-get-more-instagram-followers-the-ultimate-guide/" title="How to Get More Instagram Followers: The Ultimate Guide" itemprop="name">How to Get More Instagram Followers: The Ultimate Guide</a></h3>        </div>
+                <div class="card__meta__meta-wrapper">
+                        <div class="card__meta__meta-wrapper__post-meta"><p><span class="updated">4 months ago</span></p></div>
+            <div class="share-link">Share</div>
+            <div class="share-links share horizontal social">
+                    <a class="hootsuite small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-get-more-instagram-followers-the-ultimate-guide%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', 'How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide']);" target="_blank"><span>HootSuite</span></a>
+    <a class="twitter small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-get-more-instagram-followers-the-ultimate-guide%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', 'How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide']);" target="_blank"><span>Twitter</span></a>
+    <a class="facebook small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-get-more-instagram-followers-the-ultimate-guide%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', 'How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide']);" target="_blank"><span>Facebook</span></a>
+    <a class="linkedin small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-get-more-instagram-followers-the-ultimate-guide%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', 'How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide']);" target="_blank"><span>LinkedIn</span></a>
+    <a class="google-plus small" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fhow-to-get-more-instagram-followers-the-ultimate-guide%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', 'How+to+Get+More+Instagram+Followers%3A+The+Ultimate+Guide']);" target="_blank"><span>Google +</span></a>
+            </div>
+        </div>
+    </div>
+    <a class="cover" href="http://blog.hootsuite.com/how-to-get-more-instagram-followers-the-ultimate-guide/" title=""></a>
+</article>
+</li>
+    		    	    </ul>
+</div>
+</div>
+                            </div>
+                                            </footer>
+                </article>
+                <aside class="comments-wrapper" rel="complementary">
+                    <div id="livefyre-comments">
+<div class="fyre fyre-width-large fyre-bootstrap">
+  <div class="fyre-widget">
+    <div class="fyre-stream-stats">
+      <div class="fyre-comment-count">
+        <span>1 comments</span>
+      </div>
+
+      <div class="fyre-divider"></div>
+
+      <div class="fyre-help">
+        <div class="fyre-box-wrapper">
+          <a href="http://livefyre.com" target="_blank"><span class="fyre-logo-drop">&amp;nbsp</span>
+          <img class="fyre-logo-help" src="http://zor.fyre.co/wjs/v3.0/images/lf-logo.png" alt="Livefyre" /></a>
+          
+          <ul class="fyre-box-list">
+            <li><a href="http://livefyre.com" target="_blank" title="Get Livefyre">Get
+            Livefyre</a></li>
+
+            <li><a href="http://support.livefyre.com" target="_blank" title="FAQ">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-auth">
+      <div class="fyre-login-bar"><a rel="nofollow" href="#" class="fyre-user-loggedout">Sign in</a></div>
+    </div>
+
+    <div class="fyre-editor">
+      <div class="fyre-editor-container">
+        <div class="fyre-editor-editable" style="height: 100px"></div>
+
+        <div class="fyre-editor-toolbar">
+          <div class="goog-toolbar goog-toolbar-horizontal" role="toolbar">
+            <div class="goog-inline-block fyre-button-left fyre-format-button" title="" role="button" id=":0">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-mention-button" title="" role="button" id=":1">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-left fyre-follow-button" title="" role="button" id=":2">
+              <div class="goog-inline-block fyre-button-left-outer-box">
+                <div class="goog-inline-block fyre-button-left-inner-box">
+                  + Follow
+                </div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-button fyre-post-button-enabled" title="" role="button" id=":3">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box">
+                  Post comment
+                </div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-facebook" title="" role="button" id=":4">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-twitter" title="" role="button" id=":5">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-inline-block fyre-button-right fyre-post-to fyre-post-to-linkedin" title="" role="button" id=":7">
+              <div class="goog-inline-block fyre-button-right-outer-box">
+                <div class="goog-inline-block fyre-button-right-inner-box"></div>
+              </div>
+            </div>
+
+            <div class="goog-toolbar-separator goog-inline-block" role="separator" id=":6">
+              &nbsp;
+            </div>
+          </div>
+
+          <div class="fyre-format-toolbar">
+            <div class="goog-toolbar goog-toolbar-horizontal" role="toolbar">
+              <div class="goog-inline-block goog-toolbar-button" title="Bold" role="button" id="+bold">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-bold">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Italic" role="button" id="+italic">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-italic">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Underline" role="button" id="+underline">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-underline">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Add or remove link" role="button" id="+link">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-link">
+                      Link
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Numbered list" role="button" id="+insertOrderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-insertOrderedList"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="goog-inline-block goog-toolbar-button" title="Bullet list" role="button" id="+insertUnorderedList">
+                <div class="goog-inline-block goog-toolbar-button-outer-box">
+                  <div class="goog-inline-block goog-toolbar-button-inner-box">
+                    <div class="tr-icon tr-insertUnorderedList"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fyre-comment-stream">
+      <div class="fyre-stream-sort">
+        <a class="fyre-stream-sort-newest">Newest</a> | <a class="fyre-stream-sort-oldest">Oldest</a>
+      </div>
+
+      <div class="fyre-stream-content">      
+        
+            
+<article class="fyre-comment-article">
+  <div class="fyre-comment-wrapper">
+  
+  
+  
+  <div class="fyre-comment-user">
+    <a class="fyre-comment-author"><img src="https://secure.gravatar.com/avatar/0722bae64acb75e2c5a218b89c9cdf61/?s=50&amp;d=https://dpstvy7p9whsy.cloudfront.net/a/anon/50.jpg" class="fyre-user-avatar" alt="Zach Emly" /></a>
+
+    <div class="fyre-comment-socialsync fyre-comment-from-livefyre"></div>
+  </div>
+    
+  <header class="fyre-comment-head">
+    <a class="fyre-comment-username">Zach Emly</a> 
+    
+    
+    <span class="fyre-comment-user-rating">5pts</span>
+    <span class="fyre-comment-like" style="float: right">
+      
+    </span>
+    
+  </header>
+  
+  <section class="fyre-comment-body">
+    <div class="fyre-comment">
+      <p><p>I'll be honest, for sake of content deadlines and not spending forever on social media I often post the same message across all platforms.</p><p><br /></p><p>It is a little tough with Hootsuite however, because you can not craft separate messages at once. In order to do that you have to type, send, type, send, type, send and it is so much easier just to do it once. (but I guess that could be my laziness kicking in!)</p></p>
+    </div>
+    
+  </section>
+
+  <footer class="fyre-comment-footer">
+  </footer>
+  </div>
+  <div class="fyre-comment-divider"><div class="fyre-comment-divider"></div></div>
+
+  
+    
+  <div class="fyre-comment-replies fyre-comment-container fyre-comment-replies-indent">
+  
+  </div>
+</article>
+
+
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>                </aside>
+                    </div>
+        <menu class="social-share" data-fixto=".content-wrapper" data-fixto-top="48" style="">
+            <div class="social-share__share-links">
+                                                    <a class="i i--hootsuite i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=261amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'HootSuite', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"></a>
+                                    <a class="i i--twitter i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=7amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Twitter', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"></a>
+                                    <a class="i i--facebook i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=5amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Facebook', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"></a>
+                                    <a class="i i--linkedin i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=88amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'LinkedIn', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"></a>
+                                    <a class="i i--googleplus i--color i--xs i--bg _share" href="http://www.shareaholic.com/api/share/?v=1&amp;apitype=1&amp;apikey=240209a45d6de04743bfaed9faac8d3ef&amp;service=304amp;title=7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks&amp;link=http%3A%2F%2Fblog.hootsuite.com%2Fpodium-best-practices-for-sharing-content-across-social-networks%2F&amp;source=Shareaholic" onClick="_gaq.push(['_trackEvent', 'BlogShare', 'Google +', '7+Simple+Best+Practices+for+Sharing+Content+Across+Social+Networks']);" target="_blank"></a>
+                            </div>
+        </menu>
+    </div>
+                                                        <div class="footer-cta">
+                        <p>Save time managing your social media today</p>
+<p><a class="btn-cta btn-type1" href="https://hootsuite.com/plans/free" target="_blank">Get Started for Free</a></p>
+                    </div>
+                                <footer id="site-footer" class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+                    <div class="container">
+                        <nav class="nav nav--footer" role="navigation">
+                            <ul id="menu-footer-menu" class="menu"><li id="menu-item-70281" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70281"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a>
+<ul class="sub-menu">
+	<li id="menu-item-70283" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70283"><a href="https://hootsuite.com/products/social-media-engagement" class="" data-navsrc="nav--level2">Engagement</a></li>
+	<li id="menu-item-70285" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70285"><a href="https://hootsuite.com/products/social-media-publishing" class="" data-navsrc="nav--level2">Publishing</a></li>
+	<li id="menu-item-70284" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70284"><a href="https://hootsuite.com/products/social-media-analytics" class="" data-navsrc="nav--level2">Analytics</a></li>
+	<li id="menu-item-70287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70287"><a href="https://hootsuite.com/products/campaigns" class="" data-navsrc="nav--level2">Campaigns</a></li>
+	<li id="menu-item-70282" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70282"><a href="https://hootsuite.com/products/platform" class="" data-navsrc="nav--level2">Platform</a></li>
+	<li id="menu-item-70286" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70286"><a href="https://hootsuite.com/products/extensions" class="" data-navsrc="nav--level2">Extensions</a></li>
+	<li id="menu-item-82390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82390"><a href="https://hootsuite.com/products/mobile-apps" class="" data-navsrc="nav--level2">Mobile</a></li>
+</ul>
+</li>
+<li id="menu-item-70288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70288"><a href="https://hootsuite.com/solutions" class="" data-navsrc="nav--level1">Solutions</a>
+<ul class="sub-menu">
+	<li id="menu-item-70289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70289"><a href="https://hootsuite.com/solutions/social-media-management" class="" data-navsrc="nav--level2">Social Media Management</a></li>
+	<li id="menu-item-70290" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70290"><a href="https://hootsuite.com/solutions/social-marketing" class="" data-navsrc="nav--level2">Social Marketing</a></li>
+	<li id="menu-item-70291" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70291"><a href="https://hootsuite.com/solutions/social-selling" class="" data-navsrc="nav--level2">Social Selling</a></li>
+	<li id="menu-item-70292" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70292"><a href="https://hootsuite.com/solutions/social-customer-service" class="" data-navsrc="nav--level2">Social Customer Service</a></li>
+</ul>
+</li>
+<li id="menu-item-70293" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70293"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a>
+<ul class="sub-menu">
+	<li id="menu-item-70294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70294"><a href="https://hootsuite.com/plans/free" class="" data-navsrc="nav--level2">Free</a></li>
+	<li id="menu-item-70295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70295"><a href="https://hootsuite.com/plans/pro" class="" data-navsrc="nav--level2">Pro</a></li>
+	<li id="menu-item-70296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70296"><a href="https://hootsuite.com/plans/enterprise" class="" data-navsrc="nav--level2">Enterprise</a></li>
+	<li id="menu-item-70297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70297"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level2">Compare Plans</a></li>
+</ul>
+</li>
+<li id="menu-item-70298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70298"><a href="https://hootsuite.com/services" class="" data-navsrc="nav--level1">Services</a>
+<ul class="sub-menu">
+	<li id="menu-item-70299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70299"><a href="https://hootsuite.com/services/professional-services" class="" data-navsrc="nav--level2">Professional Services</a></li>
+	<li id="menu-item-70301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70301"><a href="https://hootsuite.com/services/education" class="" data-navsrc="nav--level2">Education</a></li>
+	<li id="menu-item-70300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70300"><a href="https://hootsuite.com/services/partner-programs" class="" data-navsrc="nav--level2">Partner Programs</a></li>
+	<li id="menu-item-70302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70302"><a href="https://hootsuite.com/developers/app-directory" class="" data-navsrc="nav--level2">Developers</a></li>
+	<li id="menu-item-70303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70303"><a href="https://hootsuite.com/services/support" class="" data-navsrc="nav--level2">Support</a></li>
+</ul>
+</li>
+<li id="menu-item-70304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70304"><a href="http://blog.hootsuite.com/category/resources/" class="" data-navsrc="nav--level1">Resources</a>
+<ul class="sub-menu">
+	<li id="menu-item-70305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70305"><a href="http://blog.hootsuite.com/category/resources/" class="" data-navsrc="nav--level2">Resource Library</a></li>
+	<li id="menu-item-70306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70306"><a href="https://hootsuite.com/webinars" class="" data-navsrc="nav--level2">Webinars</a></li>
+	<li id="menu-item-70307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70307"><a href="http://blog.hootsuite.com/" class="" data-navsrc="nav--level2">Blog</a></li>
+	<li id="menu-item-83903" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83903"><a href="https://hootsuite.com/customers" class="" data-navsrc="nav--level2">Customers</a></li>
+	<li id="menu-item-83904" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-83904"><a href="https://hootsuite.com/help" class="" data-navsrc="nav--level2">Help</a></li>
+</ul>
+</li>
+<li id="menu-item-70308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-70308"><a href="https://hootsuite.com/about" class="" data-navsrc="nav--level1">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-70309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70309"><a href="https://hootsuite.com/about/careers" class="" data-navsrc="nav--level2">Careers</a></li>
+	<li id="menu-item-70310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70310"><a href="https://hootsuite.com/about/contact" class="" data-navsrc="nav--level2">Contact Us</a></li>
+	<li id="menu-item-70311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70311"><a href="https://hootsuite.com/about/leadership" class="" data-navsrc="nav--level2">Leadership</a></li>
+	<li id="menu-item-70312" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70312"><a href="http://media.hootsuite.com/press-releases/" class="" data-navsrc="nav--level2">Press</a></li>
+	<li id="menu-item-70313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70313"><a href="https://hootsuite.com/about/media-kit" class="" data-navsrc="nav--level2">Media Kit</a></li>
+	<li id="menu-item-70314" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70314"><a href="http://media.hootsuite.com/events/" class="" data-navsrc="nav--level2">Events</a></li>
+	<li id="menu-item-70315" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70315"><a href="https://hootsuite.com/about/community" class="" data-navsrc="nav--level2">Community</a></li>
+	<li id="menu-item-70316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70316"><a href="https://hootsuite.com/about/hootgiving" class="" data-navsrc="nav--level2">HootGiving</a></li>
+	<li id="menu-item-70317" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70317"><a href="http://shop.hootsuite.com" class="" data-navsrc="nav--level2">Hootsuite Shop</a></li>
+	<li id="menu-item-70329" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-70329"><a href="https://hootsuite.com/security" class="" data-navsrc="nav--level2">Security</a></li>
+</ul>
+</li>
+</ul>                        </nav>
+                        <div class="secondary-links">
+                            <nav class="nav legal-links" role="navigation">
+                                <ul class="utility list-inline">
+                                    <li><a href="https://hootsuite.com/legal/terms">Terms &amp; Conditions</a></li>
+                                    <li><a href="https://hootsuite.com/legal/privacy">Privacy Policy</a></li>
+                                    <li><a href="https://hootsuite.com/legal/copyright">Copyright</a></li>
+                                </ul>
+                            </nav>
+                            <div class="col-md-4">
+                                                                                                    <select class="input-sm _languageSwitcher">
+                                                                                                                                                                                                                            <option value="http://blog.hootsuite.com/podium-best-practices-for-sharing-content-across-social-networks/" selected>English</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/fr/?i8ln_id=89379" >Français</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/de/?i8ln_id=89379" >Deutsch</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/id/?i8ln_id=89379" >Bahasa Indonesia</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/it/?i8ln_id=89379" >Italiano</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/ja/?i8ln_id=89379" >日本語</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/pt-br/?i8ln_id=89379" >Português</option>
+                                                                                                                                                                            <option value="http://blog.hootsuite.com/es/?i8ln_id=89379" >Español</option>
+                                                                                                                        </select>
+                                                            </div>
+                            <div class="social social-links">
+                                <a class="rss small" href="http://blog.hootsuite.com/feed/"></a>
+                                                                                                                                            <a target="_bank" class="twitter small" href="https://twitter.com/Hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="facebook small" href="https://www.facebook.com/hootsuite"></a>
+                                                                                                                                                                                                                    <a target="_bank" class="google-plus small" href="https://plus.google.com/+HootSuite/"></a>
+                                                                                                                                                <a target="_bank" class="linkedin small" href="http://www.linkedin.com/company/hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="youtube small" href="https://www.youtube.com/user/hootsuite"></a>
+                                                                                                                                                <a target="_bank" class="instagram small" href="http://instagram.com/hootsuite"></a>
+                                                                                                </div>   
+                        </div>
+                        <div class="row">
+                            <div class="text-center copyright">
+                                <p>&copy; 2016 HootSuite Media Inc. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /m-content-inner -->
+        </div>
+        <!-- /m-content -->
+        <nav id="off-canvas-1" class="menu m-menu" role="navigation">
+          <div class="hs-logins">
+            <ul>
+              <li data-auth="out"><a class="login btn btn-sm btn-success" href="https://hootsuite.com/plans">Sign Up</a></li>
+              <li data-auth="in"><a class="login btn btn-sm btn-success" href="https://hootsuite.com/dashboard">Dashboard</a></li>
+            </ul>
+          </div>
+            <ul id="menu-main-mobile-menu" class="menu"><li id="menu-item-82399" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82399"><a href="https://hootsuite.com/products" class="" data-navsrc="nav--level1">Products</a></li>
+<li id="menu-item-82400" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82400"><a href="https://hootsuite.com/solutions" class="" data-navsrc="nav--level1">Solutions</a></li>
+<li id="menu-item-82401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82401"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Plans</a></li>
+<li id="menu-item-82402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82402"><a href="https://hootsuite.com/customers" class="" data-navsrc="nav--level1">Customers</a></li>
+<li id="menu-item-82403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82403"><a href="https://hootsuite.com/resources" class="" data-navsrc="nav--level1">Resources</a></li>
+<li id="menu-item-82404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82404"><a href="https://hootsuite.com/about" class="" data-navsrc="nav--level1">About Us</a></li>
+</ul>            <ul id="menu-utility-mobile-menu" class="sm"><li id="menu-item-82414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82414" data-auth="out"><a href="https://hootsuite.com/plans" class="" data-navsrc="nav--level1">Free Trial</a></li>
+<li id="menu-item-82415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-82415"><a href="http://blog.hootsuite.com/" class="" data-navsrc="nav--level1">Blog</a></li>
+<li id="menu-item-82416" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82416"><a href="https://hootsuite.com/help" class="" data-navsrc="nav--level1">Help</a></li>
+<li id="menu-item-82417" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82417"><a href="https://hootsuite.com/about/careers" class="" data-navsrc="nav--level1">Careers</a></li>
+<li id="menu-item-82418" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82418"><a href="https://hootsuite.com/about/contact-us" class="" data-navsrc="nav--level1">Contact Us</a></li>
+<li id="menu-item-82419" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82419" data-auth="out"><a href="https://hootsuite.com/login" class="" data-navsrc="nav--level1">Log In</a></li>
+<li id="menu-item-82420" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82420" data-auth="in"><a href="https://hootsuite.com/logout" class="" data-navsrc="nav--level1">Log Out</a></li>
+</ul>        </nav>
+    </div>
+    <!-- /m-pusher -->
+</div>
+<!-- /m-container -->
+<div id="newsletter-modal" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Thank You</h4>
+            </div>
+            <div class="modal-body">
+                <div id="mktoForm-2645" class="marketo-form" data-formid="2645"></div>
+                <div id="mktoForm-2646" class="marketo-form" data-formid="2646"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<!-- /// LOAD CHARTBEAT /// -->
+		<script type="text/javascript">
+		var _sf_async_config={};
+		_sf_async_config.uid = 48619;
+		_sf_async_config.useCanonical = true;
+		
+		(function(){
+		  function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			   (("https:" == document.location.protocol) ? "https://" : "http://") +
+			   "static.chartbeat.com/js/chartbeat.js");
+			document.body.appendChild(e);
+		  }
+		  var oldonload = window.onload;
+		  window.onload = (typeof window.onload != 'function') ?
+			 loadChartbeat : function() { try { oldonload(); } catch (e) { loadChartbeat(); throw e} loadChartbeat(); };
+		})();
+		</script>
+		<!-- BEGIN KAPOST ANALYTICS CODE -->
+<script type="text/javascript">
+<!--
+var _kaq = _kaq || [];
+_kaq.push([2, '562e95839045f5b9cb00000a', '53a9c234ae47423a7300000a']);
+(function(){
+var scheme = location.protocol == 'https:' ? location.protocol : 'http:';
+var ka = document.createElement('script'); ka.async=true; ka.id='ka_tracker'; ka.src= scheme + '//analytics.kapost.com/ka.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ka, s);
+})();
+//-->
+</script>
+<!-- END KAPOST ANALYTICS CODE --><script type="text/javascript">
+    var livefyre_auth_loaded = false;
+</script>
+    <script type="text/javascript">
+        var load_livefyre_auth = function() {
+            if(!livefyre_auth_loaded) {
+                Livefyre.require(['auth'], function(auth) {
+                    auth.delegate(auth.createDelegate('http://livefyre.com'));
+                });
+            }
+            livefyre_auth_loaded = true;
+        };
+    </script>
+
+<script type="text/javascript">
+    var networkConfigComments = {
+        network: "livefyre.com"
+    };
+    var convConfigComments89379 = {
+        siteId: "332321",
+        articleId: "89379",
+        el: "livefyre-comments",
+        collectionMeta: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJodHRwOlwvXC9ibG9nLmhvb3RzdWl0ZS5jb21cL3BvZGl1bS1iZXN0LXByYWN0aWNlcy1mb3Itc2hhcmluZy1jb250ZW50LWFjcm9zcy1zb2NpYWwtbmV0d29ya3NcLyIsInRpdGxlIjoiNyBTaW1wbGUgQmVzdCBQcmFjdGljZXMgZm9yIFNoYXJpbmcgQ29udGVudCBBY3Jvc3MgU29jaWFsIE5ldHdvcmtzIiwiYXJ0aWNsZUlkIjo4OTM3OSwidGFncyI6W10sInR5cGUiOiJsaXZlY29tbWVudHMifQ.dsAFHNyfwSgpxHvvocjxmZUIb0Mhy98zelWQ3By7nzA",
+        checksum: "4ce6091ba49d101daa6dc22027fe8b02"
+    };
+    if (typeof (liveCommentsConfig) !== 'undefined') {
+        convConfigComments89379 = Livefyre.LFAPPS.lfExtend(liveCommentsConfig, convConfigComments89379);
+    }
+
+    Livefyre.require(['fyre.conv#3'], function (ConvComments) {
+        load_livefyre_auth();
+        new ConvComments(networkConfigComments,
+                [convConfigComments89379],
+                function (commentsWidget) {
+                    var livecommentsListeners = Livefyre.LFAPPS.getAppEventListeners('livecomments');
+                    if (livecommentsListeners.length > 0) {
+                        for (var i = 0; i<livecommentsListeners.length; i++) {
+                            var livecommentsListener = livecommentsListeners[i];
+                            commentsWidget.on(livecommentsListener.eventName, livecommentsListener.callback);
+                        }
+                    }
+                }
+        );
+    });
+</script><script type="text/javascript" data-lf-domain="livefyre.com" id="ncomments_js" src="http://cdn.livefyre.com/libs/commentcount/v1.0/commentcount.js"></script><link rel='stylesheet' id='slickquiz_css-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/slickquiz/css/slickQuiz.css?ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='slickquiz_front_css-css'  href='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/css/front.css?ver=4.4.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/themes/hootsuite-2.0/assets/js/scripts-footer.min.js?ver=3.1.52'></script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icl_vars = {"current_language":"en","icl_home":"http:\/\/blog.hootsuite.com\/","ajax_url":"https:\/\/blog.hootsuite.com\/wp-admin\/admin-ajax.php","url_type":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/sitepress-multilingual-cms/res/js/sitepress.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://hootsuite-blog-assets.s3.amazonaws.com/wp-content/plugins/slickquiz/slickquiz/js/slickQuiz.js?ver=4.4.2'></script>
+    <script>LF.CommentCount({ replacer: function(element, count) { element.innerHTML = count +' Comment'+ (count === 1 ? '' : 's'); } });</script>
+    <script>
+        (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+<div style="display:none">
+    <script>
+        /* <![CDATA[ */
+        var google_conversion_id = 1004013306;
+        var google_conversion_label = "sVJjCPa2_AQQ-o3g3gM";
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+    <script src="//www.googleadservices.com/pagead/conversion.js"></script>
+    <noscript>
+        <div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1004013306/?value=0&amp;label=sVJjCPa2_AQQ-o3g3gM&amp;guid=ON&amp;script=0"/></div>
+    </noscript>
+</div>
+<script>
+    (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/125827.js';
+        e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+</script>
+<script>
+    var _kiq = _kiq || [];
+    (function($) {
+        _kiq.push(['eventHandler', 'show', function() {
+
+            var qualarooTimer = setInterval(function(){
+                if($('#qual_ol').length > 0 ) {
+                    //Select the first required field label and button in the survey
+                    var reqField = document.querySelector('.qual_ol_reqd');
+                    var sendBtn = document.getElementById('qual_ol_send');
+
+                    if(reqField !== null && sendBtn !== null) {
+                        reqField.innerHTML = '*' + qualaroo.requiredField;
+                        sendBtn.innerHTML = qualaroo.send + '<div class="qual_ol_btn_dot"><div class="qual_ol_btn_dot_gt"></div></div>';
+                    }
+
+                    //Clear it!
+                    clearInterval(qualarooTimer);
+                }
+            }, 75);
+        }]);
+    })(jQuery);
+</script>
+<!-- Release Notify -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"923a018eb7","applicationID":"12447397","transactionName":"YARbMEBWWUMAVxJZWFlOeAdGXlheTkcPXlBbBA==","queueTime":0,"applicationTime":374,"atts":"TENYRghMSk0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Content Delivery Network via Amazon Web Services: S3: hootsuite-blog-assets.s3.amazonaws.com
+Application Monitoring using New Relic
+
+ Served from: blog.hootsuite.com @ 2016-02-18 10:17:43 by W3 Total Cache -->

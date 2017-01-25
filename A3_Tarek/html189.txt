@@ -1,0 +1,315 @@
+<!--
+ ______   __     ______     __  __     ______   ______     __   __
+/\__  _\ /\ \   /\  ___\   /\ \_\ \   /\__  _\ /\  ___\   /\ "-.\ \
+\/_/\ \/ \ \ \  \ \ \__ \  \ \  __ \  \/_/\ \/ \ \  __\   \ \ \-.  \
+   \ \_\  \ \_\  \ \_____\  \ \_\ \_\    \ \_\  \ \_____\  \ \_\\"\_\
+    \/_/   \/_/   \/_____/   \/_/\/_/     \/_/   \/_____/   \/_/ \/_/
+
+... Welcome, friends. Most of this HTML is assembled by a CMS, so don't expect pretty indentation.
+
+Find a goof? Hit us up! @tightenco on Twitter.
+--><!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Craft CMS: Building Complex Queries by Extending the ElementCriteriaModel | Blog | Tighten Co. | Product Development for Web, Mobile, and Beyond</title>
+
+    <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@tightenco">
+
+            <meta property="og:title" content="Craft CMS: Building Complex Queries by Extending the ElementCriteriaModel - " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://blog.tighten.co/craft-cms-building-complex-queries-by-extending-the-elementcriteriamodel" />
+<meta property="og:site_name" content="Tighten Blog" />
+<meta property="og:image" content="http://blog.tighten.co/themes/tighten-theme/img/tighten-og-cover.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:description" content="
+One of the great things about Craft, from a developer's point of view, is the amount of flexibility it provides when it comes to working with your site's data, giving you the power to accomplish things that would be difficult or...” />
+
+    
+    <meta name="description" content="Tighten Co. is a product development company based in Chicago. Our clients hire us to turn their ideas in to reality in the form of websites, mobile apps, and more.">
+
+    <link href="/feed" type="application/atom+xml" rel="alternate" title="Tighten.co Blog Atom Feed">
+    <link rel="home" href="http://tighten.co/">
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/7829512/685324/css/fonts.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/github.min.css">
+    <link rel="stylesheet" href="/themes/tighten-theme/css/tighten-theme.css">
+    <!-- The Tighten.co blog is powered by Statamic 2.0. -->
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="header-wrapper">
+            <nav class="main-nav">
+    <div class="nav-title">
+        <a href="http://tighten.co/">
+            <img
+                srcset="/themes/tighten-theme/img/top-nav-logo-black@2x.png 506w, 
+        	         /themes/tighten-theme/img/top-nav-logo-black.png 253w"
+                sizes="253px"
+            	src="/themes/tighten-theme/img/top-nav-logo-black.png"
+            	alt="Tighten Co. Logo">
+        </a>
+    </div>
+    <ul class="nav__items">
+        <li class="nav__item u-hide-under-small" style="display: none; /* NOT THERE YET YOU SOURCE CODE SNIFFERS */">
+            <a href="https://tighten.co/about-us">About Us</a>
+        </li>
+        <li class="nav__item nav__item--active">
+            <a href="/">Blog</a>
+        </li>
+        <li class="nav__item">
+            <a href="http://tighten.co/?contact-us">Contact<span class="u-hide-under-tablet"> Us</span></a>
+        </li>
+    </ul>
+    
+</nav>
+
+        </div>
+
+        <div class="content-wrapper">
+            <div class="content">
+    <header class="post-header">
+        
+
+        <h1 class="post__title">Craft CMS: Building Complex Queries by Extending the ElementCriteriaModel</h1>
+        
+
+        <div class="post-list-meta-alt">
+    <div class="post-list-meta-alt__author">
+        
+        <a href="/authors/keith-damiani" class="post-list-meta-alt__author-name">Keith Damiani</a>
+    </div>
+
+    <span class="post-list-meta-alt__length">9 minute read</span>
+    <time class="post-list-meta-alt__date" datetime="2016-02-10T15:15:00+00:00" title="February 10, 2016">
+                    1 week ago
+            </time>
+</div>
+
+    </header>
+
+    <article class="post">
+        
+        <p><img src="/assets/img/craft-gimme.png" class="u-image-right-inline">
+One of the great things about <a href="https://craftcms.com/">Craft</a>, from a developer's point of view, is the amount of flexibility it provides when it comes to working with your site's data, giving you the power to accomplish things that would be difficult or impossible in other CMSes. Sometimes, though, you might run into limitations of Craft's built-in query methods when trying to retrieve data to display in a template. Fortunately, Craft provides a tool that is useful for building complex queries when the need arises, by using <code>buildElementsQuery</code> to extend an ElementCriteriaModel.</p>
+
+<h2>The ElementCriteriaModel</h2>
+
+<p>Out of the box, Craft makes it simple to retrieve a collection of elements—whether entries, assets, users, tags, or categories—for display in a template. More importantly, it makes it easy to narrow and sort your results by a variety of criteria.</p>
+
+<p>In order to construct the database query that fetches and sorts the data you're interested in, Craft uses an object called the <strong>ElementCriteriaModel</strong>. This model hides the underlying database query logic behind an easy-to-understand API; so, for instance, calling <code>craft.entries</code> in a template returns an ElementCriteriaModel object to which you can apply a variety of parameters, such as:</p>
+
+<pre><code>craft.entries.section('blog').status('pending').limit(20).find()
+</code></pre>
+
+<p>Under the hood, Craft does the work of translating your search criteria into a database query in order to fetch the elements that you are interested in.</p>
+
+<p><span class="pull-quote">Coming from a Laravel background, I think of the ElementCriteriaModel as being similar, in many ways, to the Eloquent ORM.</span></p>
+
+<p>In most cases, these built-in methods of interacting with your data are sufficient, and the query parameters available in Craft offer quite flexible and powerful functionality—allowing you to easily obtain related elements with the <code>relatedTo</code> parameter, to perform full-text <code>search</code> for data using a robust syntax, to <code>order</code> by various values, etc. But occasionally, you might encounter a more complicated instance where the built-in query parameters won't get you what you want. For example, you may want to:</p>
+
+<ul>
+<li>include data from a third-party plugin in your query</li>
+<li>perform a complex <code>join</code> involving data from several tables</li>
+<li>optimize a complex search in order to reduce the number of database queries performed</li>
+<li>group and aggregate results at the database level rather than using the <code>group</code> filter in your Twig template</li>
+</ul>
+
+<p>Coming from a Laravel background, I think of the ElementCriteriaModel as being similar, in many ways, to the Eloquent ORM. And just as Eloquent allows you to take advantage of the lower-level Query Builder when you need to customize or extend a query, Craft gives you the ability to extend the ElementCriteriaModel when you need to construct more complex queries.</p>
+
+<p>The key to doing this is using the <code>buildElementsQuery()</code> method, and following these 3 steps:</p>
+
+<ol>
+<li>Start by setting up an ElementCriteriaModel</li>
+<li>Modify or extend the query using Craft's <code>buildElementsQuery()</code> method</li>
+<li>Execute your customized query and return the results</li>
+</ol>
+
+<p>These steps are described below, followed by an example of how to perform a custom query that includes columns from a third-party plugin's table.</p>
+
+<hr />
+
+<blockquote>
+  <p>Note: Extending the ElementCriteriaModel involves interacting with Craft's underlying classes, and consequently requires a basic understanding of Craft's plugin framework. But fear not, the <a href="https://craftcms.com/docs/plugins/introduction">plugin documentation</a> is very thorough. Plus, we've created an open-source plugin called <a href="https://github.com/tightenco/craft-build-query"><strong>BuildQuery</strong></a> to demonstrate these techniques, which can be used as a starting point for building your own custom queries.</p>
+</blockquote>
+
+<hr />
+
+<h2>Step 1: Obtaining an ElementCriteriaModel</h2>
+
+<p>So to begin with, you must first obtain an instance of the ElementCriteriaModel for whichever element type you are interested in. If searching for a particular set of entries, for example, you can call this:</p>
+
+<pre><code>craft()-&gt;elements-&gt;getCriteria(ElementType::Entry)
+</code></pre>
+
+<p>... and it will generate an ElementCriteriaModel that contains the query logic necessary to collect entries from Craft's database. (This is the same object you would get if you called <code>craft.entries</code> from within a template.) Possible <code>ElementType</code>s include <code>Entry</code>, <code>Asset</code>, <code>Category</code>, <code>Tag</code>, <code>User</code>, <code>MatrixBlock</code>, and <code>GlobalSet</code>. From there, you can add various search criteria to your model using Craft's built-in query parameters—again, just as you would from within your templates.</p>
+
+<p>To mimic this template query:</p>
+
+<pre><code>craft.entries.section('blog').status('pending').limit(20)
+</code></pre>
+
+<p>You would do the following in your plugin:</p>
+
+<pre><code>$criteria = craft()-&gt;elements-&gt;getCriteria(ElementType::Entry);
+$criteria-&gt;section = 'blog';
+$criteria-&gt;status = 'pending';
+$criteria-&gt;limit = 20;
+</code></pre>
+
+<p>At this point, you haven't actually obtained any records—rather, you've set up the queries that Craft will eventually run once you call a fetching method like <code>find()</code> or <code>first()</code>. If you're dealing with a relatively simple query, your work is done; calling <code>find()</code> will give you a model that contains your query results (in this case, the results would be an instance of <code>EntryModel</code>, since we are searching for entries). However, if you need to add criteria to your query that isn't available with the parameters for your <code>ElementType</code>, then your next stop is <code>buildElementsQuery()</code>.</p>
+
+<h2>Step 2: Extending the ElementCriteriaModel with <code>buildElementsQuery()</code></h2>
+
+<p>Like the <code>getCriteria()</code> method that we initially called to set up our model, <code>buildElementsQuery()</code> is a method of Craft's <a href="https://craftcms.com/classreference/services/ElementsService">ElementsService</a> class, an instance of which is globally available using <code>craft()-&gt;elements</code>. The function <code>buildElementsQuery()</code> accepts our prepared ElementCriteriaModel as a parameter, so calling this:</p>
+
+<pre><code>$dbCommand = craft()-&gt;elements-&gt;buildElementsQuery($criteria);
+</code></pre>
+
+<p>... will take our ElementCriteriaModel (which is primed and ready to fetch 20 <code>pending</code> entries from the <code>blog</code> section), and convert it into a <a href="https://craftcms.com/classreference/etc/db/DbCommand"><strong>DbCommand</strong></a> object. Craft is built on the Yii framework, and DbCommand is an extension of Yii's <a href="http://www.yiiframework.com/doc/api/1.1/CDbCommand">CDbCommand</a> class; DbCommand is the lower-level object that Craft uses to build and execute the SQL query. Having converted the ElementCriteriaModel into a DbCommand object, you are now free to continue adding criteria to your query, using any of the methods that are available to DbCommand.</p>
+
+<p>Note that once <code>buildElementsQuery()</code> is called, Craft executes the initial <code>ElementType</code> query, along with any full-text <code>search</code> criteria that were added to the ElementCriteriaModel. So if <code>$dbCommand</code> comes back <code>null</code>, there's no point in continuing by further limiting our query. Instead, we can immediately return an empty set of entries:</p>
+
+<pre><code>if (! $dbCommand) {
+    return EntryModel::populateModels(null);
+}
+</code></pre>
+
+<p>If, however, <code>buildElementsQuery()</code> returns a result, then we can continue adding our complex query criteria to the resulting DbCommand. We have access to <a href="https://craftcms.com/classreference/etc/db/DbCommand">all the methods available on the DbCommand class</a>; so, for example, we can join tables from a third-party plugin by adding <code>$dbCommand-&gt;leftJoin(...)</code>, select unique elements with <code>setDistinct()</code>, add complex GROUP BY or HAVING clauses with <code>setGroup()</code> or <code>setHaving()</code>, build nested sub-queries, etc.</p>
+
+<h2>Step 3: Obtaining an Craft element model with our results</h2>
+
+<p>Once we've modified the DbCommand object, calling <code>$dbCommand-&gt;queryAll()</code> will execute our query and return the results as an array. <a href="#craft-25-footnote">*</a></p>
+
+<p>There's one final step remaining: we need to convert the result array into an element model that Craft can work with in a template. The simplest way to do that is by passing the array of results to the <code>populateModels</code> method of the element's base model; in our case, since we have been searching for entries, we would use an EntryModel, and return:</p>
+
+<pre><code>return EntryModel::populateModels($dbCommand-&gt;queryAll());
+</code></pre>
+
+<p>At this point, we have a result model just as if we had called <code>find()</code> on our original ElementCriteriaModel, but which takes into account the additional query criteria that we specified after calling <code>buildElementsQuery()</code>. We can pass this model to our template, and loop over it to display our results.</p>
+
+<p>Alternatively, we can populate a custom model that extends EntryModel—this is useful if, for instance, we need to add some custom attributes to our model. The example query performed in the <a href="https://github.com/tightenco/craft-build-query">BuildQuery plugin</a> adds a <code>workCount</code> attribute to the results, so we need to set the <code>strictAttributes</code> parameter on our model to <code>false</code> so that we have access to the new <code>workCount</code> attribute. Take a look at the <a href="https://github.com/tightenco/craft-build-query/blob/master/buildquery/models/BuildQueryModel.php#L12">BuildQueryModel</a> to see this in action.</p>
+
+<hr />
+
+<h2>Real world example</h2>
+
+<p>A common use case for using <code>buildElementsQuery()</code> is to search for data from a table that is used by a third-party plugin.</p>
+
+<p>For a recent project, we used the <a href="https://craftpl.us/plugins/smart-map/">SmartMap plugin</a> to store location data—address information and latitude/longitude coordinates—for our entries, allowing us to take advantage of SmartMap's excellent mapping and distance-based search capabilities. However, we also needed to build queries for entries that took into account other search criteria in addition to SmartMap's address fields. For instance, we needed to build a query for all entries from a particular category, with particular tags, grouped by a subtitle field, and with a particular state or zip code. State and zip code data are stored in the SmartMap plugin's table, not in Craft's content table.</p>
+
+<p>Using <code>buildElementsQuery()</code>, we were able to start with our mostly-populated ElementCriteriaModel, then <code>join</code> SmartMap's table <code>craft_smartmap_addresses</code> so that we could include the state or zip code criteria in our query:</p>
+
+<pre><code>$criteria = craft()-&gt;elements-&gt;getCriteria(ElementType::Entry);
+$criteria-&gt;state = 'addresses.IL';
+$criteria-&gt;relatedTo = ...
+$dbCommand = craft()-&gt;elements-&gt;buildElementsQuery($criteria);
+$dbCommand-&gt;leftJoin("craft_smartmap_addresses", "addresses.elementId = entries.id");
+
+return EntryModel::populateModels($dbCommand-&gt;queryAll());
+</code></pre>
+
+<p>When it comes to the query power that is now available to you, this is only the tip of the proverbial iceberg; complex joins, optimized searches, aggregated group-by's and complicated nested queries are all within your grasp. Using this method, for example, we were able to build a single query that grouped results by a particular field, sorted them by location data obtained from a third-party table, and paginated them in a manner that took into account the number of parent records, while ignoring the children:</p>
+
+<pre><code>5 results per page:
+
+    Parent 1
+        Child a
+        Child b
+    Parent 2
+    Parent 3
+        Child c
+    Parent 4
+        Child d
+        Child e
+        Child f
+    Parent 5
+        Child g
+
+&lt; 1 2 3 4 ... 10 11 &gt;
+</code></pre>
+
+<h2>Bonus! Using <code>buildElementsQuery()</code> for query troubleshooting</h2>
+
+<p>Queries can quickly become very complex. Fortunately, the DbCommand object that is obtained when calling <code>buildElementsQuery()</code> offers an extremely useful <code>getText()</code> method, allowing you to view the underlying SQL statement that you have been building. In addition, the DbCommand object's <code>params</code> property contains an associative array of the parameters that are bound to your current query. So this line:</p>
+
+<pre><code>Craft::dd(
+    str_replace(
+        array_keys($dbCommand-&gt;params),
+        array_values($dbCommand-&gt;params), $dbCommand-&gt;getText()
+    )
+);
+</code></pre>
+
+<p>will dump the entire prepared SQL statement for whatever query you are building, which can be very helpful for debugging convoluted queries involving <code>join</code>, <code>group by</code>, or <code>having</code> clauses. Even if you're not extending your query, it can often be useful to convert your ElementCriteriaModel to a DbCommand and run <code>getText()</code> to see the full SQL query that's hiding underneath.</p>
+
+<p><a name="craft-25-footnote"></a></p>
+
+<blockquote>
+  <p>&#42; Prior to Craft version 2.5, <code>buildElementsQuery()</code> would strip out any <code>order</code>, <code>limit</code>, and <code>offset</code> elements form the ElementCriteriaModel when it was converted to a DbCommand, requiring that those be added back in before calling <code>queryAll()</code>. This has been fixed in version 2.5.</p>
+</blockquote>
+
+
+                    
+        
+    </article>
+
+    
+</div>
+
+        </div>
+        <div class="footer-wrapper">
+    <footer class="main-footer u-margin-bottom-xl">
+        <hr class="divider--muted u-vert-margin-lg">
+
+        <ul class="social-icons">
+            <li><a href="http://twitter.com/tightenco"><div class="social-icon social-icon--twitter"></div></a></li>
+            <li><a href="http://github.com/tightenco"><div class="social-icon social-icon--github"></div></a></li>
+            <li><a href="http://www.builtinchicago.org/company/tighten-co"><div class="social-icon social-icon--built-in-chicago"></div></a></li>
+        </ul>
+
+        <p>Copyright 2016 <a href="http://tighten.co/">Tighten Co.</a></p>
+
+        <a href="http://tighten.co/" class="main-footer__mark"></a>
+    </footer>
+</div>
+
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        console.log('%c                     \n  What\'s up, geeks?  \n                     ', 'background: #222; color: #bada55');
+    </script>
+    <script type="text/javascript">
+        var hover_preloads = [
+            "/themes/tighten-theme/img/social/social-twitter--hover.png",
+            "/themes/tighten-theme/img/social/social-twitter--hover@2x.png",
+            "/themes/tighten-theme/img/social/social-github--hover.png",
+            "/themes/tighten-theme/img/social/social-github--hover@2x.png",
+            "/themes/tighten-theme/img/social/social-built-in-chicago--hover.png",
+            "/themes/tighten-theme/img/social/social-built-in-chicago--hover@2x.png",
+            "/themes/tighten-theme/img/footer-mark--hover.png",
+            "/themes/tighten-theme/img/footer-mark--hover@2x.png"
+        ];
+        var preload_images = [];
+        for (var i = 0; i < hover_preloads.length; i++) {
+            preload_images[i] = new Image();
+            preload_images[i].src = hover_preloads[i];
+        }
+    </script>
+        <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53203205-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    </body>
+</html>

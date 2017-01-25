@@ -1,0 +1,489 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>gala-benefica-fundacion-pichichi:Social:Real Club JOLASETA</title>
+	<link title="Página principal" href="/" rel="start" />
+	<!-- MOBILE -->
+	<meta name="viewport" id="vp" content="initial-scale=1.0,user-scalable=yes,width=device-width" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+	<!-- MOBILE -->
+	<!-- METAS -->
+	<meta name="robots" content="NOODP" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+	<link rel="stylesheet" href="/includes/estilos.css"/>
+  <link rel='stylesheet' type='text/css' href='/includes/jquery/css/labrys-theme/jquery-ui-1.10.4.custom.css' />
+</head>
+
+<body>
+	<div id="fondo">
+		<div class="posicionadora">
+			<!-- cabecera -->
+			<div id="cabecera">
+				<header id="cabeceraPpal">
+					<h1>gala-benefica-fundacion-pichichi:Social</h1>
+						
+				<div id="zonaLogoSocial">
+					<div id="zonaLogo">
+						<a href="/" id="logo"><img src="/images/general/logo.jpg" width="408" height="107" alt="Jolaseta"></a>
+					</div>
+					<div id="zonaSocial">
+						<ul>
+							<li><a id="cabTelefono" class="lnkTelefono" rel="nofollow" href="tel:944911525"><span class="telefono">94 491 15 25</span><img src="/images/botones/cabecera/telefono.png" alt="Llamanos" height="25" width="27" alt="Llamanos"></a></li>
+							<li><a id="cabMensaje" rel="nofollow" href="mailto:registro@jolaseta.com"><img src="/images/botones/cabecera/mensaje.png" alt="Mandanos un mensaje" height="25" width="27"></a></li>
+							<li><a id="cabTwitter" rel="nofollow" href="https://twitter.com/RCJolaseta"><img src="/images/botones/cabecera/twitter.png" alt="Siguenos twitter" height="25" width="25"></a></li>
+						</ul>
+						<div id="zonaBuscador">
+							<form id="frmBuscador" action="/buscador/" method="post">
+								<fieldset title="Buscador de contenidos">
+									<label for="txtBusqueda">
+										<span class="oculto"><span>Buscar</span></span>
+										<span><input type="text" id="txtBusqueda" name="textoBusqueda" placeholder="Buscar..." value="" /></span>
+									</label>
+								
+									<input type="hidden" id="accBuscador" name="accion" value="Buscar" />
+								</fieldset>
+							</form>						
+						</div>
+						
+					</div>
+				</div>
+				<div id="zonaMenu">
+					<nav id="menu">
+						<div id="menumovil"><label for="chk_menu"><img id="iconoMenu" width="48" height="48" src="/images/includes/menuMovil.png" alt="MENÚ DE NAVEGACIÓN" /> <span>MENÚ</span></label></div>
+						<input type="checkbox" class="chkMenu" id="chk_menu" name="chk_menu" />
+						<ul id="nav" class="dropdown">
+							<li class="dir">
+								<label id="lblClub" for="chk_submenu1">club</label>
+								<a id="lnkClub" href="/club/"><span class="titulo">club</span></a>
+								<input type="checkbox" class="chkMenu" id="chk_submenu1" name="chk_submenu2" />
+								<div class="desplegable">
+									<div class="megamenu">
+										<ul>
+											<li>
+												<a href="/club/presentacion.html" title="Historia y presentación del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/historia.jpg" alt="Historia y presentación del club deportivo Jolaseta">
+														<span class="titulofoto">Presentación</span>
+														</div>
+														<p>> Un Club deportivo y social con más de 80 años de historia </p>
+													</div>
+												</a>
+											</li>
+											<!--li>
+												<a href="/club/presentacion.html" title="Presentación del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/presentacion.jpg" alt="Presentación del club deportivo Jolaseta">
+														<span class="titulofoto">Presentacion</span>
+														</div>
+														<p>> Un Club deportivo y social con más de 80 años de historia  </p>
+													</div>
+												</a>
+											</li-->
+											<li>
+												<a href="/club/horario.html" title="Horario del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/horario.jpg" alt="Horario del club deportivo Jolaseta">
+														<span class="titulofoto">Horario</span>
+														</div>
+														<p>> Horario de reservas, de oficina e instalaciones  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/club/instalaciones-deportivas.html" title="Instalaciones deportivas del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/instalaciones_deportivas.jpg" alt="Instalaciones deportivas del club deportivo Jolaseta">
+														<span class="titulofoto">Inst. Deportivas</span>
+														</div>
+														<p>> Un repaso a las instalaciones deportivas que el Club ofrece  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/club/instalaciones-sociales.html" title="Instalaciones sociales del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/instalaciones_sociales.jpg" alt="Instalaciones sociales del club deportivo Jolaseta">
+														<span class="titulofoto">Inst. Sociales</span>
+														</div>
+														<p>> Edificio Social con cafetería, comedor y salones sociales  </p>
+													</div>
+												</a>
+											</li>
+										</ul>
+										<div class="clearFix"></div>
+									</div>
+								</div>
+							
+							
+							</li>
+							<li class="dir">
+								<label id="lblSocial" for="chk_submenu2">social</label>
+								<a id="lnkSocial" href="/social/"><span class="titulo">social</span></a>
+								<input type="checkbox" class="chkMenu" id="chk_submenu2" name="chk_submenu2" />
+								<div class="desplegable">
+									<div class="megamenu">
+										<ul>
+											<li>
+												<a href="/social/" title="Noticias sociales del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/social.jpg" alt="Noticias sociales del club deportivo Jolaseta">
+														<span class="titulofoto">Noticias Sociales</span>
+														</div>
+														<p>> Toda la actualidad de los eventos sociales que se organizan  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/social/hosteleria/" title="Información Hostelera del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/hosteleria.jpg" alt="Información Hostelera del club deportivo Jolaseta">
+														<span class="titulofoto">Hostelería</span>
+														</div>
+														<p>> Un amplio servicio de cafetería y restaurante  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/social/publicaciones/" title="Publicaciones del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/publicaciones.jpg" alt="NPublicaciones del club deportivo Jolaseta">
+														<span class="titulofoto">Publicaciones</span>
+														</div>
+														<p>> Consulta y descarga la revista oficial del Real Club Jolaseta!  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/social/reformas/" title="Noticias de reformas del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/reformas.jpg" alt="Noticias de reformas del club deportivo Jolaseta">
+														<span class="titulofoto">Reformas</span>
+														</div>
+														<p>> Últimas novedades del Plan de Reforma Continua de Instalaciones  </p>
+													</div>
+												</a>
+											</li>
+										</ul>
+										<div class="clearFix"></div>
+									</div>
+								</div>
+							</li>
+							<li class="dir">
+								<label id="lblInstitucional" for="chk_submenu3">institucional</label>
+								<a id="lnkInstitucional" href="/institucional/"><span class="titulo">institucional</span></a>
+								<input type="checkbox" class="chkMenu" id="chk_submenu3" name="chk_submenu2" />
+								<div class="desplegable">
+									<div class="megamenu ">
+										<ul>
+											<li>
+												<a href="/institucional/junta-directiva.html" title="Junta directiva del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/junta_directiva.jpg" alt="Junta directiva del club deportivo Jolaseta">
+														<span class="titulofoto">Junta Directiva</span>
+														</div>
+														<p>> Los miembros que conforman el órgano directivo del Club  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/institucional/correspondencia.html" title="Correspondencia del club deportivo Jolaseta con otros clubes">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/correspondencia.jpg" alt="Correspondencia del club deportivo Jolaseta con otros clubes">
+														<span class="titulofoto">Correspondencia</span>
+														</div>
+														<p>> Listado de clubes con los que se mantiene correspondencia  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/institucional/impresos-y-documentos/" title="Impresos y documentos del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/impresosydocumentos.jpg" alt="Impresos y documentos del club deportivo Jolaseta">
+														<span class="titulofoto">Impresos y Documentos</span>
+														</div>
+														<p>> Documentos de alta, baja o reingreso, normativas, etc </p>
+													</div>
+												</a>
+											</li>
+											<li></li>
+											<!--li>
+												<a href="/institucional/convenios.html" title="Convenios del club deportivo Jolaseta">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/historia.jpg" alt="Convenios del club deportivo Jolaseta">
+														<span class="titulofoto">Convenios</span>
+														</div>
+														<p>> Lorem ipsum dolor sit amet, consectetur adipiscing elit  </p>
+													</div>
+												</a>
+											</li-->
+										</ul>
+										<div class="clearFix"></div>
+									</div>
+								</div>
+							</li>
+							<li class="dir">
+								<label id="lblDeportivo" for="chk_submenu4">deportivo</label>
+								<a id="lnkDeportivo" href="/deportivo/"><span class="titulo">deportivo</span></a>
+								<input type="checkbox" class="chkMenu" id="chk_submenu4" name="chk_submenu2" />
+								<div class="desplegable">
+									<div class="megamenu">
+										<ul>
+											<li>
+												<a href="/deportivo/tenis/" title="Sección deportiva de Tenis">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/tenis.jpg" alt="noticias de tenis">
+														<span class="titulofoto">Tenis</span>
+														</div>
+														<p>> Actualidad de la sección de tenis del Real Club Jolaseta  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/deportivo/padel/" title="Sección deportiva de padel">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/padel.jpg" alt="noticias de padel">
+														<span class="titulofoto">Padel</span>
+														</div>
+														<p>> Actualidad de la sección de pádel del Real Club Jolaseta  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/deportivo/hockey-hierba/" title="Sección deportiva de Hockey Hierba">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/hockey-hierba.jpg" alt="noticias de Hockey Hierba">
+														<span class="titulofoto">Hockey Hierba</span>
+														</div>
+														<p>> Actualidad de la sección de hockey hierba de Jolaseta </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/deportivo/hockey-patines/" title="Sección deportiva de Hockey Patines">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/hockey-patines.jpg" alt="noticias de Hockey Patines">
+														<span class="titulofoto">Hockey Patines</span>
+														</div>
+														<p>> Actualidad de la sección de hockey patines de Jolaseta  </p>
+													</div>
+												</a>
+											</li>
+											<li>
+												<a href="/deportivo/otros-deportes/" title="Sección deportiva de Otros Deportes">
+													<div class="caja-enlace">
+														<div class="caja-foto">
+														<img src="/images/general/otros-deportes.jpg" alt="noticias de otros deportes">
+														<span class="titulofoto">Otros Deportes</span>
+														</div>
+														<p>> Actualidad de otros deportes en Jolaseta  </p>
+													</div>
+												</a>
+											</li>
+										</ul>
+										<div class="clearFix"></div>
+									</div>
+								</div>
+							</li>
+							<li><a id="lnkContacto" href="/club/localizacion-y-contacto.html"><span class="titulo">contacto</span></a></li>
+							<li id="cierreMenu"><label for="chk_menu" title="cerrar menu"><a href="#menu">Cerrar menú</a></label></li>
+						</ul>
+						<div id="overMenu"></div>
+					</nav>
+					<div id="area-socios" class="noidentificado">
+					
+					<label for="chk_areasocios"><span>ÁREA DE SOCIOS</span></label>
+					</div>
+					<input type="checkbox" class="chkMenu" id="chk_areasocios" name="chk_areasocios" />
+					<div id="formAccesoArea">
+							
+							
+					
+						<div id="zonaIdentificado">
+							<div class="contenido">
+								<p>Identifícate para acceder a los contenidos privados y a la Oficina Virtual</p>
+							</div>
+						</div>
+						<form id="frmAcceso" method="post" action="/acceso-de-usuario.html">
+							<fieldset>
+								<label class="isPHolder">
+									<span>Nº de socio (los 6 dígitos)</span>
+									<span><input class="txtCentro" type="text" placeholder="Nº socio (6 dígitos)" id="usuario" maxlength="6" name="usuario" value="" /></span>
+								</label>
+								<label class="isPHolder">
+									<span>Contraseña</span>
+									<span><input class="txtCentro" type="password" id="passwd" maxlength="8" name="password" value="" /></span>
+								</label>
+								<div>
+									<input type="submit" class="boton a100" name="accion" id="btnEntrar" value="Entrar" />
+									
+								</div>
+							</fieldset>
+						</form>
+						
+					
+							
+							
+					</div>
+					
+					
+				</div>
+
+				</header>	
+			</div>
+			<!-- cabecera -->
+			<div id="cuerpo" >
+				<div id="dosCol">
+					<!-- col izquierda -->
+					<main class="detalleNoticia" id="colIzda">
+						<header>
+							<h2 class="titulo"><span>GALA BENÉFICA FUNDACIÓN PICHICHI</span></h2>
+							<h3 class="subtitulo"><span>CON CENA Y CONCIERTO DE 'MODESTIA APARTE'</span></h3>
+							<p class="resumen">El sábado 5 de marzo el Club acogerá la Gala Benéfica 2016 de la Fundación Pichichi. El programa contará con una cena y concierto del reconocido grupo de pop rock español 'Modestia Aparte'. Habrá también sorteo de grandes regalos.</p>
+						</header>
+						<div class="noticiaEditor">
+								
+									<p class="MsoNormal" style="text-align: justify">El próximo sábado
+5 de marzo el Club acogerá la Gala Benéfica 2016 de la Fundación
+Pichichi. El programa contará con una cena y música de bienvenida a
+cargo del grupo Venice, sorteo de grandes regalos (incluida la
+asistencia a un rally solidario en África como copiloto de un
+coche) y concierto del reconocido grupo de pop rock español
+'Modestia Aparte', precedido de uno grupo de teloneros.</p>
+<p class="MsoNormal" style="text-align: justify">Cena y concierto:
+Reservas en Hostelería. Socios a partir del lunes 15 de febrero a
+las 18:00 horas. No Socios a partir del jueves 18 a las 18:00
+horas. 50 euros/persona</p>
+<p class="MsoNormal" style="text-align: justify">Concierto:
+Entradas en Administración a partir del lunes 22 de febrero. 25
+euros con consumición.</p>
+<p class="MsoNormal" style="text-align: justify">
+  <br />
+</p>
+<p class="MsoNormal" style="text-align: justify">
+<img alt="" style=" width:508px"
+src="http://jolaseta.com/upload/noticia/editor/grd/1393/gala-fundacion-pichichi-web.jpg" /></p>
+
+								
+						</div>
+						<div class="zona-social">
+								<a rel="nofollow" target="_blank" class="social-icon icon-facebook" href="http://www.facebook.com/sharer.php?u=http://jolaseta.com"></a> 
+								<a rel="nofollow" target="_blank" class="social-icon icon-gplus" href="https://plus.google.com/share?url=http://jolaseta.com"></a> 
+								<a rel="nofollow" target="_blank" class="social-icon icon-linkedin" href="http://www.linkedin.com/shareArticle?url=http://jolaseta.com&title=GALA BENÉFICA FUNDACIÓN PICHICHI"></a> 
+								<a rel="nofollow" target="_blank" class="social-icon icon-twitter" href="https://twitter.com/share?url=http://jolaseta.com&text=GALA BENÉFICA FUNDACIÓN PICHICHI&via=twitter_jolaseta"></a>
+								<a rel="nofollow" target="_blank" class="social-icon icon-whatsapp" href="whatsapp://send?text=GALA BENÉFICA FUNDACIÓN PICHICHI http://jolaseta.com"></a>
+
+						</div>
+					
+					</main>
+					<!-- col izquierda -->
+					<!-- col derecha -->
+					<div class="lateralNoticia" id="colDcha">
+						<section id="articulosRelacionados">
+							<header><h2>Últimos Artículos</h2></header>
+							<ul class="lstMiniNoticias">
+								<li>
+									<article class="mininoticia">
+										<a href="tarde-de-cine-para-ninos-en-el-buho.html">								
+										<header>
+											
+											<h3><span>TARDE DE CINE PARA NIÑOS EN EL BÚHO</span></h3>
+											<p class="subtitulo">SÁBADO 20, 17:30 HORAS EN LA PARTE SUPERIOR DEL BÚHO</p>
+										</header>
+										</a>
+									</article>
+								</li><li>
+									<article class="mininoticia">
+										<a href="menu-especial-de-san-valentin.html">								
+										<header>
+											
+											<h3><span>MENÚ ESPECIAL DE SAN VALENTÍN</span></h3>
+											<p class="subtitulo">NOCHE DEL SÁBADO 13 Y MEDIODÍA DEL DOMINGO 14 EN HOSTELERÍA</p>
+										</header>
+										</a>
+									</article>
+								</li><li>
+									<article class="mininoticia">
+										<a href="gala-benefica-fundacion-pichichi.html">								
+										<header>
+											
+											<img src="http://jolaseta.com/upload/noticia/fotos/grd/1393/gala-pichichi-destacado.jpg" alt=""/>
+											
+											<h3><span>GALA BENÉFICA FUNDACIÓN PICHICHI</span></h3>
+											<p class="subtitulo">CON CENA Y CONCIERTO DE 'MODESTIA APARTE'</p>
+										</header>
+										</a>
+									</article>
+								</li><li>
+									<article class="mininoticia">
+										<a href="fiesta-de-carnaval-para-menores-1.html">								
+										<header>
+											
+											<h3><span>FIESTA DE CARNAVAL PARA MENORES</span></h3>
+											<p class="subtitulo">EL VIERNES DÍA 5 A PARTIR DE LAS 19:30 EN EL BUHO</p>
+										</header>
+										</a>
+									</article>
+								</li>
+							</ul>
+						</section>
+					</div>
+					<!-- col derecha -->
+				</div>
+			</div>
+			
+			<div id="pie">
+				<div id="contenedor-pie">
+					<div id="pie-localizacion">
+						<img src="/images/general/logoPie.jpg" width="118" height="85" alt="">
+						<p>Av. de Los Chopos 18 48992-Getxo</p>
+						<p>Tlf:94 491 16 00 &bull; Fax:94 460 72 36</p>
+					</div>
+					<div id="pie-reservas">
+					
+						<p>Reserva pistas: 94 491 15 25</p>
+						<p>Área de Admistración: registro@jolaseta.com </p>
+						<p>Área de Deporte: deportes@jolaseta.com</p>
+						<p>Área de Comunicación y Sugerencias: comunicacion@jolaseta.com </p>
+					
+					</div>
+					<div id="pie-social">
+						<ul>
+							<li><a id="pieTelefono" class="lnkTelefono" rel="nofollow" href="#"><span class="telefono">94 491 15 25</span><img src="/images/botones/pie/telefono.png" alt="Siguenos en facebook" height="25" width="25"></a></li>
+							<li><a id="pieMensaje" rel="nofollow" href="mailto:registro@jolaseta.com"><img src="/images/botones/pie/mensaje.png" alt="Siguenos en Flicker" height="25" width="25"></a></li>
+							<li><a id="pieTwitter" rel="nofollow" href="https://twitter.com/RCJolaseta"><img src="/images/botones/pie/twitter.png" alt="Siguenos twitter" height="25" width="25"></a></li>
+						</ul>
+						<p>&copy; 2015 Derechos reservados</p>
+					</div>
+				</div>
+			</div>
+
+			
+			
+		</div>
+	</div>
+</body>
+</html>
+	<script type="text/javascript" src="/includes/jquery/jquery-1.11.0.min.js"></script>
+	<script type='text/javascript' src='/includes/jquery/jquery-ui.web.min.js'></script>
+	<script type="text/javascript" src="/includes/jolaseta.js"></script>

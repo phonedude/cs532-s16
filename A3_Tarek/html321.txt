@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>  <html prefix="og: http://ogp.me/ns#" class="no-js ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html prefix="og: http://ogp.me/ns#" class="no-js ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html prefix="og: http://ogp.me/ns#" class="no-js ie8 lte9 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <html prefix="og: http://ogp.me/ns#" class="no-js ie9 lte9"> <![endif]-->
+<!--[if IE 10]>    <html prefix="og: http://ogp.me/ns#" class="no-js ie10 lte10"> <![endif]-->
+<!--[if gt IE 10]> <html prefix="og: http://ogp.me/ns#" class="no-js"> <![endif]-->
+<!--[if !IE]><!--> <html prefix="og: http://ogp.me/ns#" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"8670df0cad","applicationID":"4056769","transactionName":"bwQGZEoHXUVYVhdcX1ZOKWZ7SXJETVwAWVV7DgpESglfWlxHTHRCTAgHXF0=","queueTime":0,"applicationTime":173,"ttGuid":"C724E18BE999753A","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function c(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),c=a.length,u=0;c>u;u++)a[u].apply(i,r);return i}function u(t,e){p[t]=f(t).concat(e)}function f(t){return p[t]||[]}function s(){return r(c)}var p={};return{on:u,emit:c,create:s,listeners:f,context:e,_events:p}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!v++){var t=l.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(p,function(e,n){t[e]||(t[e]=n)});var n="https"===s.split(":")[0]||t.sslForHttp;l.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=l.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),c=t(1),u=window,f=u.document;t(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),l=e.exports={offset:i(),origin:s,features:{},xhrWrappable:d};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],12:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],13:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}]},{},["G9z0Bl"]);</script>
+	
+	
+
+	    <title>'Social prescribing' works for both patients and charities involved, report says | Third Sector</title>
+		<meta name="description" content="The report, carried out on behalf of Voluntary Action Rotherham, examined a three-year pilot in which GPs were allowed to refer people with long-term conditions to voluntary sector advisers"/>
+		<link rel="canonical" href="http://www.thirdsector.co.uk/social-prescribing-works-patients-charities-involved-report-says/management/article/1381929"/>
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	
+		
+		<link rel="dns-prefetch" href="//static.thirdsector.co.uk" />
+		<link rel="dns-prefetch" href="//ajax.googleapis.com" />
+		<link rel="dns-prefetch" href="//tags.tiqcdn.com" />
+		<link rel="dns-prefetch" href="//cached.imagescaler.hbpl.co.uk" />
+		<link rel="dns-prefetch" href="//cached.offlinehbpl.hbpl.co.uk" />
+		<link rel="preconnect" href="//static.thirdsector.co.uk" />
+		<link rel="preconnect" href="//ajax.googleapis.com" />
+		<link rel="preconnect" href="//tags.tiqcdn.com" />
+		<link rel="preconnect" href="//cached.imagescaler.hbpl.co.uk" />
+		<link rel="preconnect" href="//cached.offlinehbpl.hbpl.co.uk" />
+
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+	
+    	
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png">	
+	
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png">
+	
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
+	
+	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+
+	
+	
+	<meta name="apple-itunes-app" content="app-id=885830973, app-argument=http://www.thirdsector.co.uk/social-prescribing-works-patients-charities-involved-report-says/management/article/1381929?bulletin=management-bulletin&amp;utm_medium=EMAIL&amp;utm_campaign=eNews Bulletin&amp;utm_source=20160208&amp;utm_content=www_thirdsector_co_uk_art_6" />
+
+	
+	
+	<!--[if !(lt IE 9)]><!--><link rel="stylesheet" type="text/css" href="http://static.thirdsector.co.uk/css/min/_Layout_Universal_LayoutMediaProvider_E3692A93841F7FEEA2E3321B88D1AC1A.css" /><!--<![endif]--><!--[if (gte IE 6)&(lte IE 8)]><link rel="stylesheet" type="text/css" title="slvzr-ignore" href="/css/min/_Layout_IeSlvzrIgnore_LayoutMediaProvider_EA05CF87B35DE336F940E831FF6BDAB1.css" /><![endif]--><!--[if (gte IE 6)&(lte IE 8)]><link rel="stylesheet" type="text/css" href="/css/min/_Layout_Ie_LayoutMediaProvider_E08E480D77FD0BA27D76D52B22C59D4A.css" /><![endif]-->
+	
+	
+	
+		<!--[if !(lt IE 9)]><!-->
+<link rel="stylesheet" type="text/css" href="http://static.thirdsector.co.uk/css/min/article_80BCBBE54B9273845A82DAF0CBFA3D50.css" />	<!--<![endif]-->
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<link rel="stylesheet" type="text/css" href="/css/min/article_80BCBBE54B9273845A82DAF0CBFA3D50.css" />
+	<![endif]--> 
+
+
+	
+
+	
+
+
+	
+	
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/css/min/_IE_E865B707F6C128351B7E0306C283C860.css" />
+	<![endif]-->
+
+		<script type="text/javascript" charset="utf-8">
+		var ContentInfo = {
+			Site:{"Domain":"thirdsector.co.uk","SiteFormat":"responsive"},
+			Magazine:{"JournalCode":"TSR","Url":"http://www.thirdsector.co.uk/","SiteCatalystAccount":"haymarketthirdsector,haymarketGlobal","SiteCatalystSiteName":"thirdsector","SiteCatalystSitePrefix":"tsn"},
+Article:{"Id":1381929,"Title":"'Social prescribing' works for both patients and charities involved, report says","ArticleDate":"2016-02-02T12:26:00+00:00","JournalCode":"TSN","AuthorName":"Liam Kay","ShareUrl":"http://www.thirdsector.co.uk/article/1381929","HasAssets":false,"ArticleAge":16,"TagGroups":[{"TagGroupId":35,"ArticleTagIds":[3929,3915],"PathToPrimaryTagId":[3915],"TopLevelTagIds":[3929,3915],"SubLevelTagIds":[]},{"TagGroupId":23,"ArticleTagIds":[3503],"PathToPrimaryTagId":[3503],"TopLevelTagIds":[3503],"SubLevelTagIds":[]},{"TagGroupId":22,"ArticleTagIds":[3469],"PathToPrimaryTagId":[3469],"TopLevelTagIds":[3469],"SubLevelTagIds":[]}],"NewsType":{"Name":"News","Id":1},"TagHierarchy":[{"Id":35,"Name":"Disciplines","Children":[{"Id":3929,"Name":"Infrastructure","Children":[]},{"Id":3915,"Name":"Management","Children":[]}]},{"Id":23,"Name":"Sections","Children":[{"Id":3503,"Name":"News","Children":[]}]},{"Id":22,"Name":"Sectors","Children":[{"Id":3469,"Name":"Health & medical","Children":[]}]}],"CommentCount":2},
+PageInfo:{"DartZoneName":"/bulletin/managementbulletin/article","PageName":"tsn:bulletins:managementbulletin:article:article-1381929","Hierarchy":"tsn:bulletins:managementbulletin:article:1381929","DartHostName":"tsr.main","PageUrl":"management-bulletin","ContentInfoType":3}
+		}
+	</script>
+
+	
+	
+	<script type="text/javascript">ContentInfo.Article.Gated = false;</script>
+	
+
+
+
+	
+<script type="text/javascript" src="http://static.thirdsector.co.uk/js/min/modernizr_0F305161C0D22D7410DD392AC6408862.js"></script>			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+		<!--[if (gte IE 6)&(lte IE 8)]>
+			<script type="text/javascript" src="/_hbi_ui/basesitenet/js/libs/selectivizr-min.js"></script>
+			<script type="text/javascript" src="/_hbi_ui/basesitenet/js/libs/respond.min.js"></script>
+		<![endif]-->
+		<!--[if (IE 7)]>
+			<script type="text/javascript" src="/js/ie7.js"></script>
+		<![endif]--> 
+
+
+	
+		
+
+
+		<meta property="og:title" content="&#39;Social prescribing&#39; works for both patients and charities involved, report says" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://www.thirdsector.co.uk/article/1381929" />
+		<meta property="og:image" content="http://cached.imagescaler.hbpl.co.uk/resize/scaleHeight/150/offlinehbpl.hbpl.co.uk/news/NST/SocialPrescribing-2016020212294943.jpg" />
+
+
+	
+
+
+</head>
+		<body>
+  
+<div id="outerWrap">
+	<div class="a11y">
+		<ul>
+			<li><a href="#main" accesskey="s">Skip to Content</a></li>
+			<li><a href="#responsiveNavigation" accesskey="1">Skip to Main Navigation</a></li>	
+			<li><a href="#topNav" accesskey="3">Skip to Information Links</a></li>
+			<li><a href="#topSearchForm" accesskey="4">Skip to Site Search</a></li>
+			<li><a href="#mainFooter" accesskey="5">Skip to Footer</a></li>
+			<li><a href="/accessibility" accesskey="6">Skip to Accessibility Information</a></li>
+			<li><a href="/" accesskey="h">Home Page</a></li>
+		</ul>
+	</div>
+	
+	
+	<div id="container" class="page-main-content-tracked">
+		
+		
+		
+		
+
+
+<div id="commercialTop" class="clearfix">
+	<div class="inner headerInner">
+		<div id="t100Ad" class="commercialSlot" data-location-code="T" data-sizes="1x1"></div>
+<div id="t101Ad" class="commercialSlot" data-location-code="T" data-sizes="2x2|728x90|468x60"></div>
+
+	</div>
+</div>    
+
+		<div id="wrap" class="clearfix">
+			<header id="masthead">
+				
+
+
+<h2 class="a11y">Information Links</h2>
+
+	
+<nav id="topNav" class="clearfix">
+	<div class="inner headerInner">
+		<ul>
+			<li id="navControl">
+				<a href="#outerWrap" class="mobNavButton" ><img src="/img/buttons/menu.png" alt="Menu" /></a>
+			</li>
+			<li id="signInOut">		<a href="/login?returnUrl=http://www.thirdsector.co.uk/social-prescribing-works-patients-charities-involved-report-says/management/article/1381929?bulletin=management-bulletin&amp;utm_medium=EMAIL&amp;utm_campaign=eNews%20Bulletin&amp;utm_source=20160208&amp;utm_content=www_thirdsector_co_uk_art_6" title="Sign in">Sign in</a>
+</li>
+			<li id="register">		<a href="http://users.thirdsector.co.uk/register?returnUrl=http://www.thirdsector.co.uk/social-prescribing-works-patients-charities-involved-report-says/management/article/1381929?bulletin=management-bulletin&amp;utm_medium=EMAIL&amp;utm_campaign=eNews%20Bulletin&amp;utm_source=20160208&amp;utm_content=www_thirdsector_co_uk_art_6" title="Register">Register</a>
+</li>
+			<li id="bulletins">		<a href="http://www.thirdsector.co.uk/email-bulletins" title="Bulletins">Bulletins</a>
+</li>
+			    <li          class="cms ">
+
+            <a href="/advertise" title="Advertise">Advertise</a>
+	</li>
+    <li          class="cms ">
+
+            <a href="/subscribe" title="Subscribe">Subscribe</a>
+	</li>
+ 
+		</ul>
+	</div>
+</nav>
+
+
+<div class="inner headerInner">
+	<div id="title">
+		<figure class="responsive" data-media="/img/logos/logoSmall.gif" data-media768="/img/logos/logoLarge.gif">
+			
+			<h2>
+				<span>Third SectorMainNet</span>
+				<a href="http://www.thirdsector.co.uk/">
+					<img src="/img/logos/logoLarge.gif" alt="Third SectorMainNet" />
+				</a>
+			</h2>
+		</figure>
+	</div>
+</div>
+
+
+<div id="responsiveNavigation">
+	<div id="mobNavHeader">
+		<a id="mobNavLogo" href="/"><img src="/img/logos/logoSmall.gif"></a>
+		<a href="#" class="mobNavButton" ><img src="/img/buttons/menu.png" alt="Menu" /></a>
+	</div>
+	<h2 class="a11y">Main Navigation</h2>
+	<div class="inner headerInner">
+		<div id="siteSearch">
+			<form action="/search" class="searchForm" id="topSearchForm" method="get">	<div class="searchFields">
+		<label for="KeyWords">Search</label>
+		<input accesskey="4" id="searchPhrase" name="KeyWords" placeholder="Search" tabindex="1" type="text" value="" />
+		<input type="submit" class="searchSubmit" value="Search" />
+	</div>
+</form>
+		</div>
+	</div>
+
+			<nav id="primaryNav" >
+				<ul>
+						<li id="primaryNav-0" class="first">
+									<a href="/home" title="Home">Home</a>
+						</li>
+						<li id="primaryNav-1" >
+									<a href="http://jobs.thirdsector.co.uk/" title="Jobs" rel="nofollow">Jobs</a>
+						</li>
+						<li id="primaryNav-2" >
+									<a href="/news" title="News">News</a>
+						</li>
+						<li id="primaryNav-3" >
+									<a href="/comment" title="Views">Views</a>
+						</li>
+						<li id="primaryNav-4" >
+									<a href="/knowledge" title="Knowledge">Knowledge</a>
+						</li>
+						<li id="primaryNav-5" class="last">
+									<a href="/event/search" title="Events">Events</a>
+						</li>
+				</ul>
+			</nav>
+			<nav id="subNav-0" class="subNav ">
+				<ul>
+						<li  class="first">
+									<a href="/fundraising" title="Fundraising">Fundraising</a>
+						</li>
+						<li  >
+									<a href="/finance" title="Finance">Finance</a>
+						</li>
+						<li  >
+									<a href="/digital" title="Digital">Digital</a>
+						</li>
+						<li  >
+									<a href="/governance" title="Governance">Governance</a>
+						</li>
+						<li  >
+									<a href="/communications" title="Communications">Communications</a>
+						</li>
+						<li  >
+									<a href="/management" title="Management">Management</a>
+						</li>
+						<li  class="last">
+									<a href="/policy-and-politics" title="Policy">Policy</a>
+						</li>
+				</ul>
+			</nav>
+			<nav id="subNav-2" class="subNav ">
+				<ul>
+						<li  class="first">
+									<a href="/big-stories" title="Big Stories">Big Stories</a>
+						</li>
+						<li  >
+									<a href="/email-bulletins" title="Email Bulletins">Email Bulletins</a>
+						</li>
+						<li  >
+									<a href="/newsfeeds" title="RSS Newsfeeds">RSS Newsfeeds</a>
+						</li>
+						<li  class="last">
+									<a href="/celebrities" title="Star Supporters">Star Supporters</a>
+						</li>
+				</ul>
+			</nav>
+			<nav id="subNav-4" class="subNav ">
+				<ul>
+						<li  class="first">
+									<a href="/good-practice" title="Good Practice">Good Practice</a>
+						</li>
+						<li  >
+									<a href="http://www.thirdsectorinsight.com/embeddable-projection" title="Webcasts">Webcasts</a>
+						</li>
+						<li  >
+									<a href="http://www.thirdsectorinsight.com/survey-projection" title="Surveys">Surveys</a>
+						</li>
+						<li  >
+									<a href="http://www.thirdsectorinsight.com/whitepaper-projection" title="Expert Reports">Expert Reports</a>
+						</li>
+						<li  >
+									<a href="/third-sector-research" title="Research">Research</a>
+						</li>
+						<li  >
+									<a href="/expert-hub" title="Expert Hub">Expert Hub</a>
+						</li>
+						<li  class="last">
+									<a href="/careers" title="Careers">Careers</a>
+						</li>
+				</ul>
+			</nav>
+			<nav id="subNav-5" class="subNav ">
+				<ul>
+						<li  class="first last">
+									<a href="/third-sector-awards" title="Awards">Awards</a>
+						</li>
+				</ul>
+			</nav>
+</div>
+			</header>
+			
+			
+			
+			
+
+			<hr class="a11y" />
+			<section id="main" role="main">
+				
+
+
+           
+
+				<div class="group1">
+				<div class="zoneGrid2">
+						<div class="grid1">
+							<div class="zone">
+								<!-- zone 2 -->
+								
+
+<article>
+    <div id="articleFull">
+	<div class="borderBox">
+		<div id="articleMain">
+		
+
+			<header>
+		<h1>&#39;Social prescribing&#39; works for both patients and charities involved, report says</h1>
+			<p class="byline">
+		02 February 2016
+ by Liam Kay,  <a class="commentCount" href="#disqus_thread" >2 comments</a> 	</p>
+
+		<p class="summary">The report, carried out on behalf of Voluntary Action Rotherham, examined a three-year pilot in which GPs were allowed to refer people with long-term conditions to voluntary sector advisers</p>
+	</header>
+
+		
+	<figure id="hero">
+		<img alt="Social prescribing: patients can be referred to organisations that run physical activities" src="http://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/580/offlinehbpl.hbpl.co.uk/news/NST/SocialPrescribing-2016020212294943.jpg" />
+			<figcaption>Social prescribing: patients can be referred to organisations that run physical activities</figcaption>	
+	</figure>
+
+		<div id="sidebar">
+			
+		</div>
+
+		<div id="articleBody">
+			
+			<p>The practice of "social prescribing", which puts people with complex long-term health conditions in contact with local charities and community groups, can improve patients&rsquo; wellbeing and improve funding opportunities for those organisations, says a new report.</p>
+<p>The report covers the success of the Rotherham social prescribing service, which helps GPs to meet the non-clinical needs of patients with complex long-term conditions and is run by <a target="_blank" href="http://www.varotherham.org.uk">Voluntary Action Rotherham</a>, a partnership of more than 20 voluntary and community groups.</p>
+<p>The service works by allowing GPs to refer patients to voluntary and community sector advisers, who then examine the patient&rsquo;s non-medical support needs and refer them to appropriate services, which could include physical activities such as tai chi or community gardening projects.</p>
+<p>The scheme includes a grant funding pot through which voluntary sector activities are commissioned to meet patients&rsquo; needs. The service was piloted from 2012 until 2015, at which point a three-year contract was agreed to continue the service.</p>
+<p>The evaluation report, which was carried out by the Centre for Regional Economic and Social Research at Sheffield Hallam University on behalf of VAR, says patients who fully engaged with the SPS, and especially those that went beyond their initial "social prescription", were more likely to experience improvements in their wellbeing and a reduction in their use of emergency care.</p>
+<p>The report says that social prescribing has proved effective at reducing social isolation and loneliness and increasing independence and community engagement among people with long-term conditions.</p>
+<p>The report concludes that the service has shown how small voluntary and community organisations can make positive contributions to local strategic health and wellbeing priorities and has improved the credibility of the sector with statutory partners.</p>
+<p>Social prescribing also has benefits for the local voluntary and community sector, and the grant funding provided by the SPS has improved organisational sustainability in the area, the report says.</p>
+<p>It adds that the grant funding available through the SPS has helped to generate additional income from external sources, for example from grant funders and national statutory bodies.</p>
+<p>Neil Cleeveley, chief executive of the local infrastructure body <a target="_blank" href="http://www.navca.org.uk/">Navca</a>, said: "Although the public sector faces tough budget decisions, this shows that smart commissioners should still invest in the voluntary sector.</p>
+<p>"As shown by this report, social prescribing provides better services for people, saves the NHS money and is good for communities. I am amazed this approach isn&rsquo;t being adopted everywhere."</p>
+<p>Navca will hold a workshop in March about social prescribing.</p>
+		</div>
+	
+			<aside class="sharingTools genericModule">
+				<header>
+					<h2>Share this article</h2>
+				</header>
+			<div class="sharingToolWrap">
+	<div class="tweetShare share">
+		<a href="http://twitter.com/share" data-url="http://www.thirdsector.co.uk/article/1381929" data-counturl="http://www.thirdsector.co.uk/social-prescribing-works-patients-charities-involved-report-says/management/article/1381929" class="twitter-share-button" data-count="horizontal" data-via="">Tweet</a>
+	</div>
+	<div class="facebookShare share">
+		<div id="fb-root"></div>
+		<div class="fb-like" data-send="false" data-href="http://www.thirdsector.co.uk/article/1381929" data-layout="button_count" data-width="450" data-show-faces="true"></div>
+	</div>
+	<div class="googleplusShare share">
+		<div class="g-plusone" data-size="medium" data-href="http://www.thirdsector.co.uk/article/1381929"></div>
+	</div>	
+	<div class="linkedinShare share">
+		<script type="in/share" data-url="http://www.thirdsector.co.uk/article/1381929" data-counter="right" data-onsuccess="linkedInShare"></script>
+	</div>
+			</div>
+	</aside>
+
+		
+		
+	</div>
+	
+    </div>
+        <div id="articleRelated">
+	<aside id="relatedArticles" class="related headlinesOnly genericModule articleModule">
+		<header>
+			<h2>Related Articles</h2>
+		</header>
+		<ul>
+				<li>	<a href="/rotherham-cvs-steps-relieve-burden-nhs/local-action/article/1334875" data-url="http://www.thirdsector.co.uk/article/1334875" data-id="1334875" title="Rotherham CVS steps in to relieve burden on the NHS">Rotherham CVS steps in to relieve burden on the NHS</a>
+</li>
+		</ul>
+	</aside>
+	
+		<div id="moreOnThisTopic" class="related headlinesOnly genericModule articleModule">
+			<header>
+				<h2>More on this Topic</h2>
+			</header>
+			<ul>
+					<li>	<a href="/rnib-chief-lesley-anne-alexander-refuses-give-15k-start-up-costs-new-regulator/governance/article/1384062" data-url="http://www.thirdsector.co.uk/rnib-chief-lesley-anne-alexander-refuses-give-15k-start-up-costs-new-regulator/governance/article/1384062" data-id="1384062" title="RNIB chief Lesley-Anne Alexander refuses to give &#163;15k to start-up costs of new regulator">RNIB chief Lesley-Anne Alexander refuses to give &#163;15k to start-up costs of new regulator</a>
+</li>
+					<li>	<a href="/bury-hospice-undergoes-independent-review-governance-management/governance/article/1382609" data-url="http://www.thirdsector.co.uk/bury-hospice-undergoes-independent-review-governance-management/governance/article/1382609" data-id="1382609" title="Bury Hospice undergoes independent review of governance and management">Bury Hospice undergoes independent review of governance and management</a>
+</li>
+					<li>	<a href="/information-commissioner-takes-action-against-alzheimers-society-disappointing-attitude-data-use/management/article/1378571" data-url="http://www.thirdsector.co.uk/information-commissioner-takes-action-against-alzheimers-society-disappointing-attitude-data-use/management/article/1378571" data-id="1378571" title="Information Commissioner takes action against Alzheimer&#39;s Society over data use">Information Commissioner takes action against Alzheimer&#39;s Society over data use</a>
+</li>
+					<li>	<a href="/cooltan-arts-denies-its-board-harassed-suspended-chief-executive-michelle-baharier/management/article/1378406" data-url="http://www.thirdsector.co.uk/cooltan-arts-denies-its-board-harassed-suspended-chief-executive-michelle-baharier/management/article/1378406" data-id="1378406" title="CoolTan Arts denies its board has harassed suspended chief executive Michelle Baharier">CoolTan Arts denies its board has harassed suspended chief executive Michelle Baharier</a>
+</li>
+					<li>	<a href="/ymca-englands-ian-green-appointed-chief-executive-terrence-higgins-trust/management/article/1378364" data-url="http://www.thirdsector.co.uk/ymca-englands-ian-green-appointed-chief-executive-terrence-higgins-trust/management/article/1378364" data-id="1378364" title="YMCA England&#39;s Ian Green appointed chief executive of Terrence Higgins Trust">YMCA England&#39;s Ian Green appointed chief executive of Terrence Higgins Trust</a>
+</li>
+			</ul>
+		</div>
+            </div>
+		<div class="commentingMessage">
+			<p>Before commenting please read our <a target="_blank" href="/rulesforcommenting/">rules for commenting on articles</a>.</p>
+		</div>
+		<div id="disqus_thread"></div>
+		<div class="commentingMessage">
+			<p>If you see a comment you find offensive, you can flag it as inappropriate. In the top right-hand corner of an individual comment, you will see 'flag as inappropriate'. Clicking this prompts us to review the comment. For further information see our <a target="_blank" href="/rulesforcommenting/">rules for commenting on articles</a>.</p>
+		</div>
+		<script type="text/javascript">
+			var disqus_identifier = 1381929; //[Optional but recommended: Define a unique identifier (e.g. post id or slug) for this thread] 
+			var disqus_title = "&#39;Social prescribing&#39; works for both patients and charities involved, report says";
+			var disqus_url = "http://www.thirdsector.co.uk/article/1381929";
+		
+			(function() {
+				var dsq = document.createElement('script'); 
+				dsq.type = 'text/javascript'; 
+				dsq.async = true;
+				dsq.src = 'http://thirdsector.disqus.com/embed.js';//need disqus account
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+			<script type="text/javascript">
+				var disqus_apiKey = "TVWU6p6HjFfUTbxWTjn5G3FIiePBBmXjluD6VssiHng3Ib01jV5YHqkme2EK22MC";
+				var disqus_accountName = "thirdsector";
+				// Counts the number of Disqus comments on a page
+				function countComments() {
+					var res;disqus_apiKey 
+					$.ajax({
+						type: 'GET',
+						url: "https://disqus.com/api/3.0/threads/details.jsonp",
+						data: { api_key: disqus_apiKey, forum: disqus_accountName, thread:'ident:'+disqus_identifier  },
+						cache: false,
+						dataType: 'jsonp',
+						success: function(result) {
+							res = result.response.posts;
+						
+							if (result.response && (ContentInfo.Article.CommentCount != result.response.posts)) {
+								updateComments(result.response.posts);
+							}
+						
+						}
+					});
+				}
+
+				// Updates the comment count
+				function updateComments(commentCount) {
+					if (commentCount != null && typeof(commentCount) != "undefined") {
+						var url = "http://api.hbpl.co.uk/" + "ArticleCommentCount/Update/" + 1381929 + "/" + commentCount;
+						$.get(url);
+					}
+				}
+				
+				function incrementCommentCountCache() {
+					setTimeout(function() {
+						if ($('#dsq-popup-message').length == 0) {
+							ContentInfo.Article.CommentCount++;
+							updateComments(ContentInfo.Article.CommentCount);
+						} 
+					}, 500);
+			
+				}
+			</script>
+			<script defer="defer" type="text/javascript">
+				jQuery(window).load(function () {
+				
+					countComments();
+
+				});
+			</script>
+	<script type="text/javascript">
+		var disqus_config = function () {
+			this.page.remote_auth_s3 = 'eyJpZCI6IjAiLCJ1c2VybmFtZSI6IiIsImVtYWlsIjoiIn0= EA299A07C4C12D6C1BF2B28979CB6BF27A4B3393 1455818877';
+			this.page.api_key = 'TVWU6p6HjFfUTbxWTjn5G3FIiePBBmXjluD6VssiHng3Ib01jV5YHqkme2EK22MC';
+
+			this.sso = {	
+				url: "",//http://www.thirdsector.co.uk/login/?returnUrl= + location.href,
+				logout: "http://www.thirdsector.co.uk/logout/?returnUrl=" + location.href
+			};
+		}
+	</script>
+	<script type="text/javascript">
+		var disqus_developer = false;
+	</script>
+   </div>
+</article>
+
+<img src="http://api.hbpl.co.uk/Article/ViewCount/1381929" width="1" height="1"/>
+
+							</div>
+						</div>
+			</div >
+				</div>
+				<div class="group2 grid1">
+					<div class="zone">
+						<!-- zone 5 -->
+							<div class="textHtmlModule">
+		<div class="socialbar">Follow us on:
+<ul>
+<li><a href="https://www.facebook.com/ThirdSectorMagazine " target="_blank"><img src="/_hbi_ui/_TSR/img/icon/facebook.png" alt="Facebook" /></a></li>
+<li><a href="http://www.linkedin.com/groups?home=&amp;gid=4259064&amp;trk=anet_ug_hm " target="_blank"><img src="/_hbi_ui/_TSR/img/icon/linkedin.png" alt="LinkedIn" /></a></li>
+<li><a href="https://twitter.com/ThirdSector " target="_blank"><img src="/_hbi_ui/_TSR/img/icon/twitter.png" alt="Twitter" /></a></li>
+<li><a href="https://plus.google.com/u/0/b/105385770610023438549/105385770610023438549/posts " target="_blank"><img src="/_hbi_ui/_TSR/img/icon/googlePlus.png" alt="Google +" /></a></li>
+</ul>
+</div>
+	</div>
+<div id="r1301Ad" class="commercialSlot" data-location-code="R1" data-sizes="2x2|300x250|300x600"></div>
+		<section class="jobsModule articleModule genericModule">
+			<header>
+<h2>Latest Jobs</h2>			</header>
+			<div class="moduleContent">
+				<ul>
+						<li>
+							<a href="http://jobs.thirdsector.co.uk/job/387673/charitable-trust-fundraising-manager/?TrackID=175695" rel="nofollow">
+								<h3>Charitable Trust Fundraising Manager</h3>
+								<p>
+									Creative Youth Network
+									Bristol city centre/ Kingswood Bristol/ flexible working
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://jobs.thirdsector.co.uk/job/387447/campaigns-and-democracy-co-ordinator-2-year-fixed-term/?TrackID=175695" rel="nofollow">
+								<h3>Campaigns & Democracy Co-ordinator - 2 year fixed term</h3>
+								<p>
+									Reading University Students' Union
+									Reading, Berkshire
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://jobs.thirdsector.co.uk/job/387966/fundraising-manager/?TrackID=175695" rel="nofollow">
+								<h3>Fundraising Manager</h3>
+								<p>
+									The Elizabeth Foundation
+									Portsmouth, Hampshire
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://jobs.thirdsector.co.uk/job/387876/director-of-children-s-services-cymru/?TrackID=175695" rel="nofollow">
+								<h3>Director of Children’s Services, Cymru</h3>
+								<p>
+									Barnardo's
+									Cardiff based, with extensive travel
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://jobs.thirdsector.co.uk/job/387870/head-of-private-sector-development-london-/?TrackID=175695" rel="nofollow">
+								<h3>Head of Private Sector Development (London)</h3>
+								<p>
+									Onside
+									London (Central), London (Greater)
+								</p>
+							</a>
+						</li>
+				</ul>
+			</div>
+			<footer>
+<p><a href="http://jobs.thirdsector.co.uk/jobs/">Search more jobs</a></p>
+<p><a href="http://jobs.thirdsector.co.uk/newalert/">Send me jobs by email</a></p>			</footer>
+		</section>
+<div id="r2302Ad" class="commercialSlot" data-location-code="R2" data-sizes="2x2|300x250|300x600"></div>
+		<section class="eventModule genericModule">
+			<header>
+				<h2>Forthcoming Events</h2>
+			</header>
+			<div class="moduleContent">
+					<div class="eventContent storyContent highlight">
+								<h3><a href="/event/14069/fundraising-week-2016" title="Fundraising Week 2016">Fundraising Week 2016</a></h3>
+
+						<ul>
+									<li>Tue 19 Apr 2016
+				- Thu 21 Apr 2016		</li>
+
+									<li>London, South Bank</li>
+
+						</ul>
+					</div>
+			</div>
+			<footer>
+				<p><a href="/event/search">See all events</a></p>
+			</footer>
+		</section>
+		<section class="rssModule articleModule genericModule">
+				<header>
+					<a href="http://www.thirdsectorinsight.com/RssFeed/Session,Document" class="rssLink">
+						<img src="/_hbi_ui/_NUR/img/icon/rss.png" alt="RSS Feed">
+					</a>
+					<h2>Third Sector Insight</h2>
+<p>Sponsored webcasts, surveys and expert reports from Third Sector partners</p>
+				</header>
+			<div class="moduleContent">
+				<ul>
+						<li class="storyContent">
+							<h3>
+								<a href="http://www.thirdsectorinsight.com/Detail/choosing-an-online-fundraising-platform" title="Choosing an online fundraising platform">
+									Choosing an online fundraising platform
+								</a>
+							</h3>
+<p>This report reveals insights from a survey...</p>						</li>
+						<li class="storyContent">
+							<h3>
+								<a href="http://www.thirdsectorinsight.com/Detail/recruitment-challenges-facing-charities" title="Recruitment Challenges Facing Charities">
+									Recruitment Challenges Facing Charities
+								</a>
+							</h3>
+<p>The building of talent pipelines is a key...</p>						</li>
+						<li class="storyContent">
+							<h3>
+								<a href="http://www.thirdsectorinsight.com/Detail/charity-digital-study-2015" title="Charity Digital Study 2015">
+									Charity Digital Study 2015
+								</a>
+							</h3>
+<p>How do the general public interact with chariti...</p>						</li>
+				</ul>
+			</div>
+				<footer>
+					<p><a href="/third-sector-insight">More Third Sector Insight</a></p>
+				</footer>   
+		</section>
+		<section class="articleModule withoutImages genericModule altHighlight highlight promoModule noDecoration">
+				<header>
+					<p><a href="http://www.thirdsector.co.uk/markel"><img src="http://offlineHBPL.hbpl.co.uk/pageCreator/RST/richedit/markel_4.jpg" alt="Markel" title="Markel" /></a></p>
+<h2>Expert Hub</h2>
+<h3><a href="http://www.thirdsector.co.uk/markel">Insurance advice from Markel</a></h3>
+				</header>
+			<div class="moduleContent">
+					<div class="storyContent">					
+						<div class="contentWrapper">
+							<h3>	<a href="/media-spotlight-charity-react-major-crisis/communications/article/1382890" data-url="http://www.thirdsector.co.uk/article/1382890" data-id="1382890" title="In the media spotlight - How would your charity react to a major crisis?">In the media spotlight - How would your charity react to a major crisis?</a>
+</h3>
+							<p>In this article, Robin Swinbank, a crisis management specialist from communications consultancy The Counsel House, explains the skills a chief executive will need to call on in a crisis</p>
+						</div>
+					</div>		
+			</div>
+		</section>
+		<section class="articleModule withoutImages genericModule altHighlight highlight promoModule noDecoration">
+				<header>
+					<p><img title="mydonate" alt="mydonate" src="http://qa.offlineHBPL.hbpl.co.uk/pageCreator/RST/richedit/MyDonate.gif" height="42" width="100" /></p>
+<h2>Expert Hub</h2>
+<h3>Fundraising advice from BT MyDonate</h3>
+				</header>
+			<div class="moduleContent">
+					<div class="storyContent">					
+						<div class="contentWrapper">
+							<h3>	<a href="/five-low-cost-tips-creating-compelling-video-content-thrives/digital/article/1371313" data-url="http://www.thirdsector.co.uk/article/1371313" data-id="1371313" title="Five low cost tips for creating compelling video content that thrives">Five low cost tips for creating compelling video content that thrives</a>
+</h3>
+							<p>No matter what size your budget, there are some simple tips that can help keep costs down</p>
+						</div>
+					</div>		
+			</div>
+				<footer>
+					<p><a href="/bt-mydonate">More BT MyDonate Expert Hub</a></p>
+				</footer>
+		</section>
+<div id="r3303Ad" class="commercialSlot" data-location-code="R3" data-sizes="300x90"></div>
+<div id="r3304Ad" class="commercialSlot" data-location-code="R3" data-sizes="300x90"></div>
+<div id="r3305Ad" class="commercialSlot" data-location-code="R3" data-sizes="300x90"></div>
+<div id="r3306Ad" class="commercialSlot" data-location-code="R3" data-sizes="300x90"></div>
+<div id="r3307Ad" class="commercialSlot" data-location-code="R3" data-sizes="300x90"></div>
+<div id="r4308Ad" class="commercialSlot" data-location-code="R4" data-sizes="300x250"></div>
+
+					</div>
+                </div>
+        <div class="groups">
+        
+		</div>
+
+
+
+
+
+
+
+
+
+
+			</section>
+			
+	
+
+
+			
+
+<div id="advertBodyBottom">
+	<div id="f201Ad" class="commercialSlot" data-location-code="F" data-sizes="728x90|468x60"></div>
+
+	
+</div>
+		</div>
+	</div>
+	<hr class="a11y" />
+	<footer id="mainFooter"> 
+		
+<nav id="footerNav" class="inner">		
+			<div class="footerModuleGroup">			
+						<dl class="footerModule">				
+							<dt>Help &amp; Information</dt>
+							<dd>
+									     <a href="/about-third-sector" title="About Third Sector"   rel="nofollow" >About Third Sector</a>
+									     <a href="/contact-third-sector" title="Contact Us"   rel="nofollow" >Contact Us</a>
+									     <a href="/advertise" title="Advertiser Information"   rel="nofollow" >Advertiser Information</a>
+									     <a href="http://www.haymarket.com/TermsAndConditions.aspx" title="Terms &amp; Conditions"   rel="nofollow" >Terms &amp; Conditions</a>
+									     <a href="http://www.haymarket.com/PrivacyPolicy.aspx" title="Privacy"   rel="nofollow" >Privacy</a>
+									     <a href="http://www.haymarket.com/CookiePolicy.aspx" title="Cookie Policy"   rel="nofollow" >Cookie Policy</a>
+									     <a href="/accessibility" title="Accessibility"   rel="nofollow" >Accessibility</a>
+									     <a href="/faq" title="FAQ"   rel="nofollow" >FAQ</a>
+									     <a href="http://complaints.haymarket.com/" title="Editorial Complaint?"   rel="nofollow" >Editorial Complaint?</a>
+							</dd>
+						</dl>
+						<dl class="footerModule">				
+							<dt>Subscription &amp; Registration</dt>
+							<dd>
+									     <a href="/subscribe" title="Subscribe to Third Sector"   rel="nofollow" >Subscribe to Third Sector</a>
+									     <a href="http://users.thirdsector.co.uk/register" title="Register"   rel="nofollow" >Register</a>
+									     <a href="http://users.thirdsector.co.uk/freetrial" title="Free Trial"   rel="nofollow" >Free Trial</a>
+									     <a href="http://users.thirdsector.co.uk/subscription" title="Subscriber web account activation"   rel="nofollow" >Subscriber web account activation</a>
+									     <a href="http://users.thirdsector.co.uk/membership/acevo/" title="Acevo member registration"   rel="nofollow" >Acevo member registration</a>
+									     <a href="/ipad" title="iPad Edition"   rel="nofollow" >iPad Edition</a>
+							</dd>
+						</dl>
+						<dl class="footerModule">				
+							<dt>News</dt>
+							<dd>
+									     <a href="/news" title="News &amp; Analysis"   rel="nofollow" >News &amp; Analysis</a>
+									     <a href="/big-stories" title="Big Stories"   rel="nofollow" >Big Stories</a>
+									     <a href="/celebrities" title="Star Supporters"   rel="nofollow" >Star Supporters</a>
+									     <a href="/email-bulletins" title="Email Bulletins"   rel="nofollow" >Email Bulletins</a>
+									     <a href="/newsfeeds" title="RSS Newsfeeds"   rel="nofollow" >RSS Newsfeeds</a>
+							</dd>
+						</dl>
+						<dl class="footerModule">				
+							<dt>Channels</dt>
+							<dd>
+									     <a href="/fundraising" title="Fundraising"   rel="nofollow" >Fundraising</a>
+									     <a href="/finance" title="Finance"   rel="nofollow" >Finance</a>
+									     <a href="/digital" title="Digital"   rel="nofollow" >Digital</a>
+									     <a href="/governance" title="Governance"   rel="nofollow" >Governance</a>
+									     <a href="/management" title="Management"   rel="nofollow" >Management</a>
+									     <a href="/communications" title="Communications"   rel="nofollow" >Communications</a>
+									     <a href="/policy-and-politics" title="Policy &amp; Politics"   rel="nofollow" >Policy &amp; Politics</a>
+									     <a href="/volunteering" title="Volunteering"   rel="nofollow" >Volunteering</a>
+									     <a href="/social-enterprise" title="Social Enterprise"   rel="nofollow" >Social Enterprise</a>
+									     <a href="/local-action" title="Local Action"   rel="nofollow" >Local Action</a>
+							</dd>
+						</dl>
+			</div>
+			<div class="footerModuleGroup">			
+						<dl class="footerModule">				
+							<dt>Good Practice</dt>
+							<dd>
+									     <a href="/knowledge" title="Knowledge"   rel="nofollow" >Knowledge</a>
+									     <a href="/fundraising-good-practice" title="Fundraising Good Practice"   rel="nofollow" >Fundraising Good Practice</a>
+									     <a href="/finance-good-practice" title="Finance Good Practice"   rel="nofollow" >Finance Good Practice</a>
+									     <a href="/governance-good-practice" title="Governance Good Practice"   rel="nofollow" >Governance Good Practice</a>
+									     <a href="/communications-good-practice" title="Communications Good Practice"   rel="nofollow" >Communications Good Practice</a>
+									     <a href="/management-good-practice" title="Management Good Practice"   rel="nofollow" >Management Good Practice</a>
+									     <a href="/markel" title="Expert Hub"   rel="nofollow" >Expert Hub</a>
+							</dd>
+						</dl>
+						<dl class="footerModule">				
+							<dt>Site Sections</dt>
+							<dd>
+									     <a href="/careers" title="Careers"   rel="nofollow" >Careers</a>
+									     <a href="/classifieds" title="Classified Advertising"   rel="nofollow" >Classified Advertising</a>
+									     <a href="/event/search" title="Events"   rel="nofollow" >Events</a>
+									     <a href="/third-sector-awards" title="Awards"   rel="nofollow" >Awards</a>
+							</dd>
+						</dl>
+						<dl class="footerModule">				
+							<dt>Partner Sites</dt>
+							<dd>
+									     <a href="http://www.thirdsectorresearch.com/" title="Third Sector Research"   rel="nofollow" >Third Sector Research</a>
+									     <a href="http://jobs.thirdsector.co.uk/" title="Third Sector Jobs"   rel="nofollow" >Third Sector Jobs</a>
+									     <a href="http://volunteering.thirdsector.co.uk/" title="Third Sector Volunteering"   rel="nofollow" >Third Sector Volunteering</a>
+									     <a href="http://www.businesscharityawards.com/" title="Business Charity Awards"   rel="nofollow" >Business Charity Awards</a>
+									     <a href="http://www.thirdsectorexcellenceawards.com/" title="Third Sector Awards"   rel="nofollow" >Third Sector Awards</a>
+							</dd>
+						</dl>
+			</div>
+</nav>
+    <div class="footerWrap">
+        <p id="copyright" class="inner">
+            <a id="haymarketLogo" title="Haymarket" href="http://www.haymarket.com"   rel="nofollow" ><img alt="Haymarket" src="/_hbi_ui/basesitenet/img/responsive/logoHaymarket.png" /></a>
+            &copy; Haymarket Media Group Ltd. | <a href="http://www.haymarket.com/TermsAndConditions.aspx" title="Terms &amp; Conditions"   rel="nofollow" >Terms &amp; Conditions</a>
+        </p>
+    </div>
+	
+	</footer>
+
+
+	
+</div>
+		<script src="//tags.tiqcdn.com/utag/haymarket/thirdsector-inh/prod/utag.js" type="text/javascript"></script>
+
+	
+	
+	
+	
+
+<script type="text/javascript" src="http://static.thirdsector.co.uk/js/min/_Layout_Universal_LayoutMediaProviderF9E529905A3E04BF7701746D8BFD01BD.js" async></script>
+</body>
+</html>

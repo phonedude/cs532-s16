@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="es-ES" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://freakcode.info/wordpress/xmlrpc.php">
+<title>Python para rellenar formularios automáticamente</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Aprende como rellenar automáticamente formularios en la web con python."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Python para rellenar formularios automáticamente" />
+<meta property="og:description" content="Aprende como rellenar automáticamente formularios en la web con python." />
+<meta property="og:url" content="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" />
+<meta property="og:site_name" content="Freakcode" />
+<meta property="article:tag" content="automático" />
+<meta property="article:tag" content="bookscrapping" />
+<meta property="article:tag" content="code" />
+<meta property="article:tag" content="formulario" />
+<meta property="article:tag" content="mechanize" />
+<meta property="article:tag" content="python" />
+<meta property="article:section" content="Programación" />
+<meta property="article:published_time" content="2015-07-26T14:00:52+00:00" />
+<meta property="article:modified_time" content="2015-07-28T23:27:25+00:00" />
+<meta property="og:updated_time" content="2015-07-28T23:27:25+00:00" />
+<meta property="og:image" content="http://freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Aprende como rellenar automáticamente formularios en la web con python."/>
+<meta name="twitter:title" content="Python para rellenar formularios automáticamente"/>
+<meta name="twitter:image" content="http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif?fit=1600%2C900"/>
+<meta name="twitter:creator" content="@f3nixdeveloper"/>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Freakcode &raquo; Feed" href="http://freakcode.info/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Freakcode &raquo; RSS de los comentarios" href="http://freakcode.info/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Freakcode &raquo; Python para rellenar formularios automáticamente RSS de los comentarios" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/freakcode.info\/wordpress\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.1"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d");return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(String.fromCharCode(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(String.fromCharCode(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(String.fromCharCode(55357,56835),0,0):e.fillText(String.fromCharCode(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='genericons-css'  href='http://freakcode.info/wordpress/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='http://freakcode.info/wordpress/wp-content/plugins/jetpack/css/jetpack.css?ver=3.8.2' type='text/css' media='all' />
+<link rel='https://api.w.org/' href='http://freakcode.info/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://freakcode.info/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://freakcode.info/wordpress/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='http://wp.me/p6vsbS-1Q' />
+<link rel="alternate" type="application/json+oembed" href="http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F&#038;format=xml" />
+
+<!-- StarBox - the Author Box for Humans 3.0.4, visit: http://wordpress.org/plugins/starbox/ -->
+<!-- /StarBox - the Author Box for Humans -->
+
+<link rel='stylesheet' id='frontend.css-css'  href='http://freakcode.info/wordpress/wp-content/plugins/starbox//themes/fancy/css/frontend.css?ver=3.0.4' type='text/css' media='all' />
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/starbox//themes/fancy/js/frontend.js?ver=3.0.4'></script>
+<link rel='stylesheet' id='hidedefault.css-css'  href='http://freakcode.info/wordpress/wp-content/plugins/starbox//themes/admin/css/hidedefault.css?ver=3.0.4' type='text/css' media='all' />
+    	<script>
+			function sfsi_plus_processfurther(ref) {
+				var feed_id = 'QXc4bXpkU09WUVhhM2RiaVlqWmlSTHNuVkV6U3o5akNmVlJGbStDZnFzOC9KZWVaODFiUmpiSzMzd3VEYndmNEhDeTFmMVJ0ZE1EYXlqRzg5RE9jUk01alFoanh0TGVEY2p4QVZIOU5CemMyd2ZMUm0vU2NNOHYvYW41MWtpRXd8eWtkbHFzWUhydEFxcjBLSGVEMmVNenZVYVRCOTNJdndnMEN6MVZQNUt5VT0=';
+				var feedtype = 8;
+				var email = jQuery(ref).find('input[name="data[Widget][email]"]').val();
+				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				if ((email != "Enter your email") && (filter.test(email))) {
+					if (feedtype == "8") {
+						var url = "http://www.specificfeeds.com/widgets/subscribeWidget/"+feed_id+"/"+feedtype;
+						window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+						return true;
+					}
+				} else {
+					alert("Please enter email address");
+					jQuery(ref).find('input[name="data[Widget][email]"]').focus();
+					return false;
+				}
+			}
+		</script>
+    	<style type="text/css" aria-selected="true">
+			.sfsi_plus_subscribe_Popinner
+			{
+								width: 100% !important;
+				height: auto !important;
+												border: 1px solid #b5b5b5 !important;
+								padding: 18px 0px !important;
+				background-color: #ffffff !important;
+			}
+			.sfsi_plus_subscribe_Popinner form
+			{
+				margin: 0 20px !important;
+			}
+			.sfsi_plus_subscribe_Popinner h5
+			{
+				font-family: Helvetica,Arial,sans-serif !important;
+								font-weight: bold !important;
+								color: #000000 !important;
+				font-size: 16px !important;
+				text-align: center !important;
+				margin: 0 0 10px !important;
+    			padding: 0 !important;
+			}
+			.sfsi_plus_subscription_form_field {
+				margin: 5px 0 !important;
+				width: 100% !important;
+				display: inline-flex;
+				display: -webkit-inline-flex;
+			}
+			.sfsi_plus_subscription_form_field input {
+				width: 100% !important;
+				padding: 10px 0px !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=email]
+			{
+				font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+			   font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]:-moz-placeholder { /* Firefox 18- */
+			    font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]::-moz-placeholder {  /* Firefox 19+ */
+			    font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]:-ms-input-placeholder {  
+			  	font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=submit]
+			{
+				font-family: Helvetica,Arial,sans-serif !important;
+								font-weight: bold !important;
+								color: #000000 !important;
+				font-size: 16px !important;
+				text-align: center !important;
+				background-color: #dedede !important;
+			}
+		</style>
+	<meta name="specificfeeds-verification-code-QXc4bXpkU09WUVhhM2RiaVlqWmlSTHNuVkV6U3o5akNmVlJGbStDZnFzOC9KZWVaODFiUmpiSzMzd3VEYndmNEhDeTFmMVJ0ZE1EYXlqRzg5RE9jUk01alFoanh0TGVEY2p4QVZIOU5CemMyd2ZMUm0vU2NNOHYvYW41MWtpRXd8eWtkbHFzWUhydEFxcjBLSGVEMmVNenZVYVRCOTNJdndnMEN6MVZQNUt5VT0=" content="7LgzqjL4ZDcjgx8AjJRs"/>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><style></style>
+<!-- BEGIN GADWP v4.9.1.2 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-65251378-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- END GADWP Universal Tracking -->
+
+<title>Python para rellenar formularios automáticamente</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Aprende como rellenar automáticamente formularios en la web con python."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Python para rellenar formularios automáticamente" />
+<meta property="og:description" content="Aprende como rellenar automáticamente formularios en la web con python." />
+<meta property="og:url" content="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" />
+<meta property="og:site_name" content="Freakcode" />
+<meta property="article:tag" content="automático" />
+<meta property="article:tag" content="bookscrapping" />
+<meta property="article:tag" content="code" />
+<meta property="article:tag" content="formulario" />
+<meta property="article:tag" content="mechanize" />
+<meta property="article:tag" content="python" />
+<meta property="article:section" content="Programación" />
+<meta property="article:published_time" content="2015-07-26T14:00:52+00:00" />
+<meta property="article:modified_time" content="2015-07-28T23:27:25+00:00" />
+<meta property="og:updated_time" content="2015-07-28T23:27:25+00:00" />
+<meta property="og:image" content="http://freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Freakcode &raquo; Feed" href="http://freakcode.info/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Freakcode &raquo; RSS de los comentarios" href="http://freakcode.info/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Freakcode &raquo; Python para rellenar formularios automáticamente RSS de los comentarios" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/feed/" />
+<link rel='https://api.w.org/' href='http://freakcode.info/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://freakcode.info/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://freakcode.info/wordpress/wp-includes/wlwmanifest.xml" /> 
+<link rel='shortlink' href='http://wp.me/p6vsbS-1Q' />
+<link rel="alternate" type="application/json+oembed" href="http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://freakcode.info/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffreakcode.info%2Fpython-para-rellenar-formularios-automaticamente%2F&#038;format=xml" />
+
+<!-- StarBox - the Author Box for Humans 3.0.4, visit: http://wordpress.org/plugins/starbox/ -->
+<!-- /StarBox - the Author Box for Humans -->
+
+    	<script>
+			function sfsi_plus_processfurther(ref) {
+				var feed_id = 'QXc4bXpkU09WUVhhM2RiaVlqWmlSTHNuVkV6U3o5akNmVlJGbStDZnFzOC9KZWVaODFiUmpiSzMzd3VEYndmNEhDeTFmMVJ0ZE1EYXlqRzg5RE9jUk01alFoanh0TGVEY2p4QVZIOU5CemMyd2ZMUm0vU2NNOHYvYW41MWtpRXd8eWtkbHFzWUhydEFxcjBLSGVEMmVNenZVYVRCOTNJdndnMEN6MVZQNUt5VT0=';
+				var feedtype = 8;
+				var email = jQuery(ref).find('input[name="data[Widget][email]"]').val();
+				var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+				if ((email != "Enter your email") && (filter.test(email))) {
+					if (feedtype == "8") {
+						var url = "http://www.specificfeeds.com/widgets/subscribeWidget/"+feed_id+"/"+feedtype;
+						window.open(url, "popupwindow", "scrollbars=yes,width=1080,height=760");
+						return true;
+					}
+				} else {
+					alert("Please enter email address");
+					jQuery(ref).find('input[name="data[Widget][email]"]').focus();
+					return false;
+				}
+			}
+		</script>
+    	<style type="text/css" aria-selected="true">
+			.sfsi_plus_subscribe_Popinner
+			{
+								width: 100% !important;
+				height: auto !important;
+												border: 1px solid #b5b5b5 !important;
+								padding: 18px 0px !important;
+				background-color: #ffffff !important;
+			}
+			.sfsi_plus_subscribe_Popinner form
+			{
+				margin: 0 20px !important;
+			}
+			.sfsi_plus_subscribe_Popinner h5
+			{
+				font-family: Helvetica,Arial,sans-serif !important;
+								font-weight: bold !important;
+								color: #000000 !important;
+				font-size: 16px !important;
+				text-align: center !important;
+				margin: 0 0 10px !important;
+    			padding: 0 !important;
+			}
+			.sfsi_plus_subscription_form_field {
+				margin: 5px 0 !important;
+				width: 100% !important;
+				display: inline-flex;
+				display: -webkit-inline-flex;
+			}
+			.sfsi_plus_subscription_form_field input {
+				width: 100% !important;
+				padding: 10px 0px !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=email]
+			{
+				font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=email]::-webkit-input-placeholder {
+			   font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]:-moz-placeholder { /* Firefox 18- */
+			    font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]::-moz-placeholder {  /* Firefox 19+ */
+			    font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			
+			.sfsi_plus_subscribe_Popinner input[type=email]:-ms-input-placeholder {  
+			  	font-family: Helvetica,Arial,sans-serif !important;
+								font-style: normal !important;
+								color: #000000 !important;
+				font-size: 14px !important;
+				text-align: center !important;
+			}
+			.sfsi_plus_subscribe_Popinner input[type=submit]
+			{
+				font-family: Helvetica,Arial,sans-serif !important;
+								font-weight: bold !important;
+								color: #000000 !important;
+				font-size: 16px !important;
+				text-align: center !important;
+				background-color: #dedede !important;
+			}
+		</style>
+	<meta name="specificfeeds-verification-code-QXc4bXpkU09WUVhhM2RiaVlqWmlSTHNuVkV6U3o5akNmVlJGbStDZnFzOC9KZWVaODFiUmpiSzMzd3VEYndmNEhDeTFmMVJ0ZE1EYXlqRzg5RE9jUk01alFoanh0TGVEY2p4QVZIOU5CemMyd2ZMUm0vU2NNOHYvYW41MWtpRXd8eWtkbHFzWUhydEFxcjBLSGVEMmVNenZVYVRCOTNJdndnMEN6MVZQNUt5VT0=" content="7LgzqjL4ZDcjgx8AjJRs"/>
+<link rel='dns-prefetch' href='//i0.wp.com'>
+<link rel='dns-prefetch' href='//i1.wp.com'>
+<link rel='dns-prefetch' href='//i2.wp.com'>
+<style type='text/css'>img#wpstats{display:none}</style><style></style>
+<!-- BEGIN GADWP v4.9.1.2 Universal Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+
+<!-- END GADWP Universal Tracking -->
+
+
+
+</head>
+
+<body class="single single-post postid-114 single-format-standard group-blog">
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header" role="banner">
+		
+		
+		<div class="top-nav">
+			<div class="container">
+				<div class="row">
+										<div class="col-xs-12 col-sm-6 col-md-8 ">
+													<nav id="top-navigation" class="top-navigation" role="navigation">
+								<div class="menu-top-container"><ul id="menu-top" class="menu"><li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="http://freakcode.info/">Inicio</a></li>
+<li id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40"><a href="http://ANSPRESS_PAGE_URL_BASE">Preguntas</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="http://freakcode.info/acerca-de-nosotros/">Acerca de Nosotros</a></li>
+</ul></div>							</nav><!-- #site-navigation -->	
+							<a href="#" class="navbutton" id="top-nav-button">Top Menu</a>
+							<div class="responsive-topnav"></div>
+									
+					</div><!-- col-xs-12 col-sm-6 col-md-8 -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						
+	<div class="asocial-area">
+			<span class="asocial-icon facebook"><a href="http://facebook.com/freakcode" target="_blank"><i class="fa fa-facebook"></i></a></span>
+				<span class="asocial-icon twitter"><a href="http://twitter.com/freacode_" target="_blank"><i class="fa fa-twitter"></i></a></span>
+							<span class="asocial-icon rss"><a href="http://freakcode.info/feed/" target="_blank"><i class="fa fa-rss"></i></a></span>
+				</div>
+	
+					</div><!-- col-xs-12 col-sm-6 col-md-4 -->
+				</div><!-- row -->
+			</div><!-- .container -->
+		</div>
+	
+	<div class="site-branding">
+		<div class="container">
+			<div class="site-brand-container">
+										<div class="site-logo">
+	<a href="http://freakcode.info/" rel="home"><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/lilcol.png" alt="Freakcode"></a>
+			
+			</div>
+								</div><!-- .site-brand-container -->
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="awaken-navigation-container">
+			<nav id="site-navigation" class="main-navigation cl-effect-10" role="navigation">
+				<div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://freakcode.info/">Inicio</a></li>
+<li id="menu-item-257" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="http://freakcode.info/temas/programacion/">Programación</a></li>
+<li id="menu-item-258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-258"><a href="http://freakcode.info/temas/friki/">Friki</a></li>
+<li id="menu-item-259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259"><a href="http://freakcode.info/temas/tips-y-recomendaciones/">Tips</a></li>
+<li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260"><a href="http://freakcode.info/temas/noticias/">Noticias</a></li>
+<li id="menu-item-340" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-340"><a href="http://freakcode.info/temas/sysadmin/">sysadmin</a></li>
+</ul></div>			</nav><!-- #site-navigation -->
+			<a href="#" class="navbutton" id="main-nav-button">Main Menu</a>
+			<div class="responsive-mainnav"></div>
+
+			<div class="awaken-search-button-icon"></div>
+			<div class="awaken-search-box-container">
+				<div class="awaken-search-box">
+					<form action="http://freakcode.info/" id="awaken-search-form" method="get">
+						<input type="text" value="" name="s" id="s" />
+						<input type="submit" value="Search" />
+					</form>
+				</div><!-- th-search-box -->
+			</div><!-- .th-search-box-container -->
+		</div><!-- .awaken-navigation-container-->
+	</div><!-- .container -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+		<div class="container">
+
+	<div class="row">
+<div class="col-xs-12 col-sm-12 col-md-8 ">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-114" class="post-114 post type-post status-publish format-standard has-post-thumbnail hentry category-programacion tag-automatico tag-bookscrapping tag-code tag-formulario tag-mechanize tag-python">
+	<header class="single-entry-header">
+		<h1 class="single-entry-title">Python para rellenar formularios automáticamente</h1>
+		<div class="single-entry-meta">
+			<span class="posted-on"><a href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" rel="bookmark"><time class="entry-date published" datetime="2015-07-26T14:00:52+00:00">26 julio, 2015</time><time class="updated" datetime="2015-07-28T23:27:25+00:00">28 julio, 2015</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="http://freakcode.info/author/vvillalobos/">Victor Villalobos</a></span></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+				<div class="article-featured-image">
+				<img width="752" height="440" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif?resize=752%2C440" class="lazy lazy-hidden attachment-featured-slider size-featured-slider wp-post-image" alt="pythbook" /><noscript><img width="752" height="440" src="http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif?resize=752%2C440" class="attachment-featured-slider size-featured-slider wp-post-image" alt="pythbook" /></noscript>			</div>
+			
+	<div class="entry-content">
+		<p><strong>Python</strong> es un lenguaje maravilloso para casi todo, es flexible y limpio, simple de entender y poderosísimo. La idea es enseñarles un poco como hacer <em>web scrapping </em>con el. Lo anterior es una simple forma bonita de decir &#8220;automatización de relleno de formularios web&#8221;, y de verdad que si es mas bonita. Wikipedia es tu amiga y te lo define mejor:</p>
+<blockquote><p>Web scraping es una técnica utilizada mediante programas de software para extraer información de sitios web. Usualmente, estos programas simulan la navegación de un humano en la World Wide Web ya sea utilizando el protocolo HTTP manualmente, o incrustando un navegador en una aplicación.</p>
+<p>El web scraping está muy relacionado con la indexación de la web, la cual indexa la información de la web utilizando un robot y es una técnica universal adoptada por la mayoría de los motores de búsqueda. Sin embargo, el web scraping se enfoca más en la transformación de datos sin estructura en la web (como el formato HTML) en datos estructurados que pueden ser almacenados y analizados en una base de datos central&#8230;</p>
+<p><a href="https://es.wikipedia.org/wiki/Web_scraping" target="_blank">Wikipedia</a> ~ porque no hay nada que te haga mejor las tareas.</p></blockquote>
+<p>¿Para qué alguien quisiera hacer esto? Motivos hay tantos como ideas en el mundo, <del>yo lo uso para spammear sitios y ganar plata(?)</del>&#8230; cada quien verá el por qué. ¿Por qué lo estamos enseñando? ¡Porque siempre es bueno aprender algo nuevo!</p>
+<h2>Take me to your code!</h2>
+<pre class="line-numbers"><code class="language-python">pip install mechanize
+
+# Nuestro código quedaría asi:
+
+import mechanize
+br = mechanize.Browser()
+br.open(“http://freakcode.info/formulario_estupido.php”)
+br.select_form(nr=1)
+br.form[“titulo”]=”Pongamos algún titulo lindo”
+br.form[“descripcion”]=”Y acá pongamos todo lo que queremos que valla acá”
+br.submit()
+print br.response().read()</code></pre>
+<p>&nbsp;</p>
+<p>Vamos por pasos. Por supuesto lo primero que debemos hacer es  importar la librería recién instalada:</p>
+<pre class="line-numbers"><code class="language-python">import mechanize
+
+# Creamos el objeto browser.
+
+br = mechanize.Browser()
+
+# Con este invocamos el método open del objeto browser que creamos anteriormente
+
+br.open(“http://freakcode.info/formulario_estupido.php”)
+
+# Seleccionamos el formulario.
+
+br.select_form(nr=1)
+
+# Ahora lo importante, rellenamos cada campo del formulario usando el form que selecionamos anteriormente.
+
+br.form[“titulo”]=”Pongamos algún titulo lindo”
+br.form[“descripcion”]=”Y acá pongamos todo lo que queremos que valla acá”
+
+# Y luego ejecutamos el submit:
+
+br.submit()
+
+# Si necesitan leer la respuesta usamos el método read de la siguiente forma.
+
+print br.response().read()</code></pre>
+<p>Y básicamente ya está. Esto es solo el principio, ¡Pueden aprender más si nos siguen!</p>
+
+                         <div class="abh_box abh_box_down abh_box_fancy"><ul class="abh_tabs"> <li class="abh_about abh_active"><a href="#abh_about">About</a></li> <li class="abh_posts"><a href="#abh_posts">Latest Posts</a></li></ul><div class="abh_tab_content"><section class="vcard abh_about_tab abh_tab" style="display:block"><div class="abh_image"><a href="http://www.victorvillalobos.com.ve" class="url" target="_blank" title="Victor Villalobos"><img src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/gravatar/latwk06.jpeg" class="lazy lazy-hidden photo" width="80" alt="Victor Villalobos" /><noscript><img src="http://i2.wp.com/freakcode.info/wordpress/wp-content/uploads/gravatar/latwk06.jpeg?w=80" class="photo" alt="Victor Villalobos" data-recalc-dims="1" /></noscript></a></div><div class="abh_social"> <div style="clear: both; font-size:12px; font-weight:normal; width: 85px; margin: 0 0 2px auto; line-height: 20px;">Sigueme</div><a href="http://twitter.com/f3nixdeveloper" title="Twitter" class="abh_twitter" target="_blank" rel="nofollow"></a></div><div class="abh_text"><h3 class="fn name" style="font-size:16px !important;"><a href="http://www.victorvillalobos.com.ve" class="url" target="_blank">Victor Villalobos</a></h3><div class="abh_job" style="font-size:14px !important;"><span class="title" style="font-size:14px !important;">Developer</span> at <span class="org" style="font-size:14px !important;"><a href="http://www.firesoft.com.ve" target="_blank">Firesoft</a></span></div><div class="description note abh_description" style="font-size:14px !important;">Developer de corazón, amante de la tecnología en general, en estos momentos jefe de la creciente orquesta llamada Firesoft,adicto al anime, ex-player de todo y por ultimo afortunado de seruno de los tipos raros que fundaron esta web.</div></div> </section><section class="abh_posts_tab abh_tab" ><div class="abh_image"><a href="http://www.victorvillalobos.com.ve" class="url" target="_blank" title="Victor Villalobos"><img src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/gravatar/latwk06.jpeg" class="lazy lazy-hidden photo" width="80" alt="Victor Villalobos" /><noscript><img src="http://i2.wp.com/freakcode.info/wordpress/wp-content/uploads/gravatar/latwk06.jpeg?w=80" class="photo" alt="Victor Villalobos" data-recalc-dims="1" /></noscript></a></div><div class="abh_social"> <div style="clear: both; font-size:12px; font-weight:normal; width: 85px; margin: 0 0 2px auto; line-height: 20px;">Sigueme</div><a href="http://twitter.com/f3nixdeveloper" title="Twitter" class="abh_twitter" target="_blank" rel="nofollow"></a></div><div class="abh_text"><h4 style="font-size:16px !important;">Latest posts by Victor Villalobos <span class="abh_allposts">(<a href="http://freakcode.info/author/vvillalobos/">see all</a>)</span></h4><div class="abh_description note" ><ul>				<li style="font-size:14px !important;" >					<a href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/">Python para rellenar formularios automáticamente</a><span> - 26 julio, 2015</span>				</li></ul></div></div> </section></div> </div><table class="rw-rating-table rw-ltr rw-left"><tr><td><nobr>Valoracion:</nobr></td><td><div class="rw-left"><div class="rw-ui-container rw-class-blog-post rw-urid-1150" data-img="http://freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif"></div></div></td></tr></table><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon sd-sharing"><h3 class="sd-title">Compártelo:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-114" class="share-twitter sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=twitter" target="_blank" title="Haz clic para compartir en Twitter"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Twitter (Se abre en una ventana nueva)</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-114" class="share-facebook sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=facebook" target="_blank" title="Comparte en Facebook"><span></span><span class="sharing-screen-reader-text">Comparte en Facebook (Se abre en una ventana nueva)</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-114" class="share-google-plus-1 sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=google-plus-1" target="_blank" title="Haz clic para compartir en Google+"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Google+ (Se abre en una ventana nueva)</span></a></li><li class="share-tumblr"><a rel="nofollow" data-shared="" class="share-tumblr sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=tumblr" target="_blank" title="Haz clic para compartir en Tumblr"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Tumblr (Se abre en una ventana nueva)</span></a></li><li class="share-reddit"><a rel="nofollow" data-shared="" class="share-reddit sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=reddit" target="_blank" title="Haz clic para compartir en Reddit"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Reddit (Se abre en una ventana nueva)</span></a></li><li class="share-pocket"><a rel="nofollow" data-shared="" class="share-pocket sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=pocket" target="_blank" title="Pincha para compartir en Pocket"><span></span><span class="sharing-screen-reader-text">Pincha para compartir en Pocket (Se abre en una ventana nueva)</span></a></li><li class="share-pinterest"><a rel="nofollow" data-shared="sharing-pinterest-114" class="share-pinterest sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=pinterest" target="_blank" title="Haz clic para compartir en Pinterest"><span></span><span class="sharing-screen-reader-text">Haz clic para compartir en Pinterest (Se abre en una ventana nueva)</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-114" class="share-linkedin sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=linkedin" target="_blank" title="Haz clic aquí para compartir en LinkedIn"><span></span><span class="sharing-screen-reader-text">Haz clic aquí para compartir en LinkedIn (Se abre en una ventana nueva)</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon no-text" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?share=email" target="_blank" title="Hac clic para enviar por correo electrónico a un amigo"><span></span><span class="sharing-screen-reader-text">Hac clic para enviar por correo electrónico a un amigo (Se abre en una ventana nueva)</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Relacionado</em></h3>
+</div>			</div><!-- .entry-content -->
+
+	<footer class="single-entry-footer">
+		<div class="categorized-under">Posted Under</div><div class="awaken-category-list"><a href="http://freakcode.info/temas/programacion/" rel="category tag">Programación</a></div><div class="clearfix"></div><div class="tagged-under">Tagged</div><div class="awaken-tag-list"><a href="http://freakcode.info/tag/automatico/" rel="tag">automático</a> <a href="http://freakcode.info/tag/bookscrapping/" rel="tag">bookscrapping</a> <a href="http://freakcode.info/tag/code/" rel="tag">code</a> <a href="http://freakcode.info/tag/formulario/" rel="tag">formulario</a> <a href="http://freakcode.info/tag/mechanize/" rel="tag">mechanize</a> <a href="http://freakcode.info/tag/python/" rel="tag">python</a></div><div class="clearfix"></div>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="http://freakcode.info/git-es-cool-y-te-decimos-por-que/" rel="prev">Git es cool, ¡Y te decimos por qué!</a></div><div class="nav-next"><a href="http://freakcode.info/javascript-como-primer-lenguaje/" rel="next">Javascript como primer lenguaje</a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-48">
+        <div id="dsq-comment-header-48" class="dsq-comment-header">
+            <cite id="dsq-cite-48">
+                <span id="dsq-author-user-48">Gonnza Cabrera</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-48" class="dsq-comment-body">
+            <div id="dsq-comment-message-48" class="dsq-comment-message"><p>Y si quisiera leer la respuesta de una etiqueta HTML en particular, osea al final no leer todo el codigo HTML, sino filtrar los resultados del form. Gracias, excelente post.<br />
+<table class="rw-rating-table rw-ltr rw-left rw-no-labels">
+<tr>
+<td><nobr>&nbsp;</nobr></td>
+<td>
+<div class="rw-left">
+<div class="rw-ui-container rw-class-comment rw-urid-491"></div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-49">
+        <div id="dsq-comment-header-49" class="dsq-comment-header">
+            <cite id="dsq-cite-49">
+                <span id="dsq-author-user-49">Victor Villalobos</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-49" class="dsq-comment-body">
+            <div id="dsq-comment-message-49" class="dsq-comment-message"><p>Buenas Gonnza Cabrera </p>
+<p> Para filtrar debes utillizar una libreria como BeautifulSoup4, se te hare mas facil filtrar el response, tiene una increible documentacion aca : </p>
+<p><a href="http://www.crummy.com/software/BeautifulSoup/bs4/doc/" rel="nofollow">http://www.crummy.com/software/BeautifulSoup/bs4/doc/</a></p>
+<p>O si te llevas bien con REGEX puedes buscar las etiquetas manualmente en el response que te da el metodo read().</p>
+<p>Saludos, gracias por comentar.<br />
+<table class="rw-rating-table rw-ltr rw-left rw-no-labels">
+<tr>
+<td><nobr>&nbsp;</nobr></td>
+<td>
+<div class="rw-left">
+<div class="rw-ui-container rw-class-comment rw-urid-501"></div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-50">
+        <div id="dsq-comment-header-50" class="dsq-comment-header">
+            <cite id="dsq-cite-50">
+                <span id="dsq-author-user-50">j2596939</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-50" class="dsq-comment-body">
+            <div id="dsq-comment-message-50" class="dsq-comment-message"><p>Hola, un cordial saludo a todos&#8230; Muy buen articulo, me surge una inquietud.</p>
+<p>Por ejemplo&#8230; en el</p>
+<p> br.form[“titulo”]</p>
+<p>&#8220;titulo&#8221; hace referencia, a un tag  cuyo nombre es &#8220;titulo&#8221;.</p>
+<p>Cuando en los tag&#8217;s  y  no se usa el atributo (name), como se puede hacer referencia a ellos.</p>
+<p>Por ejemplo:</p>
+<p>        Enviar</p>
+<p>¿Existe alguna forma de seleccionar el formulario y las entradas a traves de otra propiedad (class por ejemplo)?</p>
+<p>Agradezco su tiempo y colaboración.<br />
+<table class="rw-rating-table rw-ltr rw-left rw-no-labels">
+<tr>
+<td><nobr>&nbsp;</nobr></td>
+<td>
+<div class="rw-left">
+<div class="rw-ui-container rw-class-comment rw-urid-511"></div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+</div><!-- .bootstrap cols -->
+<div class="col-xs-12 col-sm-6 col-md-4">
+	
+<div id="secondary" class="main-widget-area" role="complementary">
+	<aside id="search-2" class="widget widget_search"><div class="widget-title-container"><h2 class="widget-title">Buscar</h2></div><form role="search" method="get" class="search-form" action="http://freakcode.info/">
+				<label>
+					<span class="screen-reader-text">Buscar:</span>
+					<input type="search" class="search-field" placeholder="Buscar &hellip;" value="" name="s" title="Buscar:" />
+				</label>
+				<input type="submit" class="search-submit" value="Buscar" />
+			</form></aside><aside id="sfsi-plus-widget-3" class="widget sfsi_plus"><div class="widget-title-container"><h2 class="widget-title">Nuestras redes</h2></div>				<div class="sfsi_plus_widget" data-position="widget">   
+					<div id='sfsi_plus_wDiv'></div>
+						<div class="sfsiplus_norm_row sfsi_plus_wDiv"  style="width:225px;text-align:left;position:absolute;"><div style='width:40px; height:40px;margin-left:5px;margin-bottom:5px;' class='sfsi_plus_wicons shuffeldiv '><div class='sfsiplus_inerCnt'><a class=' sficn' effect='fade_in' target='_blank'  href='http://freakcode.info/feed' id='sfsiplusid_rss' alt='RSS' style='opacity:0.6' ><img alt='RSS' title='RSS' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_rss.png' width='40' style='' class='sfcm sfsi_wicon' effect='fade_in'   /></a></div></div><div style='width:40px; height:40px;margin-left:5px;margin-bottom:5px;' class='sfsi_plus_wicons shuffeldiv '><div class='sfsiplus_inerCnt'><a class=' sficn' effect='fade_in' target='_blank'  href='http://www.specificfeeds.com/widget/emailsubscribe/MTYzOTcy/OA==/' id='sfsiplusid_email' alt='Follow by Email' style='opacity:0.6' ><img alt='Follow by Email' title='Follow by Email' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_subscribe.png' width='40' style='' class='sfcm sfsi_wicon' effect='fade_in'   /></a></div></div><div style='width:40px; height:40px;margin-left:5px;margin-bottom:5px;' class='sfsi_plus_wicons shuffeldiv '><div class='sfsiplus_inerCnt'><a class=' sficn' effect='fade_in'   href='javascript:void(0)' id='sfsiplusid_facebook' alt='Facebook' style='opacity:0.6' ><img alt='Facebook' title='Facebook' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_facebook.png' width='40' style='' class='sfcm sfsi_wicon' effect='fade_in'   /></a><div class="sfsi_tool_tip_2 fb_tool_bdr sfsiTlleft" style="width:62px ;opacity:0;z-index:-1;margin-left:-47.5px;" id="sfsiplusid_facebook"><span class="bot_arow bot_fb_arow"></span><div class="sfsi_inside"><div  class='icon2'><fb:like href="http://www.freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost%0D" width="180" send="false" showfaces="false" layout="button" action="like"></fb:like></div><div  class='icon3'><fb:share-button href="http://www.freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost%0D" width="140" type="button"></fb:share-button></div></div></div></div></div><div style='width:40px; height:40px;margin-left:5px;margin-bottom:5px;' class='sfsi_plus_wicons shuffeldiv '><div class='sfsiplus_inerCnt'><a class=' sficn' effect='fade_in'   href='javascript:void(0)' id='sfsiplusid_google' alt='Google+' style='opacity:0.6' ><img alt='Google+' title='Google+' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_google.png' width='40' style='' class='sfcm sfsi_wicon' effect='fade_in'   /></a><div class="sfsi_tool_tip_2 gpls_tool_bdr sfsiTlleft" style="width:76px ;opacity:0;z-index:-1;margin-left:-54.5px;" id="sfsiplusid_google"><span class="bot_arow bot_gpls_arow"></span><div class="sfsi_inside"><div  class='icon1'><a href='http://google.com/+FreakcodeInfo15' target='_blank'><img alt='Google+' title='Google+' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/visit_icons/google.png'  /></a></div><div  class='icon2'><div class="g-plusone" data-href="http://www.freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost%0D" data-size="large" data-annotation="none" ></div></div><div  class='icon3'><div class="g-plus" data-action="share" data-annotation="none" data-height="24" data-href="http://www.freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost%0D">http://www.freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost%0D"></div></div></div></div></div></div><div style='width:40px; height:40px;margin-left:5px;margin-bottom:5px;' class='sfsi_plus_wicons shuffeldiv '><div class='sfsiplus_inerCnt'><a class=' sficn' effect='fade_in'   href='javascript:void(0)' id='sfsiplusid_twitter' alt='Twitter' style='opacity:0.6' ><img alt='Twitter' title='Twitter' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_twitter.png' width='40' style='' class='sfcm sfsi_wicon' effect='fade_in'   /></a><div class="sfsi_tool_tip_2 twt_tool_bdr sfsiTlleft" style="width:59px ;opacity:0;z-index:-1;margin-left:-46px;" id="sfsiplusid_twitter"><span class="bot_arow bot_twt_arow"></span><div class="sfsi_inside"><div  class='icon1'><a href="https://twitter.com/freakcode_" class="twitter-follow-button"  data-show-count="false" data-show-screen-name="false">Follow </a></div><div  class='icon2'><a rel="nofollow" href="http://twitter.com/share" data-count="none" class="sr-twitter-button twitter-share-button" lang="en" data-url="http://www.freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&utm_medium=social&utm_campaign=ReviveOldPost%0D" data-text="Hey, check out this cool site I found: www.yourname.com #Topic via@my_twitter_name" ></a></div></div></div></div></div></div ><div id="sfsi_holder" class="sfsi_plus_holders" style="position: relative; float: left;width:100%;z-index:-1;"></div ><script>jQuery(".sfsi_plus_widget").each(function( index ) {
+					if(jQuery(this).attr("data-position") == "widget")
+					{
+						var wdgt_hght = jQuery(this).children(".sfsiplus_norm_row.sfsi_plus_wDiv").height();
+						var title_hght = jQuery(this).parent(".widget.sfsi_plus").children(".widget-title").height();
+						var totl_hght = parseInt( title_hght ) + parseInt( wdgt_hght );
+						jQuery(this).parent(".widget.sfsi_plus").css("min-height", totl_hght+"px");
+					}
+				});</script>                    <div style="clear: both;"></div>
+				</div>
+				</aside><aside id="wli_popular_posts-3" class="widget wli_popular_posts-class"><div class="widget-title-container"><h2 class="widget-title">Lo mas visto</h2></div><ul>					<li>
+													<div class="post_thumb">
+		                        <a href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" title="Python para rellenar formularios automáticamente">
+									<img width="100" height="56" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" class="lazy-hidden attachment-100x100 size-100x100 wp-post-image" alt="pythbook" data-src="http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/07/pythbook1.gif?fit=100%2C56" data-lazy-type="image" />								</a>
+	                        </div>
+                                                <h3>
+	                        <a href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/" title="Python para rellenar formularios automáticamente">
+								Python para rellenar formularios automáticamente							</a>
+                        </h3>
+						        											<div class="bottom_bar">
+		                        <p>
+			                        <span><img src='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/images/view_icon.png'/> 5909</span><span><a href='http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comments' title='Comments'><img src='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/images/comment_icon.png'/> 3</a></span>		                        </p>
+	                        </div>
+											</li>
+		 							<li>
+													<div class="post_thumb">
+		                        <a href="http://freakcode.info/bitnami-usando-stacks-para-desarrollar-en-php/" title="Bitnami, usando stacks para desarrollar en PHP">
+									<img width="100" height="60" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" class="lazy-hidden attachment-100x100 size-100x100 wp-post-image" alt="bitnami-web" data-src="http://i2.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/08/bitnami.png?fit=100%2C60" data-lazy-type="image" />								</a>
+	                        </div>
+                                                <h3>
+	                        <a href="http://freakcode.info/bitnami-usando-stacks-para-desarrollar-en-php/" title="Bitnami, usando stacks para desarrollar en PHP">
+								Bitnami, usando stacks para desarrollar en PHP							</a>
+                        </h3>
+						        											<div class="bottom_bar">
+		                        <p>
+			                        <span><img src='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/images/view_icon.png'/> 3984</span><span><a href='http://freakcode.info/bitnami-usando-stacks-para-desarrollar-en-php/#comments' title='Comments'><img src='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/images/comment_icon.png'/> 2</a></span>		                        </p>
+	                        </div>
+											</li>
+		 							<li>
+													<div class="post_thumb">
+		                        <a href="http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/" title="Crea tu framework css con Jeet, Axis, Rupture y Stylus">
+									<img width="100" height="50" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" class="lazy-hidden attachment-100x100 size-100x100 wp-post-image" alt="stylus" sizes="(max-width: 100px) 100vw, 100px" data-src="http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/08/stylus.png?fit=100%2C50" data-lazy-type="image" data-srcset="http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/08/stylus.png?resize=300%2C150 300w, http://i1.wp.com/freakcode.info/wordpress/wp-content/uploads/2015/08/stylus.png?w=600 600w" />								</a>
+	                        </div>
+                                                <h3>
+	                        <a href="http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/" title="Crea tu framework css con Jeet, Axis, Rupture y Stylus">
+								Crea tu framework css con Jeet, Axis, Rupture y Stylus							</a>
+                        </h3>
+						        											<div class="bottom_bar">
+		                        <p>
+			                        <span><img src='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/images/view_icon.png'/> 3889</span><span><a href='http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/#comments' title='Comments'><img src='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/images/comment_icon.png'/> 2</a></span>		                        </p>
+	                        </div>
+											</li>
+		 		</ul></aside><aside id="disqus_recent_comments-3" class="widget disqus_recent_comments_widget_wrapper"><aside id="disqus_rcw_title" class="widget"><div class="widget-title-container"><h2 class="widget-title">Comentarios recientes</h2></div><ul class="disqus_rcw_comments_list">
+					<li class="disqus_rcw_single">
+						<div class="disqus_rcw_author_wrapper">
+							<img class="disqus_rcw_avatar_html5" src="//a.disquscdn.com/1455048077/images/noavatar92.png" alt="j2596939">
+							<a href="https://disqus.com/by/j2596939/">
+								<span class="disqus_rcw_author">j2596939</span>
+							</a>
+						</div>
+						<div class="disqus_rcw_clear"></div>
+						<div class="disqus_rcw_content_wrapper">
+							<a class="disqus_rcw_thread_title" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/">Python para rellenar formularios automáticamente</a>
+							<br />
+							<a class="disqus_rcw_message" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comment-2463703734">Hola, un cordial saludo a todos... Muy buen articulo, me surge una inquietud.
+
+Por ejemplo... en el
+
+ br.form[“titulo”]
+
+"titulo" hace referencia, a un tag <input> cuyo nombre es "titulo".
+
+Cuando...</a>
+						</div>
+						<time datetime="17/1/2016" class="disqus_rcw_post_time_html5">17/1/2016</time>
+					</li>
+					<li class="disqus_rcw_single">
+						<div class="disqus_rcw_author_wrapper">
+							<img class="disqus_rcw_avatar_html5" src="//a.disquscdn.com/uploads/users/7468/2996/avatar92.jpg?1452089750" alt="Victor Villalobos">
+							<a href="https://disqus.com/by/revxfire/">
+								<span class="disqus_rcw_author">Victor Villalobos</span>
+							</a>
+						</div>
+						<div class="disqus_rcw_clear"></div>
+						<div class="disqus_rcw_content_wrapper">
+							<a class="disqus_rcw_thread_title" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/">Python para rellenar formularios automáticamente</a>
+							<br />
+							<a class="disqus_rcw_message" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comment-2442567481">Buenas Gonnza Cabrera 
+
+ Para filtrar debes utillizar una libreria como BeautifulSoup4, se te hare mas facil filtrar el response, tiene una increible documentacion aca :...</a>
+						</div>
+						<time datetime="6/1/2016" class="disqus_rcw_post_time_html5">6/1/2016</time>
+					</li>
+					<li class="disqus_rcw_single">
+						<div class="disqus_rcw_author_wrapper">
+							<img class="disqus_rcw_avatar_html5" src="//a.disquscdn.com/uploads/users/14191/7500/avatar92.jpg?1452070473" alt="Gonnza Cabrera">
+							<a href="https://disqus.com/by/gonnzacabrera/">
+								<span class="disqus_rcw_author">Gonnza Cabrera</span>
+							</a>
+						</div>
+						<div class="disqus_rcw_clear"></div>
+						<div class="disqus_rcw_content_wrapper">
+							<a class="disqus_rcw_thread_title" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/">Python para rellenar formularios automáticamente</a>
+							<br />
+							<a class="disqus_rcw_message" href="http://freakcode.info/python-para-rellenar-formularios-automaticamente/#comment-2442271868">Y si quisiera leer la respuesta de una etiqueta HTML en particular, osea al final no leer todo el codigo HTML, sino filtrar los resultados del form. Gracias, excelente post.</a>
+						</div>
+						<time datetime="6/1/2016" class="disqus_rcw_post_time_html5">6/1/2016</time>
+					</li>
+					<li class="disqus_rcw_single">
+						<div class="disqus_rcw_author_wrapper">
+							<img class="disqus_rcw_avatar_html5" src="//a.disquscdn.com/uploads/users/11161/9799/avatar92.jpg?1455746470" alt="Jorge García">
+							<a href="https://disqus.com/by/disqus_V6ElscMTlV/">
+								<span class="disqus_rcw_author">Jorge García</span>
+							</a>
+						</div>
+						<div class="disqus_rcw_clear"></div>
+						<div class="disqus_rcw_content_wrapper">
+							<a class="disqus_rcw_thread_title" href="http://freakcode.info/migracion-wordpress-local-a-remoto/">Migración de un server local a remoto de tu sitio WordPress</a>
+							<br />
+							<a class="disqus_rcw_message" href="http://freakcode.info/migracion-wordpress-local-a-remoto/#comment-2264435780">Hola Nano, muchas gracias por el tutorial. Una pregunta: la segunda parte donde se sube el archivo MySQL (se importa) entiendo que es ya desde cpanel en el servidor verdad? Borrar la del servidor e...</a>
+						</div>
+						<time datetime="20/9/2015" class="disqus_rcw_post_time_html5">20/9/2015</time>
+					</li>
+					<li class="disqus_rcw_single">
+						<div class="disqus_rcw_author_wrapper">
+							<img class="disqus_rcw_avatar_html5" src="//a.disquscdn.com/uploads/users/690/7644/avatar92.jpg?1455210980" alt="nanotime">
+							<a href="https://disqus.com/by/nanotime/">
+								<span class="disqus_rcw_author">nanotime</span>
+							</a>
+						</div>
+						<div class="disqus_rcw_clear"></div>
+						<div class="disqus_rcw_content_wrapper">
+							<a class="disqus_rcw_thread_title" href="http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/">Crea tu framework css con Jeet, Axis, Rupture y Stylus</a>
+							<br />
+							<a class="disqus_rcw_message" href="http://freakcode.info/crea-tu-framework-css-con-jeet-axis-rupture-y-stylus/#comment-2235850084">Te puedo decir que en su hilo de issues en Github son bastante buena gente, y de hecho pretendo preparar un sample-code para estas herramientas y mostrar acá.</a>
+						</div>
+						<time datetime="4/9/2015" class="disqus_rcw_post_time_html5">4/9/2015</time>
+					</li></ul></aside></aside><aside id="awaken_medium_rectangle_ad-3" class="widget widget_awaken_medium_rectangle_ad"><div class="widget-title-container"><h2 class="widget-title">Publicidad</h2></div>
+		<div class="awaken-medium-rectangle-widget">
+			<figure>
+				<a href="http://www.firesoft.org"><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/sponsor.gif"></a>
+			</figure>
+		</div>
+
+</aside></div><!-- #secondary -->
+</div><!-- .bootstrap cols -->
+</div><!-- .row -->
+		</div><!-- container -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="container">
+			<div class="row">
+				<div class="footer-widget-area">
+					<div class="col-md-4">
+						<div class="left-footer">
+							<div class="widget-area" role="complementary">
+								<aside id="text-4" class="widget widget_text"><h2 class="footer-widget-title">Quédate con Nosotros</h2>			<div class="textwidget"><center><p><a href="http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/images/icons_theme/default/default_rss.png"><img class="lazy lazy-hidden" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/social5.png"><noscript><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/social5.png"></noscript></a>  
+<a href="http://www.specificfeeds.com/widget/emailsubscribe/MTYzOTcy/OA==/"><img class="lazy lazy-hidden" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/email1311.png"><noscript><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/email1311.png"></noscript></a>  
+<a href="http://google.com/+FreakcodeInfo15"><img class="lazy lazy-hidden" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/google110.png"><noscript><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/google110.png"></noscript></a>  
+<a href="https://twitter.com/freakcode_"><img class="lazy lazy-hidden" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/logo221.png"><noscript><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/logo221.png"></noscript></a>  
+<a href="https://www.facebook.com/freakcode"><img class="lazy lazy-hidden" src="//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/facebook31.png"><noscript><img src="http://freakcode.info/wordpress/wp-content/uploads/2015/07/facebook31.png"></noscript></a></p></center></div>
+		</aside>							</div><!-- .widget-area -->
+						</div>
+					</div>
+					
+					<div class="col-md-4">
+						<div class="mid-footer">
+							<div class="widget-area" role="complementary">
+								<aside id="text-3" class="widget widget_text"><h2 class="footer-widget-title">Acerca de</h2>			<div class="textwidget">Freakcode es una prensa digital formada por freaks para freaks (o para quién sea que desee leernos), que buscan compartir sus conocimientos y algunos que otros datos no tan relevantes. Somos apasionados por la comunicación y el conocimiento, la tecnología, el código y el buen wifi del vecino internet.</div>
+		</aside>							</div><!-- .widget-area -->						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="right-footer">
+							<div class="widget-area" role="complementary">
+								<aside id="blog_subscription-3" class="widget jetpack_subscription_widget"><h2 class="footer-widget-title">Suscríbete al blog por correo electrónico</h2>
+			<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-3">
+				<div id="subscribe-text"><p>Introduce tu correo electrónico para suscribirte a FreakCode y recibir las ultimas noticias.</p>
+</div><p>Únete a 1 suscriptor</p>
+					<p id="subscribe-email">
+						<label id="jetpack-subscribe-label" for="subscribe-field-blog_subscription-3">
+							Dirección de email						</label>
+						<input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-3" placeholder="Dirección de email" />
+					</p>
+
+					<p id="subscribe-submit">
+						<input type="hidden" name="action" value="subscribe" />
+						<input type="hidden" name="source" value="http://freakcode.info/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&#038;utm_medium=social&#038;utm_campaign=ReviveOldPost" />
+						<input type="hidden" name="sub-type" value="widget" />
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-3" />
+												<input type="submit" value="Suscribir" name="jetpack_subscriptions_widget" />
+					</p>
+							</form>
+
+			<script>
+			/*
+			Custom functionality for safari and IE
+			 */
+			(function( d ) {
+				// Creates placeholders for IE
+				if ( ( 'placeholder' in d.createElement( 'input' ) ) ) {
+					var label = d.getElementById( 'jetpack-subscribe-label' );
+						label.style.clip 	 = 'rect(1px, 1px, 1px, 1px)';
+						label.style.position = 'absolute';
+						label.style.height   = '1px';
+						label.style.width    = '1px';
+						label.style.overflow = 'hidden';
+				}
+
+				// Make sure the email value is filled in before allowing submit
+				var form = d.getElementById('subscribe-blog-blog_subscription-3'),
+					input = d.getElementById('subscribe-field-blog_subscription-3'),
+					handler = function( event ) {
+						if ( '' === input.value ) {
+							input.focus();
+
+							if ( event.preventDefault ){
+								event.preventDefault();
+							}
+
+							return false;
+						}
+					};
+
+				if ( window.addEventListener ) {
+					form.addEventListener( 'submit', handler, false );
+				} else {
+					form.attachEvent( 'onsubmit', handler );
+				}
+			})( document );
+			</script>
+				
+</aside>							</div><!-- .widget-area -->				
+						</div>
+					</div>						
+				</div><!-- .footer-widget-area -->
+			</div><!-- .row -->
+		</div><!-- .container -->	
+
+		<div class="footer-site-info">	
+			<div class="container">
+				<div class="row">
+				Copyright Freakcode. Todos los derechos reservados				</div><!-- .row -->
+			</div><!-- .container -->
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/jetpack/modules/related-posts/related-posts.js?ver=20150408'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-includes/js/wp-embed.min.js?ver=4.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.4.1","language":"","remote_auth_s3":"W10= fc349c609a7d932ca5f85b10a930cb548e7a2e04 1455818536","api_key":"2BWttMv1VRbitlRTGJqU4xVHp7rHsbwDFLAJNus6oSlI3senVDrBwqPaYVRpcrKI","sso":{"name":"Freakcode","button":false,"url":"http:\/\/freakcode.info\/wordpress\/wp-login.php","logout":"http:\/\/freakcode.info\/wordpress\/wp-login.php?action=logout","width":"800","height":"700"}},"disqusIdentifier":"114 http:\/\/freakcode.info\/?p=114","disqusShortname":"freakcode","disqusTitle":"Python para rellenar formularios autom\u00e1ticamente","disqusUrl":"http:\/\/freakcode.info\/python-para-rellenar-formularios-automaticamente\/","options":{"manualSync":false},"postId":"114"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/scripts.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/respond.min.js?ver=4.4.1'></script>
+					<!-- This site's ratings are powered by RatingWidget plugin v2.7.6 - https://rating-widget.com/wordpress-plugin/ -->
+					<div class="rw-js-container">
+												<script type="text/javascript">
+							var defaultRateCallbacks = {};
+
+							// Initialize ratings.
+							function RW_Async_Init(){
+								RW.init({uid: "18e7712a56d23e52e0b442ee17099927", huid: "248996",
+									source: "wordpress",
+									options: {
+																	},
+								identifyBy: "laccount"
+							});
+														var options = {"urid":"3","advanced":{"css":{"container":"background: #F4F4F4; padding: 1px 2px 0px 2px; margin-bottom: 2px; border-right: 1px solid #DDD; border-bottom: 1px solid #DDD; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;"},"star":{"stars":5},"nero":{"text":{"like":{"empty":"{{rating.likes}}","rated":"{{rating.likes}}"},"dislike":{"empty":"{{rating.dislikes}}","rated":"{{rating.dislikes}}"}},"showDislike":true,"showLike":true},"font":{"hover":{"color":"#000000"},"bold":false,"italic":false,"color":"#000000","size":"16px","type":"inherit"},"layout":{"align":{"hor":"right","ver":"middle"},"dir":"ltr","lineHeight":"20px"},"text":{"rateAwful":"Horrible","ratePoor":"Mal","rateAverage":"Promedio","rateGood":"Bueno","rateExcellent":"Excelente","rateThis":"Calificar","like":"Gusta","dislike":"No gusta","vote":"Voto","votes":"Votos","thanks":"Gracias","outOf":"de cada","weRecommend":"Recomendamos"}},"lng":"es","rclass":"blog-post","size":"medium","theme":"star_flat_red","isDummy":false,"type":"star","boost":{"votes":0,"rate":5},"imgUrl":{"ltr":"","rtl":""},"mobile":{"optimized":true,"showTrigger":true},"label":{"text":{"star":{"empty":"{{text.rateThis}}","normal":"{{text.rateThis}} ({{rating.votes}} {{text.votes}})","rated":"{{rating.votes}} {{text.votes}}"},"nero":{"empty":"{{text.rateThis}}","normal":"{{text.rateThis}}","rated":"{{rating.votes}} {{text.votes}}"}},"background":"#FFFFFF"},"uarid":0,"url":"","img":"","title":"","style":"flat_red","readOnly":false,"sync":true,"forceSync":false,"reVote":true,"frequency":-1,"showInfo":true,"showTooltip":true,"showAverage":true,"showReport":true,"showRecommendations":false,"hideRecommendations":false,"showSponsored":false,"showLoader":true,"beforeRate":null,"afterRate":null};
+																							
+							RW.initClass("blog-post", options);
+														var options = {"type":"nero","theme":"thumbs_1"};
+																							
+							RW.initClass("comment", options);
+							RW.initRating("1150", {title: "Python para rellenar formularios autom\u00e1ticamente", url: "http:\/\/freakcode.info\/python-para-rellenar-formularios-automaticamente\/"});RW.initRating("491", {title: "Y si quisiera leer la respuesta de una etiqueta HTML en particular, osea al final no leer todo el codigo HTML, sino filtrar los resultados del form. Gracias, excelente post.", url: "http:\/\/freakcode.info\/python-para-rellenar-formularios-automaticamente\/#comment-48"});RW.initRating("501", {title: "Buenas Gonnza Cabrera \\n\\n Para filtrar debes utillizar una libreria como BeautifulSoup4, se te hare mas facil filtrar el response, tiene una increible documentacion aca : \\n\\nhttp:\/\/www.crummy.com\/software\/BeautifulSoup\/bs4\/doc\/\\n\\nO si te llevas bien con REGEX puedes buscar las etiquetas manualmente en el response que te da el metodo read().\\n\\nSaludos, gracias por comentar.", url: "http:\/\/freakcode.info\/python-para-rellenar-formularios-automaticamente\/#comment-49"});RW.initRating("511", {title: "Hola, un cordial saludo a todos... Muy buen articulo, me surge una inquietud.\\n\\nPor ejemplo... en el\\n\\n br.form[\u201ctitulo\u201d]\\n\\n&quot;titulo&quot; hace referencia, a un tag  cuyo nombre es &quot;titulo&quot;.\\n\\nCuando en los tag\\'s  y  no se usa el atributo (name), como se puede hacer referencia a ellos.\\n\\nPor ejemplo:\\n\\n\\n\\n        Enviar\\n    \\n\\n\u00bfExiste alguna forma de seleccionar el formulario y las entradas a traves de otra propiedad (class por ejemplo)?\\n\\nAgradezco su tiempo y colaboraci\u00f3n.", url: "http:\/\/freakcode.info\/python-para-rellenar-formularios-automaticamente\/#comment-50"});							RW.render(function() {
+								(function($) {
+									$('.rw-rating-table:not(.rw-no-labels):not(.rw-comment-admin-rating)').each(function() {
+										var ratingTable = $(this);
+
+										// Find the current width before floating left or right to
+										// keep the ratings aligned
+										var col1 = ratingTable.find('td:first');
+										var widthCol1 = col1.width();
+										ratingTable.find('td:first-child').width(widthCol1);
+
+										if (ratingTable.hasClass('rw-rtl')) {
+											ratingTable.find('td').css({float: 'right'});
+										} else {
+											ratingTable.find('td').css({float: 'left'});
+										}
+									});
+								})(jQuery);
+							}, true);
+							}
+
+							RW_Advanced_Options = {
+								blockFlash: !(1)
+							};
+
+							// Append RW JS lib.
+							if (typeof(RW) == "undefined"){
+								(function(){
+									var rw = document.createElement("script");
+									rw.type = "text/javascript"; rw.async = true;
+									rw.src = "http://js.rating-widget.com/external.min.js?ck=Y2016M02D18?wp=2.7.6";
+									var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(rw, s);
+								})();
+							}
+						</script>
+					</div>
+					<!-- / RatingWidget plugin -->
+						<!--facebook like and share js -->                   
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=1425108201100352&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+  <!--google share and  like and e js -->
+	<script type="text/javascript">
+		window.___gcfg = {
+		  lang: 'en-US'
+		};
+		(function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		})();
+	</script>
+	
+	<script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script>
+	<script type='text/javascript' src='https://apis.google.com/js/platform.js'></script>
+	<!-- google share -->
+	<script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/platform.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</script>
+		
+	 <!-- Addthis js -->
+        <script type="text/javascript" src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558ac14e7f79bff7"></script>
+        <script type="text/javascript">
+       var addthis_config = {  ui_click: true  };
+       </script>
+<!-- twitter JS End -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+	     	<script>
+	    jQuery( document ).scroll(function( $ )
+		{
+	    	var y = jQuery(this).scrollTop();
+	      	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+			{	 
+	       		if(jQuery(window).scrollTop() + jQuery(window).height() >= jQuery(document).height()-100)
+				{
+				  jQuery('.sfsi_plus_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+"px",position:"absolute"});
+				  jQuery('.sfsi_plus_outr_div').fadeIn(200);
+				  jQuery('.sfsi_plus_FrntInner').fadeIn(200);
+	       		}
+	       		else
+				{
+				   jQuery('.sfsi_plus_outr_div').fadeOut();
+				   jQuery('.sfsi_plus_FrntInner').fadeOut();
+ 			    }
+	    	}
+	  		else
+			{
+	       		if(jQuery(window).scrollTop() + jQuery(window).height() >= jQuery(document).height()-3)
+				{
+			        jQuery('.sfsi_plus_outr_div').css({'z-index':'9996',opacity:1,top:jQuery(window).scrollTop()+200+"px",position:"absolute"});
+	        		jQuery('.sfsi_plus_outr_div').fadeIn(200);
+					jQuery('.sfsi_plus_FrntInner').fadeIn(200);
+	    		}
+	  			else
+				{
+				    jQuery('.sfsi_plus_outr_div').fadeOut();
+	      			jQuery('.sfsi_plus_FrntInner').fadeOut();
+	       		}
+	 		} 
+		});
+     </script>
+     <script src="http://freakcode.info/wordpress/wp-content/plugins/wp-prism-syntax-highlighter/js/prism.js"></script>	<div style="display:none">
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"http:\/\/freakcode.info\/python-para-rellenar-formularios-automaticamente\/":114};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-pocket' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcompocket', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+						<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/python-para-rellenar-formularios-automaticamente/?utm_source=ReviveOldPost&#038;utm_medium=social&#038;utm_campaign=ReviveOldPost" method="post">
+			<label for="target_email">Enviar a dirección de correo electrónico</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+			
+				<label for="source_name">Su Nombre</label>
+				<input type="text" name="source_name" id="source_name" value="" />
+
+				<label for="source_email">Tu dirección de correo electrónico</label>
+				<input type="email" name="source_email" id="source_email" value="" />
+
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			
+			<img style="float: right; display: none" class="loading" src="http://freakcode.info/wordpress/wp-content/plugins/jetpack/modules/sharedaddy/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Enviar correo electrónico" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Cancelar</a>
+
+			<div class="errors errors-1" style="display: none;">
+				La entrada no fue enviada. ¡Comprueba tus direcciones de correo electrónico!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Error en la comprobación de email. Por favor, vuelve a intentarlo			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Lo sentimos, tu blog no puede compartir entradas por correo electrónico.			</div>
+		</form>
+	</div>
+<link rel='stylesheet' id='popularposts-style-css'  href='http://freakcode.info/wordpress/wp-content/plugins/popular-posts-by-webline/admin/assets/css/popular-posts-style.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='disqus_rcw-css'  href='http://freakcode.info/wordpress/wp-content/plugins/disqus-recent-comments-widget/disqus_rcw.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='rw-site-rating-css'  href='http://freakcode.info/wordpress/wp-content/plugins/rating-widget/resources/css/site-rating.css?ver=2.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='SFSIPLUSmainCss-css'  href='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/css/sfsi-style.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-prism-syntax-highlighter-css'  href='http://freakcode.info/wordpress/wp-content/plugins/wp-prism-syntax-highlighter/css/prism.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://freakcode.info/wordpress/wp-content/themes/awaken/css/font-awesome.min.css?ver=4.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap.css-css'  href='http://freakcode.info/wordpress/wp-content/themes/awaken/css/bootstrap.min.css?ver=all' type='text/css' media='all' />
+<link rel='stylesheet' id='awaken-style-css'  href='http://freakcode.info/wordpress/wp-content/themes/awaken/style.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='awaken-fonts-css'  href='//fonts.googleapis.com/css?family=Ubuntu%3A400%2C500%7CSource+Sans+Pro%3A400%2C600%2C700%2C400italic%7CRoboto+Condensed%3A400italic%2C700%2C400&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='add-flex-css-css'  href='http://freakcode.info/wordpress/wp-content/themes/awaken/css/flexslider.css?ver=4.4.1' type='text/css' media='screen' />
+<link rel='stylesheet' id='rw_toprated-css'  href='http://css.rating-widget.com/wordpress/toprated.css?ck=Y2016M02D18&#038;ver=2.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='rw_recommendations-css'  href='http://css.rating-widget.com/widget/recommendations.css?ck=Y2016M02D18&#038;ver=2.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-lazyloadxt-spinner-css-css'  href='//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/css/jquery.lazyloadxt.spinner.css?ver=4.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='a3a3_lazy_load-css'  href='//freakcode.info/wordpress/wp-content/uploads/sass/a3_lazy_load.min.css?ver=1.5.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/jetpack/modules/photon/photon.js?ver=20130122'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/js/jquery-ui-min.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/js/shuffle/modernizr.custom.min.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/js/shuffle/jquery.shuffle.min.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/js/shuffle/random-shuffle-min.js?ver=4.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var ajax_object = {"ajax_url":"http:\/\/freakcode.info\/wordpress\/wp-admin\/admin-ajax.php","plugin_url":"http:\/\/freakcode.info\/wordpress\/wp-content\/plugins\/ultimate-social-media-plus\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/ultimate-social-media-plus/js/custom.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201607'></script>
+<script type='text/javascript' src='http://s.gravatar.com/js/gprofiles.js?ver=2016Febaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/navigation.js?ver=20120206'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/bootstrap.min.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/skip-link-focus-fix.js?ver=20130115'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/jquery.flexslider-min.js?ver=4.4.1'></script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/themes/awaken/js/awaken.slider.js?ver=4.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var a3_lazyload_params = {"apply_images":"1","apply_videos":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.min.js?ver=1.5.2'></script>
+<script type='text/javascript' src='//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.srcset.min.js?ver=1.5.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var a3_lazyload_extend_params = {"edgeY":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//freakcode.info/wordpress/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extend.js?ver=1.5.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"freakcode"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://freakcode.info/wordpress/wp-content/plugins/jetpack/modules/sharedaddy/sharing.js?ver=3.8.2'></script>
+<script type='text/javascript' src='http://stats.wp.com/e-201607.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:3.8.2',blog:'96154552',post:'114',tz:'-4.5',srv:'freakcode.info'} ]);
+	_stq.push([ 'clickTrackerInit', '96154552', '114' ]);
+</script>
+
+</body>
+</html>
