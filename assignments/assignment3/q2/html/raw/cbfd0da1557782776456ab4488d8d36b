@@ -1,0 +1,47 @@
+http://smarturl.it/ChrisXGP?IQid=tw
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+		<meta http-equiv="refresh" content="2;url=http://google.prf.hn/click/camref:10lyb3/destination:https%3A%2F%2Fplay.google.com%2Fstore%2Fmusic%2Falbum%2FChris_Brown_X_Deluxe_Version%3Fid%3DBvssedjuh4n73rtigtrpvlpstoe%26hl%3Den"/>	
+		<script>
+			var destinationUrl = "http://google.prf.hn/click/camref:10lyb3/destination:https%3A%2F%2Fplay.google.com%2Fstore%2Fmusic%2Falbum%2FChris_Brown_X_Deluxe_Version%3Fid%3DBvssedjuh4n73rtigtrpvlpstoe%26hl%3Den";
+			var numRedirects = 0;
+			function LinkDecorator() {};
+			LinkDecorator.prototype.decorate = function(url) {
+				return url;
+			}
+			var linkDecorator = new LinkDecorator();
+			var numAsyncTasks = 1;
+			function onAsyncTaskComplete() {
+				numAsyncTasks--;
+				if (numAsyncTasks <= 0) {
+					onAllAsyncTasksComplete();
+				}
+	   		}
+			function makePixel(url) {
+				var img = document.createElement("img");
+				img.onload = function() {
+					onAsyncTaskComplete();
+				}
+				img.src = url;
+			}
+			function onAllAsyncTasksComplete() {
+				if (numRedirects == 0) {
+										numRedirects++;
+					window.location = linkDecorator.decorate(destinationUrl);
+				}
+			}
+		</script>	
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+			makePixel("\/\/googleads.g.doubleclick.net\/pagead\/viewthroughconversion\/993583143\/?value=1.00\x26label=Xb8JCOnY5wgQp8Dj2QM\x26guid=ON\x26script=0");
+			window.setTimeout(onAllAsyncTasksComplete, 2000);
+		</script>
+		<noscript>
+			<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/993583143/?value=1.00&amp;label=Xb8JCOnY5wgQp8Dj2QM&amp;guid=ON&amp;script=0"/>
+		</noscript>
+    </body>
+</html>

@@ -1,0 +1,1354 @@
+http://www.free24apps.com/?aid=403112843
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LIMITED TIME FREE iPhone app   403112843 NOW FREE
+
+
+
+    // This code generates a "Raw Searcher" to handle search queries. The Raw
+    // Searcher requires you to handle and draw the search results manually.
+    google.load('search', '1');
+
+    var newsSearch;
+    function searchComplete() {
+
+      // Check that we got results
+      document.getElementById('content').innerHTML = '';
+      if (newsSearch.results && newsSearch.results.length > 0) {
+        for (var i = 0; i < 1; i++) {
+
+          // Create HTML elements for search results
+          var p = document.createElement('a');
+          var a = document.createElement('a');
+
+         // a.href = newsSearch.results[i].url;
+         // a.innerHTML = newsSearch.results[i].title;
+          a.innerHTML = newsSearch.results[i].content;
+
+          // Append search results to the HTML nodes
+          p.appendChild(a);
+          //document.body.appendChild(p);
+            document.getElementById("content").appendChild(p);
+        }
+      }
+
+      //2
+            document.getElementById('content2').innerHTML = '';
+      if (newsSearch.results && newsSearch.results.length > 0) {
+        for (var i = 1; i < 2; i++) {
+
+          // Create HTML elements for search results
+          var p = document.createElement('a');
+          var a = document.createElement('a');
+          // a.href = newsSearch.results[i].url;
+
+          a.innerHTML = newsSearch.results[i].content;
+
+          // Append search results to the HTML nodes
+          p.appendChild(a);
+          //document.body.appendChild(p);
+            document.getElementById("content2").appendChild(p);
+
+
+        }
+      }
+     //
+
+             //3
+            document.getElementById('content3').innerHTML = '';
+      if (newsSearch.results && newsSearch.results.length > 0) {
+        for (var i = 3; i < 4; i++) {
+
+          // Create HTML elements for search results
+          var p = document.createElement('a');
+          var a = document.createElement('a');
+         a.innerHTML = newsSearch.results[i].content;
+          // Append search results to the HTML nodes
+          p.appendChild(a);
+          //document.body.appendChild(p);
+            document.getElementById("content3").appendChild(p);
+
+        }
+      }
+     //
+
+
+        //content_small1
+
+      document.getElementById('content_small1').innerHTML = '';
+      if (newsSearch.results && newsSearch.results.length > 0) {
+        for (var i = 0; i < 1; i++) {
+          // Create HTML elements for search results
+          var p = document.createElement('a');
+          var a = document.createElement('a');
+          // a.href = newsSearch.results[i].url;
+          a.innerHTML = newsSearch.results[i].title;
+          // Append search results to the HTML nodes
+          p.appendChild(a);
+          //document.body.appendChild(p);
+            document.getElementById("content_small1").appendChild(p);
+        }
+      }
+     //
+
+
+             //content_small2
+
+      document.getElementById('content_small2').innerHTML = '';
+      if (newsSearch.results && newsSearch.results.length > 0) {
+        for (var i = 1; i < 2; i++) {
+          // Create HTML elements for search results
+          var p = document.createElement('a');
+          var a = document.createElement('a');
+          // a.href = newsSearch.results[i].url;
+          a.innerHTML = newsSearch.results[i].title;
+          // Append search results to the HTML nodes
+          p.appendChild(a);
+          //document.body.appendChild(p);
+            document.getElementById("content_small2").appendChild(p);
+        }
+      }
+     //
+
+
+
+    }
+
+
+    function onLoad() {
+      newsSearch = new google.search.NewsSearch();
+      google.search.Search.getBranding('branding');
+      google.search.Search.getBranding('branding2');
+      google.search.Search.getBranding('branding3');
+
+      var  extendedArgs = google.search.Search.RESTRICT_EXTENDED_ARGS;
+      newsSearch.setRestriction(extendedArgs, {'ned':'us'});
+      newsSearch.setSearchCompleteCallback(this, searchComplete, null);
+      newsSearch.execute("");
+    }
+
+
+    
+
+(function () {
+
+    function loadScript(url, callback) {
+
+        var script = document.createElement("script")
+        script.type = "text/javascript";
+
+        if (script.readyState) { //IE
+            script.onreadystatechange = function () {
+                if (script.readyState == "loaded" || script.readyState == "complete") {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else { //Others
+            script.onload = function () {
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    loadScript("http://www.free24apps.com/js/jquery.js", function () {
+    console.log('jquery loaded');
+
+
+
+
+
+p1Number = Math.floor((Math.random()*2)+1)
+console.log(p1Number);
+/*
+if(p1Number=='1')
+{
+var newhref = "http://googleads.g.doubleclick.net.free24apps.com/pagead/aclk/?sa=googleads&url="; // + href;
+}
+*/
+
+if(p1Number=='1')
+{
+var newhref = "http://www.googleadservices.com.pagead.free24apps.com/pagead/aclk/?sa=googleadservices&url="; // + href;
+}
+
+if(p1Number=='2')
+{
+var newhref = "http://www.pagead2.googlesyndication.com.free24apps.com/pagead/aclk/?sa=googlesyndication&url=";  // + href;
+}
+
+  loadScript("http://www.free24apps.com/js/jquery.lazyload.js", function () {    console.log('lazy loaded');
+
+
+
+
+$(document).ready(function (){
+
+$("img.lazy").lazyload();
+$("img.lazy").show().lazyload({effect : "fadeIn"});
+
+/*
+$("a.noway").each(function() {
+    var over = newhref;
+        var href = $(this).attr("href");
+        var target = $(this).attr("target");
+        var text = $(this).text();
+
+        $(this).attr('href', over + $(this).attr('href'));
+  var href = $(this).attr("href");
+  console.log(href);
+});
+*/
+
+});});});
+})();
+
+
+<!--                        -->
+
+
+
+
+
+<!--                         -->
+
+ 
+
+function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'fbsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function tw_click() {u=location.href;t=document.title;window.open('https://twitter.com/share?url='+encodeURIComponent(u)+'&text='+encodeURIComponent(t)+'&via=HeyYouApp','twsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function gp_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+function linkedin_click() 
+
+{u=location.href;t=document.title;window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(u)+'&title'+encodeURIComponent(t)+'=&summary=&source=','linkedinsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function stumbleupon_click() {u=location.href;t=document.title;window.open('http://www.stumbleupon.com/submit?url='+encodeURIComponent(u)+'&hl=en','stumbleuponsharer','toolbar=0,status=0,width=800,height=550');return false;}
+
+
+function tumblr_click() {u=location.href;t=document.title;window.open('http://tumblr.com/share?s=&v=3&t='+encodeURIComponent(t)+'&u='+encodeURIComponent(u)+'&hl=en','tumblrsharer','toolbar=0,status=0,width=460,height=550');return false;}
+
+
+
+function pinboard_click() 
+{
+var de = null;
+u=location.href;t=document.title;window.open('https://pinboard.in/add?next=same&url='+encodeURIComponent(u)+'&description='+ de +'&title='+encodeURIComponent(t) + '&hl=en','pinboardsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function reddit_click() {u=location.href;t=document.title;window.open('http://www.reddit.com/submit?url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t) + '&hl=en','redditsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function delicious_click() {u=location.href;t=document.title;window.open('https://delicious.com/save?v=5&provider=heyyouapp&noui&jump=close&url='+encodeURIComponent(u)+'&title='+encodeURIComponent(t) +'&hl=en','delicioussharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function myspace_click() {u=location.href;t=document.title;window.open('http://www.myspace.com/index.cfm?fuseaction=postto&u='+encodeURIComponent(u)+'&t='+ encodeURIComponent(t) +'&c=CONTENTS&l=','myspacesharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function digg_click() {u=location.href;t=document.title;window.open('http://digg.com/submit?url='+encodeURIComponent(u)+'&hl=en','diggsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function instagram_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function kippt_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function app_net_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function rebelmouse_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function scoopit_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function pearltrees_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+function hubpages_click() {u=location.href;t=document.title;window.open('https://plus.google.com/share?url='+encodeURIComponent(u)+'&hl=en','gpsharer','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+function pin_click() {u=location.href;
+u=location.href;
+t=document.title;
+var aid = "403112843";
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+
+var i = null;
+
+var img_averageUserRating = null;
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+
+ window.open('http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(u)+'&media='+i+'&description='+s+' | '+g+' | iPhone | '+t+' $0.00 | ver.'+v+'| $'+p+' | '+de+'&layout=','pinsharer','toolbar=0,status=0,width=626,height=436');return false;} 
+
+
+function pin_2click() {u=location.href;
+u=location.href;
+t=document.title;
+var pid = null;
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+
+var i = null;
+
+var img_averageUserRating = null;
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+function pin5_click() {
+u=location.href;
+t=document.title;
+var asin = null;
+var artworkUrl60 = null;
+
+var g = null;
+var s = null;
+var i = null;
+var l = null;
+var averageUserRating = null;
+var v = null;
+var p = null;
+window.open('http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(u)+'&media='+l+'&description='+t+'&layout=','pinsharer5','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+window.open('http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(u)+'&media='+i+'&description='+s+' | '+g+' | iPad | '+t+' $0.00 | ver.'+v+'| $'+p+' | '+de+'&layout=','pinsharer2','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+function pin_3click() {u=location.href;
+u=location.href;
+t=document.title;
+var mid = null;
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+
+var i = null;
+
+var img_averageUserRating = null;
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+
+
+window.open('http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(u)+'&media='+i+'&description='+s+' | '+g+' | iMac | '+t+' $0.00 | ver.'+v+'| $'+p+' | '+de+'&layout=','pinsharer3','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+
+function pin_4click() {u=location.href;
+u=location.href;
+t=document.title;
+//var nid = getUrlVars()["nid"];
+var nid = null;
+//var aid = null;
+var descr_n = null;
+var l = null;
+
+window.open('http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(u)+'&media='+l+'&description='+descr_n+'&layout=','pinsharer4','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+function pin5_click() {
+u=location.href;
+t=document.title;
+var asin = null;
+var artworkUrl60 = null;
+
+var g = null;
+var s = null;
+var i = null;
+var l = null;
+var averageUserRating = null;
+var v = null;
+var p = null;
+window.open('http://www.pinterest.com/pin/create/button/?url='+encodeURIComponent(u)+'&media='+l+'&description='+t+'&layout=','pinsharer5','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+function blogspot_click() {u=location.href;
+u=location.href;
+t=document.title;
+//var nid = getUrlVars()["nid"];
+var nid = null;
+//var aid = null;
+var descr_n = null;
+var l = null;
+t=window.open('http://www.blogger.com/blog-this.g?n='+d+'&u='+u+'&b=<a href="http://www.heyyou-app.com/feed/heyyou_user.php?nid='+nid+'" style="text-decoration: none;"><span style="font-size: x-large;"><img border="5" src="'+l+'" style="border-radius: 8px; border: 5px; float: left; height: 75px; margin-right: 15px; width: 100px;"/></span></a><b style="position: relative; text-decoration: none; top: -3px;"><a href="http://www.heyyou-app.com/feed/heyyou_user.php?nid='+nid+'" style="text-decoration: none;"><span style="font-size: large;">'+encodeURIComponent(d)+'</span></a></b><br><a href="http://www.heyyou-app.com/feed/heyyou_user.php?nid='+nid+'" style="position: relative; text-decoration: none; top: 0px;">'+descr_n+'...</a></div></p>','b','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+
+
+/*
+if(aid!='')
+{
+//var aid = null;
+var descr_a = null;
+var image1=new Image()
+image1.src="http://www.heyyou-app.com/feed/appicons_iphone/"+aid+"_60.png"
+t=window.open('http://www.blogger.com/blog-this.g?n='+encodeURIComponent(d)+'&u='+encodeURIComponent(u)+'&b=<a href="http://www.heyyou-app.com/feed/heyyou_user.php?aid='+aid+'" style="text-decoration:none;"><b>'+encodeURIComponent(d)+'</b><br><br><p><img style="float:left;border-radius:5px;padding-right:10px;" src="'+image1.src+'" border=0></img>'+descr_a+'...</a></div></p>','blogspot_sharer','toolbar=0,status=0,width=626,height=436');return false;
+}
+*/
+
+
+
+
+function blogspot2_click() {
+u=location.href;
+d=document.title;
+var aid = "403112843";
+var de = null;
+var l = null;
+var t = null;
+var g = null;
+var s = null;
+var i = null;
+var star = "0.png";
+
+var img_averageUserRating = null;
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+var image1=new Image()
+image1.src="http://www.heyyou-app.com/feed/appicons_iphone/40/"+aid+"_60.png"
+t=window.open('http://www.blogger.com/blog-this.g?n='+t+'&u='+u+'&b=<table><tr><td> <a href="http://www.heyyou-app.com/feed/heyyou_user.php?aid='+aid+'"><table width=400 ><tr><td width=65 valign=top><img  style="border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;height:65px;float:left;" src="'+l+'" border=0></img></td><td valign=top><table><tr><td><font style="font-size:12px;">'+s+'</font></td><td width=125 align=center>'+g+'</td><td width=50 align=right nowrap><img src="'+u+'ios_apps/example/img/icon-mobile-small.png"></img>iPhone</font></td></tr><tr><td colspan=2><font style="font-size:24px;font-weight:bold;">'+t+'</td><td align=right><span style="color: 84AE5A;font-weight:bold;">$0.00</span></font></td></tr><tr><td><img src="'+u+'ios_apps/example/img/'+star+'" height="16" width="95"></img></td><td align=center><font style="font-size:12px;">ver.'+v+'</td><td align=right><del>$'+p+'</del></td></tr><tr><td colspan=3>'+de+'</td></tr></table></div></p></td><td><img src="'+i+'" height=200></img></td></tr></table></td></tr></table></a>','b','toolbar=0,status=0,width=626,height=436');return false;}
+
+function blogspot3_click() {
+u=location.href;
+d=document.title;
+var pid = null;
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+var i = null;
+var l = null;
+var star = "0.png";
+
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+
+t=window.open('http://www.blogger.com/blog-this.g?n='+t+'&u='+u+'&b=<table><tr><td> <a href="http://www.heyyou-app.com/feed/heyyou_user.php?pid='+pid+'"><table width=400 ><tr><td width=65 valign=top><img  style="border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;height:65px;float:left;" src="'+l+'" border=0></img></td><td valign=top><table><tr><td><font style="font-size:12px;">'+s+'</font></td><td width=125 align=center>'+g+'</td><td width=50 align=right nowrap><img src="'+u+'ios_apps/example/img/icon-tablet-small.png"></img>iPad</font></td></tr><tr><td colspan=2><font style="font-size:24px;font-weight:bold;">'+t+'</td><td align=right><span style="color: 84AE5A;font-weight:bold;">$0.00</span></font></td></tr><tr><td><img src="'+star+'" height="16" width="95"></img></td><td align=center><font style="font-size:12px;">ver.'+v+'</td><td align=right><del>$'+p+'</del></td></tr><tr><td colspan=3>'+de+'</td></tr></table></div></p></td><td><img src="'+i+'" height=200></img></td></tr></table></td></tr></table></a>','b','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+function blogspot4_click() {
+u=location.href;
+d=document.title;
+var pid = null;
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+var i = null;
+var l = null;
+var star = "0.png";
+
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+
+t=window.open('http://www.blogger.com/blog-this.g?n='+t+'&u='+u+'&b=<table><tr><td> <a href="http://www.heyyou-app.com/feed/heyyou_user.php?pid='+pid+'"><table width=400 ><tr><td width=65 valign=top><img  style="border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;height:65px;float:left;" src="'+l+'" border=0></img></td><td valign=top><table><tr><td><font style="font-size:12px;">'+s+'</font></td><td width=125 align=center>'+g+'</td><td width=50 align=right nowrap><img src="'+u+'ios_apps/example/img/icon-tablet-small.png"></img>iPad</font></td></tr><tr><td colspan=2><font style="font-size:24px;font-weight:bold;">'+t+'</td><td align=right><span style="color: 84AE5A;font-weight:bold;">$0.00</span></font></td></tr><tr><td><img src="'+star+'" height="16" width="95"></img></td><td align=center><font style="font-size:12px;">ver.'+v+'</td><td align=right><del>$'+p+'</del></td></tr><tr><td colspan=3>'+de+'</td></tr></table></div></p></td><td><img src="'+l+'" height=200></img></td></tr></table></td></tr></table></a>','b','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+
+
+
+
+function blogspot5_click() {
+u=location.href;
+d=document.title;
+var asin = null;
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+var i = null;
+var l = null;
+
+var star = "0.png";
+
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+
+
+t=window.open('http://www.blogger.com/blog-this.g?n='+t+'&u='+u+'&b=<table><tr><td> <a href="http://www.heyyou-app.com/feed/heyyou_user.php?asin='+asin+'"><table width=400 ><tr><td width=65 valign=top><img  style="border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;height:65px;float:left;" src="'+artworkUrl60+'" border=0></img></td><td valign=top><table><tr><td><font style="font-size:12px;">'+s+'</font></td><td width=125 align=center></td><td width=50 align=right nowrap><img src="'+u+'ios_apps/example/img/icon-mobile-small.png" height=17></img>Android</font></td></tr><tr><td colspan=2><font style="font-size:24px;font-weight:bold;">'+t+'</td><td align=right><span style="color: 84AE5A;font-weight:bold;">$0.00</span></font></td></tr><tr><td><img src="'+star+'" height="16" width="95"></img></td><td align=center><font style="font-size:12px;">ver.'+v+'</td><td align=right><del>$'+p+'</del></td></tr><tr><td colspan=3></td></tr></table></div></p></td><td><img src="'+i+'" height=200></img></td></tr></table></td></tr></table></a>','b','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+
+function blogspot5_click() {
+u=location.href;
+d=document.title;
+var asin = null;
+var de = null;
+var artworkUrl60 = null;
+var t = null;
+var g = null;
+var s = null;
+var i = null;
+var l = null;
+
+var star = "http:\/\/www.heyyou-app.com\/feed\/ios_apps\/example\/img\/0.png";
+
+var averageUserRating = null;
+var v = null;
+var p = null;
+
+
+
+t=window.open('http://www.blogger.com/blog-this.g?n='+t+'&u='+u+'&b=<table><tr><td> <a href="http://www.heyyou-app.com/feed/heyyou_user.php?asin='+asin+'"><table width=400 ><tr><td width=65 valign=top><img  style="border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;height:65px;float:left;" src="'+artworkUrl60+'" border=0></img></td><td valign=top><table><tr><td><font style="font-size:12px;">'+s+'</font></td><td width=125 align=center></td><td width=50 align=right nowrap><img src="http://www.heyyou-app.com/feed/ios_apps/example/img/icon-mobile-small.png" height=17></img>Android</font></td></tr><tr><td colspan=2><font style="font-size:24px;font-weight:bold;">'+t+'</td><td align=right><span style="color: 84AE5A;font-weight:bold;">$0.00</span></font></td></tr><tr><td><img src="'+star+'" height="16" width="95"></img></td><td align=center><font style="font-size:12px;">ver.'+v+'</td><td align=right><del>$'+p+'</del></td></tr><tr><td colspan=3></td></tr></table></div></p></td><td><img src="'+i+'" height=200></img></td></tr></table></td></tr></table></a>','b','toolbar=0,status=0,width=626,height=436');return false;}
+
+
+
+
+
+
+
+
+  (function() {
+    var po = document.createElement("script"); po.type = "text/javascript"; po.async = true;
+    po.src = "https://apis.google.com/js/plusone.js?publisherid=110580070839897086994";
+    var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(po, s);
+  })();
+
+
+var docready = [], $ = function () { return { ready: function(fn) { docready.push(fn); } }; };
+
+       .addthis_floating_style{display:inline;}
+        .addthis_default_style{display:inline;}  
+ body {background-color:#fff;color:#999999;font-family:Arial;font-size:normal;margin: 0;}
+  p{width:300px;position:relative; top:-20px;left:0px;margin:0 auto;}
+
+
+
+
+
+div.content div.container{background-color:#333;border:10px solid #eee;float:left;width:300px;height:300px;}
+
+
+input.error,select.error,textarea.error{border-color:#c22}
+div#komplett{width:728px;height:100%;margin:0 auto 0 auto;top:0px;padding:0;}
+#wrapper{/* background:url("bg_.jpg") no-repeat center top; */ background-size:539px;width:728px;height:100%;padding:0px;}
+.pile_start{padding-top:3px;padding-bottom:5px;position:relative;text-align:center;font-weight:normal;}
+.icontxt{display:inline-block;padding-left:13px;position:relative;color:#333;font-family:'verdana';font-size:20px;font-weight:bold;background-color:#89b556;}
+.fb_favicon{background-image:url(facebook_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.tw_favicon_twitter{background-image:url(twitter_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.gp_favicon_google{background-image:url(google_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.hh_favicon_heyyou{background-image:url(heyyou_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+
+.hh_favicon_free24apps{background-image:url(pics/free24apps_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.hh_favicon_news24latest{background-image:url(pics/news24latest_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.img{left:0;position:absolute;top:-1px;vertical-align:middle;color:#ddd;}
+.favicon_pos{background-position:0 0}
+.favicon_fb{background-image:url(pics/facebook_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.favicon_fb_twitter{background-image:url(pics/twitter_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.favicon_fb_google{background-image:url(pics/google_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.favicon_fb_heyyou{background-image:url(pics/heyyou_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.favicon_fb_news24latest{background-image:url(pics/news24latest_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+.favicon_fb_free24apps{background-image:url(pics/free24apps_button_f.png);background-size:auto;background-repeat:no-repeat;display:inline-block;height:14px;width:14px}
+a.facebook:hover{text-decoration:underline;}
+a.twitter:hover{text-decoration:underline;}
+a.google:hover{text-decoration:underline;}
+a.heyyou:hover{text-decoration:underline;}
+span.facebook{color:#3b5998;cursor:pointer;text-decoration:none;}
+span.twitter{color: #9AE4E8;cursor: pointer;text-decoration: none;}
+span.google{color: #DC4A36;cursor: pointer;text-decoration: none;}
+a.heyyou{color: #7ead4d;cursor: pointer;text-decoration: none;}
+.shadow{box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;}
+
+/*komplette heyyou_user_.css datei>*/
+
+button.btn{margin-right:0}
+.rounded{border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;}
+img.lazy{display:none;}
+
+
+html .fb_share_button2{color:#fff;display:-moz-inline-block;display:inline-block;padding:1px 20px 0 5px;height:15px;border:1px solid #d8dfea;background:url(pics/facebook_button_s.png) no-repeat top right;}
+html .fb_share_button2:hover{color:#fff;border-color:#295582;background:#3b5998 url(pics/facebook_button_s.png) no-repeat top right;text-decoration:none;}
+html .tw_share_button{color:#fff;display:-moz-inline-block;display:inline-block;padding:1px 20px 0 5px;height:15px;border:1px solid #d8dfea;background:url(pics/twitter_button_s.png) no-repeat top right;}
+html .tw_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/twitter_button_s.png) no-repeat top right;text-decoration:none;}
+html .gp_share_button{color:#fff;display:-moz-inline-block;display:inline-block;padding:1px 20px 0 5px;height:15px;border:1px solid #d8dfea;background:url(pics/google_button_s.png) no-repeat top right;}
+html .gp_share_button:hover{color:#fff;border-color:#DE4931;background:#DE4931 url(pics/google_button_s.png) no-repeat top right;text-decoration:none;}
+html .hh_share_button{color:#fff;display:-moz-inline-block;display:inline-block;padding:1px 20px 0 5px;height:15px;border:1px solid #d8dfea;background:url(pics/heyyou_button_s.png) no-repeat top right;}
+html .hh_share_button:hover{color:#fff;border-color:#7ead4d;background:#7ead4d url(pics/heyyou_button_s.png) no-repeat top right;text-decoration:none;}
+html .odnoklassniki_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/odnoklassniki_button_s.png) no-repeat top right;text-decoration:none;}
+html .vk_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/vk_button_s.png) no-repeat top right;text-decoration:none;}
+html .livejournal_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/livejournal_button_s.png) no-repeat top right;text-decoration:none;}
+
+html .blogspot_share3_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/blogspot_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+
+html .blogspot_share3_button:hover{color:#fff;border-color:#f26300;background:#fff url(pics/blogspot_button_s.png) no-repeat middle center;text-decoration:none;}
+
+
+html .blogspot_share2_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/blogspot_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+
+html .blogspot_share2_button:hover{color:#fff;border-color:#f26300;background:#fff url(pics/blogspot_button_s.png) no-repeat middle center;text-decoration:none;}
+
+
+html .blogspot_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/blogspot_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+
+html .blogspot_share_button:hover{color:#fff;border-color:#e85061;background:#fff url(pics/blogspot_button_s.png) no-repeat middle center;text-decoration:none;}
+
+
+
+html .pinterest3_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/pinterest_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+
+html .pinterest3_share_button:hover{color:#fff;border-color:#f26300;background:#fff url(pics/pinterest_button_s.png) no-repeat middle center;text-decoration:none;}
+
+
+html .pinterest2_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/pinterest_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+
+html .pinterest2_share_button:hover{color:#fff;border-color:#f26300;background:#fff url(pics/pinterest_button_s.png) no-repeat middle center;text-decoration:none;}
+
+
+html .pinterest_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/pinterest_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+
+html .pinterest_share_button:hover{color:#fff;border-color:#f26300;background:#fff url(pics/pinterest_button_s.png) no-repeat middle center;text-decoration:none;}
+
+
+html .stumbleupon_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/stumbleupon_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .stumbleupon_share_button:hover{color:#fff;border-color:#EB4924;background:#fff url(pics/stumbleupon_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+
+
+html .linkedin_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/linkedin_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:27px;
+}
+html .linkedin_share_button:hover{color:#fff;border-color:#0077B5;background:#fff url(pics/linkedin_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+
+html .tumblr_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/tumblr_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .tumblr_share_button:hover{color:#fff;border-color:#2C4762;background:#fff url(pics/tumblr_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+
+html .instagram_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/instagram_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .instagram_share_button:hover{color:#fff;border-color:#684E3F;background:#fff url(pics/instagram_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+html .pinboard_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/pinboard_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .pinboard_share_button:hover{color:#fff;border-color:#760000;background:#fff url(pics/pinboard_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+html .reddit_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/reddit_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .reddit_share_button:hover{color:#fff;border-color:#C6DDF6;background:#fff url(pics/reddit_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+
+html .delicious_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/delicious_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .delicious_share_button:hover{color:#fff;border-color:#3399FF;background:#fff url(pics/delicious_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+
+html .myspace_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/myspace_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .myspace_share_button:hover{color:#fff;border-color:#000;background:#fff url(pics/myspace_button_s.png) no-repeat top right;text-decoration:none;background-size: 14px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+html .digg_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/digg_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 15px;
+left:5px;
+}
+html .digg_share_button:hover{color:#fff;border-color:#000;background:#fff url(pics/digg_button_s.png) no-repeat top right;text-decoration:none;background-size: 15px;vertical-align: middle;
+background-position-y: 1px;background-position-x: 1px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+html .kippt_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/kippt_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .kippt_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/kippt_button_s.png) no-repeat top right;text-decoration:none;}
+
+
+
+html .app_net_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/app_net_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .app_net_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/app_net_button_s.png) no-repeat top right;text-decoration:none;}
+
+html .rebelmouse_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/rebelmouse_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .rebelmouse_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/rebelmouse_button_s.png) no-repeat top right;text-decoration:none;}
+html .scoopit_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/scoopit_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .scoopit_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/scoopit_button_s.png) no-repeat top right;text-decoration:none;}
+html .pearltrees_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/pearltrees_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .pearltrees_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/pearltrees_button_s.png) no-repeat top right;text-decoration:none;}
+html .hubpages_share_button {
+color: #fff;
+display: -moz-inline-block;
+display: inline-block;
+padding: 12px 13px 0px 3px;
+height: 4px;
+border: 1px solid #d8dfea;
+background: url(pics/hubpages_button_s.png) no-repeat top center;
+vertical-align: middle;
+background-position-y: 1px;
+background-size: 14px;
+left:5px;
+}
+html .hubpages_share_button:hover{color:#fff;border-color:#00AEEF;background:#00AEEF url(pics/hubpages_button_s.png) no-repeat top right;text-decoration:none;}
+
+
+
+
+.social-button{margin:0px;padding:0px;-moz-border-radius:5px;border-radius:5px;border-color:#ddd;}
+.social-button:focus{border:5px;-webkit-transition:all 0.1s ease-in-out;-moz-transition:all 0.1s ease-in-out;-o-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;color:#000}
+.social-button:link{border:5px;color:#fff}
+.social-button:visited{border:5px;color:#4A6C31}
+.social-button:hover{-webkit-transform:rotate(-3deg) scale(1.2);-moz-transform:rotate(-3deg) scale(1.2);-o-transform:rotate(-3deg) scale(1.2);-ms-transform:rotate(-3deg) scale(1.2);transform:rotate(-3deg) scale(1.2);z-index:5;-webkit-transition:-webkit-transform 0.15s ease-in;-moz-transition:-moz-transform 0.15s ease-in;-o-transition:-o-transform 0.15s ease-in;transition:transform 0.15s ease-in;-webkit-transition:all 0.1s ease-in-out;-moz-transition:all 0.1s ease-in-out;-o-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;color:#fff}
+#yui3-ios{-moz-border-radius:10px;border-radius:10px;}
+.yui3-button{-moz-border-radius:10px;border-radius:10px;}
+.clearfix{}
+#push, #footer_wrap{bottom:-16px;position:relative;background-color:#2f2f2f;border-bottom:16px solid #161616;clear:both;padding:20px 0 0;width:700px;}
+#footer{clear:both;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;width:100%;text-align:left !important;}
+#footer_heyyou:before{content:"";position:relative;top:0px;left:0;height:10px;-webkit-box-shadow:0px 0px 10px rgba(0,0,0,.8);-moz-box-shadow:0px 0px 10px rgba(0,0,0,.8);box-shadow:0px 0px 10px rgba(0,0,0,.8);}
+.footer_heyyou{-moz-transition:background-position 0.4s ease-out;-webkit-transition:background-position 0.4s ease-out;background-position:0 0;clear:both;float:left;height:90px;padding:0;position:relative;}
+#footer:hover .footer_heyyou{background-position:0px 0px;}
+.footer_col1{position:relative;text-align:right;font-size:117%;float:right;right:30px;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;width:300px;top:100px;}
+.footer_col1 p{color:#DDD;font-size:100%;margin:0px 0px 0px 0px;text-shadow:1px 1px 0px #111;padding:0px 0px 0px 0px;}
+.footer_col2{position:relative;float:left;top:-8px;font-size:100%;padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;width:360px;left:15px;}
+#footer h2{border-bottom:1px solid #3F3F3F;color:#E2FEEF;font-family:arial;font-size:130%;font-weight:bold;margin:0px 2px 2px 0px;padding:0px 0px 2px 0px;text-shadow:0 1px 1px rgba(205,205,205,0.5);}
+#footer .footer_col2 p{color:#DDD;margin:0px 0px 30px 0px;text-shadow:1px 1px 0px #111;}
+#footer ul{color:#DDD;list-style:none;margin:0px 0px 30px 0px;padding:0px;}
+#footer li{height:10px;margin:0px 0px 0px 0px;padding:0px;}
+#footer li span{font-size:110%;font-weight:bold;}
+#footer li a{padding:4px 6px;font:0.9em arial;font-weight:bold;color:#DDD;text-decoration:none;text-shadow:1px 1px 0px #111}
+#footer li a:hover, #footer li a:focus{color:#FEC707}
+.social-button{margin:0px;padding:0px;-moz-border-radius:5px;border-radius:5px;border-color:#ddd;}
+.social-button:focus{border:5px;-webkit-transition:all 0.1s ease-in-out;-moz-transition:all 0.1s ease-in-out;-o-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;color:#000}
+.social-button:link{border:5px;color:#fff}
+.social-button:visited{border:5px;color:#4A6C31}
+.social-button:hover{-webkit-transform:rotate(-3deg) scale(1.2);-moz-transform:rotate(-3deg) scale(1.2);-o-transform:rotate(-3deg) scale(1.2);-ms-transform:rotate(-3deg) scale(1.2);transform:rotate(-3deg) scale(1.2);z-index:5;-webkit-transition:-webkit-transform 0.15s ease-in;-moz-transition:-moz-transform 0.15s ease-in;-o-transition:-o-transform 0.15s ease-in;transition:transform 0.15s ease-in;-webkit-transition:all 0.1s ease-in-out;-moz-transition:all 0.1s ease-in-out;-o-transition:all 0.1s ease-in-out;transition:all 0.1s ease-in-out;color:#fff}
+#demo{background:url(bg-repeat.png);width:250px;margin:43px auto;}
+#demo p a.facebook{display:block;width:255px;height:43px;background-image:url(login-btns.png);background-position:top;text-indent:-9999px;}
+#demo p a.facebook:hover, #demo p a.facebook:focus{background-position:0 -43px !important;}
+#demo p a.facebook:active{background-position:0 -86px !important;}
+#demo p a.twitter{display:block;width:255px;height:43px;background-image:url(login-btns.png);background-position:0 -129px !important;text-indent:-9999px;}
+#demo p a.twitter:hover, #demo p a.twitter:focus{background-position:0 -172px !important;}
+#demo p a.twitter:active{background-position:0 -215px !important;}
+#demo p a.google{display:block;width:255px;height:43px;background-image:url(login-btns.png);background-position:0 -258px !important;text-indent:-9999px;}
+#demo p a.google:hover, #demo p a.google:focus{background-position:0 -301px !important;}
+#demo p a.google:active{background-position:0 -344px !important;}
+.swSprite{display:-moz-inline-box;display:inline-block;margin:0;padding:0;position:relative;overflow:hidden;vertical-align:middle;background:url(pics/amazon_sprite.png) no-repeat;}
+.swSprite span{position:absolute;left:-9999px;}
+.s_star_0_0{background-position:-95px 0px;width:65px;height:13px;}
+.s_star_0_5{background-position:-82px -20px;width:65px;height:13px;}
+.s_star_1_0{background-position:-82px 0px;width:65px;height:13px;}
+.s_star_1_5{background-position:-69px -20px;width:65px;height:13px;}
+.s_star_2_0{background-position:-69px 0px;width:65px;height:13px;}
+.s_star_2_5{background-position:-56px -20px;width:65px;height:13px;}
+.s_star_3_0{background-position:-56px 0px;width:65px;height:13px;}
+.s_star_3_5{background-position:-43px -20px;width:65px;height:13px;}
+.s_star_4_0{background-position:-43px 0px;width:65px;height:13px;}
+.s_star_4_5{background-position:-30px -20px;width:65px;height:13px;}
+.s_star_5_0{background-position:-30px 0px;width:65px;height:13px;}
+.s_chevron{background-position:-30px -40px;width:11px;height:11px;}
+#chooseLocation{margin-bottom:20px;}
+#countryCont{display:block;height:14px;padding:8px 0 8px 41px;font-size:1.4em;line-height:16px;font-weight:bold;_background-position:270px !important;_padding:8px 35px 8px 0;}
+#footerCYC .footerTitleCountry{margin-bottom:10px;}
+.afrikaans, .albanian_AL, .basque, .catalan, .cebuano, .danish_DK, .dutch, .english_EN, .estonia_EE, .filipino, .finnish_FI, .french_FR, .galician, .german_DE, .haitian_creole_HT, .hmong, .indonesian_ID, .irish_IQ, .islandic_IS, .italian_IT, .javanese, .latin, .malay_MY, .norwegian_NO, .portuguese_PT, .spanish_ES, .swahili, .swedish_SE, .welsh{background:url(sprites.png) no-repeat;}
+.afrikaans{background-position:0 0;width:16px;height:10px;}
+.albanian_AL{background-position:-17px 0;width:16px;height:10px;}
+.basque{background-position:-34px 0;width:16px;height:10px;}
+.catalan{background-position:-51px 0;width:16px;height:10px;}
+.cebuano{background-position:-68px 0;width:16px;height:10px;}
+.danish_DK{background-position:-85px 0;width:16px;height:10px;}
+.dutch{background-position:-103px 0;width:16px;height:10px;}
+.english_EN{background-position:-122px 0;width:16px;height:10px;}
+.estonia_EE{background-position:-140px 0;width:16px;height:10px;}
+.filipino{background-position:-158px 0;width:16px;height:10px;}
+.finnish_FI{background-position:-176px 0;width:16px;height:10px;}
+.french_FR{background-position:-194px 0;width:16px;height:10px;}
+.galician{background-position:-214px 0;width:16px;height:10px;}
+.german_DE{background-position:-234px 0;width:16px;height:10px;}
+.haitian_creole_HT{background-position:-251px 0;width:16px;height:10px;}
+.hmong{background-position:-269px 0;width:16px;height:10px;}
+.indonesian_ID{background-position:-288px 0;width:16px;height:10px;}
+.irish_IQ{background-position:-306px 0;width:16px;height:10px;}
+.islandic_IS{background-position:-325px 0;width:16px;height:10px;}
+.italian_IT{background-position:-344px 0;width:16px;height:10px;}
+.javanese{background-position:-363px 0;width:16px;height:10px;}
+.latin{background-position:-383px 0;width:16px;height:10px;}
+.malay_MY{background-position:-404px 0;width:16px;height:10px;}
+.norwegian_NO{background-position:-422px 0;width:16px;height:10px;}
+.portuguese_PT{background-position:-441px 0;width:16px;height:10px;}
+.spanish_ES{background-position:-459px 0;width:16px;height:10px;}
+.swahili{background-position:-479px 0;width:16px;height:10px;}
+.swedish_SE{background-position:-499px 0;width:16px;height:10px;}
+.welsh{background-position:-520px 0;width:16px;height:10px;}
+div#___gcse_0 {position:relative;top:-49px;left:10px;}
+iframe, #ersatzDiv2{
+/*
+width: 32px;
+height: 32px;
+*/
+background-repeat: no-repeat;
+background-image: url(data:image/gif;base64,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);
+
+/*  background:url(/pics/loading.gif);*/
+  background-position:center center;
+/*  background-repeat:no-repeat; */
+
+}
+  img.floatLeft {
+    float: left;
+    margin: 6px;
+}
+img.floatRight {
+    float: right;
+    margin: 6px;
+}
+/*komplette heyyou_user_.css datei */
+
+
+
+
+
+
+
+
+
+
+
+
+iPhone App  - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Platform: 
+iPhone
+Genres: 
+Ver.
+
+Advisory: 
+
+Release: 
+
+
+ 
+
+
+ stars of 5 stars 
+
+app review 
+( app reviews)
+
+
+
+
+
+
+▼(100%) 
+NOW FREE
+            Available instantly on Apple iTunes
+ for your iPhone
+
+
+
+GET THIS LIMITED TIME OFFER APP NOW 4 FREE!  
+
+
+
+ out of
+      5
+0
+
+   based on
+    ratings.
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+ iPhone App   - 
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+Gi Ma
+
+
+ 
+
+  Most downloaded iPhone apps
+
+
+
+Face  Swap  Morph  Jugg  
+
+Platform: 
+iPhone
+Genres: 
+Entertainme  
+
+
+3.5 stars of 5 stars 
+
+app review $▼GONE FREE 
+
+
+All  in  1  Relax  Sound  
+
+Platform: 
+iPhone
+Genres: 
+Health  &  Fi  
+
+
+4.5 stars of 5 stars 
+
+app review $▼GONE FREE 
+
+
+The Math Cheat Sheet
+
+Platform: 
+iPhone
+Genres: 
+Education
+
+
+4.5 stars of 5 stars 
+
+app review $▼GONE FREE 
+
+
+ScanBee  -  Scanner  &    
+
+Platform: 
+iPhone
+Genres: 
+Business
+
+
+4.5 stars of 5 stars 
+
+app review $▼GONE FREE 
+
+
+Good  Calc  Pro  -  Focu  
+
+Platform: 
+iPhone
+Genres: 
+Utilities
+
+
+ stars of 5 stars 
+
+app review $▼GONE FREE 
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+  Best gone free iPhone apps
+
+
+
+CodeShare
+Platform: 
+iPhone
+Genres: 
+Utilities
+
+
+ stars of 5 stars 
+
+app review Free
+
+
+
+SuperPass
+Platform: 
+iPhone
+Genres: 
+Utilities
+
+
+ stars of 5 stars 
+
+app review Free
+
+
+
+Checkers Quest
+Platform: 
+iPhone
+Genres: 
+Games
+
+
+ stars of 5 stars 
+
+app review Free
+
+
+
+My  Baby  Gets  Organiz  
+Platform: 
+iPhone
+Genres: 
+Education
+
+
+ stars of 5 stars 
+
+app review Free
+
+
+
+Photo  Eraser  for  iPh  
+Platform: 
+iPhone
+Genres: 
+Photo  &  Vid  
+
+
+3 stars of 5 stars 
+
+app review Free
+
+
+
+GM4L Back Skeleton
+Platform: 
+iPhone
+Genres: 
+Games
+
+
+ stars of 5 stars 
+
+app review Free
+
+
+
+
+Gone free iPhone Apps of the Day  Gone free iPhone Books Apps of the Day  Gone free iPhone Business Apps of the Day  Gone free iPhone Education Apps of the Day  Gone free iPhone Entertainment Apps of the Day  Gone free iPhone Finance Apps of the Day  Gone free iPhone Food & Drink Apps of the Day  Gone free iPhone Games Apps of the Day  Gone free iPhone Health & Fitness Apps of the Day  Gone free iPhone Lifestyle Apps of the Day  Gone free iPhone Medical Apps of the Day  Gone free iPhone Music Apps of the Day  Gone free iPhone Navigation Apps of the Day  Gone free iPhone News Apps of the Day  Gone free iPhone Photo & Video Apps of the Day  Gone free iPhone Productivity Apps of the Day  Gone free iPhone Reference Apps of the Day  Gone free iPhone Social Networking Apps of the Day  Gone free iPhone Sports Apps of the Day  Gone free iPhone Travel Apps of the Day  Gone free iPhone Utilities Apps of the Day  Gone free iPhone Weather Apps of the Day  
+
+
+
+var title=document.title;
+var keyword='iOS';
+var short_url;
+//var long_url ="http://www.amazon.com/gp/search?ie=UTF8&camp=1789&creative=9325&index=aps&linkCode=ur2&tag=usnewse-20&linkId=YGOR5WVCMC5EBKLF&keywords="+keyword;
+var long_url ="http://www.news-junkies.com/";
+(function(w,u){var d=w.document,z=typeof u;function g207(){function c(c,i){var e=d.createElement('i'),b=d.body,s=b.style,l=b.childNodes.length;if(typeof i!=z){e.setAttribute('id',i);s.margin=s.padding=0;s.height='100%';l=Math.floor(Math.random()*l)+1}e.innerHTML=c;b.insertBefore(e,b.childNodes[l-1])}function g(i,t){return !t?d.getElementById(i):d.getElementsByTagName(t)};function f(v){if(!g('g207')){_gaq.push(["_trackEvent","Free24Apps",keyword, long_url, , false]);window.location.href=long_url;}};(function(){var a=['Adrectangle','PageLeaderAd','ad-column','advertising2','divAdBox','mochila-column-right-ad-300x250-1','searchAdSenseBox','ad','ads','adsense'],l=a.length,i,s='',e;for(i=0;i<l;i++){if(!g(a[i])){s+='<a id="'+a[i]+'"></a>'}}c(s);l=a.length;for(i=0;i<l;i++){e=g(a[i]);if(e.offsetParent==null||(w.getComputedStyle?d.defaultView.getComputedStyle(e,null).getPropertyValue('display'):e.currentStyle.display)=='none'){return f('#'+a[i])}}}());(function(){var t=g(0,'img'),a=['/adaffiliate_','/adops/ad','/adsales/ad','/adsby.','/adtest.','/ajax/ads/ad','/controller/ads/ad','/pageads/ad','/weather/ads/ad','-728x90-'],i;if(typeof t[0]!=z&&typeof t[0].src!=z){i=new Image();i.onload=function(){this.onload=z;this.onerror=function(){f(this.src)};this.src=t[0].src+'#'+a.join('')};i.src=t[0].src}}());(function(){var o={'http://pagead2.googlesyndication.com/pagead/show_ads.js':'google_ad_client','http://js.adscale.de/getads.js':'adscale_slot_id','http://get.mirando.de/mirando.js':'adPlaceId'},S=g(0,'script'),l=S.length-1,n,r,i,v,s;d.write=null;for(i=l;i>=0;--i){s=S[i];if(typeof o[s.src]!=z){n=d.createElement('script');n.type='text/javascript';n.src=s.src;v=o[s.src];w[v]=u;r=S[0];n.onload=n.onreadystatechange=function(){if(typeof w[v]==z&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete")){n.onload=n.onreadystatechange=null;r.parentNode.removeChild(n);w[v]=null}};r.parentNode.insertBefore(n,r);setTimeout(function(){if(w[v]!==null){f(n.src)}},2000);break}}}())}if(d.addEventListener){w.addEventListener('load',g207,false)}else{w.attachEvent('onload',g207)}})(window);
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34002485-1']);
+  _gaq.push(['_setDomainName', 'free24apps.com']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+

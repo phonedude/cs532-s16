@@ -1,0 +1,3989 @@
+http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html
+
+
+<!DOCTYPE html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js "> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgIPVVRWGwIFUVZQBwcO"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4702f272e2","agent":"","transactionName":"YgdVbUYHW0tWURFYXVtNcUxaBUFRWFxKUkdHEFJXQDlGUUNXS0dbUBVEF1cJR10NcxdFW1YOUm9dA0IWUFcR","applicationID":"15572069","errorBeacon":"bam.nr-data.net","applicationTime":416}</script>
+        <title>'Android krijgt back-updienst via Google Drive' | NU - Het laatste nieuws het eerst op NU.nl</title>
+        <meta name="author" content="" />
+        <meta name="apple-itunes-app" content="app-id=382059927, app-argument=nunl://article/3883626" />
+        <meta name="google-play-app" content="app-id=nl.sanomamedia.android.nu" />
+        <meta name="google-site-verification" content="tRpopkLA7bauR1j8Ndzqrf9vyTjq-MEcNXh7MiApp34" />
+        <meta name="DC.date.issued" content="2014-09-21" />
+        <meta name="HandheldFriendly" content="True" />
+        <meta name="MobileOptimized" content="320" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=yes" />
+        <meta name="format-detection" content="telephone=yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta http-equiv="Cache-Control" content="no-transform" />
+        <meta http-equiv="cleartype" content="on" />
+        <meta name="keywords" content="Android L, Google Play Services" />
+        <meta name="description" content="Android-gebruikers krijgen mogelijk een manier om de bestanden en instellingen van hun telefoon automatisch naar Google Drive te laten back-uppen." /><meta name="twitter:card" content="summary" /><meta name="twitter:image" content="http://media.nu.nl/m/m1mxperaer2m_wd1280.jpg/android-krijgt-back-updienst-via-google-drive.jpg" /><meta name="twitter:description" content="Android-gebruikers krijgen mogelijk een manier om de bestanden en instellingen van hun telefoon automatisch naar Google Drive te laten back-uppen." /><meta name="title" content="&#39;Android krijgt back-updienst via Google Drive&#39;" /><meta name="twitter:site" content="@NUnl" /><meta name="twitter:title" content="&#39;Android krijgt back-updienst via Google Drive&#39;" /><meta name="twitter:url" content="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" />
+        <meta property="og:url" content="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" /><meta property="og:image" content="http://media.nu.nl/m/m1mxperaer2m_wd1280.jpg/android-krijgt-back-updienst-via-google-drive.jpg" /><meta property="og:site_name" content="NU" /><meta property="og:title" content="&#39;Android krijgt back-updienst via Google Drive&#39;" /><meta property="og:locale" content="nl_NL" /><meta property="og:description" content="Android-gebruikers krijgen mogelijk een manier om de bestanden en instellingen van hun telefoon automatisch naar Google Drive te laten back-uppen." /><meta property="og:type" content="article" />
+            <link rel="canonical" href="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" />
+            <link rel="alternate" href="android-app://nl.sanomamedia.android.nu/http/www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" />
+        <!-- favicons -->
+        <!--[if IE]><link rel="shortcut icon" href="/static/img/atoms/favicon/favicon.ico"><![endif]-->
+        <link rel="apple-touch-icon" sizes="57x57" href="/static/img/atoms/favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="/static/img/atoms/favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/static/img/atoms/favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="/static/img/atoms/favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/static/img/atoms/favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="/static/img/atoms/favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/static/img/atoms/favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/img/atoms/favicon/apple-touch-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/img/atoms/favicon/apple-touch-icon-180x180.png" />
+        <link rel="icon" type="image/svg+xml" href="/static/img/atoms/favicon/favicon_svg.svg" sizes="any" />
+        <link rel="icon" type="image/png" href="/static/img/atoms/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="/static/img/atoms/favicon/android-chrome-192x192.png" sizes="192x192" />
+        <link rel="icon" type="image/png" href="/static/img/atoms/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="/static/img/atoms/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="manifest" href="/static/img/atoms/favicon/manifest.json" />
+        <link rel="mask-icon" href="/static/img/atoms/favicon/safari-pinned-tab.svg" color="#010050" />
+        <link rel="shortcut icon" href="/static/img/atoms/favicon/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#010050" />
+        <meta name="msapplication-TileImage" content="/static/img/atoms/favicon/mstile-144x144.png" />
+        <meta name="msapplication-config" content="/static/img/atoms/favicon/browserconfig.xml" />
+        <meta name="theme-color" content="#010050" />
+        <script type="text/javascript">
+var context_dc_params = 'CATEGORY=tech;KEYWORDS=android l, google play services;',
+    context = {
+        'dc_params': context_dc_params,
+        'category' : 'tech',
+        'subcategory' : 'gadgets',
+        'article_id' : '3883626',
+        'article_name' : 'android-krijgt-back-updienst-via-google-drive',
+        'article_author' : 'nu.nl/NU.nl/Floris Poort'
+    };
+</script>
+        <!--[if gte IE 10]><!-->
+        <link rel="stylesheet" href="/static/CACHE/css/47bec453b7e4.css" type="text/css" media="all" />
+        <!--<![endif]-->
+        <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/static/CACHE/css/4801ec877a50.css" type="text/css" />
+        <link rel="stylesheet" href="/static/CACHE/css/e4a4805d5f95.css" type="text/css" />
+        <link rel="stylesheet" href="/static/CACHE/css/6668764c0373.css" type="text/css" />
+        <![endif]-->
+        <!--[if IE 7]>
+        <link rel="stylesheet" href="/static/CACHE/css/e2eec03b764e.css" type="text/css" />
+        <![endif]-->
+<!-- Block CSS -->
+        <!--[if (lt IE 9) & (!IEMobile)]>
+            <script type="text/javascript" src="/static/CACHE/js/0129764bafcf.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var app_name = 'NU';
+            var app_stage = 'production';
+            var FULL_PATH = '/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html';
+        </script>
+        <script type="text/javascript">
+            var sprinkle_url = '',
+                static_url = '/static/',
+                mediatool_base_url = 'media.nu.nl',
+                blocks = {},
+                is_adblocker_in_use = true;
+        </script>
+        <script src="/static/js/advertising.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/CACHE/js/80a22e11d973.js"></script>
+        <script type="text/javascript" src="http://cts.snmmd.nl/service/js/nunl/gadgets-artikel/"></script><script type="text/javascript">   var wlrcmd = ""; var context = context || {};   tagging = new Tagging(context);</script>
+        <script type="text/javascript"> try {    if(true) {        tagging.render("head");    } } catch(err) {    console.log(err) } </script>
+        <script src="/static/js/organisms/ntv.advertorial.js"></script>
+        <script type="text/javascript">
+    // contain variables
+    (function() {
+        // Get the viewsize
+        var viewsize = '1-kolom-smal';
+        if (min320) {
+            viewsize = '1-kolom-medium';
+        }
+        if (min480) {
+            viewsize = '1-kolom-breed';
+        }
+        if (min600) {
+            viewsize = '2-kolom-smal';
+        }
+        if (min768) {
+            viewsize = '2-kolom-medium';
+        }
+        if (min992) {
+            viewsize = '3-kolom';
+        }
+        // Get the mobile/ipad/desktop detection
+        if (typeof(Consent) != 'undefined' && !Consent.has_optin('stats')) {
+            window['ga-disable-UA-10557259-1'] = true;
+        }
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        var _ga_options = {};
+        _ga_options['allowAnchor'] = true;
+        ga('create', 'UA-10557259-1', '.www.nu.nl', _ga_options);
+        ga('set', 'dimension1', viewsize);
+        ga('set', 'dimension2', getOrientation());
+        ga('send', 'pageview');
+    })();
+    if(window.addEventListener) {
+        window.addEventListener('orientationchange', function () {
+            NU.log('_trackEvent', 'default', 'orientationchange', 'switch_to_' + getOrientation());
+            ga('send', 'event', 'default', 'orientationchange', 'switch_to_' + getOrientation());
+        }, true);
+    }
+</script>
+        <!-- Advertorial styling -->
+        <!-- Advertorial styling -->
+    </head>
+
+    <body id="nu" class="three-columns page-article  nutech" data-pagetype="article" data-section="gadgets">
+        <div class="skip dispnone"><a href="#main">Skip to main content</a></div>
+
+        <div id="wrapper">
+            
+                <!-- zone|body_top start -->
+<div class="zone" data-zone="body_top" data-vr-zone="body_top">
+    
+        <!-- block|webring start -->
+<div
+    id="block-327725"
+    data-id="block-327725"
+    data-position=""
+    data-type="webring"
+    class="block webring "
+    data-sac-marker="block.webring"
+>
+    <div class="block-wrapper horizontal">
+    <div class="block-content">
+
+        <div class="ring">
+            
+                
+                    
+    
+        <a href="http://www.nu.nl" target="_self" class="nav-item nav-main nav-hasimage item-nu trackevent" title="NU" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nu">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NU" />
+            </div>
+        </div>
+        <span class="nav-item-text">NU</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    
+        <a href="http://www.nu.nl/economie" target="_self" class="nav-item nav-main nav-hasimage item-nuzakelijk trackevent" title="NUzakelijk" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nuzakelijk">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUzakelijk" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUzakelijk</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    
+        <a href="http://www.nu.nl/sport" target="_self" class="nav-item nav-main nav-hasimage item-nusport trackevent" title="NUsport" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nusport">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUsport" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUsport</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    <a href="http://www.nu.nl/tech" target="_self" class="nav-item nav-main nav-hasimage item-nutech current trackevent" title="NUtech" rel="nofollow">
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nutech">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUtech" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUtech</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    
+        <a href="http://www.nu.nl/entertainment" target="_self" class="nav-item nav-main nav-hasimage item-nuentertainment trackevent" title="NUentertainment" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nuentertainment">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUentertainment" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUentertainment</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    
+        <a href="http://www.nu.nl/lifestyle" target="_self" class="nav-item nav-main nav-hasimage item-nulifestyle trackevent" title="NUlifestyle" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nulifestyle">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUlifestyle" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUlifestyle</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    
+        <a href="http://www.nu.nl/geldzaken" target="_self" class="nav-item nav-main nav-hasimage item-nugeld trackevent" title="NUgeld" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nugeld">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUgeld" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUgeld</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+                
+                    
+    
+        <a href="http://www.nuwerk.nl" target="_blank" class="nav-item nav-main nav-hasimage item-nuwerk trackevent" title="NUwerk" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nuwerk">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUwerk" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUwerk</span>
+        <div class="clear"></div>
+    </div>
+</a>
+                
+            
+        </div>
+
+        <div class="btn account account_login" style="display: none;">
+    <div class="accountimage"></div>
+    <div class="loginbutton">
+        Inloggen
+    </div>
+    <div class="accountname">
+        <span class="firstname"></span>
+        <span class="lastname"></span>
+    </div>
+    <ul class="dropdown">
+        <li>
+            <a class=" trackevent account_profile">Mijn account</a>
+        </li>
+        <li>
+            <a class=" trackevent account_logout">Uitloggen</a>
+        </li>
+        <li>
+            <span class=" trackevent accounttagline">Powered by Sanoma</span>
+        </li>
+    </ul>
+</div>
+
+        <div class="menutrigger">
+            <div class="molecule-webring-menutrigger">
+    <button class="btn toggle-menu menu-left" type="button"></button>
+
+    <div class="nav-branding">
+        <a href="/tech" class="logo trackevent" data-trackeventlabel="logo">
+    <div class="svg-icon icon-main icon-nutech">
+    <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="nutech logo" />
+</div>
+</a>
+        
+            <h3><a href="/gadgets">Gadgets</a></h3>
+        
+    </div>
+</div>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+</div>
+
+</div>
+<!-- block|webring end -->
+
+
+    
+</div>
+<!-- zone|body_top end -->
+            
+
+            <div id="container">
+                <div id="header">
+                    
+                        <!-- zone|header start -->
+<div class="zone" data-zone="header" data-vr-zone="header">
+    
+        <!-- block|smartbanner start -->
+<div
+    id="block-327727"
+    data-id="block-327727"
+    data-position=""
+    data-type="smartbanner"
+    class="block smartbanner "
+    data-sac-marker="block.smartbanner"
+>
+    <div class="block-wrapper">
+    <div class="block-content">
+
+    </div>
+</div>
+</div>
+<!-- block|smartbanner end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327729"
+    data-id="block-327729"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper mtop_320">
+    <div class="block-content">
+        
+            <div id="cts_be07bca66be54258b815049d752ac586" class="cts-wrapper min320 max480 set-block"><script type="text/javascript"> try {    if(min320 && max480) {        tagging.render("mtop_320");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327731"
+    data-id="block-327731"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dtop_468">
+    <div class="block-content">
+        
+            <div id="cts_27701089badc4403a00497a7a7d92db8" class="cts-wrapper min480 max768 set-block"><script type="text/javascript"> try {    if(min480 && max768) {        tagging.render("dtop_468");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327733"
+    data-id="block-327733"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dtop_728">
+    <div class="block-content">
+        
+            <div id="cts_06cd09fa276148988b30b67f728b272a" class="cts-wrapper min768 max992 set-block"><script type="text/javascript"> try {    if(min768 && max992) {        tagging.render("dtop_728");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327735"
+    data-id="block-327735"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dtop_970_728">
+    <div class="block-content">
+        
+            <div id="cts_6424ed9a563f4715b254c9aec81a48cf" class="cts-wrapper min992 set-block"><script type="text/javascript"> try {    if(min992) {        tagging.render("dtop_970_728");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+</div>
+<!-- zone|header end -->
+                    
+                    <div class="block toast adblocker" data-type="toast.adblocker">
+    <div class="block-content">
+        <p>Beste bezoeker,<br /><br />Wij zien dat u een adblocker gebruikt die ervoor zorgt dat u geen advertenties
+            ziet op NU.nl. Dit vinden wij jammer, want NU.nl is mede dankzij deze advertenties gratis toegankelijk.
+            Wilt u een uitzondering maken voor NU.nl, of meer lezen over hoe wij met advertenties omgaan?
+            <a href="/adblock.html" class="trackevent">Klik dan hier</a>.
+    </div>
+</div>
+                </div>
+                <div id="content_container">
+                    <div id="menu" class="column first nu-main-menu nu-main-menu-left">
+                        <div class="column-content">
+                            
+                                <!-- zone|menu start -->
+<div class="zone" data-zone="menu" data-vr-zone="menu">
+    
+        <!-- block|menu start -->
+<div
+    id="block-327739"
+    data-id="block-327739"
+    data-position=""
+    data-type="menu"
+    class="block menu compact"
+    data-sac-marker="block.menu"
+>
+    <!-- Left menu element-->
+<nav>
+	<div class="nav-branding">
+        <div class="nav-item nav-title">
+            <a href="http://www.nu.nl/tech" class="logo trackevent" data-trackeventlabel="logo">
+    <div class="svg-icon icon-main icon-nutech">
+    <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="nutech logo" />
+</div>
+</a>
+            <h3>NU</h3>
+            <div class="clear"></div>
+        </div>
+        <button class="btn nav-close" type="button"></button>
+    </div>
+
+    <div class="nav-content">
+        
+            
+
+    
+
+    <a href="/" class="nav-item nav-main   first trackevent" >
+        Voorpagina
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/net-binnen/" class="nav-item nav-main    trackevent" >
+        Net binnen
+    </a>
+
+    
+
+    
+
+
+
+    <div class="nav-group">
+
+    <a href="/algemeen" class="nav-item nav-main    trackevent" >
+        Algemeen
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/binnenland" class="nav-item nav-sub   first trackevent" >
+        Binnenland
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/buitenland" class="nav-item nav-sub    trackevent" >
+        Buitenland
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/politiek" class="nav-item nav-sub   last trackevent" >
+        Politiek
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    <div class="nav-group">
+
+    <a href="/economie" class="nav-item nav-main    trackevent" >
+        Economie
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/geldzaken" class="nav-item nav-sub   first trackevent" >
+        Geld
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/ondernemen" class="nav-item nav-sub    trackevent" >
+        Ondernemen
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/beurs" class="nav-item nav-sub    trackevent" >
+        Beurs
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/vd" class="nav-item nav-sub   last trackevent" >
+        V&amp;D
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    <div class="nav-group">
+
+    <a href="/sport" class="nav-item nav-main    trackevent" >
+        Sport
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/voetbal" class="nav-item nav-sub   first trackevent" >
+        Voetbal
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/champions-league" class="nav-item nav-sub    trackevent" >
+        Champions League
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/schaatsen" class="nav-item nav-sub    trackevent" >
+        Schaatsen
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/wielrennen" class="nav-item nav-sub    trackevent" >
+        Wielrennen
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="https://mijnteam.nu.nl/" class="nav-item nav-sub   last trackevent" >
+        MijnTeam
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    <div class="nav-group">
+
+    <a href="/tech" class="nav-item nav-main    trackevent" >
+        Tech
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/internet" class="nav-item nav-sub   first trackevent" >
+        Internet
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/gadgets" class="nav-item nav-sub  current  trackevent" >
+        Gadgets
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/games" class="nav-item nav-sub    trackevent" >
+        Games
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/mobiel" class="nav-item nav-sub   last trackevent" >
+        Mobiel
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    <div class="nav-group">
+
+    <a href="/entertainment" class="nav-item nav-main    trackevent" >
+        Entertainment
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/achterklap" class="nav-item nav-sub   first trackevent" >
+        Achterklap
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/film" class="nav-item nav-sub    trackevent" >
+        Films en series
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/muziek" class="nav-item nav-sub    trackevent" >
+        Muziek
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/cultuur-overig" class="nav-item nav-sub    trackevent" >
+        Boek en cultuur
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/media" class="nav-item nav-sub   last trackevent" >
+        Media
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    <div class="nav-group">
+
+    <a href="/lifestyle" class="nav-item nav-main    trackevent" >
+        Lifestyle
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/gezondheid" class="nav-item nav-sub   first trackevent" >
+        Gezondheid
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/eten-en-drinken" class="nav-item nav-sub    trackevent" >
+        Eten &amp; Drinken
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/werk-en-prive" class="nav-item nav-sub    trackevent" >
+        Werk &amp; Privé
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/wonen-en-interieur" class="nav-item nav-sub    trackevent" >
+        Wonen
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/reizen" class="nav-item nav-sub   last trackevent" >
+        Reizen
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    <div class="nav-group">
+
+    <a href="/overig" class="nav-item nav-main    trackevent" >
+        Overig
+    </a>
+
+    
+        <div class="nav-children">
+            
+                
+
+    
+
+    <a href="/wetenschap" class="nav-item nav-sub   first trackevent" >
+        Wetenschap
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/opmerkelijk" class="nav-item nav-sub    trackevent" >
+        Opmerkelijk
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/dieren" class="nav-item nav-sub    trackevent" >
+        Dieren
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/auto" class="nav-item nav-sub    trackevent" >
+        Auto
+    </a>
+
+    
+
+    
+
+
+
+    
+
+    <a href="/videos" class="nav-item nav-sub   last trackevent" >
+        Video&#39;s
+    </a>
+
+    
+
+    
+
+
+
+            
+        </div>
+    
+
+    </div>
+
+
+
+    
+
+    <a href="/regio" class="nav-item nav-main   last trackevent" >
+        Regionaal
+    </a>
+
+    
+
+    
+
+
+
+        
+        <div class="clear"></div>
+    </div>
+
+    <div class="nav-separator"></div>
+
+	<div class="nav-content nav-webring">
+        
+            
+                
+    
+        <a href="http://www.nu.nl" target="_self" class="nav-item nav-main nav-hasimage item-nu trackevent" title="NU" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nu">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NU" />
+            </div>
+        </div>
+        <span class="nav-item-text">NU</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    
+        <a href="http://www.nu.nl/economie" target="_self" class="nav-item nav-main nav-hasimage item-nuzakelijk trackevent" title="NUzakelijk" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nuzakelijk">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUzakelijk" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUzakelijk</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    
+        <a href="http://www.nu.nl/sport" target="_self" class="nav-item nav-main nav-hasimage item-nusport trackevent" title="NUsport" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nusport">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUsport" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUsport</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    <a href="http://www.nu.nl/tech" target="_self" class="nav-item nav-main nav-hasimage item-nutech current trackevent" title="NUtech" rel="nofollow">
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nutech">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUtech" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUtech</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    
+        <a href="http://www.nu.nl/entertainment" target="_self" class="nav-item nav-main nav-hasimage item-nuentertainment trackevent" title="NUentertainment" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nuentertainment">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUentertainment" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUentertainment</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    
+        <a href="http://www.nu.nl/lifestyle" target="_self" class="nav-item nav-main nav-hasimage item-nulifestyle trackevent" title="NUlifestyle" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nulifestyle">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUlifestyle" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUlifestyle</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    
+        <a href="http://www.nu.nl/geldzaken" target="_self" class="nav-item nav-main nav-hasimage item-nugeld trackevent" title="NUgeld" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nugeld">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUgeld" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUgeld</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+            
+                
+    
+        <a href="http://www.nuwerk.nl" target="_blank" class="nav-item nav-main nav-hasimage item-nuwerk trackevent" title="NUwerk" rel="nofollow">
+    
+
+    <div class="nav-wrapper">
+        <div class="nav-item-image">
+            <div class="svg-icon icon-m icon-nuwerk">
+                <img src="/static/img/atoms/images/logos/logo-sprite.svg" alt="NUwerk" />
+            </div>
+        </div>
+        <span class="nav-item-text">NUwerk</span>
+        <div class="clear"></div>
+    </div>
+</a>
+            
+        
+        <div class="clear"></div>
+    </div>
+</nav>
+</div>
+<!-- block|menu end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327741"
+    data-id="block-327741"
+    data-position=""
+    data-type="cts"
+    class="block cts compact"
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dmid_160_120">
+    <div class="block-content">
+        
+            <div id="cts_0d539fdcb52a4d7dad9902e78c8ba4e7" class="cts-wrapper min992 set-block"><script type="text/javascript"> try {    if(min992) {        tagging.render("dmid_160_120");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+</div>
+<!-- zone|menu end -->
+                            
+                        </div>
+                    </div>
+                    <div id="main" class="column two last">
+                        <div class="column-content">
+
+                            <!-- zone|top start -->
+<div class="zone" data-zone="top" data-vr-zone="top">
+    
+        <!-- block|topbar start -->
+<div
+    id="block-327737"
+    data-id="block-327737"
+    data-position=""
+    data-type="topbar"
+    class="block topbar "
+    data-sac-marker="block.topbar"
+>
+    <div class="block-wrapper clearfix">
+    <div class="column first clearfix">
+        <div class="search-box-molecule closed">
+    <div class="search-box">
+       <form action="/zoeken">
+            <button type="submit" class="trackevent" data-trackeventlabel="submit-search"><i class="fa fa-search"></i></button>
+            <div class="search-input">
+                <input id="search-input-q" name="q" type="search" placeholder="Zoeken" />
+            </div>
+        </form>
+    </div>
+    <button class="btn search-button trackevent" data-trackeventlabel="toggle-search" type="button">
+        <i class="fa fa-search"></i>
+        <i class="fa fa-times"></i>
+    </button>
+</div>
+        <div class="block slogan">
+    <div class="block-wrapper">
+        <div class="block-content">
+            Donderdag 18 februari 2016
+            <div class="min600 set-inline">
+                <div class="divider dotted vertical">|</div>
+                <span>Het laatste nieuws het eerst op NU.nl</span>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="column last">
+        <div class="block widgets">
+    <div class="block-wrapper">
+        <div class="widget-wrapper">
+            <div class="btn fixed-l widget weather">
+                <a href="/weer" class="btn-content trackevent" data-trackeventlabel="weather" data-trackeventcategory="widget" data-trackeventaction="click">
+                    <span class="btn-centered">
+                        <span class="dispnone">Temperatuur</span>
+                        
+                            <i class="btn-icon fc fc-weather-qq"></i>
+                            <span class="btn-text">1 &deg;C</span>
+                        
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="widget-wrapper">
+            <div class="btn fixed-l widget traffic">
+                <a href="/verkeer" class="btn-content trackevent" data-trackeventlabel="traffic" data-trackeventcategory="widget" data-trackeventaction="click">
+                    <span class="btn-centered">
+                        <span class="btn-icon"></span>
+                        <span class="dispnone">Vervoer</span>
+                        <span class="btn-text">
+                            
+                                2
+                            
+                             Files
+                        </span>
+                        <span class="btn-text dispnone">
+                            
+                                3
+                             NS
+                        </span>
+                        <span class="btn-text dispnone">
+                            &euro; 1,476
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="widget-wrapper">
+            <div class="btn fixed-l widget stocks">
+                <a href="/aandelen" class="btn-content trackevent" data-trackeventlabel="stocks" data-trackeventcategory="widget" data-trackeventaction="click">
+                    <span class="btn-centered">
+                        <span class="btn-icon"></span>
+                        <span class="dispnone">AEX</span>
+                        <span class="btn-text">413,79</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="widget-wrapper">
+            <div class="btn fixed-l widget tvguide">
+                <a href="/tvgids" class="btn-content trackevent" data-trackeventlabel="tvguide" data-trackeventcategory="widget" data-trackeventaction="click">
+                    <span class="btn-centered">
+                        <span class="btn-icon"></span>
+                        <span class="btn-text">TV gids</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <div class="widget-wrapper">
+            <div class="btn fixed-l widget sports">
+                <a href="/live/voetbal" class="btn-content trackevent" data-trackeventlabel="sports" data-trackeventcategory="widget" data-trackeventaction="click">
+                    <span class="btn-centered">
+                        <span class="btn-icon"></span>
+                        <span class="dispnone">Live voetbalwedstrijden</span>
+                        <span class="btn-text">7 Live</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+</div>
+<!-- block|topbar end -->
+
+
+    <script type="text/javascript">
+        jQuery('#block-327737').data({"url": "/block/json/topbar?section=gadgets", "refresh": 60});
+    </script>
+
+    
+</div>
+<!-- zone|top end -->
+
+                            <div class="clear"></div>
+
+                            <div class="column first">
+                                <div class="column-content">
+                                    <div class="column-content-background">
+                                        
+
+    
+        <!-- zone|main start -->
+<div class="zone" data-zone="main" data-vr-zone="main">
+    
+        <!-- block|breadcrumb start -->
+<div
+    id="block-327743"
+    data-id="block-327743"
+    data-position=""
+    data-type="breadcrumb"
+    class="block breadcrumb "
+    data-sac-marker="block.breadcrumb"
+>
+    <div class="block-wrapper section-nutech">
+    <div class="block-content">
+        <ul class="inline">
+            
+                <li class="first">
+                    
+                        <a href="/" class="trackevent" data-trackeventlabel="nu.nl">NU.nl</a>
+                    
+                </li>
+            
+                <li class="">
+                    
+                        <a href="/tech" class="trackevent" data-trackeventlabel="tech">Tech</a>
+                    
+                </li>
+            
+                <li class=" active">
+                    
+                        <a href="/gadgets" class="trackevent" data-trackeventlabel="gadgets">Gadgets</a>
+                    
+                </li>
+            
+                <li class="last hidden">
+                    
+                        <a href="#">&#39;Android krijgt back-updienst via Google Drive&#39;</a>
+                    
+                </li>
+            
+        </ul>
+        <div class="clear"></div>
+    </div>
+</div>
+</div>
+<!-- block|breadcrumb end -->
+
+
+    
+        <!-- block|article.header start -->
+<div
+    id="block-327745"
+    data-id="block-327745"
+    data-position=""
+    data-type="article.header"
+    class="block article header "
+    data-sac-marker="block.article.header"
+>
+    <div class="block-wrapper ">
+    <div class="block-content clearfix">
+        <div class="  ">
+            <div class="articleheader-image">
+                <div class="image-wrapper">
+                    <div class="item-image">
+                        
+                            <noscript>
+                               <img src="http://media.nu.nl/m/m1mxperaer2m_wd640.jpg/android-krijgt-back-updienst-via-google-drive.jpg" alt="&#39;Android krijgt back-updienst via Google Drive&#39;" />
+                            </noscript>
+                            <img data-src="http://media.nu.nl/m/m1mxperaer2m_wd640.jpg/android-krijgt-back-updienst-via-google-drive.jpg" src="/static/img/placeholders/wd640-o.png" class="image lazy-unveil" alt="" />
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-overlay">
+                <div class="title-container">
+                    
+                    
+                    <div class="title">
+    
+        <h1 class="fluid">
+            &#39;Android krijgt back-updienst via Google Drive&#39;
+            <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+        </h1>
+    
+</div>
+                </div>
+                
+<div class="copyright">
+    <span>Foto: <span class="photographer">NU.nl/Jeroen Kraan</span></span>
+</div>
+
+            </div>
+
+            <div class="clear"></div>
+            <div class="footer">
+    <div class="left">
+        <div class="dates">
+            <span class="published">Gepubliceerd: <span class="large">21 september 2014 14:26</span><span class="small">21-09-14 14:26</span></span>
+            <span class="update">Laatste update:
+                
+                    <span class="large">21 september 2014 22:04</span><span class="small">21-09-14 22:04</span>
+                
+            </span>
+        </div>
+    </div>
+
+    <div class="socialbuttons right">
+        <div class="badges">
+            
+<ul class="social-badges">
+    <li class="nujij last">
+        <a href="http://www.nujij.nl/jij.lynkx/?i=http%3A%2F%2Fmedia.nu.nl%2Fm%2Fm1mxperaer2m.jpg&x=Android+L%2CGoogle+Play+Services&b=Android-gebruikers+krijgen+mogelijk+een+manier+om+de+bestanden+en+instellingen+van+hun+telefoon+automatisch+naar+Google+Drive+te+laten+back-uppen.&u=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&t=%27Android+krijgt+back-updienst+via+Google+Drive%27" rel="nofollow" target="_blank"  class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="nujij" data-tracksocialaction="send1">
+            <i class="fc fc-nujij fa-lg"></i>
+        </a>
+    </li>
+    <li class="facebook first">
+        <a href="http://www.facebook.com/sharer.php?p%5Btitle%5D=%27Android+krijgt+back-updienst+via+Google+Drive%27&p%5Burl%5D=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&s=100&p%5Bimages%5D%5B0%5D=http%3A%2F%2Fmedia.nu.nl%2Fm%2Fm1mxperaer2m_wd1280.jpg&p%5Bsummary%5D=Android-gebruikers+krijgen+mogelijk+een+manier+om+de+bestanden+en+instellingen+van+hun+telefoon+automatisch+naar+Google+Drive+te+laten+back-uppen." rel="nofollow" target="_blank" class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="facebook" data-tracksocialaction="like">
+            <i class="fa fa-facebook fa-lg"></i>
+        </a>
+    </li>
+    <li class="twitter">
+        <a href="http://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&text=%27Android+krijgt+back-updienst+via+Google+Drive%27&via=NUnl" rel="nofollow" target="_blank" class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="twitter" data-tracksocialaction="tweet">
+            <i class="fa fa-twitter fa-lg"></i>
+        </a>
+    </li>
+    <li class="googleplus">
+        <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html" rel="nofollow" target="_blank"  class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="google" data-tracksocialaction="send">
+            <i class="fa fa-google-plus fa-lg"></i>
+        </a>
+    </li>
+</ul>
+        </div>
+        <a href="#" class="button">
+            Deel
+        </a>
+        <div class="tooltip-badges">
+            <div class="box">
+                
+<ul class="social-badges">
+    <li class="nujij last">
+        <a href="http://www.nujij.nl/jij.lynkx/?i=http%3A%2F%2Fmedia.nu.nl%2Fm%2Fm1mxperaer2m.jpg&x=Android+L%2CGoogle+Play+Services&b=Android-gebruikers+krijgen+mogelijk+een+manier+om+de+bestanden+en+instellingen+van+hun+telefoon+automatisch+naar+Google+Drive+te+laten+back-uppen.&u=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&t=%27Android+krijgt+back-updienst+via+Google+Drive%27" rel="nofollow" target="_blank"  class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="nujij" data-tracksocialaction="send1">
+            <i class="fc fc-nujij fa-lg"></i>
+        </a>
+    </li>
+    <li class="facebook first">
+        <a href="http://www.facebook.com/sharer.php?p%5Btitle%5D=%27Android+krijgt+back-updienst+via+Google+Drive%27&p%5Burl%5D=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&s=100&p%5Bimages%5D%5B0%5D=http%3A%2F%2Fmedia.nu.nl%2Fm%2Fm1mxperaer2m_wd1280.jpg&p%5Bsummary%5D=Android-gebruikers+krijgen+mogelijk+een+manier+om+de+bestanden+en+instellingen+van+hun+telefoon+automatisch+naar+Google+Drive+te+laten+back-uppen." rel="nofollow" target="_blank" class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="facebook" data-tracksocialaction="like">
+            <i class="fa fa-facebook fa-lg"></i>
+        </a>
+    </li>
+    <li class="twitter">
+        <a href="http://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&text=%27Android+krijgt+back-updienst+via+Google+Drive%27&via=NUnl" rel="nofollow" target="_blank" class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="twitter" data-tracksocialaction="tweet">
+            <i class="fa fa-twitter fa-lg"></i>
+        </a>
+    </li>
+    <li class="googleplus">
+        <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html" rel="nofollow" target="_blank"  class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="google" data-tracksocialaction="send">
+            <i class="fa fa-google-plus fa-lg"></i>
+        </a>
+    </li>
+</ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+        </div>
+
+        <div class="item-excerpt">
+    
+        Android-gebruikers krijgen mogelijk een manier om de bestanden en instellingen van hun telefoon automatisch naar Google Drive te laten back-uppen.
+        <div class="clear"></div>
+    
+</div>
+    </div>
+</div>
+</div>
+<!-- block|article.header end -->
+
+
+    
+        <!-- block|article.body start -->
+<div
+    id="block-327747"
+    data-id="block-327747"
+    data-position=""
+    data-type="article.body"
+    class="block article body "
+    data-sac-marker="block.article.body"
+>
+    
+    <div class="block-wrapper">
+        <div class="block-content">
+            <p>Dat concludeert <em><a href="http://www.androidpolice.com/2014/09/19/apk-teardown-google-play-services-6-1-contains-proximity-unlock-device-2-device-account-transfer-new-authorization-techniques-much/#device-backup-to-google-drive" target="_blank">Android Police</a></em> na het bekijken van de broncode van de nieuwste versie van Google Play Services. Google Play Services koppelt apps aan diensten van Google, zoals Maps en de Play Store.</p> <p>In versie 6.1 zou onder meer de mogelijkheid worden toegevoegd om automatisch back-ups van een compleet Android-apparaat op Google Drive op te slaan. Instellingen, maar ook bestanden en apps zouden naar de opslagdienst van Google geüpload kunnen worden.</p> <a id="anchor-ontgrendelen"></a><h2>Ontgrendelen</h2> <p>Ook het overzetten van zulke data naar een ander apparaat wordt makkelijker. Zo zou het mogelijk zijn om instellingen en bestanden via onder meer bluetooth van het ene naar het andere Android-apparaat over te zetten.</p> <p>Daarnaast krijgt Android mogelijk een functie die het mogelijk maakt Android-apparaten met nfc-tags te ontgrendelen. Zo zou een telefoon bijvoorbeeld van het slot af gaan wanneer die in een carkit wordt geplaatst.</p> <p>Die ontgrendelmethode zou ook moeten gaan werken in combinatie met Chrome OS. Android-gebruikers die hun telefoon vlakbij hun Chromebook leggen, zouden in de toekomst mogelijk geen wachtwoord meer in hoeven te voeren.</p> <p>De nieuwste versie van Google Play Services is via testversies van Android L al uitgerold. De uiteindelijke versie van Android L wordt later dit jaar verwacht.</p> <p><a href="http://www.nutech.nl/mobiel/3812351/er-nieuw-in-android-l.html" target="_blank">Wat is er nieuw in Android L?</a></p> <p><a href="http://www.nutech.nl/reviews/3814359/preview-google-neemt-design-serieus-met-android-l.html" target="_blank">Preview: Google neemt design serieus met Android L</a></p>
+            <div class="copyright">
+    <span class="author">
+        Door: NU.nl/Floris Poort
+    </span>
+</div>
+        </div>
+    </div>
+
+</div>
+<!-- block|article.body end -->
+
+
+    
+        <!-- block|divider start -->
+<div
+    id="block-327749"
+    data-id="block-327749"
+    data-position=""
+    data-type="divider"
+    class="block divider "
+    data-sac-marker="block.divider"
+>
+    
+</div>
+<!-- block|divider end -->
+
+
+    
+        <!-- block|article.tags start -->
+<div
+    id="block-327751"
+    data-id="block-327751"
+    data-position=""
+    data-type="article.tags"
+    class="block article tags "
+    data-sac-marker="block.article.tags"
+>
+    
+    <div class="block-wrapper">
+        
+            <div class="title">
+                Lees meer over:
+            </div>
+        
+        <div class="block-content">
+            
+                <a class="trackevent" href="/tag/Android%20L"><span>Android L</span></a>
+            
+                <a class="trackevent" href="/tag/Google%20Play%20Services"><span>Google Play Services</span></a>
+            
+            <div class="clear"></div>
+        </div>
+    </div>
+
+</div>
+<!-- block|article.tags end -->
+
+
+    
+        <!-- block|socialbar start -->
+<div
+    id="block-327753"
+    data-id="block-327753"
+    data-position=""
+    data-type="socialbar"
+    class="block socialbar "
+    data-sac-marker="block.socialbar"
+>
+    <div class="block socialbar">
+    <div class="block-wrapper">
+        <div class="block-content spacious">
+            
+<div class="socialbar-wrapper with-counters">
+    <ul class="social-buttons">
+        <li class="nujij">
+            <a href="http://www.nujij.nl/jij.lynkx/?i=http%3A%2F%2Fmedia.nu.nl%2Fm%2Fm1mxperaer2m.jpg&x=Android+L%2CGoogle+Play+Services&b=Android-gebruikers+krijgen+mogelijk+een+manier+om+de+bestanden+en+instellingen+van+hun+telefoon+automatisch+naar+Google+Drive+te+laten+back-uppen.&u=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&t=%27Android+krijgt+back-updienst+via+Google+Drive%27" rel="nofollow" target="_blank"  class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="nujij" data-tracksocialaction="send1">
+                <span class="counter">0</span>
+                <div class="social-button">
+                    <div class="button-content">
+                        <i class="fc fc-nujij"></i>
+                        <span class="socialtext">Reageer</span>
+                    </div>
+                </div>
+            </a>
+            <div class="clear"></div>
+        </li>
+        <li class="facebook first">
+            <a href="http://www.facebook.com/sharer.php?p%5Btitle%5D=%27Android+krijgt+back-updienst+via+Google+Drive%27&p%5Burl%5D=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&s=100&p%5Bimages%5D%5B0%5D=http%3A%2F%2Fmedia.nu.nl%2Fm%2Fm1mxperaer2m_wd1280.jpg&p%5Bsummary%5D=Android-gebruikers+krijgen+mogelijk+een+manier+om+de+bestanden+en+instellingen+van+hun+telefoon+automatisch+naar+Google+Drive+te+laten+back-uppen." rel="nofollow" target="_blank" class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="facebook" data-tracksocialaction="like">
+                <span class="counter">0</span>
+                <div class="social-button">
+                    <div class="button-content">
+                        <i class="fa fa-facebook"></i>
+                        <span class="socialtext">Share</span>
+                    </div>
+                </div>
+            </a>
+            <div class="clear"></div>
+        </li>
+        <li class="twitter">
+            <a href="http://twitter.com/intent/tweet/?url=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html&text=%27Android+krijgt+back-updienst+via+Google+Drive%27&via=NUnl" rel="nofollow" target="_blank" class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="twitter" data-tracksocialaction="tweet">
+                <span class="counter">0</span>
+                <div class="social-button">
+                    <div class="button-content">
+                        <i class="fa fa-twitter"></i>
+                        <span class="socialtext">Tweet</span>
+                    </div>
+                </div>
+            </a>
+            <div class="clear"></div>
+        </li>
+        <li class="googleplus">
+            <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.nu.nl%2Fgadgets%2F3883626%2Fandroid-krijgt-back-updienst-via-google-drive.html" rel="nofollow" target="_blank"  class="tracksocial" data-tracksocialtarget="http://www.nu.nl/gadgets/3883626/android-krijgt-back-updienst-via-google-drive.html" data-tracksocialnetwork="google" data-tracksocialaction="send">
+                <span class="counter">-</span>
+                <div class="social-button">
+                    <div class="button-content">
+                        <i class="fa fa-google-plus"></i>
+                        <span class="socialtext">1</span>
+                    </div>
+                </div>
+            </a>
+            <div class="clear"></div>
+        </li>
+        
+        
+    </ul>
+</div>
+<div class="clear"></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- block|socialbar end -->
+
+
+    
+        <!-- block|divider start -->
+<div
+    id="block-327755"
+    data-id="block-327755"
+    data-position=""
+    data-type="divider"
+    class="block divider "
+    data-sac-marker="block.divider"
+>
+    
+</div>
+<!-- block|divider end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327761"
+    data-id="block-327761"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper advertorial_2_center">
+    <div class="block-content">
+        
+            <div id="cts_c84e65c597eb4f919dc80502db294d25" class="cts-wrapper min320 set-block"><script type="text/javascript"> try {    if(min320) {        tagging.render("advertorial_2_center");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327763"
+    data-id="block-327763"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper mbot_320">
+    <div class="block-content">
+        
+            <div id="cts_37bf4f50c82546b5ba70dff61ec5748e" class="cts-wrapper min320 max480 set-block"><script type="text/javascript"> try {    if(min320 && max480) {        tagging.render("mbot_320");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|article.related start -->
+<div
+    id="block-327757"
+    data-id="block-327757"
+    data-position=""
+    data-type="article.related"
+    class="block article related  articlelist"
+    data-sac-marker="block.article.related"
+>
+    <div class="list contentlist ">
+    <div class="block-wrapper">
+    
+    
+        <div class="block-title">
+            <h2>Gerelateerde artikelen</h2>
+        </div>
+    
+
+    <div class="block-content clearfix">
+        <ul>
+            
+                
+                    
+<li class="" data-sac-marker="articlelist.mobiel.1">
+    <a href="http://nutech.nl/mobiel/3882103/galaxy-s5-en-note-4-krijgen-in-november-of-december-android-l.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxhlmaw8k1_std320.jpg" class="image" alt="Google heeft update nog niet officieel uitgebracht" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxhlmaw8k1_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Google heeft update nog niet officieel uitgebracht" />
+                <span class="ranking">1.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">1 jaar, 5 maanden geleden</span>
+                    <span class="section">Mobiel</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">&#39;Galaxy S5 en Note 4 krijgen in november of december Android L&#39;</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Samsung zou de Galaxy S5 en Galaxy Note 4 in november of december gaan updaten naar Android L.</span>
+
+                    <span class="caption">Google heeft update nog niet officieel uitgebracht</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.2">
+    <a href="/gadgets/3832063/google-toont-vroege-versie-van-nieuw-chromeos-design.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mx974au4y7_std320.jpg" class="image" alt="Ook Chromebooksoftware lijkt Android L-achtig uiterlijk te krijgen" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mx974au4y7_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Ook Chromebooksoftware lijkt Android L-achtig uiterlijk te krijgen" />
+                <span class="ranking">2.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">1 jaar, 7 maanden geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Google toont vroege versie van nieuw ChromeOS-design</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Google lijkt te werken aan een nieuw ontwerp voor ChromeOS, het besturingssysteem dat Chromebooks gebruiken.</span>
+
+                    <span class="caption">Ook Chromebooksoftware lijkt Android L-achtig uiterlijk te krijgen</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class=" hasslideshow" data-sac-marker="articlelist.mobiel.3">
+    <a href="/mobiel/3827746/nieuw-uiterlijk-google-play-getoond.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxqedawsuw_std320.jpg" class="image" alt="Ontwerp volgt uiterlijk van Android L" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxqedawsuw_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Ontwerp volgt uiterlijk van Android L" />
+                <span class="ranking">3.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">1 jaar, 7 maanden geleden</span>
+                    <span class="section">Mobiel</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Nieuw uiterlijk Google Play getoond</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Er zijn screenshots opgedoken van wat waarschijnlijk het nieuwe uiterlijk wordt van de Google Play-app.</span>
+
+                    <span class="caption">Ontwerp volgt uiterlijk van Android L</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+            
+        </ul>
+    </div>
+    
+</div>
+    <div class="clear"></div>
+</div>
+</div>
+<!-- block|article.related end -->
+
+
+    
+        <!-- block|articlelist start -->
+<div
+    id="block-327769"
+    data-id="block-327769"
+    data-position=""
+    data-type="articlelist"
+    class="block articlelist "
+    data-sac-marker="block.articlelist"
+>
+    <div class=" section-nutech source-normal" data-forced-template="list">
+
+    
+        <div class="contentlist list">
+            <div class="block-wrapper">
+    
+    
+        <div class="block-title arrowed section-bgcolored"
+        
+        >
+            <a href="/gadgets" class="blockheader-link trackevent">
+                <h2> Eerdere berichten</h2>
+            </a>
+        </div>
+    
+
+    <div class="block-content clearfix">
+        <ul>
+            
+                
+                    
+<li class="hasvideo hasslideshow" data-sac-marker="articlelist.gadgets.1">
+    <a href="/gadgets/4217020/nieuwe-android-tvs-philips-krijgen-hdr-ondersteuning-en-ambilight.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/3cxx1uyanhm4_std320.jpg" class="image" alt="Bedrijf wil weer grootste tv-maker van Europa worden" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/3cxx1uyanhm4_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Bedrijf wil weer grootste tv-maker van Europa worden" />
+                <span class="ranking">2.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 uur geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Nieuwe Android-tv&#39;s Philips krijgen HDR-ondersteuning en Ambilight</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Philips heeft verschillende nieuwe televisies aangekondigd met ultra hd-resoluties, HDR-ondersteuning en Ambilight-lampen aan de randen.</span>
+
+                    <span class="caption">Bedrijf wil weer grootste tv-maker van Europa worden</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="hasvideo" data-sac-marker="articlelist.gadgets.2">
+    <a href="/gadgets/4216657/modulaire-camera-laat-gebruikers-verschillende-cameras-bouwen.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/j57xb0kasf21_std320.jpg" class="image" alt="Met gekleurde blokken kunnen onder meer microscopen in elkaar gezet worden" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/j57xb0kasf21_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Met gekleurde blokken kunnen onder meer microscopen in elkaar gezet worden" />
+                <span class="ranking">3.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">11 uur geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Modulaire camera laat gebruikers verschillende camera&#39;s bouwen</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Een onderzoeksteam van de Amerikaanse Columbia University heeft een modulaire camera gemaakt. Daarmee kunnen gebruikers met gekleurde blokken zelf een camera in elkaar zetten.</span>
+
+                    <span class="caption">Met gekleurde blokken kunnen onder meer microscopen in elkaar gezet worden</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.3">
+    <a href="/gadgets/4216341/bedrijf-hersengolven-combineert-met-virtual-reality-krijgt-miljoeneninvestering.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/ceyx0draw3z6_std320.jpg" class="image" alt="Startup maakt virtual reality voor nabehandeling beroerte" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/ceyx0draw3z6_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Startup maakt virtual reality voor nabehandeling beroerte" />
+                <span class="ranking">4.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">1 dag, 3 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Bedrijf dat hersengolven combineert met virtual reality krijgt miljoeneninvestering</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">De Zwitserse maker van medische VR MindMaze heeft een investering van 100 miljoen dollar gekregen. De startup maakt virtual reality voor behandeling na beroertes.</span>
+
+                    <span class="caption">Startup maakt virtual reality voor nabehandeling beroerte</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.4">
+    <a href="/tech/4216021/fabeltjes-kunnen-robots-van-moreel-kompas-voorzien-.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/t87xe6ra8v7b_std320.jpg" class="image" alt="Morele waarden uit verhaaltjes zouden &#39;psychotisch gedrag&#39; kunnen voorkomen" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/t87xe6ra8v7b_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Morele waarden uit verhaaltjes zouden &#39;psychotisch gedrag&#39; kunnen voorkomen" />
+                <span class="ranking">5.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">1 dag, 12 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">&#39;Fabeltjes kunnen robots van moreel kompas voorzien&#39; </span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Fabeltjes en volksverhalen kunnen gebruikt worden om robots en kunstmatige intelligentie te voorzien van menselijke normen en waarden.&nbsp;</span>
+
+                    <span class="caption">Morele waarden uit verhaaltjes zouden 'psychotisch gedrag' kunnen voorkomen</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="hasvideo" data-sac-marker="articlelist.gadgets.5">
+    <a href="/gadgets/4216338/leap-motion-accessoire-maakt-handbesturing-in-vr-mogelijk.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/pdxxsxgaj6e0_std320.jpg" class="image" alt="Bedrijf wil dat fabrikanten van VR-brillen Orion-sensor inbouwen" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/pdxxsxgaj6e0_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Bedrijf wil dat fabrikanten van VR-brillen Orion-sensor inbouwen" />
+                <span class="ranking">6.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">1 dag, 4 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Leap Motion-accessoire maakt handbesturing in VR mogelijk</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Leap Motion, het bedrijf dat bekend is van zijn sensoren die hand- en vingerbewegingen herkennen, heeft een nieuw product aangekondigd dat het mogelijk moet maken om zulke bewegingen te gebruiken in virtualreality-omgevingen.</span>
+
+                    <span class="caption">Bedrijf wil dat fabrikanten van VR-brillen Orion-sensor inbouwen</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.6">
+    <a href="/gadgets/4215859/sony-maakt-prijzen-nieuwe-bravia-tvs-bekend.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/f8mxooxan9xv_std320.jpg" class="image" alt="Nieuwe televisies zijn grotendeels voorzien van HDR en komen in maart uit" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/f8mxooxan9xv_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Nieuwe televisies zijn grotendeels voorzien van HDR en komen in maart uit" />
+                <span class="ranking">7.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">2 dagen, 1 uur geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Sony maakt prijzen nieuwe Bravia-tv&#39;s bekend</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Sony heeft de prijzen van zijn nieuwe serie Bravia-tv's bekendgmaakt. Het duurste model, een 4K-model met HDR en een schermdiagonaal van 75 inch, zal vanaf maart voor zo'n 5.000 euro te koop zijn.</span>
+
+                    <span class="caption">Nieuwe televisies zijn grotendeels voorzien van HDR en komen in maart uit</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.7">
+    <a href="/gadgets/4215402/computerbedrijven-vaio-toshiba-en-fujitsu-dicht-bij-fusie.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/nh8x82garkj0_std320.jpg" class="image" alt="Gadgets" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/nh8x82garkj0_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Gadgets" />
+                <span class="ranking">8.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">2 dagen, 11 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">&#39;Computerbedrijven Vaio, Toshiba en Fujitsu dicht bij fusie&#39;</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">De Japanse computerfabrikanten Vaio, Toshiba en Fujitsu zijn dicht bij een fusie. De bedrijven hopen met een samengaan in de krimpende markt voor computers en laptops te kunnen besparen op onder meer ontwikkelingskosten.</span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.8">
+    <a href="/tech/4215387/toshiba-stopt-niet-met-pc-productie.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/b5lx8kaaxpyc_std320.jpg" class="image" alt="Bedrijf ontkent fusie met Fujitsu en Vaio" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/b5lx8kaaxpyc_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Bedrijf ontkent fusie met Fujitsu en Vaio" />
+                <span class="ranking">9.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">2 dagen, 12 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Toshiba stopt niet met pc-productie</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Toshiba is niet van plan te stoppen met het produceren van pc's. De pc-fabriek van het bedrijf in China blijft open.</span>
+
+                    <span class="caption">Bedrijf ontkent fusie met Fujitsu en Vaio</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="hasvideo" data-sac-marker="articlelist.gadgets.9">
+    <a href="/gadgets/4215234/bioprinter-maakt-3d-printen-van-lichaamsdelen-mogelijk.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block video-link"
+                    
+                 data-type="zie"
+                 data-title="Nieuwe 3d-printer kan lichaamsdelen voor transplantatie maken"
+                 data-related_playlist_slug="tech"
+                        
+                 data-video_media_id="8nozojbfa7gu"
+                        
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/hk5xmy9ay7sv_std320.jpg" class="image" alt="Wetenschappers maken oren, spieren en botten met de bioprinter" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/hk5xmy9ay7sv_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Wetenschappers maken oren, spieren en botten met de bioprinter" />
+                <span class="ranking">10.</span>
+                
+                
+                <div class="media-icon"></div>
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 dagen, 1 uur geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Bioprinter maakt 3D-printen van lichaamsdelen mogelijk</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Amerikaanse wetenschappers hebben een 3D-printer ontwikkeld waarmee lichaamsdelen kunnen worden geproduceerd. De bioprinter gebruikt afbreekbaar materiaal voor het maken van weefsel en een gel van levende cellen.</span>
+
+                    <span class="caption">Wetenschappers maken oren, spieren en botten met de bioprinter</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="hasvideo" data-sac-marker="articlelist.gadgets.10">
+    <a href="/gadgets/4215152/samsung-presenteert-slimme-schoen-met-druksensoren.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/nf4xr65a6qho_std320.jpg" class="image" alt="Sporter kan informatie over drukpunten en houding zien in de app" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/nf4xr65a6qho_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Sporter kan informatie over drukpunten en houding zien in de app" />
+                <span class="ranking">11.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 dagen, 4 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Samsung presenteert &#39;slimme schoen&#39; met druksensoren</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Startup Salted Venture heeft een schoen ontwikkeld die is uitgerust met onder meer druksensoren. Samsung, dat het bedrijf financieel steunt, heeft de zogenoemde IOFIT uit de doeken gaan.</span>
+
+                    <span class="caption">Sporter kan informatie over drukpunten en houding zien in de app</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.11">
+    <a href="/gadgets/4215116/apple-vervangt-usb-kabels-macbook-vanwege-ontwerpfout.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1oxo4aas3dw_std320.jpg" class="image" alt="Door fout kunnen kabels laptops niet opladen of het opladen onderbreken" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1oxo4aas3dw_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Door fout kunnen kabels laptops niet opladen of het opladen onderbreken" />
+                <span class="ranking">12.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 dagen, 5 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Apple vervangt USB-kabels MacBook vanwege ontwerpfout</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Apple gaat usb-oplaadkabels met een ontwerpfout vervangen. Het gaat om kabels van USB-type c die werden meegeleverd met de nieuwe MacBook in juni vorig jaar.</span>
+
+                    <span class="caption">Door fout kunnen kabels laptops niet opladen of het opladen onderbreken</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.12">
+    <a href="/gadgets/4215018/toshiba-belooft-batterijduur-van-19-uur-in-nieuwe-laptop.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/x8ux9xra7dur_std320.jpg" class="image" alt="Laptop kan ook als tablet worden gebruikt" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/x8ux9xra7dur_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Laptop kan ook als tablet worden gebruikt" />
+                <span class="ranking">13.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 dagen, 7 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Toshiba belooft batterijduur van 19 uur in nieuwe laptop</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Computerfabrikant Toshiba heeft een nieuwe laptop op de markt gebracht die volgens de fabrikant 19 uur op een volle accu meegaat.</span>
+
+                    <span class="caption">Laptop kan ook als tablet worden gebruikt</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="hasvideo" data-sac-marker="articlelist.gadgets.13">
+    <a href="/gadgets/4214871/drones-kunnen-nestjes-van-weidevogels-beschermen.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/ze4xthfax0xw_std320.jpg" class="image" alt="Onbemande helikopters zouden meer nestjes in zicht kunnen brengen" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/ze4xthfax0xw_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Onbemande helikopters zouden meer nestjes in zicht kunnen brengen" />
+                <span class="ranking">14.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 dagen, 11 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">&#39;Drones kunnen nestjes van weidevogels beschermen&#39;</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Drones uitgerust met infraroodcamera's kunnen helpen bij het beschermen van de nestjes van weidevogels zoals de&nbsp;grutto, de kievit en de scholekster.&nbsp;</span>
+
+                    <span class="caption">Onbemande helikopters zouden meer nestjes in zicht kunnen brengen</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="hasvideo" data-sac-marker="articlelist.gadgets.14">
+    <a href="/tech/4214829/speelgoedfabrikant-mattel-toont-vernieuwde-virtualrealitybril.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1oxmj0aw3up_std320.jpg" class="image" alt="Lenzen zijn verbeterd en ondersteuning voor koptelefoon is toegevoegd" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1oxmj0aw3up_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Lenzen zijn verbeterd en ondersteuning voor koptelefoon is toegevoegd" />
+                <span class="ranking">15.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">3 dagen, 12 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Speelgoedfabrikant Mattel toont vernieuwde virtualrealitybril</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Speelgoedfabrikant komt later dit jaar met een vernieuwde versie van zijn virtualrealitybril, de&nbsp;View-Master Viewer DLX.&nbsp;</span>
+
+                    <span class="caption">Lenzen zijn verbeterd en ondersteuning voor koptelefoon is toegevoegd</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+                    
+<li class="" data-sac-marker="articlelist.gadgets.15">
+    <a href="/gadgets/4214520/microsoft-vraagt-patent-computer-met-vervangbare-modules.html" class="trackevent" >
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/1fkxiz5a3m2q_std320.jpg" class="image" alt="Uitbreiden of upgraden van computer moet makkelijker worden" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/1fkxiz5a3m2q_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="Uitbreiden of upgraden van computer moet makkelijker worden" />
+                <span class="ranking">16.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp">4 dagen, 8 uren geleden</span>
+                    <span class="section">Gadgets</span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Microsoft vraagt patent aan voor computer met vervangbare modules</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt">Microsoft heeft een patent aangevraagd voor een computer met vervangbare modules. Zo'n apparaat zou het voor mensen makkelijker maken om de computer uit te breiden of te upgraden.</span>
+
+                    <span class="caption">Uitbreiden of upgraden van computer moet makkelijker worden</span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+                
+            
+        </ul>
+    </div>
+    
+    <div class="block-footer">
+        
+            <a href="#" data-url="/block/json/articlelist?order_by=updated_at&amp;footer=ajax&amp;section=gadgets&amp;title=Eerdere+berichten&amp;refresh=1&amp;limit=15&amp;section_details=%7Bu%27geolocation%27%3A+None%2C+u%27meta_keywords%27%3A+None%2C+u%27intro_bgcolor%27%3A+None%2C+u%27is_archived%27%3A+False%2C+u%27excerpt%27%3A+u%27%27%2C+u%27radius%27%3A+None%2C+u%27logo_media_id%27%3A+None%2C+u%27counts%27%3A+%7B%7D%2C+u%27top_slug%27%3A+u%27tech%27%2C+u%27meta_description%27%3A+u%27%27%2C+u%27style%27%3A+u%27nutech%27%2C+u%27label%27%3A+None%2C+u%27parent_slug%27%3A+u%27tech%27%2C+u%27type%27%3A+u%27default%27%2C+u%27hide_logo%27%3A+False%2C+u%27titlebar_color%27%3A+None%2C+u%27media_id%27%3A+None%2C+u%27description%27%3A+u%27%27%2C+u%27sponsored_by_short%27%3A+None%2C+u%27sidebar_position%27%3A+14%2C+u%27slug%27%3A+u%27gadgets%27%2C+u%27name%27%3A+u%27Gadgets%27%2C+u%27titlebar_bgcolor%27%3A+None%2C+u%27intro_color%27%3A+None%2C+u%27articlehead_color%27%3A+None%2C+u%27sponsored_by_long%27%3A+None%2C+u%27position%27%3A+None%7D&amp;template=list&amp;offset=16&amp;show_tabs=0" class="ajax trackevent" data-trackeventlabel="loadmore">
+                <strong>Laad meer artikelen</strong>
+            </a>
+        
+    </div>
+
+</div>
+            <div class="clear"></div>
+        </div>
+    
+
+    <div class="clear"></div>
+</div>
+</div>
+<!-- block|articlelist end -->
+
+
+    <script type="text/javascript">
+        jQuery('#block-327769').data({"limit": 15, "offset": 1});
+    </script>
+
+    
+</div>
+<!-- zone|main end -->
+    
+
+
+                                    </div>
+                                </div>
+                            </div><!-- content -->
+                            <div class="column last">
+                                <div class="column-content">
+                                    <!-- zone|sidebar start -->
+<div class="zone" data-zone="sidebar" data-vr-zone="sidebar">
+    
+        <!-- block|mostcombination start -->
+<div
+    id="block-327773"
+    data-id="block-327773"
+    data-position=""
+    data-type="mostcombination"
+    class="block mostcombination compact"
+    data-sac-marker="block.mostcombination"
+>
+    <div class="block-wrapper">
+    <div class="block-content">
+        <div class="tabs tabs2 fullwidth" data-tab-constrain="1">
+            <div class="tabtrigger">
+                <ul>
+                    <li class="active"><a href="" data-tab="1" class="trackevent" data-trackeventlabel="net_binnen">Net binnen</a></li>
+                    <li><a href="#" data-tab="2" class="trackevent" data-trackeventlabel="meest_gelezen">Meest gelezen</a></li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+
+
+            <div class="tab tab-1 active">
+                <!-- block|mostrecent start -->
+<div
+    id="block-8ead5ad3f56640ff8f73c7efd8acce6d"
+    data-id="block-8ead5ad3f56640ff8f73c7efd8acce6d"
+    data-position=""
+    data-type="mostrecent"
+    class="block mostrecent "
+    data-sac-marker="block.mostrecent"
+>
+    <div class="contentlist most-recent">
+    <div class="block-wrapper">
+        <div class="block-content">
+            <ul>
+                
+                    <li class="  " data-sac-marker="articlelist.mostrecent.1">
+                        <div class="list-content">
+                            <a href="/sport/4217140/blatter-onthoudt-zich-van-stemadvies-komende-fifa-verkiezingen.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="time">19:39</span>
+                                        <span class="title">Blatter onthoudt zich van stemadvies voor komende FIFA-verkiezingen</span>
+                                        <span class="section">Sport</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+                    <li class="  " data-sac-marker="articlelist.mostrecent.2">
+                        <div class="list-content">
+                            <a href="/media/4217132/junior-songfestival-voortaan-niet-meer-televisie.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="time">19:37</span>
+                                        <span class="title">Junior Songfestival voortaan niet meer op televisie</span>
+                                        <span class="section">Media</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+                    <li class="  " data-sac-marker="articlelist.mostrecent.3">
+                        <div class="list-content">
+                            <a href="/binnenland/4217134/mogelijk-geen-opvang-homohatende-asielzoeker.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="time">19:35</span>
+                                        <span class="title">Mogelijk geen opvang homohatende asielzoeker</span>
+                                        <span class="section">Binnenland</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+                    <li class="  " data-sac-marker="articlelist.mostrecent.4">
+                        <div class="list-content">
+                            <a href="/opmerkelijk/4217099/amerikanen-mogen-canadees-eiland-komen-wonen-als-trump-president-wordt.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="time">19:30</span>
+                                        <span class="title">Amerikanen mogen op Canadees eiland komen wonen als Trump president wordt</span>
+                                        <span class="section">Opmerkelijk</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+            </ul>
+            <div class="clear"></div>
+        </div>
+        
+        <div class="block-footer">
+            <a href="/net-binnen" class="footer-link trackevent section-after-colored">
+                <strong>Meer nieuws</strong>
+            </a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+</div>
+<!-- block|mostrecent end -->
+
+
+    <script type="text/javascript">
+        jQuery('#block-8ead5ad3f56640ff8f73c7efd8acce6d').data({"limit": 4, "offset": 0});
+    </script>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="tab tab-2">
+                <!-- block|mostread start -->
+<div
+    id="block-f3d21015b2084eb09e3b21aa3969ba60"
+    data-id="block-f3d21015b2084eb09e3b21aa3969ba60"
+    data-position=""
+    data-type="mostread"
+    class="block mostread "
+    data-sac-marker="block.mostread"
+>
+    <div class="contentlist most-read">
+    <div class="block-wrapper">
+        
+            <div class="block-title">
+                <h2>Meest gelezen</h2>
+            </div>
+        
+        <div class="block-content">
+            <ul>
+                
+                    <li class="hasvideo  " data-sac-marker="articlelist.mostread.1">
+                        <div class="list-content">
+                            <a href="/binnenland/4216011/vader-omgekomen-meisje-hoogeveen-heeft-sterke-zaak-gemeente.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="ranking">1.</span>
+                                        <span class="title">&#39;Vader omgekomen meisje Hoogeveen heeft sterke zaak tegen gemeente&#39;</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+                    <li class="hasvideo hasslideshow " data-sac-marker="articlelist.mostread.2">
+                        <div class="list-content">
+                            <a href="/buitenland/4216454/zeker-28-doden-bij-grote-explosie-in-turkse-hoofdstad-ankara.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="ranking">2.</span>
+                                        <span class="title">Zeker 28 doden bij grote explosie in Turkse hoofdstad Ankara</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+                    <li class="  " data-sac-marker="articlelist.mostread.3">
+                        <div class="list-content">
+                            <a href="/achterklap/4216150/dafne-schippers-en-nicky-romero-kunnen-heel-goed-met-elkaar-vinden.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="ranking">3.</span>
+                                        <span class="title">Dafne Schippers en Nicky Romero kunnen het &#39;heel goed met elkaar vinden&#39;</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+                    <li class="  " data-sac-marker="articlelist.mostread.4">
+                        <div class="list-content">
+                            <a href="/sport-overig/4216475/baarmoederhalskanker-geconstateerd-bij-topzwemster-inge-dekker.html" class="trackevent" >
+                                <div class="list-overlay">
+                                    <span class="info">
+                                        <span class="ranking">4.</span>
+                                        <span class="title">Baarmoederhalskanker geconstateerd bij topzwemster Inge Dekker</span>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                
+            </ul>
+            <div class="clear"></div>
+        </div>
+        
+        <div class="block-footer">
+            <a href="/meest-gelezen" class="footer-link trackevent section-after-colored">
+                <strong>Meer nieuws</strong>
+            </a>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+</div>
+</div>
+<!-- block|mostread end -->
+
+
+    <script type="text/javascript">
+        jQuery('#block-f3d21015b2084eb09e3b21aa3969ba60').data({"limit": 4, "offset": 0});
+    </script>
+
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- block|mostcombination end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327775"
+    data-id="block-327775"
+    data-position=""
+    data-type="cts"
+    class="block cts compact"
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dmid_300_h300">
+    <div class="block-content">
+        
+            <div id="cts_1bc3a09c9948478f9e377fa267f7b9fb" class="cts-wrapper min768 max992 set-block"><script type="text/javascript"> try {    if(min768 && max992) {        tagging.render("dmid_300_h300");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327777"
+    data-id="block-327777"
+    data-position=""
+    data-type="cts"
+    class="block cts compact"
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dmid_300_h300_336">
+    <div class="block-content">
+        
+            <div id="cts_333e3576720c4035a23645261bff339b" class="cts-wrapper min992 set-block"><script type="text/javascript"> try {    if(min992) {        tagging.render("dmid_300_h300_336");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327779"
+    data-id="block-327779"
+    data-position=""
+    data-type="cts"
+    class="block cts compact"
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper advertorial_1_rechts">
+    <div class="block-content">
+        
+            <div id="cts_3364db3f0f394c8cb0b1fd2fe1bcb9d0" class="cts-wrapper min480 set-block"><script type="text/javascript"> try {    if(min480) {        tagging.render("advertorial_1_rechts");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|highlight start -->
+<div
+    id="block-327783"
+    data-id="block-327783"
+    data-position=""
+    data-type="highlight"
+    class="block highlight compact"
+    data-sac-marker="block.highlight"
+>
+    
+    <div class="block-wrapper compact  hasfooter">
+        <div class="block-backdrop gadgets" ></div>
+        
+            <div class="block-title">
+                <h2>Wekelijkse podcast</h2>
+            </div>
+        
+        <div class="block-content">
+            <div class="basic">
+                <div class="item-content">
+
+                    <a href="http://www.nu.nl/tag/Week%20van%20NUtech" class="trackevent">
+                        <div class="item-image">
+                            <img src="http://media.nu.nl/m/m1oxhwuan6m2_std160.jpg" alt="Wekelijkse podcast" />
+                        </div>
+                    </a>
+
+                    
+                        <div class="item-excerpt">
+                            
+
+                            De redactie van NUtech maakt wekelijks een podcast naar aanleiding van het belangrijkste technieuws van die week.
+
+                            
+                                <div class="excerpt-link">
+                                    <a class="trackevent" href="http://www.nu.nl/tag/Week%20van%20NUtech">
+                                        <strong>Beluister de meest recente afleveringen</strong>
+                                    </a>
+                                </div>
+                            
+                        </div>
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- block|highlight end -->
+
+
+    
+        <!-- block|videolist start -->
+<div
+    id="block-356197"
+    data-id="block-356197"
+    data-position=""
+    data-type="videolist"
+    class="block videolist compact"
+    data-sac-marker="block.videolist"
+>
+    <div class="block-wrapper">
+    <div class="block-title">
+        <h2>Videoreviews</h2>
+    </div>
+    <div class="block-content even">
+        
+            <a class="video-link trackevent molecule-video-list-item item show_logo"
+    href="/8745/video/review-de-onoriginele-software-van-de-huawei-mate-8.html"
+     target="_blank" 
+    data-title="Review: De onoriginele software van de Huawei Mate 8"
+    data-video_media_id='qo8zj27fmilt' 
+    data-type='zie'
+    
+    
+    >
+    <div class="media-wrapper">
+        <div class="media">
+        
+                 
+                <noscript>
+                    <img src="http://media.nu.nl/m/djwxiriablyd_wd640.jpg/review-de-onoriginele-software-van-de-huawei-mate-8" alt="Review: De onoriginele software van de Huawei Mate 8" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/djwxiriablyd_wd640.jpg/review-de-onoriginele-software-van-de-huawei-mate-8" src="/static/img/placeholders/wd640-o.png" class="image lazy-unveil" alt="Review: De onoriginele software van de Huawei Mate 8" />
+            
+        
+        </div>
+        
+        <div class="media-icon"></div>
+    </div>
+    <div class="media-footer clearfix">
+        <div class="title-wrapper">
+            <div class="title">Review: De onoriginele software van de Huawei Mate 8</div>
+        </div>
+        
+        
+    </div>
+</a>
+        
+            <a class="video-link trackevent molecule-video-list-item item show_logo"
+    href="/8537/video/test-is-het-scherm-van-de-moto-x-force-echt-onbreekbaar.html"
+     target="_blank" 
+    data-title="Test: Is het scherm van de Moto X Force écht onbreekbaar?"
+    data-video_media_id='lopzc89f8i2i' 
+    data-type='zie'
+    
+    
+    >
+    <div class="media-wrapper">
+        <div class="media">
+        
+                 
+                <noscript>
+                    <img src="http://media.nu.nl/m/3alxiukas870_wd640.jpg/test-is-het-scherm-van-de-moto-x-force-echt-onbreekbaar" alt="Test: Is het scherm van de Moto X Force écht onbreekbaar?" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/3alxiukas870_wd640.jpg/test-is-het-scherm-van-de-moto-x-force-echt-onbreekbaar" src="/static/img/placeholders/wd640-o.png" class="image lazy-unveil" alt="Test: Is het scherm van de Moto X Force écht onbreekbaar?" />
+            
+        
+        </div>
+        
+        <div class="media-icon"></div>
+    </div>
+    <div class="media-footer clearfix">
+        <div class="title-wrapper">
+            <div class="title">Test: Is het scherm van de Moto X Force écht onbreekbaar?</div>
+        </div>
+        
+        
+    </div>
+</a>
+        
+            <a class="video-link trackevent molecule-video-list-item item show_logo"
+    href="/6683/video/review-zo-werkt-het-tweede-scherm-van-de-lg-v10.html"
+     target="_blank" 
+    data-title="Review: Zo werkt het tweede scherm van de LG V10"
+    data-video_media_id='qmmzv10fag7s' 
+    data-type='zie'
+    
+    
+    >
+    <div class="media-wrapper">
+        <div class="media">
+        
+                 
+                <noscript>
+                    <img src="http://media.nu.nl/m/m93xw0gae6c7_wd640.jpg/review-zo-werkt-het-tweede-scherm-van-de-lg-v10" alt="Review: Zo werkt het tweede scherm van de LG V10" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m93xw0gae6c7_wd640.jpg/review-zo-werkt-het-tweede-scherm-van-de-lg-v10" src="/static/img/placeholders/wd640-o.png" class="image lazy-unveil" alt="Review: Zo werkt het tweede scherm van de LG V10" />
+            
+        
+        </div>
+        
+        <div class="media-icon"></div>
+    </div>
+    <div class="media-footer clearfix">
+        <div class="title-wrapper">
+            <div class="title">Review: Zo werkt het tweede scherm van de LG V10</div>
+        </div>
+        
+        
+    </div>
+</a>
+        
+            <a class="video-link trackevent molecule-video-list-item item show_logo"
+    href="/4003/video/hoe-is-het-om-voor-het-eerst-een-vr-bril-te-dragen.html"
+     target="_blank" 
+    data-title="Hoe is het om voor het eerst een vr-bril te dragen?"
+    data-video_media_id='qwozs80f9ifz' 
+    data-type='zie'
+    
+     data-related_playlist_slug='reviews-nutech'
+    >
+    <div class="media-wrapper">
+        <div class="media">
+        
+                 
+                <noscript>
+                    <img src="http://media.nu.nl/m/twqxtgravnjh_wd640.jpg/hoe-is-het-om-voor-het-eerst-een-vr-bril-te-dragen" alt="Hoe is het om voor het eerst een vr-bril te dragen?" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/twqxtgravnjh_wd640.jpg/hoe-is-het-om-voor-het-eerst-een-vr-bril-te-dragen" src="/static/img/placeholders/wd640-o.png" class="image lazy-unveil" alt="Hoe is het om voor het eerst een vr-bril te dragen?" />
+            
+        
+        </div>
+        
+        <div class="media-icon"></div>
+    </div>
+    <div class="media-footer clearfix">
+        <div class="title-wrapper">
+            <div class="title">Hoe is het om voor het eerst een vr-bril te dragen?</div>
+        </div>
+        
+        
+    </div>
+</a>
+        
+        <div class="clear"></div>
+    </div>
+</div>
+
+</div>
+<!-- block|videolist end -->
+
+
+    
+        <!-- block|feedlist start -->
+<div
+    id="block-329595"
+    data-id="block-329595"
+    data-position=""
+    data-type="feedlist"
+    class="block feedlist compact"
+    data-sac-marker="block.feedlist"
+>
+    <div class="block-wrapper">
+    
+    <div class="block-title"  style="background-color: FFFFFF">
+        <h2 style="color: #008800">Top 10 branches NUwerk</h2>
+    </div>
+
+    <div class="contentlist plain"  style="border-color: FFFFFF">
+    <div class="block-content clearfix">
+        <ul>
+        
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.1">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=1.11712&occ=1.11724&occ=1.11760&occ=1.11981&occ=1.11982&occ=1.11730&occ=1.11952&occ=1.14868&occ=1.14867&occ=1.11711&occ=1.11960&occ=1.11803&occ=1.11804&occ=1.11817&occ=1.14875&occ=1.11750&occ=1.11766&occ=1.11893&occ=1.11927&occ=1.11843" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">1.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Financieel & Accounting</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.2">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=544.11953&occ=544.11783&occ=544.11835&occ=544.11978&occ=544.11925&occ=544.11829&occ=544.11845&occ=544.11755&occ=544.11965&occ=544.11896&occ=544.11963&occ=544.11737&occ=544.11743&occ=544.11809&occ=553.11798&occ=553.11753&occ=553.11783&occ=553.11854&occ=553.11849&occ=553.11835&occ=553.11925&occ=553.11903&occ=553.11791&occ=553.12000&occ=553.11858" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">2.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Techniek</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.3">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=4.11746&occ=4.11747&occ=4.11782&occ=4.11786&occ=4.11728&occ=4.11715&occ=4.11788&occ=4.11900&occ=4.11881&occ=4.11980&occ=4.11737&occ=4.11838&occ=4.11951&occ=4.11867" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">3.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Engineering</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.4">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=10.11709&occ=10.11735&occ=10.11780&occ=10.11939&occ=10.11913&occ=10.11954&occ=10.11989&occ=10.11840&occ=10.11986&occ=10.11868&occ=10.11993&occ=10.11839&occ=10.11801&occ=10.12006" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">4.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Sales / Verkoop</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.5">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=660.11979&occ=660.11754&occ=660.11772&occ=660.11774&occ=660.11882&occ=660.11904&occ=660.11848&occ=660.11787&occ=660.11969&occ=660.11987&occ=660.11996&occ=660.12005" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">5.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">ICT</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.6">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=9007.11732&occ=9007.11758&occ=9007.11776&occ=9007.12002&occ=9007.11795&occ=9007.11863&occ=9007.11862&occ=9007.11869&occ=9007.11907&occ=9007.11931&occ=9007.11844&occ=9007.11864&occ=9007.11988" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">6.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Marketing & Communicatie</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.7">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=660.11970" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">7.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Software development</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.8">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=3975.11785&occ=3975.11922&occ=3975.11870&occ=3975.12001&occ=3975.11873&occ=3975.11853&occ=3975.11872&occ=3975.11891&occ=3975.11908&occ=3975.11967&occ=3975.11973&occ=3975.11773&occ=3975.11871&occ=3975.11820&occ=3975.11885&occ=3975.11886" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">8.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Zorg</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.9">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=5625.11763&occ=5625.11793&occ=5625.11836&occ=5625.11937&occ=5625.11876&occ=5625.11906&occ=5625.11964&occ=5625.11739&occ=5625.11924&occ=5625.11998&occ=5625.11874&occ=5625.11977&occ=5625.11991&occ=5625.11827&occ=5625.11842&occ=5625.11994" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">9.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Logistiek</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+            
+<li class="" data-sac-marker="articlelist.feedlist-Top 10 branches NUwerk.10">
+    <a href="http://www.nuwerk.nl/SearchResults?q=&where=&cn=&xq=&rad=5&occ=10.11950" class="trackevent"  target="_blank">
+        <div class="list-content section-after-colored clearfix">
+            <div class="list-image col-min320 set-block "
+                    
+            >
+                <noscript>
+                    <img src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" class="image" alt="" />
+                </noscript>
+                <img data-src="http://media.nu.nl/m/m1mxw4va831z_std320.jpg" src="/static/img/placeholders/std320-o.png" class="image lazy-unveil" alt="" />
+                <span class="ranking">10.</span>
+                
+                
+                
+            </div>
+            <div class="list-overlay">
+                <span class="info">
+                    
+                    <span class="timestamp"></span>
+                    <span class="section"></span>
+
+                    <span class="title-wrapper">
+                        
+                        <span class="title">Detailhandel</span>
+                        <span class="mediaicons"><i class="mediaicon-slideshow"></i><i class="mediaicon-infographic"></i><i class="mediaicon-video"></i></span>
+
+                    </span>
+
+                    
+
+                    <span class="excerpt"></span>
+
+                    <span class="caption"></span>
+
+                    <span class="time">
+                        
+                    </span>
+                    
+                </span>
+            </div>
+        </div>
+    </a>
+</li>
+        
+        
+        </ul>
+    </div>
+</div>
+    
+    
+    <a href="http://www.nuwerk.nl" target="_blank" class="trackevent">
+    
+    <div class="block-footer molecule-feedlist-footer"  style="border-color: FFFFFF">
+        <div class="left-col">
+            
+            
+                Door: <span class="company">NUwerk</span>
+            
+        </div>
+        <div class="right-col">
+            
+                <img src="http://media.nu.nl/m/m1oxfnia25hh_wd320.jpg" alt="feed.title" />
+            
+        </div>
+    </div>
+    
+    </a>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+<!-- block|feedlist end -->
+
+
+    
+        <!-- block|extension start -->
+<div
+    id="block-356199"
+    data-id="block-356199"
+    data-position=""
+    data-type="extension"
+    class="block extension compact"
+    data-sac-marker="block.extension"
+>
+    <div class="block-wrapper">
+    <div class="block-content">
+        
+<div class="molecule-extension">
+    <a href="http://www.nu.nl/tag/Apps%20van%20de%20week" rel="next" target="_blank" class="trackevent">
+        <div class="item-content">
+            <div class="image">
+                <div class="svg-icon icon-extension icon-nutech">
+    <img src="/static/img/atoms/images/logos/logo-sprite.svg" />
+</div>
+            </div>
+            <span>Bekijk de apps van beste de week</span>
+        </div>
+    </a>
+    <div class="clear"></div>
+</div>
+
+    </div>
+</div>
+</div>
+<!-- block|extension end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327787"
+    data-id="block-327787"
+    data-position=""
+    data-type="cts"
+    class="block cts compact"
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dmid_300_p2">
+    <div class="block-content">
+        
+            <div id="cts_d493a2a3fa93414aa9d0dd6ac63a02e7" class="cts-wrapper min768 max992 set-block"><script type="text/javascript"> try {    if(min768 && max992) {        tagging.render("dmid_300_p2");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327789"
+    data-id="block-327789"
+    data-position=""
+    data-type="cts"
+    class="block cts compact"
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dmid_300_336_p2">
+    <div class="block-content">
+        
+            <div id="cts_c1a70cd53e8e478fab9476ed8f01382f" class="cts-wrapper min992 set-block"><script type="text/javascript"> try {    if(min992) {        tagging.render("dmid_300_336_p2");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+</div>
+<!-- zone|sidebar end -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- zone|footer start -->
+<div class="zone" data-zone="footer" data-vr-zone="footer">
+    
+        <!-- block|cts start -->
+<div
+    id="block-327791"
+    data-id="block-327791"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dbot_468">
+    <div class="block-content">
+        
+            <div id="cts_6e5eb17ca5754ef394f3879c28ed4e3d" class="cts-wrapper min480 max768 set-block"><script type="text/javascript"> try {    if(min480 && max768) {        tagging.render("dbot_468");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+        <!-- block|cts start -->
+<div
+    id="block-327793"
+    data-id="block-327793"
+    data-position=""
+    data-type="cts"
+    class="block cts "
+    data-sac-marker="block.cts"
+>
+    
+<div class="block-wrapper dbot_728">
+    <div class="block-content">
+        
+            <div id="cts_43a1d3d8a59445bd81321e3925afb558" class="cts-wrapper min768 set-block"><script type="text/javascript"> try {    if(min768) {        tagging.render("dbot_728");    } } catch(err) {    console.log(err) } </script></div>
+        
+    </div>
+</div>
+</div>
+<!-- block|cts end -->
+
+
+    
+</div>
+<!-- zone|footer end -->
+
+                    </div><!-- main -->
+                    <div class="clear"></div>
+
+                </div><!-- content_container -->
+                <div class="clear"></div>
+
+            </div><!-- container -->
+
+            
+                <!-- zone|body_bottom start -->
+<div class="zone" data-zone="body_bottom" data-vr-zone="body_bottom">
+    
+</div>
+<!-- zone|body_bottom end -->
+                <div class="block footer">
+    <div class="block-wrapper">
+        <div class="block-content">
+
+            <div class="footer-wrapper">
+                <div class="footer-logo">
+                    <div class="svg-icon icon-l icon-">
+                        <img src="/static/img/atoms/images/logos/logo-sprite.svg" />
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <span class="publisher-credits">
+                        &copy; 2016 Sanoma Digital The Netherlands B.V.
+                        NU - onderdeel van <a href="http://www.sanoma.com" class="trackevent" data-trackeventaction="page-footer">Sanoma Media Netherlands Group</a>
+                    </span>
+                    <div class="block-col first">
+                        <ul class="inline">
+                            <li class="first"><a href="/colofon.html" class="trackevent" data-trackeventaction="page-footer">Colofon</a></li>
+                            <li><a href="/copyright.html" class="trackevent" data-trackeventaction="page-footer">Copyright</a></li>
+                            <li><a href="/disclaimer.html" class="trackevent" data-trackeventaction="page-footer">Disclaimer</a></li>
+                            <li><a href="/privacy-en-cookiebeleid.html" class="trackevent" data-trackeventaction="page-footer">Privacy en cookiebeleid</a></li>
+                            <li><a href="http://www.sanoma.nl/merken/artikel/nunl/digital/merk-profiel/" class="trackevent" data-trackeventaction="page-footer">Adverteren</a></li>
+                            <li class="last"><a href="http://www.nu.nl/mobiel.html" class="trackevent" data-trackeventaction="page-footer">Apps</a></li>
+                        </ul>
+                    </div>
+                    <div class="block-col last">
+                        <ul class="social-badges">
+    
+        <li class="facebook"><a href="http://www.facebook.com/NUnl" target="_blank" class="trackevent"><i class="fa fa-facebook fa-lg"></i></a></li>
+    
+    
+        <li class="twitter"><a href="http://www.twitter.com/NUnl" target="_blank" class="trackevent"><i class="fa fa-twitter fa-lg"></i></a></li>
+    
+    
+        <li class="googleplus"><a href="http://plus.google.com/+NUnl" target="_blank" class="trackevent"><i class="fa fa-google-plus fa-fa-lg"></i></a></li>
+    
+    
+        <li class="rss"><a href="/rss/gadgets" target="_blank" class="trackevent"><i class="fa fa-rss fa-lg"></i></a></li>
+    
+</ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+
+            <script type="text/javascript"> try {    if(true) {        tagging.render("footer");    } } catch(err) {    console.log(err) } </script>
+            
+            <div class="clear"></div>
+        </div><!-- wrapper -->
+
+        
+
+        <div class="modal-overlay"></div>
+        <div class="overlay">
+            <div class="overlay-close"></div>
+            <div class="overlay-inner">
+                <div class="overlay-content-container">
+                    <div class="overlay-content-boundary clearfix">
+                        <div class="overlay-title"></div>
+                        <i class="fa fa-times overlay-close"></i>
+                        <div class="overlay-content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<script type="text/javascript" src="/static/CACHE/js/4b642e6a69e5.js"></script>
+
+<!-- BLOCK JS -->
+<script type="text/javascript" src="/static/CACHE/js/b6aea276c877.js"></script>
+
+<script>
+    
+    // add Gigya dynamically.
+    var sanoma_account_global_config = {
+        api_key: '3_pNK9L9zU_Sx2BKzTUJuAmy1im2zN0pOkwM-Ui3AgrneVzSpyQqioWy_iZ1cbQzS5',
+        screenset_prefix: 'nunlv2',
+        events: NU.account.events || {}
+    };
+
+    jQuery.cachedScript('http://account.sanomaservices.nl/js/sanoma_account.min.js');
+    
+
+    
+    // Sanoma search, hidden and disabled without consent.
+    ConsentUtility.consent_given(function() {
+        jQuery.cachedScript('http://zoeken.startpagina.nl/nu/sanomasearch.min.js').done(function(){
+            if(jQuery('#sanoma_search').length > 0){
+                SANOMASEARCH.init(['autocomplete', 'serp']);
+            } else {
+                SANOMASEARCH.init(['autocomplete']);
+            }
+        });
+    });
+    
+</script>
+
+    </body>
+</html>

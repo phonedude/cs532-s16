@@ -1,0 +1,245 @@
+http://www.globalpost.com/dispatch/news/regions/africa/140910/charts-WHO-ebola-virus-west-africa
+
+
+
+  
+
+
+
+      var _sf_startpt = 1*(new Date());
+    
+
+(window.NREUM||(NREUM={})).loader_config={xpid:"UgMBUVZbGwUDVlVTBgM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);
+These charts show you just how bad Ebola has gotten in West Africa | GlobalPost
+var _sf_startpt=(new Date()).getTime();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      (function(w){
+        w.__gp__ = {};
+        w.__gp__.apiPath = '/api/v1/' || '//gp-api-v1-globalpost.gotpantheon.com/api/v1/';
+        w.__gp__.home = {
+          href: '/',
+          state: {
+            name: 'home',
+            params: {
+              historyUrl: '/',
+              pageTitle: "GlobalPost | World News | Breaking US News and International News Headlines" || 'GlobalPost Homepage'
+            }
+          }
+        };
+        w.__gp__.menus = null;
+        w.__gp__.state = w.__gp__.home.state;
+        // w.__gp__.state = {
+        //   name: 'project_read.project_article',
+        //   params: {
+        //     apiHref: '/api/v1/content/articles/6524613',
+        //     historyUrl: '/project',
+        //     pageTitle: 'Project Page',
+        //   }
+        // };
+      })(window);
+    
+
+
+
+
+  (function(w){
+      })(window);
+
+
+
+
+
+
+
+
+
+  (function(w){
+        w.__gp__.state = {"params":{"apiHref":"\/api\/v1\/content\/articles\/6254188","historyUrl":"\/dispatch\/news\/regions\/africa\/140910\/charts-WHO-ebola-virus-west-africa","pageTitle":"These charts show you just how bad Ebola has gotten in West Africa"},"resolve":{"article":{"href":"\/api\/v1\/content\/articles\/6254188?expand=author.bio%2Ccontributors.items.bio%2Cphoto.image.styles%2Cphoto.copyright%2Cproject.image.styles%2Ctaxonomy.all.items%2Ctaxonomy.primary.image.styles%2Ccontent.body%2Ccontent.media.mediaItems.image.styles%2Ccontent.media.mediaItems.copyright%2Ccopyright&fields=%2A%2Cauthor.%2A%2Cauthor.bio.fullName%2Ccontributors.items.%2A%2Ccontributors.items.bio.fullName%2Cphoto.%2A%2Cphoto.image.title%2Cphoto.image.alt%2Cphoto.image.styles.globalpostFirebird%2Cphoto.copyright.name%2Cproject.%2A%2Cproject.sponsors.%2A%2Cproject.credits.%2A%2Cproject.image.styles.globalpostFirebird%2Ctaxonomy.all.items.id%2Ctaxonomy.all.items.type%2Ctaxonomy.all.items.name%2Ctaxonomy.all.items.url%2Ctaxonomy.primary.id%2Ctaxonomy.primary.type%2Ctaxonomy.primary.name%2Ctaxonomy.primary.url%2Ctaxonomy.primary.image.styles.globalpostFirebird%2Ccontent.body.bodyItems%2Ccontent.media.mediaItems.%2A%2Ccontent.media.mediaItems.image.title%2Ccontent.media.mediaItems.image.alt%2Ccontent.media.mediaItems.image.styles.globalpostFirebird%2Ccontent.media.mediaItems.copyright.name%2Ccopyright.%2A","resourceType":"item","id":"6254188","type":"news_item","status":"published","url":"\/dispatch\/news\/regions\/africa\/140910\/charts-WHO-ebola-virus-west-africa","author":{"href":"\/api\/v1\/users\/26578","resourceType":"item","id":"26578","type":"user","name":"Simran Khosla","url":"\/bio\/simran-khosla","bio":{"href":"\/api\/v1\/users\/26578\/bio","resourceType":"item","fullName":"Simran Khosla"},"content":{"href":"\/api\/v1\/users\/26578\/content","resourceType":"item"}},"contributors":null,"created":"2014-09-10T13:39:42-04:00","changed":"2014-11-24T02:20:52-05:00","published":"2014-09-16T11:29:00-04:00","updated":"2014-10-18T20:09:00-04:00","format":"default","contentFlavor":null,"title":"These charts show you just how bad Ebola has gotten in West Africa","headline":"These charts show you just how bad Ebola has gotten in West Africa","seoHeadline":"These charts show you just how bad Ebola has gotten in West Africa","subhead":"The worst-ever outbreak of the deadly virus has so far killed more than 4,500 people.","seoSubhead":"The worst-ever outbreak of the deadly virus has so far killed more than 4,500 people.","teaser":"<p>The worst-ever outbreak of the deadly virus has so far killed more than 4,500 people.<\/p>\n","bylines":"Simran Khosla","copyright":{"href":"\/api\/v1\/taxonomy\/terms\/4068","resourceType":"item","url":"\/taxonomy\/term\/4068","id":"4068","name":"GlobalPost","description":"","type":"taxonomy_term","image":null,"logo":null,"website":null,"copyrightText":null,"contentAdvisory":null,"vocabulary":{"href":"\/api\/v1\/taxonomy\/vocabularies\/5","resourceType":"item"},"content":{"href":"\/api\/v1\/taxonomy\/terms\/4068\/content","resourceType":"index"}},"photo":{"href":"\/api\/v1\/content\/photos\/6295441","resourceType":"item","id":"6295441","type":"photo","url":"\/photo\/6295441\/ebola-survivors-9","author":{"href":"\/api\/v1\/users\/26399","resourceType":"item"},"created":"2014-10-24T18:46:39-04:00","changed":"2014-10-24T18:56:56-04:00","published":"2014-10-24T18:46:39-04:00","updated":"2014-10-24T18:56:56-04:00","title":"Ebola survivors 9","caption":["<p>PAYNESVILLE, LIBERIA - OCTOBER 16: Ebola survivor Jeremra Cooper, 16, wipes his face from the heat. The 8th grade student said he lost six family members to the Ebola epidemic before coming down sick with the disease himself and being sent to the MSF center, where he recovered after one month.<\/p>\n"],"photographer":"John Moore","copyright":{"href":"\/api\/v1\/taxonomy\/terms\/4053","resourceType":"item","name":"AFP\/Getty Images"},"image":{"href":"\/api\/v1\/files\/images\/289491","resourceType":"item","styles":{"href":"\/api\/v1\/files\/images\/289491\/styles","resourceType":"item","globalpostFirebird":{"w128":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w128\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=AUqzGaSi","width":128,"height":87},"w256":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w256\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=rRtwcoyk","width":256,"height":173},"w512":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w512\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=YwjCGxXm","width":512,"height":346},"w768":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w768\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=qtH1CvBj","width":768,"height":519},"w1024":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w1024\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=4n5yvomm","width":1024,"height":692},"w1280":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w1280\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=ZU93Mtgu","width":1280,"height":865},"w1536":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w1536\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=6zDaaM8p","width":1536,"height":1038},"w2304":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w2304\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=IDWl8NQt","width":2304,"height":1557},"w2560":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w2560\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=HyfT29em","width":2560,"height":1730},"w2816":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w2816\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=vzd_5hRS","width":2816,"height":1903},"w3072":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w3072\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=FVlKWkIA","width":3072,"height":2076},"w4352":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w4352\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=pcuPH4_x","width":4352,"height":2941},"w4608":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w4608\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=5-mPBPaw","width":4608,"height":3114},"synphoto":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/synphoto\/public\/photos\/2014-October\/ebola_survivors_9.jpg?itok=QkGeSruv","width":"1200","height":"630"}}},"title":null,"alt":null}},"content":{"href":"\/api\/v1\/content\/articles\/6254188\/content","resourceType":"item","body":{"href":"\/api\/v1\/content\/articles\/6254188\/content\/body","resourceType":"item","bodyItems":["<p>On Saturday, President Barack <a href=\"http:\/\/www.globalpost.com\/dispatch\/news\/afp\/141018\/ebola-disaster-our-generation-says-aid-agency\">Obama urged against \"hysteria\"<\/a> in the face of the growing Ebola crisis.<\/p>\n<p>In contrast, the day before the World Bank said the battle against the disease was being lost.<\/p>\n<p>So, which is it?\u00a0<\/p>\n<p>Well, the worst-ever outbreak of the deadly virus has so far <a href=\"http:\/\/www.globalpost.com\/dispatch\/news\/afp\/141018\/ebola-disaster-our-generation-says-aid-agency\" target=\"_blank\">killed more than 4,500 people<\/a>, mainly in Guinea, Liberia and Sierra Leone. Isolated cases have now begun to appear in Europe and the US.<\/p>\n<p>In other words, it's bad. Here's a look back at how the situation initially progressed.\u00a0<\/p>\n<p>The chart below shows all the reported cases from January through Aug. 31, broken down by week. What started out as a problem only in Guinea, passed into neighboring regions pretty quickly. The chart shows us how the number of Ebola virus cases have exploded in subsequent weeks.<\/p>\n<p>As of mid-October, 4,555 people have died from Ebola out of a total of 9,216 cases registered in seven countries, according to the World Health Organization.<\/p>\n<p><img src=\"http:\/\/i.imgur.com\/l8yccEq.jpg\" width=\"100%\" \/><\/p>\n<p>In Guinea, more than 100 cases were newly reported in the first week of September. Sierra Leone has seen more than 150 cases reported each week for the last two weeks. Liberia remains the most affected, with more than 200 cases reported per week for the last three weeks.\u00a0<\/p>\n<p>The map below shows the location of reported Ebola cases in West Africa. A few areas have become \"not active,\" meaning they haven't had any cases over the last 21 days. Most though, remain \"active\" areas where new cases continue to be reported. More worryingly, the map shows new districts that have been affected in September. A crucial piece of this chart is the red circles, which show cases that have been reported in the last 21 days of August.\u00a0<\/p>\n<p><img src=\"http:\/\/i.imgur.com\/MA80TC0.jpg\" width=\"100%\" \/><\/p>\n<p>Most cases occur in 9 out of the 42 regions of Guinea, Liberia, and Sierra Leone. For the first time since the epidemic began, however, 55.3 percent of cases have now been reported outside of these nine regions.<\/p>\n<p>This next map, also created by WHO, in collaboration with Doctors Without Borders (MSF), shows how West African nations are attempting to respond to the Ebola crisis. It covers:<\/p>\n<ul><li>\n\t\t<em>Ebola Treatment Centers: <\/em>Where patients can receive treatment for the disease<\/li>\n<li>\n\t\t<em>Referring Centers: <\/em>Where patients are diagnosed and their case is reported<\/li>\n<li>\n\t\t<em>Laboratories:<\/em> To assist referring centers and Ebola treatment centers as needed. \"Increased laboratory capacity is essential for proper screening and triage of patients,\" according to WHO.\u00a0<\/li>\n<li>\n\t\t<em>Contact tracing:<\/em> A preventative measure that catalogs all people the patient may have had contact with to stop further spread of the virus. WHO considers this an area of concern as more cases and deaths are reported.\u00a0<\/li>\n<li>\n\t\t<em>Safe burial: <\/em>Facilities that ensure safe burial of persons who have died from Ebola. WHO is particularly concerned with the safety of community burials and mass cremation.\u00a0<\/li>\n<\/ul><p>\u00a0<\/p>\n<p><img src=\"http:\/\/i.imgur.com\/PzUCU6v.jpg\" width=\"100%\" \/><\/p>\n<p>According to WHO, there is a serious shortage of beds in Ebola treatment centers in Guinea, Liberia and Sierra Leone. In total, Guinea has 130 beds, Liberia has 314, and Sierra Leone has 130, numbers that don't even come close to covering the number of reported cases. Based on current needs, WHO says they need another 980 Ebola treatment beds in the region, 760 of these in Monrovia, Liberia.\u00a0<\/p>\n<p>\"Although plans are in place to build such facilities,\" reported WHO, \"there are challenges related to site selection as well as a critical shortage of clinical teams available to manage these facilities.\"<\/p>\n<p>Well, 3,000 American troops should help with that.<\/p>\n"]},"media":{"href":"\/api\/v1\/content\/articles\/6254188\/content\/media","resourceType":"item","mediaItems":null}},"taxonomy":{"href":"\/api\/v1\/content\/articles\/6254188\/taxonomy","resourceType":"index","all":{"href":"\/api\/v1\/content\/articles\/6254188\/taxonomy\/all","resourceType":"collection","totalItems":3,"items":[{"href":"\/api\/v1\/taxonomy\/terms\/18","resourceType":"item","url":"\/taxonomy\/categories\/money","id":"18","name":"Money","type":"taxonomy_term"},{"href":"\/api\/v1\/taxonomy\/terms\/21","resourceType":"item","url":"\/taxonomy\/categories\/science","id":"21","name":"Science","type":"taxonomy_term"},{"href":"\/api\/v1\/taxonomy\/terms\/27","resourceType":"item","url":"\/news\/regions\/africa","id":"27","name":"Africa","type":"taxonomy_term"}]},"primary":{"href":"\/api\/v1\/taxonomy\/terms\/18","resourceType":"item","url":"\/taxonomy\/categories\/money","id":"18","name":"Money","type":"taxonomy_term","image":{"href":"\/api\/v1\/files\/images\/291963","resourceType":"item","styles":{"href":"\/api\/v1\/files\/images\/291963\/styles","resourceType":"item","globalpostFirebird":{"w128":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w128\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=WuKlGfN-","width":128,"height":85},"w256":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w256\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=860IiD04","width":256,"height":170},"w512":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w512\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=ebfUK3gB","width":512,"height":341},"w768":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w768\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=VToEOVQh","width":768,"height":511},"w1024":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w1024\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=3gmn34Sa","width":1024,"height":681},"w1280":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w1280\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=fpm3IpT_","width":1280,"height":852},"w1536":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w1536\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=lTi_5gya","width":1536,"height":1022},"w2304":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w2304\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=zmfMCEol","width":2304,"height":1533},"w2560":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w2560\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=lJdaG0Wm","width":2560,"height":1703},"w2816":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w2816\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=l2vQ_sUL","width":2816,"height":1874},"w3072":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w3072\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=0VFQtb5a","width":3072,"height":2044},"w4352":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w4352\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=23tJobO5","width":4352,"height":2896},"w4608":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/w4608\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=sUOV6bAD","width":4608,"height":3066},"synphoto":{"url":"http:\/\/www.globalpost.com\/sites\/default\/files\/styles\/synphoto\/public\/photos\/banners\/categories\/Money_Category_Banner.jpg?itok=E05OVlt7","width":"1200","height":"630"}}}}}},"project":null}},"name":"read.article"};
+      })(window);
+
+
+
+
+
+
+
+
+
+
+
+Money
+ Money
+Science
+Africa
+
+
+ Simran Khosla
+ on Oct 18, 2014 @ 8:09 PM
+Oct 18, 2014 @ 8:09 PM Last Updated Sep 16, 2014 @ 11:29 AM Published
+
+
+These charts show you just how bad Ebola has gotten in West Africa
+
+
+
+
+
+
+
+
+PAYNESVILLE, LIBERIA - OCTOBER 16: Ebola survivor Jeremra Cooper, 16, wipes his face from the heat. The 8th grade student said he lost six family members to the Ebola epidemic before coming down sick with the disease himself and being sent to the MSF center, where he recovered after one month.
+
+
+
+
+
+On Saturday, President Barack Obama urged against "hysteria" in the face of the growing Ebola crisis.
+In contrast, the day before the World Bank said the battle against the disease was being lost.
+So, which is it? 
+Well, the worst-ever outbreak of the deadly virus has so far killed more than 4,500 people, mainly in Guinea, Liberia and Sierra Leone. Isolated cases have now begun to appear in Europe and the US.
+In other words, it's bad. Here's a look back at how the situation initially progressed. 
+The chart below shows all the reported cases from January through Aug. 31, broken down by week. What started out as a problem only in Guinea, passed into neighboring regions pretty quickly. The chart shows us how the number of Ebola virus cases have exploded in subsequent weeks.
+As of mid-October, 4,555 people have died from Ebola out of a total of 9,216 cases registered in seven countries, according to the World Health Organization.
+
+In Guinea, more than 100 cases were newly reported in the first week of September. Sierra Leone has seen more than 150 cases reported each week for the last two weeks. Liberia remains the most affected, with more than 200 cases reported per week for the last three weeks. 
+The map below shows the location of reported Ebola cases in West Africa. A few areas have become "not active," meaning they haven't had any cases over the last 21 days. Most though, remain "active" areas where new cases continue to be reported. More worryingly, the map shows new districts that have been affected in September. A crucial piece of this chart is the red circles, which show cases that have been reported in the last 21 days of August. 
+
+Most cases occur in 9 out of the 42 regions of Guinea, Liberia, and Sierra Leone. For the first time since the epidemic began, however, 55.3 percent of cases have now been reported outside of these nine regions.
+This next map, also created by WHO, in collaboration with Doctors Without Borders (MSF), shows how West African nations are attempting to respond to the Ebola crisis. It covers:
+
+Ebola Treatment Centers: Where patients can receive treatment for the disease
+
+Referring Centers: Where patients are diagnosed and their case is reported
+
+Laboratories: To assist referring centers and Ebola treatment centers as needed. "Increased laboratory capacity is essential for proper screening and triage of patients," according to WHO. 
+
+Contact tracing: A preventative measure that catalogs all people the patient may have had contact with to stop further spread of the virus. WHO considers this an area of concern as more cases and deaths are reported. 
+
+Safe burial: Facilities that ensure safe burial of persons who have died from Ebola. WHO is particularly concerned with the safety of community burials and mass cremation. 
+ 
+
+According to WHO, there is a serious shortage of beds in Ebola treatment centers in Guinea, Liberia and Sierra Leone. In total, Guinea has 130 beds, Liberia has 314, and Sierra Leone has 130, numbers that don't even come close to covering the number of reported cases. Based on current needs, WHO says they need another 980 Ebola treatment beds in the region, 760 of these in Monrovia, Liberia. 
+"Although plans are in place to build such facilities," reported WHO, "there are challenges related to site selection as well as a critical shortage of clinical teams available to manage these facilities."
+Well, 3,000 American troops should help with that.
+
+
+
+
+
+
+
+
+
+
+About
+
+
+Browse
+
+
+Chatter
+
+
+Everyday Life
+
+
+Terms
+
+
+
+
+
+#GP
+
+
+Facebook
+
+
+Twitter
+
+
+Tumblr
+
+
+Google+
+
+
+Newsletter
+
+
+
+Copyright 2016 © GlobalPost - International News
+ 
+
+
+
+
+
+
+
+
+
+
+
+
++GlobalPost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"5b5b299110","applicationID":"6324112","transactionName":"Z1EGYBNSXRFSU0RfDl4bJVcVWlwMHF5fUgRvRAVTBGxFC1ZH","queueTime":0,"applicationTime":845,"ttGuid":"","agentToken":"","atts":"SxYFFltITh8=","errorBeacon":"bam.nr-data.net","agent":""}
+

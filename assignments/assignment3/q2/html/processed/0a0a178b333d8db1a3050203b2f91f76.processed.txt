@@ -1,0 +1,743 @@
+http://fortune.com/2014/09/19/the-value-of-bitcoin-keeps-sliding/
+
+
+
+
+
+  
+
+
+
+
+
+
+
+	window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:22,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:9,2:8,3:6,4:10,5:3,6:23,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:9,2:8,3:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],6:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:23,2:24,ee:"QJf3ax",gos:"7eSDFh"}],7:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:24,2:23,ee:"QJf3ax"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:24,2:23,ee:"QJf3ax"}],9:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:24,2:23,ee:"QJf3ax"}],10:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:6,2:24,ee:"QJf3ax"}],11:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:12,3:10,4:6,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],12:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],13:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:22,2:23,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:22,2:13,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],22:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],23:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],24:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:23,ee:"QJf3ax"}]},{},["G9z0Bl",4,11,5]);
+	;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"7fc7d5aa08",applicationID:"9746606",sa:1,agent:"js-agent.newrelic.com/nr-632.min.js"}
+
+
+var _sf_startpt=(new Date()).getTime()
+
+if (!window.console){
+	console = { log: function(){} };
+}
+
+
+
+
+
+The value of Bitcoin keeps sliding - Fortune
+
+	// Omniture account string
+	var s_account = 'timefortunecom';
+	// allow requests for *.fortune.com
+	if ( -1 != document.domain.indexOf( 'fortune.com' ) ) {
+		document.domain = 'fortune.com';
+	}
+	// Prevents nativo ad auto-load behavior
+	var _prx = window.top._prx || [];
+	_prx.push(['cfg.SetNoAutoStart']);
+
+
+
+
+
+
+
+
+		/* <![CDATA[ */
+			if ( 'function' === typeof WPRemoteLogin ) {
+				document.cookie = "wordpress_test_cookie=test; path=/";
+				if ( document.cookie.match( /(;|^)\s*wordpress_test_cookie\=/ ) ) {
+					WPRemoteLogin();
+				}
+			}
+		/* ]]> */
+		
+
+
+
+
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	
+
+
+
+
+
+
+
+
+utag_data = {"author_name":"Miguel Helft","channel":"fortune","content_id":"793876","login_status":"not logged in","page_name":"The value of Bitcoin keeps sliding","publish_date":"2014-09-19T13:35:39+00:00","site_section1":"uncategorized","tag_keywords":"bitcoin|digital currency","template_type":"article","site_display_format":"desktop","url":"https:\/\/fortunedotcom.wordpress.com\/2014\/09\/19\/the-value-of-bitcoin-keeps-sliding\/","site_section2":""};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		.getty.alignleft {
+			margin-right: 5px;
+		}
+		.getty.alignright {
+			margin-left: 5px;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					jQuery(document).ready(function ($) {
+						TimeHatConfig('fortune');
+					});
+				
+
+
+
+
+
+
+menu
+
+Main Menu
+Fortune.com
+
+Subscribe
+
+
+
+
+
+
+Subscribe
+
+
+
+
+
+
+
+
+
+
+Search
+
+
+
+Sign In
+
+
+
+© 2016 Time Inc. All rights reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TECH
+
+
+MANAGEMENT
+
+
+FINANCE
+
+
+MARKETS
+
+
+CAREERS
+
+
+AUTOS
+
+
+INTERNATIONAL
+
+
+RETAIL
+
+
+FEATURES
+
+
+SMALL BUSINESS
+
+
+VIDEO
+
+
+MAGAZINE
+
+
+FORTUNE CONFERENCES
+
+
+ 
+
+
+
+
+Tech
+digital currency
+
+
+
+
+The value of Bitcoin keeps sliding
+
+
+
+by 
+
+
+Miguel Helft
+
+
+
+
+
+@FortuneMagazine
+
+
+September 19, 2014, 1:39 PM EST
+
+
+
+
+E-mail
+
+
+
+Tweet
+
+
+
+Facebook
+
+
+
+Linkedin
+
+
+
+Share icons
+
+
+
+
+
+Call it the summer of the incredibly shrinking Bitcoin.
+While many venture capitalists remain enthusiastic about the crypto-currency, this has not been a good season for Bitcoin. Since reaching a July high of nearly $650, the price of Bitcoin has been on a steady decline. On Friday, it dropped below $400.
+Why? No one really knows.
+Overall, Bitcoin has been far less volatile than in the past, which Bitcoin fans will tell you, is a good thing. Currencies, if they are going to be useful, should have a somewhat predictable value. Bitcoin’s recent decline hasn’t been sudden. But it has been steady.
+Prior episodes of Bitcoin volatility were typically precipitated by some event, like the meltdown of Bitcoin exchange Mt. Gox early this year or the actions or statements of a regulator in a major market like China or the European Union. This summer, there were no blockbuster Bitcoin news, good or bad. I asked a couple of Bitcoin boosters to theorize about what was happening to the currency. Deafening silence. Maybe it’s that those who bought Bitcoin hoping for a quick gain got tired of waiting for their payday. The decline of the last few days may be due to the fact that the Scots, after all, won’t be needing a new currency or that speculators are now putting their money in Alibaba. Those are just hypotheses worthy of a tweet and not much more.
+It’s entirely possible that Bitcoin will recover. It could also fall further. But it seems pretty certain that predictions of a $50,000 Bitcoin will have to wait.
+Disclosure: I own a small amount of Bitcoin, which I bought to understand how digital wallets work. I paid more than the current price.
+
+
+
+
+
+← Alibaba’s big debut ranks it among largest U.S. companies 
+
+Ali-Nada: Chinese e-commerce giant Alibaba not as profitable as it seems → 
+
+
+
+
+
+
+
+
+
+
+
+
+TECH
+
+
+MANAGEMENT
+
+
+FINANCE
+
+
+MARKETS
+
+
+CAREERS
+
+
+AUTOS
+
+
+INTERNATIONAL
+
+
+RETAIL
+
+
+FEATURES
+
+
+SMALL BUSINESS
+
+
+VIDEO
+
+
+MAGAZINE
+
+
+FORTUNE CONFERENCES
+
+
+©  Time Inc. All rights reserved.
+Fortune.com is a part of the Time.com network of sites.
+Powered by WordPress.com VIP
+
+
+
+
+Fortune 500
+Auto
+Energy
+Finance
+Leadership
+Most Powerful Women
+Retail
+Tech
+Newsletters
+Rankings
+Video
+
+
+subscribe
+
+
+
+
+
+
+
+© 2016 Time Inc. All rights reserved.
+Fortune.com is a part of the Time.com network of sites.
+Powered by WordPress.com VIP
+
+
+
+Ad Choices
+Custom Content
+Customer Service
+Feedback
+Fortune Datastore
+Media Kit
+Privacy Policy
+Your California Privacy Rights
+Reprints & Permissions
+Site Map
+Terms of Use
+
+
+Quotes delayed at least 15 minutes. Market data provided by Interactive Data.
+
+ETF and Mutual Fund data provided by Morningstar, Inc.
+Dow Jones Terms & Conditions: http://www.djindexes.com/mdsidx/html/tandc/indexestandcs.html.
+S&P Index data is the property of Chicago Mercantile Exchange Inc. and its licensors.  All rights reserved.
+
+Terms & Conditions. Powered and implemented by Interactive Data Managed Solutions
+
+
+© 2016 Time Inc. All rights reserved.
+Fortune.com is a part of the Time.com network of sites.
+Powered by WordPress.com VIP
+
+
+
+
+
+
+
+
+
+Sign In
+
+
+
+
+
+
+
+
+						Email address or Password is incorrect					
+EMAIL/USERNAME
+
+PASSWORD
+
+
+
+
+Remember Me
+Forgot Password?
+
+
+
+
+Want the Full Story?
+SUBSCRIBE
+
+
+
+
+
+Get 
+
+
+
+
+
+
+
+Email
+
+
+
+
+
+
+ 
+
+Privacy Policy
+
+
+
+
+
+
+
+
+
+Thank you for your interest in licensing Fortune content. Please find information on various licensing contacts below and choose the one that best suits your needs:
+
+1. To license Fortune articles, excerpts, or headlines for republication in various media (including books, eBooks, film, web, newsletters, newspapers, magazines and others), please email syndication@timeinc.com.
+2. To license a Fortune cover, order reprint or e-print copies of an article or cover, or license an accolade, please contact PARS International at www.timeincreprints.com.
+3. To license text only photocopies of Fortunearticles as print or digital handouts in academic settings, or in academic coursepacks, please contact the Copyright Clearance Center at www.copyright.com
+
+
+
+
+
+
+
+
+jQuery(document).ready(function ($) {
+
+if($.browser.version == 9.0){
+
+$('[placeholder]').focus(function() {
+  var input = $(this);
+  if (input.val() == input.attr('placeholder') || input.val() == '') {
+	input.val('');
+    input.removeClass('placeholder');
+	$(this).removeAttr('style');
+  }
+  else{
+	$(this).removeAttr('style');
+	}
+}).blur(function() {
+
+  var input = $(this);
+  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+	input.addClass('placeholder');
+    input.val(input.attr('placeholder'));
+	$('[placeholder]').css({"font-size":"18px","font-weight":"bold","color":"#ccc"});
+	$('#site-nav-site-search-input').removeAttr('style');
+	$('#site-nav-site-search-input').css('background','white');
+	}
+  else{
+	$(this).removeAttr('style');
+  }
+
+}).blur().parents('form').submit(function() {
+  $(this).find('[placeholder]').each(function() {
+    var input = $(this);
+    if (input.val() == input.attr('placeholder')) {
+      input.val('');
+    }
+  })
+});
+
+}
+
+});
+
+
+
+
+
+/* Bootstrapped data should be placed here to avoid unnecessarily having to make extra HTTP requests on page load. */
+jQuery(document).ready(function($) {
+	Fortune.bootstrap = {
+		dividers: [
+		"\u003Cdiv class=\"divider-rule\"\/\u003E\n\u003Cdiv class=\"divider-ad divider-full-width-ad fortune-ad-unit\" data-ad-slot=\"divider-full-width-ad\" data-ad-type=\"dfp\"\u003E\u003C\/div\u003E","\u003Cdiv class=\"divider-rule\"\/\u003E\n\u003Cdiv class=\"two_ad\" data-ad-type=\"dfp\"\u003E\n\t\u003Cdiv class=\"divider-ad divider-300x250-ad fortune-ad-unit\" data-ad-slot=\"divider-300x250-ad\"\u003E\u003C\/div\u003E\n\t\u003Cdiv class=\"module\"\u003E\n\t\t\u003Cdiv class=\"sign-up-wrapper\"\u003E\n\t\t \u003Cp class=\"subscribe-to-the-fortune\"\u003ESubscribe to\u003Cspan\u003E \u003C\/span\u003E\u003Cspan class=\"newsletter-title in-Red\"\u003EThe Fortune CEO Daily\u003C\/span\u003E and get updates \u003Cspan class=\"section-primary\"\u003Edaily\u003C\/span\u003E and more!\u003C\/p\u003E\n\t\t \u003Cdiv class=\"email-wrapper clearfix\"\u003E\n\t\t\t\u003Cdiv class=\"text-entry-field-holder\"\u003E\n\t\t\t\u003C!-- Form action gets changed dynamically based on article data, default to Fortune CEO Daily --\u003E\n\t\t\u003Cform action=\"http:\/\/cb.sailthru.com\/s\/4sl\/Fortune+Daily\" id=\"article-form\" method=\"post\" target=\"fortune_daily_submit_message\" onsubmit=\"window.open(this.action, 'fortune_daily_submit_message', 'width=486,height=250');\"\u003E\n\t\t\t\u003Cinput type=\"hidden\" name=\"vars[source]\" value=\"divider\"\u003E\n\t\t\t\u003Cinput required type=\"email\" class=\"enter-email text input-field\" name=\"email\" id=\"newsletter-subscribe-email\" placeholder=\"Enter your email address\"\u003E\n\t\t\t\u003Cinput type=\"submit\" class=\"subscribe-link fortune-modal-button newsletter-submit\" value=\"Subscribe\"\u003E\n\t\t\u003C\/form\u003E\n\t\t\t\u003C\/div\u003E\n\t\t \u003C\/div\u003E\n\t\u003Cdiv id=\"fortune_daily_submit_message\"\u003E\u003C\/div\u003E\n\t\t\u003Cdiv class=\"bordered-div\"\u003E\u003C\/div\u003E\n\t\t\t\u003Ca href=\"https:\/\/fortunedotcom.wordpress.com\/newsletters\" target=\"_blank\"\u003E\n\t\t\t\t\u003Cdiv class=\"see-all-newsletters\"\u003E\n\t\t\t\t\tSee all newsletters\n\t\t\t\t\u003C\/div\u003E\n\t\t\t\u003C\/a\u003E\n\t\t\u003C\/div\u003E\n\t \u003C\/div\u003E\n\u003C\/div\u003E\n"		],
+	}
+	/*
+		On document ready, start the app
+	*/
+	Fortune.start();
+});
+
+
+
+if(window.matchMedia) {
+  var mql = window.matchMedia("screen and (min-width: 1025px)"),
+  aol_button = function () {
+    if (mql.matches) {
+      window.UNB = {
+        config: {
+          theme: 'dark',
+          referrer: document.referrer,
+          devId: 'sr1Gdgz3UMHa_lqP',
+          onLoadComplete: function() {
+            jQuery('#unb-bar').css({
+              'left': '407px',
+              'top' : '54px',
+              'width' : '50%',
+			  'display' : 'block',
+            });
+          }
+        }
+      };
+      (function(){var o=document.createElement('script');o.id='unb_script';o.type='text/javascript';o.async=true;o.src='https://s.aolcdn.com/os/aol/unb.min.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(o,s);})();
+    }
+  }
+  aol_button();
+  jQuery(window).on('resize', function() {
+    if (mql.matches) {
+      if (jQuery('#unb-bar').length === 0 ) {
+        aol_button();
+      } else {
+        jQuery('#unb-bar').show();
+      }
+    } else {
+      jQuery('#unb-bar').hide();
+    }
+  });
+}
+
+
+
+  window._comscore = window._comscore || [];
+  _comscore.push({ c1: "2", c2: "6035728" });
+
+
+
+
+
+
+
+	/* <![CDATA[ */
+	var google_conversion_id = 1041628332,
+		google_custom_params = window.google_tag_params,
+		google_remarketing_only = true;
+	/* ]]> */
+
+
+
+
+
+
+
+
+
+	(function() {
+		var _fbq = window._fbq || (window._fbq = []);
+		if (!_fbq.loaded) {
+			var fbds = document.createElement('script');
+			fbds.async = true;
+			fbds.src = '//connect.facebook.net/en_US/fbds.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(fbds, s);
+			_fbq.loaded = true;
+		}
+		_fbq.push(['addPixelId', '1610053349230002']);
+	})();
+	window._fbq = window._fbq || [];
+	window._fbq.push(['track', 'PixelInitialized', {}]);
+
+
+
+
+
+
+
+
+
+
+(function() {
+     function loadHorizon() {
+           var s = document.createElement('script');
+           s.type = 'text/javascript';
+          s.async = true;
+          s.src = location.protocol + '//ak.sail-horizon.com/horizon/v1.js';
+         var x = document.getElementsByTagName('script')[0];
+         x.parentNode.insertBefore(s, x);
+      }
+     loadHorizon();
+      var oldOnLoad = window.onload;
+      window.onload = function() {
+          if (typeof oldOnLoad === 'function') {
+            oldOnLoad();
+         }
+           Sailthru.setup({
+              domain: 'horizon.fortune.com'
+         });
+     };
+  })();
+ 
+
+
+
+
+
+
+
+
+
+/* <![CDATA[ */
+var wpcomVipAnalytics = {"is_404":"0","is_home":"0","is_single":"1","is_front_page":"0","is_archive":"0","percentToTrack":"1"};
+/* ]]> */
+
+
+
+/* <![CDATA[ */
+var FB_WP=FB_WP||{};FB_WP.queue={_methods:[],flushed:false,add:function(fn){FB_WP.queue.flushed?fn():FB_WP.queue._methods.push(fn)},flush:function(){for(var fn;fn=FB_WP.queue._methods.shift();){fn()}FB_WP.queue.flushed=true}};window.fbAsyncInit=function(){FB.init({"channelUrl":"https:\/\/fortunedotcom.wordpress.com\/wp-content\/themes\/vip\/plugins\/facebook\/channel.php","xfbml":true});if(FB_WP && FB_WP.queue && FB_WP.queue.flush){FB_WP.queue.flush()}}
+/* ]]> */
+
+(function(d){var id="facebook-jssdk";if(!d.getElementById(id)){var js=d.createElement("script"),ref=d.getElementsByTagName("script")[0];js.id=id,js.async=true,js.src="http:\/\/connect.facebook.net\/en_US\/all.js",ref.parentNode.insertBefore(js,ref)}})(document)
+
+/* <![CDATA[ */
+var videosToSwap = ["4762767120001","4762630347001","4762397913001","4761043060001","4761126575001","4760659461001","4760439495001","4759522677001","4759522676001","4758519224001"];
+/* ]]> */
+
+
+/* <![CDATA[ */
+var fortune_wp_vars = {"object_id":"793876","homepage":"","tabs":[{"title":"News","active":true,"endpoint":"articles","object_id":793876,"meta":{"type":"post","data":[]}},{"title":"Popular","endpoint":"chartbeat","meta":{"type":"popular","data":[]}},{"title":"Videos","endpoint":"videos","object_id":1553547,"meta":{"type":"post","data":[]}},{"title":"Fortune 500","endpoint":"","meta":{"type":"fortune-500","data":[]}}],"ad_config":{"breakpoints":{"desktop":{"regions":{"left_rail":{"units":{"left_rail_multi":{"type":"single","size":{"width":300,"height":250},"args":{"initial_ad_rate":4,"ad_rate":10}},"native_tout":{"type":"single","refresh_disabled":true,"size":{"width":320,"height":80},"args":{"ad_rate":10}}}},"article_body":{"units":{"cm_body_subscribe_snippet":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"subscribebtm","size":{"width":142,"height":70}},"cm_body_subscribe_module":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"submodule","size":{"width":840,"height":264}}}},"dividers":{"units":{"divider_300x250":{"type":"single","size":{"width":300,"height":250}},"divider_full_width":{"type":"multi","size":["900x500","970x418","994x250","728x90"]}}},"right_rail":{"units":{"right_rail_300x600":{"type":"multi","size":["300x250","300x600"]}}},"header":{"units":{"pushdown_multi":{"type":"multi","refresh_disabled":true,"size":["101x1","970x1","970x66"]},"cm_header":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"globalheader","size":{"width":200,"height":50}}}}}},"tablet":{"regions":{"left_rail":{"units":{"left_rail_multi":{"type":"single","size":{"width":300,"height":250},"args":{"initial_ad_rate":4,"ad_rate":10}}}},"article_body":{"units":{"cm_body_subscribe_snippet":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"subscribebtm","size":{"width":142,"height":70}},"cm_body_subscribe_module":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"submodule","size":{"width":840,"height":264}}}},"dividers":{"units":{"divider_300x250":{"type":"single","size":{"width":300,"height":250}},"divider_full_width":{"type":"single","size":{"width":450,"height":375}}}},"right_rail":{"units":{"right_rail_300x600":{"type":"multi","size":["300x250","300x600"]}}},"header":{"units":{"cm_header":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"globalheader","size":{"width":200,"height":50}}}}}},"mobile":{"regions":{"left_rail":{"units":{"left_rail_multi":{"type":"single","size":{"width":300,"height":250},"args":{"initial_ad_rate":4,"ad_rate":10}}}},"article_body":{"units":{"article_body_mobile_multi":{"type":"multi","size":["300x50","320x50","300x250"]},"cm_body_subscribe_snippet":{"type":"single","refresh_disabled":true,"cm":true,"cmpos":"subscribebtm","size":{"width":142,"height":70}}}},"header":{"units":[]}}}}},"device":"desktop","context":"post","info":{"page":1,"context":"post","object_id":793876,"page_type":"post"},"page_type":"post","paywall_domain":"auth.fortune.com","wp_ajax_url":"https:\/\/fortunedotcom.wordpress.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+
+
+/* <![CDATA[ */
+var wp_simplereach_vars = {"pid":"538890ee97b0c992bf00006b","title":"The value of Bitcoin keeps sliding","url":"http:\/\/fortune.com\/2014\/09\/19\/the-value-of-bitcoin-keeps-sliding\/","date":"2014-09-19 13:35:39 EST","authors":["Miguel Helft"],"sections":["Finance","Tech"],"tags":["Bitcoin","digital currency"],"landing_url":"http:\/\/fortune.com\/2014\/09\/19\/the-value-of-bitcoin-keeps-sliding\/","domain":"fortune.com"};
+/* ]]> */
+
+
+
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+
+
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'64089429','blog_tz':'-5','user_lang':'en','blog_lang':'en','user_id':'0'}]);
+_stq.push(['view', {'blog':'64089429','v':'wpcom','tz':'-5','user_id':'0','post':'793876','subd':'fortunedotcom'}]);
+function st_vt() {var x=document.createElement("img");x.src="http://pixel.wp.com/g.gif?blog=64089429&v=wpcomvt&tz=-5&user_id=0&post=793876&subd=fortunedotcom&rand="+Math.random();}
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1BNmNJfGhxNCVxUDExYmtib2E/SzdEJm0lUEtbdFU0fFk4cHZvcUFrZT90Tn4yQm1+R3NyNTd1NW9Tb0U9ZStwWl1kbWdSN344Z3Nod2J0eG1dMVBfLUtBNFQ3MlZyQyw5dU5SYmpFZ0s5bzEyZGhQSG1dSGUmZWZlVS5pWHB+TCxyNEcydmtUMnlDVUxCRzk3SmtGQ2gzU3x2fCZ4Si8/bDZGSHdTb2NMOUh4WjUuczVNLT0xTW16K2RUU19ZNV96ZS1qUDFEUUszV1s5LHI4PUkxRmVZTGhVUThfenRqSWQ='}]);
+_stq.push([ 'clickTrackerInit', '64089429', '793876' ]);
+	
+
+
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+
+

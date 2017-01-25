@@ -1,0 +1,2598 @@
+http://www.telegraph.co.uk/technology/11109256/Creating-a-Bitcoin-Island-just-off-the-English-coast.html
+
+
+
+
+
+
+        // <![CDATA[
+        for(var i = 0; i < optimizely["activeExperiments"].length; i++){
+            var expid = optimizely["activeExperiments"][i];
+            var experimentname = optimizely.data.experiments[expid].name;
+            var variationname = optimizely.variationNamesMap[expid];
+            optimizely.$("head").prepend("<meta name=\"DCSext.opt\" content=\"" + experimentname + "-" + variationname +"\" />");
+        }
+        // ]]>
+    
+
+           /* EPOCH time at the start of the page */
+
+           /*As IE8 doest support Date.now() functionality,using the diffrent one*/
+             if (!Date.now) {
+                    Date.now = function now() {
+                      return new Date().getTime();
+                   };
+              }
+
+              var pageStartTime = Date.now();
+
+
+Creating a 'Bitcoin Island' just off the English coast - Telegraph
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var logo = function(param) {
+        document.onreadystatechange = function () {
+                if (document.readyState == "interactive") {
+                        document.getElementById("logo").src = param;
+                }
+        }
+}
+
+
+ logo("/template/ver1-0/i/thetelegraph_344.gif"); 
+
+
+
+
+
+
+
+        var tmgOptaCallback = function() {
+            //Add logic below that will be executed once the opta widget loads
+            $('.standings-container tr:even').addClass('odd'); //even rows for tables
+            $('.standings-container tr:odd').addClass('even'); //odd rows for tables
+         };
+
+        // <![CDATA[
+        var _optaCallbacks;
+
+        if (_optaParams) {
+            _optaCallbacks = _optaParams.callbacks;
+        }
+
+        if (_optaCallbacks) {
+            if( _optaCallbacks.indexOf(tmgOptaCallback) < 0) {
+            _optaCallbacks.push(tmgOptaCallback);
+            }
+        } else {
+            _optaCallbacks = [tmgOptaCallback];
+        }
+
+        var _optaParams = {
+            custID: 'ea84a6c1e3333c9d011be831766d51de',
+            anim:   'none',
+            language: 'en_GB',
+            timezone: 0,
+            callbacks: _optaCallbacks
+        };
+        // ]]>
+    
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+            var _optaCallbacks = _optaParams.callbacks;
+
+            if (_optaCallbacks) {
+                if (_optaCallbacks.indexOf(optaTeamLinkingCallback) < 0) {
+                    _optaCallbacks.push(optaTeamLinkingCallback);
+                }
+            } else {
+                _optaCallbacks = [optaTeamLinkingCallback];
+            }
+
+            _optaParams.callbacks = _optaCallbacks;
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.webtrendsAsyncInit=function(){
+    var dcs=new Webtrends.dcs().init({
+        dcsid:"dcsshgbi400000gscd62rrg43_4o2o",
+        domain:"webtrends.telegraph.co.uk",
+        timezone:0,
+        adimpressions:true,
+        adsparam:"WT.ac",
+        offsite:false,
+        download:true,
+        downloadtypes:"xls,doc,pdf,txt,csv,zip,docx,xlsx,rar,gzip",
+        metanames:"DCSext.MLC, DCSext.source, DCSext.Category, DCSext.Genre, DCSext.Channel, DCSext.imageNo, DCSext.GalleryType, DCSext.Content_Type, DCSext.Level, DCSext.author, DCSext.articleFirstPublished, DCSext.articleId, DCSext.productProvider, DCSext.productName, DCSext.EA_Search_Type, DCSext.EA_Search_Engine, DCSext.EA_Search_Phrase, DCSext.oss, DCSext.ossType, DCSext.cf, DCSext.cn, DCSext.cd, DCSext.pd,DCSext.cmsSect",        
+        fpcdom:".telegraph.co.uk",
+        plugins:{
+            hm:{src:"/template/ver1-0/js/asyncwebtrends/webtrends.hm.js",hmurlparams:"frame,image"},
+            qbert: { src:"/template/ver1-0/js/asyncwebtrends/qbert-wtplugin.js" }
+        }
+        });
+    if ($.cookie("tmg_subs") != null){
+    	var ts = $.parseJSON($.cookie("tmg_subs"));
+        dcs.DCSext.location = ts.location;
+    	dcs.DCSext.trialDescription =ts.trialDescription;
+	    dcs.DCSext.subscriptionType = ts.subscriptionType;
+	    dcs.DCSext.flowType = ts.flowType;
+	    dcs.DCSext.productType = ts.productType;
+	    dcs.DCSext.serviceId = ts.serviceId;
+	    dcs.DCSext.servicePriceId = ts.servicePriceId;
+	
+	    dcs.DCSext.discountVoucher = ts.discountVoucher;
+	    dcs.DCSext.partnerName = ts.partnerName;
+	    dcs.DCSext.currentPromoName = ts.currentPromoName;
+	    dcs.DCSext.sourcePromoName = ts.sourcePromoName;
+	    dcs.DCSext.promoType = ts.promoType;
+	    dcs.DCSext.tCode = ts.tCode;
+	    dcs.DCSext.status = ts.status == true  && ts.acquisitionCompleted == true ? 'Active':'Inactive';
+
+   }
+   //if( /Android|webOS|iPad|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) { dcs.DCSext.platform="tablet";}    
+   //dcs.track();
+
+};
+(function(){
+    var s=document.createElement("script"); s.async=true; s.src="/template/ver1-0/js/asyncwebtrends/webtrends.js";
+    var s2=document.getElementsByTagName("script")[0]; s2.parentNode.insertBefore(s,s2);
+}());
+
+
+
+//Events tracking for Google Analytics
+function trackGoogle() {
+try {var pageTracker = _gat._getTracker("UA-7226372-1");pageTracker._trackPageview();} catch(err) {}
+}
+
+//External links tracking through Google Analytics
+function isLinkExternal(link) {
+    var r = new RegExp('^https?://(?:www.)?' + location.host.replace(/^www./, ''));
+        return !r.test(link);
+}
+$(document).ready(function() {
+    $(document).bind('click', function(e) {
+        var target = (window.event) ? e.srcElement : e.target;
+        while (target) {
+            if (target.href) break;
+            target = target.parentNode;
+        }
+        if (!target || !isLinkExternal(target.href)) return true;
+        var link = target.href;
+        link = '/outgoing/' + link.replace(/:\/\//, '/');
+        _gaq.push(['_trackPageview', link]);
+    });
+});
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7226372-1']);
+  _gaq.push(['_setDomainName', 'telegraph.co.uk']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+
+  var gs_channels="default";
+  // Last-updated: 2016-02-18 18:49:45.69
+// Status code: 0
+// Read timed out
+gs_channels="RETRY"; 
+
+
+    // <![CDATA[
+  var qcSegs = '';
+  var qcResults = function(qc){
+    for (var i=0;i<=qc.segments.length-1;i++){
+      if(qc.segments[i].id != 'D' && qc.segments[i].id != 'T') qcSegs += ';qc='+qc.segments[i].id;
+    }
+  }
+    // ]]>
+
+
+
+
+
+
+
+
+    document.domain = "telegraph.co.uk";
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+	var _comscore = _comscore || [];
+	_comscore.push({
+		c1 : "2",
+		c2 : "6035736"
+	});
+	(function() {
+		var s = document.createElement("script"), el = document
+				.getElementsByTagName("script")[0];
+		s.async = true;
+		s.src = (document.location.protocol == "https:" ? "https://sb"
+				: "http://b")
+				+ ".scorecardresearch.com/beacon.js";
+		el.parentNode.insertBefore(s, el);
+	})();
+
+
+
+
+
+
+
+
+
+
+		var subsInfo = new Object();
+		subsInfo.channel =  $('meta[name="DCSext.Channel"]').attr("content");
+		if(subsInfo.channel==undefined){subsInfo.channel='';}
+		subsInfo.mlc = $('meta[name="DCSext.MLC"]').attr("content");
+		if(subsInfo.mlc==undefined){subsInfo.mlc='';}
+		subsInfo.category = $('meta[name="DCSext.Category"]').attr("content");
+		if(subsInfo.category==undefined){subsInfo.category='';}
+		subsInfo.level = $('meta[name="DCSext.Level"]').attr("content");
+		if(subsInfo.level==undefined){subsInfo.level='';}
+		subsInfo.author = $('meta[name="DCSext.author"]').attr("content");
+		if(subsInfo.author==undefined){subsInfo.author='';}
+		subsInfo.content_type = $('meta[name="DCSext.Content_Type"]').attr("content");
+		if(subsInfo.content_type==undefined){subsInfo.content_type='';}
+		subsInfo.articleId = $('meta[name="DCSext.articleId"]').attr("content");
+		if(subsInfo.articleId==undefined){subsInfo.articleId='';}
+		var subsJson = JSON.stringify(subsInfo);
+		$.cookie("tmg_subs_referer",subsJson, { path: '/', domain: 'telegraph.co.uk'});
+		var inviteWTUrlSuffix='?channel='+ subsInfo.channel+'&mlc='+subsInfo.mlc+'&category='+ subsInfo.category+'&level='+subsInfo.level+'&author='+subsInfo.author+'&content_type='+subsInfo.content_type+'&articleId='+subsInfo.articleId;
+		
+		<!-- default inviteUrl value is UK-->
+		var inviteUrl = "" + '/subscriptions/invitation/';
+		
+		
+			
+				
+					var inviteUrl = "" + "/subscriptions/invitation-intl/";
+				
+			
+		
+		
+				
+				
+				
+			
+		var plink = "http://www.telegraph.co.uk/template/ver1-0/templates/fragments/common/toolBar-js.jsp";
+	
+
+
+
+
+
+
+Accessibility links
+
+Skip to article
+Skip to navigation
+
+
+
+
+
+
+Telegraph.co.uk
+
+
+
+
+
+
+
+
+
+                                        Search - enhanced by OpenText
+
+
+
+
+
+
+
+
+		Thursday 18 February 2016
+
+
+
+
+
+
+
+
+/* EPOCH time at the  end of Header */
+var tmgHeaderTimerEnd=Date.now();
+
+
+
+
+
+
+
+
+Home
+Video
+News
+World
+Sport
+Finance
+Comment
+Culture
+Travel
+Life
+Women
+Fashion
+Luxury
+Tech
+Cars
+Film
+TV
+
+
+
+
+
+
+
+
+
+
+Apple
+iPhone
+Technology News
+Technology Companies
+Technology Reviews
+Video Games
+Technology Video
+Mobile Apps
+
+
+
+
+Advertisement
+
+
+
+
+	document.write(tmgAdsBuildAdTag("ban", "970x250,970x90,940x250,728x90,468x60", "adj", "", 2));
+
+
+
+
+
+
+Home»
+Technology
+
+
+
+
+
+
+
+
+
+
+
+Creating a 'Bitcoin Island' just off the English coast
+
+The Isle of Man is selling itself as a global hub for crypto-currency startups 
+  with low taxation, 'pragmatic' regulation and high-speed internet. But it 
+  could be its thriving gambling industry which helps to create 'Crypto 
+  Valley', says Matthew Sparkes 
+
+
+
+        .newGigyaShare { display: none !important; }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Could the Isle of Man become a global hub for Bitcoin-based business? Photo: David Cannon/Getty Images
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+							By 
+											Matthew Sparkes, Deputy Head of Technology, on the Isle of Man
+
+7:31AM BST 20 Sep 2014
+
+Follow
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+ 
+
+
+ Nestled between Ireland and England is the Isle of Man, a self-governing country with a population of just over 80,000. Despite its small size it has its own parliament and sets its own laws; the Queen appears on the back of bank notes here, but tellingly does so without her crown.  This freedom has advantages. It attracted a thriving financial services industry in the 1970s with low taxation, then with a permissive attitude to gambling during the last decade it lured lucrative online betting companies. It's now attempting a hat-trick with crypto-currencies like Bitcoin.  It could be a huge boost to an economy which is already punching well above its weight. Analysts estimate that $113m was invested in Bitcoin companies in the first half of this year, up from $27m during the whole of 2013. It’s a rapidly expanding pie which the Isle of Man government wants a big slice of.  As we've written before, Bitcoin is just the start: there are a whole range of disruptive technologies that will piggy-back on its success.  Unlike jurisdictions which have made crypto-currencies illegal, such as Bangladesh and Bolivia, or regulated them so fiercely that they stifle innovation entirely, like New York, the Isle of Man is welcoming them with open arms. So much so that it helped to organise a conference last week called Crypto Valley looking to bring in new startups, and has lent a hand creating a crypto-tech incubator programme. 
+Related Articles
+
+
+
+'Bitcoin will become the new gold'
+
+03 Oct 2014
+
+
+
+Bill Gates: Bitcoin is 'exciting' because it is cheap
+
+03 Oct 2014
+
+
+
+Will Bitcoin undermine banks, companies and governments?
+
+09 Jun 2014
+
+
+
+How to get your virtual hands on some bitcoins
+
+15 Jan 2014
+
+
+
+Who is the reclusive billionaire Bitcoin creator?
+
+04 Mar 2014
+
+
+
+Fewer than one in five Britons trust Bitcoin
+
+11 Feb 2014
+
+
+
+ The sales pitch for the island is compelling: with no capital gains tax, potentially no corporation tax and extremely low income tax, entrepreneurs could walk away with large rewards should their company gain traction. And the government’s positive stance on Bitcoin provides stability and certainty - it has begun to regulate crypto-currencies, but only enough to provide legal and financial stability, not to squash innovation.  The charming little island, with its established population of high-net-worth individuals, is not without its more tangible attractions: great restaurants, low crime, beautiful scenery. Entrepreneur Mark Shuttleworth, who became the second space tourist in 2002 when he paid $20m for a short stint on the International Space Station, is already a resident. Only the weather is a sticking point.   For many, the Isle of Man is synonymous with motorbike racing  Bitcoin already has a huge number of fans on the island, including in government. Chris Corlett, chief executive of the department of economic development, announced this week that residents could soon be able to pay “everything from your car tax to your income tax bill” in crypto-currencies like Bitcoin.  “There is an evolution here, given what we’ve learned about digital currencies in the last year, it was a relatively simple decision to take,” he told CoinDesk.  At last week’s Crypto Valley conference there was a host of companies ready and waiting to help Bitcoin startups move in, establish bank accounts, buy IT equipment, start accounts and even talk directly to government ministers about potential legislative issues.  One entrepreneur who has already moved to the island told me that there have been occasions when he needed to talk to a minister and got an appointment the same day. “That wouldn’t happen in the UK,” he told me. In a fast-moving, uncharted industry like crypto, that’s a huge bonus.  Kurt Roosen, chief executive of Micta, the member organisation for hi-tech firms on the island which steers government on these matters, says that the Isle of Man is “pragmatic” about Bitcoin business, but realises how important it is to do it right.  "We want to do business but we're not prepared to prostitute ourselves to do it,” he told the Telegraph. “We'd love to be part of it but it has to be done in a flexible, not gung-ho fashion. There's a lot of money being invested now. We can't really ignore it.”  The balance that has been struck is to register it, but with a light touch: "It's a bit of a petulant child that needs some adults - and that's the role that we can play."  In the next month or two changes to law will come in which require crypto businesses to register with the government and carry out some due diligence to avoid money laundering and other financial irregularities. But aside from that the doors to innovation are wide open.  It’s a strategy which has worked well for the island previously: internet gambling was worth almost nothing a decade ago, but today accounts for 14 per cent of the economy. The largest company, Poker Stars, employs around 300 people on the island and was sold earlier this year for $4.9 billion (£2.9 billion).  Because of this, the 2007 financial crash simply didn't happen on the Isle of Man. The economy has had three decades of uninterrupted economic growth. The country has the 13th highest GDP per capita in the world, just ahead of the US, Hong Kong and the Cayman Islands.   Castletown harbour, Isle of Man   Phil Adcock, who has a PhD in computer science, left academia to found a business called Domicilium on the island: "I came here for a beer in 1991, set up a business and never left. You can fly here and get things done.”  He now runs a large data centre in a former slipper factory which once supplied Marks and Spencer and counts several crypto-currency businesses around the world as clients.  In the anonymous building is a state-of-the-art facility full of hardware powering mobile phone, financial services, gambling and Bitcoin companies. With eye-scanners on the doors, night-vision CCTV and impenetrable server rooms originally designed as mobile command centres for deployment in war zones, as well as high-speed internet connections spider-webbing out into the Irish Sea in various directions, it has spare capacity ready and waiting for any startup which choose to make the Isle of Man home - or anywhere else in the world, for that matter.  The island's infrastructure is disproportionately strong. Mobile phone companies often use it as a self-contained testbed for new technology. It was the first European country to have 3G, for example.  Now the island’s technological, financial and legal expertise in online gambling is being pivoted to help launch crypto-currency businesses. There are parallels: a need for absolute security, infrastructure to handle huge amounts of online transactions and the best and brightest lawyers and accountants. But many are also pushing gambling as an industry which can itself drive mass-adoption of crypto-currencies.  Eric Benz, a board member of the UK Digital Currency Association, said that Bitcoin "allows the operators to reduce their costs, reduce a lot of friction in terms of payments." It could also allow them to enter markets like southern east Asia and South America, where governments impose restrictions on betting. Bitcoin does not have as much respect for borders as banks do.  "Acquiring bitcoin now is just for speculation. It's markets like gaming that will really drive innovation,” he said. "The number one draw here is how flexible and innovative the government has been. Where we are now is exactly where e-gaming was 13 years ago.”  The island’s gambling regulator, just as central government, has signalled that crypto-currencies are welcome. Mark Rutherford, deputy chief executive of the Gambling Supervision Commission, told the conference: "We agonised over this. Our assessment of crypto [currency] is that it's not going to go away. It's here to stay and it's not going to go away.  "We'll be very comfortable for our operators to take them. It's a case of 'come and talk to us'. We might let you pay your licence application in Bitcoin soon."  At least one gaming operator has already contacted the regulator to look into the matter, he said.  All of the jigsaw pieces seem to be in place for the Isle of Man’s plan, except one, which is currently stifling innovation around the world. It's a Catch 22 situation that the very industry looking to disrupt the banking industry is also dependent on it for corporate accounts - it's impossible to launch a startup without one, and banks are overwhelmingly reluctant to provide them.  The first day of the conference was overshadowed by news that Capital Treasury Services, an Isle of Man-based business which connected crypto startups around the world with banking services, was shedding clients because of pressure from lenders. The news caused at least one startup to cancel its launch event at the conference.  Despite US firm Instabill announcing at the event that it would be able to step-in and fill that vacuum, access to banking is a recurring topic of conversation among crypto-currency entrepreneurs. Not only are new companies struggling to get accounts, but existing companies are fearful of accepting Bitcoin because of concerns about how their bank will react. One attendee even recounted how his personal bank account was closed because a payment for Bitcoin appeared on his statement.  Garth Kimber, chief executive of Xela Holdings, which has three gambling licences from the Isle of Man government, said that he was certain that a single crypto-currency would eventually spread around the world and replace fiat currencies, but also that he could not adopt any now for fear of “upsetting the banks”.  "The most important thing I have problems with is banking,” he said. “I don't agree with the opinion that they [the banks] don't get it [crypto-currencies] and they're learning: I think they exactly get it. I think banks run the world, not governments. And that's the problem: I need banking more than I need a specific payments platform.  "I don’t think governments want it because they can't QE it and I don't think banks want it. It’s a tough one to crack, but I'm right here with you when you do it," he told the audience.  Brock Pierce, who sits on the board of the Bitcoin Foundation and co-founded the startup GoCoin that has just relocated to the Isle of Man (and also, incidentally, appeared in several Hollywood films as a child star) said at the event that: "The Isle of Man is the new capital for bitcoin, at least for now."  That someone so closely linked with Bitcoin - he stepped in just before the collapse of Mt. Gox in an attempt to take it over and steer it from trouble, and is now helping to unpick what happened to the missing millions - has chosen to base his latest startup on the island, rather than his Los Angeles home, is telling.  Governments around the world are, by shutting out crypto-currency startups, providing the tiny island with an enormous opportunity. 
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+
+    #newGigyaShareSide { display: none !important; }
+
+
+ 
+
+
+
+
+
+
+Technology
+
+
+
+
+
+Currency »
+
+
+Technology News »
+
+
+Matthew Sparkes »
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .newGigyaShare { display: none !important; }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Read more from Telegraph Technology
+
+
+
+
+
+Robot art painting competition
+
+
+
+
+ 
+
+
+
+
+In pics: Teams from around world challenged to create a 'robot-ticelli'
+
+
+
+
+
+
+The 20 bestselling mobile phones
+
+
+
+
+ 
+
+
+
+
+The mobile industry may be locked in a bitter battle between Samsung and 
+  Apple, but history tells a very different story... 
+
+
+
+
+
+
+30 Android apps you should download now
+
+
+
+
+ 
+
+
+
+
+Just bought yourself a shiny new Android phone or tablet or upgrade to 
+  Marshmallow? Here are the apps you should download right away 
+
+
+
+
+
+
+The world's ten biggest Vine stars: In pictures
+
+
+
+
+ 
+
+
+
+
+As Twitter's Vine service turns three today, it has become a sensation in its 
+  own right, making celebrities out of its most popular users who create and 
+  share seven-second video clips. Here are the top 10 Viners 
+
+
+
+
+
+
+The Big Short hits UK cinemas: these are the best films about business
+
+
+
+
+ 
+
+
+
+
+The Big Short, the film adaptation of Michael Lewis' book of the same name 
+  about the causes of the financial crisis, opens in UK cinemas this weekend. 
+  How will the story stack up against the greatest films about business? 
+
+
+
+
+
+
+Top 10 films based on video games
+
+
+
+
+ 
+
+
+
+
+While films based on video games are notoriously rubbish, read on for the 10 
+  best actually worth watching, even if just for pure cringe factor
+
+
+
+
+
+
+Most important inventions of the 21st Century
+
+
+
+
+ 
+
+
+
+
+From the Apple iPod to Google driverless cars, we run down the technologies 
+  that have transformed our world since the start of the 21st century 
+
+
+
+
+
+
+Obsolete technologies that will baffle modern children: in pictures
+
+
+
+
+ 
+
+
+
+
+Many children have never seen or used a video tape, camcorder or floppy disc. 
+  Take a look at the gadgets which will puzzle younger people 
+
+
+
+
+
+
+From Colgate ready meals to Bic's disposable undies: the world's weirdest off-brand products
+
+
+
+
+ 
+
+
+
+
+Would you buy wine from jeans maker Diesel, disposable underwear from Bic or 
+  perfumes made by Zippo? Companies don't always get it right when launching 
+  entirely new product ranges. These are some of the odder attempts. 
+
+
+
+
+
+
+Street View: Funny images
+
+
+
+
+ 
+
+
+
+
+Google Street View users have picked up some amusing images.
+
+
+
+
+
+
+
+
+
+Advertisement
+
+		<!--
+			google_ad_client = 'ca-telegraph_uk_300x250';
+			google_ad_channel = 'technology';
+			google_max_num_ads = '3';
+			google_ad_output="js";
+			google_ad_type="text";
+			google_language="en";
+			google_encoding="utf8";
+			google_safe="high";
+			
+			
+			
+							google_hints="technology";
+												
+		// -->
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+
+     /* EPOCH time at the start of MPU Ad */
+     var mpuAdTimerStart = Date.now();
+  
+Advertisement
+
+
+
+	document.write(tmgAdsBuildAdTag("mpu", "300x250,300x600", "adj", "", 2));
+
+
+
+
+
+
+
+Top Technology Videos»
+
+
+
+
+
+
+
+
+
+
+Rise of a tech giant: the history of Google
+
+
+
+
+
+
+
+
+
+
+
+The history of Uber
+
+
+
+
+
+
+
+
+
+
+
+Skype invent robot that delivers groceries
+
+
+
+
+
+
+
+
+
+
+
+Forget standing desks: This office workstation lets you work lying down
+
+
+
+
+
+
+
+
+ 
+
+
+Instagram launches gif-like app Boomerang
+
+
+
+
+
+
+
+
+
+
+
+Now your iPhone will even weigh fruit
+
+
+
+ 
+
+
+
+
+Picture Galleries»
+
+
+
+
+
+
+
+ 
+
+
+Apple's iPhone: a history in pictures
+
+
+
+
+
+
+
+
+ 
+
+
+18 of Google's biggest failures: in pictures
+
+
+
+
+
+
+
+
+ 
+
+
+The best (and weirdest) gadgets of 2015
+
+
+
+
+
+
+
+
+ 
+
+
+First look at UK's driverless cars
+
+
+
+
+
+
+
+
+ 
+
+
+Most important inventions of the 21st Century
+
+
+
+
+
+
+
+
+ 
+
+
+Obsolete technologies that will baffle modern children: in pictures
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+More from the web
+
+
+
+
+
+
+
+
+
+
+     /* EPOCH time at the start of skyscraper Ad */
+     var startOfSkyscraper = Date.now();
+  
+Advertisement
+
+
+
+	document.write(tmgAdsBuildAdTag("hpg,sks,skl", "300x600,120x600,160x600", "adj", "", 2));
+
+
+
+Advertisement
+
+
+
+
+	document.write(tmgAdsBuildAdTag("yell", "300x150", "adj", "", 2));
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+More from the web
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				var expandMostCommentedArticles = false;
+				var expandMostSharedArticles = false;
+				var expandMostViewedArticlesTab = true;
+				var mostCommentedAccordionValue = 0;
+				var mostSharedAccordionValue = 1;
+				var mostViewedAccordionValue = 2;
+			
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+Technology choice
+
+
+
+
+
+
+ 
+
+
+iPhone 6s and 6s Plus rumours: all you need to know
+
+
+
+
+
+
+
+
+ 
+
+
+Seven tips to secure your iPhone from hackers
+
+
+
+
+
+
+
+
+ 
+
+
+How hackers took over my computer
+
+
+
+
+
+
+        var optaTeamLinkingCallback = function () {
+            var teamMapping = {
+                "team-3": "arsenal",
+                "team-7": "aston-villa",
+                "team-57": "watford",
+                "team-8": "chelsea",
+                "team-31": "crystal-palace",
+                "team-11": "everton",
+                "team-45": "norwich-city",
+                "team-13": "leicester-city",
+                "team-14": "liverpool",
+                "team-43": "manchester-city",
+                "team-1": "manchester-united",
+                "team-4": "newcastle-united",
+                "team-91": "bournemouth",
+                "team-20": "southampton",
+                "team-110": "stoke-city",
+                "team-56": "sunderland",
+                "team-80": "swansea-city",
+                "team-6": "tottenham-hotspur",
+                "team-35": "west-bromwich-albion",
+                "team-21": "west-ham"
+            };
+
+            var rugbyTeamMapping = {
+                "team-800": "argentina",
+                "team-100": "australia",
+                "team-953": "canada",
+                "team-550": "england",
+                "team-954": "fiji",
+                "team-650": "france",
+                "team-2850": "georgia",
+                "team-600": "ireland",
+                "team-952": "italy",
+                "team-3000": "japan",
+                "team-2900": "namibia",
+                "team-850": "newzealand",
+                "team-951": "romania",
+                "team-950": "samoa",
+                "team-700": "scotland",
+                "team-900": "southafrica",
+                "team-750": "tonga",
+                "team-2800": "uruguay",
+                "team-2950": "usa",
+                "team-500": "wales"
+            };
+
+            for (var team in teamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/football/teams/' + teamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+            for (var team in rugbyTeamMapping) {
+                $('.fixtures dl.matches dt.match span.' + team).
+                        add('.standings-container table tr.' + team + ' td.team').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .team-name').
+                        add('.fixtures-plus table tr.scoreline td.' + team + ' .relative-holder').each(function () {
+                            var textNode = $(this).contents().filter(function () {
+                                return ( this.nodeType === 3 );
+                            }).last();
+
+                            var link = document.createElement('a');
+                            var text = document.createTextNode(textNode.text());
+                            link.appendChild(text);
+                            link.setAttribute('class', 'opta-team-linking');
+                            link.setAttribute('href', 'http://www.telegraph.co.uk/sport/rugbyunion/international/' + rugbyTeamMapping[team]);
+                            link.onclick = function () {
+                                var menuSec = "opta-" + $('meta[name="GSASectionUniqueName"]').attr("content");
+                                $.cookie('tmg_navPos', menuSec, { path: '/', domain: 'telegraph.co.uk'});
+                            };
+
+                            textNode.replaceWith(link);
+                        });
+            }
+        };
+
+        
+
+
+
+More from the web
+
+
+
+
+
+
+
+
+ 
+					(function() { 
+			        var outbrainScriptTag = document.createElement('script'); 
+			        outbrainScriptTag.type = 'text/javascript'; 
+			        outbrainScriptTag.async = true; 
+			        outbrainScriptTag.id = "outbrain"; 
+			        outbrainScriptTag.src = 'http://widgets.outbrain.com/outbrain.js' ; 
+			        var s = document.getElementsByTagName('script')[0]; 
+			        s.parentNode.insertBefore(outbrainScriptTag, s); 
+					})(); 
+					
+
+
+                /* EPOCH time at the end of right hand column */
+                 var rightHandTimer=Date.now();
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+				US News
+
+
+
+
+ 
+
+
+
+
+                                Latest and breaking stories from the United States
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Film
+
+
+
+
+ 
+
+
+
+
+                                All the latest film trailers, reviews and features
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Barnebys
+
+
+
+
+ 
+
+
+
+
+                                The women behind the supercar industry
+
+
+
+                                View
+
+
+
+
+
+
+
+ 
+				Diesel Performance
+
+
+
+
+ 
+
+
+
+
+                                The innovative Shell V-Power Nitro+ Diesel
+
+
+
+                                View
+
+
+
+
+
+
+
+
+
+
+
+
+/* EPOCH time at the end of content Area */
+                var contentEndTimer = Date.now();
+
+Back to top
+
+
+
+
+HOME
+Technology News
+Technology Reviews
+Technology Advice
+
+Technology Video
+
+Internet Security
+Broadband
+
+ 
+Mobile Phones
+Samsung
+Nokia
+HTC
+
+Mobile Reviews
+
+App Reviews
+Telegraph for iPad
+
+ 
+Companies
+Apple
+Google
+Microsoft
+
+Facebook
+
+Twitter
+Amazon
+
+ 
+Video Games
+News
+Trailers
+Previews
+
+Xbox
+
+PlayStation
+Nintendo
+
+ 
+Contact us
+Privacy and Cookies
+Advertising
+Fantasy Football
+
+Tickets
+
+
+Announcements
+Reader Prints
+
+
+
+
+
+
+Follow Us
+Apps
+Epaper
+Expat
+
+
+Promotions
+Subscriber
+Syndication
+
+
+
+ 
+
+© Copyright of Telegraph Media Group Limited 2016
+Terms and Conditions 
+Today's News
+Archive
+Style Book
+Weather Forecast
+
+
+ 
+
+/* EPOCH time at the end of footer */
+                var footerEndTimer = Date.now();
+
+
+
+    g_opt_ch = '{}';g_opt_cv = '{}';g_opt_b = true;g_opt_s = true;
+
+var platforme = 'Facebook,Twitter,Pinterest,LinkedIn,Share,Email';
+
+
+    var s = document.createElement('script');
+    s.type='text/javascript';
+    s.src = "http://cdn.gigya.com/js/gigya.js?apikey=2_ASmwJuFXoCCY8YP8uB6mzZphj_UToZbQkeeM6bMOA8swtMk2P3Rwu2WSger_DOSt";
+    document.getElementsByTagName('head')[0].appendChild(s);
+
+    function onGigyaServiceReady(e) {
+        var s = document.createElement('script');
+        s.type='text/javascript';
+        s.src = "/template/ver1-0/js/shareTools1.js";
+        document.getElementsByTagName('head')[0].appendChild(s);
+	 	gigya.socialize.getProviderShareCounts({URL: 'www.telegraph.co.uk', callback:gigyaShareCountDisplay, context:{displayElementId:'shareCountId'} });
+	}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+			(function() {
+				var links = $("a[href*='disqus_thread']");
+				var query = "";
+				var blogQuery = "";
+				var normal = new Array();
+				var normalCounts = new Array();
+				var blog = new Array();
+				var blogCounts = new Array();
+
+				for(var i = 0; i < links.length; i++) {
+					if (links[i].getAttribute('dsqid')) {
+						var dsqid = links[i].getAttribute('dsqid');
+						if (links[i].className == 'dsqblog') { blogQuery += 'dsqid' + i + '=' + dsqid + '&'; } else { query += 'dsqid' + i + '=' + dsqid + '&'; }
+					}
+				}
+				if (query.length != "" && blogQuery.length != "") {
+					$("a[href*='disqus_thread']") && $("a.dsqblog").each(function(i) {
+						blog[i] = $(this).attr("href");
+						$(this).attr("href","blog_link");
+					});
+					loadScript("http://telegraphuk.disqus.com/get_num_replies_from_dsqid.js?" + query, function() {
+						$("a[href*='disqus_thread']").not(".dsqblog").each(function(i) {
+							normal[i] = $(this).attr("href");
+							normalCounts[i] = $(this).html();
+							$(this).attr("href","normal_link");
+						});
+
+						$("a[href*='blog_link']").each(function(i) { $(this).attr("href",blog[i]); });
+
+						loadScript("http://telegraphblogs.disqus.com/get_num_replies_from_dsqid.js?" + blogQuery, function() {
+							$("a[href*='normal_link']").each(function(i) { $(this).attr("href",normal[i]); });
+						});
+					});
+				} else {
+					document.write('<script charset="utf-8" type="text/javascript" src="http://.disqus.com/get_num_replies_from_dsqid.js?' + query + '"></' + 'script>');
+				}
+			})();
+		
+
+
+
+
+		var _sf_async_config={uid:22437,domain:"telegraph.co.uk"};
+
+		
+			_sf_async_config.sections = "Technology, Currency, Technology News, Matthew Sparkes";
+		
+			_sf_async_config.authors = "Matthew Sparkes";
+		
+
+		(function(){
+			function loadChartbeat() {
+			window._sf_endpt=(new Date()).getTime();
+			var e = document.createElement('script');
+			e.setAttribute('language', 'javascript');
+			e.setAttribute('type', 'text/javascript');
+			e.setAttribute('src',
+			(("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://") +
+			"static.chartbeat.com/js/chartbeat.js"); document.body.appendChild(e);
+		}
+		var oldonload = window.onload;
+		window.onload = (typeof window.onload != 'function') ?
+		loadChartbeat : function() { oldonload(); loadChartbeat(); }; })();
+	
+ 
+			var skimlinks_script = document.createElement('script'); 
+			    skimlinks_script.type = 'text/javascript'; 
+			    skimlinks_script.async = 'true';
+			    skimlinks_script.src = 'http://s.skimresources.com/js/296X680.skimlinks.js';
+			var skimlinks_script_attach = document.getElementsByTagName('script')[0]; 
+			skimlinks_script_attach.parentNode.insertBefore(skimlinks_script, skimlinks_script_attach.nextSibling); 
+		
+
+
+
+
+
+			 var pvar = { cid: "uk-101665h", content: "0", server: "secure-uk" };
+			 var feat = { surveys_enabled: 1 };
+			 var trac = nol_t(pvar, feat);
+			 trac.record().post().do_sample();
+		
+
+
+
+
+
+
+
+
+	document.write(tmgAdsBuildAdTag("inr", "1x1", "adj", "", 2));
+	document.write(tmgAdsBuildAdTag("tmg", "1x1", "adj", "", 2));
+	document.write(tmgAdsBuildAdTag("ftr", "1x1", "adj", "", 2));
+_satellite.pageBottom();
+
+
+    if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )) {
+
+        /*
+         Read Next Widget Data
+         */
+        var readNextArticleList = []
+;
+        var readNextCurrentArticleId = "11109256";
+
+        /*
+         Read Next Widget
+         */
+        var readNextWidget = (function(){
+
+            var settings = {
+                articleImage: "",
+                articleTitle: "",
+                articleUrl: "#",
+                articleId: "",
+                currentArticleId: "",
+                articleList: [],
+                articleListToSkip: [],
+                readNextCookieName: "tmg_read_next",
+                openButton: "#readNextOpen a",
+                closeButton: "#closeBtn a",
+                articleContainer: "#readNextArticleContainer",
+                widgetContainer: "#readNextWidget",
+                displayThumbnail: false,
+                panelOpen: false,
+                autoOpen: true
+            };
+
+            var renderTemplate = function() {
+                var template = '<div id="readNextWidget" style="display:none">' +
+                        '<div id="readNextOpen"><div class="topBar"></div><div id="readNextOpenInner"><a href="' + settings.articleUrl + '"><span>Next Story</span><span class="icn"></span></a></div></div>' +
+                        '<div id="readNextArticleContainer" style="display:none">' +
+                        '<div id="nextArticle"><div class="topBar"></div>' +
+                        '<div id="nextArticleWrapper">'+
+                        '<div id="nextArticleInnerWrapper">'+
+                        '<p id="readNextLabel">MOST VIEWED IN NEWS</p>';
+                        
+				if(settings.articleImage && settings.articleImage!="null" && settings.displayThumbnail){
+					template = template + '<a id="nextPageThumbnail" href="' + settings.articleUrl + '"><img src="'+ settings.articleImage +'"/></a>';
+				}
+                        
+				template = template + '<a id="nextPageTitle" href="' + settings.articleUrl + '"><span>' + settings.articleTitle + '</span></a></div></div>' +
+                        '</div>' +
+                        '<div id="closeBtn"><div class="topBar"></div><a href="#"><span></span></a></div>' +
+                        '</div>' +
+                        '<iframe style="border:none;position:absolute;top:0;left:0; height:100%;width:100%;z-index:-1;" id="iefix" src="about:blank"></iframe>' + //fix for IE bug
+                        '</div>';
+                return template;
+            };
+
+
+            var init = function(currentArticleId, articleList, displayThumbnail) {
+
+                settings.articleList = articleList;
+                settings.currentArticleId = currentArticleId;
+                settings.displayThumbnail = displayThumbnail;
+
+                settings.articleListToSkip = unescape($.cookie(settings.readNextCookieName)).split(',');
+
+                if ($.cookie(settings.readNextCookieName) != null) {
+                    chooseNextArticle(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                    updateCookieBasedOnArticleList(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                } else {
+                    chooseNextArticle(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                    createCookieBasedOnArticleList(settings.currentArticleId, settings.articleList, settings.articleListToSkip);
+                }
+
+
+                if (settings.articleId != "") {
+
+                    $(renderTemplate()).appendTo("body");
+
+                    $("#nextArticleWrapper a, #readNextOpenInner a").click(function () {
+                        _gaq.push(['_trackEvent', 'wayfarer_read_next', 'click_headline', 'version_1']);
+
+                        getNavPos($(this).attr("href"), "wayfarerReadNext");
+                    });
+
+                    bindUIActions();
+
+                    var displayed = false;
+
+                    setTimeout(function () {
+                        if (!displayed) {
+                            displayed == true;
+                            readNextWidget.display();
+                        }
+
+                    }, 10000);
+
+                    $(window).scroll(function () {
+                        if (isScrolledIntoView("#tmg-related-links")) {
+                            if (!displayed) {
+                                displayed == true;
+                                readNextWidget.display();
+                            }
+                        }
+
+                        if(isScrolledIntoView("#shareBottom") || isScrolledIntoView("#newGigyaShareBottom")) {
+                            if(settings.autoOpen) {
+                                openArticleContainer();
+                            }
+                        }
+
+                        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                            if(settings.autoOpen) {
+                                openArticleContainer();
+                            }
+                        }
+                    });
+                }
+            };
+
+            var display = function () {
+                $(settings.widgetContainer).fadeIn(2000, function () {
+                    //animation complete
+                    _gaq.push(['_trackEvent', 'wayfarer_read_next', 'display_closed', 'version_1']);
+                });
+            };
+
+            var bindUIActions = function () {
+                $(settings.openButton).mouseenter(function (event) {
+                    event.preventDefault();
+                    _gaq.push(['_trackEvent', 'wayfarer_read_next', 'hover_closed', 'version_1']);
+                    openArticleContainer();
+                });
+                $(settings.widgetContainer).mouseleave(function (event) {
+                    event.preventDefault();
+                    closeArticleContainer();
+                });
+                $(settings.closeButton).click(function (event) {
+                    event.preventDefault();
+                    _gaq.push(['_trackEvent', 'wayfarer_read_next', 'click_close', 'version_1']);
+                    updateCookie(settings.articleId, settings.articleListToSkip);
+                    closeArticleContainer();
+                    settings.autoOpen = false;
+                });
+            };
+
+            var openArticleContainer = function () {
+                if (!settings.panelOpen) {
+                	$("#readNextArticleContainer").show();//show/hide because height is calculated incorrectly for elements with display:none
+                    $("#readNextArticleContainer").hide();
+                    $(settings.articleContainer).toggle('slide', {direction: 'left'}, function () {
+                        //animation complete
+                        _gaq.push(['_trackEvent', 'wayfarer_read_next', 'display_open', 'version_1']);
+                    });
+                    settings.panelOpen = !settings.panelOpen;
+                    settings.autoOpen = false; //set auto open to false once user has viewed this once
+                }
+                return false;
+            };
+
+            var closeArticleContainer = function () {
+                if (settings.panelOpen) {
+                    $(settings.articleContainer).toggle('slide', {direction: 'left'}, function () {
+                        //animation complete
+                    });
+                    settings.panelOpen = !settings.panelOpen;
+                }
+                return false;
+            };
+
+
+            var isScrolledIntoView = function(elem) {
+                if($(elem).length) { //check if element exists
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+
+                    var elemTop = $(elem).offset().top;
+                    var elemBottom = elemTop + $(elem).height();
+
+                    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+                } else {
+                    return false;
+                }
+            };
+
+            var unique = function(array) {
+                return array.filter(function (el, index, arr) {
+                    return index == arr.indexOf(el);
+                });
+            }
+
+            var createCookieBasedOnArticleList = function(currentArticleId, articleList, articleListToSkip) {
+                articleList.some(function (article) {
+                    if (article.id == currentArticleId) {
+                        articleListToSkip[0] = currentArticleId;
+                        $.cookie(settings.readNextCookieName, escape(articleListToSkip.join(',')), {path: '/', expires: 1, domain: 'telegraph.co.uk'});
+                        return true;
+                    }
+                });
+            }
+
+            var updateCookieBasedOnArticleList = function(currentArticleId, articleList, articleListToSkip) {
+                articleList.some(function (article) {
+                    if (article.id == currentArticleId) {
+                        updateCookie(currentArticleId, articleListToSkip);
+                        return true;
+                    }
+                });
+            }
+
+            var updateCookie = function(articleIdToSkip, articleListToSkip) {
+                articleListToSkip.push(articleIdToSkip);
+                articleListToSkip = unique(articleListToSkip);
+                $.cookie(settings.readNextCookieName, escape(articleListToSkip.join(',')), {path: '/', expires: 1, domain: 'telegraph.co.uk'});
+            }
+
+            var chooseNextArticle = function (currentArticleId, articleList, articleListToSkip) {
+                articleList.some(function (article) {
+                    if ((article.id != currentArticleId) && ($.inArray(article.id, articleListToSkip) === -1)) {
+
+                        //set article
+                        settings.articleTitle = article.title;
+                        settings.articleUrl = article.url;
+                        settings.articleId = article.id;
+						settings.articleImage = article.imgUrl;
+                        return true;
+                    }
+                });
+            }
+
+            //public API
+            return {
+                settings: settings,
+                init: init,
+                display: display,
+                openArticleContainer: openArticleContainer,
+                closeArticleContainer: closeArticleContainer
+            }
+        })();
+
+    };
+
+
+
+

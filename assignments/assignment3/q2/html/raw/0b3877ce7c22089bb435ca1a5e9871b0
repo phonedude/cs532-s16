@@ -1,0 +1,331 @@
+http://tyznik.com/thrones/
+<!doctype html>
+<html>
+
+<!--
+
+Tyznik.com
+Copyright Michael Tyznik 2012
+
+Utilizes Less Framework as basis for dynamic CSS
+http://lessframework.com
+
+-->
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>Game of Thrones transit maps — Michael Tyznik</title>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="stylesheet" media="all" href="/tyznik.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/jquery.easing.1.3.js"></script>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-3555383-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+			<meta property="fb:admins" content="21408331" />
+	</head>
+	
+	<body lang="en">
+		<header>
+			<h1><a href="/">Michael Tyznik</a></h1>
+			<nav>
+				<ul id="menu">
+					<li id="branding-menuitem">Branding</li>
+					<li id="graphics-menuitem">Graphics</li>
+					<li id="maps-menuitem">Maps</li>
+					<li id="environment-menuitem">Environmental</li>
+					<li id="about-menuitem">About</li>
+				</ul>	
+				<div class="spacer"></div>
+				<div id="thumbscontainer">
+					<div class="topshadow"></div>
+					
+					<ul class="projectthumbs" id="branding-thumbs">
+						<li><a href="/monsoon">
+							<img src="/projectthumbs/monsoon_thumb.jpg" /><br />
+							Monsoon</a></li>
+						<li><a href="/lovesac">
+							<img src="/projectthumbs/lovesac_thumb.png" /><br />
+							Lovesac</a></li>
+						<li><a href="/glow">
+							<img src="/projectthumbs/glow_thumb.jpg" /><br />
+							Glow</a></li>
+						<li><a href="/accessorize">
+							<img src="/projectthumbs/accessorize_thumb.png" /><br />
+							Accessorize</a></li>
+						<li><a href="/locale">
+							<img src="/projectthumbs/locale_thumb.jpg" /><br />
+							Locale</a></li>
+						<li><a href="/eura">
+							<img src="/projectthumbs/eura_thumb.png" /><br />
+							Eura Collection</a></li>
+					</ul>
+					
+					<ul class="projectthumbs" id="graphics-thumbs">
+						
+						<li><a href="/currency">
+							<img src="/projectthumbs/currency_thumb.jpg" /><br />
+							US currency redesign</a></li>
+						<li><a href="/feetfirst">
+							<img src="/projectthumbs/feetfirst_thumb.jpg" class="shadow" /><br />
+							Feetfirst catalogue</a></li>
+						<li><a href="/highstreet">
+							<img src="/projectthumbs/highstreet_thumb.jpg" /><br />
+							HighStreet Cincinnati</a></li>
+						<li><a href="/triptychs">
+							<img src="/projectthumbs/triptychs_thumb.jpg" /><br />
+							Architect triptychs</a></li>
+						<!--<li><a href="/monato">
+							<img src="/projectthumbs/monato_thumb.jpg" class="shadow" /><br />
+							<em>Monato</em> redesign</a></li>-->
+					</ul>
+					<ul class="projectthumbs" id="maps-thumbs">
+						<li><a href="/elderscrolls">
+							<img src="/projectthumbs/elderscrolls_thumb.png" /><br />
+							Elder Scrolls transit map</a></li>
+						<li><a href="/thrones">
+							<img src="/projectthumbs/thrones_thumb.png" /><br />
+							Game of Thrones transit maps</a></li>
+						<li><a href="/typomaps">
+							<img src="/projectthumbs/typomaps_thumb.jpg" class="shadow" /><br />
+							Typographic transit maps</a></li>
+						<li><a href="/columbustransit">
+							<img src="/projectthumbs/columbusmap_thumb.jpg" /><br />
+							Columbus transit maps</a></li>
+						<li><a href="/cincinnati">
+							<img src="/projectthumbs/cincinnati_thumb.png" /><br />
+							Cincinnati rail map 2031</a></li>
+					</ul>
+					<ul class="projectthumbs" id="environment-thumbs">
+						<li><a href="/urban">
+							<img src="/projectthumbs/urban_thumb.jpg" /><br />
+							Urban Outfitters</a></li>
+						<li><a href="/halmtorvet">
+							<img src="/projectthumbs/halmtorvet_thumb.jpg" /><br />
+							Halmtorvet basketball court</a></li>
+						<li><a href="/cranbrook">
+							<img src="/projectthumbs/cranbrook_thumb.jpg" /><br />
+							Cranbrook spa</a></li>
+						<li><a href="/mmsworld">
+							<img src="/projectthumbs/mmsworld_thumb.jpg" /><br />
+							M&amp;M&rsquo;s character storytelling</a></li>
+						<li><a href="/library">
+							<img src="/projectthumbs/library_thumb.jpg" /><br />
+							Clifton branch library</a></li>
+						<li><a href="/hyatt">
+							<img src="/projectthumbs/hyatt_thumb.jpg" /><br />
+							Hyatt Waikiki signage</a></li>
+						<li><a href="/busstop">
+							<img src="/projectthumbs/busstop_thumb.jpg" /><br />
+							Bus stop signage</a></li>
+						<!--<li><a href="/musicbox">
+							<img src="/projectthumbs/musicbox_thumb.jpg" /><br />
+							Music box</a></li>
+						<li><a href="/fernald">
+							<img src="/projectthumbs/fernald_thumb.jpg" /><br />
+							Fernald Preserve exhibit</a></li>
+						<li><a href="/library">
+							<img src="/projectthumbs/stair_thumb.jpg" class="shadow" /><br />
+							9-square stair</a></li>
+						<li><a href="/northside">
+							<img src="/projectthumbs/northside_thumb.jpg" /><br />
+							Northside block</a></li>
+						<li><a href="/drafting">
+							<img src="/projectthumbs/drafting_thumb.jpg" class="shadow" /><br />
+							Architectural drafting</a></li>-->
+					</ul>
+
+					<ul class="projectthumbs" id="etc-thumbs">
+						<!--><li><a href="/archphotos">
+							<img src="/projectthumbs/archphotos_thumb.jpg" /><br />
+							Architecture photography</a></li>-->
+						<!--<li><a href="/partyphotos">
+							<img src="/projectthumbs/partyphotos_thumb.jpg" /><br />
+							Party photography</a></li>-->
+					</ul>
+					
+					<ul class="projectthumbs" id="about-thumbs">
+						<li><a href="http://www.inprnt.com/gallery/noktulo/"><img src="/inprnt_icon.png" style="width: 64px" />Art Prints Shop</a></li>
+					<li><a href="http://linkedin.com/in/tyznik"><img src="/linkedin_icon.png" style="width: 23px" />LinkedIn</a></li>
+						<li><a href="http://tyznik.com/tyznik_resume.pdf"><img src="/resume_icon.png" style="width: 25px" />Résumé</a></li>
+						<li><script type="text/javascript">
+						document.write("<n uers=\"znvygb:zvpunry@glmavx.pbz\">".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
+						</script><img src="/email_icon.png" style="width: 32px" />Contact</a></li>
+					</ul>
+				<div class="spacer"></div>
+				</div>
+			</nav>
+		</header>		<div id="content">
+	<p>
+		<img src="/projectimages/thrones-header.jpg" class="fullwidth"><br>
+	</p>
+	<div class="projectdesc">
+		<h1>
+			Game of Thrones Transit Maps
+		</h1>
+		<p>Inspired by the work of <a href="http://cambooth.net">Cameron Booth</a> and his awesome <a href="http://transitmaps.tumblr.com">Transit Maps Tumblr</a>, I created these rail maps of Westeros and The Known World. Hopefully fans will notice some small touches — the closed stations along the Wall Line, for example.</p>
+		<p><strong>Prints of the maps are available starting at $40 at inPRNT: <a href="http://www.inprnt.com/gallery/noktulo/westeros-transit-map/">Westeros</a> and <a href="http://www.inprnt.com/gallery/noktulo/the-known-world-transit-map/">The Known World</a>. For European delivery, prints are also available in multiple languages at <a href="http://www.artflakes.com/en/shop/tyznik">Artflakes</a>. You can also view the maps at high resolution on my Flickr: <a href="https://www.flickr.com/photos/noktulo/14758448386/in/photostream/">Westeros</a> and <a href="https://www.flickr.com/photos/noktulo/14779084044/in/photostream/">The Known World</a>.</strong></p>
+		<p>Featured by <a href="http://www.theverge.com/2014/8/7/5979959/this-is-the-world-of-game-of-thrones-as-a-subway-map">The Verge</a>, <a href="http://www.escapistmagazine.com/news/view/136745-Game-of-Thrones-World-Recreated-as-Transit-Maps">The Escapist</a>, <a href="http://www.theguardian.com/books/2014/aug/07/game-of-thrones-rail-network-map-westeros-michael-tyznik-george-rr-martin">The Guardian</a>, <a href="http://mashable.com/2014/08/10/game-of-thrones-transit-map/">Mashable</a>, <a href="http://bgr.com/2014/08/08/game-of-thrones-subway-map/">Boy Genius Report</a>, <a href="http://www.polygon.com/2014/8/8/5983167/game-of-thrones-subway-map">Polygon</a>, <a href="http://www.buzzfeed.com/tomphillips/game-of-thrones-rail-maps">Buzzfeed</a>, <a href="http://www.fastcodesign.com/3034015/game-of-thrones-is-now-a-subway-map">Fast Company</a>, <a href="http://www.cnet.com/news/detailed-rail-transit-maps-of-game-of-thrones-locations/">Cnet</a>, <a href="http://kotaku.com/game-of-thrones-subway-map-is-a-handy-guide-to-westeros-1617310891">Kotaku</a>, <a href="http://www.mtv.com/news/1887877/game-of-thrones-subway-map/">MTV</a>, <a href="http://www.washingtonpost.com/news/morning-mix/wp/2014/08/04/getting-around-the-world-of-game-of-thrones-by-train/">The Washington Post</a>, <a href="http://jezebel.com/lets-irrationally-obsess-over-this-transit-system-map-o-1619280483">Jezebel</a>, <a href="http://www.gizmodo.co.uk/2014/08/game-of-thrones-underground-map-is-a-handy-guide-to-westeros-travel/">Gizmodo</a>, <a href="http://www.vanityfair.fr/actualites/le-monde-de-VF/articles/game-of-thrones-le-reseau-ferre-imaginaire-comme-si-vous-y-etiez/15203">Le Monde de <em>Vanity Fair</em></a>, <a href="http://www.dailyrecord.co.uk/news/scottish-news/august-11-daily-record-breakfast-4034568">The Daily Record</a>, and the <a href="http://transitmaps.tumblr.com/post/93123236830/westeros-tyznik">Transit Maps Tumblr</a>. Shortlisted for the <a href="http://www.informationisbeautifulawards.com/showcase/547-game-of-thrones-transit-map">2014 Information Is Beautiful Awards</a>.</p>
+		<div class="spacer"></div>
+	</div>
+	<p>
+		<img src="/projectimages/thrones-westeros.png" class="fullwidth">
+	</p>
+	<p>
+		<img src="/projectimages/thrones-kingslanding.png" class="fullwidth">
+	</p>
+	<div>
+		<p class="left">
+			<img src="/projectimages/thrones-ironislands.png" class="halfwidth">
+		</p>
+		<p class="right">
+			<img src="/projectimages/thrones-slaversbay.png" class="halfwidth">
+		</p>
+		<div class="spacer"></div>
+	</div>
+	<p>
+		<img src="/projectimages/thrones-world.png" class="fullwidth">
+	</p>
+	<p>
+		<img src="/projectimages/thrones-north2.png" class="fullwidth">
+	</p>
+	<p>
+		<img src="/projectimages/thrones-key.png" class="fullwidth">
+	</p>
+	<p style="text-align: center">
+		<a href="http://www.informationisbeautifulawards.com/showcase/547-game-of-thrones-transit-map"><img src="/IIB-awards-shortlist.png"></a>
+	</p>
+	
+</div>
+
+		
+		
+<footer>
+	<p id="backtotop">&uarr; Back to top</p>
+	<p>&copy; 2016 Michael Tyznik</p>
+	<div class="spacer"></div>
+</footer>
+<script type="text/javascript">
+
+function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
+
+$(document).ready(function() {
+	
+	
+	// BACK TO TOP
+	
+	$('#backtotop').click(function() {
+		$('body,html').animate({scrollTop:0},1000,'easeOutQuad');
+		
+	});
+	
+
+	// RETINA IMAGE REPLACEMENT
+	
+	var retina = window.devicePixelRatio > 1 ? true : false;
+	if (retina) {
+		$('img').each(function() {
+			
+			var src = $(this).attr('src');
+			var ext = src.substring(src.length-3,src.length);
+			src = src.substring(0,src.length-4)+'_2x.'+ext;
+			
+			if ( UrlExists(src) ) {
+				$(this).attr('src',src);
+			}
+			
+			
+		});
+	}
+	
+
+	// MENU SCRIPT
+	
+	var menuOpen = false;
+	var currentSection = '';
+	
+	$('#menu li').click(function() {
+		
+		
+		// Get section name
+		
+		var section = $(this).attr('id');
+		section = section.substring(0,section.length-9);
+		
+		
+		// If the menu is already open
+		
+		if ( menuOpen == true ) {
+			
+			
+			// If this section is already open, close the menu
+			
+			if ( currentSection == section ) {
+				
+				menuOpen = false;
+				currentSection = '';
+				$('#menu li').removeClass('active');
+				$('#thumbscontainer').stop().slideUp(1000,'easeInOutCirc',function() {
+					$('.projectthumbs').hide();							
+				});
+			
+			}
+			
+			
+			// If this section is not already open, close the current section and open the new one
+			
+			else {
+				
+				$('#menu li').removeClass('active');
+				$(this).addClass('active');
+				$('#'+currentSection+'-thumbs').stop().slideUp(500,'easeInOutCirc',function() {
+					currentSection = section;
+					$('#'+currentSection+'-thumbs').stop().slideDown(500,'easeInOutCirc');
+				});
+				
+			}
+		}
+		
+		
+		// If the menu isn't open yet
+		
+		else {
+			
+			menuOpen = true;
+			currentSection = section;
+			$(this).addClass('active');
+			$('#'+currentSection+'-thumbs').show(0,function() {
+				$('#thumbscontainer').stop().slideDown(1000,'easeInOutCirc');
+			});
+			
+		}
+		
+		
+	});
+	
+});
+
+
+
+</script>	
+
+</body>
+
+</html>

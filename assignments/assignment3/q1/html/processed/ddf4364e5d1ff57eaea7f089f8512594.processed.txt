@@ -1,0 +1,416 @@
+http://dashradio.com/?play=139
+
+
+
+
+ 
+
+
+
+Dash Radio
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/dashradio.com\/app\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		
+img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-53969906-1', 'auto');
+  ga('send', 'pageview');
+
+
+
+			// check if dev mode is active
+			var devMode = "";
+
+			// important templateDirectory & homeDirectory var for jQuery
+			var templateDir = "http://dashradio.com/app/wp-content/themes/dash-1.4.5";
+			var homeDir = "http://dashradio.com";
+
+			// store the current song xmls
+			var currentSongURLs = [{"station":15952,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH60.xml"},{"station":15951,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH57.xml"},{"station":15950,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH25.xml"},{"station":15948,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH73.xml"},{"station":15947,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH76.xml"},{"station":15946,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH78.xml"},{"station":15945,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH80.xml"},{"station":15944,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH43.xml"},{"station":15943,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH28.xml"},{"station":15942,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH63.xml"},{"station":15941,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH72.xml"},{"station":15940,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH64.xml"},{"station":15939,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH62.xml"},{"station":15938,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH67.xml"},{"station":15937,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH27.xml"},{"station":15936,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH65.xml"},{"station":15935,"url":"xhttp:\/\/54.191.183.105\/~uploads\/newsletter\/DASH70.xml"},{"station":15934,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH16.xml"},{"station":15933,"url":"https:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH54.xml"},{"station":15932,"url":"https:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH55.xml"},{"station":15931,"url":"https:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH50.xml"},{"station":15930,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH66.xml"},{"station":15929,"url":"https:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH40.xml"},{"station":15928,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH52.xml"},{"station":15927,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH81.xml"},{"station":15926,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH10.xml"},{"station":15925,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH56.xml"},{"station":15924,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH4.xml"},{"station":15923,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH51.xml"},{"station":15922,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH33.xml"},{"station":15921,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH26.xml"},{"station":15920,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH20.xml"},{"station":15919,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH11.xml"},{"station":15918,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH6.xml"},{"station":15917,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH5.xml"},{"station":15916,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH8.xml"},{"station":15915,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH1.xml"},{"station":15914,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH48.xml"},{"station":15913,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH46.xml"},{"station":15912,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH45.xml"},{"station":15911,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH42.xml"},{"station":15910,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH44.xml"},{"station":15909,"url":"http:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH79.xml"},{"station":15908,"url":"https:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH39.xml"},{"station":15907,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH22.xml"},{"station":15906,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH3.xml"},{"station":15905,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH2.xml"},{"station":15904,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH13.xml"},{"station":15903,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH35.xml"},{"station":15902,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH21.xml"},{"station":15901,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH24.xml"},{"station":15900,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH32.xml"},{"station":15899,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH31.xml"},{"station":15898,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH12.xml"},{"station":15897,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH14.xml"},{"station":15896,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH7.xml"},{"station":15895,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH30.xml"},{"station":15894,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH17.xml"},{"station":15893,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH23.xml"},{"station":15892,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH9.xml"},{"station":15891,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH41.xml"},{"station":15890,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH19.xml"},{"station":15889,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH18.xml"},{"station":15888,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH15.xml"},{"station":15887,"url":"https:\/\/streamdb6web.securenetsystems.net\/player_status_update\/DASH29.xml"},{"station":15886,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH36.xml"},{"station":15885,"url":"https:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH38.xml"},{"station":15884,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH34.xml"},{"station":15883,"url":"http:\/\/streamdb5web.securenetsystems.net\/player_status_update\/DASH37.xml"}];
+
+			// store password reset page id
+			var passwordResetID = 7486; // real
+			if ( devMode === '1' ) { passwordResetID = 2290; } // localhost
+
+			// jwplayer license key
+			jwplayer.key="9HdQTRlNqjcZK0h9Pe2CwFpV5D14bnDZrBuwNw==";
+
+			// google analytics	
+			var gaID = 'UA-53969906-1'; // real
+			if ( devMode === '1' ) { gaID = 'UA-63237401-1'; } // localhost
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', gaID]);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		
+(function() {
+		  var _fbq = window._fbq || (window._fbq = []);
+		  if (!_fbq.loaded) {
+		    var fbds = document.createElement('script');
+		    fbds.async = true;
+		    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+		    var s = document.getElementsByTagName('script')[0];
+		    s.parentNode.insertBefore(fbds, s);
+		    _fbq.loaded = true;
+		  }
+		  _fbq.push(['addPixelId', '445601575616809']);
+		})();
+		window._fbq = window._fbq || [];
+		window._fbq.push(['track', 'PixelInitialized', {}]);
+		
+
+
+			adroll_adv_id = "HAPRTQPR4JAABLJQUVL2RR";
+			adroll_pix_id = "IVJCH64AO5CM5MJ4H3RFCX";
+			(function () {
+			var oldonload = window.onload;
+			window.onload = function(){
+			   __adroll_loaded=true;
+			   var scr = document.createElement("script");
+			   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+			   scr.setAttribute('async', 'true');
+			   scr.type = "text/javascript";
+			   scr.src = host + "/j/roundtrip.js";
+			   ((document.getElementsByTagName('head') || [null])[0] ||
+			    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+			   if(oldonload){oldonload()}};
+			}());
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Cancel
+
+
+
+
+
+Press CTRL / CMD + C to copy the link!
+
+Done!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dash Radio
+Dash Radio, Inc.
+FREE on Google Play
+
+
+VIEW
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dash Radio
+Dash Radio, Inc.
+FREE at Amazon
+
+
+VIEW
+
+
+
+
+
+
+ You are using an out-dated browser! For the full Dash Experience please update your browser now!
+
+
+
+
+
+Hey there!Login or create an account now to save your preset dashboard & enter contests!
+In order to sign in please make sure your browser is set to accept cookies.
+
+Login with Facebook
+Login with Twitter
+Or sign in via Email
+
+
+
+
+
+
+
+Forgot your password?
+Join Dash
+Sign In
+
+Use Facebook or Twitter
+
+By signing up, you agree to Dash Radio's Terms and conditions of Use, and Privacy Policy.
+No thanks, I don't want to create an account.
+
+
+
+
+
+
+Almost Done!Complete account setup & start listening!
+
+
+
+
+
+Start listening!
+
+By signing up, you agree to Dash Radio's Terms and conditions of Use, and Privacy Policy.
+No thanks, I don't want to create an account.
+
+
+
+
+
+
+E-Mail Verification
+Please Enter A Valid E-Mail To Proceed.
+
+
+
+
+Sign In
+Please enter a valid email address!
+
+
+
+
+
+
+
+
+
+
+
+Change password
+Log out
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Welcome!
+Join Dash or Sign In
+
+
+
+
+My DashboardAll StationsDJs & Hosts
+ 
+
+More
+
+AboutContactTroubleshootingContest RulesPrivacy PolicyTerms Of Service 
+
+ 
+
+Get the Dash Radio App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright © 2016 Dash Radio.
+All Rights Reserved.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+All Stations 
+Display OptionsNow PlayingFilterFeaturedGenreAll GenresAll (Open Format)ChillClassicalCountryDecadesDiscoveryElectronicFaith & GospelFunk/SoulGamingHip HopHip Hop + R&B;Indie/AlternativeIslandJazzK-PopLatinoMeditationMovie MusicPopPunk Thrash MetalR&B;ReggaeRhythm & GangstaRockRomanceTalkSort byMy OrderGenreABCDashboard OptionsAdd StationEdit DashboardBest Of DashAll (Open Format)Loading...PlayStopInfoFader 100All (Open Format)Loading...PlayStopInfoManhattanAll (Open Format)Loading...PlayStopInfoDash 1All (Open Format)Loading...PlayStopInfoG Pen RadioAll (Open Format)Loading...PlayStopInfoOdd Future Radio ®All (Open Format)Loading...PlayStopInfoSkee 24/7 ®All (Open Format)Loading...PlayStopInfoIsland BlockIslandLoading...PlayStopInfo1234 WorldAll (Open Format)Loading...PlayStopInfoCadillacc MusicRhythm & GangstaLoading...PlayStopInfoLos AnarchyPunk Thrash MetalLoading...PlayStopInfoEast Village RadioAll (Open Format)Loading...PlayStopInfoElectro CityElectronicLoading...PlayStopInfoMain StagePopLoading...PlayStopInfoXXL ®Hip HopLoading...PlayStopInfoDash AlternativeIndie/AlternativeLoading...PlayStopInfoRed CupCountryLoading...PlayStopInfoThe CityHip Hop + R&B;Loading...PlayStopInfoReggae KingReggaeLoading...PlayStopInfoThe BridgeFaith & GospelLoading...PlayStopInfoConcertoClassicalLoading...PlayStopInfoMultiplayerGamingLoading...PlayStopInfoThe Shane Show ®TalkLoading...PlayStopInfoHot Button RadioTalkLoading...PlayStopInfoRememberAll (Open Format)Loading...PlayStopInfoYG PresentsK-PopLoading...PlayStopInfoQuiet MelonMeditationLoading...PlayStopInfoSubdustrialElectronicLoading...PlayStopInfoIndependent Grind ®Hip HopLoading...PlayStopInfoThe Cut ®Hip HopLoading...PlayStopInfoSpace BassElectronicLoading...PlayStopInfoPress PlayPopLoading...PlayStopInfoThe LabChillLoading...PlayStopInfoThe RanchCountryLoading...PlayStopInfoMoonlightR&B;Loading...PlayStopInfoThe CrossFaith & GospelLoading...PlayStopInfoCoolJazzLoading...PlayStopInfoBeat Junkie RadioHip HopLoading...PlayStopInfoMonstercatElectronicLoading...PlayStopInfoBump & GrindR&B;Loading...PlayStopInfoPure Soul Powered By Isaac HayesFunk/SoulLoading...PlayStopInfoDash IndieIndie/AlternativeLoading...PlayStopInfoFuegoLatinoLoading...PlayStopInfoRinse FMElectronicLoading...PlayStopInfoReventonLatinoLoading...PlayStopInfoParadise CityRockLoading...PlayStopInfo11RockLoading...PlayStopInfoZoeticElectronicLoading...PlayStopInfoY2KDecadesLoading...PlayStopInfoCommunity PoolAll (Open Format)Loading...PlayStopInfoRadio ImperioLatinoLoading...PlayStopInfoLOUD ®PopLoading...PlayStopInfoNative Rhymes ®Hip HopLoading...PlayStopInfoThe StripRockLoading...PlayStopInfoWhat The FunkFunk/SoulLoading...PlayStopInfo90'sDecadesLoading...PlayStopInfoCinescoreMovie MusicLoading...PlayStopInfo80'sDecadesLoading...PlayStopInfoDiscoverDiscoveryLoading...PlayStopInfo1580 ®Hip HopLoading...PlayStopInfoEuphoriaChillLoading...PlayStopInfo70'sDecadesLoading...PlayStopInfoLa IslaIslandLoading...PlayStopInfoLove SongsRomanceLoading...PlayStopInfoThe OldiesDecadesLoading...PlayStopInfoDisco FeverDecadesLoading...PlayStopInfoRatpackDecadesLoading...PlayStopInfoiCraft RadioHip Hop + R&B;Loading...PlayStopInfoBREALTVHip HopLoading...PlayStopInfoYour Dashboard is empty!Add a StationOr choose your favorite genres and we'll choose the stations for you!All (Open Format)ChillClassicalCountryDecadesDiscoveryElectronicFaith & GospelFunk/SoulGamingHip HopHip Hop + R&B;Indie/AlternativeIslandJazzK-PopLatinoMeditationMovie MusicPopPunk Thrash MetalR&B;ReggaeRhythm & GangstaRockRomanceTalkAuto-FillPlease login or sign up to create your own dashboard!Join Dash or Sign In
+
+
+
+
+
+
+
+Now Playing
+
+
+
+
+ 
+ 
+ 
+ 
+
+ 
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <![CDATA[ */
+var stationsAjax = {"ajaxurl":"http:\/\/dashradio.com\/app\/wp-admin\/admin-ajax.php","security":"5c31b64518"};
+/* ]]> */
+
+
+
+

@@ -1,0 +1,1260 @@
+https://www.999dice.com/default.aspx
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><meta charset="UTF-8" /><title>
+	99.9% Dice - Bitcoin, Dogecoin & Litecoin Gambling
+</title><meta name="description" content="99.9% Dice is a provably fair casino funded by Bitcoins with a house edge of 0.1% and a 50/50 split referral program. Now with Dogecoins &amp; Litecoins." /><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--[if lt IE 8]><script src="/Scripts/json2.min.js"></script><![endif]-->
+    
+    <script src="/js1?v=yAhPCnuWQmZlKkWurAEr0qnCz1NcNVwa6F5OHDvpwyQ1"></script>
+<link href="/css1?v=hn25wJ-WyuhPGFRBxronCYY0WBUxdjX_P4Ntu7wIRsM1" rel="stylesheet"/>
+
+
+    <!--[if IE 9]><link href="/css/999ie9.css" rel="stylesheet" /><![endif]-->
+    <!--[if lt IE 9]><link href="/css/999ie8.css" rel="stylesheet" /><![endif]-->
+    <!--[if lt IE 8]><link href="/css/999ie7.css" rel="stylesheet" /><![endif]-->
+
+    <!--[if lt IE 9]><script src="/Scripts/respond.min.js"></script><![endif]-->    
+</head>
+<body>
+
+    
+        <script src="/signalr/hubs"></script>
+        
+        <script src="/js2?v=ZuUoTTpjC_57CzZAt99Y-3J1lwHbtES5qoEPSBmsmOo1"></script>
+
+    
+
+    
+
+        <div class="HeaderBox OutlinedBox">
+            <div class="HeaderBoxContent">
+                <div id="HeaderLanguageBox">
+                    <a href="/?lang=en" lang="en">English</a>
+                    <a href="/?lang=zh" lang="zh">中文</a>
+                    <a href="/?lang=lt" lang="lt">Lietuvių</a>
+                    <a href="/?lang=es" lang="es">Español</a>
+                    <a href="/?lang=hr" lang="hr">Hrvatski</a>
+                    <a href="/?lang=id" lang="id">Indonesia</a>
+                    <a href="/?lang=pl" lang="pl">Polski</a>
+                    <a href="/?lang=tr" lang="tr">Türkçe</a>
+                    <a href="/?lang=ru" lang="ru">Русский</a>
+                    <a href="/?lang=de" lang="de">Deutsch</a>
+                    <a href="/?lang=nl" lang="nl">Nederlands</a>
+                    <a href="/?lang=su" lang="su">Sunda</a>
+                    <a href="/?lang=my" lang="my">ဗမာ</a>
+                    <a href="/?lang=tlh" lang="tlh">Klingon</a>
+                </div>
+                <div class="HeaderBoxSelectors">
+                    <div class="TextButton HeaderBoxSelected" id="HeaderBoxSelectorsSite">Site Stats</div>
+                    <div class="TextButton" id="HeaderBoxSelectorsUser">Your Stats</div>
+                    <div class="TextButton" id="HeaderBoxSelectorsEarnings">Your Earnings</div>
+                </div>
+                <h1>999Dice.com</h1>
+                <table>
+                    <tr>
+                        <td colspan="2" class="HeaderBoxSpacer HeaderBoxCol1"></td>
+                        <td colspan="2" class="HeaderBoxSpacer HeaderBoxCol2"></td>
+                        <td colspan="2" class="HeaderBoxSpacer HeaderBoxCol3"></td>
+                    </tr>
+                    <tr>
+                        <th class="HeaderBoxCol1">Bets</th>
+                        <td class="HeaderBoxCol1" id="StatsSiteBetCount"></td>
+                        <th class="HeaderBoxCol2">Balance</th>
+                        <td class="HeaderBoxCol2">
+                            <span class="UserBalance"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                        </td>
+                        <th class="HeaderBoxCol3">Referrals</th>
+                        <td class="HeaderBoxCol3" id="StatsUserReferralCount"></td>
+                    </tr>
+                    <tr>
+                        <th class="HeaderBoxCol1">Wagered</th>
+                        <td class="HeaderBoxCol1">
+                            <span id="StatsSiteBetPayIn"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                        </td>
+                        <th class="HeaderBoxCol2">Bets</th>
+                        <td class="HeaderBoxCol2" id="StatsUserBetCount"></td>
+                        <th class="HeaderBoxCol3">Bets</th>
+                        <td class="HeaderBoxCol3" id="StatsUserReferralBetsCount"></td>
+                    </tr>
+                    <tr>
+                        <!--
+                        <th class="HeaderBoxCol1">Profit</th>
+                        <td class="HeaderBoxCol1">
+                            <span id="StatsSiteBetProfit"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                            <span id="StatsSiteBetUserProfit">(User)</span>
+                            <span id="StatsSiteBetSiteProfit">(Site)</span>
+                        </td>
+                        -->
+                        <th class="HeaderBoxCol1">Last Rain</th>
+                        <td class="HeaderBoxCol1"><span class="LastRain"></span></td>
+                        <th class="HeaderBoxCol2">Wagered</th>
+                        <td class="HeaderBoxCol2">
+                            <span id="StatsUserBetPayIn"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                        </td>
+                        <th class="HeaderBoxCol3">Wagered</th>
+                        <td class="HeaderBoxCol3">
+                            <span id="StatsUserReferralBets"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="HeaderBoxCol1">Max Profit</th>
+                        <td class="HeaderBoxCol1">
+                            <span id="SettingsMaxProfit"></span>
+                            <span class="CurrencyName"></span>
+                        </td>
+                        <th class="HeaderBoxCol2">Profit</th>
+                        <td class="HeaderBoxCol2">
+                            <span id="StatsUserBetProfit"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                        </td>
+                        <th class="HeaderBoxCol3">Paid on</th>
+                        <td class="HeaderBoxCol3">
+                            <span id="StatsUserReferralBetsPaid"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="HeaderBoxCol1"></th>
+                        <td class="HeaderBoxCol1">&nbsp;<span class="HeaderBoxLabels OutlinedBox"><span class="HeaderBoxLabelContent">Site Stats</span></span></td>
+                        <th class="HeaderBoxCol2">% Wins</th>
+                        <td class="HeaderBoxCol2">
+                            <span id="StatsUserBetWinRate"></span>
+                            <span class="HeaderBoxLabels OutlinedBox"><span class="HeaderBoxLabelContent">Your Stats</span></span>
+                        </td>
+                        <th class="HeaderBoxCol3">Earnings</th>
+                        <td class="HeaderBoxCol3">
+                            <span id="StatsUserEarnings"></span>
+                            <span class="CurrencyLabel CurrencyName"></span>
+                            <span class="HeaderBoxLabels OutlinedBox"><span class="HeaderBoxLabelContent">Your Earnings</span></span>
+                        </td>
+                    </tr>
+                </table>
+            </div>            
+        </div>        
+
+        <div id="DisplayCurrencies">
+            <span data-currency="1">BTC</span> <span data-currency="2">Doge</span> <span data-currency="3">LTC</span>
+        </div>
+
+        <div id="SiteLoading">Loading...</div>
+        <div id="SiteConnecting">Connecting...</div>
+
+        <div class="OutlinedBox ExtendLeftRight" id="ActionBoxContainer">
+            <div class="CheckeredBackground" style="text-align: center;">
+                <div id="DepositEarnActionBoxSet" class="ActionBoxSet">
+                    <div class="ActionBox SplitActionBox" id="DepositActionBox">
+                        <div class="DepositAddressQRContainer">
+                            <div class="DepositAddressQR"></div>
+                            <p>Click to Enlarge</p>
+                        </div>                        
+                        <h1>Deposit</h1>
+                        <p>
+                            Deposits can be made to <span class="BitcoinAddress DepositAddress">...[click]...</span>
+                            <span><a href="#" class="DepositAddressLink Hidden">[Link]</a></span>
+                        </p>
+                        <p>Deposited funds are available immediately.  Deposits can also be made to old addresses if you prefer.</p>
+                        <p>Most withdrawals require 1 confirmation of deposits. Large ones require 2. Min withdrawal: 0.0002 BTC (currently).</p>
+                        <br class="Clear" />
+                    </div><div class="ActionBox SplitActionBox NoLeftBorder" id="EarnActionBox">
+                        <h1>Earn</h1>
+                        <p>
+                            You can earn <span class='CurrencyName'></span> by referring people to the site with your own referral link: 
+                            <span class="ReferralLink HighlightedText"></span>
+                        </p>
+                        <p>50% of the house edge of EVERY bet made by EVERYONE you refer gets added to your balance (50% x 0.1% = 0.05% of all bets).  Whether they win or lose the bet, you still earn money.</p>
+                        <p><a href="#" class="ReferralsMoreInfo">More Info</a></p>
+                    </div><br /><div class="ActionBoxTab ActionBoxTabButton" id="PracticeBetsButton">
+                        Practice Bets
+                    </div><div class="ActionBoxTab ActionBoxTabButton" id="ShowFaucetBoxButton">
+                        Free <span class='CurrencyFullName'></span>s
+                    </div>
+                </div>
+
+                <div id="BetActionBoxSet" class="ActionBoxSet">
+                    <div class="ActionBox BetControlsActionBox" id="BetSizeActionBox">
+                        <div class="BetControlButton" data-key="q" id="MinBetButton">
+                            <span class="BetControlTitle">min</span>
+                            <span class="Keyboard">Q</span>
+                        </div>
+                        <div class="BetControlButton" data-key="w" id="MaxBetButton">
+                            <span class="BetControlTitle">max</span>
+                            <span class="Keyboard">W</span>
+                        </div><br />
+                        <div class="BetControlButton" data-key="a" id="BetResetButton">
+                            <span class="BetControlTitle">reset</span>
+                            <span class="Keyboard">A</span>
+                        </div>
+                        <div class="BetControlButton" data-key="s" id="Bet10Button">
+                            <span class="BetControlTitle">10 %</span>
+                            <span class="Keyboard">S</span>
+                        </div><br />
+                        <div class="BetControlButton" data-key="z" id="MultiplyBetButton">
+                            <span class="BetControlTitle">double</span>
+                            <span class="Keyboard">Z</span>
+                        </div>
+                        <div class="BetControlButton" data-key="x" id="DivideBetButton">
+                            <span class="BetControlTitle">half</span>
+                            <span class="Keyboard">X</span>
+                        </div><br />
+                        <p>Bet size</p>
+                        <input type="text" id="BetSizeInput" maxlength="15" class="StandardTextBox" />
+                    </div><div class="ActionBox BetControlsActionBox NoLeftBorder" id="BetChanceActionBox">
+                        <div class="BetControlButton" data-key="e" id="MinChanceButton">
+                            <span class="BetControlTitle">min</span>
+                            <span class="Keyboard">E</span>
+                        </div>
+                        <div class="BetControlButton" data-key="r" id="MaxChanceButton">
+                            <span class="BetControlTitle">max</span>
+                            <span class="Keyboard">R</span>
+                        </div><br />
+                        <div class="BetControlButton" data-key="d" id="ChanceDefaultButton">
+                            <span class="BetControlTitle">49.95%</span>
+                            <span class="Keyboard">D</span>
+                        </div>
+                        <div class="BetControlButton" data-key="f" id="Chance50Button">
+                            <span class="BetControlTitle">50%</span>
+                            <span class="Keyboard">F</span>
+                        </div><br />
+                        <div class="BetControlButton" data-key="c" id="MultiplyChanceButton">
+                            <span class="BetControlTitle">double</span>
+                            <span class="Keyboard">C</span>
+                        </div>
+                        <div class="BetControlButton" data-key="v" id="DivideChanceButton">
+                            <span class="BetControlTitle">half</span>
+                            <span class="Keyboard">V</span>
+                        </div><br />
+                        <p>% Chance to win</p>
+                        <input type="text" id="BetChanceInput" maxlength="8" class="StandardTextBox" />
+                    </div><div class="ActionBox BetActionBox NoLeftBorder">
+                        <p>Win Profit</p>
+                        <p>
+                            <span id="BetProfitLabel" class="Number GoodNumber"></span> <span class="CurrencyName"></span>
+                        </p>
+                        <div class="BetButtonContainer">
+                            <div class="FinePrint">0 - <span id="BetTargetLow"></span></div>
+                            <div class="BetButton" data-key="l" id="BetLowButton">
+                                <span class="BetControlTitle">Bet Low</span>
+                                <span class="Keyboard">L</span>
+                            </div>
+                        </div>
+                        <div class="BetButtonContainer">
+                            <div class="FinePrint"><span id="BetTargetHigh"></span> - 999999</div>
+                            <div class="BetButton" data-key="h" id="BetHighButton">
+                                <span class="BetControlTitle">Bet High</span>
+                                <span class="Keyboard">H</span>
+                            </div>
+                        </div>
+                        <div class="ManualSeedControls">
+                            Client Seed
+                            <input type="number" min="0" max="999999999" value="0" class="StandardTextBox" />
+                        </div>
+                        <div id="LastBetInfoContainer">
+                            <span id="LastBetInfoWon">Last bet: won</span>
+                            <span id="LastBetInfoLost">Last bet: lost</span>
+                            <span id="LastBetInfoProfit"></span><span id="LastBetInfoProfitZeroes" class="NeutralNumber NumberIrrelevant"></span>
+                            <span><span id="LastBetInfoCurrency"></span>&nbsp; &nbsp; &nbsp; [<span id="LastBetInfoSecret"></span>]</span>
+                            <span id="LastBetInfoDelay">[<span id="LastBetInfoDelayAmount"></span>]</span>
+                        </div>
+                    </div><br /><div class="ActionBoxTab ActionBoxTabButton" id="AutoBetsActionTabButton">
+                        Automatic Betting
+                    </div><div class="ActionBoxTab" id="BalanceActionBoxTab">
+                        <div class="TextButton DepositButton">
+                            Deposit
+                        </div>            
+                        <div>
+                            Balance
+                            <span class="Numbers HighlightedText UserBalance"></span><span class="Numbers NeutralNumber NumberIrrelevant UserBalanceZeroes"></span>
+                            <span class="CurrencyName"></span>
+                        </div>
+                        <div class="TextButton WithdrawButton">
+                            Withdraw
+                        </div>
+                    </div>
+                </div>
+
+                <div id="AutoBetsActionBoxSet" class="ActionBoxSet">
+                    <div class="ActionBox BetControlsActionBox" id="AutoBetsStandardsBox">
+                        <p>Base bet size</p>
+                        <input type="text" id="AutoBetSizeInput" maxlength="15" class="StandardTextBox" value="" />
+                        <p>% Chance to win</p>
+                        <input type="text" id="AutoBetChanceInput" maxlength="8" class="StandardTextBox" value="49.95" />
+                        <p>Number of Bets</p>
+                        <input type="text" id="AutoBetNumBets" maxlength="4" class="StandardTextBox" value="10" />
+                        <p>Maximum Bet Size</p>
+                        <input type="text" id="AutoBetMaxSizeInput" maxlength="15" class="StandardTextBox" />
+                    </div><div class="ActionBox BetControlsActionBox NoLeftBorder" id="AutoBetsVarianceBox">
+                        <p>
+                            <input type="checkbox" id="AutoBetResetOnWin" checked class="StandardCheckBox" />
+                            Reset to base after win
+                        </p>
+                        <div id="AutoBetIncreaseWinBox">
+                            <p>% increase after win</p>
+                            <input type="text" id="AutoBetIncreaseOnWin" maxlength="5" class="StandardTextBox" value="100" />
+                        </div>
+                        <p>
+                            <input type="checkbox" id="AutoBetResetOnLoss" checked class="StandardCheckBox" />
+                            Reset to base after loss
+                        </p>
+                        <div id="AutoBetIncreaseLossBox">
+                            <p>% increase after loss</p>
+                            <input type="text" id="AutoBetIncreaseOnLoss" maxlength="5" class="StandardTextBox" value="100" />
+                        </div>
+                        <p id="AutoBetLoseActions">
+                            After losing max bet...
+                            <br />
+                            <input type="checkbox" id="AutoBetResetOnLoseMaxBet" class="StandardCheckBox" />
+                            Reset to base bet
+                            <br />
+                            <input type="checkbox" id="AutoBetStopOnLoseMaxBet" class="StandardCheckBox" />
+                            Stop
+                        </p>
+                    </div><div class="ActionBox BetActionBox NoLeftBorder">
+                        <h1>Automatic Betting</h1>
+                        <p><span class="CurrencyName HighlightedText"></span></p>
+                        <div class="BetButtonContainer KeyboardDisabled">
+                            <div class="FinePrint">0 - <span id="AutoBetTargetLow"></span></div>
+                            <div class="BetButton" id="AutoBetLowButton">
+                                <span class="BetControlTitle">Bet Low</span>
+                            </div>
+                        </div>
+                        <div class="BetButtonContainer KeyboardDisabled">
+                            <div class="FinePrint"><span id="AutoBetTargetHigh"></span> - 999999</div>
+                            <div class="BetButton" id="AutoBetHighButton">
+                                <span class="BetControlTitle">Bet High</span>
+                            </div>
+                        </div>                                                
+                        <div class="ManualSeedControls">
+                            Client Seed
+                            <input type="number" min="0" max="999999999" value="0" class="StandardTextBox" />
+                        </div>
+                        <div id="LastAutoBetInfoContainer">
+                            <span id="LastAutoBetInfoWon">Profit</span>
+                            <span id="LastAutoBetInfoLost">Lost</span>
+                            <span id="LastAutoBetInfoProfit"></span><span id="LastAutoBetInfoProfitZeroes" class="NeutralNumber NumberIrrelevant"></span>
+                            <span><span id="LastAutoBetInfoCurrency"></span>&nbsp; &nbsp; &nbsp; [# Bets: <span id="LastAutoBetInfoCount"></span>]</span>
+                            <br />
+                            <span class="FinePrint">Bet ID <span id="LastAutoBetInfoID"></span></span>
+                        </div>
+                    </div><br /><div class="ActionBoxTab ActionBoxTabButton" id="SingleBetsButton">
+                        Single Bets
+                    </div>
+                </div>
+
+                <div id="FaucetActionBoxSet" class="ActionBoxSet">
+                    <div class="ActionBox SplitActionBox" id="FaucetInfoActionBox">
+                        <h1>Free <span class='CurrencyFullName'></span> Faucet</h1>
+                        <p>We believe it's important for our visitors to be able to try out our casino. So, from time to time we will activate a <span class='CurrencyFullName'></span> faucet.</p>
+                        <p>You can claim a small number of <span class='CurrencyFullName'></span>s from the faucet for free. This way, you can try out the casino, learn the features and get used to the controls without risking any money.</p>
+                        <p>A claim can be made once per account, once per IP, once per 5 minutes.</p>
+                    </div><div class="ActionBox SplitActionBox NoLeftBorder" id="FaucetControlsActionBox">
+                        <div class="FaucetClaimButton">
+                            <span class="FaucetClaimTitle">Claim <span class='CurrencyFullName'></span>s Now</span>
+                        </div>
+                        <p id="FaucetClaimWarning" class="FinePrint">Bots are prohibited. You will be banned if you automate this process.</p>
+                        <div id="FaucetMaxBalanceInfo">
+                            <p>
+                                The faucet is available if your balance falls below:                                
+                                <span id="FaucetMaxBalance" class="Numbers GoodNumber"></span>
+                            </p>
+                        </div>
+                        <div id="FaucetClaimInfo">
+                            <div id="FaucetClaimInfoSuccess">
+                                <p>You have successfully claimed <span id="FaucetClaimInfoAmount"></span></p>
+                                <p>Your next claim can be made in <span id="FaucetClaimInfoNext" class="GoodNumber"></span> Minutes</p>
+                                <p><span id="FaucetLetsPlayButton" class="TextButton">Lets Play!</span></p>
+                            </div>
+                            <p id="FaucetClaimInfoFailed">No bitcoins were claimed from the faucet: <span id="FaucetClaimInfoFailReason"></span></p>
+                            <div id="FaucetClaimInfoEarly">
+                                <p>It's too early to claim more bitcoins from the faucet!</p>
+                                <p>Your next claim can be made in:</p>
+                                <ul>
+                                    <li>For your account: <span id="FaucetClaimInfoEarlyNextAccount" class="BadNumber"></span> Minutes</li>
+                                    <li>For your IP: <span id="FaucetClaimInfoEarlyNextIP" class="BadNumber"></span> Minutes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><br /><div class="ActionBoxTab ActionBoxTabButton" id="FaucetBetsButton">
+                        Bets
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="Hidden" id="LoginWarning">
+            <p>You are not logged in. You can login or create a username and password under the &quot;Account&quot; area below.<br /><span id="HideLoginWarning">Hide</span></p>
+        </div>
+
+        <div class="Hidden" id="RadioContainer">
+            <p id="RadioTitle"></p>
+            <div id="RadioControlContainer"></div>
+            <p id="RadioSubtitle"></p>
+        </div>
+
+<div style="display: none; color: orange; text-align: center; max-width: 600px; margin: 0 auto" id="WarningWarning">
+            <p>Если 999dice.com заблокирован провайдером, попробуйте ru.999dice.com или www.999doge.com 
+                <br /><span id="HideWarningWarning" style="color: yellow; cursor: pointer">скрыть</span>
+            </p>
+            <script type="text/javascript">
+                $(function(){
+                    $("#HideWarningWarning").click(function(){ $("#WarningWarning").hide();});
+                    $("html[lang='ru'] #WarningWarning").show();
+                });
+            </script>
+        </div>        
+
+        
+
+        <div id="ContentTabsContainer">
+            <div class="ContentTab">All Bets</div>
+            <div class="ContentTab">My Bets</div>
+            <div class="ContentTab">Chat</div>
+            <div class="ContentTab">Account</div>
+            <div class="ContentTab">Fair Bets</div>
+            <div class="ContentTab">About 99.9%</div>
+            <div class="ContentTab">How to Play</div>
+            <div class="ContentTab">Earn Referral <span class='CurrencyName'></span>s</div>
+            <div class="ContentTab">Contact</div>
+            <div class="ContentTab">API &amp; Bots</div>
+            <div class="ContentTab Hidden" data-tab="Radio">Radio</div>
+
+            <div id="VisibleContentContainer">
+                <div id="AllBets">                    
+                    <div>
+                        <input type="checkbox" class="StandardCheckBox" checked id="AllBetsStream" />
+                        <span>Show Bets</span>
+                    </div>
+                    <table class="BetsTable">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Number</th>
+                                <th>Target</th>
+                                <th class="BetSizeColumn">Bet size</th>
+                                <th>Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="UserBets">
+                    <table class="BetsTable">
+                        <thead>
+                            <tr>
+                                <th>Player</th>
+                                <th>Number</th>
+                                <th>Target</th>
+                                <th class="BetSizeColumn">Bet size</th>
+                                <th>Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="ChatTab" class="PaddedTabContent CenteredTabContent">
+                    <div style="position: relative">
+                        <div id="ChatTabChatContainer"></div>
+                    </div>
+                    <p>
+                        <input id="ChatTabText" type="text" maxlength="255" class="StandardTextBox" />
+                        <span id="ChatTabSendButton" class="TextButton">
+                            Send
+                        </span>
+                        <span id="ChatTabModButton" class="TextButton Hidden">Mod</span>
+                    </p>
+                    <p id="ChatTabOtherRooms">
+                        <span data-room="1">English</span>
+                        <span data-room="5">Indonesia</span>
+                        <span data-room="9">Русский</span>
+                        <span data-room="15">Український</span>
+                        <span data-room="18">Uzbek</span>
+                        <span data-room="13">Any</span>                        
+                    </p>
+                </div>
+                <div id="AccountTab" class="PaddedTabContent CenteredTabContent">
+                    <p>
+                        Your account # is
+                        <span id="AccountTabUserId" class="Numbers HighlightedText"></span>
+                    </p>
+                    <p>
+                        Your display name is
+                        <input type="text" maxlength="30" id="AccountTabFriendlyName" class="StandardTextBox" />
+                    </p>
+                    <p>
+                        <span id="AccountTabUserNameText">Your login name is </span>
+                        <span id="AccountTabUserName" class="HighlightedText"></span>
+                        <span class="TextButton" id="AccountTabCreateUser">
+                            Create a username &amp; password
+                        </span>
+                        <span class="TextButton" id="AccountTabChangePassword">
+                            Change password
+                        </span>                        
+                    </p>
+                    <p>
+                        <span id="AccountTabIdentityContainer">
+                            Your identity is
+                            <span id="AccountTabIdentity" class="HighlightedText"></span>
+                        </span>
+                        <span class="TextButton" id="AccountTabCreateAttachIdentity">
+                            Create or Attach an Identity
+                        </span>
+                    </p>
+                    <p id="AccountTabSetupTotpContainer">
+                        <span class="TextButton SetupTotpButton">
+                            Google Authenticator (2FA)
+                        </span>                        
+                    </p>
+                    <p>
+                        Your emergency withdrawal address
+                        <input type="text" maxlength="40" id="AccountTabEmergencyAddress" class="StandardTextBox" />
+                    </p>
+                    <p>
+                        Your email address
+                        <input type="text" maxlength="100" id="AccountTabEmail" class="StandardTextBox" />
+                    </p>
+                    <p>
+                        <input type="checkbox" id="AccountTabAllowKeyboardBetParams" />
+                        Allow bet changes using keyboard
+                        <br />
+                        <input type="checkbox" id="AccountTabAllowKeyboardMaxBet" />
+                        Allow setting max bet size using keyboard
+                        <br />
+                        <input type="checkbox" id="AccountTabAllowKeyboardBets" />
+                        Allow bets using keyboard
+                        <br />
+                        <input type="checkbox" id="AccountTabOverlappingBetsAllowed" />
+                        Overlapping bets allowed
+                        <br />
+                        <input type="checkbox" id="AccountTabStreamAllBets" />
+                        Show &quot;All Bets&quot; stream
+                        <br />
+                        <input type="checkbox" id="AccountTabAnnounceHighBets" />
+                        Announce high bets in chat
+                        (min: 
+                        <input type="text" data-currencyid="1" class="StandardTextBox AccountTabAnnounceHighBetsThreshhold" />
+                        BTC
+                        ...
+                        <input type="text" data-currencyid="2" class="StandardTextBox AccountTabAnnounceHighBetsThreshhold" />
+                        Doge                        
+                        ...
+                        <input type="text" data-currencyid="3" class="StandardTextBox AccountTabAnnounceHighBetsThreshhold" />
+                        LTC)
+                        <br />
+                        <input type="checkbox" id="AccountTabConfirmMaxBet" />
+                        Confirm max bet
+                        <br />
+                        <input type="checkbox" id="AccountTabWarnSwitchCurrencies" />
+                        Warn after switching currencies
+                    </p>                    
+                    <p class="GroupedBlock">
+                        Switch to user name<br />
+                        <input type="text" maxlength="50" id="AccountTabLoginUsername" class="StandardTextBox" /><br />
+                        Password<br />
+                        <input type="password" maxlength="100" id="AccountTabLoginPassword" class="StandardTextBox" /><br />
+                        Google Authenticator #<br />
+                        <input type="number" min="0" max="999999" id="AccountTabLoginTotp" class="StandardTextBox TotpTextBox" /><br /><br />
+                        <span class="TextButton" id="AccountTabLogin">
+                            Login
+                        </span>
+                    </p>
+                    <p>
+                        <span class="TextButton" id="AccountTabLogout">
+                            Logout
+                        </span>
+                    </p>
+                    <p>&nbsp;</p>
+                    <h3>Deposits</h3>
+                    <p><span class="TextButton" id="AccountTabUpdateDeposits">Update</span><span class="TextButton" id="AccountTabUpdateDeposits10">Update 10</span></p>
+                    <table id="AccountTabDepositsTable">
+                        <thead>
+                            <tr>
+                                <th>Address</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Transaction Hash</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <h3>Withdrawals</h3>
+                    <p><span class="TextButton" id="AccountTabUpdateWithdrawals">Update</span><span class="TextButton" id="AccountTabUpdateWithdrawals10">Update 10</span><span class="TextButton" id="AccountTabCancelWithdrawals">Cancel Pending</span></p>
+                    <table id="AccountTabWithdrawalsTable">
+                        <thead>
+                            <tr>
+                                <th>Address</th>
+                                <th>Amount</th>
+                                <th>Fee</th>
+                                <th>Requested</th>
+                                <th>Status</th>
+                                <th>Completed</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <h3>Referrals</h3>
+                    <p><span class="TextButton" id="AccountTabUpdateReferralPayouts">Update</span><span class="TextButton" id="AccountTabUpdateReferralPayouts10">Update 10</span></p>
+                    <table id="AccountTabReferralPayoutsTable">
+                        <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <h3>Free <span class='CurrencyFullName'></span>s</h3>
+                    <p><span class="TextButton" id="AccountTabUpdateFaucetPayouts">Update</span><span class="TextButton" id="AccountTabUpdateFaucetPayouts10">Update 10</span></p>
+                    <table id="AccountTabFaucetPayoutsTable">
+                        <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <h3>Adjustments</h3>
+                    <p><span class="TextButton" id="AccountTabUpdateBalanceAdjustments">Update</span><span class="TextButton" id="AccountTabUpdateBalanceAdjustments10">Update 10</span></p>
+                    <table id="AccountTabBalanceAdjustmentsTable">
+                        <thead>
+                            <tr>
+                                <th>Amount</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="FairTab" class="PaddedTabContent CenteredTabContent">
+                    <div>
+                        <p>
+                            Bets are guaranteed to be fair because the seeds for the bet are known before you bet.
+                        </p>
+                        <p>
+                            The formula is
+                        </p>
+                        <ol>
+                            <li>Server Seed + Client Seed (-&gt;byte[4]) + Bet Number (-&gt;byte[4])</li>
+                            <li>Double SHA2-512 hash the result</li>
+                            <li>Keep taking groups of 3 bytes and converting to an integer, until a value less than 16 million is found.  If you run out of bytes, hash it again and start over.</li>
+                            <li>Find the value's modulus of 1 million</li>
+                            <li>The modulus is the bet result!</li>
+                        </ol>
+                        <p>
+                            You are given the server seed's hash. Once the bet has been placed, the server seed is available, and you can verify the fairness of the bet. For automated bets, all bets are made using the same server seed.
+                        </p>
+                        <p>
+                            The current server seed hash is
+                            <span class="HighlightedText FairTabServerSeedHash"></span>
+                            <span class="TextButton FairTabReveal">
+                                Get Server Seed Hash
+                            </span>
+                            <br />
+                            <input type="checkbox" id="AccountTabManualSeed" />
+                            Set the client seed manually
+                        </p>
+                        <p>Here is the actual SQL function this site uses (error handling stripped out)</p>
+                        <pre>
+create function dbo.CalculateBetResult
+(
+	@serverSeed binary(32),
+	@clientSeed binary(8)
+)
+returns bigint
+as
+begin
+	declare @hash binary(64)
+	declare @index int
+	declare @r bigint
+	
+	set @hash = HASHBYTES('SHA2_512', @serverSeed+@clientSeed)
+	set @hash = HASHBYTES('SHA2_512', @hash)
+	while 1=1
+	begin
+		
+		set @index = 1
+		while @index &lt;= 64 - 3
+		begin
+			set @r = cast(substring(@hash, @index, 3) as bigint)
+			if @r &lt; 16000000
+				return @r % 1000000
+			set @index += 3
+		end
+
+		set @hash = HASHBYTES('SHA2_512', @hash)
+
+	end
+	return -1
+end
+                        </pre>
+                        <p>And here is some C# code (without any error checking) you could also use to verify results</p>
+                        <pre>
+static bool VerifyBetResult(string serverSeed, int clientSeed, int betNumber,
+                            long betResult, string serverSeedHash = null)
+{
+    Func&lt;string, byte[]&gt; strtobytes = s =&gt; Enumerable
+        .Range(0, s.Length / 2)
+        .Select(x =&gt; byte.Parse(s.Substring(x * 2, 2), NumberStyles.HexNumber))
+        .ToArray();
+    byte[] server = strtobytes(serverSeed);
+    byte[] client = BitConverter.GetBytes(clientSeed).Reverse().ToArray();
+    byte[] num = BitConverter.GetBytes(betNumber).Reverse().ToArray();
+    byte[] serverhash = serverSeedHash == null ? null : strtobytes(serverSeedHash);
+    byte[] data = server.Concat(client).Concat(num).ToArray();
+    using (SHA512 sha512 = new SHA512Managed())
+    {
+        if (serverhash != null)
+            using (SHA256 sha256 = new SHA256Managed())
+                if (!sha256.ComputeHash(server).SequenceEqual(serverhash))
+                    throw new Exception("Server seed hash does not match server seed");
+        byte[] hash = sha512.ComputeHash(sha512.ComputeHash(data));
+        while (true)
+        {
+            for (int x = 0; x &lt;= 61; x += 3)
+            {
+                long result = (hash[x] &lt;&lt; 16) | (hash[x + 1] &lt;&lt; 8) | hash[x + 2];
+                if (result &lt; 16000000)
+                    return result % 1000000 == betResult;
+            }
+            hash = sha512.ComputeHash(hash);
+        }
+    }
+}
+                        </pre>
+                        <p>
+                            <span class="TextButton" id="FairTabShowOldMethod">
+                                Previous
+                            </span>
+                        </p>
+                    </div>
+                    <div id="FairTabOldMethod" class="Hidden">
+                        <h2>Previous (ID &lt; 8764625845)</h2>
+                        <p>
+                            Bets are guaranteed to be fair because the seeds for the bet are known before you bet.
+                        </p>
+                        <p>
+                            The formula is
+                        </p>
+                        <ol>
+                            <li>Bet Number (-&gt;char[]-&gt;byte[]) + Server Seed + Client Seed (-&gt;byte[8])</li>
+                            <li>Double SHA2-512 hash the result</li>
+                            <li>Keep taking groups of 3 bytes and converting to an integer, until a value less than 16 million is found.  If you run out of bytes, hash it again and start over.</li>
+                            <li>Find the value's modulus of 1 million</li>
+                            <li>The modulus is the bet result!</li>
+                        </ol>
+                        <p>
+                            You are given the server seed's hash. Once the bet has been placed, the server seed is available, and you can verify the fairness of the bet. For automated bets, all bets are made using the same server seed.
+                        </p>
+                        <p>
+                            Your current client seed is
+                            <input type="text" maxlength="18" id="FairTabClientSeed" class="StandardTextBox" />
+                        </p>
+                        <p>
+                            The current server seed hash is
+                            <span class="HighlightedText FairTabServerSeedHash"></span>
+                            <span class="TextButton FairTabReveal">
+                                Get Server Seed Hash
+                            </span>
+                        </p>
+                        <p>Here is the actual SQL function this site uses (error handling stripped out)</p>
+                        <pre>
+create function dbo.CalculateBetResult
+(
+	@serverSeed binary(32),
+	@clientSeed binary(8),
+	@betNumber bigint
+)
+returns bigint
+as
+begin
+	declare @hash binary(64)
+	declare @index int
+	declare @r bigint
+	
+	set @hash = HASHBYTES('SHA2_512', cast(cast(@betNumber as varchar) as varbinary)+@serverSeed+@clientSeed)
+	set @hash = HASHBYTES('SHA2_512', @hash)
+	while 1=1
+	begin
+		
+		set @index = 1
+		while @index &lt;= 64 - 3
+		begin
+			set @r = cast(substring(@hash, @index, 3) as bigint)
+			if @r &lt; 16000000
+				return @r % 1000000
+			set @index += 3
+		end
+
+		set @hash = HASHBYTES('SHA2_512', @hash)
+
+	end
+	return -1
+end
+                        </pre>
+                        <p>And here is some C# code (without any error checking) you could also use to verify results</p>
+                        <pre>
+static bool VerifyBetResult(string serverSeed, string clientSeed, string betNumber, 
+                            long betResult, string serverSeedHash = null)
+{
+    Func&lt;string, byte[]&gt; strtobytes = s =&gt; Enumerable
+        .Range(0, s.Length / 2)
+        .Select(x =&gt; byte.Parse(s.Substring(x * 2, 2), NumberStyles.HexNumber))
+        .ToArray();
+    byte[] server = strtobytes(serverSeed);
+    byte[] client = BitConverter.GetBytes(long.Parse(clientSeed));
+    byte[] number = Encoding.ASCII.GetBytes(betNumber);
+    byte[] serverhash = serverSeedHash == null ? null : strtobytes(serverSeedHash);
+    byte[] data = number.Concat(server).Concat(client).ToArray();
+    using (SHA512 sha512 = new SHA512Managed())
+    {
+        if (serverhash != null)
+            using (SHA256 sha256 = new SHA256Managed())
+                if (!sha256.ComputeHash(server).SequenceEqual(serverhash))
+                    throw new Exception("Server seed hash does not match server seed");
+        byte[] hash = sha512.ComputeHash(sha512.ComputeHash(data));
+        while (true)
+        {
+            for (int x = 0; x &lt;= 61; x += 3)
+            {
+                long result = (hash[x] &lt;&lt; 16) | (hash[x + 1] &lt;&lt; 8) | hash[x + 2];
+                if (result &lt; 16000000)
+                    return result % 1000000 == betResult;
+            }
+            hash = sha512.ComputeHash(hash);
+        }
+    }
+}
+                        </pre>
+                    </div>
+                </div>
+                <div id="AboutTab" class="PaddedTabContent CenteredTabContent">
+                    <p>This site pays 99.9%.  That's a house edge of only 0.1%.</p>
+                    <p>It was inspired by others, and intended to be even simpler - as simple as possible!  Just betting.  That's it.</p>
+                    <p>But their house edge is a full 1%, and ours is 0.1%.  That's not a statistical difference of 0.9%... it is a statistical difference of 900% (10 times closer to &quot;perfect equality&quot;!)</p>
+                    <p>There are no commissions or fees (other than <span class='CurrencyFullName'></span>'s built-in transaction fee - there's no way to avoid that!).  Deposits do not require any confirmations before being credited to your account.  Most withdrawals are processed immediately.</p>
+                    <p>This site is fully funded by private investors.  No further investments in the site are currently available.</p>
+                </div>
+                <div id="HowToPlayTab" class="PaddedTabContent CenteredTabContent">
+                    <p>The game is simple.</p>
+                    <p>Select your bet size and your chance to win.  The potential profit for your bet will appear.</p>
+                    <p>Then place your bet, either high or low.</p>
+                    <p>A number between 0 and 999,999 is generated.  If the number falls within the high/low range you selected, you win.</p>
+                </div>
+                <div id="EarnTab" class="PaddedTabContent CenteredTabContent">
+                    <p>
+                        You can earn <span class='CurrencyName'></span> by referring people to the site with your own referral link: 
+                        <span class="HighlightedText ReferralLink"></span>
+                    </p>
+                    <p>50% of the house edge of EVERY bet made by EVERYONE you refer gets added to your balance (50% x 0.1% = 0.05% of all bets).  Whether they win or lose the bet, you still earn money.</p>
+                    <p>
+                        Total wagered by your referrals is 
+                        <span class="GoodNumber" id="EarnTabReferralBets"></span> 
+                        <span class="CurrencyName"></span>
+                    </p>
+                    <p>
+                        Total paid to you is 
+                        <span class="GoodNumber" id="EarnTabReferralBetsPaid"></span> 
+                        <span class="CurrencyName"></span>
+                    </p>
+                    <p>
+                        <span class="TextButton" id="EarnTabReferralMoreEarnedButton">
+                            <span class="GoodNumber" id="EarnTabReferralMoreEarned"></span>
+                            More Earned - Pay Out Now
+                        </span>
+                    </p>
+                    <pre>
+Here is some sample html you can use in forum signatures to promote your personal referral link:
+<code>
+&lt;a href='[link]' target='_blank'&gt;&lt;span style='color:orangered'&gt;999dice.com | 99.9% Dice Payout | Earn BTC/Doge/LTC with 50/50 Referral Program | Play &amp;amp; Chat&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+                    <p>Do not spam other dice sites. You can put the link in a signature, or email and skype it to all your friends, but don't spam. This site is new, but there are lots of betters to go around. Do it legit.</p>
+                    <p id="EarnTabReferrerContainer">Referrer: <span id="EarnTabReferrer"></span></p>
+
+                    <h3>Referrals</h3>
+                    <p><span class="TextButton" id="EarnTabUpdateReferrals">Update</span><span class="TextButton" id="EarnTabUpdateReferrals10">Update 10</span></p>
+                    <table id="EarnTabReferralsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Bets</th>
+                                <th>Wagered</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+
+
+
+                </div>
+                <div id="ContactTab" class="PaddedTabContent CenteredTabContent">
+                    <p>If you have any questions, suggestions or run into any troubles, feel free to contact the site owner by typing your message below. If you want a response, make sure to provide an email address in the message or under the &quot;Accounts&quot; tab.  The site owner is often available in the &quot;Chat&quot; tab too as &quot;Admin (1)&quot;.</p>
+                    <textarea id="ContactMessage" rows="10" maxlength="3500" class="StandardTextBox"></textarea>
+                    <p>
+                        <span class="TextButton" id="ContactTabSendMessageButton">
+                            Send Message
+                        </span>
+                    </p>
+                </div>
+                <div id="APITab" class="PaddedTabContent CenteredTabContent">
+                    <p>An <a href="api" target="_blank">API for programmers to integrate with the site</a> is now available. A sample bot is included.</p>
+                    <p>
+                        Your API key is
+                        <span id="APITabKey" class="HighlightedText"></span>
+                        <span class="TextButton" id="APITabGetKey">
+                            Create
+                        </span>
+                    </p>
+                    <p>For questions, bug reports, feature requests, or any other help, please get in touch using the Contact tab.</p>
+                </div>                
+                <div id="RadioTab" class="PaddedTabContent CenteredTabContent">
+                    <p>Yay, radio!</p>
+                    <table id="RadioTable">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>            
+
+        </div>
+
+        <div class="Hidden" id="MessageBox">            
+        </div>
+
+        <div class="Hidden" id="DepositBox">
+            <div class="StandardPopup">
+                <h2>Deposit to your Account</h2>
+                <p>
+                    Deposits can be made to <span class="BitcoinAddress DepositAddress">...[click]...</span>
+                    <span><a href="#" class="DepositAddressLink Hidden">[Link]</a></span>
+                </p>
+                <div class="DepositAddressQRContainer">
+                    <div class="DepositAddressQR"></div>
+                </div>
+                <p>Deposited funds are available immediately.  Deposits can also be made to old addresses if you prefer.</p>
+                <br class="Clear" />
+            </div>
+        </div>
+        <div class="Hidden" id="WithdrawBox">
+            <div class="StandardPopup">
+                <h2>Withdraw Funds</h2>
+                <p>
+                    Your balance is
+                    <span class="Numbers UserBalance"></span><span class="Numbers UserBalanceZeroes"></span>
+                    <span class="CurrencyName"></span>
+                </p>
+                <p>
+                    Address
+                    <input type="text" id="WithdrawAddress" maxlength="40" />
+                </p>
+                <p id="WithdrawTotpContainer">
+                    Google Authenticator #
+                    <input type="number" id="WithdrawTotp" min="0" max="999999" class="TotpTextBox" />
+                </p>
+                <p>
+                    Amount
+                    <input type="text" id="WithdrawAmount" maxlength="15" value="0" />
+                    <span class="TextButton" id="WithdrawValueButton">
+                        Withdraw
+                    </span>
+                    <span class="TextButton" id="WithdrawAllButton">
+                        Withdraw All
+                    </span>
+                </p>
+                <p class="FinePrint">The standard transaction fee of <span class='WithdrawFee'></span> will be deducted</p>
+            </div>
+        </div> 
+        <div class="Hidden" id="CreateUserBox">
+            <div class="StandardPopup">
+                <h2>Create a User</h2>
+                <p>
+                    Creating a username and password increases your security.  It allows you to access your account from other browsers and computers, and also protects you from losing your account if your browser's cookies are cleared.
+                </p>
+                <p>
+                    User Name
+                    <input type="text" id="CreateUserBoxUsername" maxlength="50" />
+                </p>
+                <p>
+                    Password
+                    <input type="password" id="CreateUserBoxPassword" maxlength="100" />
+                </p>
+                <p>
+                    Password
+                    <input type="password" id="CreateUserBoxPassword2" maxlength="100" />
+                </p>
+                <p>
+                    <span class="TextButton" id="CreateUserBoxCreate">
+                        Create a username &amp; password
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="Hidden" id="ChangePasswordBox">
+            <div class="StandardPopup">
+                <h2>Change password</h2>                
+                <p>
+                    Old Password
+                    <input type="password" id="ChangePasswordBoxOld" maxlength="100" />
+                </p>
+                <p>
+                    New Password
+                    <input type="password" id="ChangePasswordBoxNew1" maxlength="100" />
+                </p>
+                <p>
+                    New Password
+                    <input type="password" id="ChangePasswordBoxNew2" maxlength="100" />
+                </p>
+                <p>
+                    <span class="TextButton" id="ChangePasswordBoxChange">
+                        Change password
+                    </span>
+                </p>
+            </div>
+        </div>        
+        <div class="Hidden" id="WelcomeBox">
+            <div class="StandardPopup">
+                <h2>Welcome!</h2>
+                <p>This is a provably fair dice betting casino, funded by Bitcoins, Dogecoins & Litecoins.</p>
+                <p>
+                    The payout is
+                    <span class="HighlightedText">99.9%</span>
+                    .  The house edge is only 0.1%!
+                </p>
+                <p>Thinking about the difference between other sites &quot;low 1% edge&quot; and our 0.1% edge?  It's not a statistical difference of 0.9%... it's a statistical difference of 900% (10 times closer to &quot;perfect equality&quot;!)</p>
+                <p>Deposits do not require any confirmations before being credited to your account.</p>
+                <p>You can also earn BTC by referring people to the site!  Check out the &quot;Earn Referral BTC&quot; tab for more info!</p>
+            </div>
+        </div>
+        <div class="Hidden" id="WithdrawalInfoBox">
+            <div class="StandardPopup"> 
+                <h2>Withdrawal Information</h2>
+                <p>
+                    Amount:
+                    <span class="GoodNumber" id="WithdrawalInfoBoxAmount"></span>
+                </p>
+                <p>
+                    Address:
+                    <span class="BitcoinAddress" id="WithdrawalInfoBoxAddress"></span>
+                </p>
+                <p id="WithdrawalInfoBoxHashContainer">
+                    Transaction Hash:
+                    <span id="WithdrawalInfoBoxHash"></span>
+                    <br />
+                    <a href="#" id="WithdrawalInfoBoxHashLink" target="_blank"></a>
+                </p>
+                <p id="WithdrawalInfoBoxRawContainer">
+                    Raw Transaction
+                    <br />
+                    <textarea id="WithdrawalInfoBoxRaw" rows="5"></textarea>
+                    <br />
+                    <a href="#" target="_blank">pushtx</a>
+                </p>
+            </div>
+        </div>
+        <div class="Hidden" id="SetupTotpBox">
+            <div class="StandardPopup">
+                <h2>Google Authenticator (2FA)</h2>
+                <div class="SetupTotpQRContainer">
+                    <div class="SetupTotpQR"></div>
+                    <p>(Code: <span id="SetupTotpSecret"></span>)</p>
+                </div>
+                <p>Google Authenticator is optional, but helps protect your account from hackers. If you set it up, you will need the authenticator code every time you login, or make a withdrawal.</p>
+                <p>Use the Google Authenticator App to scan the QR code, or manually enter the code into your authenticator app.</p>
+                <h3>Download</h3>
+                <p>
+                    Google Authenticator: 
+                    <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2" target="_blank">Android</a> - 
+                    <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8" target="_blank">iOS</a> - 
+                    <a href="http://m.google.com/authenticator" target="_blank">Blackberry</a>              
+                </p>
+                <p>
+                    Other authenticators: 
+                    <a href="http://www.windowsphone.com/en-us/store/app/authenticator/021dd79f-0598-e011-986b-78e7d1fa76f8" target="_blank">Windows Phone</a> - 
+                    <a href="http://www.windowsphone.com/en-us/store/app/authenticator/e7994dbc-2336-4950-91ba-ca22d653759b" target="_blank">Windows Phone</a> - 
+                    <a href="https://code.google.com/p/winauth/" target="_blank">Windows Desktop</a> - 
+                    <a href="http://code.google.com/p/gauth4win/" target="_blank">Windows Desktop</a> - 
+                    <a href="https://www.authy.com/thefuture#install-now" target="_blank">Mac, iOS, Android</a> (Authy)
+                </p>
+                <p>
+                    Google Authenticator #
+                    <input type="number" id="SetupTotpNumber" min="0" max="999999" class="TotpTextBox" />
+                    <span class="TextButton" id="ConfirmTotpButton">
+                        Create
+                    </span>
+                    <span class="Hidden Error" id="SetupTotpWrongCode">
+                        Wrong code
+                    </span>
+                    <span class="TextButton" id="SkipTotpButton">
+                        Not now
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="Hidden" id="CollectRainBox">
+            <div class="StandardPopup">
+                <h2 id="CollectRainBoxTitle">Collect</h2>
+                <p class="FinePrint">Bots are prohibited. You will be banned if you automate this process.</p>
+                <div id="grecaptcha_container" data-type1="true" data-type2="true"></div>
+                <div data-type3="true">
+                    <div id="recaptcha_container">
+                        <div id="recaptcha_image"></div>
+                        <p class="Hidden"><input type="text" id="recaptcha_response_field" name="recaptcha_response_field" maxlength="100" /></p>
+                        <p class="Hidden"><input type="text" id="recaptcha_response_field2" name="recaptcha_response_field2" maxlength="100" /></p>                        
+                        <p><input type="text" id="recaptcha_response_field3" name="recaptcha_response_field3" maxlength="100" /></p>
+                    </div>
+                    <p class="Hidden">
+                        <span class="TextButton" id="CollectRainButton">
+                            Send
+                        </span>
+                    </p>
+                    <p class="Hidden">
+                        <span class="TextButton" id="CollectRainButton2">
+                            Send
+                        </span>
+                    </p>
+                    <p>
+                        <span class="TextButton" id="CollectRainButton3">
+                            Send
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="Hidden" id="IdentityBox">
+            <div class="StandardPopup">
+                <h2>Create or Attach an Identity</h2>
+                <p>An identity is unique name which you can use on many accounts. The name you pick will be shown to others in chat. Creating or attaching an identity to your account is permanent and cannot be changed.</p>
+                <p>
+                    Identity Name: [A-Z]
+                    <input type="text" id="IdentityBoxName" maxlength="10" />
+                </p>
+                <p>
+                    Password
+                    <input type="password" id="IdentityBoxPassword" />
+                </p>
+                <p>
+                    <span class="TextButton" id="IdentityBoxAttach">
+                        Attach Existing Identity
+                    </span>
+                    <span class="TextButton" id="IdentityBoxCreate">
+                        Create New Identity
+                    </span>
+                </p>
+                <p id="IdentityBoxPasswordContainer">
+                    Password
+                    <input type="password" id="IdentityBoxPassword2" /><br />
+                    <span class="TextButton" id="IdentityBoxCreate2">
+                        Create Now
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="Hidden" id="ChatWarningBox">
+            <div class="StandardPopup">
+                <h2>Player Information</h2>
+                <p id="ChatWarningAccountAgeContainer"></p>
+                <p id="ChatWarningIdentityAgeContainer"></p>
+                <p id="ChatWarningNameChangeContainer"></p>
+            </div>
+        </div>
+
+        <div class="Hidden" id="NewBanBox">
+            <div class="StandardPopup">
+                <h2>Ban <span id="NewBanBoxName" class="HighlightedText"></span> (<span id="NewBanBoxAccountId"></span>)</h2>
+                <div>
+                    <div id="NewBanBoxChoices">
+                        <input type="radio" name="NewBanBoxChoice" value="Impersonator" /><span>Impersonator / Клон</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Spam" /><span>Spam / Спам</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Flood" /><span>Flood / Флуд</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Begging" /><span>Begging / Попрошайничество</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Disrespect" /><span>Disrespect / Неуважение</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Wrong Language" /><span>Wrong Language / Неверный язык</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Politics" /><span>War / Politics / Война / Политика</span><br />
+                        <input type="radio" name="NewBanBoxChoice" value="Other" /><span>Other / Другая</span><br />
+                    </div>
+                    <div class="ModNote"></div>
+                    <div data-value="Impersonator"></div>
+                    <div data-value="Spam"></div>
+                    <div data-value="Flood"></div>
+                    <div data-value="Begging"></div>
+                    <div data-value="Disrespect"></div>
+                    <div data-value="Wrong Language"></div>
+                    <div data-value="Politics"></div>
+                    <div data-value="Other">
+                        <p>How long? (minutes)<br /><input id="NewBanBoxDuration" type="number" min="1" max="99999" /></p>
+                        <p>Reason<br /><input type="text" id="NewBanBoxReason" /></p>
+                    </div>
+                    <div class="Clear"></div>
+                </div>
+                <p><span class="TextButton" id="NewBanBoxVote">Vote</span></p>
+                <textarea id="NewBanBoxRecentChat" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="Hidden" id="ChatAddressBox">
+            <div class="StandardPopup">
+                <h2>Address</h2>
+                <p class="BitcoinAddress"></p>
+                <p>This address might not belong to an account on 999dice.com</p>
+            </div>
+        </div>
+        <div class="Hidden" id="ChatRulesBox">
+            <div class="StandardPopup">
+                <h2>Chat</h2>
+                <p>Welcome to the chat rooms.</p>
+                <p class="HighlightedText">This can be a dangerous place. Please read the rules and warnings before chatting.</p>
+                <h3>Links</h3>
+                <ol>
+                    <li>Do not post referral links. No advertising links.</li>
+                    <li>Be careful if you visit links. You might think you are downloading a bot which is actually a virus.</li>
+                    <li>Do not enter your 999dice password on any other website.</li>
+                    <li>Do not use the same password on other websites as on 999dice. Some website owners try your password here, and if it works, they will steal from you.</li>
+                </ol>
+                <h3>Investments and Deals</h3>
+                <ol>
+                    <li>Sending your coins to other people is risky. They might lose your money gambling, or they might steal it from you.</li>
+                    <li>We do not get involved in investments or deals between users. If your money is not returned, there is nothing we can do for you. We might choose to ban someone if they are clearly a scammer, though.</li>
+                    <li>Do not impersonate other users.</li>
+                    <li>If you send coins to someone, make sure it's the right person. Check their account ID or identity and make sure it is an exact match. Some scammers try to impersonate other people.</li>
+                    <li>Do not beg for coins. It is rude and annoying. You can already get coins to play with for free from this website.</li>
+                </ol>
+                <h3>Language</h3>
+                <ol>
+                    <li>Speak the language of the chat room you are in.</li>
+                    <li>Avoid fighting, swearing and accusations.</li>
+                </ol>
+                <p>In general, we are trying to create a spam free, scam free environment which everyone can enjoy.</p>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            <!--
+function staticSettings() {
+    if (config) { config.protocolVersion = 253; }
+    if (phrases) { phrases.profit='Profit';phrases.lost='Lost';phrases.bet='Bet';phrases.btc='BTC';phrases.doge='Doge';phrases.ltc='LTC';phrases.betId='Bet ID';phrases.balance='Balance';phrases.address='Address';phrases.wins='Wins';phrases.bitcoin='Bitcoin';phrases.dogecoin='Dogecoin';phrases.litecoin='Litecoin';phrases.ignore='Ignore';phrases.unignore='Unignore';phrases.chatWarningAccount='This account was created _ ago';phrases.chatWarningIdentity='The identity name for this account was created _ ago';phrases.chatWarningNameChange='This account has also used these names recently: _';phrases.minutes='Minutes';phrases.hours='Hours';phrases.days='Days';phrases.deposit='Deposit';phrases.withdraw='Withdraw';phrases.transferred='Transferred';phrases.completed='Completed';phrases.pending='Pending';phrases.cancelled='Cancelled';phrases.chat='Chat';phrases.banned='Banned';config.recaptchaKey=location.hostname!='www.999doge.com' ? '6LftTvsSAAAAAJYC5HXMYbt6wfIXXhyPTnsaIK9c' : '6LdsYBgTAAAAAJJ-QM1l4c9c4ztRuiFFxdBPe-bT'; }
+};
+staticSettings();
+var recaptchaReady = false;
+function OnRecaptchaReady() { recaptchaReady = true; };
+var recaptchaLinks = {
+    1: 'https://www.google.com/recaptcha/api.js?render=explicit&onload=OnRecaptchaReady',
+    2: 'https://www.google.com/recaptcha/api.js?render=explicit&onload=OnRecaptchaReady&fallback=true',
+    3: 'https://www.google.com/recaptcha/api/js/recaptcha_ajax.js'
+};
+        //-->
+        </script>
+
+    
+
+</body>
+</html>

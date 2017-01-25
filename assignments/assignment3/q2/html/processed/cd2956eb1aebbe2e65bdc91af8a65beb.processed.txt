@@ -1,0 +1,3822 @@
+http://www.topix.com/forum/us/politics
+
+
+
+
+
+
+
+
+
+var start_time = (new Date()).getTime();
+if (document.URL && document.URL.match(/pontfaverger\.com/)) {
+window.location = "http://www.topix.com/";
+}
+
+
+
+ US Politics Forum » Topix
+
+
+
+var $jq = jQuery.noConflict()
+
+
+var start_time;
+if (!start_time)
+start_time = (new Date()).getTime();
+var _sf_startpt = (new Date()).getTime(); // chartbeat
+var t_v = "/t6track/clk?v=dfdf24H4sIAAAAAAAA/02QwW6CQBCGt4iErGlCfYK-gIIUA-kNi9rSGkgs3OkuwkaWJewiXvtyfa6y2EMvk3--f2b-ZFRNXdlPjqqq-uQBAAC1zcb3PVsbdPYlci7g7MTajppjHTEShNVwKq7P-CwBKltGc6gkx-nQFTlDSHtUANBuHaYZVC7ZnzccvO/7filYQ65LxKg68FJiI46d9GCtXr0k2PtvniudihMM9ZbT9aIghSQ0QyWcddxsWEUEQVzCmuEcGr51fPnYrsM0DHaH0N1Lp7kQrH/LcE7qE4OGE0Rb9/0ziuxdZPl2LIe4TAH6oETZ5hkmWDvPf1JFAg7vErnejevz2x/Mf/kTabbVL0s7m65KAQAA";
+var page_node = "us/politics";
+var page_nnode = "us/politics";
+var topix_adinfo = "";
+var topix_inst_adinfo = "";
+var topix_node = 'us/politics';
+var js_domain = 'topix.com';
+var no_video_collapse = false;
+var rubicon_rtp={};
+var tpx_wallpaper = 0;
+var tpx_t7_header_flag = 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.observe('dom:loaded', chrome_attach_spotlight_to_search);
+
+
+setTimeout(topix_doPageRefresh, 2700000);
+
+
+
+try {
+amznads.getAds('3080');
+} catch(e) { /*ignore*/}
+
+
+
+
+
+var crtg_nid = "2612";
+var crtg_cookiename = "cto_topix";
+var crtg_varname = "crtg_content";
+function crtg_getCookie(c_name) {
+var i,x,y,ARRCookies=document.cookie.split(";");
+for(i=0;i<ARRCookies.length;i++) {
+x=ARRCookies[i].substr(0,ARRCookies[i].indexOf("="));
+y=ARRCookies[i].substr(ARRCookies[i].indexOf("=")+1);
+x=x.replace(/^\s+|\s+$/g,"");
+if(x==c_name){return unescape(y);}}return'';
+}
+var crtg_content = crtg_getCookie(crtg_cookiename);
+var crtg_rnd=Math.floor(Math.random()*99999999999);
+var crtg_url=location.protocol+'//rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);
+crtg_url+='&cookieName='+escape(crtg_cookiename);
+crtg_url+='&rnd='+crtg_rnd;
+crtg_url+='&varName=' + escape(crtg_varname);
+var crtg_script=document.createElement('script');
+crtg_script.type='text/javascript';
+crtg_script.src=crtg_url;
+crtg_script.async=true;
+if (document.getElementsByTagName("head").length>0)
+document.getElementsByTagName("head")[0].appendChild(crtg_script);
+else
+if (document.getElementsByTagName("body").length>0)
+document.getElementsByTagName("body")[0].appendChild(crtg_script);
+
+
+
+var startSonobiTime = (new Date()).getTime();
+
+
+
+var tpx_pageTopTime = (new Date()).getTime();
+var tpx_loadStatRandom = Math.random();
+var gpt_request = {};
+gpt_request.tinyua = "UN";
+gpt_request.isMobile = false; // Mobile browser request desktop site
+gpt_request.isTablet = false; // Tablet browser request desktop site
+gpt_request.exclusionCategories = null;
+gpt_request.gpt_adslots = {};
+gpt_request.inside = false;
+gpt_request.staging = false;
+gpt_request.admin = false;
+gpt_request.forceLoadTrackers = false;
+gpt_request.doRubicon = false;
+gpt_request.debugRubicon = false;
+gpt_request.debugCasale = false;
+gpt_request.debugPubmatic = false;
+gpt_request.amazon = true;
+gpt_request.criteo = true;
+gpt_request.openx_bidder = true;
+gpt_request.pubmatic = true;
+gpt_request.aol = true;
+gpt_request.useJSONP = false;
+gpt_request.sonobi_loaded = true;
+gpt_request.yieldbot = false;
+gpt_request.yieldbot_slots = ['dart_tower', 'dart_pushdown', 'dart_rect'];
+gpt_request.adPositions = [];
+gpt_request.adPositions.push('dart_oop');
+gpt_request.adPositions.push('dart_pushdown');
+gpt_request.adPositions.push('dart_rect');
+var pm_pub_id = 79532; // 79532 PubMatic Publisher ID.
+function loadPubmatic() {
+var src = '//ads.pubmatic.com/AdServer/js/dm_gpt_generic.js';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+}
+var ybotq = ybotq || [];
+function loadYieldBot() {
+// Loading Yieldbot script tag
+var js = document.createElement('script');
+js.src = '//cdn.yldbt.com/js/yieldbot.intent.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(js, node);
+}
+function setupYieldBotDesktop() {
+// Setting up a function to be executed one yieldbot script tag is loaded
+// Can never be accidentally fired since only the yieldbot script looks for ybotq
+ybotq.push(function () {
+var yieldBotId = !gpt_request.isMobile ? 'c7c4' : 'ea1a';
+if (gpt_request.staging) {
+console.log('yieldbot id: ' + yieldBotId);
+}
+yieldbot.pub(yieldBotId);
+yieldbot.domainName('topix.com');
+for (var ii=0; ii < gpt_request.adPositions.length; ii++) {
+if ($jq.inArray(gpt_request.adPositions[ii], gpt_request.yieldbot_slots) >= 0) {
+if (gpt_request.adPositions[ii] == 'dart_rect') {
+yieldbot.defineSlot(gpt_request.adPositions[ii], { sizes: [[300, 250], [300, 600]]});
+}
+else {
+yieldbot.defineSlot(gpt_request.adPositions[ii]);
+}
+if (gpt_request.staging) {
+console.log('yieldbot setup: ' + gpt_request.adPositions[ii]);
+}
+}
+}
+yieldbot.enableAsync();
+yieldbot.go();
+});
+}
+function yieldBotNotReady(label) {
+if (gpt_request.staging) {
+console.log("YIELDBOT: " + tpx_log_img.src);
+}
+logAdEvent(label);
+}
+function logAdEvent(type, custom1, custom2, custom3) {
+var tpx_log_type = "event-" + type;
+var tpx_log_cb = parseInt(Math.random() * 1000000000);
+var src = "http://stats.topix.com/adbackfill.gif?type=" + tpx_log_type + "&cb=" + tpx_log_cb;
+if (custom1) {
+src += "&custom1=" + custom1;
+}
+if (custom2) {
+src += "&custom2=" + custom2;
+}
+if (custom3) {
+src += "&custom3=" + custom3;
+}
+var tpx_log_img = new Image(1,1);
+tpx_log_img.src = src;
+tpx_log_img.onload = function() { return; };
+}
+function tpx_sendRTBid(adPos, label, price) {
+var url = "http://stats.topix.com/adbid.gif?x=1";
+if (adPos)
+url += "&adslot=" + adPos;
+if (label)
+url += "&adlabel=" + label;
+if (price)
+url += "&adprice=" + price;
+var tpx_log_img = new Image(1,1);
+tpx_log_img.src = url;
+tpx_log_img.onload = function() { return; };
+}
+function tpx_sendLoadStat(type, elapsed) {
+if(!tpx_pageTopTime)
+return;
+// just log 5% of hits for now
+if (tpx_loadStatRandom > 0.05 && !gpt_request.forceLoadTrackers)
+return;
+if (typeof elapsed == "undefined") {
+elapsed = (new Date()).getTime() - st_pageTopTime;
+}
+if (elapsed > 60000) {
+elapsed = 60000;
+}
+var url = "http://stats.topix.com/load.gif?x=1";
+url = url + "&type=" + encodeURIComponent(type);
+url = url + "&elapsed=" + elapsed;
+tpx_reqTrackerImage(url);
+if (gpt_request.forceLoadTrackers) {
+console.log("ELAPSED (" + type +"): " + elapsed);
+}
+}
+function tpx_reqTrackerImage(url) {
+var img = new Image();
+img.src = url;
+img.onload = function() {};
+return;
+}
+gpt_request.sizeToSlotMapping = {
+"728x90" : 1,
+"160x600" : 2,
+"300x250" : 6,
+"300x600" : 6
+};
+gpt_request.slotToPosition = {
+1: "dart_pushdown",
+2: "dart_tower",
+6: "dart_rect"
+};
+gpt_request.aolBids = gpt_request.aolBids || {};
+// Stores bids in gpt_request
+function gpt_storeAolBid(bidData){
+for (var ii = 0; ii < bidData.seatbid.length; ii++) {
+var bidArr = bidData.seatbid[ii].bid;
+for (var jj = 0; jj < bidArr.length; jj++) {
+var curBid = bidArr[jj];
+var adSize = curBid.w + "x" + curBid.h;
+var adSlotIdx = gpt_request.sizeToSlotMapping[adSize];
+var price = curBid.price;
+var priceBand = formatNum10000(Math.floor(price * 10) * 10);
+tpx_sendRTBid(adSlotIdx, "aol_" + adSize + "_" + priceBand, price);
+if (gpt_request.staging) {
+console.log("storing :" + adSize+ " price:" + price);
+}
+if (gpt_request.aolBids[adSize] && gpt_request.aolBids[adPos].price > price) {
+continue;
+}
+var bidInfo = {
+size: adSize,
+price: price,
+adm: curBid.adm,
+};
+gpt_request.aolBids[adSize] = bidInfo;
+}
+}
+var aolElapsed = (new Date()).getTime() - startAolTime;
+if (gpt_request.staging) {
+console.log("Aol request elapsed time: " + aolElapsed);
+}
+tpx_sendLoadStat("elapsed-ads-tpx-aol", aolElapsed);
+}
+var gpt_aolAdPositions = [ "728x90", "300x250", "300x600", "160x600" ];
+var gpt_aolUrl = {
+"cors_suffix" : "cors=yes;",
+"jsonp_suffix" : "callback=gpt_storeAolBid",
+"728x90": "http://adserver.adtechus.com/pubapi/3.0/9897.1/3524658/0/225/;noperf=1;alias=;cmd=bid;",
+"160x600": "http://adserver.adtechus.com/pubapi/3.0/9897.1/3586935/0/154/;noperf=1;alias=;cmd=bid;", // 160x600
+"300x250": "http://adserver.adtechus.com/pubapi/3.0/9897.1/3524659/0/170/;noperf=1;alias=;cmd=bid;", // 300x250
+"300x600": "http://adserver.adtechus.com/pubapi/3.0/9897.1/3524657/0/529/;noperf=1;alias=;cmd=bid;" // 300x600
+}
+// Check gpt_request for bids, sends them to DFP
+function gpt_setAolTargeting(bid) {
+for (var ii = 0; ii < gpt_aolAdPositions.length; ii++) {
+var adPos = gpt_aolAdPositions[ii];
+var bid = gpt_request.aolBids[adPos];
+var slotIdx = gpt_request.sizeToSlotMapping[adPos];
+var slotLabel = gpt_request.slotToPosition[slotIdx];
+var adslot = gpt_request.gpt_adslots[slotLabel];
+if(typeof bid != 'undefined' && typeof adslot != 'undefined') {
+adslot.setTargeting('aolbid', bid.price);
+}
+}
+}
+// Used by DFP callback
+function gpt_getAolAd(adPos) {
+try {
+var bid = gpt_request.aolBids[adPos];
+if (typeof bid == 'undefined') {
+if (gpt_request.staging) {
+console.log("No aol bid object found for: " + adSize);
+}
+logAdEvent("aol-exception-" + adPos);
+bid = null;
+}
+return bid;
+}
+catch (e) {
+if (gpt_request.staging) {
+alert(e);
+}
+logAdEvent("aol-exception");
+return null;
+}
+}
+function loadAolViaJSONP() {
+for (var ii = 0; ii < gpt_aolAdPositions.length; ii++) {
+var adPos = gpt_aolAdPositions[ii];
+var url = gpt_aolUrl[adPos] + gpt_aolUrl['jsonp_suffix'];
+var js = document.createElement('script');
+js.src = url;
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(js, node);
+}
+}
+function loadAolViaCORS() {
+$jq.support.cors = true; // need for IE cors to work
+for (var ii = 0; ii < gpt_aolAdPositions.length; ii++) {
+var adPos = gpt_aolAdPositions[ii];
+var url = gpt_aolUrl[adPos] + gpt_aolUrl['cors_suffix'];
+$jq.ajax({
+url: url,
+type: 'GET',
+dataType: 'json',
+crossDomain: true,
+xhrFields: {
+withCredentials: true
+},
+success: function(result) {
+gpt_storeAolBid(result);
+},
+error: function (request, status, error) {
+if (gpt_request.staging) {
+console.log('CORS error: ' + error);
+}
+logAdEvent("aol-CORS-error", error, status, gpt_request.tinyua);
+}
+});
+}
+}
+if (gpt_request.aol) {
+var startAolTime = (new Date()).getTime();
+if (gpt_request.useJSONP) {
+loadAolViaJSONP();
+}
+else {
+loadAolViaCORS();
+}
+}
+if (gpt_request.pubmatic) {
+loadPubmatic();
+}
+if (gpt_request.yieldbot) {
+loadYieldBot();
+setupYieldBotDesktop();
+}
+// According to setKeys() in morpheus.topix.js, targeting is set at the slot level
+var gpt_pubmaticAdPositions = [ "dart_pushdown", "dart_tower", "dart_rect" ];
+function gpt_parsePubmaticDesktopTargeting() {
+if (gpt_request.staging) {
+console.log('pubmatic targeting');
+}
+var key = "bid";
+for (var ii=0; ii < gpt_pubmaticAdPositions.length; ii++) {
+if($jq.inArray(gpt_pubmaticAdPositions[ii], gpt_request.adPositions) < 1) {
+if(gpt_request.staging) {
+console.log("Pubmatic size error for " + gpt_pubmaticAdPositions[ii]);
+}
+continue;
+}
+if(typeof gpt_request.gpt_adslots[gpt_pubmaticAdPositions[ii]] == 'undefined') {
+if(gpt_request.staging) {
+console.log("Skipping undefined slot " + gpt_pubmaticAdPositions[ii]);
+}
+continue;
+}
+var pubmaticTargetingArr = gpt_request.gpt_adslots[gpt_pubmaticAdPositions[ii]].getTargeting(key);
+if (pubmaticTargetingArr && pubmaticTargetingArr.length > 0) {
+for(var jj=0; jj < pubmaticTargetingArr.length; jj++) {
+var price = pubmaticTargetingArr[jj];
+if (price == '0' || price == 0) // skip zero values
+continue;
+if (gpt_request.inside && price < 0)
+console.log("Pubmatic pricing error for " + price + " size: " + gpt_pubmaticAdPositions[ii]);
+var priceBand = formatNum10000(Math.floor(price * 10) * 10);
+tpx_sendRTBid(gpt_pubmaticAdPositions[ii], 'tpx_pubmatic_' + priceBand, price);
+if (gpt_request.staging) {
+console.log("Pushing Pubmatic " + price + " size: " + gpt_pubmaticAdPositions[ii] + " into DFP");
+}
+}
+}
+}
+}
+var gpt_bidderAdPositions = [ "dart_pushdown", "dart_tower", "dart_rect" ];
+var gpt_bidderAdSizes = { "dart_pushdown":"728x90", "dart_tower":"160x600", "dart_rect":"300x250" };
+function gpt_parseOpenXTargeting () {
+if (gpt_request.staging) {
+console.log('openx targeting');
+}
+var prefix = "ox";
+for (var ii=0; ii < gpt_bidderAdPositions.length; ii++) {
+if($jq.inArray(gpt_bidderAdPositions[ii], gpt_request.adPositions) < 1) {
+if(gpt_request.staging) {
+console.log("OpenX size error for " + gpt_bidderAdPositions[ii]);
+}
+continue;
+}
+if(typeof gpt_request.gpt_adslots[gpt_bidderAdPositions[ii]] == 'undefined') {
+if(gpt_request.staging) {
+console.log("Skipping undefined slot for size " + gpt_bidderAdPositions[ii]);
+}
+continue;
+}
+var key = prefix + gpt_bidderAdSizes[gpt_bidderAdPositions[ii]];
+var bidderTargetingArr = gpt_request.gpt_adslots[gpt_bidderAdPositions[ii]].getTargeting(key);
+if (bidderTargetingArr && bidderTargetingArr.length > 0) {
+for(var jj=0; jj < bidderTargetingArr.length; jj++) {
+var price = bidderTargetingArr[jj];
+// skip zero price values
+// 's' and 't' which I don't know what openx is using for, but nothing in DFP targets them
+// waiting on their reply
+if (price == '0' || price == 't' || price == 's' || price == 0) {
+continue;
+}
+if (gpt_request.inside && price < 0)
+console.log("OpenX pricing error for " + price + " size: " + gpt_bidderAdPositions[ii]);
+var priceBand = formatNum10000(price);
+price /= 100;
+tpx_sendRTBid(gpt_pubmaticAdPositions[ii], 'tpx_openx_' + priceBand, price);
+if (gpt_request.staging) {
+console.log("Pushing OpenX " + price + " size: " + gpt_bidderAdPositions[ii] + " into DFP");
+}
+}
+}
+}
+}
+function formatNum10000(num) {
+if (num < 10)
+return "000" + num;
+if (num < 100)
+return "00" + num;
+if (num < 1000)
+return "0" + num;
+return num;
+}
+
+
+var startOpenXBidderTime = (new Date()).getTime();
+if (gpt_request.openx_bidder) {
+src = '//ox-d.topix.servedbyopenx.com/w/1.0/jstag?nc=4908-Topix';
+document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+}
+
+
+if (gpt_request.openx_bidder) {
+var startOpenXBidderTime;
+var openxBidderElapsed = (new Date()).getTime() - startOpenXBidderTime;
+tpx_sendLoadStat("elapsed-ads-tpx-openx-bidder", openxBidderElapsed);
+}
+
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+var startGPTTime = (new Date()).getTime();
+if (!gpt_request.pubmatic) {
+(function() {
+var gads = document.createElement("script");
+gads.async=true;
+gads.type = "text/javascript";
+var useSSL = "https:" == document.location.protocol;
+gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+var node =document.getElementsByTagName("script")[0];
+node.parentNode.insertBefore(gads, node);
+})();
+}
+else {
+setTimeout(function() {
+var gads = document.createElement("script");
+gads.async=true;
+gads.type = "text/javascript";
+var useSSL = "https:" == document.location.protocol;
+gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+var node =document.getElementsByTagName("script")[0];
+node.parentNode.insertBefore(gads, node);
+}, 50);
+}
+
+
+function setupRubiconTargeting (position) {
+var rubicon_size_mapping = {
+"dart_lb_header": ["728x90"],
+"dart_pushdown": ["728x90"],
+"dart_rect": ["300x600", "300x250"],
+"dart_tower": ["160x600"]
+};
+if (typeof position == 'undefined' || typeof rubicon_size_mapping[position] == 'undefined') {
+if(gpt_request.debugRubicon)
+console.log("rubicon position: [" + position + "] not found");
+return true;
+}
+var rtp_sizes = rubicon_size_mapping[position];
+for(var ii = 0; ii < rtp_sizes.length; ii++) {
+if (rubicon_rtp[rtp_sizes[ii]])
+adSlot.setTargeting("tier", rubicon_rtp[rtp_sizes[ii]].tier);
+}
+return false;
+}
+
+
+if (gpt_request.sonobi_loaded && (typeof sbi_morpheus != 'undefined')) {
+try {
+sbi_morpheus.register('div-gpt-ad-1', '1385d157f443eccfaf47'); // topix_728_apex
+sbi_morpheus.register('div-gpt-ad-6', '97762c449c1b0519df5e'); // topix_300_apex_flex
+//sbi_morpheus.register('div-gpt-ad-7', '97762c449c1b0519df5e'); // topix_300_apex_flex
+sbi_morpheus.register('div-gpt-ad-2', 'c52783c03e51f25b23a0'); // topix_160_apex
+if (gpt_request.staging) {
+console.log("sonobi placments registered");
+}
+} catch(e) {
+if (gpt_request.staging) {
+alert(e);
+}
+logAdEvent("sonobi-exception");
+}
+}
+
+ var perform_gpt_div_id;
+var crtg_content;
+var rtp_size = ""; // set via TT
+var adSlot;
+googletag.cmd.push(function() {
+// dart_oop
+adSlot = googletag.defineOutOfPageSlot("/4908/Desktop_Politics", "div-gpt-ad-16")
+.addService(googletag.pubads())
+.setTargeting("bw", "1")
+.setTargeting("n", "us/politics")
+.setTargeting("forumtype", "forumview")
+.setTargeting("sect", "forums");
+gpt_request.gpt_adslots['dart_oop'] = adSlot;
+if (gpt_request.debugPubmatic) {
+adSlot.setTargeting('bid','.53434');
+}
+setupRubiconTargeting("dart_oop");
+if (gpt_request.yieldbot && $jq.inArray('dart_oop', gpt_request.yieldbot_slots) >= 0) {
+try {
+yieldbot.setSlotTargeting('dart_oop', adSlot);
+if (gpt_request.staging) {
+console.log('yieldbot targeting set for dart_oop');
+}
+}
+catch (e) {
+if (gpt_request.staging) {
+console.log('yieldbot exception: ' + e);
+yieldBotNotReady('yieldbot-targeting');
+}
+}
+}
+// dart_pushdown
+adSlot = googletag.defineSlot("/4908/Desktop_Politics", [[970,90],[970,250],[728,90],[970,66]] , "div-gpt-ad-1")
+.addService(googletag.pubads())
+.setTargeting("bw", "1")
+.setTargeting("n", "us/politics")
+.setTargeting("forumtype", "forumview")
+.setTargeting("sect", "forums");
+adSlot.setTargeting('pos','top');
+gpt_request.gpt_adslots['dart_pushdown'] = adSlot;
+if (gpt_request.debugPubmatic) {
+adSlot.setTargeting('bid','.53434');
+}
+setupRubiconTargeting("dart_pushdown");
+if (gpt_request.yieldbot && $jq.inArray('dart_pushdown', gpt_request.yieldbot_slots) >= 0) {
+try {
+yieldbot.setSlotTargeting('dart_pushdown', adSlot);
+if (gpt_request.staging) {
+console.log('yieldbot targeting set for dart_pushdown');
+}
+}
+catch (e) {
+if (gpt_request.staging) {
+console.log('yieldbot exception: ' + e);
+yieldBotNotReady('yieldbot-targeting');
+}
+}
+}
+// dart_rect
+adSlot = googletag.defineSlot("/4908/Desktop_Politics", [[300,1050],[300,600],[300,250]] , "div-gpt-ad-6")
+.addService(googletag.pubads())
+.setTargeting("bw", "1")
+.setTargeting("n", "us/politics")
+.setTargeting("kw", "top")
+.setTargeting("forumtype", "forumview")
+.setTargeting("sect", "forums");
+gpt_request.gpt_adslots['dart_rect'] = adSlot;
+if (gpt_request.debugPubmatic) {
+adSlot.setTargeting('bid','.53434');
+}
+setupRubiconTargeting("dart_rect");
+if (gpt_request.yieldbot && $jq.inArray('dart_rect', gpt_request.yieldbot_slots) >= 0) {
+try {
+yieldbot.setSlotTargeting('dart_rect', adSlot);
+if (gpt_request.staging) {
+console.log('yieldbot targeting set for dart_rect');
+}
+}
+catch (e) {
+if (gpt_request.staging) {
+console.log('yieldbot exception: ' + e);
+yieldBotNotReady('yieldbot-targeting');
+}
+}
+}
+if (gpt_request.amazon) {
+try {
+amznads.setTargetingForGPTAsync('amznslots');
+}
+catch(e) { /*ignore*/}
+}
+if(gpt_request.criteo && crtg_content) {
+var crtg_split = crtg_content.split(';');
+for (var ii=1;ii < crtg_split.length;ii++)
+{
+googletag.pubads().setTargeting("" + (crtg_split[ii-1].split('='))[0] + "", "" + (crtg_split[ii-1].split('='))[1] + "");
+}
+topix_adinfo += ":At";
+}
+if (gpt_request.aol) {
+try {
+gpt_setAolTargeting();
+}
+catch(e) {
+if(gpt_request.staging) {
+console.log('aol exception');
+}
+logAdEvent("aol-exception");
+}
+}
+if (gpt_request.exclusionCategories != null) {
+for ( var jj = 0; jj < gpt_request.exclusionCategories.length; jj++) {
+googletag.pubads().setCategoryExclusion(gpt_request.exclusionCategories[jj]);
+}
+}
+googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+if (!gpt_request.firstAdRendered) {
+gpt_request.firstAdRendered = true;
+if (gpt_request.pubmatic) {
+var gptElapsed = (new Date()).getTime() - startGPTTime;
+tpx_sendLoadStat("elapsed-ads-pubmatic-gpt", gptElapsed);
+try {
+gpt_parsePubmaticDesktopTargeting();
+}
+catch (e) {
+logAdEvent("pubmatic-exception");
+}
+}
+if(gpt_request.openx_bidder)
+{
+try {
+gpt_parseOpenXTargeting()
+}
+catch (e) {
+logAdEvent("openx-exception");
+}
+}
+}
+});
+if(window.innerWidth >= 1280)
+{
+googletag.pubads().setTargeting("screen", "wide");
+}
+// 7/25/2014 - Turning off SRA to see if that fixes defaults
+// 4/7/2015 - turnin on for Adobe Roadblock
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+
+
+(function(s,o,l,v,e,d){if(s[o]==null&&s[l+e]){s[o]="loading";s[l+e](d,l=function(){s[o]="complete";s[v+e](d,l,!1)},!1)}})(document,"readyState","add","remove","EventListener","DOMContentLoaded");(function(){var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="//cdn.engine.4dsply.com/Scripts/infinity.js.aspx?guid=74002370-1dbd-4283-a84d-7b473628197f";s.id="infinity";s.setAttribute("data-guid","74002370-1dbd-4283-a84d-7b473628197f");s.setAttribute("data-version","async");var e=document.getElementsByTagName('script')[0];e.parentNode.insertBefore(s,e)})();
+
+var sbElementInterval = setInterval(function(){sbElementCheck()}, 50);
+function sbElementCheck() {
+var targetedElement = document.getElementById('ingageunit');
+if(targetedElement) {
+clearInterval(sbElementInterval);
+(function(d) {
+var js, s = d.getElementsByTagName('script')[0];
+js = d.createElement('script');
+js.async = true;
+js.onload = function(e) {
+SbInGageWidget.init({
+partnerId : 4873,
+widgetId : 'topx002',
+cmsPath : 'http://cms.springboardplatform.com'
+});
+}
+js.src = "http://cdn.springboardplatform.com/storage/js/ingage/apingage.min.js";
+s.parentNode.insertBefore(js, s);
+})(window.document);
+}
+}
+
+
+
+
+
+
+
+
+
+CLOSE
+ADVERTISEMENT
+
+
+
+
+googletag.cmd.push( function(){googletag.display("div-gpt-ad-16");});
+var topix_adinfo;
+topix_adinfo += ":";
+topix_adinfo += 'Do';
+
+
+
+
+
+
+
+
+
+
+googletag.cmd.push( function(){googletag.display("div-gpt-ad-1");});
+var topix_adinfo;
+topix_adinfo += ":";
+topix_adinfo += 'Du';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+US Politics
+
+
+
+
+ News
+
+
+
+
+
+Forums
+
+
+
+
+
+
+function togglePanels(elemToHide, elemToShow) {
+Element.hide(elemToHide);
+Element.show(elemToShow);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Not a Topix user yet?
+Sign Up
+
+
+Forgot Your Password?
+
+
+Back to login
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sections
+
+
+
+
+
+All Topix
+Top Stories
+Forums
+User Forums
+
+
+Business
+Tech
+Sports
+Entertainment
+
+
+US News
+Weird News
+Offbeat
+Stars!
+
+
+
+
+
+
+
+
+
+offbeatRecirc();
+setInterval(function(){
+stickyHeader();
+}, 10000);
+$jq(document).scroll(function () {
+stickyHeader();
+});
+function stickyHeader() {
+var headerPlaceHolder = $jq('.js-header-placeholder');
+var headerPlaceHolderOffset = headerPlaceHolder.offset().top;
+var scrollTop = $jq(window).scrollTop();
+var headerPosition = (headerPlaceHolderOffset - scrollTop);
+var header = $jq('.js-tpx-header-wrapper');
+if (headerPosition <= 0) {
+header.addClass('str-fixed-header');
+headerPlaceHolder.addClass('str-fixed-header-placeholder');
+} else {
+header.removeClass('str-fixed-header');
+headerPlaceHolder.removeClass('str-fixed-header-placeholder');
+}
+}
+function offbeatRecirc() {
+var offbeatRecircLink = $jq('.js-offbeat-recirc-link');
+var offbeatRecircDiv = $jq('.js-offbeat-recirc');
+offbeatRecircLink.hover(
+function() {
+$jq('.js-offbeat-recirc').stop(true, true).slideDown();
+}, function() {
+$jq('.js-offbeat-recirc').stop(true, true).slideUp();
+});
+offbeatRecircDiv.hover(
+function() {
+$jq(this).stop(true, true).show();
+}, function() {
+$jq(this).stop(true, true).slideUp();
+});
+}
+$jq('.js-header-section-dropdown').hover(
+function(){
+$jq('.js-header-section').removeClass('header-item-hover');
+$jq(this).closest('.js-header-section').addClass('header-item-hover');
+if ($jq(this).hasClass('js-offbeat-recirc')) {
+$jq('.js-offbeat-recirc-link').addClass('header-item-hover');
+}
+},
+function(){
+$jq('.js-header-section').removeClass('header-item-hover');
+});
+function showHideHeaderItem(link) {
+var menuLeftWidth = $jq('.js-header-left').width();
+var menuRightWidth = $jq('.js-header-right').width();
+var headerWidth = $jq('.js-header').width();
+var videoLink = $jq(link);
+var videoLinkWidth = videoLink.width();
+var occupiedWidth = ( menuLeftWidth + menuRightWidth);
+var availableWidth = ( headerWidth - occupiedWidth );
+if(availableWidth >= videoLinkWidth ) {
+videoLink.show();
+} else {
+videoLink.hide();
+}
+}
+showHideHeaderItem('.js-videos');
+
+
+$jq(document).ready(function() {
+if (navigator.appVersion.indexOf("Win")!=-1) {
+$jq('.js-header li a').addClass('windows-bold');
+}
+});
+
+
+
+
+
+
+
+
+Topix
+
+
+›
+
+
+US Politics
+
+
+›
+
+US Politics Forum
+
+
+
+
+Welcome Politix Community
+Politix has retired but we hope that the community will live on here in the Topix Politics forum. Here you can comment on political news, create threads for open discussion, and build your own forum that you can moderate as you see fit. We know that you will find the discussions here just as lively as you had over at Politix. 
+
+US Politics Forum
+
+ Forums and message boards for US Politics
+
+
+
+
+
+
+
+
+
+
+ Tell me when this forum is updated.
+
+
+
+
+ US Politics User Forums
+
+
+ Create your own
+
+
+
+
+
+Happyhedon
+
+
+
+Dying twin holds unborn sister's hand in heartb...
+9
+
+
+
+
+
+
+Snidely's Kingdom
+
+
+
+Climate Warming Models Off by a Tree-mendous Fa...
+1
+
+
+
+
+
+
+Cruz Control - Forum devoted to the a...
+
+
+
+Surprise: Cruz tops Trump in national poll
+1
+
+
+
+
+
+
+Clinton, Sanders and O'Malley - Democ...
+
+
+
+Hillary Has Coughing Fit During Race Speech
+1
+
+
+
+
+
+
+Immigration - Legal and Illegal
+
+
+
+Unaccompanied Alien Children Charged in Executi...
+2
+
+
+
+
+
+
+Islam
+
+
+
+Muslim Machete Attacker Screamed ALLAHU AKBAR
+1
+
+
+
+
+
+
+Clinton Scandals - All in One Place
+
+
+
+Top Clinton Fundraisers Lobbied Against Obamaca...
+1
+
+
+
+
+
+
+2016 US Presidential Election - Oddsm...
+
+
+
+US Presidential Election odds - paddypower.com...
+1
+
+
+
+
+
+
+Political Court Decisions
+
+
+
+Is a recess appointment to the Court an option?
+1
+
+
+
+
+
+
+4th Amendment: Privacy, surveillance ...
+
+
+
+Justices to hear 4th Amendment Malicious Prosec...
+1
+
+
+
+
+
+
+In The News
+
+
+
+DNC rolls back Obama ban on contributions from ...
+1
+
+
+
+
+
+
+Judiciary Discussions and Decisions
+
+
+
+Symposium: Constitutional limits of presidentia...
+1
+
+
+
+
+
+
+All 2d Amendment, All The Time
+
+
+
+Michigan Appeals Court: Gun Control Must Meet ...
+2
+
+
+
+
+
+
+All thgings Trump
+
+
+
+Trump says he 'probably will' sue over results ...
+1
+
+
+
+
+
+
+Hot Air - Climate, Weather and Global...
+
+
+
+The Earth Creates the Cooling and Heating Cycles
+1
+
+
+
+
+
+
+Middle East, North Africa, Iran and T...
+
+
+
+Hamas says it continues to build tunnels to att...
+1
+
+
+
+
+
+The Truther Files
+
+
+
+Denying Life-Sustaining Treatment to a Patient ...
+5
+
+
+
+
+
+Mikes views on the news
+
+
+
+Is Trump the real deal
+10
+
+
+
+
+
+POLITICS GALAXY
+
+
+
+Trumps White Cult Supporters Mouth Of Politica...
+36
+
+
+
+
+
+Political Hell Files
+
+
+
+http://www.theblaze.com/news/war-on-christmas/
+1
+
+
+More US Politics User Forums 
+
+$jq('.js-user-forums-more').on('click', function(e){
+var me = $jq(this);
+var seeMoreDiv = $jq('.js-user-forums-more-div');
+e.preventDefault();
+me.removeClass('x-short-list');
+me.hide();
+seeMoreDiv.removeClass('x-short-list');
+});
+
+
+
+See all User Forums
+
+
+Tell us your thoughts, ask questions or create a poll!
+
+
+
+
+
+
+Start Discussion 
+
+
+
+
+
+
+US Politics Trending
+
+
+Title
+Updated
+Last By
+Comments
+
+
+
+
+
+
+Barack Obama, our next President
+
+(Nov '08)
+
+
+1 min
+
+
+Renaissance Writer
+
+
+1,350,795
+
+
+
+
+
+
+
+The President has failed us
+
+(Jun '12)
+
+
+12 min
+
+
+_White American_
+
+
+371,539
+
+
+
+
+
+
+
+By seeking to thwart the Constitution, Republic...
+
+
+
+11 min
+
+
+mjjcpa
+
+
+160
+
+
+
+
+
+
+
+FBI 'ready to indict' Hillary Clinton, Tom Dela...
+
+
+
+8 min
+
+
+An NFL Fan
+
+
+1,359
+
+
+
+
+
+
+
+Supreme Court may face extended period with 8 j...
+
+
+
+2 min
+
+
+Golf Foxtrot Yankee
+
+
+92
+
+
+
+
+
+
+
+Threads
+
+
+1 - 100
+of 271,049
+
+
+
+
+ First
+ Prev
+
+
+
+
+of 2711
+
+Next 
+Last  
+
+
+
+Title
+Updated
+Last By
+Comments
+
+
+
+
+
+
+Barack Obama, our next President
+
+(Nov '08)
+
+
+1 min
+
+
+Renaissance Writer
+
+
+1,350,795
+
+
+
+
+
+
+Republicans might not have standards in this el...
+
+
+
+2 min
+
+
+Synque
+
+
+62
+
+
+
+
+
+
+If Donald Trump Was President, Here's What Woul...
+
+
+
+2 min
+
+
+WasteWater
+
+
+4,891
+
+
+
+
+
+
+
+Supreme Court may face extended period with 8 j...
+
+
+
+2 min
+
+
+Golf Foxtrot Yankee
+
+
+92
+
+
+
+
+
+
+Evolution vs. Creation
+
+(Jul '11)
+
+
+2 min
+
+
+DanFromSmithville
+
+
+188,106
+
+
+
+
+
+
+Clinton: Ending racial inequality will be 'miss...
+
+
+
+3 min
+
+
+Erik
+
+
+15
+
+
+
+
+
+
+
+FBI 'ready to indict' Hillary Clinton, Tom Dela...
+
+
+
+8 min
+
+
+An NFL Fan
+
+
+1,359
+
+
+
+
+
+
+Sharia is "incompatible with American jurisprud...
+
+(Jan '12)
+
+
+8 min
+
+
+Marriage trafficking
+
+
+16
+
+
+
+
+
+
+Obama on guns: 'We need a change in attitude'
+
+(Jun '15)
+
+
+9 min
+
+
+Chicagoan by Birth
+
+
+6,166
+
+
+
+
+
+
+Atheists Aren't the Problem, Christian Intolera...
+
+(Oct '14)
+
+
+11 min
+
+
+thetruth
+
+
+18,937
+
+
+
+
+
+
+
+
+#inread_26817 table tr td { padding:0; }
+
+
+var zflag_parent="zedo_article_div";
+var zflag_nid="1877";
+var zflag_cid="25";
+var zflag_sid="1";
+var zflag_sz="85";
+var zflag_vast_domain="http://xp1.zedo.com/";
+var zflag_width="1";
+var zflag_height="1";
+var zflag_bchan="26";
+
+
+
+var topix_adinfo;
+topix_adinfo += ":Az";
+
+
+
+
+
+
+
+
+
+
+Romney campaign threatens to unleash negative a...
+
+(Jul '12)
+
+
+11 min
+
+
+Marriage trafficking
+
+
+462
+
+
+
+
+
+
+5 Ways Scalia's Death Is Complicating The 2016 ...
+
+
+
+11 min
+
+
+Synque
+
+
+54
+
+
+
+
+
+
+
+By seeking to thwart the Constitution, Republic...
+
+
+
+11 min
+
+
+mjjcpa
+
+
+160
+
+
+
+
+
+
+Pence: Hoosiers will know stance on LGBT civil ...
+
+
+
+12 min
+
+
+Newt s Gimlet Rage
+
+
+55
+
+
+
+
+
+
+
+The President has failed us
+
+(Jun '12)
+
+
+12 min
+
+
+_White American_
+
+
+371,539
+
+
+
+
+
+
+Art Pope endorses GOP candidate Marco Rubio for...
+
+
+
+12 min
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Trump appears to blame Ryan for Romney loss
+
+
+
+14 min
+
+
+Lawrence Wolf
+
+
+6
+
+
+
+
+
+
+The View that Putin's Advisor Has on Obama's Uk...
+
+(Nov '14)
+
+
+15 min
+
+
+HNC
+
+
+5,300
+
+
+
+
+
+
+Hillary Clinton Shows Humanity in Ad Vowing to ...
+
+
+
+17 min
+
+
+wild child
+
+
+4
+
+
+
+
+
+
+
+'Fox News Sunday' to Host Kentucky Senate Debate
+
+(Oct '10)
+
+
+19 min
+
+
+Rightwing Idiot
+
+
+214,494
+
+
+
+
+
+
+Tom Steyer, a billionaire environmentalist, is ...
+
+
+
+22 min
+
+
+Lawrence Wolf
+
+
+94
+
+
+
+
+
+
+Bachmann Calls Bush's Bailout Decision an Act o...
+
+(Nov '11)
+
+
+22 min
+
+
+Marriage trafficking
+
+
+33
+
+
+
+
+
+
+Voters have trust issues with Hillary Clinton? ...
+
+(Jul '15)
+
+
+26 min
+
+
+Claire77
+
+
+3,408
+
+
+
+
+
+
+Rubio, Cruz, Carson Take The Stage In CNN Town ...
+
+
+
+26 min
+
+
+Newt s Gimlet Rage
+
+
+2
+
+
+
+
+
+
+Pope on Trump: Anyone who wants border walls 'i...
+
+
+
+26 min
+
+
+Fred Engelman
+
+
+2
+
+
+
+
+
+
+Graham: Trump or Cruz would spell "death" to GOP
+
+
+
+28 min
+
+
+Lawrence Wolf
+
+
+41
+
+
+
+
+
+
+Inside the 30,000-acre West Texas resort where ...
+
+
+
+32 min
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+'Free Kim Davis': This is just what gay rights ...
+
+
+
+34 min
+
+
+Strel
+
+
+9,364
+
+
+
+
+
+
+BARACK OBAMA BIRTH CERTIFICATE: Suit contesting...
+
+(Jan '09)
+
+
+34 min
+
+
+Jacques Ottawa
+
+
+208,019
+
+
+
+
+
+
+Poll: Trump on top, Cruz and Rubio trail
+
+
+
+35 min
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+More from around the Web
+
+#zergnet-widget-24795 .zergentity img { width:150px !important; margin-top:-19px !important;}
+#zergnet-widget-24795 .zergentity a { height:112px; overflow:hidden; display:block; }
+#zergnet-widget-24795 .zergheadline a { height:auto; }
+#zergnet-widget-24795 .zergheadline {text-align:left !important;}
+@media (max-width: 600px) {
+#zergnet-widget-24795 .zergentity { width:310px !important; margin-bottom:20px !important; }
+#zergnet-widget-24795 .zergentity img { width:310px !important; height:310px !important; margin-top:-39px !important;}
+#zergnet-widget-24795 .zergentity a { height:232px; overflow:hidden; display:block; }
+#zergnet-widget-24795 .zergheadline a { height:auto; }
+#zergnet-widget-24795 .zergentity:nth-of-type(3) {clear:both !important;}
+#zergnet-widget-24795 .zergentity:nth-of-type(7) {clear:both !important;}
+}
+
+
+
+(function() {
+var zergnet = document.createElement('script');
+zergnet.type = 'text/javascript'; zergnet.async = true;
+zergnet.src = 'http://www.zergnet.com/zerg.js?id=24795';
+var znscr = document.getElementsByTagName('script')[0];
+znscr.parentNode.insertBefore(zergnet, znscr);
+})();
+
+
+
+
+
+
+
+Hillary Clinton Hugs Child of Undocumented Immi...
+
+
+
+36 min
+
+
+Golf Foxtrot Yankee
+
+
+6
+
+
+
+
+
+
+Ted Cruz Will Be The GOP Nominee
+
+
+
+39 min
+
+
+Golf Foxtrot Yankee
+
+
+10
+
+
+
+
+
+
+Morning in America? New Marco Rubio ad may feat...
+
+
+
+41 min
+
+
+Cat74
+
+
+17
+
+
+
+
+
+
+Hillary Clinton attacks GOP by barking like a dog
+
+
+
+42 min
+
+
+Eleanor
+
+
+24
+
+
+
+
+
+
+Why Cruz's fight against Obamacare failed - and...
+
+
+
+44 min
+
+
+Newt s Gimlet Rage
+
+
+11
+
+
+
+
+
+
+Top Democratic economists just launched a bruta...
+
+
+
+47 min
+
+
+THE WIZ
+
+
+2
+
+
+
+
+
+
+Esty vows to push ahead with gun-safety efforts
+
+
+
+50 min
+
+
+payme
+
+
+9
+
+
+
+
+
+
+US fight over gunman's locked iPhone could have...
+
+
+
+52 min
+
+
+ Go Blue Forever
+
+
+14
+
+
+
+
+
+
+Gay marriage
+
+(Mar '13)
+
+
+54 min
+
+
+lides
+
+
+61,331
+
+
+
+
+
+
+Feeling the Pressure? Clinton plays literal att...
+
+
+
+1 hr
+
+
+Newt s Gimlet Rage
+
+
+20
+
+
+
+
+
+
+Tea party plans to abandon some of their GOP stars
+
+(Aug '13)
+
+
+1 hr
+
+
+Truman Republican
+
+
+138
+
+
+
+
+
+Time to go?
+
+(Jun '15)
+
+
+1 hr
+
+
+Wanda
+
+
+8,171
+
+
+
+
+
+
+EXCLUSIVE - Coulter: - End of America' If Rubio...
+
+
+
+1 hr
+
+
+Golf Foxtrot Yankee
+
+
+41
+
+
+
+
+
+
+George W. Bush stumps for brother Jeb on Republ...
+
+
+
+1 hr
+
+
+Aryan Defender
+
+
+19
+
+
+
+
+
+
+President Obama to visit Cuba in coming weeks
+
+
+
+1 hr
+
+
+Worst President Ever
+
+
+3
+
+
+
+
+
+
+Chicago protesters demand resignation after Ema...
+
+
+
+1 hr
+
+
+Cat74
+
+
+179
+
+
+
+
+
+
+Cruz's deficit boosting tax plan; House GOP fre...
+
+
+
+1 hr
+
+
+USA today
+
+
+1
+
+
+
+
+
+
+Kasich, Sanders win in Dixville Notch
+
+
+
+1 hr
+
+
+mjjcpa
+
+
+63
+
+
+
+
+
+
+The Battered Wife Syndrome Of The Human Rights ...
+
+(Oct '09)
+
+
+1 hr
+
+
+Loose Walls
+
+
+29
+
+
+
+
+
+
+First-Degree Murder Charge For Chicago Police O...
+
+
+
+1 hr
+
+
+Cat74
+
+
+44
+
+
+
+
+
+
+Bernie Sanders a Bum Who Didn't Earn His First ...
+
+
+
+1 hr
+
+
+Denny CranesPlace
+
+
+9
+
+
+
+
+
+
+Obama: No evidence of attacks during holiday
+
+
+
+2 hr
+
+
+WelbyMD
+
+
+42
+
+
+
+
+
+
+Trump Rips Obama Over High African-American Une...
+
+
+
+2 hr
+
+
+Big Knob
+
+
+19
+
+
+
+
+
+
+Obama planning historic trip to Cuba to cement ...
+
+
+
+2 hr
+
+
+ Go Blue Forever
+
+
+3
+
+
+
+
+
+rest of my life by Brian Patrick ables
+
+(Jan '13)
+
+
+2 hr
+
+
+brian ables
+
+
+31
+
+
+
+
+
+
+Republican candidates in high-stakes match in S...
+
+
+
+2 hr
+
+
+Eleanor
+
+
+11
+
+
+
+
+
+
+Hillary Clinton: Rubio's abortion attacks "path...
+
+
+
+2 hr
+
+
+barefoot2626
+
+
+117
+
+
+
+
+
+
+Hill Republicans taking their cues from Trump
+
+
+
+2 hr
+
+
+mjjcpa
+
+
+15
+
+
+
+
+
+
+Choose carefully: The next president could shap...
+
+
+
+2 hr
+
+
+davy
+
+
+8
+
+
+
+
+
+
+Poll: Clinton, Sanders in a dead heat for Nevada
+
+
+
+2 hr
+
+
+mjjcpa
+
+
+33
+
+
+
+
+
+
+Obama welcomes Southeast Asian leaders to US fo...
+
+
+
+2 hr
+
+
+mjjcpa
+
+
+42
+
+
+
+
+
+
+Once slow-moving threat, global warming speeds ...
+
+(Dec '08)
+
+
+3 hr
+
+
+litesong
+
+
+57,399
+
+
+
+
+
+
+South China Sea takes center stage at U.S.-ASEA...
+
+
+
+3 hr
+
+
+Golf Foxtrot Yankee
+
+
+9
+
+
+
+
+
+
+Opinion: The Schumer Precedent
+
+
+
+3 hr
+
+
+Golf Foxtrot Yankee
+
+
+22
+
+
+
+
+
+
+Eight things you need to know right now
+
+
+
+4 hr
+
+
+True Christian wi...
+
+
+3
+
+
+
+
+
+
+GOP candidates pushing, maneuvering hard in Sou...
+
+
+
+4 hr
+
+
+guest
+
+
+5
+
+
+
+
+
+
+Trump strikes back at Obama criticism
+
+
+
+5 hr
+
+
+Burrito con Frijoles
+
+
+1
+
+
+
+
+
+
+Obama lays out 2017 spending priorities in fina...
+
+
+
+5 hr
+
+
+WHOSINURWALLET
+
+
+24
+
+
+
+
+
+
+Conservatives shouldn't throw around 'Republica...
+
+
+
+5 hr
+
+
+NOBAMA
+
+
+2
+
+
+
+
+
+
+Trump will not be president, says Obama
+
+
+
+5 hr
+
+
+Burrito con Frijoles
+
+
+11
+
+
+
+
+
+
+Former New York mayor Rudy Giuliani slams Beyon...
+
+
+
+6 hr
+
+
+Dthunderchicken
+
+
+24
+
+
+
+
+
+
+Kamala Harris shoots down SCOTUS nominee rumors
+
+
+
+6 hr
+
+
+Cordwainer Trout
+
+
+6
+
+
+
+
+
+
+Obama: Constitution doesna t say justice can be...
+
+
+
+7 hr
+
+
+Reality
+
+
+5
+
+
+
+
+
+
+Black Lives Matter*
+
+
+
+8 hr
+
+
+hosame
+
+
+1,174
+
+
+
+
+
+
+Cruz comes out on top in GOP town hall
+
+
+
+11 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Three-way feud among Republican White House con...
+
+
+
+12 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Attacks slow Cruz in SC
+
+
+
+12 hr
+
+
+Golf Foxtrot Yankee
+
+
+15
+
+
+
+
+
+
+Obama not first first lady to be 'butt' of joke...
+
+(Feb '13)
+
+
+12 hr
+
+
+PATRIOT DVC MOLON...
+
+
+24
+
+
+
+
+
+
+Hillary Clinton's Dead-End Campaign
+
+
+
+12 hr
+
+
+Golf Foxtrot Yankee
+
+
+6
+
+
+
+
+
+
+Coughing Fit Intrudes Upon New York Mag's Hilla...
+
+
+
+12 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Fight for Latinos, minorities revs up as caucus...
+
+
+
+12 hr
+
+
+Gen Curtis LeMay
+
+
+3
+
+
+
+
+
+
+Nikki Haley to endorse Marco Rubio
+
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+3
+
+
+
+
+
+
+Do Psychedelics Offer a Path To The "God Within"?
+
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+The GOP Takes on Poverty
+
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Obama's Stupid 'No ISIS Plan' Stuff
+
+(Jun '15)
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+7
+
+
+
+
+
+
+Mitt Romney Glitter F-Bomb: Did he say 'fuck,' ...
+
+(Feb '12)
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+6
+
+
+
+
+
+
+Marco Rubio responds to attacks on his senate r...
+
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+6
+
+
+
+
+
+
+How Thanksgiving Became All Dinner, No Worship
+
+
+
+13 hr
+
+
+Golf Foxtrot Yankee
+
+
+6
+
+
+
+
+
+
+Ted Cruz just got a bill through the Senate tha...
+
+
+
+14 hr
+
+
+USA today
+
+
+1
+
+
+
+
+
+
+From the Herald archive: Marco Rubio spent big ...
+
+
+
+14 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Obama faces political puzzle in naming Scalia s...
+
+
+
+14 hr
+
+
+davy
+
+
+45
+
+
+
+
+
+
+S.C. Gov. Haley backs Rubio; Republican feud es...
+
+
+
+14 hr
+
+
+Golf Foxtrot Yankee
+
+
+1
+
+
+
+
+
+
+Thousands Protest Roe V. Wade Decision
+
+(Jan '08)
+
+
+14 hr
+
+
+Kathwynn
+
+
+310,664
+
+
+
+
+
+
+Who Had Scalia Killed?
+
+
+
+14 hr
+
+
+Black Annie
+
+
+2
+
+
+
+
+
+
+Cruz ready to lead '2nd Reagan revolution'
+
+
+
+14 hr
+
+
+Responsibility
+
+
+131
+
+
+
+
+
+
+Some Republican Voters Think Islam Should Be Il...
+
+
+
+14 hr
+
+
+Golf Foxtrot Yankee
+
+
+3,902
+
+
+
+
+
+
+Senator blames Indiana factory closing on cheap...
+
+
+
+14 hr
+
+
+serfs up
+
+
+55
+
+
+
+
+
+
+Jeb at 1% in Nevada
+
+
+
+14 hr
+
+
+wild child
+
+
+1
+
+
+
+
+
+
+Restoring the Rule of Law on Day One
+
+
+
+14 hr
+
+
+wild child
+
+
+1
+
+
+
+
+
+
+For much of his life, Bernie Sanders was (let's...
+
+
+
+16 hr
+
+
+Mikey
+
+
+2
+
+
+
+
+ First
+ Prev
+
+
+
+
+of 2711
+
+Next 
+Last  
+
+
+
+
+
+Keep Me Updated!
+Sign up to receive new Topix forum notifications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Start a discussion about US Politics
+
+
+var DUNUQVRFTEHEHBOAC = document;
+function topix_openCaptcha()
+{
+var C1F32V3B2N5BQJ6AK = 1971 / 3;
+var RKH8ID9RPMEI0E07D = "/bin/captcha?s=0RinvwKNaxjsJV4Va3qiqLA%3D%3D&n=407b64e54946cf0033fdf48f7c769" + C1F32V3B2N5BQJ6AK + "&t=14";
+RKH8ID9RPMEI0E07D += "55821418";
+var elem = DUNUQVRFTEHEHBOAC.images["captcha"];
+if (DUNUQVRFTEHEHBOAC.topix_captcha_host) RKH8ID9RPMEI0E07D = DUNUQVRFTEHEHBOAC.topix_captcha_host + RKH8ID9RPMEI0E07D;
+elem.src = RKH8ID9RPMEI0E07D;
+}
+function topix_ackWarning()
+{
+var d = document.getElementById("userWarningDiv");
+var url = "/member/ack-warning";
+sendUrl(url, function () { d.innerHTML = "&nbsp;" });
+}
+
+
+
+
+
+
+
+
+
+
+
+Enter Title
+
+
+Enter Comments
+
+
+
+$jq(function() {
+$jq("#comments_textarea").autosize();
+});
+
+Characters left: 4000
+
+text_counter($('comments_textarea'), $('counter'), 4000);
+
+
+
+
+
+
+
+You are currently logged in as . Not ?
+
+
+
+Enter Username
+
+
+
+
+
+
+
+Enter Numbers
+
+
+
+
+
+
+
+Please note by submitting this form you acknowledge that you have read the Terms of Service and the comment you are posting is in compliance with such terms. Be polite.
+Inappropriate posts may be removed by the moderator. Send us your feedback.
+
+
+
+topix_openCaptcha();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+googletag.cmd.push( function(){googletag.display("div-gpt-ad-6");});
+var topix_adinfo;
+topix_adinfo += ":";
+topix_adinfo += 'DR';
+
+
+
+
+
+
+
+
+function resize_performiframe()
+{
+var performiframe = $('perform_video');
+if (!performiframe) return 0;
+var iframebody_arr = performiframe.contentDocument.getElementsByTagName("body");
+if (!iframebody_arr || !iframebody_arr[0]) return 0;
+var iframebody = iframebody_arr[0];
+var dim = Element.getDimensions(iframebody);
+if (dim.height < 200 || dim.height > 700) return;
+performiframe.height = dim.height;
+if (dim.height > 600) return 1;
+return 0;
+}
+tryRunAsync(function() { return resize_performiframe(); }, 20, 500);
+var topix_adinfo;
+topix_adinfo += ":Ap";
+
+
+
+
+
+
+
+
+
+
+
+
+31 Gorgeous Black Women Stars Who Wear Their Hair Natural
+
+
+
+
+
+
+
+
+
+
+27 Valentine's Day Fails You Will Want to Avoid at All Costs
+
+
+
+
+
+
+
+
+
+
+Dead Presidents: Find Out What Happened To 20 Actual And Would-Be Presidential Assassins
+
+
+
+
+
+
+
+
+
+
+Rainbow Families: 24 Famous Celebrities You Had No Idea Were Parents To An LGBTQ Child
+
+
+
+
+
+
+
+
+
+
+Oscar Showdown 2016: Who Will Win, Who Should Win, Plus Potential Upsets
+
+
+
+
+
+Trending Now
+
+
+Pope Francis
+Supreme Court
+China
+Mexico
+Cuba
+ 
+Hillary Clinton
+Syria
+Strauss Kahn
+Iran
+Iraq
+
+
+
+
+
+US Politics News
+
+US Politics News
+
+
+Scalia's Death Thrusts White House Into New Ter...
+
+
+Top Democratic economists just launched a bruta...
+
+
+Choose carefully: The next president could shap...
+
+
+President Obama to visit Cuba in coming weeks
+
+
+Kamala Harris shoots down SCOTUS nominee rumors
+
+
+a "Hookers for Hillary": Nevada sex workers bac...
+
+
+Bratton balks at fed plan to slash NYC anti-ter...
+
+
+Attacks slow Cruz in SC
+
+
+Wife denies her cop husband hit her as Chicago ...
+
+
+By seeking to thwart the Constitution, Republic...
+
+
+Why Cruz's fight against Obamacare failed - and...
+
+
+Group requests special prosecutor in Chicago po...
+
+
+More US Politics News from Topix »
+
+
+.zergentity img { margin-top:-17px !important;}
+.zergentity a { height:105px; overflow:hidden; display:block; }
+.zergheadline a{ height:auto; }
+.zergheadline {text-align:left !important;}
+
+
+More from around the web
+
+
+
+(function() {
+var zergnet = document.createElement('script');
+zergnet.type = 'text/javascript'; zergnet.async = true;
+zergnet.src = 'http://www.zergnet.com/zerg.js?id=23919';
+var znscr = document.getElementsByTagName('script')[0];
+znscr.parentNode.insertBefore(zergnet, znscr);
+})();
+
+
+
+
+
+
+
+
+var topix_adinfo;
+topix_adinfo += ":G3";
+topix_adTrack("300x250","chain","total");
+
+
+
+
+
+ 
+
+var COMSCORE;
+var csobj = { c1:2, c2:6035743, c3:"", c4:"", c5:"", c6:"", c15:"" };
+csobj.c5 = "us/politics";
+csobj.c4 = document.URL;
+csobj.c6 = "politics";
+topix_loadScript("http://b.scorecardresearch.com/beacon.js");
+tryRunAsync(function() {
+if (!COMSCORE || !COMSCORE.beacon) return 0;
+COMSCORE.beacon(csobj);
+return 1;
+}, 100, 300);
+
+
+
+
+
+(function () {
+var d = new Image(1, 1);
+d.onerror = d.onload = function () {
+d.onerror = d.onload = null;
+};
+d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-303636h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+})();
+
+
+
+
+
+
+
+var _gaq = _gaq || [];
+_gaq.push(["_setAccount", "UA-111902-1"]);
+_gaq.push(['_addIgnoredOrganic', 'topix']);
+_gaq.push(["_trackPageview"]);
+topix_loadScript("http://www.google-analytics.com/ga.js");
+
+
+var _qevents = _qevents || [];
+_qevents.push({
+labels:"combined.politics",
+qacct:"p-dfQGRefil9mes",
+uid:"02JLG8C72HL9T4OB"
+});
+_qacct="p-dfQGRefil9mes";
+topix_loadScript("http://edge.quantserve.com/quant.js");
+topix_loadScript("http://pixel.quantserve.com/seg/p-dfQGRefil9mes.js");
+
+
+
+
+
+(function () {
+var cachebust = (Math.random() + "").substr(2);
+var protocol = "https:" == document.location.protocol ? 'https:' : 'http:';
+new Image().src = protocol+"//20537185p.rfihub.com/ca.gif?rb=6293&ca=20537185&ra="+cachebust;
+})();
+
+
+if (gpt_request.sonobi_loaded) {
+sbi_morpheus.callOperator();
+googletag.cmd.push(function() {
+var sonobiElapsed = (new Date()).getTime() - startSonobiTime;
+if (gpt_request.staging) {
+console.log("Sonobi Call elapsed time: " + sonobiElapsed);
+}
+tpx_sendLoadStat("elapsed-ads-tpx-sonobi", sonobiElapsed);
+});
+}
+
+
+
+Ads by Glam
+
+
+var topix_adinfo;
+topix_adinfo += ":GF";
+topix_adTrack("728x90","chain","total");
+
+
+
+
+
+Norfolk, VA
+
+News
+Forums & Polls
+Real-Time News
+Crime
+Dating
+Jobs
+Local Politics
+Obituaries
+Real Estate
+Yellow Pages
+
+
+
+Explore More Topix
+
+US News
+US Cities List
+World News
+World Countries List
+Celebrities
+Business
+Finance
+Autos
+Sports
+Sci-Tech
+
+
+Electronics
+Entertainment
+Movies
+Music
+Television
+Health
+Arts & Life
+Food / Travel
+Site Map / All Topics
+
+
+
+About Topix
+
+Media Kit
+RSS Newsfeeds
+Law Enforcement
+School Officials
+Cyber-bullying Resources
+About Us/Jobs
+FAQ
+Privacy Policy
+Terms of Service
+Report Abuse?
+
+
+
+Advertisement
+
+
+
+
+var topix_adinfo;
+topix_adinfo += ":G3";
+topix_adTrack("300x250","chain","total");
+
+
+
+
+
+Feedback?
+
+Comments made yesterday:
+42,934
+•
+Total comments across all topics: 267,568,106
+
+var g_tpdnum = 267568106;
+var tpd_rate = 1671;
+setInterval(function() { chrome_updateTotalPosts(); }, tpd_rate);
+
+
+
+
+
+
+
+
+
+
+
+Updated: Thu Feb 18, 2016 10:48 am
+Copyright © 2016 Topix LLC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+• Flag inappropriate postPost has been flagged for review
+• Send feedback
+• Cancel
+
+
+
+
+var start_time;
+var topix_adinfo;
+var topix_inst_adinfo;
+var d = new Date();
+var pv_i = new Image(1,1);
+var cplparam = "";
+if (start_time > 0) {
+var cpltime = (new Date()).getTime() - start_time;
+if (cpltime > 1000000)
+cplparam = "";
+else
+cplparam = "&ct=" + cpltime;
+}
+topix_adinfo += topix_inst_adinfo;
+var aiparam = "";
+if (topix_adinfo && topix_adinfo.length > 0 && topix_adinfo.length < 50) {
+aiparam = "&ai=" + topix_adinfo;
+}
+pv_i.src = '/t6track/pv?v=c36df9H4sIAAAAAAAA/02Qz07CQBDG11Jqs0RDOHj2BSx0aWnjrcgfRUlJEO7rtqUbKFu7W-Dqyxkfyx3w4GXzzW82830zpmW6pO-Zpmk37hBC2BoOoygkltb0Q6VS4VYmqrront8zZoqLPW6q02OyBcDyShQpRg3Qe4WN1bKp5SYVjFn3BkLWpUoKio0D/evpyTfH49FRouQnh4nC1DwH3F4svPW85z6Hq9E0egkD6OwkT7BdycJ/2PANkIKyHLdq2S3FjivOJMC9SFLcjnrLp7exP1vPRpP5LJhCpzzoAehaq8-SVrSQ9hckkXyfCdx0HTIIIacsFdfLtL1RPA5e3-OYTOJeRBYwQuoM1g9cCQpFVS0Z-CFb1yqvUproD9vO99oAIPHVCizqs0XncsHuv8BwsLra4Vs36DvE8x1/4BDiAT5l2S9Rf7NYmwEAAA__' + cplparam + aiparam + '&cb_n=' + d.getTime();
+pv_i.onload = Prototype.emptyFunction;
+
+
+quantSegs="";
+function qc_results(result)
+{
+for (var i = 0; i < result.segments.length; i++) {
+quantSegs += "qcseg=" + result.segments[i].id + ";";
+}
+if(quantSegs != "")
+{
+ajax_request("/ajax/set-qcseg", {
+parameters: {
+qcseg:quantSegs
+}
+});
+}
+}
+
+
+
+
+
+
+
+
+Change location
+Norfolk, VA
+Enter city, state or zip
+
+
+
+
+
+International users, click here.
+
+
+
+
+
+
+
+
+
+
+Be in the know!
+Notify me when there are new discussions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks for your comment!
+Enter your email to get updates on this discussion.
+
+
+
+
+
+
+
+  Don't show me this message again today.
+
+
+
+
+
+
+
+
+
+
+
+Thanks for kicking off the conversation!
+Enter your email to get updates when people reply.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks for your comment!
+Share your thoughts with the world
+
+
+ Share on Facebook Now 
+
+  Don't show me this message again today.
+
+
+
+
+if (!topixjs_compiled) {
+var url = "http://stats.topix.com/exception.gif?x=1";
+url = url + "&type=nojs";
+url = url + "&fullua=" + encodeURIComponent(navigator.userAgent);
+var img = new Image();
+img.src = url;
+img.onload = function() {};
+}
+
+
+

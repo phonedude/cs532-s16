@@ -1,0 +1,423 @@
+http://www.nonissue.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var config = {
+            baseUrl: 'http://www.nonissue.com',
+            assets: '/website/ni/assets'
+        };
+        var artIndex;
+        var gMagazines = [{"name":"straighttopoint","title":"Straightforward","skin":"","order":1,"menu":[{"segment":"straighttothesegment","name":"homepage"},{"segment":"alternatenews","name":"Alt.News"},{"segment":"worldfinanacehomepage","name":"Finance"},{"segment":"straightmagentertainment","name":"Entertainment"},{"segment":"straightmagtech","name":"Tech"},{"segment":"sportsnews","name":"Sports"},{"segment":"straightmagnews","name":"News"}]},{"name":"agirllikeu","title":"Ladylike","skin":"purple","order":2,"menu":[{"segment":"ladieshomepage","name":"homepage"},{"segment":"wellnesshealthsegment","name":"Wellness"},{"segment":"Bedtimesister","name":"Kinky Girl"},{"segment":"antiaging","name":"Anti-Aging"},{"segment":"healthfitness","name":"fit"},{"segment":"funfeed","name":"funfeed"},{"segment":"beautiful","name":"beautiful"},{"segment":"tastefulsegment","name":"tasteful"},{"segment":"gossipnewsnews","name":"fame"},{"segment":"fashionable","name":"fashionable"}]},{"name":"geeks","title":"Geeks United","skin":"green","order":3,"menu":[{"segment":"geekmaghomepage","name":"homepage"},{"segment":"geekmagentertainment","name":"entertainment"},{"segment":"techsegsegment","name":"Tech"},{"segment":"geekmaggamingnews","name":"gaming"},{"segment":"geekmaggadgets","name":"gadgets"},{"segment":"geekmagcomics","name":"comics"},{"segment":"geekmagcosplay","name":"cosplay"},{"segment":"geekmagboardgames","name":"board games"}]},{"name":"parenthood","title":"Parenthood","skin":"azure","order":4,"menu":[{"segment":"parenthood","name":"homepage"},{"segment":"parentingmagactivities","name":"Activities"},{"segment":"parentsmageducation","name":"Learning"},{"segment":"childrenhealthsegment","name":"Health"},{"segment":"parentingmagrecipes","name":"Recipes"},{"segment":"parentsmagfamily","name":"Family"},{"segment":"parentsmagtoddlerbabies","name":"Toddlers and Babies"},{"segment":"parentsmagkids","name":"Kids"},{"segment":"parentsmagpregnancy","name":"Pregnancy"}]},{"name":"boyswillbeboys","title":"Man Up","skin":"grey","order":5,"menu":[{"segment":"newboyshomepage","name":"homepage"},{"segment":"homepageculturemag","name":"Entertainment"},{"segment":"motorcyclesegment","name":"Motorcycle"},{"segment":"menfitness","name":"Fitness"},{"segment":"thefoodie","name":"Tasty"},{"segment":"gossipnewsnews","name":"gossip"},{"segment":"sportsnews","name":"sports"},{"segment":"gamingsegmentformenmag","name":"gaming"},{"segment":"automotivesegmentformenmag","name":"automotive"},{"segment":"nonissueviralsegment","name":"viral"},{"segment":"menfashionsegment","name":"Fashion"},{"segment":"gadgetssegment","name":"gadgets"}]},{"name":"culturtainment","title":"Culturtainment","skin":"light-purple","order":6,"menu":[{"segment":"culturehomepage","name":"homepage"},{"segment":"literaturesegment","name":"Books"},{"segment":"comedyfeed","name":"Comedy"},{"segment":"showbizindusrtysegment","name":"Showbiz"},{"segment":"photography","name":"Photography"},{"segment":"artsegmentforculturemag","name":"Art"},{"segment":"tvsegmentforculturemag","name":"TV"},{"segment":"musicsegmentforculturemag","name":"Music"},{"segment":"moviesegmentculturemag","name":"Movies"}]},{"name":"totheextreme","title":"Edgy","skin":"aqua","order":7,"menu":[{"segment":"totheextremehomepagesegment","name":"homepage"},{"segment":"climbingsegment","name":"Climbing"},{"segment":"mountainbikesegment","name":"Mtb"},{"segment":"parkoursegment","name":"Parkour"},{"segment":"divingsegment","name":"Diving"},{"segment":"skateboardingsegment","name":"Skateboarding"},{"segment":"snowboardsegment","name":"Snowboarding"},{"segment":"surfingsubsegment","name":"Surfing"}]},{"name":"deepsea","title":"Deep Sea","skin":"light-green","order":8,"menu":[{"segment":"deepseahomepagesegment","name":"homepage"},{"segment":"bodyboardingsegment","name":"Bodyboaring"},{"segment":"kitesurfingsegment","name":"Kitesurfing"},{"segment":"supsegment","name":"Sup"},{"segment":"windsurfingsegment","name":"Windsurfing"},{"segment":"surfingsubsegment","name":"Surfing"}]},{"name":"innovator","title":"Innovator","skin":"dark-yellow","order":9,"menu":[{"segment":"innovatorhomepagesegment","name":"homepage"},{"segment":"innovationsegment","name":"Innovation"},{"segment":"gadgetssubseg","name":"Gadgets"},{"segment":"securitynews","name":"Security"},{"segment":"techsegsegment","name":"Tech"},{"segment":"spacesegment","name":"Space"},{"segment":"sciencesegment","name":"Science"},{"segment":"futureautomotivesegment","name":"Cars"},{"segment":"iotsecurity","name":"IOT Security"},{"segment":"robotics","name":"Robotics"}]},{"name":"mostpop","title":"Most Pop","skin":"light-purple","order":10,"menu":[{"segment":"mostpopmagazine","name":"homepage"},{"segment":"popmusic","name":"Pop Music"},{"segment":"mediadivamag","name":"media"},{"segment":"homepageculturemag","name":"Culture & Entertainment"}]},{"name":"lgbtq","title":"Lgbt","skin":"gay","order":11,"menu":[{"segment":"lgbtqhomepage","name":"homepage"},{"segment":"transsegment","name":"Trans"},{"segment":"bisexulsegment","name":"Bisexuals"},{"segment":"gaysvertical","name":"Gays"},{"segment":"lesbiansegment","name":"Lesbian"}]},{"name":"archbomb","title":"Archbomb","skin":"orange","order":13,"menu":[{"segment":"homepagearchbomb","name":"homepage"},{"segment":"homedesignsegment","name":"Home"},{"segment":"graphicdesign","name":"Graphic Design"},{"segment":"urbanismdesignsegment","name":"Urbanism"},{"segment":"techdesignsegment","name":"Tech"},{"segment":"designsegment","name":"Design"},{"segment":"artdesignsegment","name":"Art"},{"segment":"architecturesegment","name":"Architecture"}]},{"name":"startmeup","title":"Start Me Up","skin":"brown","order":14,"menu":[{"segment":"startmeuphomepgae","name":"homepage"},{"segment":"geektimenetwork","name":"Geektime"},{"segment":"ilstartupssegment","name":"Ilstartups"},{"segment":"iangelsportfolio","name":"iAngels"},{"segment":"arabstartups","name":"Middle East"},{"segment":"asianstartups","name":"Asia"},{"segment":"africanstartups","name":"Africa"},{"segment":"eustartups","name":"Europe"}]},{"name":"sports","title":"Sports","skin":"","order":15,"menu":[{"segment":"sportsnews","name":"homepage"},{"segment":"golfsegment","name":"Golf"},{"segment":"tennissegment","name":"Tennis"},{"segment":"ufcsegment","name":"UFC"},{"segment":"boxingsegment","name":"Boxing"},{"segment":"motorsportssegment","name":"Motor"},{"segment":"ncaafootball","name":"NCAA Football"},{"segment":"ncaabasketball","name":"NCAA Basketball"},{"segment":"mlbsegment","name":"MLB"},{"segment":"nbasegment","name":"NBA"},{"segment":"soccersegment","name":"Football"},{"segment":"nhlsegment","name":"NHL"},{"segment":"nflsegment","name":"NFL"}]},{"name":"mobile","title":"Mobile","skin":"purple","order":16,"menu":[{"segment":"mobilenews","name":"homepage"},{"segment":"androidgames","name":"Android Games"},{"segment":"androidapps","name":"Android Apps"},{"segment":"iosgames","name":"iOS Games"},{"segment":"iosapps","name":"iOS Apps"}]},{"name":"worldmarkets","title":"World Markets","skin":"green","order":17,"menu":[{"segment":"worldfinanacehomepage","name":"homepage"},{"segment":"canadamoneysegment","name":"Canada"},{"segment":"realestatenewssegment","name":"Real Estate"},{"segment":"middleeastmarketsegment","name":"Mid East"},{"segment":"asianmarketsegment","name":"Asian"},{"segment":"eumarketsegment","name":"EU Market"},{"segment":"latinamericamarketsegment","name":"Latin America"},{"segment":"usmarketsegment","name":"US"}]},{"name":"thegame","title":"The Game","skin":"azure","order":18,"menu":[{"segment":"gamingmaghomepage","name":"homepage"},{"segment":"casualgamingseg","name":"Casual"},{"segment":"pcgamingseg","name":"PC"},{"segment":"mobilegamingsegment","name":"Mobile"},{"segment":"playstationgamessegment","name":"Playstation"},{"segment":"xboxgamessegment","name":"XBOX"}]},{"name":"foodie","title":"Foodie","skin":"grey","order":19,"menu":[{"segment":"foodiehompage","name":"homepage"},{"segment":"foodieglutenfree","name":"Gluten Free"},{"segment":"paleosegment","name":"Paleo"},{"segment":"thefoodie","name":"Junk Food"},{"segment":"foodieveggie","name":"Veggie & Vegan"},{"segment":"foodiedessert","name":"Dessert"},{"segment":"lunchsegment","name":"Lunch"},{"segment":"foodiedinner","name":"Dinner"},{"segment":"betterbreakfastsegment","name":"Breakfast"}]},{"name":"themusic","title":"The Music","skin":"light-purple","order":20,"menu":[{"segment":"themusichomepage","name":"homepage"},{"segment":"countrymusicseg","name":"Country"},{"segment":"electronicmusicseg","name":"Electronic"},{"segment":"hiphopmusicseg","name":"Hip Hop"},{"segment":"rockmusicseg","name":"Rock"},{"segment":"musikreviews","name":"Reviews"},{"segment":"popmusik","name":"Pop"},{"segment":"musiknews","name":"News"}]},{"name":"cuisines","title":"Cuisines","skin":"aqua","order":21,"menu":[{"segment":"homepageawsomecuisine","name":"homepage"},{"segment":"seafoodsegment","name":"Seafood"},{"segment":"bbqsegment","name":"BBQ"},{"segment":"awsomemediterraneancuisine","name":"Mediterranean"},{"segment":"awsomejapanesecuisine","name":"Japanese"},{"segment":"awsomecuisinewidget","name":"Asian-Indian"},{"segment":"awsomefrenchcuisine","name":"French"},{"segment":"awsomeamericancuisinesegment","name":"American"},{"segment":"awsomeitaliancuisine","name":"Italian"}]},{"name":"movieshomepage","title":"Movies","skin":"#2fc22d","order":21,"menu":[{"segment":"movieshomepage","name":"homepage"},{"segment":"prstogossipsegment","name":"The Gossip"},{"segment":"trailersfeed","name":"Trailers"},{"segment":"moviereviews","name":"Movie Reviews"},{"segment":"movienews","name":"Movie News"}]},{"name":"thrilltravel","title":"Thrill Travel","skin":"orange","order":22,"menu":[{"segment":"thrilltravel","name":"homepage"},{"segment":"paristravelsegment","name":"Paris"},{"segment":"berlintravelsegment","name":"Berlin"},{"segment":"amsterdamtravelsegment","name":"Amsterdam"},{"segment":"torontothrills","name":"Toronto"},{"segment":"sanfranciscothrills","name":"San Francisco"},{"segment":"lathrills","name":"L.A"},{"segment":"chicagothrills","name":"Chicago"},{"segment":"londontravelsegment","name":"London"},{"segment":"nycthrills","name":"NYC"}]},{"name":"green","title":"Green Mind","skin":"light-green","order":22,"menu":[{"segment":"greenmindhomepage","name":"homepage"},{"segment":"ecobeautysegment","name":"Eco Beauty"},{"segment":"climatesegment","name":"Climate"},{"segment":"greenfoodsegment","name":"Food"},{"segment":"greenarchitecture","name":"Architecture"},{"segment":"sustainabilitysegment","name":"Sustainability"},{"segment":"greenmindenergy","name":"Energy"},{"segment":"cleantechsegment","name":"Cleantech"}]},{"name":"newyork","title":"New York","skin":"dark-yellow","order":23,"menu":[{"segment":"nychomepage","name":"homepage"},{"segment":"nycshopping","name":"Shopping"},{"segment":"nycfoodsegment","name":"Food"},{"segment":"nycculturesegment","name":"Arts&Culture"}]},{"name":"medmag","title":"Med Mag","skin":"light-purple","order":24,"menu":[{"segment":"medmaghomepage","name":"homepage"},{"segment":"neurologysegment","name":"Neurology"},{"segment":"wellnesshealthsegment","name":"Wellness"},{"segment":"disabilitiessegment","name":"Disabilities"},{"segment":"antiaging","name":"Anti-Aging"},{"segment":"gadgetsandresearch","name":"Gadgets"},{"segment":"drugsandmedicationsegment","name":"Drugs & Med."},{"segment":"childrenhealthsegment","name":"Kids"},{"segment":"diabetessegment","name":"Diabetes"},{"segment":"cancersegment","name":"Cancer"},{"segment":"alzheimerssegment","name":"Alzheimer's"},{"segment":"stdsegment","name":"STD"},{"segment":"healthcaresegment","name":"Healthcare"},{"segment":"heartsegment","name":"Heart"}]},{"name":"orangehomefab","title":"Orange Fab","skin":"","order":24,"menu":[{"segment":"homeorangehome","name":"homepage"},{"segment":"ilstartupssegment","name":"IL Startups"},{"segment":"smartcity","name":"Smart Cities"},{"segment":"securitynewssegment","name":"Cyber Security"},{"segment":"dronessegment","name":"Drones"},{"segment":"iotiotiotiot","name":"IOT"},{"segment":"connectedcars","name":"Connected Cars"},{"segment":"autonomouscars","name":"Autonomous Cars"},{"segment":"roboticssegment","name":"Robotics+"}]},{"name":"mentalhealth","title":"Mental Health","skin":"orange","order":25,"menu":[{"segment":"mentalhealthhomepage","name":"homepage"},{"segment":"schizophreniasegment","name":"Schizophrenia"},{"segment":"ptsdsegment","name":"PTSD"},{"segment":"addictionsegment","name":"Addiction"},{"segment":"drugsandmedicationsegment","name":"Drugs & Med."},{"segment":"kidsmentalhealth","name":"Kids & Teens"},{"segment":"ocdsegment","name":"OCD"},{"segment":"eatingdisordersegment","name":"Eating Dis."},{"segment":"anxietysegment","name":"Anxiety"},{"segment":"autismsegment","name":"Autism"},{"segment":"depressionsegment","name":"Depression"},{"segment":"borderlinepersonalitysegment","name":"Borderline"},{"segment":"adhdsegment","name":"ADHD"}]},{"name":"travelling","title":"Travelling","skin":"green","order":26,"menu":[{"segment":"alldestinationstravelling","name":"homepage"},{"segment":"actourismsegment","name":"Voluntourism"},{"segment":"africatravelling","name":"Africa"},{"segment":"australiatravelsegment","name":"Australia"},{"segment":"skitravelsegment","name":"Ski"},{"segment":"campingtravelsegment","name":"Camping"},{"segment":"luxtravelsegment","name":"Luxe"},{"segment":"beachestravelling","name":"Beaches"},{"segment":"hikingtravelsegment","name":"Hiking"},{"segment":"lowbudgettravelling","name":"Low Budget"}]},{"name":"usatravel","title":"North American Travel","skin":"grey","order":27,"menu":[{"segment":"usatravel","name":"homepage"},{"segment":"vancouvertravelsegment","name":"Vancouver"},{"segment":"torontotravrelsegment","name":"Toronto"},{"segment":"miamitravelhub","name":"Miami"},{"segment":"losangelestravel","name":"Los Angeles"},{"segment":"newyorktraveling","name":"New York"},{"segment":"californiatravelsegment","name":"California"},{"segment":"chicagotravelsegment","name":"Chicago"}]},{"name":"eutravelling","title":"EU Travelling","skin":"azure","order":28,"menu":[{"segment":"europetravelhomepage","name":"homepage"},{"segment":"londontravelsegment","name":"London"},{"segment":"milantravelsegment","name":"Milan"},{"segment":"paristravelsegment","name":"Paris"},{"segment":"istanbultravelsegment","name":"Istanbul"},{"segment":"copenhagentravelsegment","name":"Copenhagen"},{"segment":"barcelonatravelsegment","name":"Barcelona"},{"segment":"berlintravelsegment","name":"Berlin"},{"segment":"amsterdamtravelsegment","name":"Amsterdam"}]},{"name":"travelasia","title":"Travel Asia","skin":"brown","order":29,"menu":[{"segment":"asiatravelhomepage","name":"homepage"},{"segment":"singaporetravelhub","name":"Singapore"},{"segment":"tokyotravelsegment","name":"Tokyo"},{"segment":"seoultravelsegment","name":"Seoul"},{"segment":"mumbaitravelsegment","name":"Mumbai"},{"segment":"bangkoktravelsegment","name":"Bangkok"},{"segment":"hongkongtravel","name":"Hong Kong"},{"segment":"beijingtravellingsegment","name":"Beijing"}]},{"name":"fashion","title":"Fashion","skin":"light-purple","order":30,"menu":[{"segment":"megafashionhomepage","name":"homepage"},{"segment":"eyewearfashion","name":"Eyewear"},{"segment":"beautiful","name":"Beauty"},{"segment":"shoesfashion","name":"Shoes"},{"segment":"bagsfashion","name":"Bags"},{"segment":"accessoriesfashion","name":"Accessories"},{"segment":"antiaging","name":"Anti-Aging"},{"segment":"designerfashion","name":"High Fashion"},{"segment":"menfashionsegment","name":"Men"},{"segment":"kidsfashionsegment","name":"Kids"},{"segment":"megacelebrityfashion","name":"Celebrity Fashion"},{"segment":"lowbudgetfashion","name":"Low Budget"},{"segment":"womenfashion","name":"Women"}]},{"name":"soccer","title":"Soccer","skin":"","order":31,"menu":[{"segment":"soccerhomepage","name":"homepage"},{"segment":"chelseafcsegment","name":"Chelsea"},{"segment":"lfcsegment","name":"Liverpool"},{"segment":"mancitysegment","name":"Man City"},{"segment":"arsenalsegment","name":"Arsenal"},{"segment":"bayernmunichsegment","name":"Bayern Munich"},{"segment":"fcbarcasegment","name":"FC Barcelona"},{"segment":"realmadridfcsegment","name":"Real Madrid"},{"segment":"psgsegment","name":"PSG"},{"segment":"manunited","name":"Man United"}]},{"name":"blogging","title":"Marketing Tools","skin":"","order":32,"menu":[{"segment":"blogginghomepage","name":"homepage"},{"segment":"marketingsegment","name":"Marketing"},{"segment":"compariscopemarketingtools","name":"Compariscope Marketing Tools"},{"segment":"gurussegment","name":"Gurus"},{"segment":"datasegment","name":"Tools"},{"segment":"growthhackingsegment","name":"Growth Hacking"},{"segment":"monetizesegment","name":"Monetizing"}]}];
+        var firstGroup = [{"title":"Feds to Google: Cars don't need drivers","description":"Federal safety regulators tell Google it's OK with concept of a self-driving car in which a human driver can not take control.","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_feds_to_google_cars_don_t_need_drivers","displayUrl":"http:\/\/money.cnn.com\/2016\/02\/10\/autos\/google-self-driving-cars-drivers\/index.html","permalink":"2016_02_18_feds_to_google_cars_don_t_need_drivers","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/3b\/3b8c8ae2c2f2ed198ee7346a08150122_medium.png","pub_date":"2016-02-18T16:45:11.000Z","large_image_url":"http:\/\/i2.cdn.turner.com\/money\/dam\/assets\/150515134711-google-self-driving-car-780x439.png","providerName":"CNN Money","providerDomain":"money.cnn.com","providerUrl":"http:\/\/money.cnn.com\/","providerFavicon":"http:\/\/money.cnn.com\/favicon.ico","shares":4278,"facebook":4278,"twitter":0},{"title":"Vimeo adds Chromecast streaming to its Android app","description":"Better late than never.","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_vimeo_adds_chromecast_streaming_to_its_android_app","displayUrl":"http:\/\/www.engadget.com\/2016\/02\/18\/vimeo-chromecast-streaming-android\/","permalink":"2016_02_18_vimeo_adds_chromecast_streaming_to_its_android_app","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/7d\/7d8b611dbe5a67a3214cd565ad52d1f6_medium.jpg","pub_date":"2016-02-18T16:42:59.000Z","large_image_url":"http:\/\/o.aolcdn.com\/dims5\/amp:f8261aa41157e403d0481c641f3161ccb48f367d\/r:960,504,min\/c:960,504,0,0\/q:80\/?url=http%3A%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2Fb5bdeaf3cb8a1716109be3f1c66833e4%2F203424426%2Fvimeo.jpg","providerName":"Engadget","providerDomain":"engadget.com","providerUrl":"http:\/\/www.engadget.com\/","providerFavicon":"http:\/\/www.engadget.com\/favicon.ico","shares":0,"facebook":0,"twitter":0},{"title":"Third Friday Total Return Fund 4Q15 Letter - ValueWalk","description":"In the fourth quarter, Third Friday Fund earned a net return of +3.48% compared to +0.99% for the HFRI Fund Weighted Composite Hedge Fund Index","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_third_friday_total_return_fund_4q15_letter_valuewalk","displayUrl":"http:\/\/www.valuewalk.com\/2016\/02\/third-friday-total-return-fund-4q15-letter\/","permalink":"2016_02_18_third_friday_total_return_fund_4q15_letter_valuewalk","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/d1\/d159cc4ca105998cbea506df1100a7c5_medium.jpg","pub_date":"2016-02-18T16:42:35.000Z","large_image_url":"http:\/\/www.valuewalk.com\/wp-content\/uploads\/2016\/02\/Third-Friday-1.jpg","providerName":"ValueWalk","providerDomain":"valuewalk.com","providerUrl":"http:\/\/www.valuewalk.com","providerFavicon":"http:\/\/www.valuewalk.com\/favicon.ico","shares":1,"facebook":1,"twitter":0},{"title":"Specialists caution against building MACRA on a flawed cornerstone","description":"CMS\u2019 staged Meaningful Use program has outlived its usefulness.","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_specialists_caution_against_building_macra_on_a_flawed_cornerstone","displayUrl":"http:\/\/thehill.com\/blogs\/congress-blog\/healthcare\/269580-specialists-caution-against-building-macra-on-a-flawed","permalink":"2016_02_18_specialists_caution_against_building_macra_on_a_flawed_cornerstone","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/dd\/ddd7523749c8bf67465bfc84e4a12a3b_medium.jpg","pub_date":"2016-02-18T16:42:28.000Z","large_image_url":"http:\/\/thehill.com\/sites\/default\/files\/thehill_logo_200.jpg","providerName":"TheHill","providerDomain":"thehill.com","providerUrl":"http:\/\/thehill.com","providerFavicon":"http:\/\/thehill.com\/favicon.ico","shares":0,"facebook":0,"twitter":0},{"title":"Mimicker Alarm Wakes You Up with a Game","description":"Android: Any alarm can wake you up. Mimicker, a free alarm app for Android from the Microsoft Garage, can help make sure you stay awake.","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_mimicker_alarm_wakes_you_up_with_a_game","displayUrl":"http:\/\/lifehacker.com\/mimicker-alarm-wakes-you-up-with-a-game-1759808091","permalink":"2016_02_18_mimicker_alarm_wakes_you_up_with_a_game","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/f5\/f51eb37ed49587e9f8e6712b252c66b5_medium.jpg","pub_date":"2016-02-18T16:39:05.000Z","large_image_url":"https:\/\/i.kinja-img.com\/gawker-media\/image\/upload\/s--k9Ges2ku--\/c_fill,fl_progressive,g_north,h_358,q_80,w_636\/nuelckaituuqilfb8jlm.jpg","providerName":"Lifehacker","providerDomain":"lifehacker.com","providerUrl":"http:\/\/lifehacker.com","providerFavicon":"https:\/\/i.kinja-img.com\/gawker-media\/image\/upload\/s--N2eqEvT8--\/c_fill,fl_progressive,g_center,h_80,q_80,w_80\/u0939doeuioaqhspkjyc.png","shares":0,"facebook":0,"twitter":0},{"title":"Fantasy prospects to watch at the 2016 Combine","description":"Last year, David Johnson's combine performance was an early indicator for his future fantasy success. Who's next? Alex Gelhar highlights 20 players to watch at the 2016 NFL Scouting Combine.","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_fantasy_prospects_to_watch_at_the_2016_combine","displayUrl":"http:\/\/www.nfl.com\/fantasyfootball\/story\/0ap3000000637009\/article\/fantasy-prospects-to-watch-at-the-2016-combine","permalink":"2016_02_18_fantasy_prospects_to_watch_at_the_2016_combine","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/60\/608b206d593151c7f99721be99fd3595_medium.jpg","pub_date":"2016-02-18T16:38:39.000Z","large_image_url":"http:\/\/static.nfl.com\/static\/content\/public\/photo\/2016\/02\/18\/0ap3000000637005_thumbnail_200_150.jpg","providerName":"NFL.com","providerDomain":"nfl.com","providerUrl":"http:\/\/www.nfl.com","providerFavicon":"http:\/\/i.nflcdn.com\/static\/site\/7.3\/img\/favicon.png","shares":0,"facebook":0,"twitter":0},{"title":"Surgery leaves woman with strange side effect: kleptomania","description":"Could a routine operation really lead to compulsive stealing?","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_surgery_leaves_woman_with_strange_side_effect_kleptomania","displayUrl":"http:\/\/www.cbsnews.com\/news\/surgery-leaves-woman-with-strange-side-effect-kleptomania\/","permalink":"2016_02_18_surgery_leaves_woman_with_strange_side_effect_kleptomania","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/b8\/b8f4617a92d9cf61b2a2f81424a23a8e_medium.jpg","pub_date":"2016-02-18T16:38:11.406Z","large_image_url":"http:\/\/cbsnews2.cbsistatic.com\/hub\/i\/r\/2015\/11\/11\/3d6bffbb-4f3f-4a6b-88e4-8ecf0bdd7b90\/thumbnail\/620x350\/d8de26430417420bc914947c9dccffc3\/operating-room-surgery.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":0,"facebook":0,"twitter":0},{"title":"Marilyn Hartman, serial stowaway, arrested again at Chicago's O'Hare airport","description":"Marilyn Hartman, 64, has tried numerous times in recent years to board planes without a ticket, succeeding at least once by flying from San Jose, California, to Los Angeles in August 2014.","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_marilyn_hartman_serial_stowaway_arrested_again_at_chicago_s_o_hare_airport","displayUrl":"http:\/\/www.cbsnews.com\/news\/marilyn-hartman-serial-stowaway-arrested-again-at-chicagos-ohare-airport\/","permalink":"2016_02_18_marilyn_hartman_serial_stowaway_arrested_again_at_chicago_s_o_hare_airport","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/f9\/f9c12423fcf77bdc829dc5cf363435ff_medium.jpg","pub_date":"2016-02-18T16:37:53.324Z","large_image_url":"http:\/\/cbsnews2.cbsistatic.com\/hub\/i\/r\/2015\/07\/06\/628f1263-1eee-4eff-9903-99d49f2d2a8e\/thumbnail\/620x350\/6f4b75dd25c8e65166afce0efebe66ed\/marilyn-hartman.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":1,"facebook":1,"twitter":0},{"title":"John Kasich: GOP debates are \"the dumbest thing going\"","description":"The Ohio governor criticized the GOP debates as too heavy on sound bites and also discussed his second-place New Hampshire finish and the Supreme Court vacancy","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_john_kasich_gop_debates_are_the_dumbest_thing_going_","displayUrl":"http:\/\/www.cbsnews.com\/news\/john-kasich-gop-debates-are-the-dumbest-thing-going\/","permalink":"2016_02_18_john_kasich_gop_debates_are_the_dumbest_thing_going_","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/15\/15f6f0d23ef0a407ae636ff5797e8e62_medium.png","pub_date":"2016-02-18T16:37:47.332Z","large_image_url":"http:\/\/cbsnews1.cbsistatic.com\/hub\/i\/r\/2016\/02\/18\/6bf012cf-5d86-4ef9-acc9-fe2b3d5782d4\/thumbnail\/620x350\/9af2dad8d8c636e6b97381f98ed72a49\/kasich-colbert.png","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":1,"facebook":1,"twitter":0},{"title":"Caitlyn Jenner regrets not telling dad about gender identity","description":"The Olympic gold medalist says not telling her father the truth about her gender identity \"will always haunt me\"","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_caitlyn_jenner_regrets_not_telling_dad_about_gender_identity","displayUrl":"http:\/\/www.cbsnews.com\/news\/caitlyn-jenner-regrets-not-telling-dad-about-gender-identity\/","permalink":"2016_02_18_caitlyn_jenner_regrets_not_telling_dad_about_gender_identity","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/2a\/2a4b9bbf9a2a59403a0e55fd3e0eb76b_medium.jpg","pub_date":"2016-02-18T16:37:47.332Z","large_image_url":"http:\/\/cbsnews1.cbsistatic.com\/hub\/i\/r\/2015\/12\/17\/c920e566-f3b8-486e-8336-7145a5690523\/thumbnail\/620x350\/b1579260f80cbec880eef354ed9a374f\/rts68ia.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":1,"facebook":1,"twitter":0},{"title":"Marco Rubio robocalls slam Ted Cruz's","description":"The Rubio campaign employed a message recorded by South Carolina Rep. Trey Gowdy, who endorsed the Florida senator last year","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_marco_rubio_robocalls_slam_ted_cruz_s","displayUrl":"http:\/\/www.cbsnews.com\/news\/marco-rubio-robocalls-slam-ted-cruzs-dishonest-campaign-tactics\/","permalink":"2016_02_18_marco_rubio_robocalls_slam_ted_cruz_s","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/c3\/c322dd259ad24cc4cc73ac2b35352350_medium.jpg","pub_date":"2016-02-18T16:37:47.037Z","large_image_url":"http:\/\/cbsnews1.cbsistatic.com\/hub\/i\/r\/2016\/02\/18\/97cd22f6-6f5e-4d39-ab63-512fcd72dd99\/thumbnail\/620x350\/decb1f0ba4b0d61c2d5a069856e88999\/rubio-cruz-split.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":3,"facebook":3,"twitter":0},{"title":"Adele says she cried \"all day\" after the Grammys audio mishaps","description":"The singer tells Ellen that the botched performance really took a toll on her","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_adele_says_she_cried_all_day_after_the_grammys_audio_mishaps","displayUrl":"http:\/\/www.cbsnews.com\/news\/adele-cried-all-day-after-grammys\/","permalink":"2016_02_18_adele_says_she_cried_all_day_after_the_grammys_audio_mishaps","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/55\/5597bdaf938083cb5c6bff1d135d0bd4_medium.jpg","pub_date":"2016-02-18T16:37:46.535Z","large_image_url":"http:\/\/cbsnews1.cbsistatic.com\/hub\/i\/r\/2016\/02\/16\/d78346ac-93a7-480e-b6d6-6660943a39ea\/thumbnail\/620x350\/5eb519015ff640834853b722e67cdb1d\/gettyimages-510444628.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":1,"facebook":1,"twitter":0},{"title":"This car tops the list for being a \"ticket magnet\"","description":"Motorists that get pulled over for traffic violations the most tend to drive this flashy sedan; the opposite is true for a Buick","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_this_car_tops_the_list_for_being_a_ticket_magnet_","displayUrl":"http:\/\/www.cbsnews.com\/news\/this-car-tops-the-list-for-being-a-ticket-magnet\/","permalink":"2016_02_18_this_car_tops_the_list_for_being_a_ticket_magnet_","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/3f\/3fdcc40fc90a464bb86611fffd07d7b8_medium.jpg","pub_date":"2016-02-18T16:37:46.534Z","large_image_url":"http:\/\/cbsnews1.cbsistatic.com\/hub\/i\/r\/2016\/02\/18\/3020cd80-7460-4cf7-b9f7-0ce071c0d7c5\/thumbnail\/620x350\/9e328676a6848f71eeca2d799f9ab2b3\/ticket.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":0,"facebook":0,"twitter":0},{"title":"Could common antibiotics be linked to delirium?","description":"A new study examines possible connection between the commonly-prescribed drugs and temporary mental confusion","link":"http:\/\/www.nonissue.com\/post.php?link=2016_02_18_could_common_antibiotics_be_linked_to_delirium_","displayUrl":"http:\/\/www.cbsnews.com\/news\/could-common-antibiotics-be-linked-to-delirium\/","permalink":"2016_02_18_could_common_antibiotics_be_linked_to_delirium_","small_image_url":"http:\/\/s3.amazonaws.com\/nonissue-wordpress-images\/images\/65\/65e29a6d5356691563b9879575db9d2f_medium.jpg","pub_date":"2016-02-18T16:37:46.533Z","large_image_url":"http:\/\/cbsnews1.cbsistatic.com\/hub\/i\/r\/2015\/04\/23\/68bdd4eb-e3a9-4347-b6cd-72e07f55ca63\/thumbnail\/620x350\/7314eb1314a2ec5756d36ed331b0be58\/antibiotics.jpg","providerName":"cbsnews.com","providerDomain":"cbsnews.com","providerUrl":"http:\/\/www.cbsnews.com","providerFavicon":"http:\/\/cbsnews4.cbsistatic.com\/fly\/bundles\/cbsnewscore\/favicon.ico?v=6e527930b06ed5d1e69ffcc8463b75a5b0a8ef77","shares":1,"facebook":1,"twitter":0}];
+        var contextId = '';
+        var userId = '08f77647-a4a5-5fce-953d-069fa33ce039';
+                var pixels = null;
+	
+
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-51485522-1', 'auto', {'name': 'nonissue'});
+                ga('nonissue.send', 'pageview');
+                    
+NonIssue
+
+
+
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#version=v2.3&appId=1449312612002885&status=true&cookie=true&xfbml=true";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    var dailyRate = 30;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Feds to Google: Cars don't need drivers
+
+Federal safety regulators tell Google it's OK with concept of a self-driving car in which a human driver can not take control.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Vimeo adds Chromecast streaming to its Android app
+
+Better late than never.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Third Friday Total Return Fund 4Q15 Letter - ValueWalk
+
+In the fourth quarter, Third Friday Fund earned a net return of +3.48% compared to +0.99% for the HFRI Fund Weighted Composite Hedge Fund Index
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Specialists caution against building MACRA on a flawed cornerstone
+
+CMS’ staged Meaningful Use program has outlived its usefulness.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mimicker Alarm Wakes You Up with a Game
+
+Android: Any alarm can wake you up. Mimicker, a free alarm app for Android from the Microsoft Garage, can help make sure you stay awake.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fantasy prospects to watch at the 2016 Combine
+
+Last year, David Johnson's combine performance was an early indicator for his future fantasy success. Who's next? Alex Gelhar highlights 20 players to watch at the 2016 NFL Scouting Combine.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Surgery leaves woman with strange side effect: kleptomania
+
+Could a routine operation really lead to compulsive stealing?
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Marilyn Hartman, serial stowaway, arrested again at Chicago's O'Hare airport
+
+Marilyn Hartman, 64, has tried numerous times in recent years to board planes without a ticket, succeeding at least once by flying from San Jose, California, to Los Angeles in August 2014.
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+John Kasich: GOP debates are "the dumbest thing going"
+
+The Ohio governor criticized the GOP debates as too heavy on sound bites and also discussed his second-place New Hampshire finish and the Supreme Court vacancy
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Caitlyn Jenner regrets not telling dad about gender identity
+
+The Olympic gold medalist says not telling her father the truth about her gender identity "will always haunt me"
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Marco Rubio robocalls slam Ted Cruz's
+
+The Rubio campaign employed a message recorded by South Carolina Rep. Trey Gowdy, who endorsed the Florida senator last year
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adele says she cried "all day" after the Grammys audio mishaps
+
+The singer tells Ellen that the botched performance really took a toll on her
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+This car tops the list for being a "ticket magnet"
+
+Motorists that get pulled over for traffic violations the most tend to drive this flashy sedan; the opposite is true for a Buick
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Could common antibiotics be linked to delirium?
+
+A new study examines possible connection between the commonly-prescribed drugs and temporary mental confusion
+
+
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+{{::story.title}}
+{{::story.description}}
+Promoted
+
+
+
+
+
+
+
+
+
+
+
+
+☓comments
+
+
+
+                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                    var disqus_shortname = 'wwwnonissuecom'; // Required - Replace '<example>' with your forum shortname
+
+                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                    (function () {
+                        var dsq = document.createElement('script');
+                        dsq.type = 'text/javascript';
+                        dsq.async = true;
+                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                    })();
+                
+Please enable JavaScript to view the comments powered by Disqus.
+
+
+
+⇪
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

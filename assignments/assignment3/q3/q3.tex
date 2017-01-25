@@ -1,0 +1,12 @@
+\section{Problem 3}
+
+\subsection{Question}
+\input{q2/a3}
+
+
+\subsection{Answer}
+Using the Page Rank\cite{pagerank} Checker website to input each of the URIs found in the ten selected URIs from question 2 the results in Listing \ref{listing:pageranks} was determined.\\
+
+\lstinputlisting[caption={page\_ranks file}, frame=none, stepnumber=0, label=listing:pageranks]{q3/page_ranks.txt}
+
+In looking at the similarities and differences in the results of question 2 and question 3 it seems that page rank is unrelated to term frequency measurements. This is logical because the search term isn't taken as an input when calculating page rank. Also, finding page rank has a different goal than measuring search term relevance. It is used to objectively find which pages have a higher probability of a user randomly navigating to the page, which is unrelated to the content of the pages in the given set and is a function of the graph created by links contained in the pages of the set.

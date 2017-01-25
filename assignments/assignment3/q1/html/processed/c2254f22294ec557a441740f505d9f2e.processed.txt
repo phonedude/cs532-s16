@@ -1,0 +1,1744 @@
+http://elpais.com/elpais/2014/09/20/opinion/1411238664_721598.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Crisis sobre crisis | Opinión | EL PAÍS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//<![CDATA[
+	var videoPublicityDown = false;
+	var videoFuente = "0";
+	var url_cache = "http://ep02.epimg.net";
+	//var url_reproductor_epet = "/reproductores/playerPEP.swf";
+	var autopromo = "http://ep02.epimg.net/videos/cierre.mp4";
+	var url_reproductor_epet = "/reproductores/playerPEP_autopromo.swf";	
+	
+	var UrlPublicidadOveron = "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F7811748%2Foveron_player%2Felpais_web%2Fflash&ciu_szs=&impl=s&gdfp_req=1&env=vp&output=vast&correlator={random}&unviewed_position_start=1";
+	
+	var publicidad_HTML5 = true;
+	var postroll_HTML5 = true;
+	var marcado_logtrust = true;
+	var modoSiguientesVideos = 1;
+
+	var retransmisiones = {"akamai_001":"akamaihls_001",
+	"level3_001":"level3hls_001"
+	};
+
+	var UrlPublicidad = 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=%2F7811748%2Felpais_web%2Fplayer_video%2Fflash&ciu_szs=&impl=s&gdfp_req=1&env=vp&output=xml_vast2&correlator={random}&unviewed_position_start=1';
+	var listado_norm_tags = 'salud_a,opinion_a,ebola_a,epidemia_a,africa_occidental_a,africa_a,enfermedades_infecciosas_a,enfermedades_a,medicina_a,sociedad_a';
+	var DFP_tags = ["salud_a","opinion_a","ebola_a","epidemia_a","africa_occidental_a","africa_a","enfermedades_infecciosas_a","enfermedades_a","medicina_a","sociedad_a"];
+	var listado_autores_simplereach = [];
+	var listado_tags_simplereach = ["salud_a","opinion_a","ebola_a","epidemia_a","africa_occidental_a","africa_a","enfermedades_infecciosas_a","enfermedades_a","medicina_a","sociedad_a"];
+	var listado_id_tags = '71011,88211,82292,29951,124968,81569,29425,29409,57568,73526';
+
+	var referrer = document.referrer;
+	if (referrer.indexOf("http://t.co/") == 0 || (referrer.indexOf("twitter.com") > 0 && referrer.indexOf("twitter.com") < 30) )
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push("fromtwitter");
+		else
+			var DFP_tags = ["fromtwitter"];
+	}
+
+	var reg_ref_noticia = /http.?:\/\/[^\/]*\/[^\/]*\/\d+\/\d+\/\d+\/[^\/]*\/(.*?)\.html/i;
+	var result_rrn = reg_ref_noticia.exec(document.location.href);
+	if (result_rrn)
+	{
+		if (typeof(DFP_tags) != "undefined")
+			DFP_tags.push(result_rrn[1]);
+		else
+			var DFP_tags = [result_rrn[1]];
+		//inicio simplereach
+		var __reach_config = {
+			pid: '55b8efcc736b7977f9000eed',
+			title: document.title,
+			date: new Date(parseInt(result_rrn[1].replace(/_\d+$/,"")) * 1000).toUTCString(),
+			authors: typeof(listado_autores_simplereach) != "undefined" ? listado_autores_simplereach : [],
+			channels: [],
+			tags: typeof(listado_tags_simplereach) != "undefined" ? listado_tags_simplereach : [],
+			ignore_errors: false
+		};
+
+		(function(){
+		  var s = document.createElement('script');
+		  s.async = true;
+		  s.type = 'text/javascript';
+		  s.src = document.location.protocol + '//d8rk54i4mohrb.cloudfront.net/js/reach.js';
+		  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+		})();
+		
+		//fin simplereach				
+	}
+
+//]]>
+
+
+    var _vrq = _vrq || [];
+    _vrq.push(['id', 255]);
+    _vrq.push(['automate', false]);
+    _vrq.push(['track', function(){}]);
+    (function(d, a){
+    var s = d.createElement(a),
+        x = d.getElementsByTagName(a)[0];
+        s.async = true;
+        s.src = 'http://ep01.epimg.net/js/comun/vr/vrs.20151215.js';
+        x.parentNode.insertBefore(s, x);
+    })(document, 'script');
+
+
+PEPuidEnv='W9g/8VbGElWgA1PWBP5iAg==';var rndPXL=parseInt(Math.random()*10000000);var imgMMD=new Image(1,1);imgMMD.src="/pxlctl.gif?m=1&r=2&w="+rndPXL;
+
+
+	
+		var gtpadunit= 'elpais_web/opinion';
+		var gtpdivid= 'elpais_gpt';
+		
+		var listadoKW = [];
+		if (typeof(DFP_tags) != "undefined" )
+			listadoKW = DFP_tags;
+			
+		if (document.referrer == "http://elpais.com/" )
+		{
+				listadoKW.push("articuloportada");
+		}		
+		
+		if (typeof(PBS) != "undefined") 
+		{
+			var huecosPBS = {
+				"inter":true,
+				"skin":true,
+				"ldb1":[[728, 90],[980, 90],[980, 250]],
+				"ldb2":[[728, 90],[980, 90]],
+				"mpu1":[[400, 100],[300, 250],[400, 400],[300, 600],[400, 600]],
+				"mpu2":[[300, 250],[400, 400]],
+				"mpu3":[[300, 250],[400, 400]],
+				"btn1":[560, 90],
+				"btn2":[400, 100],
+				"nstdX":[8],
+				"text":true,
+				"boxd":{
+					"box1":"ldb1"
+				}
+			};			
+	
+			PBS.setAds({
+				asy:false,
+				adunit:gtpadunit,
+				divid:gtpdivid,
+				key:{ paiskey:listadoKW },
+				ads:huecosPBS,
+				'viT':{
+					"sel":"#cuerpo_noticia>p",
+					"c":{
+						"ch":300,
+						"el":3,
+						"mb":"25px",						
+						"f": "1D",
+						"fc":"fr_pbs_VAST"
+					}
+				}
+			});
+		}
+		else
+			var PBS = {display:function(){}};		
+	
+
+
+
+
+			PBS.display('INTER');
+		
+
+
+
+			PBS.display('SKIN');
+		
+
+
+
+
+
+
+			PBS.display('LDB1');
+		
+
+
+
+			PBS.display('BOX1');
+		
+
+
+
+
+
+
+function f_desplegar_opciones_portada(){
+  document.getElementById('botonEdicion').style.visibility   = 'hidden';
+  document.getElementById('id_capa_seleccion').style.display = 'block';
+}
+function f_ocultar_opciones_portada(){
+  document.getElementById('botonEdicion').style.visibility   = 'visible';
+  document.getElementById('id_capa_seleccion').style.display = 'none';
+}
+
+function f_seleccionar_portada(portada_seleccionada) {
+  var url;
+  if (portada_seleccionada == 1) {
+    url = '/s/setEspana.html';
+  }else{
+    if(portada_seleccionada == 2){
+        url = '/s/setAmerica.html';
+     } else {
+        url = '/s/setBrasil.html';
+     }
+  }
+  location.href = url;
+}
+
+
+
+Elige Edición
+
+
+
+Elige Edición
+Edición España
+Edición América
+Edición Brasil
+
+
+
+Iniciar sesión
+Registrarse 
+i
+
+
+
+Date de alta: es fácil y gratis
+
+
+
+Opina en las noticias
+Conéctate a Eskup
+Conversa con tus periodistas de referencia
+Recibe avances de tus suplementos favoritos
+Participa en eventos organizados por EL PAÍS
+
+Darme de alta
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Portada 
+Internacional 
+Política 
+Economía 
+Cultura 
+Sociedad 
+Deportes 
+
+
+
+
+
+Opinión
+
+
+Editoriales 
+Tribunas 
+Columnas 
+Análisis 
+ Blogs 
+Viñetas 
+Defensor del lector 
+Nuestras firmas 
+Titulares »
+
+
+
+
+Temas del día
+
+
+Obama viaja a Cuba 
+Sube la gasolina en Venezuela 
+Corrupción en el PP 
+Pactos para formar ejecutivo 
+Champions League 
+
+
+
+Más temas »
+
+
+
+
+
+
+
+EDITORIAL
+
+Crisis sobre crisis
+
+El ébola se extiende mientras las consecuencias de la epidemia causan tanto daño como el virus
+
+
+
+
+
+
+
+El País
+21 SEP 2014 - 00:00 CEST 
+
+
+Archivado en:
+
+Opinión
+Ébola
+Epidemia
+África occidental
+África
+Enfermedades infecciosas
+Enfermedades
+Medicina
+Sociedad
+Salud
+
+
+
+
+if (typeof EPETshowHideTags == 'function') { 
+
+    EPETshowHideTags('contenedorLista8949'); 
+
+}
+
+
+
+
+var c_url = '';
+var c_title = '';
+var c_via = '';
+if ( c_via == '' )
+    c_via = 'el_pais';
+
+if(c_title=='' && typeof getTitleFromMeta == 'function') {
+        c_title = encodeURIComponent(getTitleFromMeta());
+}
+
+if ( c_title == '' ) 
+    c_title = (document.getElementById('titulo_noticia'))?
+                document.getElementById('titulo_noticia').innerHTML :
+                (document.getElementsByTagName('title'))? 
+                    encodeURIComponent(document.getElementsByTagName('title')[0].innerHTML.split('|')[0]) :
+                    '';
+
+if ( c_url == '' ) {
+    c_url = location.href;
+    c_url = c_url.replace(/.html.*$/gi, ".html");
+    c_url = c_url.replace(/\/album-\d+\//gi, "/album/");
+//    c_url = c_url.replace(/\/m\//gi, "/");
+    c_url = c_url.replace(/http:\/\/elpais.com\/m\/([^\/]+)\//gi, "http://$1.elpais.com/$1/");
+    c_url = c_url.replace(/http:\/\/elpais.elpais.com/gi, "http://elpais.com");
+    c_url = c_url.replace(/http:\/\/diario.elpais.com/gi, "http://elpais.com");
+    c_url = c_url.replace(/http:\/\/tematicos.elpais.com/gi, "http://elpais.com");
+}
+
+var params = {
+    url : c_url,
+    text : c_title,
+    via : c_via
+    };
+
+
+
+
+Recomendar en Facebook
+0
+
+
+Twittear
+0
+
+
+Enviar a LinkedIn
+0
+
+
+
+Enviar a Tuenti
+Enviar a Eskup
+
+Enviar
+Imprimir
+Guardar
+
+
+
+    new EPETMail ( document.getElementById('enviar'), document.getElementById('capaEnviarCorreo'), '' );
+    new EPETTwitter ( document.getElementById('twit'), document.getElementById('tnum'), params );
+    new EPETFacebook ( document.getElementById('fb'), document.getElementById('fbnum'), params );
+    new EPETGooglePlus ( document.getElementById('gp'), '', params );
+    new EPETLinkedin ( document.getElementById('linkedin'), document.getElementById('lnum'), params );
+
+
+
+El virus del ébola sigue expandiéndose sin control en África Occidental. Los responsables de los programas desplegados por la OMS y las organizaciones no gubernamentales que tratan de contener los contagios observan con impotencia cómo la epidemia tiene más fuerza que su capacidad de respuesta. Según los últimos datos de la OMS, en los cinco países afectados se han contabilizado un total de 4.800 infectados, de los que han fallecido 2.630. En Nigeria y Senegal el brote está bajo control, pero no así en Liberia, Guinea y Sierra Leona, donde la expansión del ébola está creando otra epidemia de miedo que causa tanto daño como el propio virus. Ocho personas murieron al ser atacadas cuando informaban sobre la epidemia en una aldea del noreste de Guinea. La ignorancia y el miedo hacen correr bulos que, como en este caso, tienen trágicas consecuencias.
+
+
+
+Editoriales anteriores
+Ebola sin control ((05/09/2014)
+Combatir el ebola (13/08/2014)
+
+
+Es la situación más temida: una crisis dentro la crisis. En muchos lugares, los hospitales están colapsados y no hay camas suficientes para aislar a los enfermos. En otros, el miedo al contagio hace que numerosos pacientes aquejados de otras dolencias, incluso graves, dejen de acudir a los centros sanitarios. La falta de información hace que no se identifiquen a tiempo los síntomas o que no se sigan las recomendaciones para evitar más contagios.
+Se calcula que por cada infectado debe hacerse un seguimiento, durante tres semanas, de unas veinte personas con las que ha estado en contacto. Pero las estructuras sanitarias están saturadas y faltan recursos. Desde que empezó la crisis, la OMS ha trasladado a las zonas más afectadas a unos 600 profesionales. Es insuficiente. Ya no es solo una cuestión de dinero, sino también de logística. Los países ricos —España entre ellos, con un segundo infectado, también misionero, listo para ser repatriado— no deberían permitir que a los males endémicos de esos países se sume ahora este nuevo jinete de la muerte.
+
+
+
+
+
+			PBS.display('TEXT');
+		
+
+
+
+
+
+			PBS.display('BTN1');
+		
+
+
+
+
+Y ADEMÁS...
+
+
+
+
+          //<![CDATA[
+            EPETnewsNotify();
+          //]]>
+          
+
+
+
+
+
+Otras noticias
+
+
+
+			PBS.display('MPU1');
+		
+
+
+
+RECIBE LAS NEWSLETTERS DE EL PAÍS
+
+
+.caja_relacionadas .miniatura {
+float: right;
+margin-left: 10px;
+width: 140px;
+}
+.caja_relacionadas .foto{
+height:auto;
+max-height:100px;
+overflow:hidden;
+}
+
+
+
+
+    function getPlantilla(){        
+        var cabecera='<h3><span class="sin_enlace"></span>Otras informaciones en <strong>EL PAÍS</strong></h3>';                
+    	bloque_firma = '<div class="firma_comentarios"><span class="autor">##CX_AUTHOR##</span></div>';
+        bloque_miniatura = '<div class="miniatura"><div class="foto figure"><a title="Ver noticia" href="##CX_URL##"><img src="##CX_IMAGE##" width="140" height="100" title="" alt=""></a></div></div>';            
+        plantilla_articulo = '<div class="article  estirar">'+ bloque_miniatura +'<h4><a title="Ver noticia" href="##CX_URL##">##CX_TITLE##</a></h4>' + bloque_firma + '<p>##CX_DESCRIPTION##</p></div>';
+        final_html='';
+        return [cabecera,plantilla_articulo,final_html];
+    }
+
+  function myRenderFunction(data, context) {
+    //    
+    var articulo = '';    
+    var articulos = '';
+    var s_author = '';
+
+    var items = data.response.items;   
+    var numRelacionadas=items.length;    
+
+    var result = getPlantilla();
+    var cabecera=result[0];
+    var plantilla_articulo=result[1];
+    var final_html=result[2];
+
+    for (var i = 0; i < numRelacionadas; i++) {
+        var item = items[i];            
+        articulo = plantilla_articulo; 
+        var regexImagen = /W*\/imagenes|videos\/(\d+)\/(\d+)\/(\d+)\/W*/;
+        var esImagenEditorial = regexImagen.exec(item['dominantimage']);      
+        
+        if (esImagenEditorial){
+            articulo = articulo.replace(/##CX_IMAGE##/g,item['dominantthumbnail']);            
+        }
+        else {
+            articulo = articulo.replace(bloque_miniatura,'');
+        }  
+
+        var cx_url = item['click_url'];
+        var queryChar = cx_url.indexOf('?') == -1 ? '?' : '&';        
+        articulo = articulo.replace(/##CX_URL##/g,cx_url+queryChar+'rel=cx_articulo'); 
+        var titulo = item['title'];
+        articulo = articulo.replace(/##CX_TITLE##/g,titulo);
+        s_author = item['recs-author'];
+        var lineasAutor = 0;        
+        if (s_author!='' && s_author.toLowerCase()!='ediciones el país'){
+            lineasAutor = 1;
+        	articulo = articulo.replace(/##CX_AUTHOR##/g,s_author);
+        }
+        else{
+        	articulo = articulo.replace(bloque_firma,'');
+        }        
+        descripcion = item['description']; 
+       
+        if (descripcion.length>270) {
+            var lineasTitulo = 0;
+            var longTitulo=titulo.length;
+            if (longTitulo<30) {
+                lineasTitulo = 1
+            }    
+            else if (longTitulo<55) 
+                lineasTitulo = 2
+                else 
+                    lineasTitulo = 3    
+            
+            var lineasTituloMasAutor = lineasTitulo + lineasAutor;
+
+            switch(lineasTituloMasAutor) {
+                case 0:
+                    limiteCaracteresDescripcion=0;
+                    break;
+                case 1:
+                    limiteCaracteresDescripcion=181;
+                    break;
+                case 2:
+                    limiteCaracteresDescripcion=170;
+                    break;
+                case 3:
+                    limiteCaracteresDescripcion=210;              
+                    break;
+                default:
+                    limiteCaracteresDescripcion=205;                
+            }
+            if (esImagenEditorial)
+                descripcion = descripcion.substring(0,limiteCaracteresDescripcion);    
+            else
+                descripcion = descripcion.substring(0,205);    
+            descripcion=descripcion.substring(0,descripcion.lastIndexOf(" "));
+            descripcion = descripcion+"...";
+        }                        
+
+        articulo = articulo.replace(/##CX_DESCRIPTION##/g,descripcion);
+        articulos += articulo;
+    }    
+    var caja_relacionadas = cabecera+articulos+final_html;    
+    document.getElementById("caja_relacionadas_cxense").innerHTML = caja_relacionadas;
+    document.getElementById('caja_relacionadas_cxense').style.display = 'block';
+  }
+  var cX = cX || {}; cX.callQueue = cX.callQueue || [];  
+  var url_referencia = window.location.href;   
+
+  cX.callQueue.push(['insertWidget',{widgetId: 'afcd8a584ac575965879de69de3c462fffbe04f9',
+    renderFunction: myRenderFunction},    
+    {context: {categories:{language:'es'}}}
+    ]);
+
+
+
+EskupTwitterGoogle+EL PAÍS 
+
+
+
+			PBS.display('BTN2');
+		
+
+
+
+Últimas noticias
+Ver todo el día
+
+
+
+
+
+
+
+
+Un periódico frente al golpe de Estado del 23-F
+
+
+Virginia López Enano
+
+El próximo lunes se estrena ‘EL PAÍS con la Constitución’, un documental que relata cómo este periódico se enfrentó al golpe de Estado del 23-F
+
+
+
+
+
+
+
+
+
+
+Estaciones de esquí en el Sistema Penibético
+
+
+El País
+
+Sigue con EL PAÍS VÍDEO el estado de las pistas de esquí de Sierra Nevada
+
+
+
+
+
+
+
+
+
+
+Estaciones de esquí en la Cordillera Cantábrica
+
+
+El País
+
+Sigue con EL PAÍS VÍDEO el estado de las pistas de esquí de Alto Campoo, Leitariegos, Manzaneda San Isidro y Valgrande-Pajares
+
+
+
+EL PAÍS RECOMIENDA
+
+
+
+
+
+
+
+
+
+Hace 100.000 años tuvimos hijos con los neandertales
+
+
+Manuel Ansede
+
+El ADN sugiere relaciones sexuales entre los humanos actuales y esta especie
+
+
+
+
+
+
+
+
+
+Anonymous: las caras que esconde la máscara
+
+
+Joseba Elola
+
+La antropóloga Gabriella Coleman analiza las claves del movimiento ‘hacker’
+
+
+FOTOGALERÍA La ‘vendetta’ de Guy Fawkes 
+
+
+
+
+
+
+function salta_a_lo_mas_visto()
+{
+	if (document.getElementById('li_lmv_elpais').className.indexOf("activo") > -1)
+	{
+		if (document.getElementById('li_lmv_america').className.indexOf("activo") > -1)
+			document.location = "http://elpais.com/lomasvisto/america.html";
+		else
+			if (document.getElementById('li_lmv_brasil').className.indexOf("activo") > -1)
+				document.location = "http://brasil.elpais.com/lomasvisto/";
+            else
+                if (document.getElementById('li_lmv_catalunya').className.indexOf("activo") > -1)
+                    document.location = "http://cat.elpais.com/lomasvisto/";
+                else
+                    document.location = "http://elpais.com/lomasvisto/";
+	}
+    else {
+       	if (document.getElementById('li_lmv_verne').className.indexOf("activo") > -1)
+            document.location = "http://elpais.com/lomasvisto/verne.html";
+        else
+            if (document.getElementById('li_lmv_twitter').className.indexOf("activo") > -1)
+                document.location = "http://elpais.com/lomasvisto/twitter.html";
+            else
+				if (document.getElementById('li_lmv_videos').className.indexOf("activo") > -1)
+					document.location = "http://elpais.com/lomasvisto/videos.html";
+				else
+				    document.location = "http://elpais.com/lomasvisto/";
+    }
+}
+
+function lmv_cambia_pestana(idpestana)
+{
+	//Por defecto activo las vistas desde cualquier sitio
+	document.getElementById('lmv_america').style.display = "none";
+	document.getElementById('lmv_brasil').style.display = "none";
+	document.getElementById('lmv_catalunya').style.display = "none";
+	switch (idpestana)
+	{
+		case "lmv_elpais" :
+			document.getElementById('lmv_todo').style.display = "block";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_videos').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "activo";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_videos').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "block";
+			lmv_cambia_subpestana("lmv_todo");
+		break;
+
+		case "lmv_twitter" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "block";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_videos').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "activo";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_videos').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+		case "lmv_verne" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "block";
+			document.getElementById('lmv_videos').style.display = "none";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "activo";
+			document.getElementById('li_lmv_videos').className = "";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+		case "lmv_videos" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_twitter').style.display = "none";
+			document.getElementById('lmv_verne').style.display = "none";
+			document.getElementById('lmv_videos').style.display = "block";
+			document.getElementById('li_lmv_elpais').className = "";
+			document.getElementById('li_lmv_twitter').className = "";
+			document.getElementById('li_lmv_verne').className = "";
+			document.getElementById('li_lmv_videos').className = "activo";
+			document.getElementById('lmv_subpestanas').style.display = "none";
+		break;
+
+
+	}
+}
+
+function lmv_cambia_subpestana(idpestana)
+{
+	//twitter, seccion ocultas
+	document.getElementById('lmv_twitter').style.display = "none";
+	document.getElementById('lmv_verne').style.display = "none";
+	document.getElementById('lmv_videos').style.display = "none";
+	switch (idpestana)
+	{
+		case "lmv_todo" :
+			document.getElementById('lmv_todo').style.display = "block";
+			document.getElementById('lmv_america').style.display = "none";
+			document.getElementById('lmv_brasil').style.display = "none";
+			document.getElementById('lmv_catalunya').style.display = "none";
+			document.getElementById('li_lmv_todo').className = "activo";
+			document.getElementById('li_lmv_america').className = "";
+			document.getElementById('li_lmv_brasil').className = "";
+			document.getElementById('li_lmv_catalunya').className = "";
+		break;
+		case "lmv_america" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_america').style.display = "block";
+			document.getElementById('lmv_brasil').style.display = "none";
+			document.getElementById('lmv_catalunya').style.display = "none";
+			document.getElementById('li_lmv_todo').className = "";
+			document.getElementById('li_lmv_america').className = "activo";
+			document.getElementById('li_lmv_brasil').className = "";
+			document.getElementById('li_lmv_catalunya').className = "";
+		break;
+		case "lmv_brasil" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_america').style.display = "none";
+			document.getElementById('lmv_brasil').style.display = "block";
+			document.getElementById('lmv_catalunya').style.display = "none";
+			document.getElementById('li_lmv_todo').className = "";
+			document.getElementById('li_lmv_america').className = "";
+			document.getElementById('li_lmv_brasil').className = "activo";
+			document.getElementById('li_lmv_catalunya').className = "";
+		break;
+		case "lmv_catalunya" :
+			document.getElementById('lmv_todo').style.display = "none";
+			document.getElementById('lmv_america').style.display = "none";
+			document.getElementById('lmv_brasil').style.display = "none";
+			document.getElementById('lmv_catalunya').style.display = "block";
+			document.getElementById('li_lmv_todo').className = "";
+			document.getElementById('li_lmv_america').className = "";
+			document.getElementById('li_lmv_brasil').className = "";
+			document.getElementById('li_lmv_catalunya').className = "activo";
+		break;
+
+	}
+}
+
+
+
+Lo más visto en...
+» Top 50
+
+
+EL PAÍS
+Twitter
+Verne
+Vídeos
+
+
+
+España
+América
+Brasil
+Cataluña
+
+
+
+
+
+1VídeoSer Asperger a los 50, sin saberlo
+2VídeoTuvimos hijos con los neandertales ya hace 100.000 años
+3Siete tipos de personas tóxicas de las que debes huir
+48 errores de salud que cometemos a diario (y en menos de una hora)
+5Las cuentas de Podemos no cuadran
+6Ryan Reynolds escribe en Twitter y Facebook en español, y te vas a reír
+7VídeoRita Maestre, ante el juez: “Un torso desnudo no es un gesto ofensivo”
+8Qué fue de Soleil Moon Frye, la protagonista de ‘Punky Brewster’
+9VídeoRené Laënnec, el pudoroso médico que inventó el estetoscopio
+10Jueces y fiscales ven “aberrante” que Iglesias les exija adhesión
+
+ 
+
+1VídeoRené Laënnec, el pudoroso médico que inventó el estetoscopio
+2VídeoTuvimos hijos con los neandertales ya hace 100.000 años
+3VídeoEl trabajo ‘suicida’ del mexicano Arne aus den Ruthen
+4Siete tipos de personas tóxicas de las que debes huir
+5Ryan Reynolds escribe en Twitter y Facebook en español, y te vas a reír
+6VídeoSer Asperger a los 50, sin saberlo
+7VídeoChina desaloja a 9.000 personas por un megaproyecto para buscar extraterrestres
+8VídeoRonaldo Zinedin, la nueva promesa del fútbol mexicano
+9VídeoVenezuela multiplica por sesenta el precio de la gasolina
+10VídeoApple niega al FBI acceso al móvil del tirador de San Bernardino
+
+ 
+
+1VídeoHumanos tiveram filhos com os neandertais há 100.000 anos
+2Real bate a Roma por 2 a 0
+3Candidato de Dilma vence disputa e segue liderando o PMDB na Câmara
+4Barça vence e se isola na liderança
+5Sobre aborto, deficiência e limites
+6Inflação vai a 30% na Argentina e vira campo de batalha para Macri
+7Sob pressão, Cunha articula mais uma vez para se manter no cargo
+8VídeoChina desaloja 9.000 pessoas em megaprojeto para procurar E.T.s
+9História da foto de farol mais famosa do mundo
+10‘Japonês da Federal’ flerta com a política e pode se tornar candidato
+
+ 
+
+1Això s’enfonsa
+2Vídeo“Mare nostra que esteu en el zel, sigui santificat el vostre cony”
+3“Encara veig l’ofici de productor musical com el d’un artesà”
+4Ada Parellada: “El sistema alimentari està podrit”
+5El cost de les obres del Moisès Broggi es va disparar un 111% en cinc anys
+6Simplement, la Muriel
+7Excàrrecs d’Adif van inflar en 31 milions obres de l’AVE a Barcelona
+8Sánchez i els pactes d’investidura, dubtes a tort i a dret
+9Els amics de la Muriel
+10Incidents en el vol del Barça a Gijón
+
+ 
+
+1VídeoEl Supremo condena a El Algarrobico a su desaparición
+2VídeoEl Canal de Isabel II pagó a la trama Púnica por “trabajos ficticios”
+3VídeoSer Asperger a los 50, sin saberlo
+4Directo | Arranca el juicio contra Rita Maestre
+5VídeoLa desigualdad social, el mosquito que inocula enfermedades crónicas
+6VídeoDe Charlie a Rita
+7VídeoUn delfín muere a manos de unos turistas en una playa argentina
+8VídeoTuvimos hijos con los neandertales ya hace 100.000 años
+9VídeoEl PP ofrece una vicepresidencia de Rajoy a Sánchez y otra a Rivera
+10Excargos de Adif inflaron en 31 millones obras del AVE en Sagrera
+
+ 
+
+1El problema matemático de las frutas que ha enganchado a 2,5 millones de personas
+2El gesto de Adele por educar a su hijo más allá de las normas de género
+3Las imágenes más bonitas de los fotógrafos de partos profesionales
+4Vídeo“No seas egoísta”, el reclamo del papa Francisco que se volvió trending topic
+5La sorpresa de unos alumnos que emociona hasta las lágrimas a su profesor
+6El libro que te recomienda los 10 hábitos de la gente creativa
+7Lo que los bebés ven y tú ya no
+8Jeb Bush enseña su pistola y los tuiteros le muestran las suyas
+9"¡Jodeos, miserables!": el mensaje de Ramoncín a los haters tras su absolución
+10El cielo de Madrid, seis años en cinco minutos
+
+ 
+
+1VídeoSer Asperger a los 50, sin saberlo
+2VídeoTuvimos hijos con los neandertales ya hace 100.000 años
+3VídeoRita Maestre, ante el juez: “Un torso desnudo no es un gesto ofensivo”
+4VídeoRené Laënnec, el pudoroso médico que inventó el estetoscopio
+5VídeoQue un noviazgo no trunque la audiencia
+6VídeoApple niega al FBI acceso al móvil del tirador de San Bernardino
+7VídeoChina desaloja a 9.000 personas por un megaproyecto para buscar extraterrestres
+8VídeoAlbert Rivera se resiste a entrar en un Gobierno liderado por el PSOE
+9VídeoBenítez: “El Barça ha ganado el doble desde que está Florentino”
+10VídeoVenezuela multiplica por sesenta el precio de la gasolina
+
+
+
+
+
+
+    if (typeof aniade_track_caja == 'function') { 
+        aniade_track_caja('caja_lo_mas_visto', 'rel=lom');
+    }
+
+
+
+
+
+
+				PBS.display('LDB2');
+			
+
+
+﻿
+
+
+
+
+
+
+SECCIONES
+
+
+
+
+
+INICIO
+ÚLTIMA HORA
+LO MÁS VISTO
+EDICIÓN IMPRESA
+Vídeos
+Fotos
+Gráficos
+Audios
+Archivo
+Buscador
+INTERNACIONAL
+Europa
+EE UU
+México
+Ámerica Latina
+Ásia
+África
+Blogs Internacional
+Debate Internacional
+Corresponsales
+OPINIÓN
+Blogs Opinión
+Editoriales
+Tribunas
+Columnas
+Viñetas
+Defensor del Lector
+Nuestras Firmas
+Cartas al Director
+ESPAÑA 
+Andalucía 
+Cataluña 
+Comunidad Valenciana 
+Galicia 
+Madrid 
+País Vasco
+Más Comunidades
+ECONOMÍA
+Macroeconomía
+Empresas
+Mercados
+Bolsa
+Ahorros
+Vivienda
+Empleo
+Análisis
+Blogs Economía
+Declaracion de la Renta
+
+
+
+
+CIENCIA
+TECNOLOGÍA 
+MWC - Mobile World Congress
+Blogs Tecnología
+CULTURA
+Libros
+Cine 
+Música
+Teatro
+Danza
+Arte
+Arquitectura
+Toros
+Libros del año
+Blogs Cultura
+ESTILO
+Moda
+Gastronomía
+Gente
+TELEVISIÓN 
+IN ENGLISH
+MOTOR 
+Coches con Estilo
+OBITUARIOS 
+SUCESOS 
+EL PAÍS Semanal
+Babelia
+Planeta Futuro
+S MODA 
+ICON 
+Buenavida
+Meristation
+SOCIEDAD
+Educación 
+Salud
+Medio Ambiente 
+Igualdad
+Consumo 
+Comunicación 
+Astronomía
+Guías de Viaje 
+Tierra
+
+
+
+
+DEPORTES
+Fútbol
+
+Liga de Fútbol BBVA
+
+Resultados Liga BBVA 
+Calendario Liga BBVA 
+Vídeos de la Liga 
+Goles de la Liga 
+Liga Adelante 
+
+
+Copa del Rey 
+Champions League
+
+Resultados Champions 
+Calendario Champions 
+Videos Champions 
+
+
+Europa League
+Selección Española
+Mundial de Fútbol
+Eurocopa 2012
+Calendario Eurocopa
+Copa Confederaciones
+Copa America
+
+
+Baloncesto
+
+Liga Baloncesto ACB
+
+Resultados Liga ACB 
+Calendario Liga ACB 
+Vídeos Liga ACB 
+
+
+Copa del Rey Basket 
+NBA 
+Euroliga
+Eurocup
+Eurobasket
+Mundial de Baloncesto
+
+
+Tenis
+
+Open Australia
+Roland Garros
+Wimbledon
+US Open
+Copa Davis
+
+
+Ciclismo
+
+Giro de Italia
+Tour de Francia
+Vuelta España 
+
+
+Fórmula 1 
+Motociclismo
+Golf
+Otros Deportes
+Juegos Olímpicos
+
+
+
+
+ENTREVISTAS DIGITALES
+BLOGS
+La Comunidad
+SERVICIOS
+Mis Favoritos
+RSS
+Podcast
+Diccionarios
+Traductor 
+El Tiempo
+
+Estaciones de Esquí
+Playas
+
+
+Tráfico
+Gasolineras baratas
+Juegos 
+Sorteos
+
+Lotería Navidad
+Lotería del Niño
+Regalos de Navidad
+Recetas de Navidad
+Resumen del año
+Fotos del año
+
+
+Cartelera
+Programación TV 
+Horóscopo
+Paginas Amarillas
+Postales
+MASTER PERIODISMO
+PROMOCIONES
+SUSCRIPCIONES
+EL PAÍS +
+PUBLI ESPECIALES
+Clasificados EL PAÍS
+Vivienda
+Empleo
+Cursos
+Mis ahorros
+Descuentos
+APLICACIONES
+Móvil
+iPad
+Kindle
+TV
+
+
+
+
+
+
+MEDIOS ASOCIADOS
+
+
+
+
+PRENSA
+LeMonde.fr (Francia)
+Portugal Diario (Portugal)
+Maisfutebol (Portugal)
+La Razón (Bolivia)
+
+
+
+
+RADIO
+W Radio (México)
+Caracol Radio (Colombia)
+Radio Continental (Argentina)
+
+
+
+
+TELEVISIÓN
+TVI (Portugal)
+ATB (Bolivia)
+
+
+
+
+
+
+
+
+
+
+
+
+ESPECIALES: 
+ 
+
+
+
+ESPAÑA
+11-M
+23-F
+60 emtre 6 millones
+50 Aniversario Amnistía Internacional
+Adolfo Suárez
+El adiós y la sucesión de Zapatero
+Aniversario del #15m
+10º Aniversario del 11-M
+Accidente Aéreo en Barajas
+Alto el fuego de ETA
+Astronomía
+Aznar: la reinvención de un presidente
+Babelia 1001
+Babelia El Rincón
+Cambio Climático
+Caso Garzón
+Caso Gürtel
+Chico & Rita
+Clasificación Colegios de Madrid
+Coches con Estilo
+Debate sobre la crisis económica
+Debate sobre periodismo
+Desahucios
+El Greco
+Elecciones Generales
+Elecciones Autonómicas/Municipales
+Elecciones Catalanas
+Elecciones Gallegas
+Elecciones Vascas
+ETA
+Euskadi
+Ferran Adrià
+Fotos del año
+Gürtel Año V
+Gran Vía
+Huelga General
+Hopper
+Informe Desarrollo Humano
+iPhone
+José Luis López Vázquez
+José Saramago
+Juan Antonio Samaranch
+La hora del planeta
+Libros
+Los amos de Internet
+Mario Vargas Llosa
+Medio Ambiente
+Miguel Delibes
+Museo ICO
+Museo Thyssen
+Narración del #15m
+Niños Robados
+Nueva Rumasa
+Oscars
+Pasarela Cibeles
+Pedro Almodovar
+Premios Goya
+Preparados
+Protagonistas
+Resumen del Año
+Retrato de un país
+Reunión Zapatero-Empresarios
+Salón del Automóvil de Ginebra
+San Fermín
+San Valentín
+Sostenibilidad del Estado de Bienestar
+Tierra
+Notas de Corte Universidades
+Viajar por Europa
+Vuelta al Cole
+
+
+
+
+INTERNACIONAL
+33 vidas bajo tierra
+Accidente nuclear de Fukushima
+Desaparecidos
+Discurso del Estado de la Unión
+Elecciones EE UU
+Elecciones EE UU 2012
+Elecciones Europeas
+Elecciones Legislativas EE UU
+Europa Convulsa
+Europa Hoy
+Europa frontera sur
+Expatriados
+La sala de mando de la Casa Blanca
+Libertad para Sakineh
+Los agujeros negros del planeta
+Los nombres de América
+Nelson Mandela
+Terremoto en Haití
+Terremoto en Japón
+Testigos del Olvido
+Revueltas en el mundo árabe
+Voces alternativas
+
+
+DEPORTES
+Futbolistas españoles en el extranjero 
+Futbolistas españoles seleccionables 
+Calendario de Liga
+Pretemporada de Fútbol
+Mercado Fichajes Invierno Segunda
+Mercado Fichajes Verano
+Campeón de liga
+Clásico en el Nou Camp
+Clásico en el Bernabéu
+Competiciones Europeas
+Copa de África
+Copa del Rey de Fútbol
+Sorteo UEFA
+Final Champions League
+Carlin vs Robinson
+Baloncesto Final Four
+Mundial de Rallies
+Atletismo
+Europeo de Atletismo
+Europeo de Balonmano
+Masters Series
+Rugby
+Torneo Seis Naciones
+Mundial de Natación
+Juegos Olímpicos
+
+
+
+
+MÚSICA
+50 años del rock español
+Albert Hammond
+Alejandro Sanz
+Amaral
+Andrea Chenier
+Bebe
+Bryan Ferry
+Calle 13 y La Mala
+Carminho
+Coldplay
+Depeche Mode
+Día de la Música
+Dover
+El Canto del Loco
+El amplificador
+El Cigala
+EL PAÍS de Música
+Emeli Sandé
+Enrique Bunbury
+Estrella Morente
+Fleet Foxes
+Gabrielle Aplin
+Goldfrapp
+Gorillaz
+Herbie Hancock
+Héroes del Silencio
+Homenaje a Michael Jackson
+Joaquín Sabina
+Joan Manuel Serrat
+José Mercé
+Juan Luis Guerra
+Kings of Leon
+LCD Soundsystem
+Los Miserables
+Luz Casal
+Macaco
+Mana
+Massive Attack
+Norah Jones
+Pablo Alborán
+Peter Gabriel
+Pet Sohp Boys
+Rigoletto
+Robbie Williams
+Rock in Rio
+The Beach Boys
+The Beatles
+The Strokes
+Van Morrison
+200 Aniversario de Verdi
+Wagner
+
+
+
+  
+
+
+
+ Secciones Especiales
+
+© EDICIONES EL PAÍS S.L.
+Contacto
+Venta
+Publicidad
+Aviso legal
+Política cookies
+Mapa
+EL PAÍS en KIOSKOyMÁS
+Índice
+Versión móvil
+
+
+
+
+
+ Una empresa de PRISA Medios Grupo Prisa
+
+El PAÍS
+Los 40 principales
+Santillana
+Prisa Inn
+TVI
+Cadena SER
+AS.com
+ADN
+Caracol
+
+
+Huffington Post
+UNO
+wradio
+Cinco Días 
+continental
+Máxima
+M80 radio
+Cadena Dial
+Kebuena
+Yesfm
+
+
+Richmond
+Moderna
+Plural
+tvi24
+EL PAÍS ICON
+Verne
+Tareas y Más
+Meristation
+El Viajero
+Anuncios Clasificados
+
+
+
+
+
+Webs de PRISA
+cerrar ventana 
+
+
+
+SANTILLANA
+SANTILLANA Global
+Richmond
+SANTILLANA
+Argentina
+Bolivia
+Brasil
+Colombia
+Costa Rica
+Ecuador
+El Salvador
+España
+Estados Unidos
+Honduras
+México
+Paraguay
+Perú
+Portugal
+Rep. Dominicana
+Uruguay
+Venezuela
+Alfaguara Infantil y Juvenil
+SANTILLANA FRANCES
+Sistema UNO
+IneveryCREA
+Fundación Santillana
+Brasil
+España
+Colombia
+Seminario Periodismo Cultural
+Foro de industrias culturales
+Essay & Science
+Premio Viva Lectura
+El Boomeran(g)
+Tareas y más
+
+
+
+
+PRISA NOTICIAS
+PRISA Noticias
+EL PAÍS
+Blogs EL PAÍS
+Eskup EL PAÍS
+Servicios EL PAÍS
+Descuentos EL PAÍS
+Club de vinos EL PAÍS
+Escuela de Periodismo
+EL PAÍS de los Estudiantes
+S Moda
+ICON
+Verne
+El Viajero
+Clasificados EL PAÍS
+AS
+AS México
+AS Chile
+AS Colombia
+ASTV
+Megastore
+Apuestas
+Poker
+Motormercado
+Dalealplay
+Resultados deportivos
+Cinco Días
+PRISA Revistas
+ICON
+Meristation
+El Huffington Post
+
+
+
+
+PRISA RADIO
+PRISA Radio
+RADIO HABLADA
+ADN Radio
+Chile
+Costa Rica
+Cadena SER
+Caracol Radio
+Caracol 1260
+Continental
+W Radio
+EE UU
+Colombia
+México
+RADIO MUSICAL
+40 Principales
+Argentina
+Chile
+Colombia
+Costa Rica
+Ecuador
+España
+Guatemala
+México
+Panamá
+Bésame
+Colombia
+Costa Rica
+México
+Cadena DIAL
+Colorín ColorRadio
+Concierto
+Corazón
+FMDOS
+Futuro
+HJCK
+Ibero Americana Radio Chile
+KeBuena
+Bésame Colombia
+Máxima FM
+M80 Radio
+Oxígeno
+Pudahuel
+Radioacktiva
+Radioactiva
+Radio Imagina
+Radio Uno
+Radiolé
+Rock&Pop
+Tropicana
+MÚSICA
+Merchandising On Stage
+Planet Events
+RLM
+
+
+
+
+PRISA TV
+PRISA TV
+MEDIA CAPITAL
+TV
+TVI
+TVI24
+PRODUCCIÓN AUDIOVISUAL
+Plural Entertainment
+España
+Portugal
+RADIO
+Cotonete
+Radio Comercial
+M80
+Cidade FM
+Vodafone FM
+DIGITAL
+IOL
+Autoportal
+Maisfutebol
+
+
+
+
+PRISA
+PRISA
+PRISA INN
+toyoutome blog
+COMERCIAL Y MARKETING
+PRISA Brand Solutions
+
+
+
+ cerrar 
+
+
+
+
+
+
+document.getElementById('pbt-medios').onclick = function() { EPETaddClass('capa-webs-grupo', 'activado'); }
+document.getElementById('cierrame').onclick = function() { EPETremoveClass('capa-webs-grupo', 'activado'); }
+document.getElementById('cierrame2').onclick = function() { EPETremoveClass('capa-webs-grupo', 'activado'); }
+
+document.getElementById('cerrar_bm0').onclick = function() {
+    var obj = document.getElementById('pie_bm0');
+    document.getElementById('modulo0').style.display = 'none';
+    obj.activo = 0;
+}
+document.getElementById('cerrar_bm0_2').onclick = function() {
+    var obj = document.getElementById('pie_bm0');
+    document.getElementById('modulo0').style.display = 'none';
+    obj.activo = 0;
+}
+document.getElementById('cerrar_bm2').onclick = function() {
+    var obj = document.getElementById('pie_bm2');
+    document.getElementById('modulo2').style.display = 'none';
+    obj.activo = 0;
+}
+document.getElementById('cerrar_bm2_2').onclick = function() {
+    var obj = document.getElementById('pie_bm2');
+    document.getElementById('modulo2').style.display = 'none';
+    obj.activo = 0;
+}
+
+document.getElementById('pie_bm2').onclick = function() {
+    var obj = document.getElementById('pie_bm2');
+    if ( ( obj.activo != undefined ) && obj.activo ) {
+        document.getElementById('modulo2').style.display = 'none';
+        obj.activo = 0;
+    } else {
+        document.getElementById('modulo2').style.display = 'block';
+        obj.activo = 1;
+    }
+}
+document.getElementById('pie_bm0').onclick = function() {
+    var obj = document.getElementById('pie_bm0');
+    if ( ( obj.activo != undefined ) && obj.activo ) {
+        document.getElementById('modulo0').style.display = 'none';
+        obj.activo = 0;
+    } else {
+        document.getElementById('modulo0').style.display = 'block';
+        obj.activo = 1;
+    }
+}
+
+
+if(typeof EPETChangeBuzz2GPlus == 'function') {
+    EPETChangeBuzz2GPlus();
+}
+
+
+
+
+

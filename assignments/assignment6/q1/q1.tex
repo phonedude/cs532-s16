@@ -1,0 +1,50 @@
+\section{Problem 1}
+
+\subsection{Question}
+\vspace*{10pt}
+\justify 
+\input{q1/a6}
+
+\subsection{Answer}
+With the use of D3.js (a JavaScript library for manipulating documents based on data) \cite{d3}, and the Force-Directed Graph template for directed graphs (\url{http://bl.ocks.org/mbostock/1153292}), following solution was achieved.\\
+
+The solution for this problem is outlined by the following steps:
+\begin{enumerate}
+
+\item \textbf{Develop an python script to get the followers of followers:} In order to get the followers of followers across a variable degree, I derived the iterative python script as shown in Listing \ref{listing:twitter}
+
+\lstinputlisting[language=Python, caption={Get followers of followers}, label=listing:twitter]{q1/followers.py}
+
+\item \textbf{Visualize graph:} With the use of the graph template at \url{http://bl.ocks.org/mbostock/1153292}, I replaced the default data in the JSON file with the output of followers as outlined in Listing \ref{listing:9ulovesu}.
+
+\item \textbf{Excluded Data} 
+\begin{table}[!htbp]
+	
+	\begin{center}
+	\vspace{-5mm}
+		\begin{tabular}{|l l l|}
+			\hline
+			\multicolumn{1}{|c}{ID} & \multicolumn{1}{c}{NAME} & \multicolumn{1}{c |}{Screen-Name}\\
+			\hline
+			152684352 & Anudeep & anuhearthacker\\
+			2538627170 &  Àmitha SophiaD'Souza & DSouzMitha \\
+			2433403314 & GK Tecvision & GKTecvision\\
+			\hline
+		\end{tabular}
+	 \end{center}
+	 \caption{Naina Sai Tipparti Twitter Followers Excluded Data} \label{tab:exc-data1}
+\end{table}
+Values shown in Table \ref{tab:exc-data1} are followers of Naina Sai Tipparti Twitter's Account, but were not included because these accounts have a private settings and cannot be extracted without authentication.
+\lstinputlisting[language=json, linerange=548-580, caption={Who follows who graph file} label=listing:9ulovesu]{q1/9ulovesu.json}
+
+\end{enumerate}
+
+The result of running followers.py as in Listing \ref{listing:twitter} and figure \ref{fig:followers_graph} can be seen at\\
+\url{http://www.cs.odu.edu/~ntippart/cs532/a6/followers.html}
+\begin{figure}[h!]
+\centering
+\fbox{\includegraphics[scale=0.4]{q1/followers_graph.png}}
+\caption{Naina Sai Tipparti Followers Network Graph}
+\label{fig:followers_graph}
+\end{figure}
+

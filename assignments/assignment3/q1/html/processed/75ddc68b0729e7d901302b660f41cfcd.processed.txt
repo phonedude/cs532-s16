@@ -1,0 +1,546 @@
+http://t.pia.jp/pia/event/event.do?eventCd=1440393
+
+
+
+
+
+
+
+
+ＩＦＳＣ　ＣＬＩＭＢＩＮＧ　ＷＯＲＬＤ　ＣＵＰ　ＩＮＺＡＩ　２０１４(アイエフエスシークライミングワールドカップインザイ) | チケットぴあ[スポーツ スポーツその他のチケット購入・予約]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    var _gpt = _gpt || {};
+                    _gpt.extraParamArray = _gpt.extraParamArray || [];
+                
+
+                        _gpt.extraParamArray.push(["px_eventInfo", '%7B%22px_sgcd%22%3A%220372999%22%2C%22px_mttl%22%3A%22%EF%BC%A9%EF%BC%A6%EF%BC%B3%EF%BC%A3%E3%80%80%EF%BC%A3%EF%BC%AC%EF%BC%A9%EF%BC%AD%EF%BC%A2%EF%BC%A9%EF%BC%AE%EF%BC%A7%E3%80%80%EF%BC%B7%EF%BC%AF%EF%BC%B2%EF%BC%AC%EF%BC%A4%E3%80%80%EF%BC%A3%EF%BC%B5%EF%BC%B0%E3%80%80%EF%BC%A9%EF%BC%AE%EF%BC%BA%EF%BC%A1%EF%BC%A9%E3%80%80%EF%BC%92%EF%BC%90%EF%BC%91%EF%BC%94%22%2C%22px_lgcd%22%3A%2203%22%2C%22px_evcd%22%3A%221440393%22%7D', false, false]);
+                    
+
+
+
+                    var _gpt = _gpt || {};
+                                        _gpt.sendAllParameter = true;
+                
+
+
+
+        var _gpt = _gpt || {};
+        _gpt.responseDateTime = new Date().getTime();
+        _gpt.serviceId = "AETPIA";
+        _gpt.cookieDomainName = ".pia.jp";
+        _gpt.remoteServerName = 'ub.pia.jp/images/pt.gif';
+        _gpt.ptJsPath = 'http://image.pia.jp/common2//js/pt.js';
+        
+                _gpt.extraParamArray = _gpt.extraParamArray || [];
+        _gpt.extraParamArray.push(["pc_aid", 'AETPIA', false, true]);
+        _gpt.extraParamArray.push(["pc_evcd", '1440393', false, false]);
+        _gpt.extraParamArray.push(["pc_rcd", '', false, false]);
+        _gpt.extraParamArray.push(["pc_pcd", '', false, false]);
+        _gpt.extraParamArray.push(["pc_lrcd", '', false, false]);
+        _gpt.extraParamArray.push(["pc_acd", '', false, false]);
+        _gpt.extraParamArray.push(["pc_x", '', false, false]);
+        _gpt.extraParamArray.push(["pc_y", '', false, false]);
+        _gpt.extraParamArray.push(["pc_jph", '', false, false]);
+        _gpt.extraParamArray.push(["pc_afid", '', false, false]);
+        _gpt.extraParamArray.push(["pc_utso", '', false, false]);
+        _gpt.extraParamArray.push(["pc_utme", '', false, false]);
+        _gpt.extraParamArray.push(["pc_utca", '', false, false]);
+        
+                function pa_execute(pJsPath) {
+            var pt = document.createElement('script');
+            pt.type = 'text/javascript';
+            pt.async = true;
+            pt.src = pJsPath;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pt);
+        };
+    
+
+
+            var options = {};
+            $(document).ready(function() {
+                var pc = true;
+                if( location.host.indexOf("md") >= 0){
+                    pc = false;
+                }
+                options = $.extend({
+                    url:$("input[id='suggest_url']").val(),
+                    rows:10,
+                    timeout:1500,
+                    isNoWord:true,
+                    cookieName:"sgwd_AETPIA",
+                    defaultVal:"公演名・アーティスト名で検索",
+                    pc : pc
+                }, options);
+
+                try{
+                    $('#Y15-RS-search_window').uksuggest(options);
+                }catch(e){
+
+                }
+            });
+
+            $(function(){
+
+            var textBox = $("#search_window");
+
+            if(textBox.val() != '公演名・アーティスト名で検索') {
+            textBox.addClass("PC-form-textfocus").closest("div").addClass("PC-form-textfocus");
+            }
+
+            textBox.focus(function(){
+            $(this).addClass("PC-form-textfocus").closest("div").addClass("PC-form-textfocus");
+            if(this.value == '公演名・アーティスト名で検索'){
+            $(this).val('');
+
+            }
+            }).blur(function(){
+
+            if($(this).val() == ''){
+                        $(this).val('公演名・アーティスト名で検索').removeClass("PC-form-textfocus").removeClass("PC-form-textfill");
+            $(this).removeClass("PC-form-textfocus").closest("div").removeClass("PC-form-textfocus");
+            } else {
+                        $(this).addClass("PC-form-textfill");
+            $(this).addClass("PC-form-textfocus").closest("div").addClass("PC-form-textfocus");
+            }
+            });
+
+            if($('#search_window').val() != "公演名・アーティスト名で検索") {
+            $('#search_window').attr("defaultValue", '公演名・アーティスト名で検索');
+            }
+
+            $("#search_window").keypress(function(e){
+            if (e.keyCode == 13) { // Enter
+            return searchAll();
+            }
+            });
+
+            $("#search_link").click(function(e){
+            if ($("#search_window").val() == "公演名・アーティスト名で検索") {
+            $("#search_window").val("");
+            $("#search_window").css("color","#000000");
+            }
+            return searchAll();
+            });
+
+            function searchAll(){
+            var query = encodeURIComponent($("#search_window").val());
+            location.href = $("#url_for_search_all").attr('href') + "?kw=" + query;
+            return false;
+            }
+            });
+        
+
+var thisDomain = location.href.match(/^[httpsfile]+:\/{2,3}([0-9a-zA-Z\.\-:]+?):?[0-9]*?\//i)[1];
+var firstTracker = null;
+var secondTracker = null;
+
+var _gaq = _gaq || [];
+_gaq.push(function() {
+    firstTracker = _gaq._createAsyncTracker('UA-13210169-1', 'ga_asp');
+    firstTracker._setDomainName(".pia.jp");
+    firstTracker._trackPageview();
+
+    secondTracker = _gaq._createAsyncTracker('UA-3292047-1', 'ga_current');
+    secondTracker._trackPageview();
+});
+
+(function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+})();
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-JN9B');
+
+
+
+
+
+
+          document.write('<input type="hidden" name="url_login_id" value=https://ticket-account.pia.jp/pia/membmng/Login.do?okUrlParams=' + $("#self_url").val() + '" id="url_login_id">');
+          document.write('<input type="hidden" name="url_register_id" value=https://ticket-account.pia.jp/pia/membmng/RegisterNormalAction.do?type=4&outURLParams=' + $("#self_url").val() + '" id="url_register_id">');
+        
+
+
+<!--
+document.cookie="cot_token=BxvsEGDbjbtsziruVZjz3NYVlMc6QDKJZdENLmvfceXnZQP6Jolr37B7OiAtrF%2BI; path=/";
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+購入・抽選履歴
+ぴあポイント
+プレミアム会員
+ヘルプ
+初めての方へ
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    $(document).ready(function() {
+                    $.ajax({
+                    type: "GET",
+                    cache: false,
+                    url: "/pia/event/ajax/getLoginUser",
+                    dataType : "json",
+                    error : function() {
+                        $("#menu-login").html('<a href="https://ticket-account.pia.jp/pia/membmng/Login.do?okUrlParams=' + $("#timestamped_self_url").val() + '">ログイン</a>');
+                        $("#menu-logout").html('<a href="https://ticket-account.pia.jp/pia/membmng/RegisterNormalAction.do?type=4&outURLParams=' + $("#timestamped_self_url").val() + '">新規会員登録</a>');
+                        $("#authed_flg").val("false");
+                        $("#nt_memb_id").val("");
+                        
+                                                    _gpt.liCondition = '0';
+                            pa_execute(_gpt.ptJsPath);
+                        
+                    },success : function(data) {
+                        var loginState = data.loginState;
+                        var userNm = data.userNm;
+                        var ntMembId = data.ntMembId;
+                        var point = data.point;
+                        if (point === '') {
+                            point = '0';
+                        }
+
+                        if(loginState) {
+                            $("#Y15-RS-header-login").removeClass("Y15-RS-status-logout").addClass("Y15-RS-status-login");
+                            $("#menu-pointLink").html('<a href="http://ticket.pia.jp/pia/piapoint/index.ds">ぴあポイント<span>' + point + '</span></a>');
+                            $("#menu-login").html('<a href="https://ticket-account.pia.jp/pia/mypage.do"><span>' + userNm + '</span><span class="no-ellipsis">さんのマイページ<span></a>');
+                            $("#menu-login").addClass('Y15-RS-header-btn-mypage');
+                            $("#help-link").hide();
+                            $("#entry-link").hide();
+                            $("#menu-logout").html('<a href="https://ticket-account.pia.jp/pia/membmng/NT0201S05InitAction.do">ログアウト</a>');
+                            $("#menu-footer-logout").html('<a href="https://ticket-account.pia.jp/pia/membmng/NT0201S05InitAction.do"><span>ログアウト</span></a>');
+                            $("#menu-logout").addClass('Y15-RS-header-btn-logout Y15-RS-sp-hide');
+                            $("#authed_flg").val("true");
+                            $("#nt_memb_id").val(ntMembId);
+                            _gpt.liCondition = '1';
+                        } else {
+                            $("#Y15-RS-header-login").removeClass("Y15-RS-status-login").addClass("Y15-RS-status-logout");
+                            $("#menu-login").html('<a href="https://ticket-account.pia.jp/pia/membmng/Login.do?okUrlParams=' + $("#timestamped_self_url").val() + '">ログイン</a>');
+                            $("#menu-logout").html('<a href="https://ticket-account.pia.jp/pia/membmng/RegisterNormalAction.do?type=4&outURLParams=' + $("#timestamped_self_url").val() + '">新規会員登録</a>');
+                            $("#authed_flg").val("false");
+                            $("#nt_memb_id").val("");
+                            _gpt.liCondition = '0';
+                        }
+                                                                            pa_execute(_gpt.ptJsPath);
+                                            }
+                    });
+                    });
+                
+
+
+
+
+
+
+
+
+
+            ＩＦＳＣ　ＣＬＩＭＢＩＮＧ　ＷＯＲＬＤ　ＣＵＰ　ＩＮＺＡＩ　２０１４            のチケット情報
+
+
+
+                    必見！世界のトップ・クライマーが印西市にやって来る！                    
+
+
+
+(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+ツイート
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async = true;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+
+
+        $(document).ready(function(){
+            $('#Y15-slick-slide').on('afterChange', function(slick, currentSlide) {
+                $('.Y15-slider__copyright').text($('#image-alt' + currentSlide['currentSlide']).attr('alt'));
+            });
+        });
+        // 画像にCSSがあたった後にスライダーの高さを調整
+        $(window).load(function () {
+            if ($('#slick-slide00').length > 0) {
+                $('#slick-slide00').trigger('click');
+            }
+        });
+        
+
+
+ 
+
+ 
+
+
+
+
+
+
+        チケット情報
+    
+
+
+        現在販売中のチケットはありません。
+        
+
+
+公演名
+
+                                            公演期間
+                                    
+公演会場
+
+
+
+
+
+
+
+                                一般発売 ／ ＩＦＳＣ　ＣＬＩＭＢＩＮＧ　ＷＯＲＬＤ　ＣＵＰ　ＩＮＺＡＩ　２０１４                            
+                            一般発売 ／ ＩＦＳＣ　ＣＬＩＭＢＩＮＧ　ＷＯＲＬＤ　ＣＵＰ　ＩＮＺＡＩ　２０１４                                            
+
+
+
+                                            2014/10/25(土)                                            
+
+                                                                                ～
+
+                                                2014/10/26(日)                                                
+
+
+
+
+
+                                                印西市松山下公園総合体育館                                            
+                                            (千葉県)
+                                                                            
+
+販売終了 
+
+詳細へ
+
+
+
+
+販売終了したチケットを表示
+
+
+
+
+
+
+   チケット発売情報
+
+
+ 
+
+        公演期間        
+
+        2014/10/25(土) ・ 2014/10/26(日)        
+
+
+
+                会場
+            
+
+印西市松山下公園総合体育館 (千葉県) 
+
+
+ 
+
+        注意事項
+        
+
+    スケジュールは予定のため変更の可能性あり。公演内容に関する詳細はhttp://www.wc-inzai.jp/まで。 
+
+
+
+        公演などに関する問い合わせ先
+        
+
+    日本山岳協会：03-3481-2396 サンライズプロモーション東京：0570-00-3337 （チケットに関して）        
+
+
+
+
+
+
+
+
+        アイコン説明
+    
+
+
+
+行きたい公演をアラート登録(発売情報やリセール申込情報など購入チャンスをお知らせ)
+
+
+
+お気に入り登録
+
+
+
+プレリザーブ、プリセール等
+
+
+
+プレミアム会員限定
+
+
+
+座席選択可能
+
+
+
+ぴあTOP
+スポーツ
+ＩＦＳＣ　ＣＬＩＭＢＩＮＧ　ＷＯＲＬＤ　ＣＵＰ　ＩＮＺＡＩ　２０１４(アイエフエスシークライミングワールドカップインザイ)
+
+
+                        ＩＦＳＣ　ＣＬＩＭＢＩＮＧ　ＷＯＲＬＤ　ＣＵＰ　ＩＮＺＡＩ　２０１４のチケット予約・購入はチケットぴあで！                        
+
+
+ページ上部へ
+
+
+
+
+
+チケット情報をチェック
+
+
+
+
+
+
+
+
+
+
+チケットぴあ サービス案内
+
+ヘルプ
+初めての方へ
+WEB APIのご案内
+チケットを委託するには
+アフィリエイト募集
+チケットぴあ加盟店募集
+広告のお問い合わせ
+サイトマップ
+
+
+
+
+プライバシーポリシー
+ぴあ会員規約
+特定商取引法に基づく表示
+旅行業登録票・約款等
+動作環境・セキュリティ
+会社案内
+採用情報
+
+
+チケットぴあに掲載されているすべてのコンテンツ（記事、画像、音声データ等）はぴあ株式会社の承諾なしに無断転載することはできません。
+Copyright © PIA Corporation. All Rights Reserved.
+
+
+
+
+レビューぴあ
+ぴあ映画生活
+ウレぴあ総研
+BOOKぴあ
+
+
+プライバシーポリシー 
+ぴあ会員規約
+特定商取引法に基づく表示
+旅行業登録票・約款等
+動作環境・セキュリティ
+ぴあ会社案内
+
+ヘルプ初めての方へ
+
+
+
+
+
+
+
+
+Copyright © PIA Corporation. All Rights Reserved.
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+http://info4unetwork.com/Jimmy-Fallon/billy-crystal-remembers-robin-williams-with-jimmy-fallon-were-missing-his-smile-all-over/?utm_source=dlvr.it&utm_medium=twitter
+
+
+
+
+
+
+function getCookie(c_name) { // Local function for getting a cookie value
+    if (document.cookie.length > 0) {
+        c_start = document.cookie.indexOf(c_name + "=");
+        if (c_start!=-1) {
+        c_start=c_start + c_name.length + 1;
+        c_end=document.cookie.indexOf(";", c_start);
+
+        if (c_end==-1) 
+            c_end = document.cookie.length;
+
+        return unescape(document.cookie.substring(c_start,c_end));
+        }
+    }
+    return "";
+}
+function setCookie(c_name, value, expiredays) { // Local function for setting a value of a cookie
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate()+expiredays);
+    document.cookie = c_name + "=" + escape(value) + ((expiredays==null) ? "" : ";expires=" + exdate.toGMTString()) + ";path=/";
+}
+function getHostUri() {
+    var loc = document.location;
+    return loc.toString();
+}
+setCookie('YPF8827340282Jdskjhfiw_928937459182JAX666', '128.82.32.138', 10);
+try {  
+    location.reload(true);  
+} catch (err1) {  
+    try {  
+        location.reload();  
+    } catch (err2) {  
+    	location.href = getHostUri();  
+    }  
+}
+
+
+
+This site requires JavaScript and Cookies to be enabled. Please change your browser settings or upgrade your browser.
+
+

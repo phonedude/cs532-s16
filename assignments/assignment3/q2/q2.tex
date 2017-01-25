@@ -1,0 +1,44 @@
+\section{Problem 2}
+
+\subsection{Question}
+\input{q2/a3}
+
+
+\subsection{Answer}
+\vspace{2mm}
+First, the function {\tt count\_terms} was used to count\cite{wordcount} the term frequency for the given term ``shadow'' in all documents.
+
+\newpage
+\vspace{5mm}
+\lstinputlisting[language=Python, caption={count\_terms function}, label=listing:countterms,linerange={12-21},firstnumber=12]{q2/count.py}
+
+Ten of the results were chosen at random and stored in the {\tt uri\_counts} file. In order to easily identify which file corresponds to which URI, since the filename is the non-reversible md5-hashed URI string, a mapping from URI to filename was created using the functions in Listing \ref{listing:geturis} and serialized in the {\tt uri\_map} file using the {\tt pickle}\cite{pickle} library.\\
+
+\lstinputlisting[language=Python, caption={get\_uris functions}, label=listing:geturis,linerange={23-37},firstnumber=23]{q2/count.py}
+
+Reading from the file was done with the line in Listing \ref{listing:loadurimap}. This loaded the serialized URI to filename map for future use.\\
+
+\lstinputlisting[language=Python, caption={Loading the uri map}, label=listing:loadurimap,linerange={10-10},firstnumber=10]{q2/count.py}
+
+To proceed with processing each of the files to find Term Frequency (TF), Inverse Document Frequency (IDF) and the product of the two (TFIDF), each URI's corresponding file was found using the {\tt get\_filename} function found in Listing \ref{listing:getfilename}.\\
+
+\lstinputlisting[language=Python, caption={Getting filename from URI}, label=listing:getfilename,linerange={39-42},firstnumber=39]{q2/count.py}
+
+\newpage
+
+Then, they were stripped of HTML tags using the {\tt strip\_html} function in Listing \ref{listing:striphtml}.\\
+
+\lstinputlisting[language=Python, caption={Stripping HTML tags from content}, label=listing:striphtml,linerange={44-55},firstnumber=44]{q2/count.py}
+
+And finally the frequencies were calculated for each URI using the functions in Listing \ref{listing:process}.\\
+
+\lstinputlisting[language=Python, caption={Calculating TF, IDF \& TFIDF}, label=listing:process,linerange={57-78},firstnumber=57]{q2/count.py}
+
+These frequencies were then written to the {\tt uri\_frequencies} file using the code in \ref{listing:output}.\\
+
+\lstinputlisting[language=Python, caption={Writing results to uri\_frequencies file}, label=listing:output,linerange={107-113},firstnumber=107]{q2/count.py}
+
+\newpage
+And the results can be seen in Listing \ref{listing:frequencies}:\\
+
+\lstinputlisting[label=listing:frequencies, frame=none,stepnumber=0, caption={uri\_frequencies file}]{q2/uri_frequencies.txt}

@@ -1,0 +1,32 @@
+Choose a query term (e.g., \enquote{shadow}) that is not a stop word
+(see week 5 slides) and not HTML markup from step 1 (e.g., \enquote{http})
+that matches at least 10 documents (hint: use \enquote{grep} on the processed
+files).  If the term is present in more than 10 documents, choose
+any 10 from your list.  (If you do not end up with a list of 10
+URIs, you've done something wrong).\\
+\\
+As per the example in the week 5 slides, compute TFIDF values for
+the term in each of the 10 documents and create a table with the
+TF, IDF, and TFIDF values, as well as the corresponding URIs.  The
+URIs will be ranked in decreasing order by TFIDF values.  For
+example:\\
+\\
+Table 1. 10 Hits for the term \enquote{shadow}, ranked by TFIDF.\\
+\\
+TFIDF	TF		IDF	    URI\\
+0.150	0.014	10.680	http://foo.com/\\
+0.044	0.008	 5.510	http://bar.com/\\
+\\
+You can use Google or Bing for the DF estimation.  To count the
+number of words in the processed document (i.e., the deonminator
+for TF), you can use \enquote{wc}:
+
+\% wc -w www.cnn.com.processed\\
+    2370 www.cnn.com.processed\\
+\\
+It won't be completely accurate, but it will be probably be
+consistently inaccurate across all files.  You can use more 
+accurate methods if you'd like.\\
+\\
+Don't forget the log base 2 for IDF, and mind your significant
+digits!

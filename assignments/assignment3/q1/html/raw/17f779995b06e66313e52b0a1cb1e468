@@ -1,0 +1,1006 @@
+https://bitbillions.com/?refid=199daPhZpfY2oxYyNuHGsNAeUWQKify9wG
+
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+	<head>
+		<meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAACVV9VGwAFXFFXDgU="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),u=c.length,f=i(a,o,r),d=0;u>d;d++)c[d].apply(f,n);return f}function a(t,e){u[t]=s(t).concat(e)}function s(t){return u[t]||[]}function c(){return n(e)}var u={};return{on:a,emit:e,create:c,listeners:s,_events:u}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:20,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(u){try{r("ierr",[u,(new Date).getTime(),!0])}catch(f){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(2),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:21,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:22,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:22,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:22,ee:"QJf3ax"}],8:[function(t,e){function n(){u.inPlace(this,p,"fn-")}function r(t,e){u.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),u=c(a),f=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),f.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,u.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:22,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,u="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,f=n(u);if(f&&(r.rxSize=f),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,u=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var u=n(o);u&&(r.txSize=u)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var f=0;c>f;f++)e.addEventListener(s[f],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+u(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:8,4:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:20,2:21,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===f.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=u.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===u.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,u=c.document;t(2);var f=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:f,features:{}};u.addEventListener?(u.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(u.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:20,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],20:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],21:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],22:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,u;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){f([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return u=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,u],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,u(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,u?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){f([o,e,n,r])}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){f([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function f(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:21,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+					<title>bitbillions - Every Internet Marketer's Dream</title>
+			<meta name="description" content="bitbillions is a combination of Internet advertising and marketing resources that work.">
+			<meta name="author" content="GBBG|bitbillions">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="/wp-content/themes/bitbillions/resources/images/gbbg-icon.ico">
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/fonts/fontello/css/fontello.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/rs-plugin/css/settings.css" media="screen" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/rs-plugin/css/extralayers.css" media="screen" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/css/animations.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/css/style.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/css/skins/orange.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/themes/iDea/css/custom.css" rel="stylesheet">
+		<link href="/wp-content/themes/bitbillions/resources/css/my-custom-spacers.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/wp-content/themes/bitbillions/resources/plugins/bootstrap-formhelpers/dist/css/bootstrap-formhelpers.min.css"/>
+		<link rel="stylesheet" href="/wp-content/themes/bitbillions/resources/css/video-embed.css">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<meta property="og:url" content="https://bitbillions.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Every Internet Marketer's Dream" />
+		<meta property="og:description" content="bitbillions is a wealth of Internet advertising and marketing resources that work." />
+		<meta property="og:image" content="https://bitbillions.com/wp-content/themes/bitbillions/resources/images/og-bitbillions.jpg" />
+		<meta name="google-site-verification" content="baKH_D49UMQnh4uydZMNC_WLKsdu-b4fgbKLPTi8NAI" />
+		<meta name="wot-verification" content="36f2bc587a516d4956a1"/>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '489191577903016');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="//www.facebook.com/tr?id=489191577903016&ev=PageView&noscript=1"
+/></noscript>
+	</head>
+	<body class="front no-trans">
+		<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+		<div class="page-wrapper">
+			<div class="header-top dark" id="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2  col-sm-6">
+							<div class="header-top-first clearfix">
+								<ul class="social-links clearfix hidden-xs">
+									<li class="twitter hidden-sm"><a target="_blank" href="https://twitter.com/bitbillionsGBBG" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+									<li class="skype"><a target="_blank" href="skype:?chat&blob=I6h7VAfu-7hkP7FX4-qSshZk0xJye9HFwQC_OZTmN8qBUPWQE6isUZ85bfOWmpz_rIVFT5FQpxot" data-toggle="tooltip" data-placement="bottom" title="24/7 Skype Room"><i class="fa fa-skype"></i></a></li>
+									<li class="facebook"><a target="_blank" href="https://www.facebook.com/bitbillions/" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+									<li class="googleplus"><a target="_blank" href="https://plus.google.com/+bitbillions_official" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a></li>
+									<li class="youtube"><a target="_blank" href="https://www.youtube.com/c/Bitbillions_official" data-toggle="tooltip" data-placement="bottom" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+									<li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/global-bitbillions-group-incorporated" data-toggle="tooltip" data-placement="bottom" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="http://forum.bitbillions.com/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Forum"><i class="fa fa-comments"></i></a></li>
+									<li><a target="_blank" href="https://app.getresponse.com/site2/gbbg?u=BZLFe&webforms_id=2615105" data-toggle="tooltip" data-placement="bottom" title="Newsletter"><i class="fa fa-newspaper-o"></i></a></li>
+									<li><a href="https://bitbillions.com/blog/" data-toggle="tooltip" data-placement="bottom" title="Blog"><i class="fa fa-rss"></i></a></li>
+									<li><a href="/cdn-cgi/l/email-protection#d5a6a0a5a5baa7a195b7bca1b7bcb9b9bcbabba6fbb6bab8" data-toggle="tooltip" data-placement="bottom" title="Support"><i class="fa fa-envelope"></i></a></li>
+								</ul>
+								<div class="social-links hidden-lg hidden-md hidden-sm">
+									<div class="btn-group dropdown">
+										<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-share-alt"></i></button>
+										<ul class="dropdown-menu dropdown-animation">
+											<li class="twitter"><a target="_blank" href="https://twitter.com/bitbillionsGBBG" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+											<li class="skype"><a target="_blank" href="skype:?chat&blob=I6h7VAfu-7hkP7FX4-qSshZk0xJye9HFwQC_OZTmN8qBUPWQE6isUZ85bfOWmpz_rIVFT5FQpxot" data-toggle="tooltip" data-placement="bottom" title="24/7 Skype Room"><i class="fa fa-skype"></i></a></li>
+											<li class="facebook"><a target="_blank" href="https://www.facebook.com/bitbillions/" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+											<li class="youtube"><a target="_blank" href="https://www.youtube.com/c/Bitbillions_official" data-toggle="tooltip" data-placement="bottom" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+											<li><a href="http://forum.bitbillions.com/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Forum"><i class="fa fa-comments"></i></a></li>
+											<li><a target="_blank" href="https://app.getresponse.com/site2/gbbg?u=BZLFe&webforms_id=2615105" data-toggle="tooltip" data-placement="bottom" title="Newsletter"><i class="fa fa-newspaper-o"></i></a></li>
+											<li><a href="https://bitbillions.com/blog/" data-toggle="tooltip" data-placement="bottom" title="Blog"><i class="fa fa-rss"></i></a></li>
+											<li><a href="/cdn-cgi/l/email-protection#760503060619040236141f02141f1a1a1f1918055815191b" data-toggle="tooltip" data-placement="bottom" title="Support"><i class="fa fa-envelope"></i></a></li>
+										</ul></div></div></div></div>
+						<div class="col-xs-10 col-sm-6">
+							<div id="header-top-second" class="clearfix">
+								<div class="header-top-dropdown">
+																		<div class="btn-group dropdown">
+										<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign In</button>
+										<ul class="dropdown-menu dropdown-menu-right dropdown-animation">
+											<li>
+												<form name="loginform" id="loginform" action="//bitbillions.com/wp-login.php" method="post" role="form" class="login-form" data-parsley-validate="" novalidate=""><input type="hidden" name="redirect_to" value="https://bitbillions.com/dashboard/" />
+													<div class="form-group has-feedback">
+														<label class="control-label">Username</label>
+														<input type="text" class="form-control" placeholder="username" name="log" id="user_login" required data-parsley-required="true" data-parsley-trigger="change">
+														<i class="fa fa-user form-control-feedback"></i></div>
+													<div class="form-group has-feedback">
+														<label class="control-label">Password</label>
+														<input type="password" class="form-control" placeholder="password" name="pwd" id="user_pass" required data-parsley-required="true" data-parsley-trigger="change">
+														<i class="fa fa-lock form-control-feedback"></i></div>
+													<button type="submit" class="btn btn-group btn-default btn-sm">Sign In</button> <span> or </span> <a class="btn btn-group btn-dark btn-sm" href="https://bitbillions.com/join-now/" style="text-decoration:none;">Join Now</a>
+													<ul class="list-unstyled">
+														<li><a href="https://bitbillions.com/recover-account/">Forgot your sign in details?</a></li>
+													</ul>
+												</form>
+											</li>
+										</ul></div>
+									<a href="https://bitbillions.com/join-now/" style="text-decoration:none;"><div class="btn-group dropdown"><button class="btn">Join Now</button></div></a>
+									</div></div></div></div></div></div>
+
+<div class="header-top banner">
+<div class="slideshow">
+<div class="slider-banner-container">
+<div class="slider-banner-2">
+<ul>
+<li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Internet Marketing Tools"><img src="/wp-content/themes/bitbillions/resources/images/combined/front/homepage-two.jpg"  alt="Online Marketing" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+<div class="tp-caption default_bg large sfr tp-resizeme"
+data-x="0"
+data-y="70" 
+data-speed="600"
+data-start="1200"
+data-end="9400"
+data-endspeed="600">more EFFECTIVE tools
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="170" 
+data-speed="600"
+data-start="1600"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="170" 
+data-speed="600"
+data-start="1600"
+data-end="9400"
+data-endspeed="600">high end marketing services
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="220" 
+data-speed="600"
+data-start="1800"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="220" 
+data-speed="600"
+data-start="1800"
+data-end="9400"
+data-endspeed="600">advertising tools
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="270" 
+data-speed="600"
+data-start="2000"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="270" 
+data-speed="600"
+data-start="2000"
+data-end="9400"
+data-endspeed="600">community engagement
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="320" 
+data-speed="600"
+data-start="2200"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="320" 
+data-speed="600"
+data-start="2200"
+data-end="9400"
+data-endspeed="600">team building and support
+</div>
+<div class="tp-caption dark_gray_bg sfb medium tp-resizeme"
+data-x="0"
+data-y="370" 
+data-speed="600"
+data-start="2400"
+data-end="9400"
+data-endspeed="600">and much more...
+</div>
+<div class="tp-caption sfr tp-resizeme"
+data-x="right"
+data-y="center" 
+data-speed="600"
+data-start="2700"
+data-end="9400"
+data-endspeed="600"><img src="/wp-content/themes/bitbillions/resources/images/combined/front/homepage-layer-three.png" alt="Effective Online Marketing">
+</div>
+</li>
+
+<li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Online Earning Opportunities"><img src="/wp-content/themes/bitbillions/resources/images/combined/front/homepage-one.jpg"  alt="Earning Online" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+<div class="tp-caption default_bg large sfr tp-resizeme"
+data-x="0"
+data-y="70" 
+data-speed="600"
+data-start="1200"
+data-end="9400"
+data-endspeed="600">more EARNING options
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="170" 
+data-speed="600"
+data-start="1600"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption light_gray_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="170" 
+data-speed="600"
+data-start="1600"
+data-end="9400"
+data-endspeed="600">online tasks
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="220" 
+data-speed="600"
+data-start="1800"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption light_gray_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="220" 
+data-speed="600"
+data-start="1800"
+data-end="9400"
+data-endspeed="600">offline projects
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="270" 
+data-speed="600"
+data-start="2000"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption light_gray_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="270" 
+data-speed="600"
+data-start="2000"
+data-end="9400"
+data-endspeed="600">affiliate commissions
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="320" 
+data-speed="600"
+data-start="2200"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption light_gray_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="320" 
+data-speed="600"
+data-start="2200"
+data-end="9400"
+data-endspeed="600">products and services
+</div>
+<div class="tp-caption dark_gray_bg sfb medium tp-resizeme"
+data-x="0"
+data-y="370" 
+data-speed="600"
+data-start="2400"
+data-end="9400"
+data-endspeed="600">and much more...
+</div>
+<div class="tp-caption sfr tp-resizeme"
+data-x="right"
+data-y="center" 
+data-speed="600"
+data-start="2700"
+data-end="9400"
+data-endspeed="600"><img src="/wp-content/themes/bitbillions/resources/images/combined/front/homepage-layer-one.png" alt="Internet Earning Options">
+</div>
+</li>
+
+<li data-transition="random" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Powerful Bootstrap Theme"><img src="/wp-content/themes/bitbillions/resources/images/combined/front/homepage-three.jpg"  alt="Return on Investment"  data-bgposition="left center" data-kenburns="on" data-duration="10000" data-ease="Linear.easeNone" data-bgfit="100" data-bgfitend="115" data-bgpositionend="right center">
+<div class="tp-caption default_bg large sfr tp-resizeme"
+data-x="0"
+data-y="70" 
+data-speed="600"
+data-start="1200"
+data-end="9400"
+data-endspeed="600">more HAPPY you
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="170" 
+data-speed="600"
+data-start="1600"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="170" 
+data-speed="600"
+data-start="1600"
+data-end="9400"
+data-endspeed="600">good return on investment
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="220" 
+data-speed="600"
+data-start="1800"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="220" 
+data-speed="600"
+data-start="1800"
+data-end="9400"
+data-endspeed="600">top notch support
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="270" 
+data-speed="600"
+data-start="2000"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="270" 
+data-speed="600"
+data-start="2000"
+data-end="9400"
+data-endspeed="600">expanding product base
+</div>
+<div class="tp-caption dark_gray_bg sfl medium tp-resizeme"
+data-x="0"
+data-y="320" 
+data-speed="600"
+data-start="2200"
+data-end="9400"
+data-endspeed="600"><i class="icon-check"></i>
+</div>
+<div class="tp-caption white_bg sfb medium tp-resizeme"
+data-x="50"
+data-y="320" 
+data-speed="600"
+data-start="2200"
+data-end="9400"
+data-endspeed="600">personal development
+</div>
+<div class="tp-caption dark_gray_bg sfb medium tp-resizeme"
+data-x="0"
+data-y="370" 
+data-speed="600"
+data-start="2400"
+data-end="9400"
+data-endspeed="600">DON'T MISS OUT!
+</div>
+<div class="tp-caption sfr"
+data-x="right" data-hoffset="-660"
+data-y="center" 
+data-speed="600"
+data-start="2700"
+data-endspeed="600"
+data-autoplay="false"
+data-autoplayonlyfirsttime="false"
+data-nextslideatend="true">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src='https://www.youtube.com/embed/SzwtZWWMS2Q?enablejsapi=1&amp;html5=1&amp;hd=1&amp;wmode=opaque&amp;controls=1&amp;showinfo=0;rel=0;' width='640' height='360' style='width:640px;height:360px;'></iframe>
+</div>
+</div>
+</li>
+
+</ul>
+<div class="tp-bannertimer tp-bottom"></div>
+</div>
+</div>
+</div>
+</div>
+
+			<header class="header dark header-small fixed clearfix">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="header-left clearfix">
+								<div class="logo"><a href="https://bitbillions.com"><img id="logo" src="/wp-content/themes/bitbillions/resources/images/bitbillions-front-logo.png" width="110px" alt="bitbillions"></a></div>
+								<div class="site-slogan">Every Internet Marketer's Dream</div></div></div>
+						<div class="col-md-9">
+							<div class="header-right clearfix">
+								<div class="main-navigation animated">
+									<nav class="navbar navbar-default" role="navigation">
+										<div class="container-fluid">
+											<div class="navbar-header">
+												<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+													<span class="sr-only">Toggle navigation</span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+												</button>
+											</div>
+											<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+												<ul class="nav navbar-nav navbar-right">
+													<li class="active"><a href="#header-top">Home</a></li>
+													<li><a href="#services">Services</a></li>
+													<li><a href="#earnings">Earnings</a></li>
+													<li><a href="#portfolio">Portfolio</a></li>
+													<li><a href="#footer">Contact</a></li>
+													<li><a href="https://bitbillions.com/frequently-asked-questions/">FAQ</a></li>
+													<li><a href="https://shop.bitbillions.com">Shop</a></li>												</ul></div></div></nav></div></div></div></div></div>
+			</header>
+
+<div class="page-top">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<div class="call-to-action">
+<h1 class="title">Advertising &amp; Marketing Tools</h1>
+<p>We build powerfully effective digital advertising and marketing tools so you can get more customers, sign-ups, leads, or whatever you need to grow your Internet Marketing business.</p>
+<p>								<a class="btn btn-white more" data-toggle="modal" data-target="#myModal"> QUICK INFO <i class="pl-10 fa fa-info"></i></a> or <a href="https://bitbillions.com/join-now/" class="btn btn-default contact"> JOIN NOW <i class="pl-10 fa fa-check"></i></a></p>
+<p>								<!-- Modal --></p>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></p>
+<h4 class="modal-title" id="myModalLabel">GBBG|bitbillions Advertising, Marketing &#038; Earning Network</h4>
+</div>
+<div class="modal-body">
+<p>Let&#8217;s face it. Internet Marketing is not easy. No matter how great your product or service, or how huge the commissions are, without a lot of quality traffic, you will never get the sign-ups and team affiliates you need to really earn money online. Some of the amazing things we offer include:</p>
+<ul class="list-icons">
+<li><i class="icon-check"></i> Digital advertising campaigns</li>
+<li><i class="icon-check"></i> High volume website and video traffic</li>
+<li><i class="icon-check"></i> Custom responsive websites and SEO services</li>
+<li><i class="icon-check"></i> Affiliate commission opportunities</li>
+<li><i class="icon-check"></i> Website monetization</li>
+<li><i class="icon-check"></i> Online earnings through completing easy tasks</li>
+</ul>
+<p>We know digital advertising well. We are also experts in Internet Marketing. At GBBG|bitbillions you will not only find incredible tools to promote your home based business or online income opportunity, but we also offer additional ways for you to earn extra money. Join today and see why thousands of other Internet Marketers are already using our services.</p>
+</div>
+<div class="modal-footer">
+												<a href="https://bitbillions.com/join-now/"><button type="button" class="btn btn-sm btn-default"><i class="icon-check"></i> JOIN NOW </button></a> <a href="#" class="btn btn-sm btn-inverse" data-dismiss="modal">close</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="main-container gray-bg" id="services">
+<div class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1 class="text-center title">Services</h1>
+<div class="separator"></div>
+<p class="text-center">Get more customers, signups, and earnings.</p>
+<div class="row">
+<div class="col-sm-4">
+<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="0">
+											<i class="fa fa-group"></i></p>
+<h2>Traffic</h2>
+<p>Our <a href="http://9-dollar-ads.com" target="_blank">$9 Ad Network</a> and <a href="https://bitbillions.com/join-now/">Traffic Monster</a> services deliver a flood of visitors.</p>
+<p>											<a href="https://bitbillions.com/join-now/" class="btn-default btn">JOIN NOW</a></div>
+</div>
+<div class="col-sm-4">
+<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="200">
+											<i class="fa fa-usd"></i></p>
+<h2>Income</h2>
+<p>Website monetization tools, affiliate commissions, and task earnings.</p>
+<p>											<a href="https://bitbillions.com/join-now/" class="btn-default btn">JOIN NOW</a></div>
+</div>
+<div class="col-sm-4">
+<div class="box-style-1 white-bg object-non-visible" data-animation-effect="fadeInUpSmall" data-effect-delay="400">
+											<i class="fa fa-sitemap"></i></p>
+<h2>Business Development</h2>
+<p>Custom websites, SEO services, training programs and development tools.</p>
+<p>											<a href="https://bitbillions.com/join-now/" class="btn-default btn">JOIN NOW</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="section clearfix" id="earnings">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1 class="text-center">Online Earnings</h1>
+<div class="separator"></div>
+<p class="lead text-center">Earn additional income by completing simple tasks, referring others, and publishing ads.</p>
+<p></p>
+<div class="row">
+<div class="col-md-6">
+<h2 class="title">We pay affiliate commissions on all our products and services.</h2>
+<div class="row">
+<div class="col-md-6"><img src="/wp-content/themes/bitbillions/resources/images/combined/front/earnings.jpg" class="img-responsive" alt="Affiliate Earnings"></div>
+<div class="col-md-6">
+<p>Do you have your own website or blog? You can promote our products and services using our handy affiliate referral links. We pay excellent commissions on sales made through your links. You do not have to purchase anything yourself in order to earn these commissions. Simply share your links and earn.</p>
+</div></div>
+<p>Our marketing team even provides quality banners, email templates, and other marketing tools to boost your success! You can be on your way to earnings in minutes.</p>
+<p>									<a href="https://bitbillions.com/join-now/" class="btn btn-white">JOIN NOW</a></p>
+<div class="space hidden-md hidden-lg"></div>
+</div>
+<div class="col-md-6">
+<div class="panel-group panel-dark" id="accordion">
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed"><i class="fa fa-edit"></i>Task Earnings</a></h4>
+</div>
+<div id="collapseOne" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Have some spare time you could spend earning extra cash? We have a handy task platform where you get paid for completing online and offline tasks. Some tasks are as simple as looking at a website or watching a video. Now that&#8217;s a cool idea! Watch a video or check out a website and get paid for it.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><i class="fa fa-bullhorn"></i>Marketing Commissions</a></h4>
+</div>
+<div id="collapseTwo" class="panel-collapse collapse in">
+<div class="panel-body">
+<p>Want to earn some extra money promoting great products on your website or blog? Or, would you like to create your own independent sales agency where you are the boss and set your own rules? We pay excellent commissions on our custom responsive websites and SEO services. Did you know? Over 95% of all businesses do not have a custom responsive website! Opportunity is EVERYWHERE!</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"><i class="fa fa-object-group"></i>Publisher Ad Revenue</a></h4>
+</div>
+<div id="collapseThree" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Monetize your website with advertising revenue. Our <a href="http://9-dollar-ads.com" target="_blank">$9 Ad Network</a> pays you every single time a page on your site is viewed. Most ad networks only pay when a visitor clicks a link (CPC) or when you deliver 1,000 impressions (CPM). We think 100% of your traffic is worth something. So, everytime someone looks at a page on your site, why not get paid?</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p></div>
+</div>
+</div>
+</div>
+<div class="section parallax light-translucent-bg parallax-bg-3">
+<div class="container">
+<div class="call-to-action">
+<div class="row">
+<div class="col-md-8">
+<h1 class="title text-center">Digital Advertising Agency</h1>
+<p class="text-center">Our ad gurus manage professional campaigns to drive traffic to your website. <br />Super high visibility for less than $1 per day!</p>
+</div>
+<div class="col-md-4">
+<div class="text-center"><a href="https://bitbillions.com/join-now/" class="btn btn-default btn-lg">PURCHASE</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section clearfix" id="portfolio">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h1 class="text-center">Why Choose GBBG|bitbillions</h1>
+<div class="separator"></div>
+<p class="lead text-center">Simply put, we make it easier for you to grow your Internet Marketing business.</p>
+<div class="vertical hc-tabs">
+<div class="hc-tabs-top text-center"><center><img data-tab="#traffic-monster" src="/wp-content/themes/bitbillions/resources/images/combined/front/traffic-monster.png" alt="Traffic Monster" class="img-responsive text-center" data-tab-animation-effect="fadeInRightSmall"><img data-tab="#money-maker" src="/wp-content/themes/bitbillions/resources/images/combined/front/money-maker.png" alt="Money Maker" class="img-responsive text-center" data-tab-animation-effect="fadeInRightSmall"><img data-tab="#advertiser" src="/wp-content/themes/bitbillions/resources/images/combined/front/advertiser.png" alt="Advertiser" class="img-responsive text-center" data-tab-animation-effect="fadeInRightSmall"><img data-tab="#publisher" src="/wp-content/themes/bitbillions/resources/images/combined/front/publisher.png" alt="Publisher" class="img-responsive text-center" data-tab-animation-effect="fadeInRightSmall"><img data-tab="#business-builder" src="/wp-content/themes/bitbillions/resources/images/combined/front/business-builder.png" alt="Business Builder" class="img-responsive text-center" data-tab-animation-effect="fadeInRightSmall"></center></div>
+<div class="arrow hidden-sm hidden-xs"><i class="fa fa-caret-up"></i></div>
+<ul class="nav nav-tabs" role="tablist">
+<li class="active"><a href="#traffic-monster" role="tab" data-toggle="tab"><i class="fa fa-group pr-10"></i> Traffic Monster</a></li>
+<li><a href="#money-maker" role="tab" data-toggle="tab"><i class="fa fa-usd pr-10"></i> Money Maker</a></li>
+<li><a href="#advertiser" role="tab" data-toggle="tab"><i class="fa fa-bullhorn pr-10"></i> Advertiser</a></li>
+<li><a href="#publisher" role="tab" data-toggle="tab"><i class="fa fa-object-group pr-10"></i> Publisher</a></li>
+<li><a href="#business-builder" role="tab" data-toggle="tab"><i class="fa fa-sitemap pr-10"></i> Business Builder</a></li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade in active" id="traffic-monster">
+<h1 class="text-center title">Traffic Monster</h1>
+<div class="space"></div>
+<div class="row">
+<div class="col-md-6">
+<ul class="list-icons">
+<li><i class="icon-check pr-10"></i> High quality website visitors</li>
+<li><i class="icon-check pr-10"></i> Low cost per acquisition</li>
+<li><i class="icon-check pr-10"></i> Fresh daily audience delivery</li>
+<li><i class="icon-check pr-10"></i> Website and video traffic</li>
+<li><i class="icon-check pr-10"></i> Guaranteed unique individuals</li>
+<li><i class="icon-check pr-10"></i> Time-based visitors/viewers</li>
+<li><i class="icon-check pr-10"></i> Excellent return on investment</li>
+</ul>
+</div>
+<div class="col-md-6">
+<p>Want to flood your website or video with tons of high quality visitors? Create a Traffic Monster campaign and watch the customers come rushing in.</p>
+<p>If you are looking for even more visibility, or want a constantly fresh audience, we recommend you let our digital ad agency gurus manage a professional ad campaign for you for less than $1 per day.</p>
+<p>												<a href="https://bitbillions.com/join-now/" class="btn btn-default">GET STARTED</a></div>
+</div>
+</div>
+<div class="tab-pane fade" id="money-maker">
+<h1 class="text-center title">Money Maker</h1>
+<div class="space"></div>
+<div class="row">
+<div class="col-md-6">
+<ul class="list-icons">
+<li><i class="icon-check pr-10"></i> Get paid for viewing websites</li>
+<li><i class="icon-check pr-10"></i> Earn money watching videos</li>
+<li><i class="icon-check pr-10"></i> Complete simple tasks for extra income</li>
+<li><i class="icon-check pr-10"></i> Refer customers and earn commissions</li>
+<li><i class="icon-check pr-10"></i> Market our products and services on your site</li>
+<li><i class="icon-check pr-10"></i> Sell our products in the &#8220;real world&#8221; for profit</li>
+<li><i class="icon-check pr-10"></i> Excellent earnings with ZERO investment</li>
+</ul>
+</div>
+<div class="col-md-6">
+<p>Our affiliate marketing system rewards you for sharing your links with others, marketing our products online, and even selling our services offline in the &#8220;real world&#8221;.</p>
+<p>Not only can you use our advertising and marketing products to build your own business, but you can tell others about our excellent services and get extra cash for sharing.</p>
+<p>												<a href="https://bitbillions.com/join-now/" class="btn btn-default">START EARNING</a></div>
+</div>
+</div>
+<div class="tab-pane fade" id="advertiser">
+<h1 class="text-center title">Advertiser</h1>
+<div class="space"></div>
+<div class="row">
+<div class="col-md-6">
+<ul class="list-icons">
+<li><i class="icon-check pr-10"></i> $9 flat rate banner/text/video ads</li>
+<li><i class="icon-check pr-10"></i> High performance delivery technology</li>
+<li><i class="icon-check pr-10"></i> Global delivery to millions</li>
+<li><i class="icon-check pr-10"></i> Simple management dashboard</li>
+<li><i class="icon-check pr-10"></i> Thousands of quality publishers for one flat rate</li>
+<li><i class="icon-check pr-10"></i> Astounding visibility and conversions</li>
+<li><i class="icon-check pr-10"></i> Excellent return on investment</li>
+</ul>
+</div>
+<div class="col-md-6">
+<p>Looking for a low cost but high performance advertising channel? <a href="http://9-dollar-ads.com" target="_blank">$9 Ad Network</a> allows you to place your banner, text, or video ad on thousands of sites for only $9.</p>
+<p>Get your advertiser account today and see why thousands of other Internet Marketers are already enjoying the traffic and conversions expected for a much higher price than only $9.</p>
+<p>												<a href="https://bitbillions.com/join-now/" class="btn btn-default">CREATE AD</a></div>
+</div>
+</div>
+<div class="tab-pane fade" id="publisher">
+<h1 class="text-center title">Publisher</h1>
+<div class="space"></div>
+<div class="row">
+<div class="col-md-6">
+<ul class="list-icons">
+<li><i class="icon-check pr-10"></i> Easy to use management dashboard</li>
+<li><i class="icon-check pr-10"></i> Simple copy/paste ad embed script</li>
+<li><i class="icon-check pr-10"></i> Thousands of quality advertisers</li>
+<li><i class="icon-check pr-10"></i> Get paid for every page view</li>
+<li><i class="icon-check pr-10"></i> Wide array of sizes</li>
+<li><i class="icon-check pr-10"></i> Embed banner, text, and video ads</li>
+<li><i class="icon-check pr-10"></i> Excellent way to monetize your site</li>
+</ul>
+</div>
+<div class="col-md-6">
+<p>Turn every page load into money. Embed our advertising code into your website and get paid every single time your pages are viewed.</p>
+<p><a href="http://9-dollar-ads.com" target="_blank">$9 Ad Network</a> allows you to turn every visitor to your website into a constant stream of advertising revenue.</p>
+<p>												<a href="https://bitbillions.com/join-now/" class="btn btn-default">MONETIZE NOW</a></div>
+</div>
+</div>
+<div class="tab-pane fade" id="business-builder">
+<h1 class="text-center title">Business Builder</h1>
+<div class="space"></div>
+<div class="row">
+<div class="col-md-6">
+<ul class="list-icons">
+<li><i class="icon-check pr-10"></i> Professional marketing materials</li>
+<li><i class="icon-check pr-10"></i> How to&#8217;s and training</li>
+<li><i class="icon-check pr-10"></i> Exclusive banners and image content</li>
+<li><i class="icon-check pr-10"></i> Engaging email and copy templates</li>
+<li><i class="icon-check pr-10"></i> Team building tools</li>
+<li><i class="icon-check pr-10"></i> Cooperative advertising options</li>
+<li><i class="icon-check pr-10"></i> Custom websites and SEO services</li>
+</ul>
+</div>
+<div class="col-md-6">
+<p>Once you get your Internet Marketing business growing through our advertising products, you need tools to take it to the next level.</p>
+<p>Business Builder is just the set of resources you are looking for to improve upon your successes and turn your part-time hobby into a real business endeavor.</p>
+<p>												<a href="https://bitbillions.com/join-now/" class="btn btn-default">GET STARTED</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section gray-bg clearfix">
+<div class="owl-carousel content-slider">
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Believer!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/larry.png" alt="Larry, Alberta Canada" title="Larry, Alberta Canada" class="img-circle"></div>
+<div class="testimonial-body">
+<p>At first I was highly suspicous, now I am a believer, Thank you Bitbillions! <img src="//bitbillions.com/wp-includes/images/smilies/simple-smile.png" alt=":-)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<div class="testimonial-info-1">&#8211; Larry</div>
+<div class="testimonial-info-2">Alberta Canada</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Fast Results!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/betty-ahamba.png" alt="Betty Ahamba, Norway" title="Betty Ahamba, Norway" class="img-circle"></div>
+<div class="testimonial-body">
+<p>This is really amazing and really working fast! I am happy With the results. I just activated my Business Builder recently and after about 2 days I got a referral that have already become active. This is effective. The traffic here is great.</p>
+<div class="testimonial-info-1">&#8211; Betty Ahamba</div>
+<div class="testimonial-info-2">Norway</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Wow amazing!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/robert.png" alt="Robert, Whately, MA, USA" title="Robert, Whately, MA, USA" class="img-circle"></div>
+<div class="testimonial-body">
+<p>BitBillions has so many ways to earn, and new earning sources are being added constantly. My largest monthly earnings so far were about $3,000. It is easy to refer people into BitBillions, I have hundreds of referrals so far.</p>
+<div class="testimonial-info-1">&#8211; Robert</div>
+<div class="testimonial-info-2">Whately, MA, USA</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Incredible!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/valery-ryabov.png" alt="Valery Ryabov, Votkinsk, Russia" title="Valery Ryabov, Votkinsk, Russia" class="img-circle"></div>
+<div class="testimonial-body">
+<p>I did not expect such an effect. Half an hour ago, I placed ads on the $ 9 Ad Network. Immediately there was a referral and put 6 more ads !!!!!</p>
+<div class="testimonial-info-1">&#8211; Valery Ryabov</div>
+<div class="testimonial-info-2">Votkinsk, Russia</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Adrenalin!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/leslie-banks.png" alt="Leslie Banks, Kettinge, Denmark" title="Leslie Banks, Kettinge, Denmark" class="img-circle"></div>
+<div class="testimonial-body">
+<p>Since I joined GBBG|Bitbillions a year ago now, my adrenalin pump has been in overdrive! The talent and the vision of this company with focus on the new emerging technology along with their desire to share the potential incredible wealth, is far more reaching than just profound! If you are looking for an opportunity, GBBG|bitbillions has something for everyone online and in my opinion is the BEST $0 Opportunity Anyone could EVER join!</p>
+<div class="testimonial-info-1">&#8211; Leslie Banks</div>
+<div class="testimonial-info-2">Kettinge, Denmark</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Trustworthy!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/dr-chigbo-ibeh.png" alt="Dr Chigbo Ibeh, Nigeria" title="Dr Chigbo Ibeh, Nigeria" class="img-circle"></div>
+<div class="testimonial-body">
+<p>Conducting business on the Internet can offer entrepreneurs a variety of advantages. However, there are also some problems or disadvantages that can arise when doing business online – issue of trust and empathy in business relationship, just to mention a few. Besides, it is not always that organizations incorporate the interest and happiness of their members. Incidentally, I came across one and after due scrutiny, I found it a place where one can achieve great strides in ones entrepreneurial efforts. And that is GBBG. I am here because I have found GBBG to be futuristic, a place I can earn money and it is awesome.</p>
+<div class="testimonial-info-1">&#8211; Dr Chigbo Ibeh</div>
+<div class="testimonial-info-2">Nigeria</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="testimonial">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<h2 class="title">Thumbs Up!</h2>
+<div class="testimonial-image">
+<img src="/wp-content/themes/bitbillions/resources/images/combined/front/louis-harvey.png" alt="Louis Harvey, Philadelphia, PA, USA" title="Louis Harvey, Philadelphia, PA, USA" class="img-circle"></div>
+<div class="testimonial-body">
+<p>I am so proud to have been invited to bitbillions. I&#8217;ve made good strides since becoming a member, and will continue to share this exceptional opportunity with others that are willing or can see the vision of this company. I Give them my support, and Thumbs UP</p>
+<div class="testimonial-info-1">&#8211; Louis Harvey</div>
+<div class="testimonial-info-2">Philadelphia, PA, USA</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="page-top">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-md-offset-2">
+<div class="call-to-action">
+<h1 class="title">What Are You Waiting For?</h1>
+<p>All the advertising and marketing tools you need to kick your home based Internet Marketing business into overdrive are waiting for you inside!</p>
+<p>								<a class="btn btn-white more" href="https://bitbillions.com/join-now/"> JOIN NOW <i class="pl-10 fa fa-check"></i></a></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id='fb-root'></div>
+<script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = '//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5';fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+
+			<div class="section gray-bg text-muted footer-top clearfix">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="owl-carousel clients">
+								<div class="client"><img src="//gravatar.com/avatar/rianmersi@gmail.com" class="img-responsive"><br>r. ryano<br>18 Feb 16<br><span class="bfh-countries" data-country="ID" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/jadesantos853@gmail.com" class="img-responsive"><br>j. santos<br>18 Feb 16<br><span class="bfh-countries" data-country="PH" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/adcryptime@gmail.com" class="img-responsive"><br>O. Leoo<br>18 Feb 16<br><span class="bfh-countries" data-country="UA" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/umarm6795@gmail.com" class="img-responsive"><br>m. umar<br>18 Feb 16<br><span class="bfh-countries" data-country="PK" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/francesco300.sm@gmail.com" class="img-responsive"><br>s. Munerotto<br>18 Feb 16<br><span class="bfh-countries" data-country="IT" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/astagudna@gmail.com" class="img-responsive"><br>�. Guðnadóttir<br>18 Feb 16<br><span class="bfh-countries" data-country="IS" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/withoutgravit@gmail.com" class="img-responsive"><br>S. Babyuk<br>18 Feb 16<br><span class="bfh-countries" data-country="UA" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/dsrm05@gmail.com" class="img-responsive"><br>D. Roa<br>18 Feb 16<br><span class="bfh-countries" data-country="CO" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/den777zlobin@mail.ru" class="img-responsive"><br>d. zlobin<br>18 Feb 16<br><span class="bfh-countries" data-country="RU" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/a7246903@gmail.com" class="img-responsive"><br>�. 賴<br>18 Feb 16<br><span class="bfh-countries" data-country="TW" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/yatogami060@gmail.com" class="img-responsive"><br>r. muhammad.redha<br>18 Feb 16<br><span class="bfh-countries" data-country="ID" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/muzi.ndlazi@gmail.com" class="img-responsive"><br>M. Ndlazi<br>18 Feb 16<br><span class="bfh-countries" data-country="ZA" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/npoektop@bk.ru" class="img-responsive"><br>A. Pushkin<br>18 Feb 16<br><span class="bfh-countries" data-country="RU" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/markpendleton2015@yahoo.com" class="img-responsive"><br>M. Pendleton<br>18 Feb 16<br><span class="bfh-countries" data-country="US" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/satoshiandbitcoinclaim@gmail.com" class="img-responsive"><br>R. Wendler<br>17 Feb 16<br><span class="bfh-countries" data-country="DE" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/ondra.majer@gmail.com" class="img-responsive"><br>O. Majer<br>17 Feb 16<br><span class="bfh-countries" data-country="CZ" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/mchaniraj@gmail.com" class="img-responsive"><br>R. Machani<br>17 Feb 16<br><span class="bfh-countries" data-country="IN" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/fhrrda_ngo@hotmail.com" class="img-responsive"><br>M. Mashori<br>17 Feb 16<br><span class="bfh-countries" data-country="PK" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/likememusic786@gmail.com" class="img-responsive"><br>t. tarlok kumar<br>17 Feb 16<br><span class="bfh-countries" data-country="IN" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/wnancolas@gmail.com" class="img-responsive"><br>W. Nancolas<br>17 Feb 16<br><span class="bfh-countries" data-country="US" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/michael-groth@arcor.de" class="img-responsive"><br>M. Groth<br>17 Feb 16<br><span class="bfh-countries" data-country="DE" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/vemma2409@gmail.com" class="img-responsive"><br>E. Sander<br>17 Feb 16<br><span class="bfh-countries" data-country="DE" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/lereventures@gmail.com" class="img-responsive"><br>L. Adiatu<br>17 Feb 16<br><span class="bfh-countries" data-country="NG" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/freddsemail@yahoo.com" class="img-responsive"><br>F. Mugone<br>17 Feb 16<br><span class="bfh-countries" data-country="KE" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/liveandlearnaffiliateacademy@gmail.com" class="img-responsive"><br>I. Johnson<br>17 Feb 16<br><span class="bfh-countries" data-country="US" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/owner-raptoid@hotmail.com" class="img-responsive"><br>o. ada<br>17 Feb 16<br><span class="bfh-countries" data-country="TR" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/natpaphat034@gmail.com" class="img-responsive"><br>N. Kim<br>17 Feb 16<br><span class="bfh-countries" data-country="TH" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/t_265@yahoo.com" class="img-responsive"><br>t. elarbi<br>17 Feb 16<br><span class="bfh-countries" data-country="EG" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/eyelidcreationz@gmail.com" class="img-responsive"><br>h. krishnan<br>17 Feb 16<br><span class="bfh-countries" data-country="IN" data-flags="true"></span></div><div class="client"><img src="//gravatar.com/avatar/pippo.giulia@yahoo.it" class="img-responsive"><br>A. Rossi<br>17 Feb 16<br><span class="bfh-countries" data-country="IT" data-flags="true"></span></div>							</div>
+						</div>
+						<div class="col-md-4">
+							<h2>181,072 MEMBERS</h2>
+							<p>and growing daily...</p>
+							<p><strong>3,685</strong> people have earned money with bitbillions.<br><strong>1,775</strong> this year, <strong>1,218</strong> this month, <strong>674</strong> yesterday.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<footer id="footer">
+
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="footer-content">
+									<div class="logo-footer"><a href="https://bitbillions.com"><img id="logo" src="/wp-content/themes/bitbillions/resources/images/bitbillions-front-logo.png" width="110px" alt="bitbillions"></a></div>
+									<div class="row">
+										<div class="col-sm-6">
+											<p>GBBG owns and manages several high quality, high traffic web properties. We specialize in developing advertising and marketing tools for Internet Marketers. We also provide custom responsive website design and SEO services.</p>
+										</div>
+										<div class="col-sm-6">
+											<ul class="list-icons">
+												<li><i class="fa fa-map-marker pr-10"></i> Austin, Texas USA</li>
+												<li><i class="fa fa-envelope-o pr-10"></i> Customer Service <br> <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="94e7e1e4e4fbe6e0d4f6fde0f6fdf8f8fdfbfae7baf7fbf9">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></li>
+												<li><i class="fa fa-envelope-o pr-10"></i> Tech Support <br> <a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="0d6f64796f6461616462637e4d6a606c6461236e6260">[email&#160;protected]</a><script data-cfhash='f9e31' type="text/javascript">
+/* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("data-cfhash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}t.parentNode.removeChild(t);}}catch(u){}}()/* ]]> */</script></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="space-bottom hidden-lg hidden-xs"></div>
+							<div class="col-sm-6 col-md-2">
+								<div class="footer-content">
+									<h2>Links</h2>
+									<nav>
+										<ul class="nav nav-pills nav-stacked">
+											<li><a href="https://bitbillions.com/privacy-policy/"><i class="fa fa-shield"></i> Privacy</a></li>
+											<li class="active"><a href="https://bitbillions.com/user-agreement/"><i class="fa fa-legal"></i> Legal</a></li>
+											<li><a href="https://bitbillions.com/frequently-asked-questions/"><i class="fa fa-question"></i> FAQ</a></li>
+											<li><a href="https://bitbillions.com/blog/"><i class="fa fa-rss"></i> Blog</a></li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="col-sm-6 col-md-3 col-md-offset-1">
+								<div class="footer-content">
+									<h2>Share</h2>
+									<p><a href="https://twitter.com/share" class="twitter-share-button" data-text="I love #GBBG #bitbillions and you will too!" data-via="bitbillionsGBBG" data-url="https://bitbillions.com/">Tweet #bitbillions</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+									<p><div class="fb-like" data-share="true" data-width="450" data-show-faces="true" data-colorscheme="dark" data-layout="button_count"></div></p>
+								</div>
+							</div>
+						</div>
+						<div class="space-bottom hidden-lg hidden-xs"></div>
+					</div>
+				</div>
+
+				<div class="subfooter">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<p>Copyright © 2013 - 2016 Global Bitbillions Group Incorporated. All Rights Reserved</p>
+							</div>
+							<div class="col-md-12 text-center">
+								<ul class="social-links circle">
+<li class="twitter"><a href='https://twitter.com/bitbillionsGBBG' target='_blank'><i class='fa fa-twitter'></i></a></li>
+<li class="skype"><a href='skype:?chat&blob=I6h7VAfu-7hkP7FX4-qSshZk0xJye9HFwQC_OZTmN8qBUPWQE6isUZ85bfOWmpz_rIVFT5FQpxot' target='_blank'><i class='fa fa-skype'></i></a></li>
+<li class="facebook"><a href='https://www.facebook.com/bitbillions/' target='_blank'><i class='fa fa-facebook'></i></a></li>
+<li class="googleplus"><a href="https://plus.google.com/+bitbillions_official" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+<li class="youtube"><a href='https://www.youtube.com/c/Bitbillions_official' target='_blank'><i class='fa fa-youtube'></i></a></li>
+<li class="linkedin"><a href='https://www.linkedin.com/company/global-bitbillions-group-incorporated' target='_blank'><i class='fa fa-linkedin'></i></a></li>
+<li><a href='http://forum.bitbillions.com' target='_blank'><i class='fa fa-comments'></i></a></li>
+<li><a href='https://app.getresponse.com/site2/gbbg?u=BZLFe&webforms_id=2615105' target='_blank'><i class='fa fa-newspaper-o'></i></a></li>
+<li><a href='https://bitbillions.com/blog/' target='_blank'><i class='fa fa-rss'></i></a></li>
+<li><a href="/cdn-cgi/l/email-protection#83f0f6f3f3ecf1f7c3e1eaf7e1eaefefeaecedf0ade0ecee"><i class="fa fa-envelope"></i></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</footer>
+		</div>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/jquery.min.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/modernizr.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/isotope/isotope.pkgd.min.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/owl-carousel/owl.carousel.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/jquery.appear.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/jquery.countTo.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/jquery.parallax-1.1.3.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/jquery.validate.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/jquery.browser.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/plugins/SmoothScroll.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/js/template.js"></script>
+		<script type="text/javascript" src="/wp-content/themes/bitbillions/resources/themes/iDea/js/custom.js"></script>
+		<script src="/wp-content/themes/bitbillions/resources/plugins/parsley/parsley.min.js" type="text/javascript"></script>
+		<script src="/wp-content/themes/bitbillions/resources/plugins/bootstrap-formhelpers/dist/js/bootstrap-formhelpers.min.js"></script>
+				<script>jQuery(document).ready(function() {$('[data-toggle="tooltip"]').tooltip();});</script>
+			<script type="text/javascript">
+			var test = 1;
+			var is_asked = false;
+			var allow = Math.floor((Math.random() * 100) + 1);
+			window.onbeforeunload = function() {
+			if (!is_asked){
+			is_asked = true;
+			setTimeout(function() {
+			test = 2;
+			}, 500)
+			return "WAIT! DON'T MISS OUT! \n\nWe were just about to show you an incredible offer, but if you leave you will miss it!";
+			}
+			}
+			setInterval(function() {
+			if (test === 2) {
+			window.onbeforeunload = null;
+			window.parent.location = "http://abc.bitbillions.com/agency/?source=network";
+			test = 3; //
+			}
+			}, 50);
+			jQuery("form").submit(function(){
+			is_asked = true;
+			});
+			jQuery("a").click(function(){
+			is_asked = true;
+			});
+		</script>
+	<script type="text/javascript">
+var fbxhr = new XMLHttpRequest();
+fbxhr.open("POST", "https://graph.facebook.com", true);
+fbxhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+fbxhr.send("id=https://bitbillions.com/&scrape=true");
+</script>
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"c8e31235dd","applicationID":"3580594","transactionName":"b1cEY0MAX0oEVURbDlYdJ1RFCF5XSlVfXwNRXANTHAdDVgtC","queueTime":0,"applicationTime":178,"atts":"QxAHFQsaTEQ=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-686.min.js"}</script><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&a.indexOf("/cdn-cgi/l/email-protection") > -1  && (a.length > 28)){s='';j=27+ 1 + a.indexOf("/cdn-cgi/l/email-protection");if (a.length > j) {r=parseInt(a.substr(j,2),16);for(j+=2;a.length>j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);}t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+</body>
+</html>
+<script type="application/javascript">(function(w,d,t,r,u){w[u]=w[u]||[];w[u].push({'projectId':'1000484289729','properties':{'pixelId':'432811'}});var s=d.createElement(t);s.src=r;s.async=true;s.onload=s.onreadystatechange=function(){var y,rs=this.readyState,c=w[u];if(rs&&rs!="complete"&&rs!="loaded"){return}try{y=YAHOO.ywa.I13N.fireBeacon;w[u]=[];w[u].push=function(p){y([p])};y(c)}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-38837407-1', 'auto');ga('send', 'pageview');</script>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced (Requested URI contains query)
+
+ Served from: bitbillions.com @ 2016-02-18 18:49:44 by W3 Total Cache -->

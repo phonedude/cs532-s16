@@ -1,0 +1,30 @@
+\section{Problem 4}
+
+\subsection{Question}
+\input{q4/a3}
+
+
+\subsection{Answer}
+\vspace{2mm}
+Using R, I input the values of TFIDF and Page rank into two separate vectors.
+Using the package\cite{package} Kendall\cite{kendall}, it calculated a tau of 0.866 and p of 0.0018457.
+With a tau number so close to +1, there is a high association between the two measured quantities.
+In the case of ties, both packages \enquote{Kendall and cor produce the same result but cor.test produces a p-value which is not as accurate}.
+\vspace{5mm}
+\lstinputlisting[language=R, caption={kendall.r}, label=listing:kendall.r]{q4/kendall.r}
+\vspace{5mm}
+\begin{figure}[h]
+\centering
+\fbox{\includegraphics[scale=.95]{q4/fig1.png}}
+\caption{R script that computes the Tau and p value of the Kendall Tau correlation}
+\label{fig:fig1}
+\end{figure}
+\newpage
+\vspace{5mm}
+\begin{figure}[h]
+\centering
+\fbox{\includegraphics[scale=.95]{q4/fig2.png}}
+\caption{Tau and p value of the Kendall}
+\label{fig:fig2}
+\end{figure}
+

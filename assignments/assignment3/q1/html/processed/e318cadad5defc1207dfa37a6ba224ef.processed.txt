@@ -1,0 +1,179 @@
+http://psychcentral.com/blog/archives/2014/08/29/a-reflection-on-robin-williams-death/
+       var OASScreenWidth = undefined;
+function windowWidth() {
+  if(OASScreenWidth != undefined) {
+    return OASScreenWidth;
+  }
+  if (self.innerWidth) {
+    OASScreenWidth = self.innerWidth;
+    return self.innerWidth;
+  }
+  if (document.documentElement && document.documentElement.clientHeight) {
+    OASScreenWidth = document.documentElement.clientWidth;
+    return document.documentElement.clientWidth;
+  }
+  if (document.body) {
+    OASScreenWidth = document.body.clientWidth;
+    return document.body.clientWidth;
+  }
+}
+function setMobilePos(listpos) {
+  if(windowWidth() < 540) {
+    var listarr = listpos.split(',');
+    var newarr = [];
+    for(i=0; i<listarr.length; i++) {
+      if(listarr[i] != 'Top' && listarr[i] != 'Bottom' && listarr[i] != 'Left1' && listarr[i] != 'Right1' && listarr[i] != 'x01') {
+        newarr.push(listarr[i]);
+      }
+    }
+    listpos = newarr.join(',');
+  }
+  return listpos;
+}
+function setMobilePosb(listposb) {
+  if(windowWidth() < 540) {
+    var listarr = listposb.split(',');
+    var newarr = [];
+    for(i=0; i<listarr.length; i++) {
+      if(listarr[i] == 'Right1') {
+        newarr.push('Right2');
+      } else if(listarr[i] == 'x01') {
+        newarr.push('x02');
+      } else if(listarr[i] != 'Top' && listarr[i] != 'Bottom' && listarr[i] != 'Left1') {
+        newarr.push(listarr[i]);
+      }
+    }
+    listposb = newarr.join(',');
+  }
+  return listposb;
+}
+ 
+
+OAS_url = 'http://oascentral.spineuniverse.com/RealMedia/ads/';
+OAS_sitepage = 'psych-central.com/patient/condition/mental-health/a-reflection-on-robin-williams-death/d36c3d9e';
+OAS_listpos = setMobilePosb('Top,Right1,x01,Bottom');
+var SPU_rn = new String (Math.random());
+var SPU_rns = SPU_rn.substring (2, 11);
+OAS_query = 'terms=mental%20health&terms=psychology&terms=mental%20illness&terms=emotions&terms=emotional%20health&' + '_RM_HTML_RANDNUM_=' + SPU_rns;
+OAS_target = '_blank';
+document.write('<script type="text/javascript" src="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + SPU_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/script>'); (function(w,d,s,p,v,e,r) {w['$petametrics_var']=v;w[v]=w[v]||function(){(w[v].q=w[v].q||[]).push(
+        arguments)};w[v].l=1*new Date();e=d.createElement(s),r=d.getElementsByTagName(s)[0];e.async=1;e.src=p;
+        r.parentNode.insertBefore(e,r)})(window,document,'script','//cdn.petametrics.com/p.js','$p');
+        $p("init", "3kufsuel1gmsmd62");
+        $p("send", "pageview"); A Reflection on Robin Williams’ Death | World of Psychology window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"https:\/\/dri6hp6j35hoh.cloudfront.net\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=b106b9cec36d4db62d9caca1814e6ad2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings); img.wp-smiley,img.emoji{display:inline!important;border:none!important;box-shadow:none!important;height:1em!important;width:1em!important;margin:0 .07em!important;vertical-align:-0.1em!important;background:none!important;padding:0!important} /*  */
+var amber_config = {"lookup_availability":"","site_name":"World of Psychology"};
+/*  */   window.jQuery || document.write('<script src="http://psychcentral.com/blog/wp-includes/js/jquery/jquery.js"><\/script>')  window.jQuery.migrateMute || document.write('<script src="http://psychcentral.com/blog/wp-includes/js/jquery/jquery-migrate.min.js"><\/script>')    /*  */
+var wpsa_ajax_suport = {"ajaxurl":"http:\/\/psychcentral.com\/blog\/wp-admin\/admin-ajax.php"};
+/*  */   jwplayer.key='54349';jwplayer.defaults = { "ph": 2 }; if (typeof(jwp6AddLoadEvent) == 'undefined') {
+                function jwp6AddLoadEvent(func) {
+                    var oldonload = window.onload;
+                    if (typeof window.onload != 'function') {
+                        window.onload = func;
+                    } else {
+                        window.onload = function() {
+                            if (oldonload) {
+                                oldonload();
+                            }
+                            func();
+                        }
+                    }
+                }
+            } ol.footnotes li{list-style-type:decimal}ol.footnotes{font-size:0.8em;color:#666}body{font-family:'Open Sans',sans-serif;font-weight:400}#siteinfo div,h1,h2,h3,h4,h5,h6,.header-title,#main-navigation,#featured #featured-title,#cf .tinput,#wp-calendar caption,.flex-caption h1,#portfolio-filter li,.nivo-caption a.read-more,.form-submit #submit,.fbottom,ol.commentlist li div.comment-post-meta,.home-post span.post-category a,ul.tabbernav li a{font-family:Open Sans Condensed!important;font-weight:Select font weight!important}#main-navigation,.sf-menu li a{font-family:Arial!important;font-weight:normal!important}#Gallerybox,#myGallery,#myGallerySet,#flickrGallery{height:400px!important}#top-navigation{background-color:#C3B19F}#top-navigation .sf-menu li a:hover,#top-navigation .sf-menu li:hover,#top-navigation .sf-menu ul{background-color:#a99785}#top-navigation .sf-menu ul li a:hover{background-color:#907e6c;background-image:none}.content,#right-sidebar{}#post-entry div.post-thumb.size-thumbnail{float:left;width:150px}#post-entry article .post-right{margin:0 0 0 170px}.gravatar_recent_comment li,.twitterbox li{padding:0px;font-size:1.025em;line-height:1.5em}.gravatar_recent_comment span.author{font-weight:bold}.gravatar_recent_comment img{width:50px;height:50px;float:left;margin:0 10px 0 0}ul.recent-postcat li{position:relative;border-bottom:1px solid #EAEAEA;padding:0 0 0.5em!important;margin:0 0 1em!important}ul.recent-postcat li:last-child,ul.item-list li:last-child,.avatar-block li:last-child{border-bottom:none}ul.recent-postcat li .feat-post-meta{margin:0px 0 0 68px}ul.recent-postcat li.has_no_thumb .feat-post-meta{margin:0px}ul.recent-postcat img{background:white;padding:5px;margin:0px;border:1px solid #DDD}#custom #right-sidebar ul.recent-postcat li .feat-post-meta .feat-title{margin:0}#custom #right-sidebar ul.recent-postcat li .feat-post-meta .feat-title{width:100%;font-size:1.05em;line-height:1.35em!important;font-weight:bold}ul.recent-postcat li .feat-post-meta small{font-size:0.85em;padding:0}ul.recent-postcat li .feat-post-meta small .widget-feat-comment{display:none}.bp-searchform{margin:0px;padding:5%;float:left;width:90%;background:white;border:1px solid #DDD}.bp-searchform label{display:none}#custom div.medium-thumb{margin:0 0 0.2em;width:99%;overflow:hidden;padding:0!important;border:0 none!important}#custom div.medium-thumb p{text-align:center;margin:0;width:100%;padding:0;border:0 none;height:100%;overflow:hidden}#custom div.medium-thumb img{float:none;border:0 none;max-width:100%;margin:0!important;padding:0!important}ul.recent-postcat li.the-sidefeat-thumbnail img{padding:3px!important;border:1px solid #ddd}#custom ul.recent-postcat li.the-sidefeat-thumbnail img:hover{background:white none;padding:3px;border:1px solid #ccc}ul.recent-postcat li.the-sidefeat-medium .feat-post-meta{margin:0}#custom #post-entry{float:right;width:72%}#custom #left-sidebar{padding:10px 0 0;float:left;width:25%}#left-sidebar .widget-area aside ul:first-of-type{width:100%;padding:0}#left-sidebar .widget-area aside li a:hover{color:#52C0D4}#left-sidebar h3.widget-title{padding:0% 0% 10px;font-size:1.25em;margin:0px 0px 0.5em;float:left;width:100%;color:#333;text-transform:capitalize;border-bottom:5px solid #52C0D4;background:transparent none;border-radius:0}(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//psychcentral.com/blog/?wordfence_logHuman=1&hid=FE2CCFAF56299A98BB360B8A77C0E87F');  .post-author{line-height:130%}.author{font-size:90%!important;line-height:100%!important}#sectiongraphic{width:90%;overflow:hidden;clear:both}#blogmenu{font-size:85%;float:right;padding:10px}#blogmenu2{font-size:100%;list-style:none;margin:0 0 10px 0!important;padding:8px 5px 20px 5px!important;-webkit-border-radius:6px;-moz-border-radius:6px;height:15px;border-radius:6px;background:#DDF;width:85%}#blogmenu2 li{line-height:22px;list-style:none;float:left;margin:0;padding:0;font-size:110%;padding:0}#blogmenu2 li a{display:block;padding:0 8px;text-decoration:none}#blogmenu3{list-style:none;margin:-14px 0 0 0;padding:0;-webkit-border-radius:6px;-moz-border-radius:6px;height:23px;border-radius:6px;background:#CFE;width:60%}#blogmenu3 li{line-height:22px;list-style:none;float:right;margin:0;padding:0;font-size:90%;padding:0}#blogmenu3 li a{display:block;padding:0 8px;text-decoration:none}
+//<![CDATA[
+try{(function(a){var b="http://",c="psychcentral.com",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+  HomeConditionsAddictionsADHDAnxiety & PanicAutismBipolarDepressionEating DisordersOCDParentingPersonalityPsychotherapyPTSDRelationshipsSchizophreniaSleepStressSomething Else...QuizzesNews & ExpertsAsk the TherapistBlogs & ExpertsDaily News & Research UpdatesWorld of PsychologyResearch & ResourcesFind a clinical TrialResourcesForums & Support GroupsFind HelpAsk the TherapistDrugs & MedicationsFind a TherapistPsychotherapy 101Forums & Support GroupsTake a QuizMood TrackerProMenuHomeConditionsQuizzesAsk the TherapistDrugsBlogsNewsResearchResourcesFind HelpPsychotherapy 101Forums & Support GroupsPro// 
+ OAS_RICH(setMobilePos('Top')); 
+ //About the BlogArchives A Reflection on Robin Williams’ Death  By Suzanne Handler, MEd  ~ 1 min read I spoke with a friend several days after the shocking news that Robin Williams had committed suicide. How could this beloved actor and storied comedian, my friend wondered, not understand or care that fans around the world adored him? And why, he further inquired, wasn’t that alone reason enough to live?Nonetheless, this person, barely able to contain his sorrow, said he thought Mr. Williams “incredibly courageous” to have carried out such a deed. Pausing to reflect and carefully measure my words as to not offend, I told him I vehemently disagreed with his statement: Suicide was not an act of courage, I said, but rather an act of consummate desperation. In other words, I would venture to say Robin Williams could fathom no other solution –could not problem solve his way through the muck and mire of his own depression, the emotional state so often present in those who suffer from a variety of mental illnesses.My conversation with this individual, although somewhat predictable, was disturbing, for it spoke to the lack of understanding the general public has about mental illness and the stigma that persists surrounding such conditions. Why, I keep asking myself, are we so willing to understand, accept and have empathy for someone dealing with cancer and a myriad of other diseases, yet we turn our collective backs on the millions who suffer, many in silence, with the demons of their mental illness?Since Mr. Williams took his life, I have thought a lot about suicide and what that means to the families, mine included, left behind to ponder the whys and wherefores of such an immense loss. What words can console the survivor dealing with the guilt, the sadness, and the self-doubt that reigns supreme when a friend or family member makes that final decision to end it all?The truth is there are no words adequate at such a moment. What I do know is that until there is equity and better treatment of the mentally ill among us, suicide attempts and completions will continue to plague and baffle us. Because severe mental illness is a wound difficult to heal, parents, siblings, spouses and friends will go on searching within their hearts for answers to the unanswerable. And yes, there will always be pain.It is my hope that the untimely passing of Robin Williams will serve to remind lawmakers and activists everywhere that there is much work to be done in order to right this injustice, and that the time to act is now. In one of his most famous movies, “Dead Poets Society,” Robin Williams urged his students to “Seize the Day.” Prophetic words, indeed.#author-bio #author-description{margin:0 0 0 125px!important;line-height:1.6em;font-size:1em} About Suzanne Handler, MEd Suzanne Handler is author of The Secrets They Kept: The True Story of a Mercy Killing That Shocked a Town and Shamed a Family. Learn more at www.suzannehandler.com.  View all posts by Suzanne Handler, MEd →   11 comments:   (function() {
+var rcel = document.createElement("script");
+rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+rcel.type = 'text/javascript';
+rcel.src = "http://trends.revcontent.com/serve.js.php?w=7425&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth);
+rcel.async = true;
+var rcds = document.getElementById("rcjsload_8f15be"); rcds.appendChild(rcel);
+})();   APA Reference  Handler, S. (2014). A Reflection on Robin Williams’ Death. Psych Central.
+Retrieved on February 18, 2016, from http://psychcentral.com/blog/archives/2014/08/29/a-reflection-on-robin-williams-death/ Last reviewed: By John M. Grohol, Psy.D. on 25 Aug 2014Originally published on PsychCentral.com on 29 Aug 2014. All rights reserved. « Is History Repeating in Your Love Life? Understand the Power of Love ScriptsPsychology Around the Net: August 30, 2014 »  #idxlink{margin:2px 0 5px 15px;pading:10px}« Blog IndexWorld ofPsychologyAddictionAgingAlternative and Nutritional SupplementsAngerBest of Our BlogsBest of the WebBooksBrain and BehaviorBrain and Behavior FoundationBullyingCaregiversCelebritiesChildren and TeensCollegeConferencesCreativityDisordersDreamsEthics & MoralityFamilyFriday FlashbackFriendsGeneralGreen and EnvironmentGrief and LossHabitsHappinessHealth-relatedHistory of PsychologyHoliday CopingIndustrial and WorkplaceInspiration & HopeInterviewLifeHelperMarriage and DivorceMedicationsMemory and PerceptionMen's IssuesMental Health and WellnessMilitaryMindfulnessMinding the MediaMoney and FinancialMoney CrashersMotivation and InspirationMovie ReviewNew Year'sOn the CouchParentingPC Weekly NewsPersonalPersonalityPodcastPolicy and AdvocacyProfessionalProof PositivePsychiatryPsychologyPsychology Around the NetPsychotherapyPsychotherapy StoriesRandom Brain BitsRelationshipsResearchRoundupSelf-EsteemSelf-HelpSexualitySleepSlow Eating ChallengeSpiritualitySpirituality & HealthSportsStressStudent TherapistStudentsSuccess & AchievementTechnologyThe FixTiny BuddhaTraumaTreatmentVideoViolence and AggressionWebinarWomen's IssuesWorld Mental Health DayYourTango  Bipolar Meds Can Help Brain Restore Normal Function Stigma Associated with Weight Loss Challenged Dealing With "Face Threats" on Facebook And The Like  What's Hot5 Possible Signs of Borderline Personality Disorder Touched With Fire: The Two Faces of Bipolar Disorder 22 Ways to Love Yourself More  // 
+ OAS_RICH(setMobilePos('Right1')); 
+ // Most Popular PostsTouched With Fire: The Two Faces of Bipolar Disorder Navigating Your Natural Tendencies When You're a Highly Sensitive Person The Unexpected Effect of Travel on My Panic Disorder Most Popular NewsBipolar Meds Can Help Brain Restore Normal Function Age When Marijuana Use Starts Impacts Brain Development Differently Stigma Associated with Weight Loss Challenged Virtual Reality Therapy Shows Promise for Depression Sleep Apnea Takes Toll on Brain From Our BlogsThe Greatest Secret To Improving Your Relationship Is…... Blinded by Science? Open Your EyesShould Happiness Really Be the Goal?Unlock Your Body with the 5 Elements of IntimacyHow Predators Use Social Media to Groom VictimsToday I Love That Blue And Orange SkyRecent CommentsLasse Skøt: If you believe people are inherently good, then you are the most naive person on the planet. “They...Faylinn: Lately, I have had a few people tell me that I need to see a psychologist with my husband. However, I have...H.W.: That’s the most concise description of the cause and “treatment” of anxiety I’ve ever...Jessica: I agree with Denise, having experienced this myself, the best thing to do it get out, quickly and cleanly...Ramen: I feel the same way! My parents are fighting right now actually, and it is getting pretty scary and annoying....Join Over 175,000 Subscribersto Our Weekly Newsletter         // 
+ OAS_RICH(setMobilePos('x01')); 
+ //   Find a Therapist Enter ZIP or postal code      // 
+ OAS_RICH(setMobilePos('Bottom')); 
+ //   Home About Us Ad Choices Advertise with Us Contact Us Privacy Policy Terms of Use Site Map Disclaimer/Disclosure Feeds ADHD Anxiety Bipolar Depression Schizophrenia Psychotherapy Psych Central Professional  Psych Central Blog Network Psych Central News Psychological Tests & Quizzes Sanity Score Forums  NeuroTalk.footer-left{font-size:90%!important;font-family:verdana,arial,sans-serif} Copyright © 1995-2016 Psych Central Site last updated: 18 Feb 2016Handcrafted with pride in historic Massachusetts.Psych Central does not provide medical, mental illness, or psychological
+advice, diagnosis or treatment. Learn more.    (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();  document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js' %3E%3C/script%3E")); COMSCORE.beacon({
+c1:2,
+c2:"6035818",
+c3:"",
+c4:"psychcentral.com/blog/archives/2014/08/29/a-reflection-on-robin-williams-death",
+c5:"",
+c6:"",
+c15:""
+});    (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.async=true; js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1?appId=122386177775099";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-76068-1']);
+  _gaq.push(['_setDomainName', 'psychcentral.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();  _qacct="p-1bEHV9_dJ8pro";quantserve();    var _paq = _paq || [];
+  _paq.push(["setCookieDomain", "*.psychcentral.com"]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//imgt.psychcentral.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 102]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();        var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//imgt.psychcentral.com/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 102]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })(); 

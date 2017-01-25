@@ -1,0 +1,71 @@
+http://promedmail.org/direct.php?id=20140921.437160
+
+
+
+
+
+
+    div#gm {
+      height: 70px;
+      overflow: auto;
+      width: 270px;
+    }
+  
+ProMED-mail post
+
+
+
+
+
+
+
+$(document).ready(function() {
+    var query = new Object();
+    var getpost_url = ''+'ajax/getPost.php';
+    query['alert_id'] = "20140921.437160";
+    query['path_to_main'] = '';
+    $.ajax({url: getpost_url, dataType: 'json', data: query,
+        success: function(jsonData) {
+            $('#preview').html(jsonData['post']);
+	        $('.printable').hide();
+        }
+    })
+});
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		©2001,2008 International Society for Infectious Diseases All Rights Reserved.  Read our privacy guidelines.  Use of this web site and related services is governed by the Terms of Service.
+            
+
+
+
+
+
+Stop marker rotation
+
+
+
+
+
+
+
+

@@ -1,0 +1,875 @@
+http://iNewsTV.org/
+
+
+
+
+
+
+
+
+iNewsTV.org
+
+
+
+
+
+//<![CDATA[
+try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"efaaf0292be27ac8e2c61e32ae67dc5d",petok:"ae0973b1cca5835fdbc536aa3d96053e7dab3efa-1455821364-1800",zone:"inewstv.org",rocket:"0",apps:{"clky":{"sid":"100782023","uid":"66534322"},"ga_key":{"ua":"UA-38985246-1","ga_bs":"2"},"cdnjs":{"__h":"1","cdnjs":"GF"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=fb690a32f5/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+//]]>
+
+
+//<![CDATA[
+window.__CF=window.__CF||{};window.__CF.AJS={"clky":{"sid":"100782023","uid":"66534322"},"ga_key":{"ua":"UA-38985246-1","ga_bs":"2"},"cdnjs":{"__h":"1","cdnjs":"GF"}};
+//]]>
+__CF.AJS.inith();
+
+
+
+
+
+
+
+
+
+
+
+ var MELODYURL = "http://inewstv.org";
+ var MELODYURL2 = "http://iNewsTV.org";
+ var TemplateP = "http://inewstv.org/templates/default";
+ var _LOGGEDIN_ =  false ;
+
+
+ var pm_lang = {
+	lights_off: "Lights off",
+	lights_on: "Lights on",
+	validate_name: "Please enter a name",
+	validate_username: "Please enter a username",
+	validate_pass: "Please provide a password",
+	validate_captcha: "Please enter the validation code",
+	validate_email: "Please enter a valid email address",
+	validate_agree: "Please accept our policy",
+	validate_name_long: "Your name must consist of at least 2 characters",
+	validate_username_long: "Your username must consist of at least 2 characters",
+	validate_pass_long: "Your password must be at least 5 characters long",
+	validate_confirm_pass_long: "Please enter the same password as above",
+	choose_category: "Please choose a category",
+ 	validate_select_file: "No file was selected/uploaded.",
+ 	validate_video_title: "Please enter a title for this video",
+	onpage_delete_favorite_confirm: "You are about to remove this video from your favorites list. Click 'Cancel' to stop, 'OK' to delete.",
+	please_wait: "Loading...",
+	// upload video page
+	swfupload_status_uploaded: "Uploaded",
+	swfupload_status_pending: "Continue with the rest of the form.",
+	swfupload_status_queued: "Queued",
+	swfupload_status_uploading: "Uploading...",
+	swfupload_file: "File",
+	swfupload_btn_select: "Select",
+	swfupload_btn_cancel: "Cancel",
+	swfupload_status_error: "Error",
+	swfupload_error_oversize: "Size of the selected file(s) is greater than allowed limit",
+	swfupload_friendly_maxsize: ""
+ }
+
+
+h1{color:#f9f9f9;}h2{color:#f9f9f9;}h3{color:#f9f9f9;}h4{color:#f9f9f9;}h5{color:#f9f9f9;}h6{color:#f9f9f9;}#wrapper{background-image:none;background-color:#333333;color:#ededed;width:1040px;max-width:1040px;}.text-exp .show-more{background-image:linear-gradient(bottom,#333333 0%,#333333 50%,rgba(244,245,247,0)100%); background-image: -o-linear-gradient(bottom, #333333 0%, #333333 50%, rgba(244,245,247,0)100%); background-image: -moz-linear-gradient(bottom, #333333 0%, #333333 50%, rgba(244,245,247,0)100%); }body{background-image:none;background-color:#797979;}.wide-header{background-image:none;background-color:#2e2e2e;}#user-pane{color:#dedede;}#user-pane .greet-links a{color:#dedede;}#user-pane .greet-links a:visited{color:#dedede;}.wide-nav{background-image:none;background-color:#fafafa;box-shadow:none;border-top-color:#fafafa;border-bottom-color:#fafafa;}ul.nav li a.wide-nav-link{text-shadow:none;color:#0f0f0f;}#wrapper a{text-shadow:none;color:#96bfe0;}h1.site-title a{text-shadow:none;color:#e0e0e0;}footer{text-shadow:none;background-color:#2e2e2e;color:#ededed;}footer a{text-shadow:none;color:#ededed;}.fixed960{max-width:1040px;}
+
+/* <![CDATA[ */
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-38985246-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+(function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+/* ]]> */
+
+
+
+//<![CDATA[
+try{(function(a){var b="http://",c="inewstv.org",d="/cdn-cgi/cl/",e="img.gif",f=new a;f.src=[b,c,d,e].join("")})(Image)}catch(e){}
+//]]>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Welcome
+ Login / Register
+
+
+
+
+×
+Login
+
+
+
+
+
+
+Username/Email
+
+
+
+Password
+
+
+
+
+
+ Remember me
+
+
+
+
+
+Login
+Forgot your password?
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+
+Category 
+
+
+Live TV
+Videos
+
+News 
+Funny 
+Real Life 
+
+
+
+
+
+Top videos
+New videos
+Random video
+Contact us
+ 
+
+
+Pages 
+
+The iNewsTV Daily
+The Left Side News
+Contact Us
+
+
+Register
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Featured video: Mumia Abu-Jamal Speaks Out from Prison on Pennsylvania's New Law Censoring Convicts' Speech
+
+You need to have the Flash Player installed and
+a browser with JavaScript support.
+
+
+jwplayer.key="";
+
+        var flashvars = {
+                
+                                            
+                        file: 'http://www.youtube.com/watch?v=C_-bPE4g7Hs',
+                        
+                                        
+    				primary: "flash",
+                    width: "100%",
+                    height: "371",
+                    image: 'http://i.ytimg.com/vi/C_-bPE4g7Hs/sddefault.jpg',
+                    logo: {
+                    	file: 'http://inewstv.org/uploads/inewstvorg-100.png',
+                    	link: 'http://inewstv.org',
+                    	},
+    		    autostart: 'false',
+                };
+        
+            jwplayer("Playerholder").setup(flashvars);
+        
+
+
+
+ 
+ 
+
+New videos
+
+
+
+
+
+10:24 New 
+
+
+Keep It in the Ground: Author Terry Tempest Williams Buys 1,750 Acres of Oil & Gas Leases in Utah
+
+by DemocracyNow
+Added 2 hours ago
+1 Views / 0 Likes
+
+- In Utah, more than 100 protesters disrupted a federal auction of oil and gas leases, spontaneously bursting into song until they were forced to leave. Author and activist Terry Tempest Williams, registered as Bidder 19, successfully bought rights to 1,7
+
+
+
+
+
+
+06:13 New 
+
+
+What Is the Government Still Hiding? ACLU Continues Fight to Obtain Photos of Bush-Era Torture
+
+by DemocracyNow
+Added 2 hours ago
+1 Views / 0 Likes
+
+- Earlier this month, the Pentagon released nearly 200 photographs relating to the abuse of prisoners by U.S. military personnel in Iraq and Afghanistan but refused to release a larger batch of 1,800 images. The American Civil Liberties Union has been fig
+
+
+
+
+
+
+13:46 New 
+
+
+Apple vs. the FBI: Inside the Battle Snowden Calls "The Most Important Tech Case in a Decade"
+
+by DemocracyNow
+Added 2 hours ago
+1 Views / 0 Likes
+
+- A major debate over privacy and online encryption has erupted after the computer giant Apple announced it will resist a court order to help the FBI break into an iPhone recovered from one of the San Bernardino shooters. Citing an 18th century law, feder
+
+
+
+
+
+
+11:24 New 
+
+
+Targeting Transgender Children, South Dakota Passes Transphobic School Bathroom Bill
+
+by DemocracyNow
+Added 2 hours ago
+11 Views / 0 Likes
+
+- South Dakota could soon become the first state in the country to ban transgender students from using the bathroom that corresponds to their gender identity. On Tuesday, the South Dakota state Senate passed a measure mandating that restrooms and locker r
+
+
+
+
+
+
+12:06 New 
+
+
+Top U.S. & World Headlines — February 18, 2016
+
+by DemocracyNow
+Added 3 hours ago
+7 Views / 0 Likes
+
+Visit to watch the full independent, global news hour, read the transcript, search our archive and to make a donation to support us.Democracy Now! is an independent global news hour that airs weekdays on nearly 1,400 TV and radio stations Monday through F
+
+
+
+
+
+
+03:16 New 
+
+
+Street trolling: Chinese internet wants Snowden St as US names plaza after dissident Liu Xiaobo
+
+by Russia Today
+Added 4 hours ago
+2 Views / 0 Likes
+
+Beijing has labelled "provocative" the US Senate’s approval to rename a plaza in front of the Chinese embassy in Washington after a jailed dissident. In response, critics have proposed that a passage in front of the US embassy in Beijing be renamed “Snowd
+
+
+
+
+
+
+16:16 New 
+
+
+CNN GOP Presidential Town Hall: The Young Turks Summary
+
+by The Young Turks
+Added 12 hours ago
+2 Views / 0 Likes
+
+Cenk Uygur and John Iadarola of The Young Turks break down the CNN GOP Presidential Town Hall. Who do you think had the best night at the latest Republican town hall: Ben Carson, Marco Rubio or Ted Cruz? Do you agree with TYT’s opinion? Tell us what you t
+
+
+
+
+
+
+09:18 New 
+
+
+Beyoncé Bashing Blaze Host Gets SCHOOLED By Charlemagne Tha God
+
+by The Young Turks
+Added 15 hours ago
+4 Views / 0 Likes
+
+Tomi Lauren made headlines for criticizing Beyonce for her Super Bowl Halftime performance, comparing the Black Panthers to the KKK. Rapper and radio host Charlemagne Tha God goes on her show to clarify what the purpose of the Black Panthers was. Cenk Uyg
+
+
+
+
+
+
+11:33 New 
+
+
+Donald Trump's Vice President?
+
+by The Young Turks
+Added 16 hours ago
+2 Views / 0 Likes
+
+The Joe Scarborough / Donald Trump conflict of interest may have actually jumped the shark this week. "Journalist" Scarborough is getting asked about his relationship with Trump more and more often, people are even questioning whether or not he'll be Trum
+
+
+
+
+
+
+06:37 New 
+
+
+Putin, Orban meet in Moscow, discuss sanctions & refugee crisis
+
+by Russia Today
+Added 23 hours ago
+20 Views / 0 Likes
+
+The solution to the refugee crisis lies in the political settlement of conflicts, particularly in Syria and Libya, President Vladimir Putin said following a meeting with Hungarian PM Viktor Orban. He added that the two share views on the migrant and refug
+
+
+
+
+
+
+04:27 New 
+
+
+Inside How Citizens, Journalists, Doctors & Scientists Exposed the Flint Water Crisis Cover-Up
+
+by DemocracyNow
+Added 1 day ago
+6 Views / 0 Likes
+
+- We speak with Curt Guyette of the ACLU of Michigan. He is an investigative reporter who was just named Michigan Journalist of the Year by the Michigan Press Association. He talks about the citizen-led effort to prove, despite assurances by state officia
+
+
+
+
+
+
+06:19 New 
+
+
+Meet the Flint Official Whose Bid to Restore Safe Drinking Water Was Blocked by an Unelected Manager
+
+by DemocracyNow
+Added 1 day ago
+4 Views / 0 Likes
+
+- To learn more about how how Flint ended up with an unelected emergency manager, we spoke with Flint City Councilmember Eric Mays. Eleven months ago, in March 2015, the City Council voted seven to one on his resolution to stop using water from the corros
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Top videos
+
+
+
+
+
+
+
+
+Aljazeera America
+21.4k Views
+
+
+
+
+
+
+
+
+
+NASA
+21k Views
+
+
+
+
+
+
+
+
+
+Democracy Now!
+20.7k Views
+
+
+
+
+
+
+
+
+
+Free Speech TV
+20.4k Views
+
+
+
+
+
+
+
+
+
+AP Breaking News
+19.6k Views
+
+
+
+
+
+
+
+
+
+Weather Nation
+18.9k Views
+
+
+
+
+
+
+
+
+
+Huffpost Live
+18.3k Views
+
+
+
+
+
+
+
+
+
+Bloomberg
+17.8k Views
+
+
+
+
+
+
+
+
+
+MSNBC
+17.3k Views
+
+
+
+
+
+
+
+
+
+Fox News
+16.9k Views
+
+
+
+
+
+
+
+
+
+CNN
+16.2k Views
+
+
+
+
+
+
+
+
+
+Russia Today
+15.2k Views
+
+
+
+
+
+
+
+
+
+KRON 4 NEWS San Francisco
+15.1k Views
+
+
+
+
+
+
+
+
+
+BBC NEWS
+13.9k Views
+
+
+
+
+
+
+
+
+
+Sky News
+13.1k Views
+
+
+
+
+
+
+Categories
+
+
+Live TV
+Videos
+
+News 
+Funny 
+Real Life 
+
+
+
+
+
+
+Tags
+news
+politics
+usa
+russia today
+government
+war
+Democracy Now!
+peace
+tyt
+the young turks
+liberal
+democrat
+mrctv
+republican
+ZoNation
+conservative
+live
+liveleak
+video
+leak
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ RSS
+
+
+
+
+
+
+
+
+
+
+
+
+Home
+Contact us
+Live TV
+
+Register The iNewsTV Daily
+The Left Side News
+Contact Us
+
+
+© 2016 iNewsTV.org. All rights reserved
+
+
+
+
+
+
+
+ English 
+
+Albanian
+Arabic
+Brazilian
+Bulgarian
+Croatian
+Danish
+Deutsch
+Français
+Georgian
+Italian
+Lithuanian
+Nederlands
+Polish
+Portuguese
+Română
+Russian
+Serbian
+Slovak
+Spanish
+Swedish
+Türkçe
+Hebrew
+Thai
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+		// live search 
+		$('#appendedInputButton').typeWatch({
+			callback: function() {
+					var a = $('#appendedInputButton').val();
+					
+					$.ajax({
+						type: "POST",
+			            url: MELODYURL2 + "/ajax_search.php",
+			            data: {
+							"queryString": a
+			            },
+			            dataType: "html",
+			            success: function(b){
+							if (b.length > 0) {
+			                    $("#suggestions").show();
+			                } else {
+								$("#suggestions").hide();
+							}
+							$("#autoSuggestionsList").html(b);		
+						}
+					});
+				},
+		    	wait: 400,
+		    	highlight: true,
+		    	captureLength: 3
+		});
+});
+
+
+$(document).ready(function() {
+	$("#pm-ul-wn-videos").carouFredSel({
+		items				: 4,
+		circular			: false,
+		direction			: "left",
+		height				: null,
+		width       		: null,
+		infinite			: false,
+		responsive			: true,
+		prev	: {	
+			button	: "#pm-slide-prev",
+			key		: "left"
+		},
+		next	: { 
+			button	: "#pm-slide-next",
+			key		: "right"
+		},
+	scroll		: {
+		items			: null,		//	items.visible
+		fx				: "scroll",
+		easing			: "swing",
+		duration		: 500,
+		wipe			: true,
+		event			: "click",
+	},
+	auto: false
+				
+	});	
+});
+
+$(document).ready(function() {
+	$("#pm-ul-top-videos").carouFredSel({
+	items: 5,
+	direction: "up",
+	width: "variable",
+	height:  "variable",
+	circular: false,
+	infinite: false,
+	scroll: {
+		fx: "fade",
+		event: "click",
+		wipe: true,
+		duration: 150
+	},
+	auto: false,
+		prev	: {	
+			button	: "#pm-slide-top-prev",
+			key		: "left"
+		},
+		next	: { 
+			button	: "#pm-slide-top-next",
+			key		: "right"
+		}
+	});	
+});
+
+
+    
+        $('#header-login-form').on('shown', function () {
+            $('.hocusfocus').focus();
+        });
+    
+    
+
+
+
+var sc_project=9480699; 
+var sc_invisible=1; 
+var sc_security="f1a1fc66"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+
+
+document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));
+
+try {Histats.start(1,2540184,4,0,0,0,"");
+Histats.framed_page();
+Histats.track_hits();} catch(err){};
+
+
+__CF.AJS.init1();
+ 

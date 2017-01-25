@@ -1,0 +1,50 @@
+\section{Problem 2}
+
+\subsection{Question}
+\vspace*{10pt}
+\input{q2/a7}
+
+\subsection{2.1 Answer}
+\subsubsection{2.1.1 5-Users Most and Least Correlated to the Substitute Me}
+\vspace{3mm}
+Question 2 was solved using the code shown in Listing \ref{listing:q2}, with the {\tt sim\_pearson} and the {\tt get\_top} functions from Listings \ref{listing:pearson} and \ref{listing:avgtop}, respectively. The {\tt flatten} function from Listing \ref{listing:flatten} was used to flatted the oddly arranged tuple that was created from the {\tt sim\_pearson} function.
+
+\lstinputlisting[language=Python, caption={Question 2 code}, label=listing:q2, linerange={405-422}, firstnumber={405}]{recommendations.py}
+
+\lstinputlisting[language=Python, caption={sim\_pearson  function}, label=listing:pearson, linerange={45-80}, firstnumber={45}]{recommendations.py}
+
+The results for Question 2 are shown in Table \ref{tab:most} and \ref{tab:least}. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+User & Pearson's r \\
+\hline
+20 & 1.0 \\
+74 & 1.0 \\
+161 & 1.0 \\
+219 & 1.0 \\
+284 & 1.0 \\
+\hline
+\end{tabular}
+\caption{Most Correlated Substitute Me}
+\label{tab:most}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{| l | l |}
+\hline
+User & Pearson's r \\
+\hline
+26 & -1.0 \\
+39 & -1.0 \\
+55 & -1.0 \\
+241 & -1.0 \\
+300 & -1.0 \\
+\hline
+\end{tabular}
+\caption{Least Correlated Substitute Me}
+\label{tab:least}
+\end{table}

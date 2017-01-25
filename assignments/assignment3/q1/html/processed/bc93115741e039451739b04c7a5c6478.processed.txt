@@ -1,0 +1,1743 @@
+http://steamcommunity.com/sharedfiles/filedetails/?id=314991368&searchtext=shroud+of+the+avatar
+
+
+
+
+
+Steam Greenlight :: Shroud of the Avatar: Forsaken Virtues
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$J = jQuery.noConflict();
+if ( typeof JSON != 'object' || !JSON.stringify || !JSON.parse ) { document.write( "<scr" + "ipt type=\"text\/javascript\" src=\"http:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/json2.js?v=pmScf4470EZP&amp;l=english\"><\/script>\n" ); };
+
+
+
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33779068-1']);
+  _gaq.push(['_setSampleRate', '0.4']);
+  _gaq.push(['_setCustomVar', 1, 'Logged In', 'false', 2]);
+  _gaq.push(['_setCustomVar', 2, 'Client Type', 'External', 2]);
+  _gaq.push(['_setCustomVar', 3, 'Cntrlr', 'sharedfiles', 3]);
+  _gaq.push(['_setCustomVar', 4, 'Method', "sharedfiles\/filedetails", 3]);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_setSessionCookieTimeout', 900000]);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+$J( function() { Forum_InitTooltips(); } );
+
+
+		var SESSION_ID = 'aa90f0fe1c5ef391e7b74734';
+	var publishedfileid = '314991368';
+	var searchText = "shroud of the avatar";
+
+	function onModalHidden()
+	{
+		// stop any videos
+		if ( window.stop )
+		{
+			stop();
+		}
+	}
+
+	function previewImageBind()
+	{
+		Event.observe( 'enlargedImage', 'load', function() { modalSizing( $( 'previewImageEnlarged' ) ); } );
+	}
+
+	window.onload = previewImageBind;
+
+	var gGreenlightAcceptedRedirectDialog = null;
+
+	Event.observe(document, 'dom:loaded', function() {
+		if( searchText )
+			HighlightSearchText( searchText, $('highlightContent') );
+
+		if ( $J("#GreenlightItemReleasedDialog" ).length > 0 )
+		{
+			$J("#GreenlightItemReleasedDialog").show();
+			gGreenlightAcceptedRedirectDialog = ShowDialog( 'Now Available On Steam!', $J("#GreenlightItemReleasedDialog" ), null );
+			gGreenlightAcceptedRedirectDialog.SetRemoveContentOnDismissal( false );
+		}
+	});
+
+	function CloseGreenlightAcceptedRedirectDialog()
+	{
+		gGreenlightAcceptedRedirectDialog.Dismiss();
+		gGreenlightAcceptedRedirectDialog = null;
+	}
+
+	$J(function() {
+		$J('.tooltip').v_tooltip();
+
+		var tag = document.createElement('script');
+
+		tag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	});
+
+
+
+	function onYouTubeIframeAPIReady()
+	{
+		new HighlightPlayer( {
+			elemPlayerArea: 'highlight_player_area',
+			elemStrip: 'highlight_strip',
+			elemStripScroll: 'highlight_strip_scroll',
+			elemSlider: 'highlight_slider',
+			rgMovieFlashvars: rgMovieFlashvars,
+			rgScreenshotURLs: rgScreenshotURLs,
+			rgDefaultMovieFlashvars: rgCommonFlashVars
+		} );
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		STORE	
+
+Featured
+Explore
+Curators
+Wishlist
+News
+Stats
+
+
+		COMMUNITY	
+
+Home
+Discussions
+Workshop
+Greenlight
+Market
+Broadcasts
+
+
+			ABOUT		
+
+		SUPPORT	
+
+
+		jQuery(function($) {
+			$('.tooltip').v_tooltip();
+			$('#global_header .supernav').v_tooltip({'location':'bottom', 'tooltipClass': 'supernav_content', 'offsetY':-4, 'offsetX': 1, 'horizontalSnap': 4, 'tooltipParent': '#global_header .supernav_container', 'correctForScreenSize': false});
+		});
+	
+
+
+
+
+
+
+						Install Steam					
+
+login
+					 | 
+					language
+
+
+Български (Bulgarian)
+čeština (Czech)
+Dansk (Danish)
+Nederlands (Dutch)
+Suomi (Finnish)
+Français (French)
+Deutsch (German)
+Ελληνικά (Greek)
+Magyar (Hungarian)
+Italiano (Italian)
+日本語 (Japanese)
+한국어 (Korean)
+Norsk (Norwegian)
+Polski (Polish)
+Português (Portuguese)
+Português-Brasil (Portuguese-Brazil)
+Română (Romanian)
+Русский (Russian)
+简体中文 (Simplified Chinese)
+Español (Spanish)
+Svenska (Swedish)
+繁體中文 (Traditional Chinese)
+ไทย (Thai)
+Türkçe (Turkish)
+Українська (Ukrainian)
+Help us translate Steam
+
+
+
+
+
+
+
+	g_sessionID = "aa90f0fe1c5ef391e7b74734";
+	g_steamID = false;
+
+	// We always want to have the timezone cookie set for PHP to use
+	setTimezoneCookies();
+
+	$J( function() {
+
+		InitMiniprofileHovers();
+		InitEmoticonHovers();
+		window.BindCommunityTooltip = function( $Selector ) { $Selector.v_tooltip( {'tooltipClass': 'community_tooltip', 'dataName': 'communityTooltip' } ); };
+		BindCommunityTooltip( $J('[data-community-tooltip]') );
+	});
+
+	$J( function() { InitEconomyHovers( "http:\/\/steamcommunity-a.akamaihd.net\/public\/css\/skin_1\/economy.css?v=vDwii4WYKR-_", "http:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/economy_common.js?v=tsXdRVB0yEaR&l=english", "http:\/\/steamcommunity-a.akamaihd.net\/public\/javascript\/economy.js?v=HrXlAXOGqiKY&l=english" );});
+
+
+
+
+This game is now available on Steam!
+Thanks for your help in getting this game selected for distribution via Steam. More information including a link to the Steam store page can be found below.
+
+
+
+
+
+
+Greenlight
+					> Games
+					> Portalarium's Workshop
+
+
+
+
+
+			This item has been banned because it violates the Steam Terms of Service. It is only visible to you. If you believe your item has been banned mistakenly, please contact Steam Support.					
+
+			This item is incompatible with Greenlight. Please see the instructions page for reasons why this item might not work within Greenlight.					
+
+Current visibility: Hidden
+
+This item will only be visible to you, admins, and anyone marked as a creator.
+
+
+
+Current visibility: Friends-only
+
+This item will only be visible in searches to you, your friends, and admins.
+
+
+
+
+
+
+Shroud of the Avatar: Forsaken Virtues
+
+
+
+Description
+Discussions11
+Announcements4
+Comments727
+
+
+
+
+
+						Description					
+
+						Discussions					
+
+						Announcements					
+
+						Comments					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#text_need_flash_capsule_lrg
+
+
+
+
+#text_need_flash_capsule_lrg
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							var rgMovieFlashvars = {
+															'movie_2062216': {
+									YOUTUBE_VIDEO_ID: "t5ynBWva-MU",
+									MOVIE_NAME: ""
+								},
+																'movie_2062228': {
+									YOUTUBE_VIDEO_ID: "meuys4JZZxA",
+									MOVIE_NAME: ""
+								},
+																'' : ''
+							};
+							var rgCommonFlashVars = {
+								clientLanguage: "english",
+								capsuleSize: "huge",
+								STAGE_WIDTH: 636,
+								STAGE_HEIGHT: 358,
+								AUTO_PLAY: "true",
+								ALLOW_JSPAUSE: "true",
+								TRACK_MUTE: "true",
+								CHECKBOX_AUTOPLAY_SHOW: "true",
+								CHECKBOX_AUTOPLAY_TEXT: ""
+							};
+							var rgScreenshotURLs = {
+															'2056026': 'http://images.akamai.steamusercontent.com/ugc/34098221259157520/CF0AB0D6FD42D515ED9A44D83DBB868C58E893BD/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055876': 'http://images.akamai.steamusercontent.com/ugc/34098221258342758/83868B8FD8626B458A96260FCA21F2CE3FCB174B/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055722': 'http://images.akamai.steamusercontent.com/ugc/34097587492543211/2C231C70C4649A3524B4770DAB56CE26596C2237/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055724': 'http://images.akamai.steamusercontent.com/ugc/34097587492550874/4E4E0E8BE061805FAC58FEE12B847E14F3EF22C1/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058251': 'http://images.akamai.steamusercontent.com/ugc/34098221276392732/86677559A186AE71F2D0CA78151AA894A3FD050B/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056020': 'http://images.akamai.steamusercontent.com/ugc/34098221259157259/6D30972B5E29D9D9EB743B4A530B0D1CBB8FD143/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058097': 'http://images.akamai.steamusercontent.com/ugc/34098221275841983/CA0C721BAC21DBE982DCA8D08C577894E88939E1/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056019': 'http://images.akamai.steamusercontent.com/ugc/34098221259157223/44633DA2A30DF01473FDF2C48327787D5CAF2A64/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056022': 'http://images.akamai.steamusercontent.com/ugc/34098221259157351/9EACE3515748E54204B55080244B85E7FA775EC5/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055871': 'http://images.akamai.steamusercontent.com/ugc/34098221258308213/BDFD53F6EFD55419122A2C52BBBC08313FE81C35/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056023': 'http://images.akamai.steamusercontent.com/ugc/34098221259157396/AFFB9211D901103510EF01C245D95554C2144D96/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055872': 'http://images.akamai.steamusercontent.com/ugc/34098221258314396/F8F01BBA0E65CDB489E25A66B9DC00D2CA1917A4/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056024': 'http://images.akamai.steamusercontent.com/ugc/34098221259157434/959FCAD60B98F30E92FBD6C07D229AD2DE105424/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055873': 'http://images.akamai.steamusercontent.com/ugc/34098221258332792/9D27FFD8F65314C042FDB4FBEB2F40121D2A6EEA/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058017': 'http://images.akamai.steamusercontent.com/ugc/34098221275409240/6AAD15FDE4190EC2E6F9BB2FEE2F8F6192EB7AA7/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056021': 'http://images.akamai.steamusercontent.com/ugc/34098221259157303/99E23F0CCA1F304257F9103D40FB573176E222FA/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056034': 'http://images.akamai.steamusercontent.com/ugc/34098221259227538/BCCF4D944067B97B152D547EB945392C86EFBB93/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056025': 'http://images.akamai.steamusercontent.com/ugc/34098221259157482/5220346E1D628B60633DAFFE3699CD51402F2FDB/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057880': 'http://images.akamai.steamusercontent.com/ugc/34098221274698304/8F7D5D8C436F24E2C84FFB7C31F2C20B91404EF7/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2056035': 'http://images.akamai.steamusercontent.com/ugc/34098221259227616/282BD929E9D9DAD99FA52AB38C614073141A3F2E/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057911': 'http://images.akamai.steamusercontent.com/ugc/34098221274819440/C1EB1324A69F105EE61A1C684FBEF33F7F575A75/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057950': 'http://images.akamai.steamusercontent.com/ugc/34098221275108904/A83299798E21CC41A2348549F0D9098421D088B1/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057951': 'http://images.akamai.steamusercontent.com/ugc/34098221275108980/6B7E596876EA1E53935597E1359F026008D118C1/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057952': 'http://images.akamai.steamusercontent.com/ugc/34098221275109110/4698D95401F6854B4F80DA7BF649F329AB735270/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057953': 'http://images.akamai.steamusercontent.com/ugc/34098221275109203/4963ED490A2EB5C401CED1F42E7DBB1B7BB36611/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057965': 'http://images.akamai.steamusercontent.com/ugc/34098221275176766/2B7E84674B17365A5E649636DFD321C487596630/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057976': 'http://images.akamai.steamusercontent.com/ugc/34098221275215657/9EBB5E3A93AFDAC20A12075DC848D3BD7A2B4E43/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058284': 'http://images.akamai.steamusercontent.com/ugc/34098221276457292/366B575894394CA1B219AF6B9B0F69132C7EBD24/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058285': 'http://images.akamai.steamusercontent.com/ugc/34098221276457408/DF7B8FE04881B700ECE781A7FE9F39E1D82AB7B8/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058168': 'http://images.akamai.steamusercontent.com/ugc/34098221276237523/788516AAEE0F0E21075846873DB76C191356E702/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058167': 'http://images.akamai.steamusercontent.com/ugc/34098221276237405/71E3B5F69B96C84487EF4DD0E9396FC21B652931/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2055721': 'http://images.akamai.steamusercontent.com/ugc/34097587492524920/6BBD8E1A05A0209A3FA433028921C845E8A72C59/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057977': 'http://images.akamai.steamusercontent.com/ugc/34098221275237455/38CFE28B36E650C84BF73C08FD18A0B770886EF7/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057978': 'http://images.akamai.steamusercontent.com/ugc/34098221275237557/7F463D772DD325CF932D52419C55A542F06F61AE/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057979': 'http://images.akamai.steamusercontent.com/ugc/34098221275237683/B174A5EC319F575778B6ECFDE47CDAA81A568574/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057980': 'http://images.akamai.steamusercontent.com/ugc/34098221275237809/34F56D8EF9D0FA543115E6F0F05BACC599A37B1D/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057987': 'http://images.akamai.steamusercontent.com/ugc/34098221275261384/83268A9E4A6C3D3087D57E7FB43B5348E356DAEF/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2057988': 'http://images.akamai.steamusercontent.com/ugc/34098221275261603/1075383E28CB7E6BA602834A7D18F249E4D1A9EF/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058058': 'http://images.akamai.steamusercontent.com/ugc/34098221275616882/38CA21BAFA90F30160DA397511BFC97988715132/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058061': 'http://images.akamai.steamusercontent.com/ugc/34098221275617187/094B67E3978F8A4BFB51DD5C0D5BAED37689F1B1/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058062': 'http://images.akamai.steamusercontent.com/ugc/34098221275617271/688A81B6429AF5B8FBBF128D985FD935019E2BEF/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058063': 'http://images.akamai.steamusercontent.com/ugc/34098221275617332/E0FAB3E98A0DD3D90DA3BAD5BEDEC0EFA7EDC4BE/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058064': 'http://images.akamai.steamusercontent.com/ugc/34098221275617415/4939FEABCE177D1961D69F77B469ADFDD448F588/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058065': 'http://images.akamai.steamusercontent.com/ugc/34098221275617505/A72F43E2E3B0FD3E706E01D4AD8E62AAB8226011/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058066': 'http://images.akamai.steamusercontent.com/ugc/34098221275617573/FD4DEF919065D67A36DC3C66A4CEA0DAC02CA257/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058069': 'http://images.akamai.steamusercontent.com/ugc/34098221275658302/B26B363CF53AA4056D97E6D468E2BFC0CF68F724/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058071': 'http://images.akamai.steamusercontent.com/ugc/34098221275663253/3133DDBC4DD77E213F9D7298C847AF8C305769D0/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058106': 'http://images.akamai.steamusercontent.com/ugc/34098221275866773/152213F103C5A21555EEE1DE3C8C8A16135ED050/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058139': 'http://images.akamai.steamusercontent.com/ugc/34098221276010395/7E73DA08C2157EF5200FEE75554AA38E6DE91503/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058144': 'http://images.akamai.steamusercontent.com/ugc/34098221276025408/54D598D7729D61E54D4C372C88082B6E73C38845/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058153': 'http://images.akamai.steamusercontent.com/ugc/34098221276148626/7A80E4BB80A62C76ECE53B2EE8135764B8312A92/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058111': 'http://images.akamai.steamusercontent.com/ugc/34098221275909817/2340397D4E3398CC1A76CFB8D5BE5AD67F29F815/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058170': 'http://images.akamai.steamusercontent.com/ugc/34098221276237698/6907F87B283D892974ED771DA0D0C5E542B6F371/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058171': 'http://images.akamai.steamusercontent.com/ugc/34098221276237802/FE6626777F9449C5892550052CFB62F738505E19/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058210': 'http://images.akamai.steamusercontent.com/ugc/34098221276328942/2C0119AA77BB722643C27B28D036D11BDAAE623C/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058211': 'http://images.akamai.steamusercontent.com/ugc/34098221276329051/222FC8E6787CCFD28E7020EFE483F18D411C1732/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058213': 'http://images.akamai.steamusercontent.com/ugc/34098221276329220/0C2B3B5E301D3BBEB686018C429DD1C5633A51E6/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058217': 'http://images.akamai.steamusercontent.com/ugc/34098221276329478/D05DB0C0D4052321E21E3CCAD66C6BD2AFC3B702/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058238': 'http://images.akamai.steamusercontent.com/ugc/34098221276373096/1AE13144F06AE6B15D05DE10AC2CE25BDF821AA7/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058240': 'http://images.akamai.steamusercontent.com/ugc/34098221276373215/84C28E852B649FA4DB1836EEA244F9BAA64F9009/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058243': 'http://images.akamai.steamusercontent.com/ugc/34098221276373463/49D56DF719E32C624C0AF332DCC557766FF797FD/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'2058244': 'http://images.akamai.steamusercontent.com/ugc/34098221276373560/BAC10055F72DF3B8C3972D70076EC83D560B4876/?interpolation=lanczos-none&output-format=jpeg&output-quality=95&fit=inside|637:358&composite-to=*,*|637:358&background-color=black',
+																'' : ''
+							};
+						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				 
+
+
+				 
+
+
+Autoplay videos
+
+
+
+
+
+
+
+
+
+
+Favorite
+Favorited
+Unfavorite
+
+
+
+
+
+Follow
+Followed
+Unfollow
+
+
+
+Share
+
+
+
+
+
+Add to Collection
+
+
+
+
+
+
+
+
+
+
+This item has been added to your Favorites.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Genre: RPG, Massively MultiplayerPlatforms: PC, Mac, LinuxLanguages: EnglishPlayers: Single-player, Multi-player, Cross-Platform Multiplayer, Co-op 
+
+
+
+Posted 
+Updated 
+
+
+Sep 19, 2014 @ 4:36pm
+Jan 26 @ 7:48pm
+
+
+
+
+
+
+
+
+
+
+
+
+			Links					
+
+On Facebook									
+
+On Twitter									
+
+ Kickstarter Project									
+
+
+
+
+Created by
+
+
+
+
+
+
+
+
+				BurningToad
+
+		Last Online 3 days ago
+				
+
+
+
+
+
+
+
+
+				Lum_
+
+In-GameShroud of the Avatar: Forsaken Virtues
+
+
+
+
+
+
+
+
+
+				Chillblain
+
+In-GameFIVE: Guardians of David
+
+
+
+
+
+
+
+
+
+				Thud
+
+		Last Online 10 hrs, 18 mins ago
+				
+
+
+
+
+
+
+
+
+				Bzus
+
+		Last Online 
+				
+
+
+
+
+
+
+
+
+				Lord British
+
+		Online
+				
+
+
+
+
+
+
+
+
+				catnipgames
+
+		Online
+				
+
+
+
+
+
+
+
+
+				GingerLoaf
+
+		Online
+				
+
+
+
+
+
+
+
+
+				Papa Capone
+
+		Last Online 
+				
+
+
+
+
+
+
+
+
+				starrlong
+
+		Last Online 13 days ago
+				
+
+
+
+
+
+
+
+
+				dallasds
+
+		Last Online 460 days ago
+				
+
+
+
+
+
+
+
+
+				FinnStaber
+
+		Last Online 
+				
+
+
+
+
+
+
+
+
+				QballArt
+
+		Online
+				
+
+
+
+
+
+
+
+
+				Cpt. Nemo
+
+		Last Online 145 days ago
+				
+
+
+
+
+
+
+
+
+				wizardsmoke
+
+		Last Online 
+				
+
+
+
+
+
+
+
+
+				oneandonly
+
+In-GameShroud of the Avatar: Forsaken Virtues
+
+
+
+
+
+
+
+
+
+				Portalarium
+
+		Last Online 6 days ago
+				
+
+
+
+
+
+
+
+
+				LadyFireLotus
+
+		Last Online 414 days ago
+				
+
+
+
+
+
+
+See all 55 collections (some may be hidden)
+ 
+
+
+		Kickstarter	
+
+
+
+
+
+
+
+
+
+View Shroud of the Avatar: Forsaken Virtues in the store
+Store page
+
+
+
+
+		Recent Announcements		
+View All (4)
+
+
+
+
+Release 12 Notes
+
+					November 19, 2014 -
+					Portalarium									
+
+http://steamcommunity.com/games/326160/announcements/detail/186100498567972946 
+
+
+Read More
+
+
+
+
+Shroud of the Avatar: Forsaken Virtues on Early Access November 24!
+
+					November 13, 2014 -
+					Portalarium									
+
+					Thank you everyone for all your support. Our Steam Early Access Store is now live! Please visit us there for the latest information and updates. http://store.steampowered.com/app/326160 
+
+
+Read More
+
+
+
+
+
+Description
+ Release date:
+											First half 2015
+
+ Shroud of the Avatar: Forsaken Virtues is a new type of third person fantasy RPG that combines a single player narrative with a sandbox MMO. It is being created by a team that includes: Richard "Lord British" Garriott the creator of the Ultima series, Starr Long the original Director of Ultima Online, and Tracy Hickman the author of the beloved Dragonlance Novels and Dungeons & Dragons modules.   Episodic Content: Shroud of the Avatar will consist of five episodes that will tell a series of virtue based stories created by Richard Garriott and Tracy Hickman. All supported by a series of prequel novels starting with Blade of the Avatar.  Single Player Offline Mode: Players will adventure through over 40 hours of story in an interactive world where their choices have consequences, ethical paradoxes give them pause, and they play a vital part in weaving their own story into the immersive world and lore surrounding them. Selective Multiplayer Modes: If you want to go through the story online you can play with everyone in a single world with three different online modes (Single Player, Friends Only, and Open). Classless Character System: Vast customization options with hundreds of skills and spells in over 20 different skill trees. Skillful Combat: A new way to prepare and fight in an RPG by building custom decks of skills and dynamically activating them in combat. PVP: Consensual with Open PVP flags, zones, and Guild Warfare. Player Housing: Non instanced, finite, and embedded in the world with multiple group living options. Player Driven Economy: Deep crafting system where the best items are made by players and player items are the main source of loot found in the game. Pay Once to Play: No subscription fees. Each episode (released approximately annually) is a one time fee and everything in  the game can be purchased with in game gold that can be earned (except for some exclusive backer rewards).  Social: Full Guild System, Highly Active Community and Player Owned Towns. Crowd Sourced & Funded: Support the project by contributing content (and receive compensation) or by pledging (and receive exclusive rewards). Open Development: Players help shape the game by giving feedback on monthly early access releases, videos, weekly updates, blog postings, forums, chat, etc. Please help us get on Steam by voting YES. Website for more information: www.shroudoftheavatar.com
+
+
+
+
+Popular Discussions						View All (11)
+
+
+
+
+
+
+ 57			
+
+				Nov 30, 2015 @ 3:52am			
+
+
+
+
+
+								Languages?			
+
+			Maarduk		
+
+
+
+
+
+
+ 26			
+
+				Nov 30, 2014 @ 5:51am			
+
+
+
+
+
+								This game won't have UO mechanics			
+
+			artariel		
+
+
+
+
+
+
+ 19			
+
+				Sep 25, 2014 @ 5:58pm			
+
+
+
+
+
+								General Discussion			
+
+			DavenRock		
+ 
+
+	$J( function() {
+		InitializeCommentThread( "PublishedFile_Public", "PublishedFile_Public_76561198154796840_314991368_0", {"feature":"314991368","feature2":0,"owner":"76561198154796840","total_count":727,"start":0,"pagesize":10,"has_upvoted":0,"upvotes":0,"votecountid":null,"voteupid":null,"commentcountid":null,"subscribed":false,"extended_data":"{\"contributors\":[\"76561197960400263\",\"76561197969699674\",\"76561197970514610\",\"76561197971099119\",\"76561197985448291\",\"76561197986010770\",\"76561197993355390\",\"76561197993537729\",\"76561197995977244\",\"76561198007703306\",\"76561198012085555\",\"76561198026242700\",\"76561198035390606\",\"76561198038128999\",\"76561198041323533\",\"76561198052909522\",\"76561198154796840\",\"76561198154872435\"],\"appid\":765,\"sharedfile\":{\"m_parentsDetails\":null,\"m_parentBundlesDetails\":null,\"m_bundledChildren\":[],\"m_ownedBundledItems\":[]}}"}, 'http://steamcommunity.com/comment/PublishedFile_Public/', 40 );
+	} );
+
+
+
+
+<
+
+
+>
+
+
+
+727 Comments							
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+matarat0s
+
+					Sep 29, 2015 @ 7:59am 
+				
+
+
+				quem venha rapido 
+
+
+
+
+
+ 
+
+
+
+
+michael theodoridis
+
+					Apr 12, 2015 @ 5:30am 
+				
+
+
+				i hate it 
+
+
+
+
+
+ 
+
+
+
+
+eriko_foreva
+
+					Dec 14, 2014 @ 12:13am 
+				
+
+
+				super duper cant wait to see the final release soon			
+
+
+
+
+
+ 
+
+
+
+
+Pleskac
+
+					Dec 11, 2014 @ 4:17am 
+				
+
+
+				I hope the game will improve much more :-/ i already bought it when i was too excited :D			
+
+
+
+
+
+ 
+
+
+
+
+✪G7✪
+
+					Nov 28, 2014 @ 12:09am 
+				
+
+
+				... 
+
+
+
+
+
+ 
+
+
+
+
+Редиска
+
+					Nov 27, 2014 @ 12:23am 
+				
+
+
+				no bad  
+
+
+
+
+
+ 
+
+
+
+
+lintou
+
+					Nov 19, 2014 @ 7:05am 
+				
+
+
+				Traditional Russian plz :P			
+
+
+
+
+
+ 
+
+
+
+
+Batroel
+
+					Nov 18, 2014 @ 4:32pm 
+				
+
+
+				less than 2 days for R12 :P			
+
+
+
+
+
+ 
+
+
+
+
+Lord Lonn
+
+					Nov 17, 2014 @ 2:29am 
+				
+
+
+				Supa exiteed indeed			
+
+
+
+
+
+ 
+
+
+
+
+Yoshimo / NoGameNoLife
+
+					Nov 14, 2014 @ 11:51am 
+				
+
+
+				0% clutter, rectangle rooms, poor desighn gameplay wise, pass 
+
+
+
+
+
+
+<
+
+
+>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Share directly to my status
+
+
+
+
+
+
+
+
+
+
+
+
+			Link: 
+
+
+ 
+
+
+You need to sign in or create an account to do that.
+
+Sign In
+Create an Account
+Cancel
+
+
+
+
+
+
+
+
+
+
+
+
+					function UpdateKVTags()
+					{
+						$('KVTagsUpdateForm').submit();
+					}
+				
+Edit links
+
+
+
+
+
+On Facebook
+Enter the full URL of your item or group's Facebook page
+
+
+
+
+On Twitter
+Enter the full URL of your item or group's Twitter page
+
+
+
+
+On Youtube
+If you have a related Youtube channel, enter the URL.
+
+
+
+
+Steam Community Group
+Do you have a Steam Community group for followers of this item?
+
+
+
+
+Kickstarter Project
+Is your project on Kickstarter?
+
+
+
+
+Indiegogo Project
+Or on Indiegogo?
+
+
+
+
+IndieDB Page
+If your project is also on IndieDB
+
+
+Update
+
+
+
+
+
+
+
+
+
+
+
+
+				function UpdateKVTagsSingle()
+				{
+					$('PromptModalForm').submit();
+				}
+			
+
+
+
+
+
+
+
+
+
+Update
+
+
+
+
+
+
+
+
+			Shroud of the Avatar: Forsaken Virtues has been Greenlit and made available via Steam. For the latest information, purchase options, and discussions for Shroud of the Avatar: Forsaken Virtues, please see it on the Steam Store or in the Steam Community.			
+
+
+
+				Visit Store Page				
+To see purchase options
+
+
+
+
+				Visit Community Hub				
+For latest discussions
+
+
+
+
+			If you really, really want to, you can continue to the Greenlight page. Information on this page may be out of date, since all the action has moved to the areas noted above.		
+
+
+
+
+
+
+
+
+
+				© Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.Some geospatial data on this website is provided by geonames.org.				
+
+Privacy Policy
+						  |  Legal
+						 |  Steam Subscriber Agreement
+
+
+
+
+
+View mobile website
+
+
+
+$J( function() {ReplaceDynamicLink( 'dynamiclink_0', "\t<a href=\"http:\/\/steamcommunity.com\/gid\/[g:1:7181173]\/announcements\/detail\/186100498567972946\" class=\"dynamiclink_box modalContentLink clanannouncement\" data-modal-content-sizetofit=\"false\">\r\n\t<img class=\"dynamiclink_preview\" src=\"https:\/\/d2sx9mrt4zumaq.cloudfront.net\/wp-content\/uploads\/2014\/11\/SotA_R12_teaser1.jpg\">\r\n\t\t<div class=\"dynamiclink_content\">\r\n\t\t<div class=\"dynamiclink_name\"><span class=\"dynamiclink_type\">Announcement: <\/span>Release 12 Download and Play Instructions&nbsp;<\/div>\r\n\t\t<div class=\"dynamiclink_author\">Shroud of the Avatar: Forsaken Virtues, Nov 19, 2014<\/div>\r\n\t\t<div class=\"dynamiclink_description\">\r\n\t\t\thttps:\/\/d2sx9mrt4zumaq.cloudfront.net\/wp-content\/uploads\/2014\/11\/SotA_R12_teaser1.jpg Greetings Avatars, Thank you to our loyal backers of Shroud of the Avatar.\t\t<\/div>\r\n\t<\/div>\r\n\t<\/a>\r\n" );ReplaceDynamicLink( 'dynamiclink_1', "<iframe src=\"http:\/\/store.steampowered.com\/widget\/326160\/?dynamiclink=1\" frameborder=\"0\" width=\"100%\" height=\"190\"><\/iframe>" );} );
+
+
+

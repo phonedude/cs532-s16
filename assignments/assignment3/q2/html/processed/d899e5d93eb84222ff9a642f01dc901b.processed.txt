@@ -1,0 +1,415 @@
+http://paper.li/kattx78/1380549949
+
+
+
+
+Singularity Chronicle #untj4270 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      paperli = window.paperli || {};
+      paperli.locale = 'en';
+      paperli.logged_in = false;
+      paperli.host = 'paper.li';
+      paperli.imageproxy_token = {"tokenValidity":"1455822564363","token":"7f15cd5d32ba77e6c1d9ea4c708bec8887020c73"};
+      paperli.images_host = "d38hokjm2drjyk.cloudfront.net";
+    
+
+
+
+  "seo ignore"; // seo hint;
+  
+  var _ga = _ga || {};
+  
+  _ga.getSocialActionTrackers_ = function(socialNetwork, socialAction, socialTarget) {
+    return function() {
+      var trackers = ga.getAll();
+      for (var i = 0, tracker; tracker = trackers[i]; i++) {
+        tracker.send('social', socialNetwork, socialAction, socialTarget);
+      }
+    };
+  };
+  
+  _ga.trackFacebook = function() {
+    try {
+      if (FB && FB.Event && FB.Event.subscribe) {
+        FB.Event.subscribe('edge.create', function(targetUrl) {
+          ga(_ga.getSocialActionTrackers_('facebook', 'like', targetUrl));
+        });
+        FB.Event.subscribe('edge.remove', function(targetUrl) {
+          ga(_ga.getSocialActionTrackers_('facebook', 'unlike', targetUrl));
+        });
+        FB.Event.subscribe('message.send', function(targetUrl) {
+          ga(_ga.getSocialActionTrackers_('facebook', 'send', targetUrl));
+        });
+      }
+    } catch (e) {}
+  };
+  
+  
+  _ga.trackTwitterHandler_ = function(intent_event) {
+    var targetUrl = ''; // must be present
+    if (intent_event && intent_event.type == 'tweet' || intent_event.type == 'click') {
+      if (intent_event.target.nodeName == 'IFRAME') {
+        targetUrl = _ga.extractParamFromUri_(intent_event.target.src, 'url');
+      }
+      var socialAction = intent_event.type + ((intent_event.type == 'click') ? '-' + intent_event.region : ''); //append the type of click to action
+      ga(_ga.getSocialActionTrackers_('twitter', socialAction, targetUrl));
+    }
+  };
+  
+  _ga.trackTwitter = function() {
+    intent_handler = function(intent_event) {
+      _ga.trackTwitterHandler_(intent_event);
+    };
+  
+    //bind twitter Click and Tweet events to Twitter tracking handler
+    twttr.events.bind('click', intent_handler);
+    twttr.events.bind('tweet', intent_handler);
+  };
+  
+  
+  _ga.extractParamFromUri_ = function(uri, paramName) {
+    if (!uri) {
+      return;
+    }
+    var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
+    var params = regex.exec(uri);
+    if (params != null) {
+      return unescape(params[1]);
+    }
+    return;
+  };    
+
+
+  "seo ignore"; // seo hint;
+  
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));
+  
+  // Wait for the asynchronous resources to load
+  twttr.ready(function(twttr) {
+    _ga.trackTwitter(); //Google Analytics tracking
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+  body{
+    
+    
+    
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+  }
+
+  
+
+
+
+  .cust-cs.active > a, .cust-cs.open > a, .cust-cs.cust-cs-color, .cust-cs.cust-cs-color-a a, .cust-cs.cust-cs-color-span span, .cust-cs.cust-cs-hover > a:hover, .cust-cs.cust-cs-hover-all a:hover {
+    color: #fa4b2a !important;
+  }
+  
+  .cust-cs.cust-cs-border {
+    border-color:  #fa4b2a !important;
+  }
+  .cust-cs-border.active {
+    border-color:  #fa4b2a;
+  }
+  .cust-cs.active > a b, .cust-cs.open > a b, .cust-cs.cust-cs-hover > a:hover b {
+    border-top-color: #fa4b2a !important;
+  }
+  .cust-cs.cust-cs-color.cust-cs-hover-darker:hover {
+    color: #eb2a06 !important;
+  }
+  .cust-cs.cust-cs-background {
+    background-color: #fa4b2a !important;
+  }
+  .cust-cs.cust-cs-background.cust-cs-hover-darker:hover {
+    background-color: #eb2a06 !important;
+  }
+  
+  .cust-cs.dropdown-menu li > a:hover, .cust-cs.dropdown-menu li > a:focus, .cust-cs.dropdown-submenu:hover > a {
+  background-color: #f94320;
+  background-image: -moz-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fa4b2a), to(#f93611));
+  background-image: -webkit-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -o-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: linear-gradient(to bottom, #fa4b2a, #f93611);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa4725', endColorstr='#f9320c', GradientType=0); }
+ 
+  .cust-cs.dropdown-menu .active > a, .cust-cs.dropdown-menu .active > a:hover {
+  background-color: #f94320;
+  background-image: -moz-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fa4b2a), to(#f93611));
+  background-image: -webkit-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: -o-linear-gradient(top, #fa4b2a, #f93611);
+  background-image: linear-gradient(to bottom, #fa4b2a, #f93611);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fa4725', endColorstr='#f9320c', GradientType=0); }
+ 
+
+
+
+
+      var addthis_config = {
+        data_track_clickback: false
+      };
+      var addthis_share = {
+        url: 'http://paper.li/kattx78/1380549949' // keep
+      };
+  
+
+
+    OA_zones = {"mplb":14,"mptxt":16,"mpbox":15,"tpl1":4,"glob1":24};
+    OA_source = 'Technology Internet';
+  
+
+
+
+
+  if (!window.paperli) {
+    window.paperli = {};
+  }
+
+  paperli.origin_data = {
+    identifier: 'paper.li:main',
+    kiosk: false,
+    paper_on_domain_alias: false,
+    assets_host: 'd2k854fi3lpqb8.cloudfront.net'
+  };
+  
+
+
+
+
+  "seo ignore"; // seo hint;
+  dataLayer = [];
+  
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WHR7NJ');
+
+
+
+  "seo ignore"; // seo hint;
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId: 362293833600,
+      version: 'v2.2',
+      status: true,
+      cookie: true,
+      xfbml: true,
+    });
+
+    // Additional initialization code here
+    $(document).trigger('fb.init');
+    
+    _ga.trackFacebook(); // Google Analytics tracking
+  };
+
+  // Load the SDK Asynchronously
+  (function(d){
+     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement('script'); js.id = id; js.async = true;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     ref.parentNode.insertBefore(js, ref);
+   }(document));
+
+
+
+
+
+
+
+
+
+
+Menu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Singularity Chronicle #untj4270 
+Singularity Chronicle #untj4270 , by Katrina: A daily collection of events and article discussing technology and the singularity   
+Please enable Javascript to correctly display the content on Paper.li
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About Paper.li
+Blog
+Help
+Stop mentions
+Terms
+Privacy 
+
+
+
+
+
+
+
+
+EN
+DE
+FR
+ES
+PT
+日本語
+
+
+
+© SmallRivers 2016
+
+
+
+
+
+
+
+
+
+  $(document).ready(function() {
+    var options = {"paper":{"id":"b5b1f47c-53d6-427f-ac5a-c13522103061","path":"\/kattx78\/1380549949","external_url":null,"domain_alias":null,"title":"Singularity Chronicle #untj4270 ","title_appearance":null,"styled_title":"Singularity Chronicle #untj4270 ","description":"A daily collection of events and article discussing technology and the singularity   ","name":"Katrina","publisher_id":"e49a6339-d417-412c-9bcb-0a9c29432ead","featured_for":null,"created_at":"2013\/09\/30 14:05:49 +0000","next_edition":"2016\/02\/19 16:05:49 +0000","feed":null,"private":false,"draft_edition_id":null,"suggested_edition_id":null,"share_shown":true},"access_rights":{"editor":false,"curator":false,"owner":false},"logo":null,"ads":{},"twitter_widget":null,"mailchimp_signup_widget":false,"edition":{"id":"b935eaa0-d659-11e5-bbe0-002590a5ba2d","published_at":"2016\/02\/18 16:07:35 +0000","current":true},"pro":false,"subscribe_box_disabled":false,"admin_controls_event":"paper-settings-btn-shown"};
+
+    $('#paper').paper(options);
+    
+  });
+
+
+
+  "seo ignore"; // seo hint;
+  
+  try {
+    var srTracker = Paperli.Tracker.getTracker("/~api/analytics");
+  } catch( err ) {}
+  
+
+      $(document).ready(function() {
+        if (navigator.cookieEnabled === false) {
+          $('#info_banner')
+            .find('.message').html('We detect your cookies are disabled. For an optimal experience on paper.li, please enable cookies in your browser.').end()
+            .slideDown();
+        }
+      });
+  
+
+    $(document).ready(function(){
+      if ($.browser.msie && parseInt($.browser.version) <= 7){
+        $('#ie_banner')
+          .find('.message').html(paperli.util.translate('message.ie_not_supported')).end()
+          .show();
+        
+        $('#ie_banner .close').click(function(e){
+          e && e.preventDefault();
+          $('#ie_banner').slideUp();
+        });
+      };        
+    });
+  
+
+
+  "seo ignore"; // seo hint;
+
+  if (_.isFunction(_.deep(window, 'twttr.conversion.trackPid')))
+    twttr.conversion.trackPid('l5nw3', { tw_sale_amount: 0, tw_order_quantity: 0 });
+
+
+
+
+
+
+

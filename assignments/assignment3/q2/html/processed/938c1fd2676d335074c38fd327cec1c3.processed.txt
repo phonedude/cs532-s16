@@ -1,0 +1,2876 @@
+http://www.ctvnews.ca/sci-tech/google-maps-cambodia-s-angkor-wat-people-can-visit-historical-site-on-computer-1.1759351
+
+
+
+
+
+
+var videoPageUrl = "http://www.ctvnews.ca/video";
+
+
+
+  @font-face {font-family: 'Flama-Medium';src: url('http://static.ctvnews.ca/bellmedia/ctvnews/css/webfonts/Flama-Medium.eot?s=2_625');src: url('http://static.ctvnews.ca/bellmedia/ctvnews/css/webfonts/Flama-Medium.eot?#iefix&s=2_625') format('embedded-opentype'),url('http://static.ctvnews.ca/bellmedia/ctvnews/css/webfonts/Flama-Medium.woff?s=2_625') format('woff'),url('http://static.ctvnews.ca/bellmedia/ctvnews/css/webfonts/Flama-Medium.svg#font&s=2_625') format('svg');font-weight: normal;font-style:normal;}
+
+
+
+
+
+
+
+
+    var loginWeb = "CTVnews-login-web";
+    var loginMobile = "CTVnews-login-mobile";
+    var profWeb = "CTVnews-profile-web";
+    var profMobile = "CTVNews-profile-mobile";
+		var shareProviders = "facebook,twitter,google,linkedin";
+  
+
+
+  var kruxID = "ImoeZsch";
+
+
+
+			window.axisAuthApi_pageCfg = {
+            destinationCode: 'ctvnews_web',
+            id: 'ctvnews', // id for tracking
+            preloadAIS:false
+        }; 
+
+
+
+        Requests = {
+            QueryString: function (item) {
+                var svalue = location.search.match(new RegExp("[\?\&]" + item + "=([^\&]*)(\&?)", "i"));
+                return svalue ? svalue[1] : svalue;
+            }
+        }
+
+        var destCode = Requests.QueryString('destinationCode');
+        if (destCode) { axisAuthApi_pageCfg.destinationCode = destCode; }
+
+        var mobile = Requests.QueryString('mobile');
+        if (mobile) { axisAuthApi_pageCfg.mobile = { width: mobile } }
+
+        var bilingual = Requests.QueryString('bilingual');
+        if (bilingual) { axisAuthApi_pageCfg.override = { lang: { bilingual: bilingual } } }
+
+        var platform_id = Requests.QueryString('platform'); // Akamai platform_id
+			
+requiresDependency('http://cauth.9c9media.com/auth9/axisAuthApi.js', function() {});
+	
+
+
+requiresDependency('http://static.ctvnews.ca/bellmedia/common/js/elections.js', function() {
+getGainsAndLosses = function(url){  
+  $.getJSON(url, function(data) {
+      var parties = data.parties;
+    if(parties != null && parties.length > 0){
+      gainsAndLosses.length = 0;
+      for(var i=0; i<parties.length; i++){
+        var party = parties[i];
+        party.colour = getPartyColour(party.name);
+        gainsAndLosses.push(party);
+      }
+    }
+
+    // Descending sort
+    gainsAndLosses.sort(function(obj1, obj2){  
+                return obj2.seatsTotal - obj1.seatsTotal;
+              });
+    
+    jQuery("#dynamicGainsAndLosses").html('');
+    
+    for ( var i = 0; i < gainsAndLosses.length; i ++ ){
+      var party = gainsAndLosses[i];
+      
+      jQuery("#dynamicGainsAndLosses").append('<article class="partyResult">' 
+                      +  '<dl class="party' + party.colour + ' clearfix">'                      
+                      +     '<dt class="partyName">' + getPartyDisplayName(party.name) +  '</dt>'
+                      +     '<span class="seatTotal"><span class="totalR">Total</span><br>'
+                      +     '<dd class="currentResult">' + party.seatsTotal + '</dd></span>'
+                      +     '<span class="eAndl">'
+                      +     '<dt>Elected:</dt><dd>' + party.seatsGained + '</dd><br/>'
+                      +     '<dt>Leading:</dt><dd>' + party.seatsLost + '</dd>'
+                      +     '</span>'
+                      +   '</dl>'
+                      + '</article>');
+    }
+  });
+};
+  
+});
+ 
+
+
+
+
+
+
+
+
+
+if(!(window.console && console.log)) {
+  console = {
+    log: function(){},
+    debug: function(){},
+    info: function(){},
+    warn: function(){},
+    error: function(){}
+  };
+}  
+function outputLog(source, str) {
+  try {
+        if (isDebug) {
+            if (console && console.log) {
+                console.log("[ " + source + " ]=" + str);
+            }
+        }
+  } catch (e) {
+  }
+}
+
+
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+
+    
+    googletag.cmd.push(function() {
+      googletag.pubads().collapseEmptyDivs(true);
+                                            
+    googletag.enableServices();
+    });
+    
+ 
+ 
+
+
+
+
+
+
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .banner .container.twoColumns .col1 {max-width: 532px}
+
+  .mainnavigation_wrapper {border-top: 0}
+    
+  .thinnav a.logo_ctvnews {background-image: url("http://www.ctvnews.ca/polopoly_fs/7.440098!/imageType/image/image.png"); width: 72px; height: 35px }
+  .thinnav { background-position:0 0; padding-top: 5px; height: 44px}
+  .thinnav .list.element {padding-top: 5px}
+  .links-search div.search.element a.close {top: 7px}
+  .links-search div.search {padding-top: 8px}
+  
+
+ 
+
+  (function (v, s) {
+    v.type = 'text/javascript';
+    v.async = !0;
+    v.src = location.protocol !== 'https:' ? '//cdn.viafoura.net/vf.js' : '//api.viafoura.com/app/js/vf.js';
+    s.parentNode.insertBefore(v, s)
+  }(document.createElement('script'), document.getElementsByTagName('script')[0]));
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(!(window.console && console.log)) {
+  console = {
+    log: function(){},
+    debug: function(){},
+    info: function(){},
+    warn: function(){},
+    error: function(){}
+  };
+}
+
+
+window.Krux||((Krux=function(){Krux.q.push(arguments);}).q=[]);
+(function(){
+	function retrieve(n){
+		var m, k='kx'+n;
+		if (window.localStorage) {
+			return window.localStorage[k] || "";
+		} else if (navigator.cookieEnabled) {
+			m = document.cookie.match(k+'=([^;]*)');
+			return (m && unescape(m[1])) || "";
+		} else {
+			return '';
+		}
+	} 
+	Krux.user = retrieve('user'); 
+	Krux.segments = retrieve('segs') && retrieve('segs').split(',') || [];
+})();
+
+
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    (function() {
+    var gads = document.createElement('script'); gads.async = true; gads.type = 'text/javascript'; var useSSL = 'https:' == document.location.protocol; gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node); })();
+    
+    googletag.cmd.push(function() {
+                                                
+                		    googletag.defineOutOfPageSlot('/5479/ctv.ctvnews/scitech/stories','div-gpt-ad-outofpage-1-oop').addService(googletag.pubads()).addService(googletag.companionAds());
+          
+                                                                                                                                                                      
+                                                                                                                                                          
+                googletag.pubads().setTargeting("keyvalues",["envr=prod"]);
+                                            googletag.pubads().collapseEmptyDivs(true);
+			googletag.pubads().setTargeting("ksgmnt", Krux.segments);
+			googletag.pubads().setTargeting("u", Krux.user);
+		    googletag.pubads().enableVideoAds();
+    googletag.enableServices();
+    });
+    
+	    jQuery(document).ready(function(){
+      
+        for(var i=1; i < 3; i++){
+          var idArray = [];
+        var gptDivs = jQuery("div[id^='div-gpt-ad']");
+      
+        gptDivs.each( function(index, value){
+          id = jQuery(this).attr("id");
+          idArray.push(id);
+        });
+      
+        var actionedItems = [];
+        gptDivs.each( function(index, value){
+          var id = jQuery(this).attr("id");
+          
+          //if not found in actionedItems
+        if(jQuery.inArray(id, actionedItems) == -1){
+          var indices = [];
+          var idx = jQuery.inArray(id, idArray);
+          while (idx != -1) {
+            indices.push(idx);
+            idx = jQuery.inArray(id, idArray, idx + 1);
+          }
+          
+          if(indices.length > 1){
+            //assign unique id for each div.
+            
+            var repeatingDivs = jQuery("div[id="+id+"]");
+            var count = 0;
+            repeatingDivs.each( function(index, value){
+              if(count>0){
+                var divId = jQuery(this).attr("id");
+                var uniqueCount = parseInt(divId.charAt(divId.length-1));
+                divId = divId.slice(0, divId.lastIndexOf("-")+1).concat(uniqueCount+1);
+                jQuery(this).attr("id", divId);
+              }         
+              count++;
+            });
+            
+            actionedItems.push(id);
+          }
+        }
+        });   
+        }
+        
+      });
+ Google maps Cambodia's Angkor Wat; people can visit historical site on computer  | CTV News 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var gigTitle = "Google maps Cambodia\'s Angkor Wat; people can visit historical site on computer ";
+        var gigDesc = "Cambodia\'s Angkor Wat has been digitally mapped for the first time, allowing people to visit the World Heritage Site from the comfort of their armchair using Google Street View";
+        var gigURL = "http://www.ctvnews.ca/sci-tech/google-maps-cambodia-s-angkor-wat-people-can-visit-historical-site-on-computer-1.1759351"
+        var gigImg = "http://www.ctvnews.ca/polopoly_fs/1.1759352.1396544966!/httpImage/image.jpg_gen/derivatives/landscape_620/image.jpg";
+      
+
+  jQuery.ajaxSetup({
+    cache: 'true'
+  });
+
+ 
+
+
+
+
+detectMobile();
+
+<!--jQuery(document).ready(function() {window.pageLoaded=true});//-->
+
+
+
+
+     googletag.cmd.push(function() {
+       googletag.display('div-gpt-ad-outofpage-1-oop');
+     });
+    
+
+
+Advertisement
+
+
+  googletag.cmd.push(function() {
+                                
+            
+                  googletag.defineSlot('/5479/ctv.ctvnews/scitech/stories', [[728,90]], 'div-gpt-ad-728_90-1')
+            .addService(googletag.pubads())
+	  	  	  .addService(googletag.companionAds());  
+    });
+
+
+  
+						googletag.cmd.push(function() { googletag.display("div-gpt-ad-728_90-1"); });         
+					
+
+
+
+
+
+
+
+
+Skip to Main Content
+
+
+
+
+
+
+
+
+CTV News
+
+
+Mobile
+
+
+CTV
+
+
+
+
+
+
+
+
+ Live Now:
+			                  CTV News Channel
+
+
+
+
+
+
+HOT TOPICS Dolphins
+Photoshop experiment
+Pope Francis
+
+
+
+
+Search
+
+
+
+Search CTV News
+
+X
+
+
+ 
+
+
+
+
+
+
+
+
+
+                                  NEWS
+                                
+
+
+
+
+
+
+                                  VIDEO
+                                
+
+
+
+
+
+
+                                  LOCAL
+                                
+
+
+
+
+
+
+SHOWS
+
+
+
+
+
+
+CTV NEWS CHANNEL
+
+
+
+
+
+
+MYNEWS
+
+
+
+
+
+
+                                  CONNECT
+                                
+
+
+
+
+
+
+                                  ABOUT
+                                
+
+
+
+
+
+
+
+
+
+
+Sections 
+
+
+CTV News
+
+
+Canada
+
+
+World
+
+
+Entertainment
+
+
+
+
+
+
+
+
+
+Politics
+
+
+Sci-Tech
+
+
+Health
+
+
+Sports
+
+
+
+
+
+
+
+
+
+Lifestyle
+
+
+Autos
+
+
+Business
+
+
+5 Things to Know
+
+
+
+
+
+
+
+
+
+Politics: Don Martin
+
+
+Weather
+
+
+
+
+
+
+
+Browse 
+
+
+Photo Galleries
+
+
+
+
+
+
+ 
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289407").click(click_7289407);
+            jQuery(".link_id_7289407 .close").click(click_7289407);
+          });
+          
+
+
+          function click_7289407() {
+            var itemSelector = ".item_7289407";
+            var selector = ".link_id_7289407";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+
+
+
+Sections 
+
+
+Latest
+
+
+Lifestyle
+
+
+Entertainment
+
+
+Finance
+
+
+
+
+
+
+
+
+
+Health
+
+
+Captured on Camera
+
+
+MyNews
+
+
+Autos
+
+
+
+
+
+
+
+Shows 
+
+
+CTV National News
+
+
+Canada AM
+
+
+Power Play
+
+
+CTV QP
+
+
+
+
+
+
+
+
+
+W5
+
+
+
+
+
+
+
+LIVE 
+
+
+CTV News LIVE
+
+
+CTV News GO
+
+
+Video Help
+
+
+
+
+
+
+ 
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289411").click(click_7289411);
+            jQuery(".link_id_7289411 .close").click(click_7289411);
+          });
+          
+
+
+          function click_7289411() {
+            var itemSelector = ".item_7289411";
+            var selector = ".link_id_7289411";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+
+
+
+CTV 
+
+
+Atlantic
+
+
+Calgary
+
+
+Edmonton
+
+
+Kitchener
+
+
+
+
+
+
+
+
+
+Montreal
+
+
+Northern Ontario
+
+
+Ottawa
+
+
+Regina
+
+
+
+
+
+
+
+
+
+Saskatoon
+
+
+Toronto
+
+
+Vancouver
+
+
+Winnipeg
+
+
+
+
+
+
+
+CTV Two 
+
+
+Alberta
+
+
+Atlantic
+
+
+Barrie
+
+
+London
+
+
+
+
+
+
+
+
+
+Ottawa
+
+
+Vancouver Island
+
+
+Windsor
+
+
+
+
+
+
+ 
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289413").click(click_7289413);
+            jQuery(".link_id_7289413 .close").click(click_7289413);
+          });
+          
+
+
+          function click_7289413() {
+            var itemSelector = ".item_7289413";
+            var selector = ".link_id_7289413";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289447").click(click_7289447);
+            jQuery(".link_id_7289447 .close").click(click_7289447);
+          });
+          
+
+
+          function click_7289447() {
+            var itemSelector = ".item_7289447";
+            var selector = ".link_id_7289447";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7636235").click(click_7636235);
+            jQuery(".link_id_7636235 .close").click(click_7636235);
+          });
+          
+
+
+          function click_7636235() {
+            var itemSelector = ".item_7636235";
+            var selector = ".link_id_7636235";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289452").click(click_7289452);
+            jQuery(".link_id_7289452 .close").click(click_7289452);
+          });
+          
+
+
+          function click_7289452() {
+            var itemSelector = ".item_7289452";
+            var selector = ".link_id_7289452";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+
+
+
+Follow CTV News 
+
+
+Facebook
+
+
+Twitter
+
+
+Google +
+
+
+Pinterest
+
+
+
+
+
+
+
+
+
+YouTube
+
+
+Instagram
+
+
+Vine
+
+
+LinkedIn
+
+
+
+
+
+
+
+Contact 
+
+
+Contact CTV News
+
+
+Newsbreaker
+
+
+
+
+
+
+
+Subscribe 
+
+
+RSS Feeds
+
+
+Breaking news alerts
+
+
+Newsletters
+
+
+
+
+
+
+
+LIVE 
+
+
+CTV News LIVE
+
+
+CTV News GO
+
+
+Video Help
+
+
+
+
+
+
+ 
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289462").click(click_7289462);
+            jQuery(".link_id_7289462 .close").click(click_7289462);
+          });
+          
+
+
+          function click_7289462() {
+            var itemSelector = ".item_7289462";
+            var selector = ".link_id_7289462";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+
+
+
+SECTIONS 
+
+
+About Bell Media
+
+
+CTV News Mobile
+
+
+Contests
+
+
+CTV News Stox
+
+
+
+
+
+
+
+
+
+CTV News Channel
+
+
+CTV News Channel Schedule
+
+
+CTV Schedule
+
+
+
+
+
+
+
+BIOS 
+
+
+CTV National News Team
+
+
+CTV News Digital Team
+
+
+CTV News Channel
+
+
+Canada AM Bios
+
+
+
+
+
+
+
+
+
+W5 Team
+
+
+
+
+
+
+ 
+
+          jQuery(document).ready(function() {
+            jQuery(".item_7289475").click(click_7289475);
+            jQuery(".link_id_7289475 .close").click(click_7289475);
+          });
+          
+
+
+          function click_7289475() {
+            var itemSelector = ".item_7289475";
+            var selector = ".link_id_7289475";
+            var shouldOpen = ((jQuery(selector + ":visible").size() <= 0) && (jQuery(selector + " div").size() > 0));
+            if (jQuery(".drop_down:visible").size() > 0) {
+              jQuery(".drop_down:visible").hide();
+              jQuery(".mainnavigation_item").removeClass("active");
+            }
+            if(shouldOpen) {
+              jQuery(selector).slideDown();
+              jQuery(itemSelector).toggleClass("active");
+            }
+          }
+      
+
+
+
+
+  googletag.cmd.push(function() {
+                                
+            
+      			      googletag.defineSlot('/5479/ctv.ctvnews/scitech/stories', [[970,250]], 'div-gpt-ad-970_250-5')
+            .addService(googletag.pubads())
+	  	  	  .addService(googletag.companionAds());  
+    });
+
+
+  
+						googletag.cmd.push(function() { googletag.display("div-gpt-ad-970_250-5"); });         
+					
+
+
+
+
+
+
+
+
+
+
+
+Google maps Cambodia's Angkor Wat; people can visit historical site on computer 
+
+ A Cambodian technician carries a back-pack mounted with a device housing 15 cameras as he demonstrates the technique used to digitally map the Angkor Wat temple, part of the Angkor architectural complex in north-western Cambodia on April 3, 2014. (AFP / Christophe Archambault)
+
+
+ 
+
+              gigya.socialize.showShareBarUI(createArticleGigyaParams(gigTitle, gigURL, gigDesc, gigImg, "www", "whenRequired", "componentDiv", "http://static.ctvnews.ca", "right"));
+          
+ 
+
+
+
+
+
+
+
+
+
+		
+             Relaxnews
+
+
+              Published Thursday, April 3, 2014 1:41PM EDT
+            
+
+
+
+
+	(ANGKOR WAT, Cambodia-AFP) - Cambodia's Angkor Wat has been digitally mapped for the first time, allowing people to visit the World Heritage Site from the comfort of their armchair using Google Street View.
+
+	The project is part of a growing trend aimed at Internet users who might otherwise never have the chance to visit the cultural and architectural wonders of the world.
+
+	Google took more than a million photos of Angkor -- the result is 90,000 360-degree views of more than 100 temples.
+
+	Street View allows web users to zoom in on an area, and then explore.
+
+	"Recently we've done the Taj Mahal, the Grand Canyon, Mount Fuji," said Manik Gupta, project manager at Google Maps.
+
+	"But the scale of Angkor Wat is what makes this unprecedented," he told AFP at the project's launch on Thursday.
+
+	"It is such an iconic place, people say it is the eighth wonder of the world, and it gives you this incredible sense -- look at every single small nook and cranny, you'll find art work."
+
+	The Angkor Archaeological Park contains the remains of the different capitals of the Khmer Empire, dating from the 9th to the 15th century.
+
+Cars, trains and trekkers 
+
+	To create the project Google used a new innovation called "Trekker".
+
+	Fifteen digital cameras are attached by a long pole to a backpack, and each one records a 75 million mega pixel photo every two and a half seconds.
+
+	By walking around the Angkor Wat temple complex, they are able to photograph areas that Google's Street View cars cannot reach.
+
+	"Street View launched in 2007, and since then we've amassed a huge amount of experience. We've even used snow mobiles and trains, and Trekker is the latest tool," Gupta said.
+
+	Google Maps was launched in 2005, followed by Street View two years later and more recently Google Art, which provides tours of major galleries and museums.
+
+	For the latest project, five local men were tasked with trekking around the temples for up to eight hours a day, to record what many people say is the eighth wonder of the world.
+
+	A huge amount of Cambodia's heritage was destroyed during the Khmer Rouge regime in the late 1970s.
+
+	"If there is a country where this is needed the most, it is Cambodia," said Amit Sood, Google's director of cultural heritage, which is trying to bring as many international cultural artifacts online as possible.
+
+	"There is so much about Cambodia that is not known in the west, because it was erased, but Cambodia has a very rich cultural heritage."
+
+Digitised museums booming 
+
+	About 4.2 million tourists visited Cambodia last year, a 17 percent increase on 2012, the majority of whom visited the temple complex.
+
+	Sood believes that by having Angkor Wat online for people to enjoy, it will encourage more people to come to see the real thing, like with art galleries.
+
+	"All digitised museums are experiencing unprecedented growth. Physical attendance is booming," Sood told AFP.
+
+	"There definitely isn't a negative effect."
+
+	But although Google offers a visual digital experience, allowing web users to spot things that would be easily missed by the naked eye, some visitors say that it could ruin the moment you see something for the first time.
+
+	"I wouldn't go see it on Google Street View before I went there," 21 year old Dutch backpacker Liesbeth Gerritsen told AFP in the shade of one of the long carved corridors at Angkor Wat.
+
+	"For me it is cooler to (come) and see it, and then look it up afterwards."
+
+	And travel experts believe nothing can truly replace experiencing something on your own.
+
+	"I can't imagine that seeing pictures online or a 360 view as presented by Google Maps would be a real substitute for actually going there," said Tom Sturrock, a Bangkok-based travel editor and writer.
+
+	"The online experience is never going to be an adequate replacement for actually being there when the sun comes up at Angkor Wat."
+
+
+
+
+Related Stories
+
+
+
+Nokia unveils Lumia 930 phone
+
+
+
+
+Meet Cortana, Microsoft's answer to Apple's Siri
+
+
+
+
+PayPal introduces mobile purchasing at more than 50 Toronto eateries 
+
+
+
+
+
+
+
+            var paragraphs = jQuery(".articleBody").children("p").length;
+            var sideItems = jQuery(".sideItems");
+                        if(paragraphs > 3) {
+              sideItems.fadeOut("fast", function() {
+                var thirdItem = jQuery(".articleBody").children().eq(2);
+                jQuery(".sideItems").insertAfter(thirdItem);
+                sideItems.fadeIn("fast");
+              });
+            }
+          
+
+
+ 
+
+              gigya.socialize.showShareBarUI(createArticleGigyaParams(gigTitle, gigURL, gigDesc, gigImg, "www", "whenRequired", "componentBottomDiv", "http://static.ctvnews.ca", "right"));
+          
+
+
+
+
+
+
+
+
+
+    #lightbox .close {
+        max-width:620px;
+    }
+    
+    #lightboxcontent {
+        max-width:620px;
+    }
+    
+
+Report Error
+
+
+
+
+
+
+MOST WATCHED
+
+
+
+
+
+
+false
+
+
+
+Canada AM: Celine Dion's Florida home up for sale
+
+
+
+Air Date: February 18, 2016
+
+
+
+
+
+
+
+
+false
+
+
+
+Canada AM: Toronto panda frolics in snow
+
+
+
+Air Date: February 18, 2016
+
+
+
+
+
+
+
+
+false
+
+
+
+Man. couple delivers baby early, in a toilet
+
+
+
+Air Date: February 17, 2016
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+  var mySlider;
+  jQuery(document).ready(function() {
+    requiresDependency('http://static.ctvnews.ca/bellmedia/common/js/jquery.bxslider.min.js', function() {
+        mySlider = $('#rotator_1532350346_7_535350').bxSlider({
+                      
+                      
+                      
+                      
+                                            minSlides: 1,
+                      slideWidth:185,
+                      onSlideBefore : function ( $slideElement, oldIndex, newIndex ) {
+                        getCarouselSlide7_535350_1532350346("7.535350", "rotator_1532350346_7_535350", newIndex+1, "7_535350_1532350346");
+                      },
+                      moveSlides: 3,
+                      infiniteLoop:true,hideControlOnEnd: false,
+                      maxSlides: 3,
+                                              prevText: 'Previous'
+                                          });
+        
+        $('#rotator_1532350346_7_535350').css("visibility", "visible");
+                  $('.bx-wrapper').addClass("loop");
+        
+      });
+      
+      // get first slide
+      getCarouselSlide7_535350_1532350346("7.535350", "rotator_1532350346_7_535350", 1, "7_535350_1532350346");
+  });
+  
+  
+  function getCarouselSlide7_535350_1532350346(path, containingDiv, pageNum, carouselUniqueId) {
+  
+    if ( loadedPageNum7_535350_1532350346.indexOf(pageNum) != -1 ){
+      // slide already loaded, no need to do anything
+    } else {
+      // slide not loaded yet, load it.
+        if (path != null) {
+          
+          //var carouselId = path.replace(/\./g, "_");
+          
+          var maxItemsPerPage = 3;
+          var startIndex = (maxItemsPerPage * pageNum) - maxItemsPerPage;
+          var endIndex = startIndex + maxItemsPerPage;
+          
+          if ( endIndex > 12 ) {
+            endIndex = 12;
+          }
+          
+          // need to specify the carousel parent site contentID to correctly render video link with dedicated video page
+          var targetPath = "2.625/" + path + "?ot=example.AjaxPageLayout.ot";
+          
+          if (pageNum != null) {
+            targetPath = targetPath + "&pageNum=" + pageNum;
+          }
+      
+          // unique carousel id
+          targetPath = targetPath + "&carouselUniqueId=7_535350_1532350346";
+          
+          // teaser image deriv and img width
+          targetPath = targetPath + "&imgDeriv=box";
+          targetPath = targetPath + "&imgWidth=180";
+          targetPath = targetPath + "&teaserHeadlineType=normal";
+          
+          targetPath = targetPath + "&isAjax=true";                   
+      
+          jQuery.ajax({
+            url : targetPath,
+            success : function(data) {
+              
+              //alert(data);  
+              //alert('done ajax: carouselId=' + carouselId + ', startIndex=' + startIndex + ', endIndex=' + endIndex);
+              
+              if ( (endIndex - startIndex) < maxItemsPerPage ) {
+                 startIndex = endIndex - maxItemsPerPage;
+                 if ( startIndex < 0 ) {
+                  startIndex = 0;
+                 }
+              }
+              
+              for ( k = startIndex; k < endIndex ; k ++ ){
+                var carouselIndex = k + 1; // carousel index is 1-based
+                
+                //$("#carousel" + carouselId + "_"+carouselIndex).html($(data).find("#carousel" + carouselId + "_"+carouselIndex).html());
+                if("true" == "true"){
+                  $("li.bx-clone #carousel7_535350_1532350346_"+carouselIndex).html($(data).find("#carousel7_535350_1532350346_"+carouselIndex).html());
+                  $("li #carousel7_535350_1532350346_"+carouselIndex).html($(data).find("#carousel7_535350_1532350346_"+carouselIndex).html());
+                }else{
+                  $("#carousel7_535350_1532350346_"+carouselIndex).html($(data).find("#carousel7_535350_1532350346_"+carouselIndex).html());
+                }
+              
+              }
+              
+              // flag this page has been loaded
+              loadedPageNum7_535350_1532350346.push(pageNum);
+              
+            }
+          });
+        }
+    }
+  }
+  
+  // keep track of which carousel page has been loaded.  If loaded, no need to load again.
+  var loadedPageNum7_535350_1532350346 = new Array();
+  
+
+
+
+
+    var catID = 'Pre-Moderated';
+    var comID = '1.1759351';
+    var commentWidgetInitParams = createCommentWidgetInitParams(catID, comID, loginWeb, loginMobile, shareProviders);
+		var commentCountWidget = createMinGigyaParams(catID, comID, ".comments");
+    
+    gigya.comments.getComments(commentCountWidget);
+    gigya.comments.showCommentsUI(commentWidgetInitParams);
+  
+
+
+ More News from Sci-Tech
+
+
+
+
+
+
+
+
+
+
+
+
+Supreme Court agrees to hear case on search injunction against Google
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Canada's seals swimming down to Massachusetts
+
+
+'Gmailify' your inbox: Google offers services to users without Gmail address
+
+
+L.A. hospital pays 40 bitcoins to end 'ransomware' attack
+
+
+Federal and provincial auditors general combine forces to audit GHG emissions
+
+
+X Prize aims to show AI is friend not foe
+
+
+  jQuery(document).ready(function(){
+    var listItems = jQuery(".listItem_" + "7_535576_1406978062_1532350427");
+    var currentTime = new Date().getTime();
+    var updateTimer = 60*60*1000;
+    var tenMinutesAgo = currentTime - updateTimer;
+    var updatedString = "UPDATED";
+    var newString = "NEW";
+    listItems.each(function() {
+      var item = $(this);
+      var modifiedTime = item.attr("updated");
+      var publishedTime = item.attr("created");
+      var linkElement = item.find("a").first();
+      if (modifiedTime != undefined && publishedTime != undefined) {
+        modifiedTime = new Number(modifiedTime);
+        publishedTime = new Number(publishedTime);
+        if (modifiedTime > publishedTime && currentTime > modifiedTime && modifiedTime > tenMinutesAgo) {
+          linkElement.html("<span class='tag'>" + updatedString + "</span>" + linkElement.html());
+        } else if (currentTime > publishedTime && publishedTime > tenMinutesAgo) {
+          linkElement.html("<span class='tag'>" + newString + "</span>" + linkElement.html());
+        }
+      }
+    });
+  });
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+       jQuery(function() {
+          jQuery('a.galleryitem').lightBox();
+                              jQuery("a.galleryitem").click(function() {
+            trackLightbox(false, jQuery(this).attr("title"));
+          });
+                 });
+        
+      
+
+       jQuery(function() {
+                                Tracking.setValue(32,"Relaxnews");
+                             });
+        
+      
+
+ 
+
+
+
+
+
+
+  googletag.cmd.push(function() {
+                                
+            
+                  googletag.defineSlot('/5479/ctv.ctvnews/scitech/stories', [[300,250],[300,600],[300,1050]], 'div-gpt-ad-300_250-2')
+            .addService(googletag.pubads())
+	  	  	  .addService(googletag.companionAds());  
+    });
+
+
+  
+						googletag.cmd.push(function() { googletag.display("div-gpt-ad-300_250-2"); });         
+					
+
+
+Advertisement
+
+
+
+
+CTV News Video Network
+
+
+
+
+
+
+false
+
+
+
+Health care for refugees fully restored as of April 2016
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CTV News
+
+
+
+
+
+
+
+
+
+
+  var mySlider;
+  jQuery(document).ready(function() {
+    requiresDependency('http://static.ctvnews.ca/bellmedia/common/js/jquery.bxslider.min.js', function() {
+        mySlider = $('#rotator_1532350466_7_535213').bxSlider({
+                      
+                      
+                      
+                      
+                                            minSlides: 1,
+                      slideWidth:300,
+                      onSlideBefore : function ( $slideElement, oldIndex, newIndex ) {
+                        getCarouselSlide7_535213_1532350466("7.535213", "rotator_1532350466_7_535213", newIndex+1, "7_535213_1532350466");
+                      },
+                      moveSlides: 1,
+                      infiniteLoop:true,hideControlOnEnd: false,
+                      maxSlides: 1,
+                                              prevText: 'Previous'
+                                          });
+        
+        $('#rotator_1532350466_7_535213').css("visibility", "visible");
+                  $('.bx-wrapper').addClass("loop");
+        
+      });
+      
+      // get first slide
+      getCarouselSlide7_535213_1532350466("7.535213", "rotator_1532350466_7_535213", 1, "7_535213_1532350466");
+  });
+  
+  
+  function getCarouselSlide7_535213_1532350466(path, containingDiv, pageNum, carouselUniqueId) {
+  
+    if ( loadedPageNum7_535213_1532350466.indexOf(pageNum) != -1 ){
+      // slide already loaded, no need to do anything
+    } else {
+      // slide not loaded yet, load it.
+        if (path != null) {
+          
+          //var carouselId = path.replace(/\./g, "_");
+          
+          var maxItemsPerPage = 1;
+          var startIndex = (maxItemsPerPage * pageNum) - maxItemsPerPage;
+          var endIndex = startIndex + maxItemsPerPage;
+          
+          if ( endIndex > 5 ) {
+            endIndex = 5;
+          }
+          
+          // need to specify the carousel parent site contentID to correctly render video link with dedicated video page
+          var targetPath = "2.625/" + path + "?ot=example.AjaxPageLayout.ot";
+          
+          if (pageNum != null) {
+            targetPath = targetPath + "&pageNum=" + pageNum;
+          }
+      
+          // unique carousel id
+          targetPath = targetPath + "&carouselUniqueId=7_535213_1532350466";
+          
+          // teaser image deriv and img width
+          targetPath = targetPath + "&imgDeriv=landscape";
+          targetPath = targetPath + "&imgWidth=300";
+          targetPath = targetPath + "&teaserHeadlineType=overlay";
+          
+          targetPath = targetPath + "&isAjax=true";                   
+      
+          jQuery.ajax({
+            url : targetPath,
+            success : function(data) {
+              
+              //alert(data);  
+              //alert('done ajax: carouselId=' + carouselId + ', startIndex=' + startIndex + ', endIndex=' + endIndex);
+              
+              if ( (endIndex - startIndex) < maxItemsPerPage ) {
+                 startIndex = endIndex - maxItemsPerPage;
+                 if ( startIndex < 0 ) {
+                  startIndex = 0;
+                 }
+              }
+              
+              for ( k = startIndex; k < endIndex ; k ++ ){
+                var carouselIndex = k + 1; // carousel index is 1-based
+                
+                //$("#carousel" + carouselId + "_"+carouselIndex).html($(data).find("#carousel" + carouselId + "_"+carouselIndex).html());
+                if("true" == "true"){
+                  $("li.bx-clone #carousel7_535213_1532350466_"+carouselIndex).html($(data).find("#carousel7_535213_1532350466_"+carouselIndex).html());
+                  $("li #carousel7_535213_1532350466_"+carouselIndex).html($(data).find("#carousel7_535213_1532350466_"+carouselIndex).html());
+                }else{
+                  $("#carousel7_535213_1532350466_"+carouselIndex).html($(data).find("#carousel7_535213_1532350466_"+carouselIndex).html());
+                }
+              
+              }
+              
+              // flag this page has been loaded
+              loadedPageNum7_535213_1532350466.push(pageNum);
+              
+            }
+          });
+        }
+    }
+  }
+  
+  // keep track of which carousel page has been loaded.  If loaded, no need to load again.
+  var loadedPageNum7_535213_1532350466 = new Array();
+  
+
+
+Most Popular Stories 
+
+
+1
+Dolphin dies after being passed around on beach for photographs
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2782852","#1_2782852_1532350510"));
+      
+
+
+
+2
+'Too dangerous to create': Apple opposes court order to unlock iPhone
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2781514","#1_2781514_1532350517"));
+      
+
+
+3
+  
+
+
+
+
+3
+The ideal man: Here's how he looks in 19 different countries
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2783019","#1_2783019_1532350522"));
+      
+
+
+
+4
+'Mob Wives' reality star Angela 'Big Ang' Raiola dies
+
+
+
+5
+'This is not a joke': Cape Breton offered as refuge from Trump presidency
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2781169","#1_2781169_1532350531"));
+      
+
+
+1
+  
+
+
+
+
+6
+Manny Pacquiao says he respects Nike's decision to drop him 
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2782756","#1_2782756_1532350535"));
+      
+
+
+
+7
+Toyota recalls 150,000 SUVs in Canada after seatbelt concerns arise 
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2782664","#1_2782664_1532350538"));
+      
+
+
+1
+  
+
+
+
+
+8
+After battle with cancer, teen made prime minister for week
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2781607","#1_2781607_1532350540"));
+      
+
+
+6
+  
+
+
+
+
+9
+Man found guilty in brutal murder of Winnipeg grandmother
+
+
+1
+  
+
+
+
+
+10
+South Korea's spy service says North Korea is preparing attacks
+
+
+
+
+
+
+        gigya.comments.getComments(createMinGigyaParams("Pre-Moderated","1.2782582","#1_2782582_1532350543"));
+      
+
+
+
+  jQuery(document).ready(function(){
+    var listItems = jQuery(".listItem_" + "7_535222_1434559683_1532350488");
+    var currentTime = new Date().getTime();
+    var updateTimer = 60*60*1000;
+    var tenMinutesAgo = currentTime - updateTimer;
+    var updatedString = "UPDATED";
+    var newString = "NEW";
+    listItems.each(function() {
+      var item = $(this);
+      var modifiedTime = item.attr("updated");
+      var publishedTime = item.attr("created");
+      var linkElement = item.find("a").first();
+      if (modifiedTime != undefined && publishedTime != undefined) {
+        modifiedTime = new Number(modifiedTime);
+        publishedTime = new Number(publishedTime);
+        if (modifiedTime > publishedTime && currentTime > modifiedTime && modifiedTime > tenMinutesAgo) {
+          linkElement.html("<span class='tag'>" + updatedString + "</span>" + linkElement.html());
+        } else if (currentTime > publishedTime && publishedTime > tenMinutesAgo) {
+          linkElement.html("<span class='tag'>" + newString + "</span>" + linkElement.html());
+        }
+      }
+    });
+  });
+
+
+
+
+
+
+
+ Don't Miss
+
+
+
+
+
+
+false
+
+
+
+Peek inside Celine Dion's Florida home up for sale $45.5M
+
+
+
+
+
+
+
+
+
+false
+
+
+
+Delighted panda frolics in the snow at Toronto Zoo
+
+
+
+
+
+
+
+false
+
+
+
+Shirts of budding B.C. designer included in Oscar swag
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+jQuery(document).ready(
+  function(){
+    window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '404047912964744', // App ID
+          channelUrl : 'http://static.ctvnews.ca/bellmedia/common/channel.html', // Channel File
+          status     : true, // check login status
+          cookie     : true, // enable cookies to allow the server to access the session
+          xfbml      : true  // parse XFBML
+        });
+        // Additional initialization code here
+    };
+    requiresDependency('//connect.facebook.net/en_US/all.js#xfbml=1&appId=404047912964744', function() {}, 'facebook-jssdk');
+  });
+
+
+
+
+
+
+
+
+
+  /* UGC Widget 4.0.12 Powered by Filemobile (May 8 2014) */
+  /* vhost:43 App ID:6529 Widget ID:7231 */
+
+  var uploaderUrl = "//upload.ctvnews.ca"; /* This should not be changed */
+  var widgetType = 15; /* This should not be changed */
+
+  /* Optional variables - Set these if you wish to override the widget settings */
+  var uploaderName = "main"; /* If 2 or more widgets on single page, set unique names for each */
+  var channelId = ""; /* Set this to override the channel ID in the widget settings */
+  var groupId = ""; /* Set this to override the group ID in the widget settings */
+  var width = ""; /* Set this if you require a fixed width for the Uploader */
+  var height = "150"; /* Set this if you require an initial set height for the Uploader */
+
+
+
+You will need to enable JavaScript in order to use the Widget.
+
+
+
+
+
+
+
+
+
+
+ CANADA
+
+
+
+
+
+
+
+
+
+
+
+
+U.S. 'no-fly list' may have ensnared Canadian children, Goodale says
+
+
+
+
+
+
+
+
+Five suspects from Chilliwack, B.C. facing 50 weapons, trafficking charges
+
+
+Northern Quebec prisons housing Inuit are unsanitary, unacceptable: report
+
+
+
+
+
+
+
+ WORLD
+
+
+
+
+
+
+
+
+
+
+
+
+Pope on Trump: Building border walls, instead of building bridges, isn't Christian
+
+
+
+
+
+
+
+
+Uganda: Main opposition candidate briefly arrested on election day
+
+
+Cameron heads into 'make-or-break' summit with EU membership at stake
+
+
+
+
+
+
+
+ ENTERTAINMENT
+
+
+
+
+
+
+
+
+
+
+
+
+Cosby demands money back from accuser in sex assault case
+
+
+
+
+
+
+
+
+'Mob Wives' reality star Angela 'Big Ang' Raiola dies
+
+
+More domestic-violence charges filed against Don McLean
+
+
+
+
+
+
+
+
+
+ HEALTH
+
+
+
+
+
+
+
+
+
+
+
+
+Pope suggests artificial contraception for women threatened by Zika
+
+
+
+
+
+
+
+
+Right gut bacteria may protect against malnutrition: study 
+
+
+N.S. woman with lymphedema not ending campaign over complaint 
+
+
+
+
+
+
+
+ POLITICS
+
+
+
+
+
+
+
+
+
+
+
+
+Shipbuilders call for federal strategy overhaul to avoid an 'embarrassment'
+
+
+
+
+
+
+
+
+'We made a mistake': Alberta apologizes for blocking online news outlet
+
+
+McCallum, Philpott cancelling controversial cuts to refugee health care
+
+
+
+
+
+
+
+ SCI-TECH
+
+
+
+
+
+
+
+
+
+
+
+
+Supreme Court agrees to hear case on search injunction against Google
+
+
+
+
+
+
+
+
+Canada's seals swimming down to Massachusetts
+
+
+'Gmailify' your inbox: Google offers services to users without Gmail address
+
+
+
+
+
+
+
+
+
+ BUSINESS
+
+
+
+
+
+
+
+
+
+
+
+
+First Saks Fifth Avenue store opens in Toronto 
+
+
+
+
+
+
+
+
+Sask. premier wants Ottawa to remember the oil sector
+
+
+Finning to cut up to 500 additional jobs in 2016, on top of 2015 downsizing
+
+
+
+
+
+
+
+ SPORTS
+
+
+
+
+
+
+
+
+
+
+
+
+Manny Pacquiao says he respects Nike's decision to drop him 
+
+
+
+
+
+
+
+
+Judge rejects plea deal for ex-NFL star Darren Sharper
+
+
+Shamrock, Gracie set for 3rd fight in epic MMA rivalry
+
+
+
+
+
+
+
+ AUTOS
+
+
+
+
+
+
+
+
+
+
+
+
+Toyota recalls 150,000 SUVs in Canada after seatbelt concerns arise 
+
+
+
+
+
+
+
+
+Garneau looks to Senate for advice on future of driverless cars
+
+
+Cadillac CT6 luxury sedan arrives in Canada in March
+
+
+
+
+
+
+
+
+
+ Lifestyle
+
+
+
+
+
+
+
+
+
+
+
+
+Why you should try smiling more often
+
+
+
+
+
+
+
+
+Financial exec turns cupcake mogul with Prairie Girl bakery, cookbook 
+
+
+The ideal man: Here's how he looks in 19 different countries
+
+
+
+
+
+
+
+ Canada AM
+
+
+
+
+
+
+
+
+
+
+
+
+Meet the 12-year-old painter making waves in the art world 
+
+
+
+
+
+
+
+
+'Too dangerous to create': Apple opposes court order to unlock iPhone
+
+
+Frugal tips to build an amazing makeup kit
+
+
+
+
+
+
+
+ In Pictures
+
+
+
+
+
+
+ 
+
+
+
+
+
+Winners of the 2015 World Press Photo Contest
+
+
+
+
+
+
+
+
+Heavy snow blankets central and eastern Canada
+
+
+Property crumbles after B.C. retaining wall collapse
+
+
+
+
+
+
+
+
+
+
+
+
+About CTV
+
+
+Careers
+
+
+CTV News Stox
+
+
+Advertise on CTV
+
+
+Bell Media Press Room
+
+
+Privacy Policy
+
+
+Terms and Conditions
+
+
+Producer Guidelines
+
+
+Contact Us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Local News
+
+CTV Atlantic News
+
+
+CTV Calgary News
+
+
+CTV Edmonton News
+
+
+CTV Kitchener News
+
+
+CTV Montreal News
+
+
+CTV Northern Ontario News
+
+
+CTV Ottawa News
+
+
+CTV Regina News
+
+
+CTV Saskatoon News
+
+
+CTV Toronto News
+
+
+CTV Vancouver News
+
+
+CTV Winnipeg News
+
+
+
+
+
+CTV Two
+
+Atlantic
+
+
+Alberta
+
+
+Barrie
+
+
+London
+
+
+Ottawa
+
+
+Windsor
+
+
+Vancouver Island
+
+
+
+
+
+CTV News Programs
+
+CTV National News
+
+
+Canada AM
+
+
+Power Play
+
+
+W5
+
+
+CTV Question Period
+
+
+
+
+
+
+Video Sign In
+Video Sign Out
+
+
+	requiresDependency('http://cauth.9c9media.com/auth9/axisAuthApi.js', function() {
+  	axisAuthApi.events.addEvent('on_authentication_state_change', function (authenticationStatus, options) {
+  		if (authenticationStatus == true) { 
+  			$('#divLogIn-7_489985_1423585512_1532350811').hide(); $('#divLogOut-7_489985_1423585512_1532350811').show(); 
+			}
+  		else { 
+				$('#divLogIn-7_489985_1423585512_1532350811').show(); $('#divLogOut-7_489985_1423585512_1532350811').hide(); 
+			}
+  	});
+		});
+				function jump(h){
+    var top = document.getElementById(h).offsetTop;
+    window.scrollTo(0, top);
+}
+	
+
+
+CTV News GO
+
+
+Video Help
+
+
+CTV News on Mobile
+
+
+
+
+
+Site login
+
+
+	Please read our guidelines before commenting on stories.
+
+
+
+
+View Mobile Site
+
+
+Use of this Website assumes acceptance of Terms & Conditions and Privacy Policy© 2016  All rights reserved.Bell Media Television
+Back to top
+ 
+
+
+
+
+
+                var _sf_async_config={uid:2895,domain:'ctv.ca'};
+    var loadPublishflow = function() {
+      jQuery(window).load(function() {
+        window._sf_endpt=(new Date()).getTime();
+      });
+    };
+    var pf_src = ('https:'   == document.location.protocol ? 'https://s3.amazonaws.com/'   : 'http://s3.amazonaws.com/') + 'publishflow/javascript/data.js';
+    requiresDependency(pf_src,loadPublishflow);
+ 
+try {
+  if (window.external.msIsSiteMode()) {
+    window.external.msSiteModeClearJumpList();
+    window.external.msSiteModeCreateJumpList("News Headlines");
+                  window.external.msSiteModeAddJumpListItem("Live updates: Tim Bosma murder trial resumes in Hamilton, Ont.", "http://www.ctvnews.ca/canada/live-updates-tim-bosma-murder-trial-resumes-in-hamilton-ont-1.2783083", "http://ctvnews.cookieless.ca/bellmedia/common/img/favicon.ico", "self");
+              window.external.msSiteModeAddJumpListItem("Ending airstrikes against ISIS part of 'forward-looking approach': Sajjan", "http://www.ctvnews.ca/politics/ending-airstrikes-against-isis-part-of-forward-looking-approach-sajjan-1.2783143", "http://ctvnews.cookieless.ca/bellmedia/common/img/favicon.ico", "self");
+              window.external.msSiteModeAddJumpListItem("Man found guilty in brutal murder of Winnipeg grandmother", "http://www.ctvnews.ca/canada/man-found-guilty-in-brutal-murder-of-winnipeg-grandmother-1.2782800", "http://ctvnews.cookieless.ca/bellmedia/common/img/favicon.ico", "self");
+              window.external.msSiteModeAddJumpListItem("McCallum, Philpott cancelling controversial cuts to refugee health care", "http://www.ctvnews.ca/politics/mccallum-philpott-cancelling-controversial-cuts-to-refugee-health-care-1.2783365", "http://ctvnews.cookieless.ca/bellmedia/common/img/favicon.ico", "self");
+              window.external.msSiteModeAddJumpListItem("Pope suggests artificial contraception for women threatened by Zika", "http://www.ctvnews.ca/health/pope-suggests-artificial-contraception-for-women-threatened-by-zika-1.2783232", "http://ctvnews.cookieless.ca/bellmedia/common/img/favicon.ico", "self");
+            }
+} 
+catch (ex) {
+    // Fail silently.
+}
+  
+
+  $(document).ready(function () {
+    $('#pinning-discoverability').pinable(
+      {
+        closeTitle: 'Close', // default close title
+        containerElement: 'body', // element that pinning html will be prepended to
+        cookieName: 'ctvnews_new-pin', // name of cookie; default is iePinning_yourdomain.com
+        cookieLength: 30, // in days; default is 30 days
+        debug: false, // debug mode; forces the banner to always show, even across browsers
+        discStyle: 'toast', // discoverability style; options are toast, topHat and pushUp
+        dragAlt: 'Drag me!', // default drag icon alt text
+        elementId: 'pinning-discoverability', // Id of banner container that will be injected
+        logoPath: 'http://www.ctvnews.ca/polopoly_fs/7.301269!/defaultIcon/64_news_icon.jpg', // path to the 32px x 32px logo file
+        message: 'Pin CTVNews.ca to your taskbar to stay up to date with the latest news',
+        slideDuration: 'fast', // change the slide speed
+        useCookie: true // toggles cookies on/off; default is on
+    });
+  });
+
+
+        var _gaq = _gaq || []; 
+                        _gaq.push(['_setAccount', 'UA-30994051-1']);
+    _gaq.push(['_setDomainName', 'ctvnews.ca']);
+          _gaq.push(['_trackPageview']);
+    
+    jQuery(document).ready(function() {
+        var insertGATriggers = function() {
+                    jQuery("a[data-gaTrackingEvent]").bind('click', function() {
+            var gaTrackingEvent = jQuery(this).attr('data-gaTrackingEvent');
+            var gaTrackingCategory = jQuery(this).attr('data-gaTrackingCategory');
+            var gaTrackingAction = jQuery(this).attr('data-gaTrackingAction');
+            var gaTrackingLabel = jQuery(this).attr('data-gaTrackingLabel');
+            if (typeof gaTrackingLabel == 'undefined') {
+                gaTrackingLabel = "";
+            }
+            _gaq.push([gaTrackingEvent, gaTrackingCategory, gaTrackingAction, gaTrackingLabel]);
+          });
+        };
+        var ga_src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        requiresDependency(ga_src,insertGATriggers);
+    });
+  
+    jQuery('body').bind('logger', function(event) {
+      if (event.a) {
+        if (!event.d) {
+          event.d = '/2.628/2.629/2.625/2.987';
+        }
+        jQuery.ajax({url:'/logger/p.gif', data:{a:event.a, d:event.d}});
+      }
+    });
+  
+ _AUTO_TRACK = false; 
+
+
+s.trackExternalLinks = false;
+
+                                  
+  setupOmnitureTracking("ctvgmnews", "CTV News", "News", "CTVNews","story", "www", "CTVNews", "false", false, false);
+  
+  
+
+      jQuery(document).ready(
+      function(){
+                                                          trackContent(false, "Google maps Cambodia's Angkor Wat; people can visit historical site on computer ");
+                                    });
+      
+

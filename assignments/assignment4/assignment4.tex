@@ -1,0 +1,104 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage[letterpaper,margin=1.2in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{url}
+\usepackage{import}
+\usepackage{color}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{listings}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+    basicstyle=\scriptsize,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=5,
+    numbersep=5pt,
+    showspaces=false, % don't show spaces by adding underscores
+    showstringspaces=false, % don't underline spaces in strings
+    showtabs=false, % don't show tabs with underscores
+    frame=single,
+    tabsize=4,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    numberbychapter=false,
+    stringstyle=\ttfamily %typewriter type for strings
+      captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
+
+\setlength{\headheight}{15pt}
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+\linespread{1.0}
+\pagestyle{fancy}
+\rhead{\AssShortTitle}
+\lhead{\Class\ (\Instructor\ \Semster)}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\newcommand{\AssignmentTitle}{Assignment\ 4}
+\newcommand{\Class}{CS532 Web Science}
+\newcommand{\Instructor}{Dr. Michael L. Nelson}
+\newcommand{\Semster}{- Spring 2016}
+\newcommand{\AssShortTitle}{Assignment 4}
+\newcommand{\MyName}{Naina Sai Tipparti}
+\newcommand{\MyEmail}{ntippart@cs.odu.edu}
+
+\setcounter{secnumdepth}{0}
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\Class:\ \AssignmentTitle}}\\
+\normalsize\vspace{0.1in}\small{Finished on \today}\\
+\vspace{0.1in}\large{\textit{\Instructor\ }}
+\vspace{3in}
+}
+
+\author{\textbf{\MyName} \\ \MyEmail}
+\date{}
+
+\begin{document}
+\begin{titlepage}
+\clearpage\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+
+
+\newpage
+\clearpage
+\tableofcontents
+\lstlistoflistings
+\listoffigures
+\listoftables
+\thispagestyle{empty}
+
+\include{q1/q1}
+\include{q2/q2}
+\include{q3/q3}
+\include{q4/q4}
+
+\newpage
+\vspace*{5pt}
+\bibliographystyle{unsrt}
+\bibliography{bibfile}
+\end{document}

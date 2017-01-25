@@ -1,0 +1,36 @@
+http://cur.lv/dih89
+
+
+
+
+CoinURL - Redirect
+
+
+html,#page,body{
+min-height:100%;
+}
+
+
+
+
+function __schetunet(ticket)
+{
+	if (window.top !== window.window) return;
+
+	var c = document.location.pathname.substring(1);
+	var ifr = document.createElement("iframe");
+	ifr.frameBorder = 0;
+	ifr.width = "100%";
+	ifr.height = "100%";
+	ifr.frameSpacing = 0;
+	ifr.src = "http://cur.lv/redirect_curlv.php?code=" + escape(c) + "&ticket=" + ticket + "&r=" + (document.referrer ? escape(document.referrer) : '');
+	document.getElementsByTagName('body')[0].appendChild(ifr);
+}
+
+//__schetunet('');
+var scr = document.createElement('script');
+scr.src = '//schetu.net/h?cid=coinurl&a=t&r='+(document.referrer ? escape(document.referrer) : '');
+document.getElementsByTagName('head')[0].appendChild(scr);
+
+
+

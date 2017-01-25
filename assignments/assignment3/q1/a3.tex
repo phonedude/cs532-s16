@@ -1,0 +1,29 @@
+Download the 1000 URIs from assignment \#2.  \enquote{curl}, \enquote{wget}, or
+\enquote{lynx} are all good candidate programs to use.  We want just the
+raw HTML, not the images, stylesheets, etc.\\
+\\
+from the command line:\\
+\\
+\% curl http://www.cnn.com/ $>$ www.cnn.com\\
+\\
+\% wget -O www.cnn.com http://www.cnn.com/\\
+\\
+\% lynx -source http://www.cnn.com/ $>$ www.cnn.com\\
+\\
+\enquote{www.cnn.com} is just an example output file name, keep in mind
+that the shell will not like some of the characters that can occur
+in URIs (e.g., \enquote{?}, \enquote{\&}).  You might want to hash the URIs, like:\\
+\\
+\% echo -n \enquote{http://www.cs.odu.edu/show\_features.shtml?72} \textbar  md5 \\
+41d5f125d13b4bb554e6e31b6b591eeb\\
+\\
+(\enquote{md5sum} on some machines; note the \enquote{-n} in echo -\- this removes
+the trailing newline.) \\
+\\
+Now use a tool to remove (most) of the HTML markup.  \enquote{lynx} will
+do a fair job:\\
+\\
+\% lynx -dump -force\_html www.cnn.com $>$ www.cnn.com.processed
+\\
+Use another (better) tool if you know of one.  Keep both files 
+for each URI (i.e., raw HTML and processed). 

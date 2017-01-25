@@ -1,0 +1,753 @@
+http://gifboom.com/
+
+
+var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);
+
+
+
+
+
+GifBoom - Express yourself in motion, make animated GIFs with your iPhone or Android
+
+
+
+
+
+
+	$(document).ready(function() {
+		$(document).on( "mouseover mouseout", '.imgholder a', function(event){
+			if (event.type == 'mouseover'){
+				//gifOver($(this));
+			}else if (event.type == 'mouseout'){
+				//gifOut($(this));
+			}
+		});
+		
+		var $container = $('#explore-items');
+		$('.search-loading').activity().show();
+		$container.imagesLoaded(function(){
+			$container.masonry({
+		    itemSelector : '.grid',
+				columnWidth: function( containerWidth ) {
+				return containerWidth / 4;
+			}
+		  });
+		  $('.search-loading').activity(false).hide();
+		  $(".grid").show();
+		});	
+
+		$container.infinitescroll({
+	      	navSelector  : '.pagination', 
+	      	nextSelector : '.next_page a',
+	      	itemSelector : '.grid',
+	      	loading: {
+            msg: $('<img alt="Loading" src="//medias.gifboom.com/assets/loading-121d4dd2cbe608cbbc9c8e627ad01ad3.gif" />'),
+            selector: $('.loading-infinite')
+          },
+          errorCallback: function(data){if(data=='done'){$('.loading-infinite').hide();}else{gbError(data)}}
+	  	  },
+	      // trigger Masonry as a callback
+	      function( newEl ) {
+	        var $newEl = $( newEl );
+	        $newEl.imagesLoaded(function(){
+	        	$container.masonry( 'appended', $newEl, true ); 
+			  		$newEl.show();
+	        });
+	      }
+	 		);
+		});
+
+	
+
+
+
+
+
+
+×
+Login to GifBoom
+
+
+
+
+
+
+
+
+
+Login
+Forgot your password?
+
+ 
+
+
+Login with facebookLogin with Twitter
+
+
+
+
+	$("#modalLoginForm")
+	  .on("ajax:success", function(event, data, status, response) {
+	    window.location.reload()
+	  })
+	  .on("ajax:error", function(event, response, error) {
+	    $("#modalLoginError").text(response.responseText);
+	  })
+	  .on("ajax:beforeSend", function(){
+	  	$('#myLoginModal').activity();
+	  })
+	  .on("ajax:complete", function(){
+	  	$('#myLoginModal').activity(false);
+	  })
+	  ;
+	
+
+			GB.currentUser = new GB.User();
+	
+
+
+
+
+
+gifboom.com
+
+Feed
+Explore
+
+
+
+Login
+
+
+
+
+
+
+
+
+
+Popular
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+how to look ugly in gifs 101 by me 
+66 likes1 reboom 
+
+
+
+
+
+
+			  bread
+			
+
+
+
+
+
+
+
+
+Have fun. Hope your day was good
+54 likes2 rebooms 
+
+
+
+
+
+
+			  cappie
+			
+
+
+
+
+
+
+
+
+throwing up but still cute tho 
+52 likes0 rebooms 
+
+
+
+
+
+
+			  emily
+			
+
+
+
+
+
+
+
+
+Catchy song 
+64 likes7 rebooms 
+
+
+
+
+
+
+			  mitchhh
+			
+
+
+
+
+
+
+
+
+I have always loved me better
+in the dark.
+Because from a young age, I was made to understand that my body was not made for hands to wand...
+70 likes8 rebooms 
+
+
+
+
+
+
+			  kink
+			
+
+
+
+
+
+
+
+
+shiniest lil bean 
+62 likes6 rebooms 
+
+
+
+
+
+
+			  neckdeep
+			
+
+
+
+
+
+
+
+
+listen to your dogheart, it's valentine's day
+70 likes2 rebooms 
+
+
+
+
+
+
+			  dannydevito
+			
+
+
+
+
+
+
+
+
+Goodnight everyone ️
+58 likes3 rebooms 
+
+
+
+
+
+
+			  special
+			
+
+
+
+
+
+
+
+
+So, I got a tattoo today. It's the birth year of my mother and it means so much to me because even though I'm gonna be in Texas, I still ...
+95 likes0 rebooms 
+
+
+
+
+
+
+			  amerikka
+			
+
+
+
+
+
+
+
+
+/;
+70 likes28 rebooms 
+
+
+
+
+
+
+			  3hunna
+			
+
+
+
+
+
+
+
+
+Well it's done 
+sorry if you're not in it, the fine brush I used was hard to deal w as it was, I would've never got all 60 odd on 
+83 likes18 rebooms 
+
+
+
+
+
+
+			  cuddler
+			
+
+
+
+
+
+
+
+82 likes2 rebooms 
+
+
+
+
+
+
+			  lilqt
+			
+
+
+
+
+
+
+
+
+Fuck with me
+64 likes10 rebooms 
+
+
+
+
+
+
+			  new_politics
+			
+
+
+
+
+
+
+
+Why must I feel so uncomfortable in my own skin? Why cannot I not look at myself with love?
+126 likes5 rebooms 
+
+
+
+
+
+
+			  wisewolf
+			
+
+
+
+
+
+
+
+
+Tbh I haven't felt this pretty in a long time. Don't care if my hair is fake and people don't know it, I feel fucking beautiful for once 
+144 likes3 rebooms 
+
+
+
+
+
+
+			  megzy
+			
+
+
+
+
+
+
+
+
+Baby... Can you fix me? 
+78 likes5 rebooms 
+
+
+
+
+
+
+			  silly_alexa123
+			
+
+
+
+
+
+
+
+
+someone ooVoo or message me I miss y'all):
+95 likes3 rebooms 
+
+
+
+
+
+
+			  shmegan
+			
+
+
+
+
+
+
+
+
+this super awkward
+118 likes6 rebooms 
+
+
+
+
+
+
+			  spaceman
+			
+
+
+
+
+
+
+
+
+tysm
+58 likes5 rebooms 
+
+
+
+
+
+
+			  ohhmycaitlinn
+			
+
+
+
+
+
+
+
+
+ok not bad
+70 likes0 rebooms 
+
+
+
+
+
+
+			  angelbby
+			
+
+
+
+
+
+
+
+
+moon child 
+81 likes4 rebooms 
+
+
+
+
+
+
+			  lovethisday
+			
+
+
+
+
+
+
+
+Just some clips from Saturday. Slowly figuring out how the video software I got works. 
+127 likes12 rebooms 
+
+
+
+
+
+
+			  jordann
+			
+
+
+
+
+
+
+
+
+17
+73 likes5 rebooms 
+
+
+
+
+
+
+			  lori
+			
+
+
+
+
+
+
+
+
+queen of the itty bitty titty committee ️ 
+81 likes1 reboom 
+
+
+
+
+
+
+			  babyspice
+			
+
+
+
+
+
+
+
+
+This one goes out to all the people without a valentines. Love u ;)
+102 likes40 rebooms 
+
+
+
+
+
+
+			  frl
+			
+
+
+
+
+
+
+
+
+I miss having time to be active :(
+85 likes21 rebooms 
+
+
+
+
+
+
+			  okayandrew
+			
+
+
+
+
+
+
+
+Me every Valentine's Day 
+77 likes6 rebooms 
+
+
+
+
+
+
+			  thedailysign
+			
+
+
+
+
+
+
+
+
+Idk I guess I was checking if my teeth were still there or somethin
+63 likes4 rebooms 
+
+
+
+
+
+
+			  namastbae
+			
+
+
+
+
+
+
+
+okay which me wins... BEARDLESS or BEARDED??!?
+this isn't a fake out btw haha... that is me in both pictures 
+52 likes1 reboom 
+
+
+
+
+
+
+			  beardedgeek
+			
+
+
+
+
+
+
+
+
+Being a human 
+62 likes3 rebooms 
+
+
+
+
+
+
+			  jdog
+			
+
+
+
+ 
+
+
+1
+
+
+2
+
+
+Next ›
+
+
+Last »
+
+
+
+
+
+
+
+
+
+
+
+
+
+	window.fbAsyncInit = function() {
+            FB.init({
+              appId  : '109509005793644',
+              status : true, // check login status
+              cookie : true, // enable cookies to allow the server to access the session
+              xfbml  : true  // parse XFBML
+            });
+          };
+
+          (function(d) {
+            var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+            js = d.createElement('script'); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            d.getElementsByTagName('head')[0].appendChild(js);
+          }(document));
+          
+
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20270466-3']);
+      _gaq.push(['_setDomainName', '.gifboom.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      $(window).bind('beforeunload', checkUnload);
+    
+@import url('http://getbarometer.s3.amazonaws.com/assets/barometer/css/barometer.css');
+
+
+  BAROMETER.load('FP47835rB96A4ZpcWkCqF');
+
+if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","bam.nr-data.net","8c5252c6fe","442584","dl1eTUJWWA5TS04EVFBWH0lfSUEOV0s=",0,489,new Date().getTime(),"","","","",""]);
+

@@ -1,0 +1,142 @@
+\section{Problem 2}
+
+\subsection{Question}
+\input{q2/a9}
+
+\subsection{Answer}
+
+The {\tt docclass.py} script was driven by the code shown in Listing \ref{listing:docdriver}. Before the script was run each of the 100 blog entries was classified manually to be used for training data later. This training is stored in the {\tt training} file. The {\tt docclass} main driver uses the first 50 entries as training for classifying the second 50 and then swaps each of these two sets. Tables \ref{tab:one} and \ref{tab:two} are the compiled training results with their actual classification and the cprob and fisherprob as calculated by the Fisher classifier. Refer to \ref{listing:docclass} in Appendix A for the full script. Each of the entry titles was used in full as the training feature since most of them are only a few words.
+
+\lstinputlisting[language=Python, caption={docclass main}, label=listing:docdriver,linerange={206-248},firstnumber=206]{docclass.py}
+
+\clearpage
+
+\begin{table}[h!]
+\centering
+\footnotesize
+\begin{tabular}{| l | l | l | l | l |}
+\hline
+Entry Title & Actual & Predicted & cprob  & fisherprob\\
+\hline
+Disc Girl  &  diy  &  diy  & 0.139554246962 & 0.01247214   \\
+2013 DGCR Hawk Hollow Weekend  &  event  &  tourney  & 0.135398562817 & 0.577164396   \\
+Hey! I'm Back!  &  personal  &  motorcycles  & 0.742810969879 & 0.232819247   \\
+Last Ride of the Season  &  motorcycles  &  motorcycles  & 0.569769009772 & 0.01247214   \\
+Promoting the Sport  &  event  &  news  & 0.215734958342 & 0.217699063   \\
+Dyeing For Some New Discs....  &  diy  &  personal  & 0.127742032263 & 0.220540108   \\
+It's Been a Weird Sportster Year  &  motorcycles  &  diy  & 0.459029096789 & 0.055958898   \\
+Frank Lloyd Wright Day Trip  &  news  &  game  & 0.519935002549 & 0.034491001   \\
+Mach III Re-fit....  &  diy  &  diy  & 0.327231205524 & 0.986168775   \\
+Mike Sale: The Quest for 2,500  &  event  &  news  & 0.348489346703 & 0.05796196   \\
+2014 Chili Cook-Off  &  tourney  &  motorcycles  & 0.568479771654 & 0.304934209   \\
+Betty Queen Open  &  tourney  &  tourney  & 0.28731988169 & 0.553480606   \\
+2013 Hawk Hollow Open: Ams  &  tourney  &  tourney  & 0.0528373296205 & 0.011404427   \\
+Feelin' Lucky?     Punk!....  &  news  &  tourney  & 0.655185013039 & 0.007793036   \\
+Red Oak Rumble  &  tourney  &  tourney  & 0.655185013039 & 0.001339982   \\
+Beginners Guide for Disc Dyes (Long Post)  &  diy  &  diy  & 0.195308043476 & 0.047201907   \\
+Snow Round at Loriella  &  game  &  game  & 0.476013302099 & 0.005693106   \\
+PDGA World's, the rest of it...  &  tourney  &  tourney  & 0.230722681279 & 0.614089489   \\
+Great Way to Start the Year  &  tourney  &  news  & 0.466829424722 & 0.056752429   \\
+2013 Hawk Hollow Open... Pros  &  tourney  &  tourney  & 0.0802708824856 & 0.03880296   \\
+Latest Disc Dye...  &  diy  &  diy  & 0.0574532219591 & 0.006505884   \\
+Winter Round  &  game  &  tourney  & 0.59657359028 & 0.636468946   \\
+Sporty Surprise...  &  motorcycles  &  tourney  & 0.59657359028 & 0.126113688   \\
+Deluxe Retractable Birdie Bead Scoring System  &  diy  &  tourney  & 0.759831170994 & 0.031327544   \\
+Latest Dye...  &  diy  &  diy  & 0.154721589649 & 0.000680295   \\
+Seneca Sun Seeker  &  tourney  &  tourney  & 0.655185013039 & 0.183933662   \\
+2013 Loriella Challenge  &  tourney  &  tourney  & 0.257589575924 & 0.082880791   \\
+First Day in Charlottesville  &  tourney  &  game  & 0.476013302099 & 0.082480313   \\
+Bayville Bash IX  &  tourney  &  tourney  & 0.59657359028 & 0.006962763   \\
+State of the Sporty  &  motorcycles  &  news  & 0.327231205524 & 0.001493909   \\
+Mornin' Round at Loriella  &  game  &  game  & 0.476013302099 & 0.062402682   \\
+Hawk Hollow Open  &  tourney  &  tourney  & 0.0672478176833 & 0.147750004   \\
+2nd Annual LoCo Open  &  tourney  &  tourney  & 0.254631706407 & 0.038507178   \\
+SOMD Classic  &  tourney  &  tourney  & 0.59657359028 & 0.683828022   \\
+Winchester IFO  &  tourney  &  tourney  & 0.59657359028 & 0.284807165   \\
+D Day Ride...  &  motorcycles  &  game  & 0.38493019271 & 0.126327062   \\
+Virginia Team Invitational  &  event  &  tourney  & 0.166468597895 & 0.016803297   \\
+Good \&  Bad day of DG  &  game  &  game  & 0.257589575924 & 0.993453532   \\
+Vincent \&  Jules.... &  diy  &  tourney  & 0.59657359028 & 0.007586851   \\
+All Ready for the World's  &  news  &  diy  & 0.0772653501085 & 0.852708891   \\
+The Season is Over...  &  news  &  tourney  & 0.215734958342 & 0.122180252   \\
+A Full Day Saturday  &  game  &  game  & 0.257589575924 & 0.037194075   \\
+Last Day of Vacation  &  motorcycles  &  game  & 0.476013302099 & 0.043672214   \\
+Turkey Day Doubles  &  game  &  game  & 0.384502787693 & 0.042393655   \\
+New Improved Putter  &  diy  &  diy  & 0.215734958342 & 0.320768231   \\
+Fall is coming...  &  motorcycles  &  tourney  & 0.59657359028 & 0.006163205   \\
+Lost Another One...  &  diy  &  diy  & 0.327231205524 & 0.3675231   \\
+First rounds at the Worlds  &  tourney  &  news  & 0.351391490133 & 0.022771071   \\
+Ace Race Fun....  &  event  &  personal  & 0.476013302099 & 0.449376649   \\
+Day Two at the World's  &  tourney  &  diy  & 0.122142469344 & 0.009538327   \\
+\hline
+\end{tabular}
+\caption{Question 2: Predictions 1-50}
+\label{tab:one}
+\end{table}
+
+\clearpage
+\begin{table}[h!]
+\centering
+\footnotesize
+\begin{tabular}{| l | l | l | l | l |}
+\hline
+Entry Title & Actual & Predicted & cprob & fisherprob\\
+\hline
+Maryland vs Virginia Ice Bowl Battle IV  &  event  &  event  & 0.0979229226451 & 0.080994041   \\
+Had Some Fun This Morning...  &  personal  &  personal  & 0.0605701708213 & 0.109631434   \\
+2014 River City Open  &  tourney  &  tourney  & 0.108800373877 & 0.978217096   \\
+Saturday in Staunton  &  tourney  &  tourney  & 0.174085576264 & 0.023708116   \\
+Doin' a dye, dye, dye \& dye...  &  diy  &  diy  & 0.0732870294308 & 0.999943702   \\
+Bored at work = evental disc dye  &  diy  &  diy  & 0.02046431997 & 0.0000267   \\
+Spotsy SuperDubs  &  tourney  &  tourney  & 0.23578679514 & 0.001336632   \\
+2014 Hawk Hollow Open  &  tourney  &  tourney  & 0.0204836924925 & 0.096398553   \\
+It's Been Awhile...  &  diy  &  diy  & 0.400936622169 & 0.981799679   \\
+Pretty Good Disc Golf Day  &  game  &  game  & 0.031850199739 & 0.943089161   \\
+Bored = Dye Some Plastic...  &  diy  &  diy  & 0.0290173583845 & 0.215734958   \\
+Almost There...  &  motorcycles  &  motorcycles  & 0.886142331508 & 0.000884766   \\
+All Hail the Disc!  &  diy  &  diy  & 0.0497016027828 & 0.693526509   \\
+Knocked for a Loop Today...  &  news  &  news  & 0.0717591100714 & 0.057087801   \\
+Orlando and Some Disc Golf  &  personal  &  personal  & 0.0190818350443 & 0.007715421   \\
+Disc Golf \& Chili… &  event  &  event  & 0.0257577881041 & 0.009017303   \\
+It's Been A While...  &  diy  &  diy  & 0.303191637893 & 0.017392693   \\
+Santa's Little Helper....  &  diy  &  diy  & 0.137680696132 & 0.457547314   \\
+Hawk Hollow Open - Ams  &  tourney  &  tourney  & 0.00985086638406 & 0.0003178   \\
+\#830RatedforLife....  &  tourney  &  tourney  & 0.25 & 0.169717444   \\
+Blast From My Past  &  diy  &  diy  & 0.215734958342 & 0.693945055   \\
+Skyline Drive or Last Place?  &  motorcycles  &  motorcycles  & 0.981220963209 & 0.162140906   \\
+New DG Hobby... Para Cord  &  diy  &  diy  & 0.102330524752 & 0.00497828   \\
+Battle in the Blue Ridge  &  tourney  &  tourney  & 0.14611299113 & 0.221964681   \\
+My Friend is a World Champ  &  tourney  &  tourney  & 0.089580585114 & 0.019803994   \\
+Another Day... Another Dye  &  diy  &  diy  & 0.0629356658608 & 0.021785892   \\
+2013 Battlefield Open  &  tourney  &  tourney  & 0.0291686553403 & 0.729853987   \\
+'Merica, Fuck Yeah!  &  game  &  game  & 0.215734958342 & 0.098144926   \\
+Too Hot to Play...  &  game  &  game  & 0.166468597895 & 0.023551902   \\
+I won't be posting for a while...  &  personal  &  personal  & 0.0717591100714 & 0.21318711   \\
+Facebook is Making my World a Little Smaller...  &  diy  &  diy  & 0.0725730164948 & 0.076723525   \\
+Mach III Re-Paint...  &  diy  &  diy  & 0.127217607055 & 0.177771567   \\
+Some days are Just Better...  &  game  &  game  & 0.0979229226451 & 0.999480271   \\
+Multi-Color Disc Dyes  &  diy  &  diy  & 0.0252331502301 & 0.000111479   \\
+2013 Virginia Team Invitational  &  tourney  &  event  & 0.0345067265265 & 0.004929646   \\
+Hell Hath Frozen Over...  &  tourney  &  tourney  & 0.155662943557 & 0.000716775   \\
+My Best Buddy Died today...  &  personal  &  personal  & 0.155662943557 & 0.728713968   \\
+Gettin' Ready....  &  event  &  event  & 0.174085576264 & 0.013419206   \\
+2 Rounds @ Loriella  &  game  &  game  & 0.0849057427037 & 0.012498733   \\
+New Backpack  &  news  &  news  & 0.101483354394 & 0.203721368   \\
+Building a Course...  &  news  &  news  & 0.23578679514 & 0.139554247   \\
+Getting it Back Together...  &  motorcycles  &  motorcycles  & 0.81216172237 & 0.932671336   \\
+DGCR Mid-Atlantic Meet  &  event  &  event  & 0.155662943557 & 0.174085576   \\
+Lost a Friend This Week  &  personal  &  personal  & 0.0950728157762 & 0.918752268   \\
+Shaving Cream Disc Dyes  &  diy  &  diy  & 0.0440390153459 & 0.163829249   \\
+New Putter Dye...  &  diy  &  diy  & 0.0261190230258 & 0.991422156   \\
+Do a Little Dye, Play a Little Golf  &  event  &  event  & 0.0202847913416 & 0.010090002   \\
+First Ride of 2014  &  motorcycles  &  motorcycles  & 0.801415273277 & 0.860680626   \\
+Promoting the Club  &  news  &  news  & 0.155177975467 & 0.235706362   \\
+Multi-Color 2nd Attempt  &  diy  &  diy  & 0.0950728157762 & 0.406330125   \\
+Day Two at the World's  &  tourney  &  news  & 0.171383513075 & 0.633731408   \\
+\hline
+\end{tabular}
+\caption{Question 2: Predictions 51-100}
+\label{tab:two}
+\end{table}
+
+\clearpage

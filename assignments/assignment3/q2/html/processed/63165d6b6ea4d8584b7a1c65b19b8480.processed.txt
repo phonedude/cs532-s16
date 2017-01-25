@@ -1,0 +1,1215 @@
+http://www.easkme.com/2014/07/mail-merge-in-gmail.html#.VB8GnkIk6rA.facebook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(function() { (function(){function c(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(e){}};this.tick("start",null,a)}var a;window.performance&&(a=window.performance.timing);var h=a?new c(a.responseStart):new c;window.jstiming={Timer:c,load:h};if(a){var b=a.navigationStart,e=a.responseStart;0<b&&e>=b&&(window.jstiming.srt=e-b)}if(a){var d=window.jstiming.load;0<b&&e>=b&&(d.tick("_wtsrt",void 0,b),d.tick("wtsrt_",
+"_wtsrt",e),d.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),d&&0<b&&(d.tick("_tbnd",void 0,window.chrome.csi().startE),d.tick("tbnd_","_tbnd",b))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,d&&0<b&&(d.tick("_tbnd",void 0,window.external.startE),d.tick("tbnd_","_tbnd",b))),a&&(window.jstiming.pt=a)}catch(k){}})();window.tickAboveFold=function(c){var a=0;if(c.offsetParent){do a+=c.offsetTop;while(c=c.offsetParent)}c=a;750>=c&&window.jstiming.load.tick("aft")};var f=!1;function g(){f||(f=!0,window.jstiming.load.tick("firstScrollTime"))}window.addEventListener?window.addEventListener("scroll",g,!1):window.attachEvent("onscroll",g);
+ })();
+
+
+
+
+
+
+
+
+
+How to Create Mail Merge with Gmail and Google Docs
+
+
+
+
+/*****************************************
+reset.css
+******************************************/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, figure {    margin: 0;    padding: 0;} article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {     display:block;}table {    border-collapse: separate;    border-spacing: 0;}caption, th, td {    text-align: left;    font-weight: normal;}q:before, q:after {    content: "";}sup{    vertical-align: super;    font-size:smaller;}code{    font-family: 'Courier New', Courier, monospace;    font-size:12px;    color:#272727;}::selection {  background: rgb(255,255,158);  color: #369;  }::-moz-selection {  background: rgb(255,255,158);  color: #369;  }a img{	border: none;}ol, ul { padding: 10px 0 20px;  margin: 0 0 0 35px;  text-align: left;  }ol li { list-style-type: decimal;  padding:0 0 5px;  }ul li { list-style-type: disc;  padding: 0 0 5px;  }
+ul ul, ol ol { padding: 0; }h1, h2, h3, h4, h5, h6 { font-family: 'Helvetica Neue', Arial, sans-serif;, serif;  }
+.post-body h1 { line-height: 30px; font-size: 40px; margin: 10px 0; }.post-body h2 { font-size: 38px; line-height: 44px; border-bottom: 4px solid #4690B3;padding-bottom: 5px; margin: 10px 0; }.post-body h3 {font-size: 26px!important;  padding-bottom: 5px; margin: 10px 0;background: #E3F0F2 url(http://2.bp.blogspot.com/-sj3Z6M7GRA4/UfthAoLZi_I/AAAAAAAAHDU/TDDBx1Uark4/s1600/note.png) center no-repeat;border: 1px solid #6CC;background-position: 7px 50%;padding: 10px 10px 10px 45px;-moz-border-radius: 4px;-webkit-border-radius: 4px;}
+.post-body h4 {font-size: 24px; line-height: 36px; margin: 10px 0;background: #004489!important;color: #FCFCFC!important;
+padding: 5px 10px;margin: 20px 0px 10px 0px;border: 2px dashed #FFF;font-family: bebasregular, 'Yanone Kaffeesatz', sans-serif;font-weight: normal;line-height: 1.25;text-shadow: 1px 2px 9px #000;}
+.post-body h4 a{color: #fff;}.post-body h5 { font-size: 24px; line-height: 30px; margin: 10px 0;  }.post-body h6 { font-size: 18px; line-height: 24px; margin: 10px 0;  }
+/*****************************************
+Global Links CSS
+******************************************/
+a {color: #0084CE;text-decoration: underline;}a:hover {color: #0084CE;text-decoration: none;}body{ background-color: #fff; height: 100%; padding: 0; font-family: 'Lora',Georgia,Serif; font-size: 18px; line-height: 29px;}.clr { clear:both; float:none; }
+/*****************************************
+Wrappers
+******************************************/
+.ct-wrapper {    padding:0px 20px;  position:relative;    max-width:1230px;    margin: 0 auto;  }.outer-wrapper {    background: #FFF;    position: relative;  margin: 6px 0;   }.header-wrapper {  background: #004489;  border-bottom: 1px solid #369;  display: inline-block;  float: left;  width: 100%;  }.main-wrapper {    width:auto;    margin-right:365px;   }
+#content {   position: relative;  width: 100%;  float: left;  }.sidebar-wrapper {  width:300px!important;  padding: 25px 20px;  float: right;  border: 1px solid white;  margin: 0px 20px 40px 0;  }
+/**** Layout Styling CSS *****/
+body#layout .header-wrapper { margin-top: 40px; }body#layout #header, body#layout .header-right { width: 50%; }body#layout .outer-wrapper, body#layout .sidebar-wrapper, body#layout .ct-wrapper { margin: 0; padding: 0; }
+/*****************************************
+Pre Tags
+******************************************/
+pre{background:#AEF8FC;padding:5px;overflow:scroll;}pre:hover{background:#fff;-webkit-box-shadow:0 0 5px rgba(0,0,0,.2);box-shadow:0 0 5px rgba(0,0,0,.2)}pre{background:#AEF8FC;padding:5px;}pre:hover{background:#fff;-webkit-box-shadow:0 0 5px rgba(0,0,0,.2);box-shadow:0 0 5px rgba(0,0,0,.2)}
+/*****************************************
+Header CSS
+******************************************/
+#header{ float:left; width: auto; }#header-inner{margin: 10px 0px 0px; padding: 0; float:center; }#header h1 { color: #4690B3;  font-size: 70px; text-transform: capitalize;  line-height: 50px;  text-shadow: 1px 1px 1px #000000;  }#header h1 a, #header h1 a:hover {  color: #4690B3;  }#header p.description{  color: #333;  font-size: 12px;  font-style: italic;  margin: 0 0 0 35px;  padding: 0;  text-transform:capitalize;  }#header img{   border:0 none; background:none; width:auto; height:auto; margin:0 auto;  }
+/***** Header Right CSS *****/
+.header-right { float: right; }.header-right .widget-content {margin-top: 10px; }
+
+/*****************************************
+Main Menu CSS
+******************************************/
+/*-----Responsive Drop Down Menu by MBT ----*/
+#menu{background: #004489 url() repeat-x;;color: #FFF;height: 40px;border-bottom: 2px solid #DDD;border-top: 1px solid #369;
+}#menu ul,#menu li{margin:0 auto;padding:0 0;list-style:none}#menu ul{height:45px;width:100%}#menu li{float:left;display:inline;position:relative;font:bold 0.9em Arial;}#menu a{display: block; line-height: 40px;padding: 0 14px;
+text-decoration: none;color: #FFF;}#menu li a:hover{color: #E4E4E4;-webkit-transition: all .1s ease-in-out;-moz-transition: all .1s ease-in-out;-ms-transition: all .1s ease-in-out;-o-transition: all .1s ease-in-out;transition: all .1s ease-in-out;
+background: #191919;}#menu input{display:none;margin:0 0;padding:0 0;width:80px;height:30px;opacity:0;cursor:pointer}#menu label{font:bold 30px Arial;display:none;width:35px;height:36px;line-height:36px;text-align:center}#menu label span{font-size:16px;position:absolute;left:35px}#menu ul.menus{height: auto;overflow: hidden;width: 170px;background: #191919;position: absolute;z-index: 99;display: none;}#menu ul.menus li{display: block;width: 100%;font:normal 0.8em Arial;text-transform: none;
+text-shadow: none;border-bottom: 1px dashed #31AFDB;}#menu ul.menus a{color: #FFF;line-height: 35px;}#menu li:hover ul.menus{display:block}#menu ul.menus a:hover{background: #414141;color: #FFF;-webkit-transition: all .1s ease-in-out
+-moz-transition: all .1s ease-in-out;-ms-transition: all .1s ease-in-out;-o-transition: all .1s ease-in-out;transition: all .1s ease-in-out;
+}
+@media screen and (max-width: 800px){#menu{position:relative}#menu ul{background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}#menu ul.menus{width:100%;position:static;padding-left:20px}#menu li{display:block;float:none;width:auto; font:normal 0.8em Arial;}
+#menu input,#menu label{position:absolute;top:0;left:0;display:block}#menu input{z-index:4}#menu input:checked + label{color:white}#menu input:checked ~ ul{display:block}
+}
+
+/*****************************************
+Blog Post CSS
+******************************************/
+.post{  padding: 5px 3%;  margin: 10px 0;  }.post-title {   font-size: 30px;  line-height: 35px;  text-decoration:none;  border-bottom: 1px dashed #ccc;  margin: 0 0 10px;  padding: 0 0 10px;  }.post-title a{text-decoration:none;  color:#666;  }
+.post-title a:hover{ color: #4690B3; }.post-body {  font-size:16px;  font-weight: normal;  padding: 0;    margin:0;    line-height:29px;    word-wrap:break-word;  }.post-header {  color: #999999;  font-family: Verdana,Arial,Tahoma,sans-serif;  font-size: 12px;  }.post-header a {  font-style: italic;  }.rmlink {  float: right;  line-height: normal;  }
+.home-link { display:none;}#blog-pager-newer-link {display: block;  float: none;  padding: 5px 5px 5px 50px;  text-align: left;}
+#blog-pager-newer-link:before { content:"NEXT POST:"; font-size: 10px; letter-spacing: 2px;}#blog-pager-older-link {display: block;  float: none;  padding: 5px 5px 5px 50px;  text-align: left;}#blog-pager-older-link:before { content:"PREVIOUS POST:"; font-size: 10px; letter-spacing: 2px;}#blog-pager { border-top: 1px solid #eee; padding: 2em 0; margin: 0; font-size: 16px; line-height: normal; }.showpageOf {  display:none;  }.showpageNum a, .showpage a { margin:0 4px; }.showpagePoint { margin: 0 2px 0 0; }
+/*****************************************
+Post Highlighter CSS
+******************************************/
+blockquote {margin:0px 0px 0px 0px;padding:10px;background: #ffffa0;border: 1px solid #e5e597;
+}
+/*****************************************
+Custom Widget CSS
+******************************************/
+/***** Optin Form CSS *****/
+.opt-in .inner {  background: url("http://3.bp.blogspot.com/-YfUnP1wOFzQ/Ud0G21XXRWI/AAAAAAAACfQ/Hg5Gakd69tQ/s1600/home-bg.png") repeat scroll 0 0 transparent;  padding: 35px 0;  font-style: italic;  color: #ccc;  text-shadow: 0 1px 1px #000000;  }.opt-in .inner h4 {  font-size: 28px;  margin-bottom: 10px;  font-style: normal;  color: #fff;  line-height: normal;  }.opt-in .inner a {  border-bottom: 1px solid #DDDDDD;  color: #DDDDDD;  }.opt-in .inner a:hover {  border-bottom: 1px dashed #DDDDDD;  }.opt-in .opt-in-wrap {  margin-right: 40%; }.opt-in .info {  float: left;  width: 100%;  }.opt-in .signup-form {  background: rgba(0, 0, 0, 0.25);  border: 5px solid rgba(0, 0, 0, 0.25);  float: right;  font-size: 16px;   width: 35%;  text-align: center;  }.opt-in .signup-form .form-inner {  font-size: 16px;    margin: 35px;  }/***** Popular Post *****/.popular-posts ul {  padding-left: 0;  }.popular-posts ul li {  border-bottom: 1px dashed #ccc;  list-style: none outside none !important;  margin-left: 0 !important;  overflow: hidden;  padding: 10px 0 !important;  transition: all 0.25s linear 0s;  }.popular-posts ul li:hover {  padding-left: 10px !important;  }.sidebar-wrapper .popular-posts ul li:hover {  background: #f0f0f0;  }.PopularPosts .item-thumbnail img {  display: block;  float: left;  height: 50px;  margin-right: 8px;  width: 50px;  }
+/***** Form CSS *****/
+input {  color: #333;  font-family: 'Lora', Georgia, "Times New Roman", Times;  margin-top: 10px;  } select, textarea {  -moz-box-shadow: inset 0 1px 2px 1px #eee;  -webkit-box-shadow: inset 0 1px 2px 1px #eee;  background: #fff; border: 1px solid #bbb;  box-shadow: inset 0 1px 1px 1px #eee;  color: #bbb;  font-family: Verdana, Arial, Tahoma, sans-serif;  font-size: 9px;  margin: 0 2px 0 0;  padding: 12px 15px;  text-transform: uppercase;  vertical-align: middle;  }textarea {  color: #333;  font-family: 'Lora', Georgia, "Times New Roman", Times;  font-size: 12px;  text-transform: none;  }#subbox {background: url("http://3.bp.blogspot.com/-B39xC4Ufk5g/Ud0G2vNjdiI/AAAAAAAACfE/2BVYbTyCUzk/s1600/email-icon.png") no-repeat scroll 16px 15px #FFFFFF;border: none;box-shadow: 0 1px 1px 1px #EEEEEE inset;color: #BBBBBB;font-family: Verdana,Arial,Tahoma,sans-serif;font-size: 9px;padding: 14px 15px 14px 45px;text-transform: uppercase;width: 160px;}
+/***** Button CSS *****/
+.rmlink a, .showpageNum a, .showpage a, .showpagePoint {background: #4690b3;background: -moz-linear-gradient(top, #4690b3 0%, #004489 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4690b3), color-stop(100%,#004489));
+background: -webkit-linear-gradient(top, #4690b3 0%,#004489 100%);background: -o-linear-gradient(top, #4690b3 0%,#004489 100%);
+background: -ms-linear-gradient(top, #4690b3 0%,#004489 100%);background: linear-gradient(top, #4690b3 0%,#004489 100%);
+border-width: 1px 0;  border-color: #3e89ad #357ea0 #2c7191;  border-style: solid; text-shadow: 0 1px 0 #1d4a5f;  -webkit-box-shadow: inset 0 1px 0 #78afce;  -moz-box-shadow: inset 0 1px 0 #78afce;  box-shadow: inset 0 1px 0 #78afce;
+-moz-border-radius: 3px;  -webkit-border-radius: 3px;  border-radius: 3px;  color: #fff;  cursor: pointer;  font-family: Verdana, Arial, Tahoma, sans-serif;  font-size: 11px;  font-weight: bold;  padding: 12px 15px;  text-decoration: none;  text-transform: uppercase;  display: inline-block;  }input:hover[type="button"],input:hover[type="submit"], .rmlink a:hover, .showpageNum a:hover, .showpage a:hover, .showpagePoint {background: #004489;background: -moz-linear-gradient(top, #004489 0%, #4690b3 100%);background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#004489), color-stop(100%,#4690b3));background: -webkit-linear-gradient(top, #004489 0%,#4690b3 100%);background: -o-linear-gradient(top, #004489 0%,#4690b3 100%);background: -ms-linear-gradient(top, #004489 0%,#4690b3 100%);background: linear-gradient(top, #004489 0%,#4690b3 100%);border-color: #3e89ad #357ea0 #2c7191;color: #fff;    text-decoration: none;  }
+/***** Profile Widget CSS *****/
+.Profile img { border:1px solid #cecece; background:#fff; float:left; margin:5px 10px 5px 0; padding:5px;  -webkit-border-radius: 50px;	-moz-border-radius: 50px;	border-radius: 50px; }.profile-data { color:#999999; font:bold 20px/1.6em Arial,Helvetica,Tahoma,sans-serif; font-variant:small-caps; margin:0; text-transform:capitalize;}.profile-datablock { margin:0.5em 0;}.profile-textblock { line-height:1.6em; margin:0.5em 0;}a.profile-link { clear:both; display:block; font:80% monospace; padding:10px 0; text-align:center; text-transform:capitalize;}
+/*****************************************
+Sidebar CSS
+******************************************/
+.sidebar{  margin: 0;  padding: 0;  display: block;  }.sidebar h2 {font-size: 25px;  font-weight: bold;  margin-bottom: 12px;  text-transform: none;  }.sidebar .widget{  clear: both;  font-size: 16px;  line-height: 26px;  margin-bottom: 25px;  }.sidebar ul{ margin:0; padding:0; list-style:none; }.sidebar li{  margin: 0 0 0 15px;  padding: 0 0 5px;  text-transform: capitalize;  }
+/*****************************************
+Footer Top
+******************************************/
+.footer-top {  border-top:1px solid #555;   padding: 15px;   background: #111111;  text-shadow: 1px 1px #000000;  color: #999;  font-size: 90%;  }.footer-top .attribution{  float:right;  }.footer-top .attribution a { font-style: italic; }#footer a, .footer-top a { text-decoration:none; color: #BBBBBB;  }#footer a:hover, .footer-top a:hover {text-decoration:underline;  color: #D4D4D4;  }
+/*****************************************
+Back to top
+******************************************/
+#backtotop { float:right; background:url(http://1.bp.blogspot.com/-ptkV4OoH2Ug/USSVU20u0AI/AAAAAAAAKCE/0gn1jiLHYo8/s1600/back-top.png) no-repeat right; padding-right:26px; }#backtotop  a, #backtotop  a:hover {text-decoration:none; display:block; }
+#backtotop p { color:#fff; text-shadow: 1px 1px 1px #000; margin-top:0px; }
+/*****************************************
+Footer CSS
+******************************************/
+#footer {  background: url(http://1.bp.blogspot.com/-WZzEWRYEkIM/USSVVvgKCiI/AAAAAAAAKCQ/rWxNabgR0VY/s1600/lower.png) repeat; border-bottom: 1px solid #222222;  -webkit-box-shadow: 0 1px 4px #222222 inset;  -moz-box-shadow: 0 1px 4px #222222 inset;  box-shadow: 0 1px 4px #222222 inset;  text-shadow: 1px 1px #000000;  width: 100%; color: #bdbdbd; }.footer {  float: left;  width: 25%;  }.footer h2 {font-size: 19px;letter-spacing: 1px;color: #FFF;text-shadow: 1px 1px 1px #000;background: url(http://3.bp.blogspot.com/-vuWIMmkVbUc/USSVU-teHfI/AAAAAAAAKB8/psKGPRswq0M/s1600/footer-line.png) repeat-x bottom;
+padding-bottom: 6px;margin-bottom: 20px;font-family: 'Yanone Kaffeesatz', sans-serif;text-transform: uppercase;
+border: 0px !important;}.footer .widget{  clear: both;  font-size: 16px;  line-height: 26px;  margin: 15px 25px 25px;  }.footer ul{ margin:0; padding:0; list-style:none; }.footer li{  margin: 0 0 0 15px;  padding: 0 0 5px;  text-transform: capitalize;  }
+.footer-credits {  border-top:1px solid #555;   padding: 15px;   background: #111111;  text-shadow: 1px 1px #000000;  color: #999;  font-size: 80%;  }.footer-credits .attribution{  float:right;  }.footer-credits .attribution a { font-style: italic; }
+#footer a, .footer-credits a {text-decoration:none;   color: #BBBBBB;  }#footer a:hover, .footer-credits a:hover {text-decoration:underline;   color: #D4D4D4;  }
+/*****************************************
+Comments CSS
+******************************************/
+.comments {  padding-top: 30px;  clear:both;  margin: 0 0 0 20px;  }.comments h4 {  font-size: 25px;  line-height: 30px;  padding: 0;  text-transform: capitalize;  }#comments-block .avatar-image-container.avatar-stock img{  border-width:0;  padding:1px;  }#comments-block .avatar-image-container{    height:37px;    left:-45px;    position:absolute;    width:37px;  }
+#comments-block.avatar-comment-indent{  margin-left:45px;  position:relative;  }#comments-block.avatar-comment-indent dd{  margin-left:0;  }iframe.avatar-hovercard-iframe{  border:0 none;  padding:0;  width:25em;  height:9.4em;  margin:.5em;  }
+.comments .comments-content{  margin-bottom:16px;  }.comments .continue, .comments .comment .comment-actions {  display: block;  text-align: right;  }.comments .continue a, .comments .comment .comment-actions a{  padding: 0 7px;  font-family: 'Bree Serif', serif; }.comments .continue a:hover, .comments .comment .comment-actions a:hover{  text-decoration: none;  }.comments .comments-content .comment-thread ol{  margin:20px 0 0 -10px;  overflow:hidden;}.comments .comments-content .inline-thread{    padding:0;}.comments .comments-content .comment-thread:empty{    display:none}.comments .comments-content .comment-replies{    margin-left:0px;margin-top:0px;}.comments .comments-content .comment:first-child{padding-top:4px}.comments .comments-content .comment:last-child {border-bottom: 1px solid #DDDDDD;  padding-bottom:0;  }.comments .comments-content .comment-body{position:relative}.comments .comments-content .user a {   font-style: normal;  font-weight: bold; text-transform: capitalize; }.comments .comments-content .icon.blog-author {display:inline-block;height:18px;margin:0 0 -4px 6px;width:18px}
+.comments .comments-content .datetime {  display: block;  line-height: 21px; margin-left: 0px;  }.comments .comments-content .datetime a {  color: #333;  font-size: 14px;  }.comments .comments-content .datetime a:hover {  text-decoration:none; }.comments .comments-content .comment-header {  margin: 0;  min-height: 40px;  padding: 10px;   position: relative;  }.comments .comments-content .comment-content{  margin: 0;  padding: 0 10px 10px 10px;  position: relative;  }.comments .comments-content .owner-actions {position:absolute;right:0;top:0}.comments .comments-replybox { border:none;height:250px;width:100%}.comments .comment-replybox-single { margin-left:4px;margin-top:5px}.comments .comment-replybox-thread {  margin: 5px 0 5px 15px;  }
+.comments .comments-content .loadmore a { display:block;padding:10px 16px;text-align:center}.comments .thread-toggle { cursor:pointer;display:none;}.comments .continue{   float: right;  cursor:pointer;  display:inline-block;  }.comments .continue a{  display:block;  font-weight: normal;  margin: 0 15px 0 0;  }.comments .comments-content .loadmore{cursor:pointer;margin-top:3em;max-height:3em}.comments .comments-content .loadmore.loaded{max-height:0;opacity:0;overflow:hidden}.comments .thread-chrome.thread-collapsed{display:none}.comments .thread-toggle .thread-arrow{display:inline-block;height:6px;margin:.3em;overflow:visible;padding-right:4px;width:7px}.comments .thread-expanded .thread-arrow{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC") no-repeat scroll 0 0 transparent}.comments .thread-collapsed .thread-arrow{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAJUlEQVR42mNgAILy8vL/DLgASBKnApgkVgXIkhgKiNKJ005s4gDLbCZBiSxfygAAAABJRU5ErkJggg==") no-repeat scroll 0 0 transparent}.comments .avatar-image-container {  float: right;  padding: 0;  margin: 0;  max-height:55px;  width:55px;  }.comments .avatar-image-container img {  display: block;  max-width: 55px;  width: 55px;  border-radius: 27.5px;  -moz-border-radius: 27.5px;  -o-border-radius: 27.5px;  -webkit-border-radius: 27.5px;  }.comments .comment-block {  margin-left: 0px;  position: relative;  }
+.comments .comments-content .comment {  background: #fff;  border: 1px solid #DDDDDD;  list-style: none outside none;  margin: 0 25px 15px 10px;  padding: 10px !important; }.comments .comments-content .comment:nth-child(even) {  background: #F9F9F9;  }
+/*****************************************
+Responsive styles
+******************************************/
+@media screen and (max-width: 1024px) {#header, .header-right { float: none; text-align: center; width: 100%; }.header-right .widget-content { margin: 0; }}
+@media screen and (max-width: 960px) {.ct-wrapper{    padding:0 15px;  }.main-wrapper, .opt-in .opt-in-wrap{    margin-right:0;    width:100%;  }.sidebar-wrapper{  float: left; width: auto;  margin-left: 20px;  }.nav-menu ul { text-align: center; }.nav-menu ul li { float: none; }.opt-in .inner .ct-wrapper {  padding: 0 48px; }.opt-in .info {  text-align: center;   }
+.opt-in .signup-form {  margin-top: 30px;  width: 95%;  float: left;  }#subbox {  width: 60%;  }}
+@media screen and (max-width: 768px){#header p.description { margin: 0; }.header-right { display: none; }#comment-editor { margin:10px; }.footer { width: 50%; }}
+@media screen and (max-width: 500px){#header img { width:100%; }.opt-in .inner .ct-wrapper {  padding: 0 10px; }}
+@media screen and (max-width: 420px){.comments .comments-content .datetime{    display:block;    float:none;}.comments .comments-content .comment-header {    height:70px;    }}
+@media screen and (max-width: 320px){.footer { width: 100%; }.ct-wrapper{ padding:0; }.post-body img{  max-width: 230px; }
+.comments .comments-content .comment-replies {    margin-left: 0;    }}
+/*****************************************
+Hiding Header Date and Feed Links
+******************************************/
+h2.date-header{display:none;}
+/* ATB Code For Author Box */
+.about-author {
+width : 98%;
+overflow : hidden;
+margin:10px 0px;
+border:0px;
+}
+.about-author img {
+width:70px;
+padding:3px;
+border:1px solid #ddd;
+margin:0px 5px 0px 0px;
+}
+.about-author h6{
+font-family: verdana !important;
+font-size: 150% !important;
+margin: 9px 0px !important;
+color: #111 !important;
+border-bottom: 2px solid #111 !important;
+border-top: 0px !important;
+}
+.about-author p {
+margin:0px;
+text-align:justify;
+color:#111;
+}
+/* Hreview Plugin */
+.tth_box_right {
+float: right;
+margin: 0 0 10px 10px;
+}
+.tth_rating_container_default {
+border: 1px solid #E0E0E0;
+border-radius: 3px 3px 3px 3px;
+font-size: 14px;
+line-height: 20px;
+width: 300px;
+font-family: georgia;
+}
+#content_box #content .format_text {
+color: #000000;
+font-family: georgia;
+}
+#tth_rating {
+background: none repeat scroll 0 0 #F6F6F6;
+border: 2px solid white;
+border-radius: 3px 3px 3px 3px;
+clear: both;
+overflow: hidden;
+padding: 10px;
+}
+.tth_rating_container_default {
+font-size: 14px;
+line-height: 20px;
+}
+.tth_rating_container_default {
+font-size: 14px;
+line-height: 20px;
+}
+#tth_rating .review_screenshot {
+display: block;
+margin: 10px auto;
+}
+#tth_rating div.hr {
+background: none repeat scroll 0 0 #E0E0E0;
+height: 1px;
+margin: 5px 0;
+}
+#tth_rating dd {
+margin-bottom: 0 !important;
+margin-left: 15px;
+}
+#tth_rating dt, #tth_rating dd {
+float: left;
+font-weight: normal;
+}
+.format_text dd {
+margin-bottom: 1.5em;
+}
+.result {
+text-indent: -9999px;
+}
+.tth_rating {
+background: url("http://3.bp.blogspot.com/-wTDC4enXqzs/UIN5wgbreCI/AAAAAAAABFM/BNESOszfE-A/s320/stars.png") repeat-x scroll 0 -16px transparent;
+height: 16px;
+position: relative;
+width: 80px;
+}
+.tth_rating .result {
+background: url("http://3.bp.blogspot.com/-wTDC4enXqzs/UIN5wgbreCI/AAAAAAAABFM/BNESOszfE-A/s320/stars.png") repeat-x scroll 0 0 transparent;
+height: 16px;
+left: 0;
+position: absolute;
+text-indent: -9999px;
+top: 0;
+z-index: 102;
+}
+.ar_button {
+background: url("http://2.bp.blogspot.com/-TqpXHM6VkoE/UIN6Ix2tGhI/AAAAAAAABFY/KaUnAb76hRM/s320/bg_button.png") repeat-x scroll center bottom #777777;
+border: medium none;
+border-radius: 3px 3px 3px 3px;
+color: #FFFFFF !important;
+cursor: pointer;
+display: inline;
+font-weight: bold;
+padding: 5px 10px;
+text-decoration: none !important;
+text-shadow: 1px 1px #666666;
+}
+.ar_button:hover {
+background-position: 0 center;
+}
+.ar_button:active {
+background-position: 0 top;
+padding: 6px 10px 4px;
+position: relative;
+top: 1px;
+}
+.ar_button.ar_red {
+background-color: #E50000;
+}
+#tth_rating dl {
+margin-top: 1px;
+}
+/* The three buttons sizes */
+.button.big { font-size:30px;}
+.button.medium { font-size:18px;}
+.button.small { font-size:13px;}
+/* BlueButton */
+.blue.button{
+color:#0f4b6d !important;
+border:1px solid #84acc3 !important;
+background-color: #48b5f2;
+background-image: url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'),
+-moz-radial-gradient( center bottom, circle,
+rgba(89,208,244,1) 0,rgba(89,208,244,0) 100px),
+-moz-linear-gradient(#4fbbf7, #3faeeb);
+background-image: url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'),
+-webkit-gradient( radial, 50% 100%, 0, 50% 100%, 100,
+from(rgba(89,208,244,1)), to(rgba(89,208,244,0))),
+-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4fbbf7), to(#3faeeb));
+}
+.blue.button:hover{
+background-color:#63c7fe;
+background-image: url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'),
+-moz-radial-gradient( center bottom, circle,
+rgba(109,217,250,1) 0,rgba(109,217,250,0) 100px),
+-moz-linear-gradient(#63c7fe, #58bef7);
+background-image: url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'),
+-webkit-gradient( radial, 50% 100%, 0, 50% 100%, 100,
+from(rgba(109,217,250,1)), to(rgba(109,217,250,0))),
+-webkit-gradient(linear, 0% 0%, 0% 100%, from(#63c7fe), to(#58bef7));
+}
+/* Green Button */
+.green.button{
+color:#345903 !important;
+border:1px solid #96a37b !important;
+background-color: #79be1e;
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(162,211,30,1) 0,rgba(162,211,30,0) 100px),-moz-linear-gradient(#82cc27, #74b317);
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(162,211,30,1)), to(rgba(162,211,30,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#82cc27), to(#74b317));
+}
+.green.button:hover{
+background-color:#89d228;
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(183,229,45,1) 0,rgba(183,229,45,0) 100px),-moz-linear-gradient(#90de31, #7fc01e);
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(183,229,45,1)), to(rgba(183,229,45,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#90de31), to(#7fc01e));
+}
+/* Orange Button */
+.orange.button{
+color:#693e0a !important;
+border:1px solid #bea280 !important;
+background-color: #e38d27;
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(232,189,45,1) 0,rgba(232,189,45,0) 100px),-moz-linear-gradient(#f1982f, #d4821f);
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(232,189,45,1)), to(rgba(232,189,45,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f1982f), to(#d4821f));
+}
+.orange.button:hover{
+background-color:#ec9732;
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(241,192,52,1) 0,rgba(241,192,52,0) 100px),-moz-linear-gradient(#f9a746, #e18f2b);
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(241,192,52,1)), to(rgba(241,192,52,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#f9a746), to(#e18f2b));
+}
+/* Orange Button */
+.gray.button{
+color:#525252 !important;
+border:1px solid #a5a5a5 !important;
+background-color: #a9adb1;
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(197,199,202,1) 0,rgba(197,199,202,0) 100px),-moz-linear-gradient(#c5c7ca, #92989c);
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(197,199,202,1)), to(rgba(197,199,202,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#c5c7ca), to(#92989c));
+}
+.gray.button:hover{
+background-color:#b6bbc0;
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -moz-radial-gradient(center bottom, circle, rgba(202,205,208,1) 0,rgba(202,205,208,0) 100px),-moz-linear-gradient(#d1d3d6, #9fa5a9);
+background-image:url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), url('https://lh6.googleusercontent.com/-4cWMlF-uqh4/TltCfL8C4DI/AAAAAAAABhE/qNaNueMVpCU/s144/button_bg.png'), -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, from(rgba(202,205,208,1)), to(rgba(202,205,208,0))),-webkit-gradient(linear, 0% 0%, 0% 100%, from(#d1d3d6), to(#9fa5a9));
+}
+.mbt-textarea {
+padding:0;
+margin:0;
+background: #fff;
+width:500px;
+height:50px;
+color:#666;
+font:12px arial;
+border:1px dotted #289728; }
+.mbt-textarea:hover {
+color:#289728;
+border:2px solid #666;
+}
+/*--------MBT TOC-----*/
+.judul-label{
+background-color:#E5ECF9;
+font-weight:bold;
+line-height:1.4em;
+margin-bottom:5px;
+overflow:hidden;
+white-space:nowrap;
+vertical-align: baseline;
+margin: 0 2px;
+outline: none;
+cursor: pointer;
+text-decoration: none;
+font: 14px/100% Arial, Helvetica, sans-serif;
+padding: .5em 2em .55em;
+text-shadow: 0 1px 1px rgba(0,0,0,.3);
+-webkit-border-radius: .5em;
+-moz-border-radius: .5em;
+border-radius: .5em;
+-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+-moz-box-shadow: 1px 1px 4px #AAAAAA;
+box-shadow: 0 1px 2px rgba(0,0,0,.2);
+color: #e9e9e9;
+border: 2px solid white !important;
+background: #6e6e6e;
+background: -webkit-gradient(linear, left top, left bottom, from(#888), to(#575757));
+background: -moz-linear-gradient(top,  #888,  #575757);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#888888', endColorstr='#575757');
+}
+.data-list{
+line-height:1.5em;
+margin-left:5px;
+margin-right:5px;
+padding-left:15px;
+padding-right:5px;
+white-space:nowrap;
+text-align:left;
+font-family:"Arial",sans-serif;
+font-size:12px;
+}
+.list-ganjil{
+background-color:#F6F6F6;
+}
+.headactive{
+color: #fef4e9;
+border: 2px solid white !important;
+background: #1C8DFF;
+background: -webkit-gradient(linear, left top, left bottom, from(#9dc2e7), to(#438cd2));
+background: -moz-linear-gradient(top,  #9dc2e7,  #438cd2);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9dc2e7', endColorstr='#438cd2');
+}
+/*----------Guest Poster --------*/
+.mbt-gp img {
+margin:0;
+border:0;
+}
+.mbt-gp-about {
+font-size:15px;
+margin:0 auto;
+padding:3px;
+width:100%;
+background:#edf6ff;
+border:#9ecfff dotted 1px;
+min-height:130px;
+}
+.mbt-gp {
+padding-top:10px;
+margin:0;
+font-size:15px;
+float:left;
+width:17%;
+text-align:center;
+border-right:#93C0F9 solid 1px;
+}
+.mbt-gp-text {
+float:right;
+width: 80%;
+padding:5px;
+text-align:left;
+font:12px arial;
+text-align:justify;
+margin:0;
+padding:0;
+}
+#Label1 a{
+border: 1px solid #0084CE;
+color: #0084CE;
+float: left;
+font-size: 12px;
+letter-spacing: 1px;
+margin: 0 5px 5px 0;
+padding: 5px;
+position: relative!important;
+text-transform: uppercase;
+-moz-box-shadow: 0 1px #999,inset 0 1px #fff;
+-webkit-box-shadow: 0 1px #999,inset 0 1px #fff;
+box-shadow: 0 1px #999,inset 0 1px #fff;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+text-decoration:none;
+}
+#Label1 a:hover{background-color:#0084CE;border:1px solid #0084CE;color:#fff}
+.a-btn{
+padding-bottom:10px;
+}
+.a-btn a {
+position: relative;
+color: rgba(255,255,255,1);
+text-decoration: none;
+background-color: rgba(219,87,5,1);
+font-family: 'Yanone Kaffeesatz';
+font-weight: 600;
+font-size: 2.1em;
+display: block;
+-webkit-border-radius: 8px;
+-moz-border-radius: 8px;
+border-radius: 8px;
+-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+margin: 10px auto;
+width: 30%;
+text-align: center;
+-webkit-transition: all .1s ease;
+-moz-transition: all .1s ease;
+-ms-transition: all .1s ease;
+-o-transition: all .1s ease;
+transition: all .1s ease;
+}
+.a-btn a:active {
+-webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+-moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+position: relative;
+top: 6px;
+}
+.sticky {
+font-family: "Helvetica Neue", Arial, sans-serif;
+background:#e8f2fc;
+width:95%;
+height:100%;
+padding-top:10px;
+padding-bottom:10px;
+padding-right:10px;
+padding-left:10px;
+border: 1px solid #A5CEF6;
+}
+.sticky a {
+color: #004489;
+font-size:30px;
+line-height:1em;
+text-decoration: none;
+font-weight:bold;
+}
+
+.adspot_link{display:none}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.post blockquote {
+-webkit-user-select: text !important;
+-moz-user-select: text !important;
+-ms-user-select: text !important;
+user-select: text !important;
+}
+body {
+-webkit-user-select: none !important;
+-moz-user-select: -moz-none !important;
+-ms-user-select: none !important;
+user-select: none !important;
+}
+
+    
+
+<!-- /*
+<style id='page-skin-1' type='text/css'><!--
+*/
+-->
+
+
+.post-body img{ height:auto; max-width:100%; }
+
+
+
+/*<![CDATA[*/
+//next post navigation links
+var urlToNavTitle = {};
+function getTitlesForNav(json) {
+for(var i=0 ; i < json.feed.entry.length ; i++) {
+var entry = json.feed.entry[i];
+var href = "";
+for (var k=0; k<entry.link.length; k++) {
+if (entry.link[k].rel == 'alternate') {
+href = entry.link[k].href;
+break;
+}
+}
+if(href!="") urlToNavTitle[href]=entry.title.$t;
+}
+}
+document.write('<script async='async' type="text/javascript" src="http://'+window.location.hostname+'/feeds/posts/summary?redirect=false&max-results=500&alt=json-in-script&callback=getTitlesForNav"></'+'script>');
+function urlToPseudoTitle(href) {
+var title=href.match(/\/([^\/_]+)(_.*)?\.html/);
+if(title) {
+title=title[1].replace(/-/g," ");
+title=title[0].toUpperCase() + title.slice(1);
+if(title.length > 200) title=title.replace(/ [^ ]+$/, "...")
+}
+return title;
+}
+$(window).load(function() {
+window.setTimeout(function() {
+var href = $("a.blog-pager-newer-link").attr("href");
+if(href) {
+var title=urlToNavTitle[href];
+if(!title) title=urlToPseudoTitle(href);
+if(title) $("a.blog-pager-newer-link").html("" + title);
+}
+href = $("a.blog-pager-older-link").attr("href");
+if(href) {
+var title=urlToNavTitle[href];
+if(!title) title=urlToPseudoTitle(href);
+if(title) $("a.blog-pager-older-link").html("" + title);
+}
+}, 500);
+});
+/*]]>*/
+var a="&m=1",d="(^|&)m=",e="?",f="?m=1";function g(){var b=window.location.href,c=b.split(e);switch(c.length){case 1:return b+f;case 2:return 0<=c[1].search(d)?null:b+a;default:return null}}var h=navigator.userAgent;if(-1!=h.indexOf("Mobile")&&-1!=h.indexOf("WebKit")&&-1==h.indexOf("iPad")||-1!=h.indexOf("Opera Mini")||-1!=h.indexOf("IEMobile")){var k=g();k&&window.location.replace(k)};
+
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+≡eAskme
+
+Home ▼
+
+Home
+How To
+Blogging
+SEO
+WordPress
+Learn Blogging
+Make Money
+Widgets
+Interviews
+Facebook
+GoDaddy
+Amazon
+Discounts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+
+
+
+
+Friday
+
+
+
+
+
+
+
+
+How to Create Mail Merge with Gmail and Google Docs
+
+
+
+
+
+                              in:
+                            
+
+
+Google
+
+
+
+
+
+
+
+
+
+
+
+Mail Merge in Gmail allow you to send personalized messages to multiple people in one go. Individual message will have same content but you can customize some part of message. For example you can change the name  and postal address or person and still message stay same in text body.
+
+
+
+
+
+How to Create Mail Merge with Gmail and Google Docs : eAskme
+
+
+HTML Mail Merge with Gmail
+Mail merge option available in premium and free editions.
+
+
+
+FeaturesFreePremiumPremium+
+Works with Gmail & Google Apps      Yes     Yes                          Yes
+Can include BCC  or CC addresses      No     Yes                          Yes
+Send emails through an alias      No     Yes                          Yes
+Track outgoing messages with Google Analytics      No     Yes                          Yes
+Include personalized file attachments      No     Yes                          Yes
+Specify a different Reply-to address      No     Yes                          Yes
+Installation Manual (PDF) included      No     Yes                          Yes
+Support optionsSupport Forums  Email Support  One-to-one support over Skype or  Google Hangouts
+
+
+You can purchase this service by making payment through credit cards and debit cards or Paypal.
+
+How to do Mail Merge with Gmail :
+Mail Merge in Gmail  allow you to send richtext emails to multiple contacts same time.
+
+
+Click Here  to create mail Merge in Google Drive. Mail Merge iinternally use Google Apps Script.
+Go go "Mail Merge", Click on the "Reset" to clear canvas and authorize sheet to access Gmail and Google contacts.
+In Google Contacts, create new group with contacts on those you wish to send personalize email or you have to enter names and email addresses manually in Google sheet.
+Under Mail Merge menu, select Import Google Contacts and choose Google Contact group you have made. Ths will import all contacts of that group.
+Fill fields of email template.
+Compose an email template using HTML mail tool and copy the code and paste it into message body of Google Sheet.
+You can also upload any file in Google Docs that you want to send and copy the Id and paste it in aattachment ID field. ID will show in URL.
+Go to Mail Merge and click on "Start Mail Merge". Statues will change to "Ok" for those emails that are successfully delivered.
+
+
+You can daily send maximum number of 100 messages., as it is the limit of Gmail. You can also send Personalized Emails using Mail Merge in Gmail.
+
+For more Google tips and tricks visit Here 
+
+Do share your own tips about "Google Plus".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              removeRelatedDuplicates_thumbs();
+                              printRelatedLabels_thumbs("http://www.easkme.com/2014/07/mail-merge-in-gmail.html");
+                            
+
+
+
+
+
+
+
+                            About Admin of the Blog:
+                          
+
+
+                         Gaurav Kumar is author @
+                            
+                              eAskme
+                            
+                            .He is a Tech Geek, SEO Expert, Web Designer and a Pro Blogger.
+                            
+                              Contact Him Here
+                            
+
+
+                            | 
+                            
+                              Facebook
+                            
+                            | 
+                            
+                              Twitter
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Newer Post
+
+
+Older Post
+
+Home
+
+
+window.___gcfg = {'lang': 'en'};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Follow me on Google+
+
+
+
+        window.___gcfg = {'lang': 'en'};
+      
+
+
+
+  medianet_width='336';  medianet_height= '280';  medianet_crid='928804709';   
+
+
+Most Trending
+
+
+
+
+
+
+
+
+
+Interview with Dana Sibilsky (Art Blogger) : Journey of a Professional Blogger
+  Today I am going to introduce you with one more power blogger Dana Sibilsky (Art Blogger) .  Interviews  are the great way to know person,...
+
+
+
+
+
+
+
+
+
+
+10 Best Ways to Start a New Relationship
+ Relationship not only provide emotional support but it also help you to know yourself and understand your world. So it is important to crea...
+
+
+
+
+
+
+
+
+
+
+Best Free Responsive Blogger Templates for 2016
+   Blogger or Blogspot both are the same thing. Blogger is one of the most popular and in-demand blogging platform. It is a product of Googl...
+
+
+
+
+
+
+
+
+
+
+How to Use Ultrasurf Desktop Proxy Program
+ Ultrasurf is one of most popular desktop based proxy program.  You can easily access any blocked site in your office or country by using it...
+
+
+
+
+
+
+
+
+
+
+How to Get Free Blogger Templates
+  You can get free blogger templates for blogger by searching on Google .      How to Get Free Blogger Templates ?   The first thing is that...
+
+
+
+
+
+
+
+
+
+
+How to Embed a Poll in a Blogger Post
+ Blogger is one of the best blogging platform. You can easily customize it. If you want to add a poll in your blog you can easily do it by f...
+
+
+
+
+
+
+
+
+
+
+How to OutRank Your Online Competitors? : Brainstorm
+  Do you worry about the "Competition"? Do you fear from dealing with your competitors? If yes, that means you should look for wha...
+
+
+
+
+
+
+
+
+
+
+Google Has Launched Street View Application
+  Bringing to mind Google earth. Now there is an improved view for Google users. If you like the idea of street view. Then this will be good...
+
+
+
+
+
+
+
+
+
+
+How to Use a GoDaddy Form Mailer
+ It can be used to visitor information from website and to collect e-mail addresses.        How to Use a GoDaddy Form Mailer : eAskme    How...
+
+
+
+
+
+
+
+
+
+
+6 Free Apps to Watch TV on iPhone
+ Mobile technology has changed a lot in last 2-3 years. Now you can easily do video chat or watch TV. There are many apps to watch TV on iPh...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tweets by @vhowtodo
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              Back to top
+            
+
+
+
+
+              Home
+      
+
+              About-us
+            
+
+              Advertise on this Blog
+            
+
+              Learn Blogging Online
+            
+
+              Privacy Policy
+            
+
+              Contact-us
+            
+
+              Sitemap
+            
+
+              Ask a Question
+            
+
+              Disclaimer
+            
+
+
+
+
+
+
+
+                var disqus_shortname = 'easkme';
+                var disqus_blogger_current_url = "http://www.easkme.com/2014/07/mail-merge-in-gmail.html";
+                if (!disqus_blogger_current_url.length) {
+                    disqus_blogger_current_url = "http://www.easkme.com/2014/07/mail-merge-in-gmail.html";
+                }
+                var disqus_blogger_homepage_url = "http://www.easkme.com/";
+                var disqus_blogger_canonical_homepage_url = "http://www.easkme.com/";
+            
+
+                    #comments {display:none;}
+                
+
+                    (function() {
+                        var bloggerjs = document.createElement('script');
+                        bloggerjs.type = 'text/javascript';
+                        bloggerjs.async = true;
+                        bloggerjs.src = '//'+disqus_shortname+'.disqus.com/blogger_item.js';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bloggerjs);
+                    })();
+                
+
+                    .post-comment-link { visibility: hidden; }
+                
+
+                (function() {
+                    var bloggerjs = document.createElement('script');
+                    bloggerjs.type = 'text/javascript';
+                    bloggerjs.async = true;
+                    bloggerjs.src = '//'+disqus_shortname+'.disqus.com/blogger_index.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bloggerjs);
+                })();
+                
+
+
+
+var linkwithin_site_id = 2199005;
+
+
+
+
+var linkwithin_site_id = 2199005;
+
+
+
+
+
+
+
+
+
+Contact Form
+
+
+
+
+Name
+
+
+
+Email
+*
+
+
+
+Message
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*<![CDATA[*/
+    var postperpage=9;
+    var numshowpage=2;
+    var upPageWord ='« Previous Page';
+    var downPageWord ='Next Page »';
+    var urlactivepage=location.href;
+    var home_page="/";
+  /*]]>*/
+
+
+(function(doc, script, minimum) {
+ 
+   // Calculate the width of the user's screen
+    var browserWidth = window.innerWidth 
+        || doc.documentElement.clientWidth 
+        || doc.body.clientWidth;
+ 
+   // Load JavaScript only if the site is being viewed on a wide (non-mobile) screen
+    if (browserWidth > minimum) {
+ 
+    var js, frag = doc.createDocumentFragment(),
+  
+    // Credit : Stoyan Stefanov of phpied.com
+    js_queue = function(url, id) {
+        if ( ! doc.getElementById(id) ) {
+            js = doc.createElement(script); 
+            js.src = url; js.id = id; 
+            frag.appendChild(js);
+             }
+         };
+
+    var fjs = doc.getElementsByTagName(script)[0];
+    fjs.parentNode.insertBefore(frag, fjs); 
+    }
+ 
+// Set the minimum width here (default is 480 pixels)
+} ( document, 'script', 600 ) );
+ 
+
+
+//<![CDATA[
+$(document).ready(function() {
+  $('img').each(function(){
+    var $img = $(this);
+    var filename = $img.attr('src')
+    $img.attr('title', filename.substring((filename.lastIndexOf('/'))+1, filename.lastIndexOf('.')));
+
+    $img.attr('alt', filename.substring((filename.lastIndexOf('/'))+1, filename.lastIndexOf('.')));
+  });
+});
+//]]>
+
+Casino html script
+ 

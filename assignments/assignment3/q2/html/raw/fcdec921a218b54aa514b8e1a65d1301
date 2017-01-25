@@ -1,0 +1,3561 @@
+http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr">
+
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+    <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script language="javascript" type="text/javascript">
+        var sem_pageview = false;
+        var sem_ocode = '9999';
+        var sem_ldid = '';
+        var sem_sh = '';
+        function updateSemVariable(query) {
+            if (query[1] === undefined) {
+                return;
+            }
+            switch(query[0]) {
+            case 'o':
+                    sem_ocode = query[1];
+                    break;
+                case 'ldid':
+                    sem_ldid = query[1];
+                    break;
+                case 'sh':
+                    sem_sh = query[1];
+                    break;
+            }
+        }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+            }
+            return "";
+        }
+        function getSemCookie() {
+            var queryStr = getCookie('semuser');
+            if (queryStr == "") {
+                return;
+            }
+            sem_pageview = true;
+            var queries = queryStr.split("&");
+            for (var i = 0, l = queries.length; i < l; i++) {
+                var query = queries[i].split('=');
+                updateSemVariable(query);
+            }
+        }
+        getSemCookie();
+    </script>
+                
+	<script language="javascript">
+				function tryWelcomeAd()
+		{
+			var domain = invCookieDomain();
+
+			function invCookieDomain(){
+				var host = window.location.host.toLowerCase();
+				return host.replace('www.','');
+			}
+
+			function hasWelcomeAdCookie()
+			{
+				var name = 'AdViewed';
+				c = document.cookie.split('; ');
+				cookies = {};
+
+				for(i=c.length-1; i>=0; i--){
+					C = c[i].split('=');
+					cookies[C[0]] = C[1];
+				}
+
+				if (cookies[name] == '1') {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			function getUrlParam(name)
+			{
+				name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+				var regexS = "[\\?&]"+name+"=([^&#]*)";
+				var regex = new RegExp( regexS );
+				var results = regex.exec( window.location.href );
+				if( results == null )    return null;
+				else    return results[1];
+			}
+
+			function isDebugMode() {
+				if ((getUrlParam("wa") != null) && (getUrlParam("wa") == "1")) {
+					return true;
+				}
+				return false;
+			}
+
+			function isUsTraffic() {
+				return invGCookie.geoIsUS();
+			}
+
+			function isWelcomeAdEnabled() {
+
+								if( isAdBlocked() ) {
+					return false;
+				}
+				
+								if (isVideoOnPage && isVideoAutoPlay) {
+					return false;
+				}
+
+								if (isDebugMode()) {
+					return true;
+				}
+
+								if (hasWelcomeAdCookie('AdViewed') ||
+					!isPathAllowed() ||
+					!isTaxonomyAllowed() ||
+					isRobot()) {
+					return false;
+				}
+
+								if (!isUsTraffic()) {
+										if (isInvFirstPageVisit()
+						&& _pageTaxonomy["Channel"].toLowerCase() == "dictionary") {
+						return false;
+					}
+										return true;
+				}
+
+								if (isInvFirstPageVisit()) {
+										if (isDesktop() ||
+												getDfpReferrerSearch().toLowerCase() === "false") {
+						return false;
+					}
+				}
+
+								return true;
+			}
+
+
+			function isDesktop() {
+				return true;
+			}
+
+			function isRobot()
+			{
+				var clients = {};
+				var user_agent = navigator.userAgent;
+
+				clients.user_agent = user_agent.toLowerCase();
+				clients.googlebot = user_agent.indexOf("googlebot") > -1;
+				clients.googlebot_news = user_agent.indexOf("googlebot-news") > -1;
+				clients.googlebot_image = user_agent.indexOf("googlebot-image") > -1;
+				clients.googlebot_video = user_agent.indexOf("googlebot-video") > -1;
+				clients.googlebot_mobile = user_agent.indexOf("googlebot-mobile") > -1;
+				clients.mediapartners_google = user_agent.indexOf("mediapartners-google") > -1;
+				clients.adsbot_google = user_agent.indexOf("adsbot-google") > -1;
+				clients.msnbot = user_agent.indexOf("msnbot") > -1;
+				clients.slurp = user_agent.indexOf("slurp") > -1;
+				clients.ask_jeeves = user_agent.indexOf("ask jeeves") > -1;
+				clients.bingbot = user_agent.indexOf("bingbot") > -1;
+
+				for (var i in clients) {
+					if (clients[i] == true) {
+						return true;
+					}
+				}
+
+				return false;
+			}
+
+			function isPathAllowed()
+			{
+				var paths = [];
+
+				paths.push('/user/');
+				paths.push('/not-found/');
+
+				if (_pageTaxonomy) {
+					for (var i=0; i<paths.length; i++) {
+						if (_pageTaxonomy.Path.indexOf(paths[i]) > -1 ) {
+							return false;
+						}
+					}
+				}
+
+				return true;
+			}
+
+			function isTaxonomyAllowed()
+			{
+								if (_pageTaxonomy["Channel"].toLowerCase() == "accounts") return false;
+				if (_pageTaxonomy["Advertising"].toLowerCase() == "unknown") return false;
+
+				return true;
+			}
+
+			function isInvFirstPageVisit()
+			{
+								if ((document.referrer == null) || (document.referrer.length == 0)) return true;
+								if (document.referrer.toLowerCase().indexOf(domain.toLowerCase()) >= 0) {
+					return false;
+				}
+				return true;
+			}
+
+			function makeWelcomeAd() {
+				var welcomeAdId = "AdSlot_" + "PG-Interstitial";
+				function closeWelcomeAdOverlay() {
+					document.getElementById(welcomeAdId).style.display = "none";
+				}
+				var welcomeAdDiv = document.createElement("div");
+				welcomeAdDiv.id = welcomeAdId;
+				var welcomeAdStyle = document.createElement("style");
+				var css = '#AdSlot_PG-Interstitial > div, ';
+				css += '#AdSlot_PG-Interstitial > div > iframe { width:100%; height:100%; position:absolute; }';
+				css += '#AdSlot_PG-Interstitial .welcome-close { position:fixed; top:25px; right:104px; z-index:999; font-family:"Sling-Light";color:#06c; font-size:16px; cursor:pointer; }';
+				css += '#AdSlot_PG-Interstitial .welcome-close:hover { text-decoration:underline; }';
+				css += '@media only screen and (max-width: 767px) {';
+				css += '#AdSlot_PG-Interstitial .welcome-close { top:60px; right:auto; left:50%; width:170px; margin-left:-85px; text-align:center; }';
+				css += '}';
+				welcomeAdStyle.appendChild(document.createTextNode(css));
+				var welcomeAdH3 = document.createElement("h3");
+				welcomeAdH3.onclick = closeWelcomeAdOverlay;
+				welcomeAdH3.className = "welcome-close";
+				welcomeAdH3.innerHTML = "Continue to Site &raquo;";
+				function addWelcomeAdHeader() {
+					welcomeAdDiv.appendChild(welcomeAdStyle);
+					welcomeAdDiv.appendChild(welcomeAdH3);
+				}
+				googletag.cmd.push(function() {
+
+					var dartCC = [];
+					var lpid = (typeof(ccauds.Profile.pid) != 'undefined') ? ccauds.Profile.pid : "",
+						ltpid = (typeof(ccauds.Profile.tpid) != 'undefined') ? ccauds.Profile.tpid : "";
+
+					if (typeof(ccauds) != 'undefined')
+					{
+						for (var cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++)
+						{
+							dartCC.push(ccauds.Profile.Audiences.Audience[cci].id);
+						}
+					}
+					googletag.pubads().setTargeting("lpid",lpid);
+					googletag.pubads().setTargeting("ltpid",ltpid);
+					googletag.pubads().setTargeting("lseg",dartCC);
+					var slot = googletag.defineOutOfPageSlot('/8397/INV-NA/Forex/Forex/PG-Interstitial/Article', 'AdSlot_PG-Interstitial')
+						.addService(googletag.pubads())
+						.setTargeting('Location', 'PG-Interstitial');
+
+					googletag.pubads().setTargeting('Type', "Article");
+					googletag.pubads().setTargeting('Environment', "Live");
+					googletag.pubads().setTargeting('URL', "/articles/investing/091814/what-bitcoins-intrinsic-value.asp");
+					googletag.pubads().setTargeting('Tags', "'Alternative Investments','Currency','Vizio','Bitcoin','Cryptocurrency','Virtual Currency','WM-Investments'");
+					googletag.pubads().setTargeting('Tickers', "''");
+
+					welcomeAdDiv.style.display = "none";
+					$("document").ready( function() {
+						document.body.insertBefore(welcomeAdDiv, document.body.firstChild);
+						googletag.display(welcomeAdId);
+						googletag.pubads().refresh([slot]);
+						slot.isDisplayed = true;
+						googletag.pubads().addEventListener("slotRenderEnded", function(event) {
+							if (event.slot.getSlotElementId().toLowerCase() === welcomeAdId.toLowerCase()) {
+								setTimeout(welcomeAdDiv.style.opacity = 1.0, 100);
+								setTimeout(addWelcomeAdHeader, 100);
+								setTimeout(gptApp.displaySlots(), 100);
+							}
+						});
+					});
+				});
+								var invWelcomeAd_CookieExpiry = 3600000 * 24;
+				var invCookieExpires = new Date();
+
+				function invCookieDomain()
+				{
+					var host = window.location.host.toLowerCase();
+					return host.replace('www.','');
+				}
+
+				function setCookie(key, value, options)
+				{
+										if (arguments.length > 1 && String(value) !== "[object Object]") {
+
+						if (value === null || value === undefined) {
+							options.expires = -1;
+						}
+
+						if (typeof options.expires === 'number') {
+							var days = options.expires, t = options.expires = new Date();
+							t.setDate(t.getDate() + days);
+						}
+
+						value = String(value);
+
+						return (document.cookie = [
+							encodeURIComponent(key), '=',
+							options.raw ? value : encodeURIComponent(value),
+														options.expires ? '; expires=' + options.expires.toUTCString() : '',
+							options.path ? '; path=' + options.path : '',
+							options.domain ? '; domain=' + options.domain : '',
+							options.secure ? '; secure' : ''
+						].join(''));
+					}
+
+										options = value || {};
+					var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+					return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+
+				};
+
+				invCookieExpires.setTime(invCookieExpires.getTime() + invWelcomeAd_CookieExpiry);
+				setCookie('AdViewed', '1', { expires: invCookieExpires, path: '/', domain: invCookieDomain() });
+			}
+			if (isWelcomeAdEnabled()) {
+				makeWelcomeAd();
+			}
+			else {
+				gptApp.displaySlots();
+			}
+		};
+
+	</script>    
+    <script type="text/javascript">
+ var attachScriptAsync = function(scriptInfo) {
+    var tag = document.createElement("script"),
+      p, node = document.getElementsByTagName("script")[0];
+    tag.async = true;
+    for (p in scriptInfo) {
+      if (scriptInfo.hasOwnProperty(p) && p != "src") {
+        tag[p] = scriptInfo[p];
+      }
+    }
+    tag.src = scriptInfo.src;
+    node.parentNode.insertBefore(tag, node);
+  }
+</script>
+<script data-id="script_async_bidder" type="text/javascript">
+    "use strict";
+    var adStart = Date.now(),
+        OX_dfp_ads,
+        targetingComplete, oxDone, gptCallIntiated = false,
+        completedTargeting = {},
+        gptApp = gptApp || {},
+        isVideoOnPage = "",
+        isVideoAutoPlay = "",
+        targetingEvtResponseTime = [];
+        gptApp.ads = gptApp.ads || [];
+
+    var openXScript = {
+            src: "//ox-d.ask.servedbyopenx.com/w/1.0/jstag?nc=8397-Investopedia",
+            event_name: "ox",
+            onload: function () {
+                var event_name = this.event_name;
+                setTimeout(function () {
+                    if (!('OX' in window)) {
+                        targetingComplete(event_name);
+                    }
+                }, 100);
+            }
+        };
+
+    var scriptInfos = [
+            {
+                src: "//www.googletagservices.com/tag/js/gpt.js",
+                event_name: "gpt",
+                onload: function() {
+                    var event_name = this.event_name;
+                    setTimeout(function() {
+                        try {
+                            targetingComplete(event_name);
+                            if (googletag.pubads != undefined) {
+                                                                OX_dfp_ads = gptApp.setOxDfpAds();
+                                attachScriptAsync(openXScript);
+                                                            }
+                        } catch(e) {}
+                    }, 100);
+                }
+            },
+            {
+                src: "//c.amazon-adsystem.com/aax2/amzn_ads.js",
+                event_name: "amz",
+                onload: function() {
+                    var event_name = this.event_name;
+                    try {
+                        amznads.getAdsCallback('3067', function() {
+                            googletag.cmd.push(function() {
+                                amznads.setTargetingForGPTAsync('a9');
+                            });
+                            targetingComplete(event_name);
+                        }, 1000);
+                    } catch (e) {}
+                }
+            },
+            {
+                src: "http://ad.crwdcntrl.net/5/c=4736/pe=y/var=ccauds",
+                event_name: "lotaud",
+                onload: function() {
+                    var event_name = this.event_name;
+                    try {
+                        googletag.cmd.push(function() {
+                            var dartCC, lpid, ltpid, cci;
+                            if (typeof(ccauds) != "undefined" && ccauds.Profile) {
+                                dartCC = [];
+                                lpid = (typeof(ccauds.Profile.pid) != "undefined") ? ccauds.Profile.pid : "";
+                                ltpid = (typeof(ccauds.Profile.tpid) != "undefined") ? ccauds.Profile.tpid : "";
+                                if (typeof(ccauds) != "undefined") {
+                                    for (cci = 0; cci < ccauds.Profile.Audiences.Audience.length; cci++) {
+                                        dartCC.push(ccauds.Profile.Audiences.Audience[cci].id);
+                                    }
+                                }
+                                googletag.pubads().setTargeting("lpid", lpid).setTargeting("ltpid", ltpid).setTargeting("lseg", dartCC);
+                            }
+                        });
+                        targetingComplete(event_name);
+                    } catch(e) {}
+                }
+            },
+            {
+                id: "LOTCC_6079",
+                src: "http://tags.crwdcntrl.net/c/6079/cc.js?ns=_cc6079",
+                event_name: "lotmes",
+                onload: function() {
+                    try {
+                                                _cc6079.add("ctax","Sites^Investopedia^Channel^Investing^^Investing");
+                                                                        _cc6079.add("ctax","Sites^Investopedia^SubChannel^Economics^^Economics");
+                                                                        _cc6079.add("ctax","Sites^Investopedia^Type^Article^^Article");
+                                                                        _cc6079.add("ctax","Sites^Investopedia^Timelessness^Semi-timely^^Semi-timely");
+                                                                                                _cc6079.add("ctax","Sites^Investopedia^Tags^Alternative Investments^^Alternative Investments");
+                                                _cc6079.add("ctax","Sites^Investopedia^Tags^Currency^^Currency");
+                                                _cc6079.add("ctax","Sites^Investopedia^Tags^Vizio^^Vizio");
+                                                _cc6079.add("ctax","Sites^Investopedia^Tags^Bitcoin^^Bitcoin");
+                                                _cc6079.add("ctax","Sites^Investopedia^Tags^Cryptocurrency^^Cryptocurrency");
+                                                _cc6079.add("ctax","Sites^Investopedia^Tags^Virtual Currency^^Virtual Currency");
+                                                _cc6079.add("ctax","Sites^Investopedia^Tags^WM-Investments^^WM-Investments");
+                                                                                                _cc6079.add("ctax","Sites^Investopedia^Advertising^Forex^^Forex");
+                                                                                                _cc6079.add("ctax","Sites^Investopedia^DfpTarget^Forex/Forex^^Forex/Forex");
+                                                _cc6079.bcp();
+                    } catch(e) {}
+                }
+            }
+        ];
+
+
+    gptApp.displaySlots = function() {
+        var slots = googletag.pubads().getSlots();
+        var _displaySlots = function() {
+            for (i = 0; i < slots.length; i++) {
+                if ("isDisplayed" in slots[i]
+                    && slots[i].isDisplayed === true) {
+                    continue;
+                }
+                if ("isCompanion" in slots[i]
+                    && slots[i].isCompanion === true
+                    && isVideoOnPage) {
+                    slots[i].addService(googletag.companionAds());
+                }
+                googletag.display(slots[i].getSlotElementId());
+                googletag.pubads().refresh([slots[i]]);
+                slots[i].isDisplayed = true;
+            }
+        }
+        var refreshAdsAfterVideoAd = function () {
+            jwplayer().on("adImpression", rF);
+            jwplayer().on("error", rF);
+            jwplayer().on("adError", rF);
+            jwplayer().on("setupError", rF);
+        };
+        if (isVideoOnPage
+            && isVideoAutoPlay
+            && true) {
+            var hasPubAdsRefreshed = false;
+            var rF = function() {
+                if (!hasPubAdsRefreshed) {
+                    _displaySlots();
+                    clearTimeout(pubAdsTimeoutId);
+                    hasPubAdsRefreshed = true;
+                }
+            };
+            var pubAdsTimeoutId = setTimeout(rF, 5000);
+            if (window.jwplayer_loaded) {
+                refreshAdsAfterVideoAd();
+            } else {
+                $(document).on("jwplayer-initial-setup", function() {
+                    refreshAdsAfterVideoAd();
+                });
+            }
+        } else {
+            _displaySlots();
+        }
+    };
+
+    gptApp.getTargetingForAllSlots = function() {
+        var slots = googletag.pubads().getSlots();
+        for (var i = 0; i < slots.length; i++) {
+            var targetingKeys = slots[i].getTargetingKeys();
+            for (var j = 0; j < targetingKeys.length; j++) {
+                console.log(slots[i].getSlotElementId() + " " + targetingKeys[j] + " " + slots[i].getTargeting(targetingKeys[j]))
+            }
+        }
+    };
+
+    gptApp.setOxDfpAds = function() {
+        var OX_dfp_ads = [];
+        var slots = googletag.pubads().getSlots();
+        for (var i=0; i < slots.length; i++) {
+            var slot_array = [];
+            var targeting_keys = slots[i].getTargetingKeys();
+            var targeting_key = "pos"; // used by Openx
+            if (targeting_keys.indexOf(targeting_key) > -1) {
+                slot_array.push(slots[i].getName());
+                var size_array = [];
+                var sizes = slots[i].getSizes();
+                for (var j=0; j < sizes.length;  j++) {
+                    size_array.push(sizes[j].getWidth() + "x" + sizes[j].getHeight());
+                }
+                slot_array.push(size_array);
+                slot_array.push(slots[i].getSlotElementId());
+                var targeting_object = {};
+                targeting_object[targeting_key] = slots[i].getTargeting(targeting_key)[0];
+                slot_array.push(targeting_object);
+                OX_dfp_ads.push(slot_array);
+            }
+        }
+        return OX_dfp_ads;
+    }
+
+    targetingComplete = function(event) {
+        completedTargeting[event] = true;
+        if (!gptCallIntiated) {
+            targetingEvtResponseTime.push(event + "|" + (Date.now() - adStart));
+            if ((completedTargeting.gpt
+                && completedTargeting.amz
+                && completedTargeting.ox
+                && completedTargeting.lotaud)
+                || event == "fallback") {
+                gptCallIntiated = true;
+                googletag.cmd.push(function() {
+                    if (isVideoOnPage) {
+                        googletag.companionAds().setRefreshUnfilledSlots(true);
+                        googletag.pubads().enableVideoAds();
+                    }
+                    googletag.pubads().disableInitialLoad();
+                    googletag.enableServices(); // Enable GPT service
+
+                    if(!window.welcomeAdAttempt) {
+                        window.welcomeAdAttempt = true;
+                        tryWelcomeAd();
+                    }
+                    googletag.pubads().setTargeting("perf", targetingEvtResponseTime);
+                });
+            }
+        }
+    }
+
+    oxDone = function(events) {
+        googletag.cmd.push(function() {
+            try {
+                OX.dfp_bidder.setOxTargeting(googletag.pubads().getSlots());
+            } catch (e) {}
+        });
+        targetingComplete("ox");
+    }
+
+
+    for (var i=0; i<scriptInfos.length; i++) {
+        attachScriptAsync(scriptInfos[i]);
+    }
+
+
+    setTimeout(function() {
+        targetingComplete("fallback");
+    }, 2000);
+
+</script>    <script type="text/javascript">
+    !function(){var t=function(){var t,e="NEW_SCRIPT_EVENT";window.CustomEvent?t=new CustomEvent(e,{detail:{}}):(t=document.createEvent("CustomEvent"),t.initCustomEvent(e,!0,!0,{})),window.dispatchEvent(t)};document.addEventListener("load",function(e){e.target&&"SCRIPT"==e.target.nodeName&&(e.target._loadState="load",t())},!0),document.addEventListener("error",function(e){e.target&&"SCRIPT"==e.target.nodeName&&(e.target._loadState="error",t())},!0)}();
+</script>    <title>What Is Bitcoin's Intrinsic Value? | Investopedia</title>
+    <meta name="application-name" content="Investopedia"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+    <!-- Nativo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+
+
+<!-- Meta tags -->
+              <meta name="description" content="What would bitcoin&#039;s price look like in the event of widespread adoption?" />
+                <meta name="robots" content="index,follow" />
+                      <meta property="og:locale" content="en_US" />
+                <meta property="og:title" content="What Is Bitcoin&#039;s Intrinsic Value? | Investopedia" />
+                <meta property="og:description" content="What would bitcoin&#039;s price look like in the event of widespread adoption?" />
+                <meta property="og:url" content="http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp" />
+                <meta property="og:site_name" content="Investopedia" />
+                <meta property="og:type" content="article" />
+                <meta property="og:image" content="http://i.investopedia.com/facebook/investopedia-facebook-image.gif" />
+                <meta property="article:published_time" content="2014-09-18T05:01:00-06:00" />
+                <meta property="article:modified_time" content="2014-09-18T05:01:00-06:00" />
+                <meta property="article:tag" content="alternative investments,currency,vizio,bitcoin,cryptocurrency,virtual currency,wm-investments" />
+                <meta name="author" content="John Kelleher" />
+                <meta property="fb:admins" content="100003532063336" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@Investopedia" />
+                <meta name="twitter:title" content="What Is Bitcoin&#039;s Intrinsic Value?" />
+                <meta name="twitter:description" content="What would bitcoin&#039;s price look like in the event of widespread adoption?" />
+                <meta name="twitter:image:src" content="http://i.investopedia.com/facebook/investopedia-facebook-image.gif" />
+                <meta name="sailthru.tags" content="wm-investments,alternative-investments,bitcoin,cryptocurrency,currency,vizio,virtual-currency" />
+                <meta name="sailthru.author" content="John Kelleher" />
+                <meta name="sailthru.date" content="2015-05-12 20:43:35" />
+                <meta name="sailthru.expire_date" content="2016-05-11 20:43:35" />
+                <meta name="sailthru.title" content="What Is Bitcoin's Intrinsic Value?" />
+      
+<!-- End Meta tags -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="apple-touch-icon" href="http://i.investopedia.com/public/img/apple-touch-icon.png" />
+<link rel="canonical" href="http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp" />
+<link rel="shortcut icon" href="http://i.investopedia.com/public/img/favicon.ico" type="image/vnd.microsoft.icon" />
+        
+          <link rel="stylesheet" type="text/css" href="http://i.investopedia.com/public/css/tablet.css?v=5.349"/>
+    
+	<!-- Bof Taxonomy -->
+	    
+  <!-- Page Taxonomy -->
+  <script type="text/javascript" data-id="script_taxonomy">
+  //<![CDATA[
+    var _pageTaxonomy = {"Hashkey":"$articles$investing$091814$what-bitcoins-intrinsic-value","Path":"/articles/investing/091814/what-bitcoins-intrinsic-value.asp","Channel":"Investing","SubChannel":"Economics","Advertising":"Forex","SubAdvertising":null,"AdTarget":"investopedia.com/forex","DfpTarget":"Forex/Forex","Tags":["Alternative Investments","Currency","Vizio","Bitcoin","Cryptocurrency","Virtual Currency","WM-Investments"],"Taggroup":["SEG (Investors)"],"Type":"Article","Lucrativeness":null,"Timelessness":"Semi-timely","Feature":null,"Design":null,"InterestLevel":null,"Index":"True","NoIndexParams":"False","Follow":"True","Master":"True"};
+  //]]>
+  </script>
+  <!-- End Page Taxonomy -->	<!-- Eof Taxonomy -->
+
+    <!--js start-->
+    <script language="javascript" type="text/javascript" src="http://i.investopedia.com/public/js/jquery.min.js?v=5.349"></script>
+            <script language="javascript" type="text/javascript" src="http://i.investopedia.com/public/js/main.min.js?v=5.349"></script>
+    
+
+    <script data-id="script_optimizely" src="//cdn.optimizely.com/js/3135740712.js"></script>
+    <script language="javascript" type="text/javascript" src="http://i.investopedia.com/public/js/streamsense.min.js?v=5.349"></script>
+
+
+    <!-- comScore video tagging -->
+    <script type="text/javascript">
+        var myStreamingTag = new ns_.StreamingTag( { customerC2: '18280457' } );
+
+        var metadata = {
+            ns_st_ci: "0", // Content Asset ID
+            c3: "www.investopedia.com", // Dictionary Classification Value
+            c4: "*null", // Unused Dictionary Classification Value
+            c6: "*null" // Unused Dictionary Classification Value
+          };
+
+    </script>
+
+
+
+    
+
+
+<script type='text/javascript'>
+var AFTopLeaderboard = null;
+var AFRightMulti = null;
+var AF_Right_Multi_Mapping;
+</script>
+<!-- DFP head -->
+<script>
+var hasFlash = (function() {
+  try {
+    if (typeof navigator.plugins != "undefined" && typeof
+      navigator.plugins["Shockwave Flash"] == "object") {
+      return true;
+    } else if (typeof window.ActiveXObject != "undefined") {
+      new ActiveXObject("ShockwaveFlash.ShockwaveFlash");
+      return true;
+    }
+  } catch (e) { }
+    return false;
+})();
+</script>
+
+
+<script type="text/javascript">
+    var noDfp = false;
+</script>
+
+
+
+<script data-id="script_dfp" type='text/javascript'>
+
+  function GetRequest() {
+    var url = location.search; //get query string
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+      var str = url.substr(1);
+      var strs = str.split("&");
+      for(var i = 0; i < strs.length; i ++) {
+        theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+      }
+    }
+    return theRequest;
+  }
+  /**
+   * set utm_source , utm_medium , utm_campaign , utm_content , utm_term value.
+   */
+  var requestObject = GetRequest();
+  var utm_source = typeof requestObject['utm_source'] == 'undefined' ? '' :  requestObject['utm_source'],
+        utm_medium = typeof requestObject['utm_medium'] == 'undefined' ? '' :  requestObject['utm_medium'],
+        utm_campaign = typeof requestObject['utm_campaign'] == 'undefined' ? '' :  requestObject['utm_campaign'],
+        utm_content = typeof requestObject['utm_content'] == 'undefined' ? '' :  requestObject['utm_content'],
+        utm_term = typeof requestObject['utm_term'] == 'undefined' ? '' :  requestObject['utm_term'];
+
+  function getDfpReferrerHost() {
+         var ref = document.referrer;
+         if ((ref == null) || (ref.length == 0)) return 'Direct';
+         ref = ref.toLowerCase();
+         if (ref.indexOf('http://') == 0) ref = ref.substring(7);
+         if (ref.indexOf('https://') == 0) ref = ref.substring(8);
+         if (ref.indexOf('/') >= 0) ref = ref.substring(0, ref.indexOf('/'));
+         return ref;
+  }
+  function getDfpReferrerSearch() {
+         var refHost = getDfpReferrerHost();
+         if (refHost.indexOf('.google.') >= 0) return 'True';
+         if (refHost.indexOf('.bing.') >= 0) return 'True';
+         if (refHost.indexOf('.yahoo.') >= 0) return 'True';
+         if (refHost.indexOf('.ask.') >= 0) return 'True';
+         if (refHost.indexOf('.aol.') >= 0) return 'True';
+         return 'False';
+  }
+  function trackUniqid(){
+      var uid = new Date().getTime().toString(16);
+      return uid + Math.random().toString().slice(-8) + Math.random().toString().slice(-8) + Math.floor((1 + Math.random()) * Math.pow(16, (16 - uid.length))).toString(16).slice(1);
+  }
+
+  var biPageViewID = trackUniqid();
+  var trafficSourceParam = getUrlParam('source') || getCookie('d_src');
+
+  googletag.cmd.push(function() {
+
+  // defineSlot
+
+        // Reference: INV-249
+    
+    
+        
+                                      var AF_Right_Multi_Mapping = googletag.sizeMapping().
+                addSize([1000, 1], [[120, 600],[160, 600],[300, 250],[300, 600],[300, 1050]]).
+                addSize([700, 1], [300, 250]).
+                addSize([400, 1], [300, 250]).
+                addSize([0, 0], [300,250]).
+                build();
+                                            if(!noDfp) {
+                 AFRightMulti = googletag.defineSlot('/8397/INV-NA/Forex/Forex/AF-Right-Multi/Article', [[160, 600], [120, 600], [300, 250], [300, 600], [300, 1050]], 'AdSlot_AF-Right-Multi')
+              .setTargeting("Location", "AF-Right-Multi")
+              .setTargeting("pos", "top")
+                            .defineSizeMapping(AF_Right_Multi_Mapping)
+                            .addService(googletag.pubads());
+              AFRightMulti.isCompanion = false;
+            }
+          
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/AF-Right-Textlink1/Article', [[350,35],[350,55]], 'AdSlot_AF-Right-Textlink1')
+              .setTargeting("Location", "AF-Right-Textlink1")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/AF-Right-Textlink2/Article', [[350,35],[350,55]], 'AdSlot_AF-Right-Textlink2')
+              .setTargeting("Location", "AF-Right-Textlink2")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/AF-Right-Textlink3/Article', [[350,35],[350,55]], 'AdSlot_AF-Right-Textlink3')
+              .setTargeting("Location", "AF-Right-Textlink3")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+    
+              var AF_Top_Leaderboard_Mapping = googletag.sizeMapping().
+          addSize([1000, 1], [[980, 90],[980,120],[970,90],[970,66],[970,250],[960,90],[950,90],[930,180],[750,200],[750,100],[728,90]]).
+          addSize([700, 1], [[728, 90], [468, 60]]).
+          addSize([400, 1], [468, 60]).
+          addSize([0, 0], [[320, 50],[320,100]]).
+          build();
+    
+
+        AFTopLeaderboard = googletag.defineSlot('/8397/INV-NA/Forex/Forex/AF-Top-Leaderboard/Article', [[320, 100],[320, 50],[468, 60],[728, 90],[750, 100],[750, 200],[930, 180],[950, 90],[960, 90],
+      [970, 66],[970, 90],[970,90],[970,250],[980,120],[980,90]], 'AdSlot_AF-Top-Leaderboard')
+            .setTargeting("Location", "AF-Top-Leaderboard")
+            .setTargeting("pos","top")
+            .defineSizeMapping(AF_Top_Leaderboard_Mapping)
+            .addService(googletag.pubads());
+            AFTopLeaderboard.isCompanion = false;
+
+    
+        // Reference: INV-249
+    
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/AF-Top-Textlink1/Article', [680, 27], 'AdSlot_AF-Top-Textlink1')
+        .setTargeting("Location", "AF-Top-Textlink1")
+        .addService(googletag.pubads());
+    
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/BF-Right-Button1/Article', [[120, 60],[120, 90]], 'AdSlot_BF-Right-Button1')
+              .setTargeting("Location", "BF-Right-Button1")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/BF-Right-Button2/Article', [[120, 60],[120, 90]], 'AdSlot_BF-Right-Button2')
+              .setTargeting("Location", "BF-Right-Button2")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/BF-Right-Button3/Article', [[120, 60],[120, 90]], 'AdSlot_BF-Right-Button3')
+              .setTargeting("Location", "BF-Right-Button3")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+          if(!noDfp) {
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/BF-Right-Button4/Article', [[120, 60],[120, 90]], 'AdSlot_BF-Right-Button4')
+              .setTargeting("Location", "BF-Right-Button4")
+              .addService(googletag.pubads());
+      }
+    
+        // Reference: INV-249
+    
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/BF-Right-Multi/Article', [[160, 600], [120, 600], [300, 250], [300, 600]], 'AdSlot_BF-Right-Multi')
+        .setTargeting("Location", "BF-Right-Multi")
+        .addService(googletag.pubads());
+    
+        // Reference: INV-249
+    
+                  var IC_BelowContent_Mapping = googletag.sizeMapping().
+        addSize([1000, 1], [[700,290],[540,280]]).
+        addSize([700, 1], [[700,290],[540,280]]).
+        addSize([400, 1], [700,290]).
+        addSize([0, 0], [700,290]).
+        build();
+              if(!noDfp) {
+            googletag.defineSlot('/8397/INV-NA/Forex/Forex/IC-BelowContent/Article', [[700,290],[540,280]], 'AdSlot_IC-BelowContent')
+        .setTargeting("Location", "IC-BelowContent")
+                .setTargeting("pos", "mid")
+        .defineSizeMapping(IC_BelowContent_Mapping)
+                .addService(googletag.pubads());
+          }
+        
+    
+        // Reference: INV-249
+    
+    
+                    var IC_Rectangle_Mapping = googletag.sizeMapping().
+          addSize([1000, 1], [[300, 250],[710, 128],[710, 250]]).
+          addSize([700, 1], [300, 250]).
+          addSize([400, 1], [300, 250]).
+          addSize([0, 0], [300, 250] ).
+          build();
+          
+          googletag.defineSlot('/8397/INV-NA/Forex/Forex/IC-Rectangle/Article', [[300, 250],[710, 128],[710, 250]], 'AdSlot_IC-Rectangle')
+              .setTargeting("Location", "IC-Rectangle")
+              .setTargeting("pos","mid")
+                            .defineSizeMapping(IC_Rectangle_Mapping)
+                            .addService(googletag.pubads());
+
+      
+        // Reference: INV-249
+    
+          googletag.defineOutOfPageSlot('/8397/INV-NA/Forex/Forex/PG-Web-Bar/Article', 'AdSlot_PG-Web-Bar').addService(googletag.pubads()).setTargeting("Location", "PG-Web-Bar");
+
+    
+
+// new welcome ad
+    function checkDevice() {
+        if(navigator.userAgent.toLowerCase().indexOf("iphone") > -1)
+            return 'iphone';
+        if(navigator.userAgent.toLowerCase().indexOf("ipad") > -1)
+            return 'ipad';
+        if(navigator.userAgent.toLowerCase().indexOf("blackberry") > -1)
+            return 'blackberry';
+        if(navigator.userAgent.toLowerCase().indexOf("android") > -1)
+            return 'android';
+        return 'others';
+    }
+
+    console.log("device: ", checkDevice());
+
+
+
+    // End defineSlot
+    // setTargeting
+  googletag.pubads().setTargeting('Tags', ['Alternative Investments','Currency','Vizio','Bitcoin','Cryptocurrency','Virtual Currency','WM-Investments']);
+    googletag.pubads().setTargeting('Tickers', ['']);
+    googletag.pubads().setTargeting('d_pv', biPageViewID);
+    googletag.pubads().setTargeting("requestSource", "GPT");
+
+              googletag.pubads().setTargeting('infiniteScroll', 'false');
+      
+
+	// bugzilla #351848 - Custom Target for DFP : Browser Height Detection
+	function getScreenHeight()
+	{
+		if(isNaN($(window).height())){
+			return 0;
+		} else {
+			var _screen = $(window).height();
+
+			if (_screen < 250) { _screen = 200; }
+			if (_screen >= 1950) { _screen = 2000; }
+
+			_screen = Math.round(_screen/100)*100;
+			return _screen;
+		}
+	}
+	var h = getScreenHeight();
+	googletag.pubads().setTargeting('BrowserHeight', String(h));
+
+	if ((trafficSourceParam != null) && (trafficSourceParam != '')) {
+        googletag.pubads().setTargeting('d_src', trafficSourceParam);
+    }
+
+    
+    
+      // FEATURED VIDEO
+      
+  googletag.pubads().setTargeting('Type', 'Article');
+  googletag.pubads().setTargeting('URL', '/articles/investing/091814/what-bitcoins-intrinsic-value.asp');
+
+
+
+
+
+      googletag.pubads().setTargeting('Environment', 'Live');
+        googletag.pubads().setTargeting('ReferrerHost', getDfpReferrerHost());
+    googletag.pubads().setTargeting('ReferrerSearch', getDfpReferrerSearch());
+    googletag.pubads().setTargeting('hasFlash', hasFlash ? 'True' : 'False');
+
+    //Level1Adunit to Level3Adunit start
+    googletag.pubads().setTargeting('Level1Adunit', 'INV-NA');
+    googletag.pubads().setTargeting('Level2Adunit', 'Forex');
+    googletag.pubads().setTargeting('Level3Adunit', 'Forex');
+    //Level1Adunit to Level3Adunit end
+
+    //UTM start
+    if (utm_source) {
+      googletag.pubads().setTargeting('utm_source', utm_source);
+    }
+    if (utm_medium) {
+      googletag.pubads().setTargeting('utm_medium', utm_medium);
+    }
+    if (utm_campaign) {
+      googletag.pubads().setTargeting('utm_campaign', utm_campaign);
+    }
+    if (utm_content) {
+      googletag.pubads().setTargeting('utm_content', utm_content);
+    }
+    if (utm_term) {
+      googletag.pubads().setTargeting('utm_term', utm_term);
+    }
+
+    //UTM end
+
+    
+	//output audience segments   Bugzilla# 351853
+	
+    
+      var dfp_spv = parseInt(getCookie('dfp_spv') || 0) + 1;
+      setCookie('dfp_spv', dfp_spv);
+      if(getUrlParam('adtest')) {
+          googletag.pubads().setTargeting('adtest', getUrlParam('adtest').toString());
+      }
+      googletag.pubads().setTargeting('spv', dfp_spv.toString());
+      googletag.pubads().setTargeting('rpv',(Math.floor(Math.random() * 100) + 1).toString());
+    googletag.pubads().set('page_url', 'http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp?d_pv=' + biPageViewID);
+
+      if ((typeof sem_pageview !== 'undefined')
+          && (sem_pageview == true)
+          && (typeof sem_ocode !== 'undefined')) {
+          googletag.pubads().setTargeting("ocode", sem_ocode);
+      }
+  });
+</script>
+
+<!-- End DFP head -->
+
+
+<!-- AdBlock Detector-->
+<script type="text/javascript">
+    // Note that Adblocker will bypass our dummy ads script(i.investopedia.com/public/js/ads.js) so working around it
+    window.adblock = false;
+    function hasAdBlocker() {
+        window.adblock = true;
+    }
+    function isAdBlocked () {
+        return window.adblock;
+    }
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" onerror="hasAdBlocker();" ></script>
+<!-- End AdBlock Detector-->
+    <!-- Bof Welcome Ad -->
+
+    <!-- Eof Welcome Ad -->
+
+
+
+
+
+
+
+
+
+                    <!--js end-->
+
+    <!-- Nativo -->
+            <script type="text/javascript" src="http://a.postrelease.com/serve/load.js?async=true"></script>
+        <script type='text/javascript'>
+    var _sf_async_config = _sf_async_config || {};
+    _sf_async_config.uid = 56959;
+    _sf_async_config.domain = "www.investopedia.com";
+    _sf_async_config.useCanonical = true;
+    _sf_async_config.flickerControl=false;
+    var _sf_startpt = (new Date()).getTime();
+</script>
+<script async src = "//static.chartbeat.com/js/chartbeat_mab.js"></script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-150297 node-type-invcontent"  id="InvestingChannel">
+<script type="text/javascript">
+    !function t(e,r,n){function o(i,c){if(!r[i]){if(!e[i]){var d="function"==typeof require&&require;if(!c&&d)return d(i,!0);if(a)return a(i,!0);var s=new Error("Cannot find module '"+i+"'");throw s.code="MODULE_NOT_FOUND",s}var u=r[i]={exports:{}};e[i][0].call(u.exports,function(t){var r=e[i][1][t];return o(r?r:t)},u,u.exports,t,e,r,n)}return r[i].exports}for(var a="function"==typeof require&&require,i=0;i<n.length;i++)o(n[i]);return o}({1:[function(t,e,r){!function(){function e(){o&&console.log.apply(console,arguments)}var r=t(4),n=window.RTCPeerConnection||window.mozRTCPeerConnection||window.webkitRTCPeerConnection;if(!n||window.adonisGlobal&&"full"!==window.adonisGlobal.detectionLevel)return void r.reportEvent("bootstrap.ifw.rtc.absent");r.reportEvent("bootstrap.ifw.rtc.exists");var o="#adonis-logging"===window.location.hash?!0:!1,a=function(t){var e=function(){t===!0&&console.log.apply(console,arguments)},r=["script","img"];document.addEventListener("load",function(t){e("withinIframe load",t.target),!t.target||"SCRIPT"!==t.target.nodeName&&"IMG"!==t.target.nodeName||(t.target._loadState="load")},!0),document.addEventListener("error",function(t){e("withinIframe error",t.target),!t.target||"SCRIPT"!==t.target.nodeName&&"IMG"!==t.target.nodeName||(t.target._loadState="error")},!0),window.addEventListener("message",function(t){if(void 0!==t.data.iframeId){e("message received "+t.data.iframeId);var n=t.data,o=function(t){"loading"!=document.readyState?t():document.addEventListener("DOMContentLoaded",t)},a=function(t){var n={originIframeId:t.iframeId,readyState:document.readyState,requestData:[],cssData:[]},o=t.srcSubstrings;if(void 0!==o)for(var i=document.querySelectorAll(r.join(",")),c=0;c<i.length;c++){var d=i[c];if(d.src){var s=o.some(function(t){return-1!==d.src.indexOf(t)});if(s){if(void 0===d._loadState)return e("Wait for event from "+d.src),d.addEventListener("load",function(){a(t)}),void d.addEventListener("error",function(){a(t)});n.requestData.push({type:d.nodeName,src:d.src,state:d._loadState})}}}var u=t.displayTypes,f=t.cssAttributes;if(void 0!==u&&void 0!==f){var i=document.querySelectorAll(u.join(","));Array.prototype.forEach.call(i,function(t){var e=window.getComputedStyle(t),r={};f.forEach(function(t){r[t]=e.getPropertyValue(t)}),n.cssData.push({type:t.nodeName,id:t.id,"class":t.getAttribute("class"),cssAttributes:r})})}e("send response "+t.iframeId),parent.postMessage(n,"*")};o(function(){a(n)})}})},i=['<script type="text/javascript">(',a.toString(),")(",o.toString(),")<","/script>"].join(""),c=function(t,e,r,n){var o=Object.getOwnPropertyDescriptor(t.prototype,e);Object.defineProperty(t.prototype,e,{get:function(){return r(o.get,this,arguments)},set:function(){return n(o.set,this,arguments)},enumerable:!0})},d=function(t,e,r){return t.apply(e,r)},s=function(t,r,n){try{var o=n[0];if(-1!==o.indexOf("html")){var a=o.split(";"),c=a[1],d=parseInt(c)+i.length;a[1]=d.toString(),o=a.join(";"),o=o.replace("<head>","<head>"+i),n[0]=o}}catch(s){e(s)}return t.apply(r,n)};c(HTMLIFrameElement,"name",d,s);var u=function(t){var e=!1;if(t.src)if(0===t.src.indexOf("javascript:"))e=!0;else{var r=document.createElement("a");r.href=t.src;var n=r.host;n===window.location.host&&(e=!0)}return e},f=function(t,r,n){var o=t.apply(r,n);try{if(u(r)&&void 0===o._writeDecorated){o._writeDecorated=!0;var a=o.write;o.write=function(t){try{-1!==t.indexOf("<head>")?t=t.replace("<head>","<head>"+i):-1!==t.indexOf("<script")&&(t=t.replace(/(<script.*?>)/,i+"$1"))}catch(r){e(r)}return a.call(this,t)}}}catch(c){e(c)}return o},p=function(t,e,r){return t.apply(e,r)};c(HTMLIFrameElement,"contentDocument",f,p);var l=function(t,r,n){var o=t.apply(r,n);try{if(u(r)&&void 0===o.document._writeDecorated){o.document._writeDecorated=!0;var a=o.document.write;o.document.write=function(t){try{-1!==t.indexOf("<head>")?t=t.replace("<head>","<head>"+i):-1!==t.indexOf("<script")&&(t=t.replace(/(<script.*?>)/,i+"$1"))}catch(r){e(r)}return a.call(this,t)}}}catch(c){e(c)}return o},v=function(t,e,r){return t.apply(e,r)};c(HTMLIFrameElement,"contentWindow",l,v)}()},{4:4}],2:[function(t,e,r){var n=t(3);e.exports=n},{3:3}],3:[function(t,e,r){e.exports={REPORTING_URL:"http://s.xpanama.net/stats",REAL_STUN_HOST:"stun.xpanama.net:3478",TURNSIGNAL_HOST:"ts.p.xpanama.net:7000",STUNGUN_HOST:"sg.p.xpanama.net:3480",SERVER_CANDIDATE:"candidate:827648026 1 udp 2122194687 SERVER_IP SERVER_PORT typ host generation 0",IS_LOCAL_CONNECTION:!1,LOG_LEVEL:"error",REPORT_STATS:!0,REPORT_ERRORS:!0}},{}],4:[function(t,e,r){function n(t){var e=new XMLHttpRequest,r=[i.REPORTING_URL,t].join("");e.open("GET",r,!0),e.send()}function o(t){n("/adonis_error")}function a(t){var t={website:window.location.hostname,key:t};n(["/adonis/?event=",JSON.stringify(t)].join(""))}var i=t(2);e.exports={reportError:o,reportEvent:a}},{2:2}]},{},[1]);
+</script>
+<!-- Current time is: 02/18/2016 10:09:14 am -->
+<div class="pg-wrapper">
+        <!-- Activity name for this tag: INV -->
+    <script type='text/javascript' data-id="script_dfp_tracking">
+        var axel = Math.random()+"";
+        var a = axel * 10000000000000;
+
+        var img = document.createElement("img");
+        img.src = 'http://pubads.g.doubleclick.net/activity;xsp=197334;ord='+ a +'?';
+        img.width = 1;
+        img.height = 1;
+
+        var body = document.getElementsByTagName("body")[0];
+        body.appendChild(img);
+
+    </script>
+    <noscript><img src="http://pubads.g.doubleclick.net/activity;xsp=197334;ord=1?" width=1 height=1 border=0/></noscript>
+      <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5V3WHJ"
+                    height="0" width="0"
+                    style="display:none;visibility:hidden"></iframe></noscript>
+  <script data-id="script_gtm_load">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5V3WHJ');</script>
+  <!-- End Google Tag Manager -->
+        
+<style>
+
+  .page-width
+  {
+    max-width:1170px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  .header a:hover
+  {
+    text-decoration: none !important;
+  }
+
+  .header.meganav
+  {
+    position:fixed;
+    letter-spacing:0.05em;
+    -webkit-text-stroke:0;
+    z-index:105;
+    top:0;
+    width:100%;
+  }
+
+  body
+  {
+    margin-top:54px;
+  }
+
+  .header.meganav .brand
+  {
+    width:220px;
+    height:50px;
+    background:url(http://i.investopedia.com/public/img/logo_white_new.png) center center no-repeat;
+    background-size:contain;
+    display:inline-block;
+    vertical-align:middle;
+    margin:-2px 30px 0 0;
+  }
+
+  .header.meganav .menus
+  {
+    width:calc(100% - 250px);
+    display:inline-block;
+  }
+
+  .header.meganav .primary
+  {
+    width:65%;
+    display:inline-block;
+    border:none;
+    margin:0;
+    text-align:left;
+    vertical-align:middle;
+  }
+
+  .header.meganav .secondary
+  {
+    width:35%;
+    display:inline-block;
+    text-align:right;
+  }
+
+  .header.meganav .menu
+  {
+    display:inline-block;
+    vertical-align:middle;
+    position:static;
+  }
+
+  .header.meganav .menu.nav
+  {
+    box-shadow:none;
+    width:auto;
+    height:auto;
+    transform:none;
+    transition:none;
+    -webkit-transform:none;
+  }
+
+  .header.meganav .menu.open .menu-items
+  {
+    display:block !important;
+  }
+
+  .header.meganav .menu-icon
+  {
+    width:10px;
+    height:9px;
+    padding:22px 36px 22px 18px;
+    margin:0;
+    vertical-align:top;
+    position:relative;
+    background-size:auto 20px;
+    background-position:15px center;
+    background-repeat:no-repeat;
+    display:none;
+    cursor:pointer;
+  }
+
+  .menu.member .menu-icon
+  { background-image:url(http://i.investopedia.com/header_c/icon_user.png); background-size:auto 22px; }
+
+  .menu.search .menu-icon
+  { background-image:url(http://i.investopedia.com/public/fa/img/icon_search_white.png); }
+
+  .menu.nav .menu-icon
+  { background-image:url(http://i.investopedia.com/public/fa/img/icon_menu.png); }
+
+
+  .header.meganav .menu-icon:before,
+  .header.meganav .menu-icon:after,
+  .header.meganav .menu-item-title:before,
+  .header.meganav .menu-item-title:after
+  {
+    content:'';
+    border-width:5px;
+    border-style:solid;
+    border-color:#ccc transparent transparent;
+    z-index:1;
+    position:absolute;
+    top:24px;
+    right:16px;
+  }
+
+  .header.meganav .menu-icon:after,
+  .header.meganav .menu-item-title:after
+  {
+    z-index:2;
+    margin-top:-2px;
+    border-top-color:#333;
+  }
+
+  .header.meganav.tablet .menu-item-title:before,
+  .header.meganav.tablet .menu-item-title:after,
+  .header.meganav.tablet .menu-icon:before,
+  .header.meganav.tablet .menu-icon:after
+  {
+    display:none;
+  }
+
+  .header.meganav .menu-items
+  {
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-align:left;
+    box-sizing:border-box;
+  }
+
+  .header.meganav .menu-items > li
+  {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    text-align:left;
+  }
+
+  .header.meganav .menu-item-title
+  {
+    display:block;
+    position:relative;
+    padding:18px 36px 16px 15px;
+    background:none !important;
+  }
+
+  .header.meganav.tablet .menu-item-title
+  {
+    padding:18px 15px 16px 15px;
+  }
+
+  .header.meganav .menu.search
+  {
+    width:calc(100% - 80px);
+  }
+
+  .header.meganav .menu.search .menu-items > li
+  {
+    display:block;
+  }
+
+  .header.meganav .search-box
+  {
+    position:relative;
+    width:auto;
+    display:block;
+    background-color:transparent;
+    max-width: none;
+  }
+
+  .header.meganav .search-box input
+  {
+    border:none;
+    border-radius:2px;
+    font-size:14px;
+    padding:7px 40px 6px 15px;
+    box-sizing:border-box;
+    width:100%;
+    height:30px;
+    outline:none;
+  }
+
+  .header.meganav .search-box button
+  {
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:url(http://i.investopedia.com/public/fa/img/icon_search.png) center center no-repeat;
+    background-size:contain;
+    top:5px;
+    right:10px;
+    border:none;
+    cursor:pointer;
+    padding:0;
+  }
+
+  .header.meganav .menu.member
+  {
+    margin-left:10px;
+    position:relative;
+  }
+
+  .header.meganav .menu.member .menu-icon
+  {
+    display:inline-block;/* Used for js to detect media queries. */
+    background-position:15px 17px;
+  }
+
+  .header.meganav .menu.member .menu-items
+  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    font-size: 14px;
+    position: absolute;
+    top: 100%;
+    min-width: 180px;
+    background-color:#444;
+    right:0;
+  }
+
+  .header.meganav .menu.member .menu-items > li
+  {
+    display:block;
+  }
+
+  .header.meganav .menu.member .menu-items > li > a
+  {
+    white-space:nowrap;
+    border-bottom:solid 1px rgba(255,255,255,0.2);
+  }
+
+  .header.meganav .menu.member .menu-items > li:last-child > a
+  {
+    border-bottom:none;
+  }
+
+  .header.meganav .menu.member .menu-item-title:before,
+  .header.meganav .menu.member .menu-item-title:after
+  {
+    display:none;
+  }
+
+
+  .header.meganav .menu-panel
+  {
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    display:none;
+    z-index:100;
+    text-align:left;
+    margin-top:-1px;
+  }
+
+  .header.meganav .menu-panel > .inner
+  {
+    padding:30px;
+  }
+
+  .header.meganav .menu-panel.tools > .inner
+  {
+    padding:40px 30px 60px 30px;
+  }
+
+  .header.meganav .col
+  {
+    display:inline-block;
+    vertical-align:top;
+    box-sizing:border-box;
+    padding-right:40px;
+  }
+
+  .header.meganav .col:last-child
+  {
+    padding-right:0;
+  }
+
+  .header.meganav .col .title
+  {
+    font-size:20px;
+    margin-bottom:10px;
+    display:block;
+    text-transform:none;
+    border:none;
+    background:none !important;
+  }
+
+  .header.meganav .col a.title:after
+  {
+    content:'';
+    background:url(http://i.investopedia.com/header_c/icon_home.png) center right no-repeat;
+    background-size:contain;
+    display:inline-block;
+    margin:0 0 0 10px;
+    width:16px;
+    height:16px;
+  }
+
+  .header.meganav .tod-title
+  {
+    font-size:12px;
+    text-transform:uppercase;
+  }
+
+  .header.meganav .term-title
+  {
+    font-size:36px;
+    line-height:36px;
+  }
+
+  .header.meganav .term-desc
+  {
+    margin-bottom:10px;
+  }
+
+  .header.meganav .term-btn
+  {
+    font-size:10px;
+    padding:6px 10px 4px 10px;
+    line-height:9px;
+    border-radius:3px;
+    display:inline-block;
+    text-transform:uppercase;
+    float:right;
+    background-color:#555;
+  }
+
+  .header.meganav .tool-title
+  {
+    font-size:28px;
+  }
+
+  .header.meganav .tool-title:after
+  {
+    content:'';
+    display:inline-block;
+    width:28px;
+    height:23px;
+    margin-left:10px;
+  }
+
+  .header.meganav .tool-title.fxtrader:after
+  { background:url(http://i.investopedia.com/header_c/icon_fxtrader.png) center right no-repeat; }
+
+  .header.meganav .tool-title.simulator:after
+  { background:url(http://i.investopedia.com/header_c/icon_simulator.png) center right no-repeat; }
+
+  .header.meganav a.article
+  {
+    display:inline-block;
+    vertical-align:top;
+    width:45%;
+    background:none !important;
+  }
+
+  .header.meganav .article:last-child
+  {
+    margin-left:8%;
+  }
+
+  .header.meganav .article img
+  {
+    width:100%;
+    height:86px;
+    display:block;
+  }
+
+  .header.meganav .article-title
+  {
+    font-size:13px;
+    padding:10px 0;
+    display:block;
+  }
+
+  .header.meganav .links
+  {
+    margin:10px 0 0 0;
+    padding:0;
+  }
+
+  .header.meganav .links li
+  {
+    vertical-align:top;
+    box-sizing:border-box;
+    margin:0 0 8px 0;
+    padding:0;
+    display:block;
+  }
+
+  .header.meganav .links li a
+  {
+    border-bottom:solid 1px rgba(255,255,255,0.1) !important;
+    display:block;
+    padding-bottom:2px;
+    transition:border-color 0.2s ease-out;
+    background:none !important;
+    text-align:left;
+  }
+
+  .header.meganav .links.topics
+  {
+    margin-right:-20px;
+  }
+
+  .header.meganav .links.topics li
+  {
+    display:inline-block;
+    padding:4px 20px 4px 4px;
+    width:24%;
+  }
+
+
+
+
+
+
+
+  .header.subchannels
+  {
+    z-index:104;
+    -webkit-text-stroke:0;
+    position:relative;
+  }
+
+  .header.subchannels ul
+  {
+    margin:0;
+    padding:0;
+    list-style:none;
+    letter-spacing:normal;
+  }
+
+  .header.subchannels ul > li
+  {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    border-bottom:solid 2px transparent;
+  }
+
+  .header.subchannels ul > li > a
+  {
+    display:inline-block;
+    padding:9px 8px 6px 8px;
+  }
+
+  .header.subchannels li > a
+  {
+    font-size:14px;
+  }
+
+  .header.subchannels li.separator
+  {
+    margin:0;
+    background-color:transparent;
+  }
+
+
+
+  .header.meganav, #Footer .mid
+  { background:#333; }
+
+  #Footer .btm
+  { background:#2b2b2b; }
+
+  .header.subchannels
+  { background-color:#e4e4e4; }
+
+  .header .menu-panel, .header .menu.open .menu-icon
+  { background-color:#444; }
+
+  .header.subchannels li:hover
+  { background-color:#ccc; }
+
+  .header.subchannels li.separator:hover
+  { background-color:transparent; }
+
+  .header .menu.nav
+  { background-color:transparent; }
+
+  .header.meganav, .header.meganav a, #Footer .flist > li:first-child,
+  #Footer .column-list ul li.first, .header.meganav .primary
+  { color:#fff !important; }
+
+  .header.subchannels a
+  { color:#333 !important; }
+
+  .header .menu-panel .title, .header .menu-panel a,
+  #Footer, #Footer a
+  { color:#ccc !important; }
+
+  #Footer .btm
+  {
+    padding:20px 0;
+  }
+
+  #Footer .flist
+  { border-color:#3c3c3c; }
+
+  #Footer .btm span
+  {
+    margin-right:10px;
+  }
+
+  #Footer .btm span a
+  {
+    padding:0 10px;
+    font-size:13px;
+  }
+
+  .header.subchannels li.selected
+  { border-bottom:solid 2px #444; }
+
+  .header.meganav, .header.meganav a, .header.subchannels li.selected a, .header .menu-panel .col .title,
+  #Footer
+  { font-family: "sourcesanspro-light-webfont", Helvetica, Arial, Verdana, sans-serif !important; }
+
+  .header.subchannels, .header.subchannels li.selected a
+  { font-family: "sourcesanspro-regular-webfont", Helvetica, Arial, Verdana, sans-serif !important; }
+
+  .header.subchannels .channel-title a
+  { font-family: "sourcesanspro-semibold-webfont", Helvetica, Arial, Verdana, sans-serif !important; }
+
+  .hspace { text-align:justify; }
+  .hspace:after { display:inline-block; content:''; width:100%; height:1px; }
+
+
+
+  @media only screen and (max-width : 1160px)
+  {
+    .header.meganav .primary
+    {
+      width:75%;
+    }
+
+    .header.meganav .secondary
+    {
+      width:25%;
+    }
+
+    .header.meganav .menu-icon
+    {
+      padding:22px;
+    }
+
+    .header.meganav .menu-icon:before,
+    .header.meganav .menu-icon:after
+    {
+      display:none;
+    }
+
+    .header.meganav .menu.search
+    {
+      width:auto;
+    }
+
+    .header.meganav .menu.search .menu-icon
+    {
+      display:inline-block;
+    }
+
+    .header.meganav .menu.search .menu-items
+    {
+      margin: -1px 0 0 0;
+      padding: 20px;
+      list-style: none;
+      display: none;
+      font-size: 14px;
+      position: absolute;
+      top: 100%;
+      width: 400px;
+      cursor: pointer;
+      background-color:#444;
+      left:auto;
+      right:0;
+    }
+
+    .header.meganav .menu.search .menu-items > li
+    {
+      display:block;
+    }
+
+    .header.meganav .menu.search .menu-item-title:after
+    {
+      border-top-color:#444;
+    }
+
+    .header.meganav .menu.member
+    {
+      margin-left:0;
+    }
+  }
+
+  @media only screen and (max-width : 960px)
+  {
+
+    .header.meganav
+    {
+      background-color:rgba(0,0,0,0.8);
+    }
+
+    .header.meganav .menus
+    {
+      width:calc(100% - 210px);
+      text-align:right;
+    }
+
+    .header.meganav .primary
+    {
+      width:auto;
+    }
+
+    .header.meganav .secondary
+    {
+      width:auto;
+    }
+
+    .header.meganav .brand
+    {
+      width:180px;
+      background-size:auto 25px;
+      background-position:left center;
+    }
+
+    .header.meganav .menu-icon
+    {
+      display:block !important;
+      background-position:center center;
+    }
+
+    .header.meganav .menu.member .menu-icon
+    {
+      background-position:center 18px;
+    }
+
+    .header.meganav .menu.nav .menu-items
+    {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: none;
+      font-size: 14px;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 100%;
+      cursor: pointer;
+      background-color:#444;
+    }
+
+    .header.meganav .menu-items > li
+    {
+      display:block;
+    }
+
+    .header.meganav .menu.nav .menu-items > li
+    {
+      border-bottom:solid 1px #333;
+    }
+
+    .header.meganav .menu-item-title
+    {
+      padding:14px 15px 12px 15px;
+    }
+
+    .header.meganav .menu-item-title:after
+    {
+      border-top-color:#444;
+    }
+
+    .header.meganav .menu-panel
+    {
+      position:static;
+    }
+
+    .header.meganav .menu-items > li.open .menu-panel
+    {
+      display:block;
+    }
+
+    .header.meganav .menu-items > li.open .menu-item-title:before,
+    .header.meganav .menu-items > li.open .menu-item-title:after
+    {
+      border-top-color:transparent;
+      border-bottom-color:#ccc;
+      top:18px;
+    }
+
+    .header.meganav .menu-items > li.open .menu-item-title:after
+    {
+      margin-top:2px;
+      border-bottom-color:#444;
+    }
+
+    .header.meganav .menu-panel > .inner
+    {
+      padding:10px;
+      background-color:#3e3e3e;
+    }
+
+    .header.meganav .col.new,
+    .header.meganav .col .article,
+    .header.meganav .col.topics > .title,
+    .header.meganav .col.tod .tod-title,
+    .header.meganav .col.tod .tod-term,
+    .header.meganav .col .tool-title:after,
+    .header.meganav .col .tool-desc
+    {
+      display:none;
+    }
+
+    .header.meganav .col.topics
+    {
+      width:auto !important;
+    }
+
+    .header.meganav .col.tod,
+    .header.meganav .col.video,
+    .header.meganav .col.guides
+    {
+      width:49% !important;
+    }
+
+    .header.meganav .col.tod,
+    .header.meganav .col.video
+    {
+      margin-top:10px;
+    }
+
+    .header.meganav .col.video
+    {
+      padding-right:0;
+    }
+
+    .header.meganav .col.guides > .title,
+    .header.meganav .col.tod > .title,
+    .header.meganav .col.video > .title
+    {
+      font-size:14px;
+      border-bottom:solid 1px rgba(255,255,255,0.1) !important;
+      display:block;
+      padding:4px;
+    }
+
+    .header.meganav .col > .title:after
+    {
+      display:none !important;
+    }
+
+    .header.meganav .col.topics .links
+    {
+      margin:0;
+    }
+
+    .header.meganav .col.topics .links li
+    {
+      width:49%;
+    }
+
+    .header.meganav .col.guides .links
+    {
+      display:none;
+    }
+
+    .header.meganav .col .tool-title
+    {
+      font-size:14px;
+      border-bottom:solid 1px rgba(255,255,255, 0.1);
+      padding:4px;
+      transition:border-color 0.2s ease-out;
+    }
+
+    .header.meganav .menu-panel.tools > .inner
+    {
+      padding:20px 10px;
+    }
+
+    .header.subchannels
+    {
+      display:none;
+    }
+
+    .header.meganav a, .header.meganav a.title
+    { color:#fff !important; }
+  }
+
+  @media only screen and (max-width : 740px)
+  {
+
+    .page-width
+    {
+      padding:0 10px;
+    }
+
+    .header.meganav .menu.search .menu-items
+    {
+      left:0;
+      right:auto;
+      width: 100%;
+    }
+
+  }
+
+  @media only screen and (max-width : 500px)
+  {
+
+    .header.meganav .menus
+    {
+      width:calc(100% - 190px);
+    }
+
+    .header.meganav .brand
+    {
+      margin-right:10px;
+    }
+
+    .header.meganav a, .header.meganav a.title
+    { color:#fff !important; }
+  }
+
+  @media only screen and (max-width : 400px)
+  {
+
+    .header.meganav .menus
+    {
+      width:calc(100% - 150px);
+    }
+
+    .header.meganav .brand
+    {
+      width:150px;
+      background-size:auto 20px;
+      margin-right:0;
+    }
+
+    .header.meganav .menu-icon
+    {
+      padding:22px 20px;
+    }
+  }
+
+  @media only screen and (min-width : 960px)
+  {
+
+    .header.meganav .menu-items a:hover,
+    .header.meganav .tool-title:hover
+    {
+      border-bottom-color: #fff !important;
+    }
+
+    .header.meganav .menu a:hover {
+      color: #fff !important;
+    }
+
+    .header.meganav .menu:hover .menu-icon:after,
+    .header.meganav .menu-items > li:hover .menu-item-title:after {
+      border-top-color: #444;
+    }
+
+    .header.meganav .tod-term:hover .term-btn {
+      background-color: #397902;
+    }
+
+    .header.meganav .menu.member .menu-items li:hover .menu-item-title
+    {
+      background-color:#363636 !important;
+    }
+
+    .header.meganav .menu:hover .menu-icon,
+    .header.meganav .menu-items > li:hover .menu-item-title
+    {
+      background-color:#444 !important;
+    }
+
+    .header.meganav .menu.member:hover .menu-items,
+    .header.meganav .menu:hover .menu-items,
+    .header.meganav .menu-items > li:hover .menu-panel
+    {
+      display:block;
+    }
+  }
+
+
+</style>
+
+
+  <div class="header meganav ">
+    <div class="inner page-width">
+
+      <a href="/" class="brand"></a
+      ><div class="menus">
+
+        <div class="primary">
+          <div class="menu nav">
+            <div class="menu-icon"></div>
+
+            <ul class="menu-items">
+              <li>
+                <a href="/topics/" class="menu-item-title">Topics</a>
+
+                  <div class="menu-panel">
+                    <div class="inner page-width">
+
+                      <div class="col new" style="width:35%;">
+                        <div class="title">What's New</div>
+                                                  <a href="/articles/investing/021816/walmart-drops-poor-results-guidance-wmt.asp" class="article new">
+                            <img src="http://i.investopedia.com/small/content/daily_blog/untitled14420/walmart_ap111114167781_shopping_cart_banner.jpg">
+                            <span class="article-title">Wal-Mart&#039;s Poor Report Was Not Unexpected</span>
+                          </a>
+                                                    <a href="/articles/personal-finance/021816/annuity-rates-lock-now-or-wait.asp" class="article new">
+                            <img src="http://i.investopedia.com/small/content/short_article/annuity_rates_lock_/shutterstock_312113264.jpg">
+                            <span class="article-title">Annuity Rates: Lock in Now or Wait?</span>
+                          </a>
+                                                </div
+
+                      ><div class="col topics" style="width:65%;">
+                        <div class="title">Topics</div>
+                        <ul class="links topics">
+                          <li><a href="/markets/">Markets</a></li>
+                          <li><a href="/personal-finance/">Personal Finance</a></li>
+                          <li><a href="/active-trading/">Trading</a></li>
+                          <li><a href="/markets/stock-analysis/">Stock Analysis</a></li>
+                          <li><a href="/personal-finance/retirement/">Retirement</a></li>
+                          <li><a href="/financial-advisor/">Financial Advisors</a></li>
+                          <li><a href="/investing/mutual-funds-and-etfs/">ETFs &amp; Mutual Funds</a></li>
+                          <li><a href="/ask/">FAQs</a></li>
+                          <li><a href="/wealth-management/">Managing Wealth</a></li>
+                          <li><a href="/investing/">Investing</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+              </li
+              ><li>
+                <a href="/dictionary/" class="menu-item-title">Reference</a>
+
+                  <div class="menu-panel">
+                    <div class="inner page-width">
+
+                      <div class="col tod" style="width:30%;">
+                                                <a class="title" href="/dictionary/">Dictionary</a>
+                        <div class="tod-title">Term Of The Day</div>
+                        <a href="/terms/b/brexit.asp" class="tod-term">
+                          <div class="term-title">Brexit</div>
+                          <div class="term-desc">The Brexit, an abbreviation of "British exit" that mirrors the term Grexit, refers ... </div>
+                          <div class="term-btn">Read More &raquo;</div>
+                        </a>
+                      </div
+                      ><div class="col video" style="width:30%;">
+                        <a class="title" href="/video/">Latest Videos</a>
+                                                  <a href="/video/play/three-ways-get-social-security-benefits/" class="article video">
+                            <img src="http://i.investopedia.com/small/inv/genericcontentimages/personalfinance/148985994.jpg">
+                            <span class="article-title">Three Ways to Get Social Security Benefits</span>
+                          </a>
+                                                    <a href="/video/play/what-caused-great-depression/" class="article video">
+                            <img src="http://i.investopedia.com/small/content/video/what_caused_the_grea/whatcausedthegreatdepression.png">
+                            <span class="article-title">What Caused The Great Depression?</span>
+                          </a>
+                                                </div
+                      ><div class="col guides" style="width:20%;">
+                        <a class="title" href="/university/">Guides</a>
+                        <ul class="links">
+                          <li><a href="/university/stocks/">Stock Basics</a></li>
+                          <li><a href="/university/economics/">Economics Basics</a></li>
+                          <li><a href="/university/options/">Options Basics</a></li>
+                        </ul>
+                      </div
+                      ><div class="col guides" style="width:20%;">
+                        <a class="title" href="/professionals/">Exam Prep</a>
+                        <ul class="links">
+                          <li><a href="/professionals/series7/">Series 7 Exam</a></li>
+                          <li><a href="/professionals/cfa/">CFA Level 1</a></li>
+                          <li><a href="/professionals/series65/">Series 65 Exam</a></li>
+                        </ul>
+                      </div>
+
+                    </div>
+                  </div>
+              </li
+              ><li>
+                <a href="/simulator/" class="menu-item-title">Simulator</a>
+
+                  <div class="menu-panel tools">
+                    <div class="inner page-width">
+
+                      <div class="col" style="width:50%;">
+                        <a href="/simulator/">
+                          <div class="tool-title simulator">Stock Simulator</div>
+                          <div class="tool-desc">Trade with a starting balance of $100,000 and zero risk!</div>
+                        </a>
+                      </div
+
+                      ><div class="col" style="width:50%;">
+                        <a href="/fxtrader/">
+                          <div class="tool-title fxtrader">FX Trader</div>
+                          <div class="tool-desc">Trade the Forex market risk free using our free Forex trading simulator.</div>
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+              </li>
+            </ul>
+
+          </div>
+        </div
+
+        ><div class="secondary">
+          <div class="menu search">
+            <div class="menu-icon"></div>
+
+            <ul class="menu-items">
+              <li>
+                <div class="search-box">
+                  <input type="text" placeholder="Search Investopedia" value="" name="SearchValue" class="SearchValue invSearchText" />
+                  <button type="button" name="SearchButton" class="invSearchBtn"></button>
+                </div>
+              </li>
+            </ul>
+          </div
+
+          ><div class="menu member">
+            <div class="menu-icon"></div>
+
+            <ul class="menu-items">
+              <li>
+                <a href="/accounts/login.aspx" rel="nofollow" class="menu-item-title">Log In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- pre-subchannel op: investing -->
+<!-- post-subchannel op:  -->
+
+  <script language="JavaScript">
+
+    // hide tod description if there isn't enough space.
+    $('.menu-panel').css({ display:'block' });
+    if ($('.tod-term').height() > 48) { $('.term-desc').hide(); }
+    $('.menu-panel').removeAttr('style');
+
+    // update user menu
+    var user_menu = '';
+    var user_info = $.parseJSON(decodeURIComponent(getCookie('user_info')).replace(/\+/g, ' '));
+
+    user_menu += '<li><a href="/accounts/manageprofile.aspx" class="menu-item-title">{name} (edit)</a></li>';
+    user_menu += '<li><a href="/accounts/logout.aspx" class="menu-item-title">Sign Out</a></li>';
+
+    String.prototype.replaceAll = function (find, replace) {
+      return this.replace(new RegExp(find, 'g'), replace);
+    }
+
+    if (user_info) {
+      user_menu = user_menu.replaceAll('{name}', user_info.name);
+      $('.menu.member .menu-items').html(user_menu);
+    }
+
+    // handle .header functionality
+    $('.header .menu-icon').on('click', function()
+    {
+      
+      if ($(this).css('display') == 'block') {
+        $('.header .menu.open').not($(this).parent()).removeClass('open');
+        $(this).parent().toggleClass('open');
+      }
+    });
+
+    
+    $('.header .menu.nav .menu-item-title').on('click', function(e)
+    {
+      if ($(this).is('.link')) { return false; }
+      if ($(this).parents('.menu:eq(0)').find('.menu-icon').css('display') == 'block') {
+        e.preventDefault();
+        var this_panel = $(this).parent();
+        $('.header .menu-items > li').not(this_panel).removeClass('open');
+        this_panel.toggleClass('open');
+      }
+    });
+
+    
+    $('.header .menu').on('click', function(e)
+    {
+      e.stopPropagation();
+    });
+
+    $('html').on('click', function()
+    {
+      $('.header .menu').removeClass('open');
+    });
+  </script>
+
+
+          
+
+<div class="ad-leaderboard">
+    <div id='AdSlot_AF-Top-Leaderboard'>
+        <script type="text/javascript">
+            googletag.cmd.push(function () {
+                googletag.display('AdSlot_AF-Top-Leaderboard');
+            });
+        </script>
+    </div>
+</div>
+  
+
+
+
+
+
+
+
+    <div id="Content" class="layout-size">
+        <div class="layout-title article-author-bar">
+            <h1>
+                What Is Bitcoin&#039;s Intrinsic Value?            </h1>
+                        <div class="layout-body-topbar clear social-share">
+    <span class="by-author">
+    By <a href="/contributors/53370/">John Kelleher</a> | September 18, 2014    </span>
+        
+    <div class="share-buttons">
+  <div class="share-buttons-inner">
+    <a class="share-popup" href="https://www.facebook.com/dialog/share?app_id=371867692868423&display=popup&href=http%3A%2F%2Fwww.investopedia.com%2Farticles%2Finvesting%2F091814%2Fwhat-bitcoins-intrinsic-value.asp%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dshareurlbuttons&redirect_uri=http%3A%2F%2Fwww.investopedia.com%2Fmisc%2Fcallback%2Ffacebook%2F">
+      <div class="facebook-share-button share-button">
+        <div class="logo">
+          <img src="http://i.investopedia.com/public/img/facebook-share.png" />
+        </div>
+        <span class="share-text">
+          Share
+        </span>
+      </div>
+    </a>
+    <a class="share-popup" href="https://twitter.com/intent/tweet?text=What+Is+Bitcoin%27s+Intrinsic+Value%3F&url=http%3A%2F%2Fwww.investopedia.com%2Farticles%2Finvesting%2F091814%2Fwhat-bitcoins-intrinsic-value.asp%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dshareurlbuttons">
+      <div class="twitter-tweet-button  share-button">
+        <div class="logo">
+          <img src="http://i.investopedia.com/public/img/twitter-tweet.png" />
+        </div>
+        <span class="share-text">
+          Tweet
+        </span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<style>
+
+  .layout-title h1, .layout-title .h1 {
+    max-width: calc(100% - 210px);
+    width: 100%;
+    display: inline-block;
+    padding-right: 0 !important;
+  }
+
+  .by-author {
+    max-width: calc(100% - 210px);
+    width: 100%;
+  }
+
+  .layout-body-topbar{
+    display: inline-block;
+  }
+
+  .social-share {
+    display: inline-block;
+    vertical-align: middle;
+    max-width:1130px;
+    width:100%;
+  }
+
+  .share-button .logo{
+    display:inline-block;
+    position:relative;
+  }
+
+  .share-buttons{
+    display: inline-block;
+    right: 0;
+    position: relative;
+    height: 30px;
+    float:right;
+    margin-bottom: 10px;
+  }
+  .share-buttons-inner a
+  {
+      text-decoration: none !important;
+  }
+
+  .share-button{
+    display: inline-block;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    padding-left:15px;
+    padding-right:15px;
+    min-width:70px;
+    text-align: center;
+  }
+
+  .share-text {
+    color:white;
+    font-family: "sourcesanspro-regular-webfont", Helvetica, Arial, Verdana, sans-serif;
+    text-transform: uppercase;
+    margin-left:4px;
+    line-height:18px;
+    font-size:14px;
+    position:relative;
+    top: -1px;
+    display: inline-block;
+    vertical-align: middle;
+    z-index: 1;
+  }
+
+  .facebook-share-button{
+    background-color: #3b5998;
+  }
+
+  .twitter-tweet-button{
+    background-color: #00aced;
+  }
+
+  @media only screen and (max-width: 767px){
+    .share-buttons{
+      display:block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .layout-body-topbar {
+      display: initial;
+    }
+
+    .by-author{
+      max-width: 100%;
+    }
+
+    .layout-title h1, .layout-title .h1 {
+      max-width: 100%;
+    }
+  }
+
+</style>
+
+<script type="text/javascript">
+
+  if (!$('.by-author').is(':visible')){
+    $('.social-share').css('width', 'inherit');
+  }
+
+  $('#Content').on('click', '.share-popup', function (e) {
+    e.preventDefault();
+
+    var width = 575,
+        height = 400,
+        left = ($(window).width() - width) / 2,
+        top = ($(window).height() - height) / 2,
+        url = this.href,
+        opts   = 'status=1' +
+            ',width='  + width  +
+            ',height=' + height +
+            ',top='    + top    +
+            ',left='   + left;
+
+    window.open(url, 'share-popup', opts);
+
+    return false;
+  });
+
+
+  function closePopup(popupWindow){
+    popupWindow.close();
+  }
+
+
+</script>
+</div>
+
+                        <div class="clear" id = "related_searches_c">
+</div>
+
+
+
+<div class="ad-textlink full-width-iframe"">
+    <div id='AdSlot_AF-Top-Textlink1'>
+        <script type="text/javascript">
+            googletag.cmd.push(function() { googletag.display('AdSlot_AF-Top-Textlink1'); });
+        </script>
+    </div>
+</div><!-- .ad-textlink -->
+
+
+        </div>
+
+        <div class="layout-page">
+            <div class="layout-content">
+                <!--  -->
+                                                    <div class="tabs">
+                                            </div>
+                                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    
+<div class="layout-body layout-body-article box clear">
+    
+    <!--FEATURED VIDEO -->
+
+    
+    <span class="">
+            
+      </span>
+
+    <article>
+    <div class="content-box" >
+        <p><span style="line-height:1.6;"><a href="http://www.investopedia.com/terms/b/bitcoin.asp">Bitcoin</a> offers an efficient means of transferring money over the internet and is controlled by a <a href="http://www.investopedia.com/articles/investing/072913/how-bitcoin-works.asp">decentralized network</a> with a transparent set of rules, thus presenting an alternative to central bank controlled fiat money.  There has been a lot of talk about how to price bitcoin and we set out here to explore what <a href="http://www.investopedia.com/video/play/what-bitcoin/">bitcoin's</a> price might look like in the event it achieves some level of widespread adoption.</span></p>
+<p>In this article, we seek to lay a framework for calculating a medium to long term value for bitcoin, and to empower the reader to make their own projections on the value of bitcoin. (Haven't filed your taxes yet because you don't know how to declare your virtual currency? Check out Investopedia's definitive <a href="http://www.investopedia.com/university/definitive-bitcoin-tax-guide-dont-let-irs-snow-you/">Bitcoin IRS Tax Guide</a>.)</p>
+<p><strong>Assumptions</strong></p>
+<p>As part of our framework, we make several key assumptions.</p>
+<p>Our first assumption is that bitcoin will derive its value both from its use as a medium of exchange and as a <a href="http://www.investopedia.com/terms/s/storeofvalue.asp">store of value</a>.  As a footnote to this assumption, it should be stated that bitcoin's utility as a store of value is dependent on its utility as a medium of exchange.  We base this in turn on the assumption that for something to be used as a store of value it needs to have some intrinsic value, and if bitcoin does not achieve success as a medium of exchange, it will have no practical utility and thus no intrinsic value and won't be appealing as a store of value.    </p>
+<p>Our second assumption is that the supply of bitcoin will approach 21 million as specified in the current protocol.  To give some context, the current supply of bitcoin is around 13.25 million, the rate at which bitcoin is released decreases by half roughly every four years, and the supply should get past 19 million in the year 2022.  The key part of this assumption is that the protocol will not be changed.  Note that changing the protocol would require the concurrence of a majority of the computing power engaged in <a href="http://www.investopedia.com/articles/investing/043014/what-bitcoin-mining.asp">bitcoin mining</a>.</p>
+<p>Our third assumption is that as bitcoin gains legitimacy, larger scale investors, and <a href="http://www.investopedia.com/articles/investing/071014/five-ways-early-adopters-can-use-bitcoin-consumers.asp">more adoption</a>, its volatility will decrease to the point that <a href="http://www.investopedia.com/articles/investing/052014/why-bitcoins-value-so-volatile.asp">volatility</a> is not a concern that would discourage adoption.</p>
+<p>Our fourth assumption is that the current value of bitcoin is largely driven by speculative interest.  Bitcoin has exhibited characteristics of a <a href="http://www.investopedia.com/terms/b/bubble.asp">bubble</a> with drastic price run-ups and a <a href="http://www.investopedia.com/articles/active-trading/022614/bitcoin-mass-hysteria-disaster-brought-down-mt-gox.asp">craze of media attention</a> in 2013 and 2014.  But speculative interest in bitcoin, we assume, will decline as it achieves adoption.</p>
+<p>And our fifth assumption is that the use of bitcoin will never involve <a href="http://www.investopedia.com/terms/f/fractionalreservebanking.asp">fractional reserve banking</a> and that all means of storing bitcoin will be fully backed by bitcoin.</p>
+<p><strong>Methodology</strong></p>
+<p>We will look at bitcoin as currency and bitcoin as a store of value.  In order to place a value on bitcoin we need to project what market penetration it will achieve in each sphere.  This article will not make a case for what the market penetration will be, but for the sake of the evaluation, we'll pick a rather arbitrary value of 15%, both for bitcoin as a currency and bitcoin as a store of value.  You are encouraged to form your own opinion for this projection and adjust the valuation accordingly.</p>
+<div class="ad-textlink ad-incontent-wrap">
+<div id="AdSlot_IC-Rectangle">
+<script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+
+          googletag.cmd.push(function() { googletag.display('AdSlot_IC-Rectangle'); });
+        
+//--><!]]>
+</script></div>
+</div>
+<!-- .ad-textlink --><p>The simplest way to approach the model would be to look at the current worldwide value of all mediums of exchange and of all stores of value comparable to bitcoin, and calculate the value of bitcoin's projected percentage.  The predominant medium of exchange is <a href="http://www.investopedia.com/terms/f/fiatmoney.asp">government backed money</a>, and for our model we will focus solely on them.  The money supply is often thought of as broken into different buckets, <a href="http://www.investopedia.com/terms/m/m0.asp">M0</a>, <a href="http://www.investopedia.com/terms/m/m1.asp">M1</a>, <a href="http://www.investopedia.com/terms/m/m2.asp">M2</a>, and <a href="http://www.investopedia.com/terms/m/m3.asp">M3</a>.  M0 refers to currency in circulation.  M1 is M0 plus demand deposits like checking accounts.  M2 is M1 plus savings accounts and small time deposits (known as <a href="http://www.investopedia.com/terms/c/certificateofdeposit.asp">certificates of deposit</a> in the US).  M3 is M2 plus large time deposits and money market funds.  Since M0 and M1 are readily accessible for use in commerce, we will consider these two buckets as medium of exchange, whereas M2 and M3 will be considered as money being used as a store of value.</p>
+<p>Citing the <a href="http://dollardaze.org/blog/?post_id=00762&amp;cat_id=20" target="_blank">DollarDaze blog</a>, we see that M1 (which includes M0) in 2010 was worth about 25 trillion US dollars, which will serve as our current world wide value of mediums of exchange.</p>
+<p>From the same DollarDaze blog, we see that M3 (which includes all the other buckets) minus M1 is worth about 45 trillion US dollars.  We will include this as a store of value that is comparable to bitcoin.  To this, we will also add an estimate for the worldwide <a href="http://www.investopedia.com/articles/investing/071114/why-gold-has-always-had-value.asp">value of gold </a>held as a store of value.  While some may use jewelry as a store of value, for our model we will only consider gold bullion.  The <a href="http://pubs.usgs.gov/of/2002/of02-303/OFR_02-303.pdf" target="_blank">US Geological Survey</a> estimated that at the end of 1999, there were about 122,000 metric tons of available above-ground gold.  Of this, 48%, or 58,560 metric tons, was in the form of private and official bullion stocks.  At an estimated current price of $1200 per <a href="http://www.investopedia.com/terms/t/troyounce.asp">troy ounce</a>, that amount of gold is today worth upwards of 2.1 trillion US dollars.  Since there has recently been a deficit in the supply of silver and governments have been selling significant amounts of their <a href="https://www.silverinstitute.org/site/supply-demand/" target="_blank">silver bullion</a>, we reason that most <a href="http://www.investopedia.com/university/commodities/commodities18.asp">silver</a> is being used in industry and not as a store of value, and will not include silver in our model.  Neither will we treat other precious metals or gemstones.  In aggregate, our estimate for the global value of stores of value comparable to bitcoin, including savings accounts, small and large time deposits, money market funds, and gold bullion, come to 47.1 trillion US dollars.</p>
+<p>Our total estimate for global value of mediums of exchange and stores of value thus comes to 72.1 trillion US dollars.  If bitcoin were to achieve 15% of this valuation, its market capitalization in today's money would be 10.8 trillion US dollars.  With 21 million bitcoin in circulation, that would put the price of 1 bitcoin at $514,000.  That would be over 1,000 times the current price.</p>
+<p>This is a rather simple long term model.  And perhaps the biggest question it hinges on is how much adoption will bitcoin achieve?  Coming up with a value for the current price of bitcoin would involve pricing in the risk of low adoption or failure of bitcoin as a currency, which could include being displaced by one or more other digital currencies.  Models often consider the velocity of money, frequently arguing that since bitcoin can support transfers that take less than an hour, the velocity of money in the future bitcoin ecosystem will be higher than the current average velocity of money.  Another view on this though would be that velocity of money is not restricted by today's payment rails in any significant way and that its main determinant is the need or willingness of people to transact.  Therefore, the projected velocity of money could be treated as roughly equal to its current value.</p>
+<p>Another angle at modeling the price of bitcoin, and perhaps a useful one for the near to medium term, would be to look at specific industries or markets one thinks it could impact or disrupt and think about how much of that market could end up using bitcoin.  The World Bitcoin Network provides a <a href="http://worldbitcoinnetwork.com/BitcoinPriceModel-Alpha.html" target="_blank">nifty tool</a> for doing just that.</p>
+<p><strong>The Bottom Line</strong></p>
+<p>As mathematician George Box said, "All models are wrong, some are useful."  We have set out to construct a framework for pricing bitcoin but it is important to understand the variables.  From our thinking, it seems possible that bitcoin could eventually increase in price by orders of magnitude, but it all depends on bitcoin's level of adoption.  The most important question is "Will people use bitcoin?"</p>
+            </div>
+    </article>
+    
+    <div id="AdSlot_BC-TextNote" class="BC-Textnote">
+        <script type="text/javascript">
+
+            // If content has the tag "partner-content-original" do not output a textnote ad unit on the page
+            var sailThruTags = $("meta[name='sailthru.tags']").attr("content");
+            var articleTags = $("meta[property='article:tag']").attr("content");
+
+            if ( sailThruTags == undefined ) {
+                sailThruTags = '';
+            }
+            if ( articleTags == undefined ) {
+                articleTags = '';
+            }
+
+            // If there's no "partner-content-original" tag output a textnote
+            if ( sailThruTags.indexOf('partner-content-original') == -1 &&
+                articleTags.indexOf('partner-content-original') == -1 ) {
+                var bcTextNoteDynamicAd = new dynamicAd();
+                bcTextNoteDynamicAd.domName = "AdSlot_BC-TextNote";
+                bcTextNoteDynamicAd.slotSize = "";
+                bcTextNoteDynamicAd.taxSlotName = "BC-Textnote";
+                bcTextNoteDynamicAd.isFrameExtraction = false;
+                bcTextNoteDynamicAd.targeting = {"Location":"BC-Textnote"};
+                bcTextNoteDynamicAd.perCentLeadTime = .50;
+                bcTextNoteDynamicAd.isRenderOnScroll = false;
+                bcTextNoteDynamicAd.isDefinedOutOfSlot = true;
+                                    bcTextNoteDynamicAd.isRenderOnScroll = true;
+                    $(window).scroll(function () {
+                        bcTextNoteDynamicAd.renderAd();
+                    });
+                            }
+        </script>
+    </div>
+
+
+    </div>
+
+<div class="box col-right big-image" id="term_ArticlesOfInterest">
+    <div class="title">Related Articles</div>
+    <ol class="list">
+                                                                            <li class="item first ">
+                                                                        <a   href="/articles/investing/021716/heres-how-setlcoin-trade-system-will-work.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/medium_article/heres_how_setlcoin_/shutterstock_143646268_virtual.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/medium_article/heres_how_setlcoin_/shutterstock_143646268_virtual.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Investing News</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/investing/021716/heres-how-setlcoin-trade-system-will-work.asp">                                                    Here&#039;s How the SETLcoin Trade System Will Work                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Goldman Sachs is expected to launch its own cryptocurrency, SETLcoin, and a trade settlement system based on it. Here&#039;s how it will transform the trading business. </div>
+            
+            
+            
+            </li>
+                                                                <li class="item second ">
+                                                                        <a   href="/articles/investing/021616/5-tips-trading-during-your-retirement-years.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/short_article/5_tips_on_trading_du/shutterstock_214484995.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/short_article/5_tips_on_trading_du/shutterstock_214484995.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Investing</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/investing/021616/5-tips-trading-during-your-retirement-years.asp">                                                    5 Tips on Trading During Your Retirement Years                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Having fun is key to being happy during retirement. Here are five tips on how to act responsibly for retirees who want to continue their trading hobby. </div>
+            
+            
+            
+            </li>
+                                                                <li class="item third ">
+                                                                        <a   href="/articles/investing/021616/bitcoin-vs-big-finance.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/medium_article/bitcoin_vs._big_fina/shutterstock_172383758_binary.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/medium_article/bitcoin_vs._big_fina/shutterstock_172383758_binary.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Investing News</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/investing/021616/bitcoin-vs-big-finance.asp">                                                    Bitcoin vs. Big Finance (opinion)                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Bitcoin and big finance occupy parallel universes of value, cooperation, and trust. Understanding these differences helps to decipher the meaning behind the blockchain news cycle and how to recognize ...  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/articles/investing/021616/6-stocks-retirees-should-consider-2016-jnjraimsftsyygis.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/short_article/6_stocks_retirees_sh/shutterstock_180974216.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/short_article/6_stocks_retirees_sh/shutterstock_180974216.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Investing Basics</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/investing/021616/6-stocks-retirees-should-consider-2016-jnjraimsftsyygis.asp">                                                    6 Stocks Retirees Should Consider in 2016 (JNJ,RAI,MSFT,SYY,GIS)                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> These stocks don&#039;t just pay relatively generous dividends. They&#039;re also likely to be able, like Leonardo di Caprio, to survive the claws of a bear market.  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/articles/investing/021616/graphene-miracle-material-tomorrow-tsla.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/short_article/graphene_miracle_ma/shutterstock_101837098_science_fiction_city.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/short_article/graphene_miracle_ma/shutterstock_101837098_science_fiction_city.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Investing News</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/investing/021616/graphene-miracle-material-tomorrow-tsla.asp">                                                    Graphene! Miracle Material of Tomorrow (TSLA)                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Last year, Tesla Motors Inc (TSLA) announced that it would begin producing its own line of residential and commercial battery systems as well as conduct scientific research into battery technology ...  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/articles/personal-finance/021616/best-investment-categories-your-retirement-funds.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/article/best_investment_cate/eetf_analysis_guggenheim_bullet_shares_2018__ss.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/article/best_investment_cate/eetf_analysis_guggenheim_bullet_shares_2018__ss.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Retirement</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/personal-finance/021616/best-investment-categories-your-retirement-funds.asp">                                                    Best Investment Categories for Retirement Funds                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> An asset allocation that reflects your age and investment objectives is one of the keys to a low-stress retirement.  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/articles/investing/021416/top-4-state-street-funds-retirement-diversification-2016-stt.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/inv/genericcontentimages/personalfinance/101405194.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/inv/genericcontentimages/personalfinance/101405194.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Mutual Funds & ETFs</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/investing/021416/top-4-state-street-funds-retirement-diversification-2016-stt.asp">                                                    Top 4 State Street Funds for Retirement Diversification in 2016 (STT)                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Discover analyses of the four best State Street Funds that could be allocated to provide diversification to a retirement portfolio. </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/video/play/how-you-make-money-real-estate/" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/video/how_you_make_money_i/howdoyoumakemoneyinrealestate.png"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/video/how_you_make_money_i/howdoyoumakemoneyinrealestate.png';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Investing Basics</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/video/play/how-you-make-money-real-estate/">                                                    How You Make Money In Real Estate                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> No matter what anyone tells you, the basic ways that money is made through real estate haven’t changed in centuries. </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/video/play/effects-currency-fluctuations-economy/" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/video/effects_of_currency_/effectsofcurrencyfluctuationsontheeconomy.png"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/video/effects_of_currency_/effectsofcurrencyfluctuationsontheeconomy.png';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Forex Education</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/video/play/effects-currency-fluctuations-economy/">                                                    Effects Of Currency Fluctuations On The Economy                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Huge movements in a currency can dictate an economy’s fortunes. In a manner of speaking, the currency becomes the tail that wags the dog. </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                                                        <a   href="/articles/markets/021316/analyzing-microsofts-return-equity-roe-msft.asp" class="item-image">
+                            <img class="item-image-src"
+                                 src="http://i.investopedia.com/small/content/short_article/analyzing_microsoft/shutterstock_232670755.jpg"
+                                 onerror="this.onerror='';this.src='http://i.investopedia.com/content/short_article/analyzing_microsoft/shutterstock_232670755.jpg';return true;"
+                                 alt="" title=""/>
+                </a>
+                            
+                            <div class="item-category">Stock Analysis</div>
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/articles/markets/021316/analyzing-microsofts-return-equity-roe-msft.asp">                                                    Analyzing Microsoft&#039;s Return on Equity (ROE) (MSFT)                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Discover a detailed analysis of Microsoft&#039;s historical return on equity, and learn how its ROE stacks up to its competitors in the tech industry. </div>
+            
+            
+            
+            </li>
+            </ol>
+
+    <!-- AF Native Ad-->
+        <!-- end AF Native Ad-->
+</div>
+
+
+
+
+
+
+<div class="article-related-articles-responsive"></div>
+
+
+
+
+
+
+
+
+    
+
+
+
+    <div class="box box-mediummore-margin first-letter-content clear" id="bl_term_ralated_faqs">
+        <div class="title">RELATED FAQS</div>
+        <ol class="list">
+                            <li class="item nth">
+                    <h3 class="item-title">
+                        <a href="/ask/answers/041415/will-m1-ever-become-obsolete.asp">Will M1 ever become obsolete?</a>
+                    </h3>
+                    <div class="item-description">The form of M1 money in an economy may change over time, but M1 money will continue to exist for the foreseeable future; ...  <a class="accordion-desc-link" href="/ask/answers/041415/will-m1-ever-become-obsolete.asp">Read Full Answer >></a></div>
+                </li>
+                            <li class="item nth">
+                    <h3 class="item-title">
+                        <a href="/ask/answers/021616/what-good-turnover-ratio-mutual-fund.asp">What is a good turnover ratio for a mutual fund?</a>
+                    </h3>
+                    <div class="item-description">The definition of what constitutes a good turnover ratio, or turnover rate, for a mutual fund depends entirely on the type ...  <a class="accordion-desc-link" href="/ask/answers/021616/what-good-turnover-ratio-mutual-fund.asp">Read Full Answer >></a></div>
+                </li>
+                            <li class="item nth">
+                    <h3 class="item-title">
+                        <a href="/ask/answers/12/derivative.asp">What is a derivative?</a>
+                    </h3>
+                    <div class="item-description">A derivative is a contract between two or more parties whose value is based on an agreed-upon underlying financial asset, ...  <a class="accordion-desc-link" href="/ask/answers/12/derivative.asp">Read Full Answer >></a></div>
+                </li>
+                            <li class="item nth">
+                    <h3 class="item-title">
+                        <a href="/ask/answers/07/securitization.asp">What is securitization?</a>
+                    </h3>
+                    <div class="item-description">Securitization is the process of taking an illiquid asset, or group of assets, and through financial engineering, transforming ...  <a class="accordion-desc-link" href="/ask/answers/07/securitization.asp">Read Full Answer >></a></div>
+                </li>
+                            <li class="item nth">
+                    <h3 class="item-title">
+                        <a href="/ask/answers/121515/bitcoin-legal-us.asp">Is Bitcoin legal in the US?</a>
+                    </h3>
+                    <div class="item-description">The digital currency known as bitcoin was created in 2009 by a person called Satoshi Nakamoto, but whose true identity has ...  <a class="accordion-desc-link" href="/ask/answers/121515/bitcoin-legal-us.asp">Read Full Answer >></a></div>
+                </li>
+                            <li class="item nth">
+                    <h3 class="item-title">
+                        <a href="/ask/answers/112315/can-hedge-funds-trade-penny-stocks.asp">Can hedge funds trade penny stocks?</a>
+                    </h3>
+                    <div class="item-description">Hedge funds can trade penny stocks. In fact, hedge funds can trade in just about any type of security, including medium- ...  <a class="accordion-desc-link" href="/ask/answers/112315/can-hedge-funds-trade-penny-stocks.asp">Read Full Answer >></a></div>
+                </li>
+                    </ol>
+    </div>
+
+    <div class="bf-responsive"></div>
+
+
+
+
+<div class="content-tags ">
+    <i>BROWSE BY TOPIC:</i>
+
+                        <a title=""
+               href="/tags/alternative_investments/" rel="tag">Alternative Investments</a>
+                                <a title=""
+               href="/tags/bitcoin/" rel="tag">Bitcoin</a>
+                                <a title=""
+               href="/tags/cryptocurrency/" rel="tag">Cryptocurrency</a>
+                                <a title=""
+               href="/tags/currency/" rel="tag">Currency</a>
+                                <a title=""
+               href="/tags/virtual_currency/" rel="tag">Virtual Currency</a>
+                                <a title=""
+               href="/tags/vizio/" rel="tag">Vizio</a>
+                                <a title=""
+               href="/tags/wm-investments/" rel="tag">WM-Investments</a>
+            </div>
+
+
+
+
+    
+<div id="outbrain" style="display: none">
+  <div class="title">
+		<h2>You May Also Like</h2>
+		<div class="sponsored-title">Sponsored content</div>
+	</div>
+  <div class="OUTBRAIN" data-src="http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp" data-widget-id="AR_2" data-ob-template="investopedia" ></div>
+</div>
+<script type="text/javascript" src="http://i.investopedia.com/public/js/mobile-detect.min.js?v=5.349"></script>
+<script type="text/javascript">
+	var md = new MobileDetect(window.navigator.userAgent);
+	var widget_id_map = {
+		AR_2 : 'MB_1',
+		AR_3 : 'MB_2',
+		AR_4 : 'MB_3',
+		AR_5 : 'MB_4',
+		AR_6 : 'MB_5',
+		AR_7 : 'MB_6',
+		AR_8 : 'MB_7',
+	};
+
+	if(md.phone()){
+		var widget_id =  widget_id_map[$('.OUTBRAIN').attr('data-widget-id')];
+		$('.OUTBRAIN').attr('data-widget-id', widget_id);
+
+	}
+</script>
+
+
+
+
+  <div id="below-content">
+    <div id='AdSlot_IC-BelowContent' style="margin-bottom: 65px;">
+      <script type="text/javascript">
+        if(!noDfp){
+          googletag.cmd.push(function() { googletag.display('AdSlot_IC-BelowContent'); });
+        }
+      </script>
+    </div>
+  </div>
+
+
+<script>
+  if((typeof(bankMortTable) == "undefined" && typeof(bankCdTable) == "undefined" && typeof(quinTable) == "undefined" &&  typeof(lendingTable) == "undefined")
+    && !_pageTaxonomy.Type.match(/term/i)) {
+      if(_pageTaxonomy.Path.match(/ask/i)) {
+        $("#below-content").insertAfter("#term_ArticlesOfInterest");
+      } else {
+        $("#below-content").insertAfter("#term_ArticlesOfInterest");
+        $("#below-content").insertAfter("#RelatedArticles");
+      }
+  }
+</script>
+
+  </div>
+</div>
+  </div>
+            </div>
+        </div>
+
+        <div class="layout-side">
+            
+<!--All files included are in the order they appear in the right rail.-->
+<!--The logic for determining whether a widget will show or not is in the widget itself-->
+<div class="inner-helper">
+<!--ad af-right-multi-->
+  <div class="box center ad af-right-multi">
+    <div id='AdSlot_AF-Right-Multi'>
+      <script type="text/javascript">
+        if(!noDfp){
+          googletag.cmd.push(function() { googletag.display('AdSlot_AF-Right-Multi'); });
+        }
+      </script>
+    </div>
+  </div>
+
+<!-- Bloomberg Stock Video -->
+
+<!-- Bloomberg News Video -->
+
+<!-- Newsletter -->
+<div class="box sharing">
+    <div class="box-inner">
+        <div class="newsletter">
+                        Subscribe to our Free Newsletters!<br>
+            
+<div class="form-box form-group">
+<form class="newsletter-widget-form newsletter-widget-form-content" action="/articles/investing/091814/what-bitcoins-intrinsic-value.asp" method="post" id="account-api-newsletters-widget-deepblue-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-email">
+  <input type="text" id="edit-email" name="email" value="" size="60" maxlength="50" class="form-text" />
+</div>
+<input type="hidden" name="default_newsletter_id" value="8" />
+<input type="submit" id="edit-submit" name="op" value="Sign Up" class="form-submit" /><input type="hidden" name="form_id" value="account_api_newsletters_widget_deepblue_form" />
+</div></form></div>
+            <!--Bug 350654 - INV SITE - Eliminate "returnurl" URL parameter -->
+            <a href="/accounts/signupnewsletter/" class="more">Learn More »</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Related Stocks (markets quote page) -->
+
+<!-- Recent Videos (/slide-show/all/) -->
+
+<!-- Last Questions Asked -->
+
+<!-- Active Trading - Stock Analysis -->
+
+
+<!-- Active Trading - Investopedia Features -->
+
+
+<!-- Markets/stock-analysis - Investing News -->
+
+
+<!-- Personal Finance Subchannels - Life Stages -->
+
+
+<!-- Personal Finance Subchannels - Save Money -->
+
+<!-- Related Articles -->
+
+
+<!-- Articles of Interest -->
+
+<!-- Frequently Asked Questions -->
+
+<!-- Tutorials -->
+
+
+<!-- FOREX Landing ONLY - Live Rates -->
+
+
+
+
+<!-- FOREX Landing ONLY - Currency Converter -->
+
+<!-- FOREX Landing ONLY - Currency Converter -->
+
+<!-- Hot Definitions  -->
+
+<div class="box box-bg box-line  no-description hot-definitions clear">
+    <div class="title">Hot Definitions</div>
+            <ol class="list">
+                                                                            <li class="item first ">
+                                        
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/terms/b/brexit.asp">                                                    Brexit                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> The Brexit, an abbreviation of &quot;British exit&quot; that mirrors the term Grexit, refers to the possibility of Britain&#039;s withdrawal ...  </div>
+            
+            
+            
+            </li>
+                                                                <li class="item second ">
+                                        
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/terms/c/contingentconvertible.asp">                                                    Contingent Convertibles - CoCos                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> A security similar to a traditional convertible bond in that there is a strike price (the cost of the stock when the bond ...  </div>
+            
+            
+            
+            </li>
+                                                                <li class="item third ">
+                                        
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/terms/t/trough.asp">                                                    Trough                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> The stage of the economy&#039;s business cycle that marks the end of a period of declining business activity and the transition ...  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                        
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/terms/b/bearmarket.asp">                                                    Bear Market                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> A market condition in which the prices of securities are falling, and widespread pessimism causes the negative sentiment ...  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                        
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/terms/s/shortselling.asp">                                                    Short Selling                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> Short selling is the sale of a security that is not owned by the seller, or that the seller has borrowed. Short selling is ...  </div>
+            
+            
+            
+            </li>
+                                                                    <li class="item nth">
+                                        
+            
+            
+            <h3 class="item-title">
+                
+                    <a   href="/terms/h/harry_potter_index.asp">                                                    Harry Potter Stock Index                                            </a>
+                
+                            </h3>
+
+            
+            
+            
+            
+                            <div class="item-description"> A collection of stocks from companies related to the &quot;Harry Potter&quot; series franchise. Created by StockPickr, this index seeks ...  </div>
+            
+            
+            
+            </li>
+            </ol>
+    </div>
+
+<!-- Exam Prep - Financial Professionals  -->
+
+<!-- Companies In this Article -->
+
+<!-- ad bf-right-multi -->
+  <div class="box center ad bf-right-multi">
+    
+    <div id='AdSlot_BF-Right-Multi'>
+      <script type="text/javascript">
+        if(!noDfp) {
+          googletag.cmd.push(function () {
+            googletag.display('AdSlot_BF-Right-Multi');
+          });
+        }
+      </script>
+    </div>
+  </div>
+
+<!-- ad trading center (4 button ads) -->
+
+
+<div class="box ">
+        <div class="title">Trading Center</div>
+        <ul class="ad-buttons clear">
+            <li>
+                <div id='AdSlot_BF-Right-Button1'>
+                    <script type="text/javascript">
+                        if(!noDfp) {
+                            googletag.cmd.push(function () {
+                                googletag.display('AdSlot_BF-Right-Button1');
+                            });
+                        }
+                    </script>
+                </div>
+            </li>
+            <li>
+                <div id='AdSlot_BF-Right-Button2'>
+                    <script type="text/javascript">
+                        if(!noDfp) {
+                            googletag.cmd.push(function () {
+                                googletag.display('AdSlot_BF-Right-Button2');
+                            });
+                        }
+                    </script>
+                </div>
+            </li>
+            <li>
+                <div id='AdSlot_BF-Right-Button3'>
+                    <script type="text/javascript">
+                        if(!noDfp) {
+                            googletag.cmd.push(function () {
+                                googletag.display('AdSlot_BF-Right-Button3');
+                            });
+                        }
+                    </script>
+                </div>
+            </li>
+                        <li>
+                <div id='AdSlot_BF-Right-Button4'>
+                    <script type="text/javascript">
+                        if(!noDfp) {
+                            googletag.cmd.push(function () {
+                                googletag.display('AdSlot_BF-Right-Button4');
+                            });
+                        }
+                    </script>
+                </div>
+            </li>
+                    </ul>
+        </div>
+
+    <script>
+        var refreshAd = function() {
+            var slots = googletag.pubads().getSlots();
+            for (var i = slots.length - 1; i >= 0; i--) {
+                if(slots[i].getSlotElementId() === "AdSlot_BF-Right-Button2") {
+                    googletag.pubads().refresh([slots[i]]);
+                    break;
+                }
+            };
+        };
+        setTimeout(refreshAd, 15000);
+    </script>
+
+<!-- Partner Links -->
+
+
+
+<div id="adPartnerLinks" class="box openxbuttons">
+    <div class="title">Partner Links</div>
+            <div class="adx-link-item">
+                        <div id="AdSlot_AF-Right-Textlink0">
+                <script type='text/javascript'>
+                    if(!noDfp) {
+                        googletag.cmd.push(function () {
+                            googletag.display("AdSlot_AF-Right-Textlink0");
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="adx-link-separator"></div>
+            <div class="adx-link-item">
+                        <div id="AdSlot_AF-Right-Textlink1">
+                <script type='text/javascript'>
+                    if(!noDfp) {
+                        googletag.cmd.push(function () {
+                            googletag.display("AdSlot_AF-Right-Textlink1");
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="adx-link-separator"></div>
+            <div class="adx-link-item">
+                        <div id="AdSlot_AF-Right-Textlink2">
+                <script type='text/javascript'>
+                    if(!noDfp) {
+                        googletag.cmd.push(function () {
+                            googletag.display("AdSlot_AF-Right-Textlink2");
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="adx-link-separator"></div>
+            <div class="adx-link-item">
+                        <div id="AdSlot_AF-Right-Textlink3">
+                <script type='text/javascript'>
+                    if(!noDfp) {
+                        googletag.cmd.push(function () {
+                            googletag.display("AdSlot_AF-Right-Textlink3");
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="adx-link-separator"></div>
+    </div></div>
+
+<!--  Rail Sticky Functionality -->
+
+
+    <script type="text/javascript">
+        /////////////////////////////
+        // Sticky Functionality
+        /////////////////////////////
+
+        // Init Var
+        var docTop, winHeight, bfHeight, stickyStart, stickEnd;
+        var $layoutSide = $('.layout-side');
+        var layoutSideW = $layoutSide.width();
+        var marginBottom = parseInt($layoutSide.find('.box').css('marginBottom'));
+
+        // Stick only if bf-right-multi exist
+        if ( $layoutSide.find('.bf-right-multi').length ) {
+            
+            // Bind Scroll event
+            $(document).bind('scroll', function(){
+                docTop = $(document).scrollTop();
+                winHeight = $(window).outerHeight();
+
+                // Get Sum Height from bf-right-multi to the end of rightrail
+                var nextEls = $layoutSide.find('.bf-right-multi').nextAll().filter('.box');
+                bfHeight = 0;
+                $.each(nextEls, function(i, el){
+                    bfHeight += $(el).outerHeight() + marginBottom;
+
+                });
+                bfHeight += $layoutSide.find('.bf-right-multi').outerHeight() - 25;
+
+                // Sticky works only if bfheight is greater than browser height
+                if ( winHeight >= bfHeight ) {
+
+                    // Get Sum Height of the elements before bf-right-multi
+                    var prevEls = $layoutSide.find('.bf-right-multi').prevAll().filter('.box');
+                    var prevHeight = 0;
+                    $.each(prevEls, function(i, el){
+                        prevHeight += $(el).outerHeight() + 25;
+                    });
+
+                    stickyStart = $layoutSide.offset().top + prevHeight;
+                    stickEnd = $layoutSide.parent().offset().top + $layoutSide.parent().outerHeight() - bfHeight - 55;
+
+                    // Fixed
+                    if( docTop > stickyStart && docTop < stickEnd) {
+                        $layoutSide.find('.inner-helper').css({
+                            'width': layoutSideW + 'px',
+                            'position': 'fixed',
+                            'top': -prevHeight + 'px',
+                            'bottom': 'auto'
+                        });
+                    }
+                    // remove fixed at the bottom of content
+                    else if (docTop >= stickEnd) {
+                        $layoutSide.find('.inner-helper').css({
+                            'position': 'absolute',
+                            'top': 'auto',
+                            'bottom': '0px'
+                        });
+                    }
+                    else {
+                        $layoutSide.find('.inner-helper').css({
+                            'position': 'relative',
+                            'top': 'auto',
+                            'bottom': 'auto'
+                        });
+
+                    }
+                }else {
+                    $layoutSide.find('.inner-helper').css({
+                        'position': 'relative',
+                        'top': 'auto',
+                        'bottom': 'auto'
+                    });
+                }
+            });
+
+        }
+
+        
+
+    </script>
+
+        </div>
+    </div>
+    <div id="Footer">
+              <div class="mid">
+            <div class="footer-inner layout-size">
+                <!--<a href="#" class="to-top">TOP</a>-->
+                <!-- Footer logo -->
+                <div class="clear">
+                    <a href="/" class="logo"></a>
+                    <div class="search-bars">
+    <div class="search-box clear">
+
+        <div class="form-box form-group">
+                <div>
+                    <div class="container-inline form-wrapper" id="edit-basic">
+                        <div class="form-item form-type-textfield form-item-symbol">
+                            <input type="text" class="SearchValue form-text input-text input-help invSearchText" value="Search Investopedia">
+                        </div>
+                        <input type="button" name="invSearchBtn" class="invSearchBtn search-btn form-submit">
+
+                    </div>
+                </div>
+        </div>
+
+    </div>
+    <div class="search-box clear ticker-search">
+        <div class="form-box form-group">
+            <form class="filter-form" action="/articles/investing/091814/what-bitcoins-intrinsic-value.asp" method="post" id="market-api-form" accept-charset="UTF-8"><div><div class="container-inline form-wrapper" id="edit-basic"><div class="form-item form-type-textfield form-item-symbol">
+  <label for="edit-symbol">Enter Symbol </label>
+ <input type="text" id="edit-symbol" name="symbol" value="" size="10" maxlength="255" class="form-text" />
+</div>
+<input type="submit" id="edit-submit--2" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-af7LuqBmyfrrioLpAnOsWvs6_9MMufAYTCV-dmdSkbk" />
+<input type="hidden" name="form_id" value="market_api_form" />
+</div></form>        </div>
+    </div>
+</div>                </div>
+                <ul class="flist">
+                    <li>Dictionary:</li>
+                    <li><a href="/terms/1/">#</a></li>
+                                            <li><a href="/terms/a/">a</a></li>
+                                            <li><a href="/terms/b/">b</a></li>
+                                            <li><a href="/terms/c/">c</a></li>
+                                            <li><a href="/terms/d/">d</a></li>
+                                            <li><a href="/terms/e/">e</a></li>
+                                            <li><a href="/terms/f/">f</a></li>
+                                            <li><a href="/terms/g/">g</a></li>
+                                            <li><a href="/terms/h/">h</a></li>
+                                            <li><a href="/terms/i/">i</a></li>
+                                            <li><a href="/terms/j/">j</a></li>
+                                            <li><a href="/terms/k/">k</a></li>
+                                            <li><a href="/terms/l/">l</a></li>
+                                            <li><a href="/terms/m/">m</a></li>
+                                            <li><a href="/terms/n/">n</a></li>
+                                            <li><a href="/terms/o/">o</a></li>
+                                            <li><a href="/terms/p/">p</a></li>
+                                            <li><a href="/terms/q/">q</a></li>
+                                            <li><a href="/terms/r/">r</a></li>
+                                            <li><a href="/terms/s/">s</a></li>
+                                            <li><a href="/terms/t/">t</a></li>
+                                            <li><a href="/terms/u/">u</a></li>
+                                            <li><a href="/terms/v/">v</a></li>
+                                            <li><a href="/terms/w/">w</a></li>
+                                            <li><a href="/terms/x/">x</a></li>
+                                            <li><a href="/terms/y/">y</a></li>
+                                            <li><a href="/terms/z/">z</a></li>
+                                    </ul>
+                <div class="column-list clear">
+                    <div class="col-l">
+                        <ul>
+                            <li class="first">Content Library</li>
+                            <li><a href="/articles/">Articles</a></li>
+                            <li><a href="/dictionary/">Terms</a></li>
+                            <li><a href="/video/">Videos</a></li>
+                            <li><a href="/university/">Guides</a></li>
+                            <li><a href="/slide-show/">Slideshows</a></li>
+                            <li><a href="/ask/">FAQs</a></li>
+                            <li><a href="/calculator/">Calculators</a></li>
+                            <li><a href="/active-trading/chartadvisor/">Chart Advisor</a></li>
+                            <li><a href="/markets/stock-analysis/">Stock Analysis</a></li>
+                            <li><a href="/simulator/">Stock Simulator</a></li>
+                            <li><a href="/fxtrader/">FXtrader</a></li>
+                            <li><a href="/exam-prep-quizzes/">Exam Prep Quizzer</a></li>
+                            <li><a href="/net-worth/">Net Worth Calculator</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-r">
+                        <ul>
+                            <li class="first">Connect With Investopedia</li>
+                        </ul>
+                        <a target="_blank" title="Go to the Investopedia Facebook Page." href="http://www.facebook.com/Investopedia" rel="nofollow" class="footicon fb"></a>
+                        <a target="_blank" title="Go to the Investopedia Twitter Page." href="http://twitter.com/#!/investopedia" rel="nofollow" class="footicon twtr"></a>
+                        <a title="Go to the Investopedia LinkedIn Page." href="http://www.linkedin.com/company/investopedia-ulc" class="footicon lnkd"></a>
+                        <a title="Subscribe to Investopedia RSS news feeds here." href="/rss/" class="footicon rss"></a>
+                        <a title="Go to the Investopedia" href="/" class="footicon inv"></a>
+                    </div>
+                </div>
+
+                <div class="column-list clear">
+                    <div class="col-l">
+                        <ul>
+                            <li class="first">Work With Investopedia</li>
+                            <li><a href="/corp/content-licensing.aspx">License Content</a></li>
+                            <li><a href="/corp/advertise.aspx">Advertise With Us</a></li>
+                            <li><a href="/corp/contactus.aspx?type=WriterSubmission">Write For Us</a></li>
+                            <li><a href="/corp/emailcampaign.aspx">Email Deployment</a></li>
+                            <li><a href="/corp/contactus.aspx">Contact Us</a></li>
+                            <li><a href="https://careers.smartrecruiters.com/IAC/investopedia" rel="nofollow">Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-r">
+                        <div class="newsletter">
+                                                                                    
+<div class="form-box form-group">
+<form class="newsletter-widget-form newsletter-widget-form-footer" action="/articles/investing/091814/what-bitcoins-intrinsic-value.asp" method="post" id="account-api-newsletters-widget-deepblue-form--2" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-email">
+  <input type="text" id="edit-email--2" name="email" value="" size="60" maxlength="50" class="form-text" />
+</div>
+<input type="hidden" name="default_newsletter_id" value="8" />
+<input type="submit" id="edit-submit--3" name="op" value="Subscribe" class="form-submit" /><input type="hidden" name="form_id" value="account_api_newsletters_widget_deepblue_form" />
+</div></form></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .mid -->
+        <div class="btm">
+            <div class="copyright layout-size clear">
+                <span>&copy; 2016, Investopedia, LLC.</span>
+                <span>
+                    <a href="/corp/copyright.aspx">All Rights Reserved</a>
+                    <a href="/corp/termsofuse.aspx">Terms Of Use</a>
+                    <a href="/corp/privacypolicy.aspx" class="last">Privacy Policy</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+
+        
+
+<div id='AdSlot_PG-Web-Bar'>
+    <script type="text/javascript">
+        googletag.cmd.push(function () {
+            googletag.display('AdSlot_PG-Web-Bar');
+        });
+    </script>
+</div>
+
+<script type="text/javascript">
+    var adSlots = ["AdSlot_BF-Right-Multi","AdSlot_AF-Right-Multi","AdSlot_AF-Top-Leaderboard","AdSlot_IC-Rectangle","AdSlot_AF-Left-Multi","AdSlot_BF-Right-Button1","AdSlot_BF-Right-Button2","AdSlot_BF-Right-Button3","AdSlot_BF-Right-Button4"];
+
+    for ( var i = 0; i < adSlots.length; i++ ) {
+        var adSlot = document.getElementById(adSlots[i]);
+        if (adSlot) {
+            adSlot.setAttribute('adonis-marker', '');
+        }
+    }
+</script>
+        <!--js start-->
+    
+    
+
+<!-- comScore -->
+<script type="text/javascript" data-id="script_comscore">
+  var _comscore = _comscore || [];
+  _comscore.push({ c1: "2", c2: "6034722", c4: "http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp" });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&c2=6034722&c4=http://www.investopedia.com/articles/investing/091814/what-bitcoins-intrinsic-value.asp&cv=2.0&cj=1" />
+</noscript>
+<!-- End comScore -->
+    <script>
+	if((typeof(bankMortTable) == "undefined" && typeof(bankCdTable) == "undefined" && typeof(lendingTable) == "undefined") && typeof(quinTable) == "undefined" &&
+		!_pageTaxonomy.Path.match(/^\/terms/i)) {
+		var outbrainTag = document.createElement('script');
+		outbrainNode = document.getElementsByTagName("script")[0];
+		outbrainTag.async = true;
+		outbrainTag.src = "http://widgets.outbrain.com/outbrain.js";
+		outbrainNode.parentNode.insertBefore(outbrainTag, outbrainNode);
+		document.getElementById('outbrain').setAttribute('style', 'display: "";');
+	};
+</script>
+    
+    <!-- Audience Segment-->
+    <script type="text/javascript" data-id="script_sp_taggroup_mapping" src="http://i.investopedia.com/public/js/smart_pixel/tag_taggroup_mapping.js"></script>
+    <script type="text/javascript" data-id="script_sp_taggroup_mapping" src="http://i.investopedia.com/public/js/smart_pixel/taggroup_seg_mapping.js"></script>
+	<script type="text/javascript" data-id="script_sp_keyword_sem" src="http://i.investopedia.com/public/js/smart_pixel/keyword_sem_mapping.js"></script>
+	<script type="text/javascript" data-id="script_sp_audience_segment" src="http://i.investopedia.com/public/js/smart_pixel/audience_segment.js"></script>
+ 	<!--End Audience Segment -->
+
+<!--js end-->
+
+
+	</div><!-- .pg-wrapper -->
+
+
+
+
+<script type="text/javascript">
+!function e(n,t,o){function i(a,s){if(!t[a]){if(!n[a]){var c="function"==typeof require&&require;if(!s&&c)return c(a,!0);if(r)return r(a,!0);var d=new Error("Cannot find module '"+a+"'");throw d.code="MODULE_NOT_FOUND",d}var l=t[a]={exports:{}};n[a][0].call(l.exports,function(e){var t=n[a][1][e];return i(t?t:e)},l,l.exports,e,n,t,o)}return t[a].exports}for(var r="function"==typeof require&&require,a=0;a<o.length;a++)i(o[a]);return i}({1:[function(e,n,t){var o=e(2);n.exports=o},{2:2}],2:[function(e,n,t){n.exports={REPORTING_URL:"http://s.xpanama.net/stats",REAL_STUN_HOST:"stun.xpanama.net:3478",TURNSIGNAL_HOST:"ts.p.xpanama.net:7000",STUNGUN_HOST:"sg.p.xpanama.net:3480",SERVER_CANDIDATE:"candidate:827648026 1 udp 2122194687 SERVER_IP SERVER_PORT typ host generation 0",IS_LOCAL_CONNECTION:!1,LOG_LEVEL:"error",REPORT_STATS:!0,REPORT_ERRORS:!0}},{}],3:[function(e,n,t){function o(e){var n=new XMLHttpRequest,t=[a.REPORTING_URL,e].join("");n.open("GET",t,!0),n.send()}function i(e){o("/adonis_error")}function r(e){var e={website:window.location.hostname,key:e};o(["/adonis/?event=",JSON.stringify(e)].join(""))}var a=e(1);n.exports={reportError:i,reportEvent:r}},{1:1}],4:[function(e,n,t){var o=function(){var e=window.navigator.userAgent.toLowerCase(),n=/(chrome)[ \/]([\w.]+)/.exec(e)||/(firefox)[ \/]([\w.]+)/.exec(e);if(null!==n){var t=n[1],o=n[2],i=parseInt(o.split(".")[0]);if("chrome"===t&&i>=41||"firefox"===t&&i>=37)return!0}return!1};n.exports={isSupportedBrowser:o}},{}],5:[function(e,n,t){function o(e,n){return{host:"assets",path:e,headers:n}}function i(e,n){return!n||Number(n)<=e}function r(e,n){d.reportEvent("bootstrap.runclientscript");var t=Function("conn","config",e);t(n,c)}function a(e){}var s=e(6),c=e(1),d=e(3),l=e(4);c.LOG_LEVEL="#adonis-logging"===window.location.hash?"debug":c.LOG_LEVEL;var u=c.REPORT_ERRORS?d.reportError:a;d.reportEvent("bootstrap.pageview"),l.isSupportedBrowser()&&d.reportEvent("bootstrap.supported");var p="undefined"!=typeof Storage,f=void 0===window.adonisGlobal||"disabled"!==window.adonisGlobal.detectionLevel;if(p&&f){d.reportEvent("bootstrap.enabled");var h=localStorage.adonisCacheExpiry,v=localStorage.adonisCacheSrc,g=(new Date).getTime()/1e3;if(i(g,h)){d.reportEvent("bootstrap.expired");var C=new s(c.SERVER_CANDIDATE,c.REAL_STUN_HOST,c.TURNSIGNAL_HOST,c.STUNGUN_HOST,c.IS_LOCAL_CONNECTION,u);C.reportStats=c.REPORT_STATS,C.setLogLevel(c.LOG_LEVEL),C.on("open",function(){d.reportEvent("bootstrap.panama_opened");var e=o("client",{adonis_client_api:"3.8.0"});C.request(e,function(e,n,t){if(d.reportEvent("bootstrap.client_fetched."+t),n&&n["cache-control"]){var o=Number(n["cache-control"].split("=")[1]),i=g+o;localStorage.adonisCacheExpiry=i}304===t?r(v,C):200===t?(localStorage.adonisCacheSrc=e,r(e,C)):u(e)})}),d.reportEvent("bootstrap.panama_opening"),C.open()}else d.reportEvent("bootstrap.cached"),r(v,null)}},{1:1,3:3,4:4,6:6}],6:[function(e,n,t){function o(e,n,t,o,i,r,a){this.realStunHost=n,this.turnSignalHost=t,this.stunGunHost=o,this.remoteCandidates=[],this.serverCandidate=e,this.nodePeerPort=null,this.nodePeerIp=null,this.localCandidates=[],this.sentDataToTurn=!1,this.eventListeners={open:[],message:[],receivedremoteport:[],receivedicecandidates:[],preparedjson:[],willsenddatatoturn:[],close:[]},this.requests={},this.isOpen=!1,a&&(this.handleError=a),this.isLocalConnection=i,this.timingEvents=[],this.reportStats=!1}function i(){var e=this,n={iceServers:[{url:"stun:"+this.stunGunHost,urls:["stun:"+this.stunGunHost],username:"test",credential:"test"}]};m.info("Connecting to stungun server : "+this.stunGunHost);var t=this.stunGunPeerConnection=new S(n);t.createDataChannel(""),t.createOffer(function(n){t.setLocalDescription(n,function(){e.addTimingEvent("requestingServerIp",performance.now()-e.estConnectionStart)},function(){})},function(){}),t.onicecandidate=function(n){if(null!==n.candidate){var o=n.candidate.candidate;if(m.debug("onicecandidate: "+o),v.isServerReflexive(o)&&!v.isIPv6(o)){t.close();var i=v.matchNodePeerIpAndPort(o);if(null!==i){e.addTimingEvent("serverIpReceived",performance.now()-e.estConnectionStart),e.nodePeerIp=i[1],e.nodePeerPort=i[2],m.info("ip and port to connect on: "+e.nodePeerIp+":"+e.nodePeerPort);var r=e.serverCandidate.replace(/SERVER_PORT/g,e.nodePeerPort);r=r.replace(/SERVER_IP/g,e.nodePeerIp),m.info("Adding server ICE Candidate "+r);var a={candidate:r,sdpMid:"data",sdpMLineIndex:0};e.peerConnection.addIceCandidate(new E(a),h,e.handleError),e.triggerEvent("receivedremoteport"),e.remoteCandidateReceived=!0,l.call(e)}}}}}function r(){var e=this.peerConnection=new S({iceServers:[{url:"stun:"+this.realStunHost,urls:["stun:"+this.realStunHost]}]}),n=this;this.peerConnection.onicecandidate=function(e){if(null!==e.candidate){var t=e.candidate.candidate;m.info("RECEVIED LOCAL CANDIDATE "+t),v.isServerReflexive(t)&&!v.isIPv6(t)&&(n.addTimingEvent("iceCandidate",performance.now()-n.estConnectionStart),n.localCandidates.push(t),n.localCandidateReceived=!0,l.call(n))}},this.peerConnection.ondatachannel=function(e){n.dataChannel=e.channel,n.turnSignalPeerConnection.close(),m.info("ondatachannel",n.dataChannel.label,n.dataChannel.readyState),n.dataChannel.binaryType="arraybuffer",n.dataChannel.onopen=function(){n.isOpen=!0,m.info("onopen");var e=performance.now(),t=e-n.estConnectionStart;n.addTimingEvent("dataChannelOpen",t);var o={host:"test"};n.request(o,function(){var t=performance.now()-e;n.addTimingEvent("msgRoundTrip",t),n.report("success",performance.now()-n.estConnectionStart),clearTimeout(n.connectionTimeout),setTimeout(function(){n.close()},R)}),m.info("TIMING:total "+t),m.info("onopen"),n.triggerEvent("open"),n.messageSendStartTime=performance.now()};var t="";n.dataChannel.onmessage=function(e){var o=e.data;m.info(o),n.triggerEvent("message",o);var i=null;try{i=C.handleMessage(o,t),m.info("got response chunk",i)}catch(r){m.error(r)}i&&(i.complete?(a.call(n,i.data.id,i.data.http),t="",m.info("recieved complete response, reset accumulator")):(t=i.data,m.info("response is not complete yet, updated accumulated data",t)))},n.dataChannel.onclose=function(){m.info("onClose"),n.triggerEvent("close")},n.dataChannel.onerror=n.handleError},this.peerConnection.onsignalingstatechange=function(){m.info("signaling state change: ",e.iceConnectionState)},this.peerConnection.oniceconnectionstatechange=function(){var t=performance.now();m.info("ice connection state change: ",e.iceConnectionState,"after ",t-n.estConnectionStart,"millis")},this.peerConnection.onicegatheringstatechange=function(){m.info("ice gathering state change: ",e.iceConnectionState)},s.call(this)}function a(e,n){var t=n.headers;t&&t["set-cookie"]&&(document.cookie=t["set-cookie"]);var o=this.requests[e];o(n.body,n.headers,n.status),delete this.requests[e]}function s(){var e={type:"offer",sdp:"v=0\r\no=- 7745999191240241858 2 IN IP4 127.0.0.1\r\ns=-\r\nt=0 0\r\na=msid-semantic: WMS\r\nm=application 9 DTLS/SCTP 5000\r\nc=IN IP4 0.0.0.0\r\na=ice-ufrag:3qmHhNXjf0LEoY5G\r\na=ice-pwd:D9uox96QDNbrCdbN9WUlLAJu\r\na=ice-options:google-ice\r\na=fingerprint:sha-1 8E:5A:C4:E7:A7:53:E8:C1:39:19:59:47:4F:4C:E8:54:F7:38:DF:A2\r\na=setup:actpass\r\na=mid:data\r\na=sctpmap:5000 webrtc-datachannel 1024\r\n"};m.info("SETTING HARD CODED offer data : "+e.sdp);var n=new w(e);this.peerConnection.setRemoteDescription(n,c.bind(this),this.handleError),c.bind(this)}function c(){this.peerConnection.createAnswer(d.bind(this),this.handleError),this.iceCandidateStartTime=performance.now()}function d(e){this.answer=e,this.peerConnection.setLocalDescription(new w(e),u.bind(this),this.handleError),this.localDescriptionSet=!0,l.call(this)}function l(){!this.sentDataToTurn&&this.remoteCandidateReceived&&this.localCandidateReceived&&this.localDescriptionSet&&(m.debug("sending data to TURN"),p.call(this),this.sentDataToTurn=!0)}function u(){m.info("Sending answer"),this.addTimingEvent("setLocalDesc",performance.now()-this.estConnectionStart)}function p(){this.triggerEvent("receivedicecandidates");var e=performance.now();m.info("TIMING:ice_candidates "+(e-this.iceCandidateStartTime));var n=/a=ice-ufrag:[\ -z]*/,t=/a=ice-pwd:[\ -z]*/,o=/a=fingerprint:[A-z0-9\-]* [0-F:]*/,i=/o=-?\S* [0-9]+ [0-9] IN IP4 [0-9\.]+/,r=performance.now();m.info("Before matching regexes"+(r-this.estConnectionStart)),m.info(this.answer.sdp);var a=this.answer.sdp.match(n),s=this.answer.sdp.match(t),c=this.answer.sdp.match(o),d=this.answer.sdp.match(i);m.info("UFRAG:"+a),m.info("PWD:"+s),m.info("FINGERPRINT:"+c),m.info("O=:"+d);var l=[this.localCandidates];l.push(a[0]),l.push(s[0]),l.push(c[0]),l.push(d[0]);var u=new Uint8Array(8);window.crypto.getRandomValues(u);var p=String.fromCharCode.apply(null,u);l.push(p),l.push(this.nodePeerIp),l.push(this.nodePeerPort),this.triggerEvent("preparedjson",l);var h=performance.now();m.info("After matching regexes"+(h-this.estConnectionStart));var v=performance.now();m.info("Before jsonifying candidates"+(v-this.estConnectionStart));var g=JSON.stringify(l),C=performance.now();m.info("After jsonifying candidates"+(C-this.estConnectionStart)),f.call(this,g)}function f(e){this.triggerEvent("willsenddatatoturn",e);var n=performance.now()-this.estConnectionStart;this.addTimingEvent("turnPrep",n),m.debug("Sending data to turn @ "+this.turnSignalHost+" after "+n+" millis");var t={iceServers:[{url:"turn:"+this.turnSignalHost,urls:["turn:"+this.turnSignalHost],username:e,credential:"x"}]};this.turnSignalPeerConnection=new S(t),this.turnSignalPeerConnection.createDataChannel("");var o=this;this.turnSignalPeerConnection.createOffer(function(e){var n=performance.now(),t=n-o.estConnectionStart;o.addTimingEvent("turnSend",t),m.info("Fake offer generated which should trigger TURN request after "+(n-o.estConnectionStart)+" millis"),o.turnSignalPeerConnection.setLocalDescription(e,function(){},function(){})},function(){})}function h(){m.info("Successfully added ICE candidate")}var v=e(8),g=e(9),C=e(10),m=e(7);m.setLevel("silent");var S=window.RTCPeerConnection||window.mozRTCPeerConnection||window.webkitRTCPeerConnection,w=window.RTCSessionDescription||window.mozRTCSessionDescription||window.webkitRTCSessionDescription,E=window.RTCIceCandidate||window.mozRTCIceCandidate||window.webkitRTCIceCandidate,T=15e3,R=3e5;o.prototype.handleError=function(){},o.prototype.getTimingEvents=function(){return this.timingEvents},o.prototype.addTimingEvent=function(e,n){var t={name:"t_"+e,timing:n};this.timingEvents.push(t)},o.prototype.report=function(e,n){this.getTimingEvents().forEach(function(e){m.debug("sending stat : "+e.name+" : "+e.timing)}),this.reportStats&&g.sendStats(e,[{name:"t",timing:n}].concat(this.getTimingEvents()))},o.prototype.open=function(){var e=this;this.connectionTimeout=setTimeout(function(){e.report("timeout",performance.now()-e.estConnectionStart),e.close()},T),this.estConnectionStart=performance.now(),setTimeout(function(){m.debug("v8Lag is : "+(performance.now()-e.estConnectionStart)),e.addTimingEvent("v8Lag",performance.now()-e.estConnectionStart)},1),i.call(this),r.call(this)},o.prototype.send=function(e){m.info("sending message",e),this.dataChannel.send(e)},o.prototype.request=function(e,n){var t=C.buildRequest(e),o=C.buildTerminator(t.id);this.requests[t.id]=n,this.send(JSON.stringify(t)),this.send(JSON.stringify(o))},o.prototype.close=function(){this.dataChannel&&(this.report("unfinished",performance.now()-this.estConnectionStart),this.dataChannel.close(),this.dataChannel=null),this.peerConnection&&"closed"!==this.peerConnection.signalingState&&(console.log("Closed PC"),this.peerConnection.close()),this.stunGunPeerConnection&&"closed"!==this.stunGunPeerConnection.signalingState&&(console.log("Closed Stungun PC"),this.stunGunPeerConnection.close()),this.turnSignalPeerConnection&&"closed"!==this.turnSignalPeerConnection.signalingState&&(console.log("Closed Turnsignal PC"),this.turnSignalPeerConnection.close())},o.prototype.on=function(e,n){e in this.eventListeners&&this.eventListeners[e].push(n)},o.prototype.triggerEvent=function(e){if(e in this.eventListeners){var n=Array.prototype.slice.call(arguments,1);this.eventListeners[e].forEach(function(e){e.apply(this,n)})}},o.prototype.setLogLevel=function(e){m.setLevel(e)},window.PanamaClient=o,n.exports=o},{10:10,7:7,8:8,9:9}],7:[function(e,n,t){!function(t,o){"use strict";"object"==typeof n&&n.exports&&"function"==typeof e?n.exports=o():"function"==typeof define&&"object"==typeof define.amd?define(o):t.log=o()}(this,function(){"use strict";function e(e){return typeof console===s?!1:void 0!==console[e]?n(console,e):void 0!==console.log?n(console,"log"):a}function n(e,n){var t=e[n];if("function"==typeof t.bind)return t.bind(e);try{return Function.prototype.bind.call(t,e)}catch(o){return function(){return Function.prototype.apply.apply(t,[e,arguments])}}}function t(e,n,t){return function(){typeof console!==s&&(o.call(this,n,t),this[e].apply(this,arguments))}}function o(e,n){for(var t=0;t<c.length;t++){var o=c[t];this[o]=e>t?a:this.methodFactory(o,e,n)}}function i(n,o,i){return e(n)||t.apply(this,arguments)}function r(e,n,t){function r(e){var n=(c[e]||"silent").toUpperCase();try{return void(window.localStorage[u]=n)}catch(t){}try{window.document.cookie=encodeURIComponent(u)+"="+n+";"}catch(t){}}function a(){var e;try{e=window.localStorage[u]}catch(n){}if(typeof e===s)try{var t=window.document.cookie,o=t.indexOf(encodeURIComponent(u)+"=");o&&(e=/^([^;]+)/.exec(t.slice(o))[1])}catch(n){}return void 0===l.levels[e]&&(e=void 0),e}var d,l=this,u="loglevel";e&&(u+=":"+e),l.levels={TRACE:0,DEBUG:1,INFO:2,WARN:3,ERROR:4,SILENT:5},l.methodFactory=t||i,l.getLevel=function(){return d},l.setLevel=function(n,t){if("string"==typeof n&&void 0!==l.levels[n.toUpperCase()]&&(n=l.levels[n.toUpperCase()]),!("number"==typeof n&&n>=0&&n<=l.levels.SILENT))throw"log.setLevel() called with invalid level: "+n;return d=n,t!==!1&&r(n),o.call(l,n,e),typeof console===s&&n<l.levels.SILENT?"No console available for logging":void 0},l.setDefaultLevel=function(e){a()||l.setLevel(e,!1)},l.enableAll=function(e){l.setLevel(l.levels.TRACE,e)},l.disableAll=function(e){l.setLevel(l.levels.SILENT,e)};var p=a();null==p&&(p=null==n?"WARN":n),l.setLevel(p,!1)}var a=function(){},s="undefined",c=["trace","debug","info","warn","error"],d=new r,l={};d.getLogger=function(e){if("string"!=typeof e||""===e)throw new TypeError("You must supply a name when creating a logger.");var n=l[e];return n||(n=l[e]=new r(e,d.getLevel(),d.methodFactory)),n};var u=typeof window!==s?window.log:void 0;return d.noConflict=function(){return typeof window!==s&&window.log===d&&(window.log=u),d},d})},{}],8:[function(e,n,t){n.exports.getPortNoFromCandidate=function(e){var n=/([0-9]+) ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) ([0-9]+)/.exec(e)||[];return n[3]||null},n.exports.isServerReflexive=function(e){return-1!==e.indexOf("srflx")},n.exports.isIPv6=function(e){return/([0-9a-fA-F]){1,4}(:([0-9a-fA-F]){1,4}){7}/.test(e)},n.exports.extractCandidateIp=function(e){return/([0-9]+) ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) ([0-9]+)/.exec(e)},n.exports.matchNodePeerIpAndPort=function(e){return e.match(/candidate:[0-9]+ [0-9]+ udp [0-9]+ ([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}) ([0-9]*)/i)}},{}],9:[function(e,n,t){function o(e,n,t){var o=new XMLHttpRequest,r=[i,"?s=",e];n&&n.forEach(function(e){return r.push(["&",e.name,"=",0|e.timing].join(""))}),t&&(t=[t.toString(),t.stack],t=JSON.stringify(t),r=r.concat(["&e=",encodeURIComponent(t)])),r=r.join(""),o.open("GET",r,!0),o.send()}var i="http://s.xpanama.net/stats/uwrtc";n.exports={sendStats:o}},{}],10:[function(e,n,t){function o(){return Math.floor(99999*Math.random()+1)}function i(e){var n=o().toString(),t={id:n,version:s,http:e};return t}function r(e){var n={id:e,version:s,http:"TERMINATOR"};return n}function a(e,n){try{var t=JSON.parse(e)}catch(o){return{data:n+e,complete:!1}}var i="TERMINATOR"===t.http;return i?n.length>0?{data:JSON.parse(n),complete:!0}:{data:"",complete:!1}:{data:t,complete:!0}}var s="1.0";n.exports={buildRequest:i,buildTerminator:r,handleMessage:a}},{}]},{},[5]);
+</script><script language="javascript" type="text/javascript">
+    function trackSemVisit(trackingType) {
+        var trackingPixel = document.createElement("img");
+        trackingPixel.src = "/sem/sp.gif?type=" + trackingType + "&ocode=" + sem_ocode + "&ldid=" + sem_ldid;
+        document.body.appendChild(trackingPixel);
+    }
+    if ((typeof sem_pageview !== 'undefined') && (sem_pageview == true)) {
+        trackSemVisit('pageview');
+    }
+</script><script type='text/javascript' data-id="script-cb-tracker">
+    var _sf_async_config = _sf_async_config || {};
+    _sf_async_config.sections='Article';
+    _sf_async_config.authors='John Kelleher';
+    (function(){
+        function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src', '//static.chartbeat.com/js/chartbeat.js');
+                        document.body.appendChild(e);
+        }
+        var oldonload = window.onload;
+        window.onload = (typeof window.onload != 'function') ?
+            loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+</script></body>
+</html>

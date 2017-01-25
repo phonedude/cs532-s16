@@ -1,0 +1,944 @@
+http://www.programmableweb.com/api/plugchain?utm_content=buffer96b93&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+
+
+
+
+
+(window.NREUM||(NREUM={})).loader_config={xpid:"VQYAUFVaDBABVFRRAAMGVQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PlugChain API | ProgrammableWeb
+
+
+.url-textfield{display:none !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+Skip to main content
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2BDGD');
+ 
+
+
+
+
+
+
+
+Api News
+Api Directory
+
+ 
+
+
+
+
+
+Become member
+Login
+
+
+
+
+Become member
+Login
+
+
+
+ 
+
+
+
+
+search
+
+
+
+ 
+
+
+
+
+
+
+
+
+ProgrammableWeb
+
+
+Api News
+
+
+Api Directory
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+s
+
+
+RSS
+
+
+Share
+
+
+User
+
+
+
+
+Api News
+Api Directory
+Api university
+Add Your Api
+ 
+
+ADD APIs & MORE API
+Mashup
+SDK
+
+Rss
+Facebook
+Twitter
+Google+
+LinkedIn
+ 
+
+
+
+
+
+search
+
+
+
+ 
+
+
+
+
+
+Become member
+Login
+
+
+
+
+Become member
+Login
+
+
+
+ 
+
+
+
+
+
+ProgrammableWeb
+Api News
+Api Directory
+Api university
+Research
+Sports
+Security
+Travel
+Design
+Add Api API
+Mashup
+SDK
+
+
+ADD APIs & MORE API
+Mashup
+SDK
+
+Rss
+Facebook
+Twitter
+Google+
+LinkedIn
+
+Rss
+Icons Facebook
+Twitter
+Google+
+LinkedIn
+
+User
+
+
+
+
+
+search
+
+
+
+ 
+
+
+
+
+
+
+
+
+APIs News
+
+
+
+
+
+
+
+
+
+News & Analysis 
+
+
+
+
+
+  
+ API Meetup During Mobile World Congress Focuses on Smart Cities and APIs  
+
+  
+ Restlet Updates DHC API Testing Tool, Adds Continuous Delivery Integrations  
+
+
+
+
+
+All News & Analysis
+
+
+
+
+How-To 
+
+
+
+
+
+  
+ How Devs Benefit From the New U.S. Government-Wide Digital Registry API  
+
+
+
+
+
+All How-To
+
+
+
+
+Most Recent 
+
+
+ API Meetup During Mobile World Congress Focuses on Smart Cities and APIs  
+
+ Restlet Updates DHC API Testing Tool, Adds Continuous Delivery Integrations  
+
+ How Devs Benefit From the New U.S. Government-Wide Digital Registry API  
+
+ Study Highlights Security Risks of Various Programming Languages  
+
+
+All Recent News
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Stay    
+
+
+
+Api Directory
+
+
+
+
+
+
+
+
+
+API DirectoryPopular Categories 
+
+
+Weather
+Mapping
+Mobile
+Transportation
+Social
+
+ 
+
+
+
+ Add an API 
+ APIs (14,590)  Categories  
+
+
+
+
+Filter 
+
+
+By Category
+By Protocol
+Most Recent
+
+ 
+
+
+
+ Add an APIAll Categories  
+
+
+
+
+Featured APIs 
+
+
+Facebook
+Google Maps
+Yahoo Weather
+LinkedIn
+Skype
+
+ 
+
+
+
+ Add an Featured 
+ All (14,661)  APIs  
+
+
+
+
+Other DirectoriesSDKs 
+
+
+By API
+By Category
+By Platform
+Most Recent
+
+ 
+
+
+
+ Add a SDKAll SDKs  
+
+
+
+
+Code Examples 
+
+
+By API
+By Category
+By Platform
+Most Recent
+
+ 
+
+
+
+ Add an Example CodeAll Code Examples  
+
+
+
+
+Mashups 
+
+
+By API
+By Category
+Most Recent
+
+ 
+
+
+
+ Add MashupAll Mashups  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      Stay    
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+You are hereAPIs » PlugChain 
+
+
+
+
+
+ Track API
+
+
+
+
+PlugChain API
+
+
+
+
+
+Platform-as-a-Service Application Development, Bitcoin 
+
+
+
+
+              PlugChain is a cryptocurrency multiplatform that developers may use to create new cryptocurrency applications. Their API is a blockchain platform as a service that supplies a raw set of methods for building new BitCoin themed apps. PlugChain is powered by CEX.IO, a BitCoin trade and mining platform. The PlugChain API will accept specific block hashes, address, or transactions to return detailed information for each occurrence. To use LiteCoin GET instead of BitCoin, point the call toward LiteCoin instead of BitCoin with the same API.            
+
+
+
+
+
+
+
+
+Summary
+Sample Code
+How To
+Developers
+Comments
+Followers
+ 
+
+
+
+Summary
+
+
+
+
+
+
+
+
+
+
+Sample Code
+
+
+
+
+
+
+
+
+
+
+How To
+
+
+
+
+
+
+
+
+
+
+Developers
+
+
+
+
+
+
+
+
+
+
+Comments
+
+
+
+
+
+
+
+
+
+
+Followers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Specs
+
+API Provider
+https://plugchain.com
+
+
+API Endpoint
+https://plugchain.com/v1/bitcoin/
+
+
+API Homepage
+Plugchain API beta
+
+
+Primary Category
+Platform-as-a-Service
+
+
+Secondary Categories
+Application Development, Bitcoin
+
+
+Protocol / Formats
+HTTP, JSON, REST
+
+
+SSL Support
+No
+
+
+Twitter Url
+https://twitter.com/cex_io
+
+
+Authentication Mode
+API Key
+
+
+
+ 
+Followers (3)
+
+
+View all 
+
+
+   
+
+   
+
+   
+
+
+Track this API 
+
+ 
+
+ 
+Developers (0)
+
+
+View all 
+
+Sorry, no developers found for this API.
+
+
+Add Mashup 
+
+ 
+
+ 
+API Mashups (0)
+
+
+View all 
+
+Sorry, no mashups for this API. 
+
+Add Mashup 
+
+ 
+
+ 
+ 
+RELATED APIs
+
+
+
+
+Promoted
+
+
+
+
+
+View all 
+
+
+
+
+
+
+
+API Name 
+
+            Description          
+
+            Category          
+
+            Date          
+
+
+
+
+
+
+
+Weaver
+
+
+                          The Weaver API provides tools for developers using the Weaver Internet of Things services and frameworks. Use of the Weaver API enables handling many devices with no relation to brand or vendor....                      
+
+Internet of Things 
+
+                          01.29.2016                      
+
+
+
+
+
+Elasticode
+
+
+                          The Elasticode API helps users integrate Elasticode's capabilities directly. Elasticode is a service to help create more personalized mobile user onboarding experiences. To create an API key, follow...                      
+
+Application Development 
+
+                          01.29.2016                      
+
+
+
+
+
+Stellar Horizon
+
+
+                          Stellar is a platform that helps developers in building financial products and applications. It features a decentralized distributed database, Multisig, and smart contracts. Horizon is Stellar's...                      
+
+Financial 
+
+                          01.20.2016                      
+
+
+
+
+
+Ardoq
+
+
+                          The Ardoq API allows developers to access, customize, and automate their documentation. Ardoq is an open platform that is designed to help users create structured documentation that makes it easy to...                      
+
+Organization 
+
+                          01.18.2016                      
+
+
+
+
+
+Catalyze.io Mock
+
+
+                          The Catalyze.io API is available as a simulation for initial implementation in healthcare practices. Documentation includes JSON protocols and access with API Key. Developers can use the API to...                      
+
+Healthcare 
+
+                          01.15.2016                      
+
+
+
+
+
+ 
+
+ 
+ 
+
+
+ 
+
+
+ 
+
+
+
+
+
+API University
+
+FOR API PROVIDERS
+What Are APIs and How Do They Work?8 Real World API Strategies and the Keys to Their SuccessHow To Find a Rockstar API Product Manager
+More for API Providers  ›
+
+
+FOR DEVELOPERS
+How To Implement Deep Linking in iOSHow To Get Started With Twitter's FabricHow To Develop An Android Wear App
+More for Developers  ›
+
+ 
+
+Advertisement
+
+ 
+
+ 
+
+Additional Resources
+
+API Growth Charts, Industry Research & More
+
+
+Developer How-to's & Live Presentations
+
+ 
+
+Meet The Editors
+
+
+
+  
+ David Berlind 
+ Editor in Chief 
+ @dberlind 
+ Articles  
+
+  
+ Wendell Santos 
+  
+ wendell78 
+ Articles  
+
+
+ 
+
+Advertisement
+
+ 
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Directories & Listings
+API Directory
+Mashups and Applications
+SDKs & Libraries
+How To's, Source Code
+
+ 
+
+
+
+
+
+Resources
+About ProgrammableWeb
+Advertise
+FAQ
+Write for Us
+Contact Us
+
+ 
+
+
+
+
+
+Business & Legal
+Site Terms of Service
+Privacy Policy
+
+ 
+
+
+
+
+
+Subscribe
+Rss
+Twitter
+Facebook
+Google+
+LinkedIn
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-208396-5", "auto");ga("set", "dimension1", "platform_as_a_service,application_development,bitcoin");ga("set", "dimension2", "API");ga("set", "dimension3", "Wednesday, September 17, 2014 - 13:05");ga("set", "dimension4", "pwtempuser pwtempuser");ga("send", "pageview");
+
+    jQuery(document).ready(function($){     
+      $('#om-maximenu-top-most-menu li.om-leaf .om-maximenu-content').removeClass('om-maximenu-content-nofade');
+      $('#om-maximenu-top-most-menu li.om-leaf .om-link').click(function(ev) {
+        ev.stopPropagation();
+        if($(this).parent().hasClass('open')) {
+          $(this).parent().removeClass('open');
+        }
+        else {
+          $('#om-maximenu-top-most-menu li.om-leaf').removeClass('open');
+          $(this).parent().addClass('open');
+        }  
+        
+        $(this).parent().siblings().children('.om-maximenu-content').slideUp('slow');        
+        $(this).siblings('.om-maximenu-content').toggle('slow').pause();       
+        return false;
+      });
+      $('#om-maximenu-top-most-menu .om-maximenu-content').click(function(ev) {
+        ev.stopPropagation();
+      });        
+      $('html').click(function() {
+        // Close any open menus.
+        $('#om-maximenu-top-most-menu .om-maximenu-content:visible').each(function() {
+          $(this).parent().removeClass('open');
+          $(this).hide();
+        });
+      });      
+    }); 
+    
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"pw_bootstrap_two","theme_token":"CuXg8y2OfAZkLpzIPEVALZem4_WWIQHClAWDxZizuPU","jquery_version":"1.7","js":{"sites\/all\/modules\/contrib\/respondjs\/lib\/respond.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"\/\/netdna.bootstrapcdn.com\/bootstrap\/3.0.2\/js\/bootstrap.min.js":1,"sites\/all\/modules\/contrib\/comment_notify\/comment_notify.js":1,"sites\/all\/modules\/contrib\/admin_menu\/admin_devel\/admin_devel.js":1,"sites\/all\/modules\/contrib\/om_maximenu\/js\/om_maximenu.js":1,"sites\/all\/modules\/custom\/pw_articles\/js\/pw_articles.js":1,"sites\/all\/modules\/custom\/contrib\/visualization\/js\/visualization.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/contrib\/lightbox2\/js\/lightbox.js":1,"sites\/all\/libraries\/jgrowl\/jquery.jgrowl.min.js":1,"sites\/all\/modules\/contrib\/nicemessages\/js\/nicemessages.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"sites\/all\/modules\/custom\/pw_common\/js\/pw_common.js":1,"sites\/all\/modules\/custom\/contrib\/views_load_more\/views_load_more.js":1,"sites\/all\/modules\/custom\/contrib\/views\/js\/base.js":1,"sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js":1,"sites\/all\/modules\/custom\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/contrib\/ajaxblocks\/ajaxblocks.js":1,"sites\/all\/themes\/pw_bootstrap_two\/js\/dev.js":1,"sites\/all\/themes\/pw_bootstrap_two\/js\/jquery.tooltipster.js":1,"sites\/all\/themes\/pw_bootstrap_two\/js\/pw_bootstrap_two_tooltipster.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/affix.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/alert.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/button.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/carousel.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/collapse.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/dropdown.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/modal.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/tooltip.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/popover.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/scrollspy.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/tab.js":1,"sites\/all\/themes\/pw_bootstrap_two\/bootstrap\/js\/transition.js":1,"sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js":1,"sites\/all\/themes\/bootstrap\/js\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/custom\/pw_ad\/js\/pw_adzerk.js":1,"sites\/all\/modules\/custom\/pw_ad\/js\/pw_adzerk_native_api_ads.js":1,"sites\/all\/themes\/pw_bootstrap_two\/js\/bootstrap-tabcollapse.js":1,"sites\/all\/themes\/pw_bootstrap_two\/js\/pw_tabs.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/contrib\/comment_notify\/comment_notify.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/logintoboggan\/logintoboggan.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"sites\/all\/modules\/contrib\/om_maximenu\/css\/om_maximenu.css":1,"sites\/all\/modules\/contrib\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/custom\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/lightbox2\/css\/lightbox.css":1,"sites\/all\/libraries\/jgrowl\/jquery.jgrowl.min.css":1,"sites\/all\/modules\/contrib\/nicemessages\/css\/nicemessages_positions.css":1,"sites\/all\/modules\/contrib\/nicemessages\/css\/nicemessages_drupal.css":1,"sites\/all\/modules\/contrib\/nicemessages\/css\/shadows.css":1,"sites\/all\/modules\/contrib\/sharebar\/css\/sharebar.css":1,"sites\/all\/modules\/contrib\/om_maximenu\/skin\/no_style\/no_style.css":1,"0":1,"sites\/all\/modules\/contrib\/addtoany\/addtoany.css":1,"\/\/netdna.bootstrapcdn.com\/bootstrap\/3.0.2\/css\/bootstrap.min.css":1,"sites\/all\/themes\/bootstrap\/css\/overrides.css":1,"sites\/all\/themes\/pw_bootstrap_two\/less\/style.less":1,"sites\/all\/themes\/pw_bootstrap_two\/css\/pw-icons.css":1,"sites\/all\/themes\/pw_bootstrap_two\/css\/animation.css":1,"sites\/all\/themes\/pw_bootstrap_two\/css\/tooltipster.css":1}},"lightbox2":{"rtl":0,"file_path":"\/(\\w\\w\/)public:\/","default_image":"\/sites\/all\/modules\/contrib\/lightbox2\/images\/brokenimage.jpg","border_size":10,"font_color":"000","box_color":"fff","top_position":"","overlay_opacity":"0.8","overlay_color":"000","disable_close_click":1,"resize_sequence":0,"resize_speed":400,"fade_in_speed":400,"slide_down_speed":600,"use_alt_layout":0,"disable_resize":0,"disable_zoom":0,"force_show_nav":0,"show_caption":1,"loop_items":0,"node_link_text":"View Image Details","node_link_target":0,"image_count":"Image !current of !total","video_count":"Video !current of !total","page_count":"Page !current of !total","lite_press_x_close":"press \u003Ca href=\u0022#\u0022 onclick=\u0022hideLightbox(); return FALSE;\u0022\u003E\u003Ckbd\u003Ex\u003C\/kbd\u003E\u003C\/a\u003E to close","download_link_text":"","enable_login":false,"enable_contact":false,"keys_close":"c x 27","keys_previous":"p 37","keys_next":"n 39","keys_zoom":"z","keys_play_pause":"32","display_image_size":"original","image_node_sizes":"()","trigger_lightbox_classes":"","trigger_lightbox_group_classes":"","trigger_slideshow_classes":"","trigger_lightframe_classes":"","trigger_lightframe_group_classes":"","custom_class_handler":0,"custom_trigger_classes":"","disable_for_gallery_lists":true,"disable_for_acidfree_gallery_lists":true,"enable_acidfree_videos":true,"slideshow_interval":5000,"slideshow_automatic_start":true,"slideshow_automatic_exit":true,"show_play_pause":true,"pause_on_next_click":false,"pause_on_previous_click":true,"loop_slides":false,"iframe_width":600,"iframe_height":400,"iframe_border":1,"enable_video":0},"urlIsAjaxTrusted":{"\/api\/plugchain?utm_content=buffer96b93\u0026utm_medium=social\u0026utm_source=twitter.com\u0026utm_campaign=buffer":true},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"nicemessages":{"position":"center","items":[]},"adzerkVarSet":{"primary_audience":"","primary_channel":"","primary_category":"platform-as-a-service","secondary_category":"application+development, bitcoin","related_companies":"cex.io","related_languages":"","products":""},"common":{"pageCategory":["platform_as_a_service","application_development","bitcoin"],"contentType":"api","publishDate":"Wednesday, September 17, 2014 - 13:05","author":"pwtempuser pwtempuser"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:38680921ccbad5848ce42ac7f1a03d7b":{"view_name":"related_apis","view_display_id":"block","view_args":"138289\/20324,20013,20073","view_path":"node\/138289","view_base_path":null,"view_dom_id":"38680921ccbad5848ce42ac7f1a03d7b","pager_element":0}}},"ajaxblocks":"blocks=pw_homepage-usermenus\u0026path=node\/138289\u0026utm_content=buffer96b93\u0026utm_medium=social\u0026utm_source=twitter.com\u0026utm_campaign=buffer","bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});
+
+window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"afb9587035","applicationID":"10537213","transactionName":"ZQADZBRQXUdRVxYMClxKIFMSWFxaH1oNAQBtFQBXA25FXVVD","queueTime":0,"applicationTime":3259,"ttGuid":"","agentToken":"","atts":"SUcAElxKTkk=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}
+

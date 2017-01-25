@@ -1,0 +1,261 @@
+https://www.empreendacomofacebook.com.br/Sistema/Game/loginfacebookinfo
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Empreenda com o Facebook</title>
+        <link href="/Sistema/Content/css/clientes/facebook/geral-cliente.css" rel="stylesheet" type="text/css"></link>
+        
+        <meta property="og:description" content="Jogue voc&amp;ecirc; tamb&amp;eacutem! Aprenda como o Facebook ajuda voc&amp;ecirc; a impulsionar o seu neg&amp;oacute;cio." />
+        <meta name="viewport" content="width=device-width">
+        <link rel="shortcut icon" href="https://fbstatic-a.akamaihd.net/rsrc.php/yl/r/H3nktOa7ZMg.ico">
+    </head>
+
+    <body style="background:url(/Sistema/Content/imgs/home/bg.gif);">
+       
+
+        
+
+<input type="hidden" id="pagina" value="login" />
+<input hidden="hdnIdFacebook" class="hdnIdFacebook" Id="hdnIdFacebook" name="hdnIdFacebook" value="" runat="server"/>
+<input hidden="hdnTokenFacebook" class="hdnTokenFacebook" Id="hdnTokenFacebook" name="hdnTokenFacebook" value="" runat="server"/>
+<input hidden="hdnPermissoes" class="hdnPermissoes" Id="hdnPermissoes" name="hdnPermissoes" value="" runat="server"/>
+<input hidden="hdnOrigem" class="hdnOrigem" Id="hdnOrigem" name="hdnOrigem" runat="server"/>
+<input hidden="hdnTrigger" class="hdnTrigger" Id="hdnTrigger" name="hdnTrigger" runat="server"/>
+<input hidden="hdnEmail" class="hdnEmail" Id="hdnEmail" name="hdnEmail" value="" runat="server"/>
+ <script type="text/javascript">
+     var baseUrl = '/Sistema/';
+    </script>  
+<div  class="container">
+    <div class="row logos">
+            <div class="col-md-6">
+                <i class="icon icon-question-circle icon-lg"></i>
+                <span>Em caso de d&#250;vidas, visite a nossa p&#225;gina de  <a href='../Faq/'> perguntas frequentes </a> </span>
+            </div>
+            <div class="col-md-6 text-right">
+                <img src="/Sistema/Content/imgs/home/icoFace.png" />
+                        <img src="/Sistema/Content/imgs/home/icoSebrae.png" />
+
+            </div>
+    </div>
+    <div class="row selo" >
+                
+            <div class="col-md-4 hidden-sm hidden-xs" >
+                <span class="faixa-branca-esquerda"></span>
+
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="/Sistema/Content/imgs/home/selo_empreenda_pt.png" />
+            </div>
+            <div class="col-md-4 hidden-sm hidden-xs">
+                <span class="faixa-branca-direita"> </span>
+            </div>
+                
+    </div>
+    <div class="row icones-centrais text-center">
+                
+            <div class="col-md-4">
+                <img src="/Sistema/Content/imgs/home/ico1.png" />
+                    <h3>Jogue</h3>
+                <p>Jogue o Empreenda com o Facebook, criado em parceria como Sebrae.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="/Sistema/Content/imgs/home/ico2.png" />
+                <h3>Aprenda</h3>
+                <p>Aprenda na pr&#225;tica a criar P&#225;ginas, an&#250;ncios e campanhas no Facebook.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="/Sistema/Content/imgs/home/ico3.png" />
+                <h3>Empreenda</h3>
+                <p>Conquiste 9 estrelas e torne-se um “Mestre Empreendedor”!</p>
+            </div>
+                
+    </div>
+    <div class="text-center buttonInfo">
+        <p>Ao clicar em Jogar agora, voc&#234; concorda com nossos . <a href='#' data-toggle='modal' data-target='#termos-e-condicoes'> Termos e Condi&#231;&#245;es: </a>.</p>
+        <a href="#" id="logi-face" onclick="LoginInput()" class="btn btn-primary btn-lg">
+            <span class="jogar">
+            Jogar agora
+            </span>
+            <i class="icon icon-spinner icon-spin" style="display:none;" ></i>
+            <span class="icon-stack">
+                <i class="icon icon-circle-o icon-stack-2x"></i>
+                <i class="icon icon-play icon-stack-1x" ></i>
+            </span>
+        </a>
+    </div>
+</div>
+<div class="modal fade bs-example-modal-lg" id="termos-e-condicoes" tabindex="-1" role="dialog" aria-labelledby="termos-e-condicoes-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-right btn btn-link btn-primary" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"><p>Termos e Condi&#231;&#245;es:</p></h4>
+            </div>
+            <div class="modal-body">
+               <p>A) Regras do Jogo: </p>
+                <p>Voc&#234; s&#243; poder&#225; participar do Jogo em uma (01) oportunidade. Para se registrar no Jogo, voc&#234; dever&#225; informar o seu n&#250;mero de CPF. Um n&#250;mero de CPF n&#227;o poder&#225; ser utilizado para mais de um (01) registro no Jogo.</p>
+                <p>B) Condi&#231;&#245;es Gerais: </p>
+                <p>Sujeito a aprova&#231;&#227;o do an&#250;ncio conforme as Pol&#237;ticas de Publicidade do Facebook (https://www.facebook.com/ad_guidelines.php), registro v&#225;lido no jogo e aceita&#231;&#227;o e cumprimento dos termos e Pol&#237;ticas do Facebook, dispon&#237;vel em https://www.facebook.com/policies.</p>
+                <footer class="text-center">
+                <p>Facebook © 2015</p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+        
+        <script type="text/javascript" src="/Sistema/Content/js/vendor/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/vendor/bootstrap/collapse.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/vendor/bootstrap/modal.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/vendor/bootstrap/dropdown.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/vendor/bootstrap/transition.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/vendor/jsrender.min.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/geral-ui.js"></script>
+        <script type="text/javascript" src="/Sistema/Content/js/geral.js"></script>
+        <script type="text/x-jsrender" id="loading-template">
+            <div class="text-center">
+                <img src="/Sistema/Content/imgs/preloader.gif">
+            </div>
+        </script>
+        
+    <script>
+        (function () {
+            var t, i, e, n = window, o = document, a = arguments, s = "script", r = ["config", "track", "identify", "visit", "push", "call", "trackForm", "trackClick"], c = function () {
+                var t, i = this;
+                for (i._e = [], t = 0; r.length > t; t++) (function (t) { i[t] = function () { return i._e.push([t].concat(Array.prototype.slice.call(arguments, 0))), i } })(r[t])
+            };
+            for (n._w = n._w || {}, t = 0; a.length > t; t++) n._w[a[t]] = n[a[t]] = n[a[t]] || new c;
+            i = o.createElement(s), i.async = 1, i.src = "//static.woopra.com/js/w.js", e = o.getElementsByTagName(s)[0], e.parentNode.insertBefore(i, e)
+        })("woopra");
+
+        woopra.config({
+            domain: window.location.hostname
+        });
+        woopra.track();
+    </script>
+    <!-- End of Woopra Code -->
+      <!-- Facebook Conversion Code for Empreenda_Sebrae_TelaInicial -->
+        <script> (function () {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+             var fbds = document.createElement('script');
+             fbds.async = true;
+             fbds.src = '//connect.facebook.net/en_US/fbds.js';
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(fbds, s);
+             _fbq.loaded = true;
+            }
+         })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', '6018364482413', { 'value': '0.00', 'currency': 'USD' }]);
+         </script>
+    <noscript><img height="1" width="1" alt="" style="display: none" src="https://www.facebook.com/tr?ev=6018364482413&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+     <!-- Facebook Conversion Code for Elearning-Brasil-conversions -->
+     <script> (function () {
+         var _fbq = window._fbq || (window._fbq = []);
+         if (!_fbq.loaded) {
+             var fbds = document.createElement('script');
+             fbds.async = true;
+             fbds.src = '//connect.facebook.net/en_US/fbds.js';
+             var s = document.getElementsByTagName('script')[0];
+             s.parentNode.insertBefore(fbds, s);
+             _fbq.loaded = true;
+         }
+         _fbq.push(['addPixelId', '1411882885720985']);
+        })();
+         window._fbq = window._fbq || [];
+         window._fbq.push(['track', 'PixelInitialized', {}]);
+     </script>
+     <noscript><img height="1" width="1" alt="" style="display: none" src="https://www.facebook.com/tr?id=1411882885720985&amp;ev=PixelInitialized" /></noscript>
+   
+   <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1504020516479039',
+                status: false,
+                cookie: true,
+                xfbml: true,
+                version: 'v2.4'
+            });
+
+        };
+        (function (d) {
+            var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement('script');
+            js.id = id;
+            js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document));
+
+
+        function LoginInput() {
+            $('#logi-face .icon-spinner').show();
+            $('#logi-face .icon-stack').hide();
+            $('#logi-face').attr('disabled', 'disabled').removeAttr('onClick');
+            FB.login(function (response) {
+                FB.getLoginStatus(function (response) {
+                    if (response.status === 'connected') {
+                        $(".hdnIdFacebook").val(response.authResponse.userID);
+                        $(".hdnTokenFacebook").val(response.authResponse.accessToken);
+                        $(".hdnPermissoes").val(response.authResponse.grantedScopes);
+
+                        $.getJSON("https://graph.facebook.com/v2.4/me?fields=id%2Cname%2Cemail&access_token=" + "&access_token=" + $(".hdnTokenFacebook").val(),
+                            function (data) {
+                                $(".hdnEmail").val(data.email);
+                                $.ajax({
+                                    type: 'POST',
+                                    url: baseUrl + 'Game/CadastroFacebook',
+                                    dataType: 'json',
+                                    async: true,
+                                    data: {
+                                        nome: data.name,
+                                        email: data.email,
+                                        id: data.id,
+                                        origem: $(".hdnOrigem").val(),
+                                        token: $(".hdnTokenFacebook").val(),
+                                        trigger: $(".hdnTrigger").val(),
+                                        permissoes: $(".hdnPermissoes").val()
+                                    },
+                                    beforeSend: function () {
+                                    },
+                                    complete: function (retorno) {
+                                        if (retorno.responseJSON.Mensagem == 'acesso_ok') {
+                                            window.location.href = baseUrl + 'Game/?idUserFacebook=' + retorno.responseJSON.Token;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_face') {
+                                            window.location.href = baseUrl + 'Game/MensagemFacebook/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_face_extender') {
+                                            window.location.href = baseUrl + 'Game/MensagemFacebook/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_exception') {
+                                            window.location.href = baseUrl + 'Game/Mensagem/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_permissoes') {
+                                            window.location.href = baseUrl + 'Game/Mensagem/?Nome=' + retorno.responseJSON.Nome;
+                                        } else if (retorno.responseJSON.Mensagem == 'erro_cupom_usuario') {
+                                            window.location.href = baseUrl + 'Game/Mensagem/?Nome=' + retorno.responseJSON.Nome;
+                                        }
+                                    }
+                                });
+                            });
+                    } else if (response.status === 'not_authorized') {
+                        window.location.href = baseUrl + 'Error/Http500';
+                    } else {
+                        window.location.href = baseUrl + 'Error/Http500';
+                    }
+                });
+            }, {
+                scope: 'publish_actions, email, manage_pages',
+                return_scopes: true
+            });
+            woopra.track("LoginClick", {
+                page: "LoginInfo"
+            });
+            fbq('track', 'CompleteRegistration');
+        }
+    </script> 
+
+
+    </body>
+</html>

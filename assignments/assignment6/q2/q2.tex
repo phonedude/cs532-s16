@@ -1,0 +1,107 @@
+\section{Problem 2}
+
+\subsection{Question}
+\vspace*{10pt}
+\justify 
+\input{q2/a6}
+
+\subsection{Answer}
+\textbf{Develop an python script to get the gender:} We we used the same data generated in problem 1 to solve this problem. The iteration is shown in the listing \ref{listing:gender}. However, we filtered the data set by injecting the first name of each node with gender\_detector python library.
+
+\lstinputlisting[language=Python, caption={gender.py}, label=listing:gender]{q2/gender.py}
+\begin{table}[!htbp]
+	\caption{Naina Sai Tipparti Twitter Followers} \label{tab:likely-gender}
+	\small
+	\begin{center}
+		\begin{tabular}{|l l l|}
+			\hline
+			\multicolumn{1}{|c}{ID} & \multicolumn{1}{c}{Name} & \multicolumn{1}{c |}{Gender}\\
+			\hline
+			3185979164 & Ganesh & male\\
+1877482201 & Shonna & female\\
+2822485029 & neta & female\\
+3148781365 & sophia & female\\
+3115151598 & adityajavvaji3 & unknown\\
+1498767308 & kOUShIk & male\\
+3106046126 & SAMA & female\\
+3039676646 & S & unknown\\
+3023712804 & Vishruth & male\\
+108917717 & shreesh & unknown\\
+1475712962 & vishal & male\\
+2940668600 & tejaswi.tipparti@gma & unknown\\
+32536673 & David & male\\
+2920714134 & Avinash & male\\
+896783850 & shashank & male\\
+2895776695 & Abhradipta & unknown\\
+2855422626 & vivekreddy & unknown\\
+123828688 & shashank & male\\
+87169236 & karthik & male\\
+755566003 & Bakakrishna & unknown\\
+469972014 & Rev@nth & unknown\\
+822761454 & Nilesh & male\\
+429273675 & Aditeswar & unknown\\
+2583173624 & Jagan & male\\
+2575092290 & kona & unknown\\
+2451909986 & charan & male\\
+2439592034 & venkat & male\\
+2243833796 & Ratna & unknown\\
+111850945 & lalit & male\\
+335158405 & charan & male\\
+\hline
+	\end{tabular}
+	 \end{center}
+\end{table}
+\begin{table}[!htbp]
+	\small
+	\begin{center}
+		\begin{tabular}{|l l l|}
+			\hline
+			\multicolumn{1}{|c}{ID} & \multicolumn{1}{c}{Name} & \multicolumn{1}{c |}{Gender}\\
+			\hline
+1128679802 & Aasresh & unknown\\
+1071911132 & Arun & male\\
+798668178 & Naina & female\\
+2298403772 & WinBuzzer & unknown\\
+3406851292 & bharath & male\\
+1407026076 & Keyu & unknown\\
+2755649263 & Rithika & female\\
+54493821 & manoj & male\\
+118623489 & dinesh & male\\
+335970153 & Abhishek & male\\
+709467001421500416 & Shivani & female\\
+1875320502 & sai & unknown\\
+157985123 & majetisiri & unknown\\
+4792335737 & Growth & unknown\\
+23829268 & Markus & male\\
+2811553591 & Anvesh & unknown\\
+108313439 & Krishna & unknown\\
+2665053835 & rio & unknown\\
+470149644 & Cathryn & female\\
+147860404 & Sumanth & male\\
+4169240239 & iamsonofgodjesus & unknown\\
+4026956354 & kannan & male\\
+3746984594 & Mattada.Rajesh & unknown\\
+130118907 & Vijay & male\\
+3303591120 & durgam & unknown\\
+3277164888 & Vinodh & unknown\\
+3276929190 & Siri & female\\
+3238430006 & Harish & male\\
+3181275751 & Aasresh & unknown\\
+3223939152 & sandy & unknown\\
+1588702699 & NuDawn & unknown\\
+3189658530 & nikhil & male\\
+
+			\hline
+		\end{tabular}
+	 \end{center}
+\end{table}
+\newpage
+\lstinputlisting[language=Python, caption={homophily.py}, label=listing:homophily]{q2/homophily.py}
+
+\begin{lstlisting}[frame=single,stepnumber=0]	
+	Number of females: 9
+	Number of males: 26
+	p: 0.742
+	q: 0.257
+	2pq: 0.381
+\end{lstlisting}

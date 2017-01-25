@@ -1,0 +1,376 @@
+https://picasaweb.google.com/110734946218641679352/2014092003?authkey=xEqtwx1ndn8#6061242670551948658
+
+
+
+
+
+
+
+
+
+
+
+Picasa Web Albums - Rex Dexter - 2014-09-20
+
+
+
+
+
+/*
+*/
+var _clientStart = new Date().getTime();
+/**
+* Stores timing information from toolbar at the very beginning of the request.
+*/
+var _srt = -1;
+if (window.external && window.external.pageT) {
+_srt = window.external.pageT;
+}
+var _prt = -1;
+/**
+* Stores the serviceName for the particular frontend instance we are running
+*/
+var _serviceName = 'photos_html';
+var _P = {};
+function _tickPrt() {
+_prt = new Date().getTime();
+}
+function _start(m) {
+if (!_P[m]) {
+_P[m] = {s:0, t:0, c:0};
+}
+_P[m].s = new Date().getTime();
+_P[m].t -= _P[m].s;
+}
+function _mark(m, n) {
+if (!_P[n]) {
+_P[n] = {s:0, t:0, c:0};
+}
+_P[n].t += new Date().getTime() - _P[m].s;
+_P[n].c++;
+}
+function _stop(m) {
+_P[m].t += new Date().getTime();
+_P[m].c++;
+}
+function _report() {
+if (window.pwa && pwa.reportProfile) {
+pwa.reportProfile(_P,
+"110734946218641679352",
+"1455821352454001_171432209_-905716179",
+true
+);
+}
+}
+
+
+
+var _features = {NEW_HOMEPAGE:1,fr:1,tags:1,search:1,globalsearch:1,globalsearchpromo:1,newfeatureslink:1,cart:1,contentcaching:1,developerlink:1,payments:1,newStrings:1,cccquota:1,signups:1,flashSlideshow:1,URL_SHORTENER_VISIBILITY:1,emailupload:1,photopickeralbumview:1,PWA_NEWUI:1,WILDCARD_QUERY_FEED:1,recentphotos:1,editinpicasa:1,imagesearch:1,froptin:1,FR_CONTINUOUS_CLUSTERING:1,asyncUploads:1,PERFORMANCE_EXPERIMENTS:1,BAKED_PRELOAD_FEEDS:1,albumviewlimit:1,HQ_VIDEOS:1,VIDEO_INFO_DISPLAY:1,CSI:1,EXPERIMENTAL_SEARCH_QUALITY:1,NEW_COMMENT_STYLE:1,ENABLE_NEW_FLAG_ABUSE_FORM:1,QRCODE:1,CHINA:1,GWS_URL_REDIRECTION:1,FEATURED_PHOTOS:1,COMMENT_SUBSCRIPTION:1,COMMENT_SUBSCRIPTION_SETTING:1,PICASA_MAC:1,API_AUTO_ACCOUNTS:1,FOCUS_GROUP_ACL:1,PHOTOSTREAM:1,BACKEND_ACL:1,ADVANCED_SEARCH:1,FACE_SEARCH:1,CAMERA_SEARCH:1,NOTIFICATION:1,PIXELATED_PREVIEW:1,TRANSPARENT_PIXELATED_PREVIEW:1,NEW_SETTINGS_PAGE:1,VIEW_STARRERS:1,FR_FOCUS_MERGE:1,GALLERY_COMMENTS:1,COMMENT_ABUSE_BLOCKING:1,FAVORITE_NOTIFICATION:1,IMAGE_ONLY_LINK:1,RECENT_PHOTOS_SLIDESHOW:1,HEART:1,SMALLER_IMAGE:1,FAST_SLIDESHOW:1,VIEW_CONTACTS:1,COLLABORATIVE_ALBUMS:1,PRINT_MARKETPLACE:1,PRINT_MARKETPLACE_REPLACEMENT:1,VIEW_COUNT:1,POST_TO:1,GAPLUS:1,PICASA_PROMO:1,PRODUCTION:1,NOSCRIPT:1,UNLISTED_GALLERY:1,GA_TRACKING:1,UNLIMITED_GALLERY:1,PICNIK_EDIT:1,MICROSCOPE_ZOOM:1,FR_V2:1,FAVORITE_SUGGESTION:1,FAVORITE_UPDATE:1,MERGED_PROFILES_SOFTLAUNCH:1,MERGED_PROFILES:1,MERGED_PROFILES_ASYNC:1,NEW_FR_UI:1,GAPLUS_UNMERGED_SOCIALIZATION:1,OPTOUT_ACL_NOTIFICATION:1,HTTPS_VISIBILITY:1,DEFAULT_HTTPS:1,EXTENDED_EXIF:1,ONEPICK:1,PER_ALBUM_GEO_VISIBILITY:1,SHAREBOX_VISIBILITY:1,AUTO_DOWNSIZE:1,PROFILE_NAME_CHECK:1,COLLABORATIVE_NAMETAGS:1,NOT_FOUND_404:1,REDIRECT_TO_PLUS:1,DISABLE_POST_SERVLET_DELETE_SHAPES:1,DISABLE_POST_SERVLET_DELETE_NAMETAGS:1,LOCATION_EXTRACTION_SERVICE:1,REDIRECT_GPLUS_CANONICAL_UNLISTED:1,CLIENT_ASYNC_THUMBNAILS_PERCENTAGE:1,POST_HANDLER_CREATE_SUBJECT_VISIBILITY:1,CLIENT_ASYNC_FACE_DETECT_PERCENTAGE:1,GDATA_EVENTS_VISIBILITY:1,ALBUM_COVER_DIALOG:1,AUTO_SEGMENT_COPY_PHOTOS:1,GALLERY_SHIFT_PERCENTAGE_ENABLED:1,AUTO_UNLISTED_ALBUM_ON_EMAIL_SHARE:1,API_SMALL_IU_AUTO_WRAPPING_VISIBILITY:1,API_FILTER_IU_ACTIVE_ALBUM:1,API_FILTER_GDRIVE_ALBUM_ENABLED:1,IU_REBRAND_ENABLED:1,SWF_STATIC_SERVING_VISIBILITY:1,EDIT_IN_GOOGLE_PLUS:1,USER_SETTINGS_FILTER_CACHE:1,DISABLE_POPULAR_CANONICAL_PAGES:1,GAIA_FILTER_2_ENABLED:1,ONEPICK_GAPI_IFRAMES:1,SIGN_FIFE_URLS:1};
+
+var pwa = {};
+pwa.paths = {
+selectedPhotos: '/lh/selectedPhotos?tok=',
+commentAbuse: '\x2Flh\x2FcommentAbuse?tok=',
+staticRoot: 'https://www.gstatic.com/pwa/s/v/lighthousefe_20160215.00_p0/',
+script: 'https://www.gstatic.com/pwa/s/v/lighthousefe_20160215.00_p0/script/',
+staticimagepath: 'https://www.gstatic.com/pwa/s/v/lighthousefe_20160215.00_p0/img/',
+transparentgif: 'https://www.gstatic.com/pwa/s/v/lighthousefe_20160215.00_p0/img/transparent.gif',
+hosturl: 'picasaweb.google.com',
+policyUrl: 'http://picasa.google.com/intl/en_us/policy.html',
+updateCart: '\x2Flh\x2FupdateCart?rtok=Ls14X2L-jLxL',
+addComment: '\x2Flh\x2FaddComment?tok=',
+selectedComments: '\x2Flh\x2FselectedComments?tok=',
+loginUrl: 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FServiceLogin?hl=en_US\x26amp\x3Bcontinue=https%3A%2F%2Fpicasaweb.google.com%2Flh%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fpicasaweb.google.com%252F110734946218641679352%252F2014092003%253Fauthkey%253DxEqtwx1ndn8\x26amp\x3Bservice=lh2\x26amp\x3Bltmpl=gp\x26amp\x3Bpassive=true',
+signupUrl: 'https:\x2F\x2Fwww.google.com\x2Faccounts\x2FNewAccount?hl=en_US\x26amp\x3Bcontinue=https%3A%2F%2Fpicasaweb.google.com%2F\x26amp\x3Bpassive=true\x26amp\x3Bservice=lh2',
+staticdomains: ['https://www.gstatic.com/pwa']
+};
+var _copyOrMovePath = '';
+var _createAlbumPath = '/lh/createAlbum?tok=';
+var _loginUrl = 'https://www.google.com/accounts/ServiceLogin?hl=en_US&continue=https%3A%2F%2Fpicasaweb.google.com&passive=true';
+var _signUpUrl = 'https://www.google.com/accounts/NewAccount?hl=en_US&amp;continue=https%3A%2F%2Fpicasaweb.google.com%2F&amp;passive=true&amp;service=lh2';
+var _activateUrl = 'https://www.google.com/accounts/NewAccount?hl=en_US&amp;continue=https%3A%2F%2Fpicasaweb.google.com%2Flh%2Flogin%3Fcontinue%3Dhttps%253A%252F%252Fpicasaweb.google.com%252F110734946218641679352%252F2014092003%253Fauthkey%253DxEqtwx1ndn8&amp;passive=true&amp;service=lh2';
+var _updatePhotoPath = '';
+var _addCommentPath = '/lh/addComment?tok=';
+var _reorderPath = '';
+var _selectedPhotosPath = '/lh/selectedPhotos?tok=';
+var _selectedCommentsPath = '/lh/selectedComments?tok=';
+var _setLicensePath = '';
+var _flashPath = 'https://static.googleusercontent.com/external_content/picasaweb.googleusercontent.com';
+var _flashSlideshowPath = 'https://photos.gstatic.com/media';
+var _updateCartPath = '/lh/updateCart?rtok=Ls14X2L-jLxL';
+var _geocodePath = '';
+var _batchUpdateGeoPath = '';
+
+
+
+var _LH = {
+locale:'en_US',
+calDay:0
+};
+var _authuser = {name:'',cannotSocialize:1
+,'showGeo': 0
+};
+var _user = {name:'110734946218641679352',nickname:'Rex Dexter',portrait:'https:\x2F\x2Flh3.googleusercontent.com\x2F-kwn8XONADog\x2FAAAAAAAAAAI\x2FAAAAAAAAgzE\x2FToGwnmth1Go\x2Fs32-c-Ic42\x2F110734946218641679352.jpg',link:'https:\x2F\x2Fpicasaweb.google.com\x2F110734946218641679352',defaultalbumnametagsvisibility:''
+,isnewstorageuser:false,isProfileUser:1};
+var _album = {id:'6061242670548558913',link:'https:\x2F\x2Fpicasaweb.google.com\x2F110734946218641679352\x2F2014092003',name:'2014092003',title:'2014-09-20',titleshort:'2014-09-20',kmlLink:'https:\x2F\x2Fpicasaweb.google.com\x2Fdata\x2Ffeed\x2Fbase\x2Fuser\x2F110734946218641679352\x2Falbumid\x2F6061242670548558913?alt=kml\x26kind=photo\x26hl=en_US',mapLink:'\x2Flh\x2FalbumMap?uname=110734946218641679352\x26aid=6061242670548558913#map',showGeo:0,uploadlink:'https:\x2F\x2Fpicasaweb.google.com\x2Flh\x2FwebUpload?uname=110734946218641679352\x26aid=6061242670548558913',largepreview:'https:\x2F\x2Flh3.googleusercontent.com\x2F-8-uLE8yuaJY\x2FVB3cGFN8pEE\x2FAAAAAAAAIKs\x2FA1sjjHkpNJM\x2Fs160-c-Ic42\x2F2014092003.jpg'};
+var _thumbSize = 144;
+var _c =
+(function() {
+var m, u = navigator.userAgent.toLowerCase();
+function ua(s) {return u.indexOf(s) >= 0;}
+if (ua('konqueror')) {
+return false;
+} else if (m = u.match(/opera\/(\d+)/)) {
+return (Number(m[1]) >= 6);
+} else if (m = u.match(/applewebkit\/(\d+)/)) {
+return (Number(m[1]) >= 412);
+} else if (m = u.match(/msie (\d)\.(\d)/)) {
+return (Number(m[1]) >= 6);
+} else if (ua('gecko')) {
+m = u.match(/rv:(\d\d?)\.(\d)/)
+return Number(m[1]) >= 2 || (Number(m[1]) == 1 && Number(m[2] >= 8));
+}
+return false;
+})();
+var _photo = [];
+
+
+var _picasaVersion = 0;
+var plugin = navigator.mimeTypes['application/x-picasa-detect'];
+if (plugin) {
+if (!plugin.description) {
+_picasaVersion = 2;
+} else {
+_picasaVersion = parseFloat(plugin.description);
+}
+}
+
+
+
+
+_start("onload/prt/client\\JS parse/jsparse");
+#gbar,#guser{font-size:13px;padding-right:8px;padding-top:4px !important;}#gbar{padding-left:8px;height:22px}#guser{padding-bottom:7px !important;text-align:right}.gbh,.gbd{border-top:1px solid #c9d7f1;font-size:1px}.gbh{height:0;position:absolute;top:24px;width:100%}@media all{.gb1{height:22px;margin-right:.5em;vertical-align:top}#gbar{float:left}}a.gb1,a.gb4{text-decoration:underline !important}a.gb1,a.gb4{color:#00c !important}.gbi .gb4{color:#dd8e27 !important}.gbf .gb4{color:#900 !important}
+
+
+
+
+
+
+var _jsTime = new Date().getTime();
+pwa.mapSetup('en_US');
+pwa.loggerSetup('\x2Flh\x2Fajaxlog',
+'');
+
+
+_stop("onload/prt/client\\JS parse/jsparse");
+// Doubleclick global js var
+ord = window.ord || Math.floor(Math.random()*1E16);
+
+
+
+Search Images Maps Play YouTube News Gmail Drive More »New Features | Help | Sign in
+
+if (window.pwa && pwa.initTimer) {
+pwa.initTimer(_P,
+[{n:'request',t:3462,c:[{n:'filter',t:36,c:[{n:'SslRedirectFilter',t:0,c:[],m:[]},{n:'HostnameRedirectFilter',t:0,c:[],m:[]},{n:'SecurityContextFilter',t:0,c:[],m:[]},{n:'ApplicationContextFilter',t:0,c:[],m:[]},{n:'AlbumHashTokenCodec',t:0,c:[],m:[]},{n:'GAPlusRestrictionFilter',t:0,c:[],m:[]},{n:'MobileLoginInterceptFilter',t:0,c:[],m:[]},{n:'SessionStickinessFilter',t:0,c:[],m:[]},{n:'RequestInfoFilter',t:0,c:[],m:[]},{n:'UserContextFilter',t:13,c:[{n:'getServiceCookie',t:0,c:[],m:[]},{n:'getVerifiedSessionCookie',t:0,c:[],m:[]},],m:[{n:'lookupUserById',t:'GAIA',m:2},]},{n:'GusiTokenCodec',t:1,c:[],m:[]},{n:'TokenAuthorizationFilter - tok',t:0,c:[],m:[]},{n:'MobileRedirectFilter',t:0,c:[],m:[]},{n:'UserSettingsFilter',t:21,c:[],m:[]},{n:'RandomTokenFilter',t:0,c:[],m:[]},{n:'ExperimentLoggingFilter',t:0,c:[],m:[]},{n:'AuthorizationEnforcementFilter',t:0,c:[],m:[]},{n:'GaiaCacheCorrectionFilter',t:0,c:[],m:[]},{n:'GupiTokenCodec',t:0,c:[],m:[]},{n:'PlusPageAuthorizationFilter',t:0,c:[],m:[]},{n:'GaiaMintFilter',t:0,c:[],m:[]},{n:'SelectedPersonaEnforcementFilter',t:0,c:[],m:[]},],m:[]},{n:'servlet',t:3426,c:[{n:'ViewServlet',t:71,c:[{n:'feed',t:36,c:[{n:'noscript',t:1,c:[{n:'Generate 1-up url',t:0,c:[],m:[]},{n:'Parse json',t:1,c:[],m:[]},{n:'Access photos entry',t:0,c:[],m:[]},{n:'Generate img url',t:0,c:[],m:[]},{n:'Access single photo',t:0,c:[],m:[]},{n:'Write hdf',t:0,c:[],m:[]},],m:[]},{n:'preload',t:35,c:[],m:[]},],m:[]},{n:'servlet',t:35,c:[{n:'API',t:35,c:[{n:'Json writing',t:0,c:[],m:[]},{n:'generateAtom',t:3,c:[],m:[]},{n:'createFeed',t:32,c:[{n:'getPhotos from request',t:0,c:[],m:[]},{n:'photoConverter',t:2,c:[],m:[]},{n:'Create GdataAlbumConverter',t:1,c:[],m:[]},{n:'Execute photos request',t:29,c:[],m:[]},{n:'setTotalResults',t:0,c:[],m:[]},{n:'getUserPreferences',t:0,c:[],m:[]},],m:[]},],m:[]},],m:[]},],m:[]},],m:[]},],m:[]}],
+'FeedAlbum',
+_clientStart,
+false,
+true
+);
+}
+
+
+
+if (!_c) document.write('<div class="lhcl_browserwarning">You are using a browser that is not fully supported. Some features may not work too well, but you are welcome to have a look around.<\/div>');
+
+
+You are using a browser that is not fully supported. Some features may not work too well, but you are welcome to have a look around.
+
+An important update on Picasa Web Albums. Learn more
+
+
+
+
+
+
+
+
+
+
+
+
+  
+Explore
+
+
+
+
+
+
+  
+Rex Dexter's Gallery
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rex Dexterphotos
+
+
+
+
+
+
+
+
+
+
+_album.access = "public";
+var _editAlbumPath = "\x2Flh\x2FupdateAlbum?tok=\x26amp\x3Buname=110734946218641679352\x26amp\x3Baid=6061242670548558913";
+_reorderPath = "\x2Flh\x2Freorder?uname=110734946218641679352\x26aid=6061242670548558913";
+_editCaptionsPath = "\x2Flh\x2FeditCaptions?tok=\x26uname=110734946218641679352\x26aid=6061242670548558913";
+var _deleteAlbumPath = "";
+_album.description = "";
+_album.location = "";
+_album.datestring = "20,9,2014";
+_album.title_wb = "2014-09-20";
+_album.dateonly = _fd("20,9,2014");
+_album.picasa = "picasa:\x2F\x2Fdownloadfeed\x2F?url=https%3A%2F%2Fpicasaweb.google.com%2Fdata%2Ffeed%2Fback_compat%2Fuser%2F110734946218641679352%2Falbumid%2F6061242670548558913%3Fkind%3Dphoto%26alt%3Drss%26imgdl%3D1";
+_album.photosRss = "https:\x2F\x2Fpicasaweb.google.com\x2Fdata\x2Ffeed\x2Fapi\x2Fuser\x2F110734946218641679352\x2Falbumid\x2F6061242670548558913?kind=photo\x26alt=rss";
+_album.photosFeed = "https:\x2F\x2Fpicasaweb.google.com\x2Fdata\x2Ffeed\x2Fbase\x2Fuser\x2F110734946218641679352\x2Falbumid\x2F6061242670548558913?alt=rss\x26amp\x3Bkind=photo\x26amp\x3Bhl=en_US";
+_album.photoCount = 6;
+_album.used = "709 KB";
+_album.isnametagsvisible = !!parseInt(0);
+_album.nametagsvisibility = "0";
+_album.externalRef = 1;
+_album.prints = true;
+_album.resetAuthkeyPath = "";
+pwa.setup(
+pwa.albumview,
+'lhid_content',
+'lhid_trayhandle_icon',
+'lhid_tray',
+undefined,
+'110734946218641679352',
+'Rex Dexter',
+'6061242670548558913',
+{feedUrl: 'https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913?alt=jsonm&amp;kind=photo&amp;access=public',
+feedPreload: {"encoding":"UTF-8","feed":{"gd$kind":"photos#album","id":"https://picasaweb.google.com/data/feed/user/110734946218641679352/albumid/6061242670548558913","title":"2014-09-20","subtitle":"","icon":"https://lh3.googleusercontent.com/-8-uLE8yuaJY/VB3cGFN8pEE/AAAAAAAAIKs/A1sjjHkpNJM/s160-c-Ic42/2014092003.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003"},{"rel":"http://schemas.google.com/photos/2007#slideshow","type":"application/x-shockwave-flash","href":"https://photos.gstatic.com/media/slideshow.swf?host=picasaweb.google.com&RGB=0x000000&feed=https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913?alt%3Drss"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913"}],"totalResults":6,"gphoto$id":"6061242670548558913","gphoto$name":"2014092003","location":"","access":"public","numPhotos":6,"user":"110734946218641679352","nickname":"Rex Dexter","type":"Buzz","allowPrints":"true","allowDownloads":"true","entry":[{"gd$kind":"photos#photo","faceProcessing":"done","id":"https://picasaweb.google.com/data/entry/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242670033922946","title":"EBOLA-Medical-Martial-Law-Sierra-Leone.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242670033922946?urlredir=1"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003#6061242670033922946"},{"rel":"http://schemas.google.com/photos/2007#canonical","type":"text/html","href":"https://picasaweb.google.com/lh/photo/xgz4B0pcrwbcgPmeO83wyNMTjNZETYmyPJy0liipFm0"},{"rel":"self","type":"application/atom+xml","href":"https://picasaweb.google.com/data/entry/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242670033922946"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913&iid=6061242670033922946"}],"gphoto$id":"6061242670033922946","albumId":"6061242670548558913","access":"public","width":"640","height":"360","size":"153930","commentingEnabled":"true","allowNameTags":"false","streamIds":["shared_group_6061242670033922946","updates"],"media":{"content":[{"url":"https://lh3.googleusercontent.com/-BtYvbZyprcY/VB3cGDTP64I/AAAAAAAAIJs/A8zaerlyXdg/Ic42/EBOLA-Medical-Martial-Law-Sierra-Leone.jpg","height":288,"width":512,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"https://lh3.googleusercontent.com/-BtYvbZyprcY/VB3cGDTP64I/AAAAAAAAIJs/A8zaerlyXdg/s72-Ic42/EBOLA-Medical-Martial-Law-Sierra-Leone.jpg","height":41,"width":72},{"url":"https://lh3.googleusercontent.com/-BtYvbZyprcY/VB3cGDTP64I/AAAAAAAAIJs/A8zaerlyXdg/s144-Ic42/EBOLA-Medical-Martial-Law-Sierra-Leone.jpg","height":81,"width":144},{"url":"https://lh3.googleusercontent.com/-BtYvbZyprcY/VB3cGDTP64I/AAAAAAAAIJs/A8zaerlyXdg/s288-Ic42/EBOLA-Medical-Martial-Law-Sierra-Leone.jpg","height":162,"width":288}],"title":"EBOLA-Medical-Martial-Law-Sierra-Leone.jpg"},"ccOverride":"false"},{"gd$kind":"photos#photo","faceProcessing":"done","id":"https://picasaweb.google.com/data/entry/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242670551948658","title":"EBOLA-Patented-Symbol-Ebola-Virus.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242670551948658?urlredir=1"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003#6061242670551948658"},{"rel":"http://schemas.google.com/photos/2007#canonical","type":"text/html","href":"https://picasaweb.google.com/lh/photo/wXUVpOcD7B0PoeG6A13N_NMTjNZETYmyPJy0liipFm0"},{"rel":"self","type":"application/atom+xml","href":"https://picasaweb.google.com/data/entry/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242670551948658"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913&iid=6061242670551948658"}],"gphoto$id":"6061242670551948658","albumId":"6061242670548558913","access":"public","width":"640","height":"360","size":"89343","commentingEnabled":"true","allowNameTags":"false","streamIds":["shared_group_6061242670551948658","updates"],"media":{"content":[{"url":"https://lh3.googleusercontent.com/-5DvPfFfC7PE/VB3cGFOwXXI/AAAAAAAAIJo/XXKG-lJKSGo/Ic42/EBOLA-Patented-Symbol-Ebola-Virus.jpg","height":288,"width":512,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"https://lh3.googleusercontent.com/-5DvPfFfC7PE/VB3cGFOwXXI/AAAAAAAAIJo/XXKG-lJKSGo/s72-Ic42/EBOLA-Patented-Symbol-Ebola-Virus.jpg","height":41,"width":72},{"url":"https://lh3.googleusercontent.com/-5DvPfFfC7PE/VB3cGFOwXXI/AAAAAAAAIJo/XXKG-lJKSGo/s144-Ic42/EBOLA-Patented-Symbol-Ebola-Virus.jpg","height":81,"width":144},{"url":"https://lh3.googleusercontent.com/-5DvPfFfC7PE/VB3cGFOwXXI/AAAAAAAAIJo/XXKG-lJKSGo/s288-Ic42/EBOLA-Patented-Symbol-Ebola-Virus.jpg","height":162,"width":288}],"title":"EBOLA-Patented-Symbol-Ebola-Virus.jpg"},"ccOverride":"false"},{"gd$kind":"photos#photo","faceProcessing":"done","id":"https://picasaweb.google.com/data/entry/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242690763094882","title":"ebola-con-be_turned_into_bioweapon_russian_n_uk_experts_warn.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242690763094882?urlredir=1"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003#6061242690763094882"},{"rel":"http://schemas.google.com/photos/2007#canonical","type":"text/html","href":"https://picasaweb.google.com/lh/photo/M4zpem3tNdCOyf9TFjdJAtMTjNZETYmyPJy0liipFm0"},{"rel":"self","type":"application/atom+xml","href":"https://picasaweb.google.com/data/entry/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242690763094882"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913&iid=6061242690763094882"}],"gphoto$id":"6061242690763094882","albumId":"6061242670548558913","access":"public","width":"490","height":"900","size":"255260","commentingEnabled":"true","allowNameTags":"false","streamIds":["shared_group_6061242690763094882","updates"],"media":{"content":[{"url":"https://lh3.googleusercontent.com/-oXLByVxqEZ8/VB3cHQhd-2I/AAAAAAAAIJ4/F3DMX3KOpFo/Ic42/ebola-con-be_turned_into_bioweapon_russian_n_uk_experts_warn.jpg","height":512,"width":279,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"https://lh3.googleusercontent.com/-oXLByVxqEZ8/VB3cHQhd-2I/AAAAAAAAIJ4/F3DMX3KOpFo/s72-Ic42/ebola-con-be_turned_into_bioweapon_russian_n_uk_experts_warn.jpg","height":72,"width":40},{"url":"https://lh3.googleusercontent.com/-oXLByVxqEZ8/VB3cHQhd-2I/AAAAAAAAIJ4/F3DMX3KOpFo/s144-Ic42/ebola-con-be_turned_into_bioweapon_russian_n_uk_experts_warn.jpg","height":144,"width":79},{"url":"https://lh3.googleusercontent.com/-oXLByVxqEZ8/VB3cHQhd-2I/AAAAAAAAIJ4/F3DMX3KOpFo/s288-Ic42/ebola-con-be_turned_into_bioweapon_russian_n_uk_experts_warn.jpg","height":288,"width":157}],"title":"ebola-con-be_turned_into_bioweapon_russian_n_uk_experts_warn.jpg"},"ccOverride":"false"},{"gd$kind":"photos#photo","faceProcessing":"done","id":"https://picasaweb.google.com/data/entry/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242705998889778","title":"ebola-quarantine-obama-eo-010814ob.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242705998889778?urlredir=1"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003#6061242705998889778"},{"rel":"http://schemas.google.com/photos/2007#canonical","type":"text/html","href":"https://picasaweb.google.com/lh/photo/k-aY4SsJflpFPp3nLxLa_NMTjNZETYmyPJy0liipFm0"},{"rel":"self","type":"application/atom+xml","href":"https://picasaweb.google.com/data/entry/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242705998889778"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913&iid=6061242705998889778"}],"gphoto$id":"6061242705998889778","albumId":"6061242670548558913","access":"public","width":"620","height":"320","size":"41694","commentingEnabled":"true","allowNameTags":"false","streamIds":["shared_group_6061242705998889778","updates"],"media":{"content":[{"url":"https://lh3.googleusercontent.com/-NIWJqHoEkUU/VB3cIJR9wzI/AAAAAAAAIKA/3IKSBZ3UEXQ/Ic42/ebola-quarantine-obama-eo-010814ob.jpg","height":265,"width":512,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"https://lh3.googleusercontent.com/-NIWJqHoEkUU/VB3cIJR9wzI/AAAAAAAAIKA/3IKSBZ3UEXQ/s72-Ic42/ebola-quarantine-obama-eo-010814ob.jpg","height":38,"width":72},{"url":"https://lh3.googleusercontent.com/-NIWJqHoEkUU/VB3cIJR9wzI/AAAAAAAAIKA/3IKSBZ3UEXQ/s144-Ic42/ebola-quarantine-obama-eo-010814ob.jpg","height":75,"width":144},{"url":"https://lh3.googleusercontent.com/-NIWJqHoEkUU/VB3cIJR9wzI/AAAAAAAAIKA/3IKSBZ3UEXQ/s288-Ic42/ebola-quarantine-obama-eo-010814ob.jpg","height":149,"width":288}],"title":"ebola-quarantine-obama-eo-010814ob.jpg"},"ccOverride":"false"},{"gd$kind":"photos#photo","faceProcessing":"done","id":"https://picasaweb.google.com/data/entry/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242706752040306","title":"ebola-con-russias_ex_chief_medical_officer_something_artificial_something_man-made_about_it.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242706752040306?urlredir=1"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003#6061242706752040306"},{"rel":"http://schemas.google.com/photos/2007#canonical","type":"text/html","href":"https://picasaweb.google.com/lh/photo/uazLUDTXTEYjF1pqtIgGHNMTjNZETYmyPJy0liipFm0"},{"rel":"self","type":"application/atom+xml","href":"https://picasaweb.google.com/data/entry/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242706752040306"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913&iid=6061242706752040306"}],"gphoto$id":"6061242706752040306","albumId":"6061242670548558913","access":"public","width":"498","height":"261","size":"89117","commentingEnabled":"true","allowNameTags":"false","streamIds":["shared_group_6061242706752040306","updates"],"media":{"content":[{"url":"https://lh3.googleusercontent.com/-Sv_q6d7R4FY/VB3cIMFh7XI/AAAAAAAAIKI/Sf4W3tshh_4/Ic42/ebola-con-russias_ex_chief_medical_officer_something_artificial_something_man-made_about_it.jpg","height":261,"width":498,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"https://lh3.googleusercontent.com/-Sv_q6d7R4FY/VB3cIMFh7XI/AAAAAAAAIKI/Sf4W3tshh_4/s72-Ic42/ebola-con-russias_ex_chief_medical_officer_something_artificial_something_man-made_about_it.jpg","height":38,"width":72},{"url":"https://lh3.googleusercontent.com/-Sv_q6d7R4FY/VB3cIMFh7XI/AAAAAAAAIKI/Sf4W3tshh_4/s144-Ic42/ebola-con-russias_ex_chief_medical_officer_something_artificial_something_man-made_about_it.jpg","height":76,"width":144},{"url":"https://lh3.googleusercontent.com/-Sv_q6d7R4FY/VB3cIMFh7XI/AAAAAAAAIKI/Sf4W3tshh_4/s288-Ic42/ebola-con-russias_ex_chief_medical_officer_something_artificial_something_man-made_about_it.jpg","height":151,"width":288}],"title":"ebola-con-russias_ex_chief_medical_officer_something_artificial_something_man-made_about_it.jpg"},"ccOverride":"false"},{"gd$kind":"photos#photo","faceProcessing":"done","id":"https://picasaweb.google.com/data/entry/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242716840553058","title":"ebole-con-tumblr_n9wjnd0qsJ1rkf9yro1_500.jpg","link":[{"rel":"http://schemas.google.com/g/2005#feed","type":"application/atom+xml","href":"https://picasaweb.google.com/data/feed/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242716840553058?urlredir=1"},{"rel":"alternate","type":"text/html","href":"https://picasaweb.google.com/110734946218641679352/2014092003#6061242716840553058"},{"rel":"http://schemas.google.com/photos/2007#canonical","type":"text/html","href":"https://picasaweb.google.com/lh/photo/mlaLrrElov5aIpFAHgzl09MTjNZETYmyPJy0liipFm0"},{"rel":"self","type":"application/atom+xml","href":"https://picasaweb.google.com/data/entry/tiny/user/110734946218641679352/albumid/6061242670548558913/photoid/6061242716840553058"},{"rel":"http://schemas.google.com/photos/2007#report","type":"text/html","href":"https://picasaweb.google.com/lh/reportAbuse?uname=110734946218641679352&aid=6061242670548558913&iid=6061242716840553058"}],"gphoto$id":"6061242716840553058","albumId":"6061242670548558913","access":"public","width":"500","height":"500","size":"97001","commentingEnabled":"true","allowNameTags":"false","streamIds":["shared_group_6061242716840553058","updates"],"media":{"content":[{"url":"https://lh3.googleusercontent.com/-CzebbtynxO8/VB3cIxq0amI/AAAAAAAAIKM/5YzfHfLBzfQ/Ic42/ebole-con-tumblr_n9wjnd0qsJ1rkf9yro1_500.jpg","height":500,"width":500,"type":"image/jpeg"}],"description":"","thumbnail":[{"url":"https://lh3.googleusercontent.com/-CzebbtynxO8/VB3cIxq0amI/AAAAAAAAIKM/5YzfHfLBzfQ/s72-Ic42/ebole-con-tumblr_n9wjnd0qsJ1rkf9yro1_500.jpg","height":72,"width":72},{"url":"https://lh3.googleusercontent.com/-CzebbtynxO8/VB3cIxq0amI/AAAAAAAAIKM/5YzfHfLBzfQ/s144-Ic42/ebole-con-tumblr_n9wjnd0qsJ1rkf9yro1_500.jpg","height":144,"width":144},{"url":"https://lh3.googleusercontent.com/-CzebbtynxO8/VB3cIxq0amI/AAAAAAAAIKM/5YzfHfLBzfQ/s288-Ic42/ebole-con-tumblr_n9wjnd0qsJ1rkf9yro1_500.jpg","height":288,"width":288}],"title":"ebole-con-tumblr_n9wjnd0qsJ1rkf9yro1_500.jpg"},"ccOverride":"false"}]}}},
+{NEW_HOMEPAGE:1,fr:1,tags:1,search:1,globalsearch:1,globalsearchpromo:1,newfeatureslink:1,cart:1,contentcaching:1,developerlink:1,payments:1,newStrings:1,cccquota:1,signups:1,flashSlideshow:1,URL_SHORTENER_VISIBILITY:1,emailupload:1,photopickeralbumview:1,PWA_NEWUI:1,WILDCARD_QUERY_FEED:1,recentphotos:1,editinpicasa:1,imagesearch:1,froptin:1,FR_CONTINUOUS_CLUSTERING:1,asyncUploads:1,PERFORMANCE_EXPERIMENTS:1,BAKED_PRELOAD_FEEDS:1,albumviewlimit:1,HQ_VIDEOS:1,VIDEO_INFO_DISPLAY:1,CSI:1,EXPERIMENTAL_SEARCH_QUALITY:1,NEW_COMMENT_STYLE:1,ENABLE_NEW_FLAG_ABUSE_FORM:1,QRCODE:1,CHINA:1,GWS_URL_REDIRECTION:1,FEATURED_PHOTOS:1,COMMENT_SUBSCRIPTION:1,COMMENT_SUBSCRIPTION_SETTING:1,PICASA_MAC:1,API_AUTO_ACCOUNTS:1,FOCUS_GROUP_ACL:1,PHOTOSTREAM:1,BACKEND_ACL:1,ADVANCED_SEARCH:1,FACE_SEARCH:1,CAMERA_SEARCH:1,NOTIFICATION:1,PIXELATED_PREVIEW:1,TRANSPARENT_PIXELATED_PREVIEW:1,NEW_SETTINGS_PAGE:1,VIEW_STARRERS:1,FR_FOCUS_MERGE:1,GALLERY_COMMENTS:1,COMMENT_ABUSE_BLOCKING:1,FAVORITE_NOTIFICATION:1,IMAGE_ONLY_LINK:1,RECENT_PHOTOS_SLIDESHOW:1,HEART:1,SMALLER_IMAGE:1,FAST_SLIDESHOW:1,VIEW_CONTACTS:1,COLLABORATIVE_ALBUMS:1,PRINT_MARKETPLACE:1,PRINT_MARKETPLACE_REPLACEMENT:1,VIEW_COUNT:1,POST_TO:1,GAPLUS:1,PICASA_PROMO:1,PRODUCTION:1,NOSCRIPT:1,UNLISTED_GALLERY:1,GA_TRACKING:1,UNLIMITED_GALLERY:1,PICNIK_EDIT:1,MICROSCOPE_ZOOM:1,FR_V2:1,FAVORITE_SUGGESTION:1,FAVORITE_UPDATE:1,MERGED_PROFILES_SOFTLAUNCH:1,MERGED_PROFILES:1,MERGED_PROFILES_ASYNC:1,NEW_FR_UI:1,GAPLUS_UNMERGED_SOCIALIZATION:1,OPTOUT_ACL_NOTIFICATION:1,HTTPS_VISIBILITY:1,DEFAULT_HTTPS:1,EXTENDED_EXIF:1,ONEPICK:1,PER_ALBUM_GEO_VISIBILITY:1,SHAREBOX_VISIBILITY:1,AUTO_DOWNSIZE:1,PROFILE_NAME_CHECK:1,COLLABORATIVE_NAMETAGS:1,NOT_FOUND_404:1,REDIRECT_TO_PLUS:1,DISABLE_POST_SERVLET_DELETE_SHAPES:1,DISABLE_POST_SERVLET_DELETE_NAMETAGS:1,LOCATION_EXTRACTION_SERVICE:1,REDIRECT_GPLUS_CANONICAL_UNLISTED:1,CLIENT_ASYNC_THUMBNAILS_PERCENTAGE:1,POST_HANDLER_CREATE_SUBJECT_VISIBILITY:1,CLIENT_ASYNC_FACE_DETECT_PERCENTAGE:1,GDATA_EVENTS_VISIBILITY:1,ALBUM_COVER_DIALOG:1,AUTO_SEGMENT_COPY_PHOTOS:1,GALLERY_SHIFT_PERCENTAGE_ENABLED:1,AUTO_UNLISTED_ALBUM_ON_EMAIL_SHARE:1,API_SMALL_IU_AUTO_WRAPPING_VISIBILITY:1,API_FILTER_IU_ACTIVE_ALBUM:1,API_FILTER_GDRIVE_ALBUM_ENABLED:1,IU_REBRAND_ENABLED:1,SWF_STATIC_SERVING_VISIBILITY:1,EDIT_IN_GOOGLE_PLUS:1,USER_SETTINGS_FILTER_CACHE:1,DISABLE_POPULAR_CANONICAL_PAGES:1,GAIA_FILTER_2_ENABLED:1,ONEPICK_GAPI_IFRAMES:1,SIGN_FIFE_URLS:1},
+{
+'gdataVersion': '4.0',
+'profileHost': 'profiles.google.com',
+'updateCartPath': '\x2Flh\x2FupdateCart?rtok=Ls14X2L-jLxL',
+'editCaptionsPath': '\x2Flh\x2FeditCaptions?tok=\x26uname=110734946218641679352\x26aid=6061242670548558913',
+'reorderPath': '\x2Flh\x2Freorder?uname=110734946218641679352\x26aid=6061242670548558913',
+'albumMapPath': '\x2Flh\x2FalbumMap?uname=110734946218641679352\x26aid=6061242670548558913#map',
+'albumKmlUrl': 'https:\x2F\x2Fpicasaweb.google.com\x2Fdata\x2Ffeed\x2Fbase\x2Fuser\x2F110734946218641679352\x2Falbumid\x2F6061242670548558913?alt=kml\x26kind=photo\x26hl=en_US',
+'externalRefId': '6061242670548558913',
+'deleteAlbumPath': '',
+'selectedPhotosPath': '\x2Flh\x2FselectedPhotos?tok=',
+'setLicensePath':'',
+'resetAuthkeyPath': '',
+'peopleManagerPath': '\x2F110734946218641679352\x2F2014092003\x2Fpeople',
+'peopleSearchPath': '\x2Flh\x2Fview?uname=110734946218641679352',
+'clusterViewPath': '',
+'editAclPath':'',
+'updateAclNotificationPath':'',
+'setStarPath':'\x2Flh\x2FsetStar?tok=',
+'albumCoverUrl': 'https:\x2F\x2Flh3.googleusercontent.com\x2F-8-uLE8yuaJY\x2FVB3cGFN8pEE\x2FAAAAAAAAIKs\x2FA1sjjHkpNJM\x2Fs160-c-Ic42\x2F2014092003.jpg',
+'albumRssLink': 'https:\x2F\x2Fpicasaweb.google.com\x2Fdata\x2Ffeed\x2Fbase\x2Fuser\x2F110734946218641679352\x2Falbumid\x2F6061242670548558913?alt=rss\x26amp\x3Bkind=photo\x26amp\x3Bhl=en_US',
+'albumSpaceUsed': '709 KB',
+'albumDescription': '',
+'albumDate': '20,9,2014',
+'frOptStatus': 'OptedIn',
+'isNameTagsVisible': '0',
+'authUserNickname':'',
+'authUserEmail':'',
+'authUserPortraitUrl':'',
+'authUserProfileUrl':'','authUser': {name:'',cannotSocialize:1
+,'showGeo': 0
+},
+'picnikHandlerUrl': '',
+'picnikCloseUrl': '',
+'picnikLocale': '',
+'authUserIsProfileUser': false,
+'ownerIsEsUser': true,
+'profileServerUrl': 'https:\x2F\x2Fplus.google.com',
+'profileSignupUrl': 'https:\x2F\x2Fplus.google.com\x2Fup\x2F?type=st',
+'profileName': 'Google+',
+'redirectViewerUrlTemplate': '',
+'redirectViewerEnabled': 'false',
+'currid': 'plus.google.com\x2Fevents\x2Fgallery\x2F{currid}'
+});
+
+
+©2011 Google 
+Terms -
+
+
+Download Picasa
+ - 
+
+Launch Picasa - 
+
+pwa.setup(pwa.footer, _picasaVersion,
+'http:\x2F\x2Fdl.google.com\x2Fdl\x2Fmac\x2Finstall\x2FInstallPicasaWebAlbumsUploaders.dmg');
+
+Privacy Policy -
+Developer -
+Blog -
+Google Home
+
+
+pwa.setup(pwa.cart, 0, true);
+pwa.start();
+
+
+

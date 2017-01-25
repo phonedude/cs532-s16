@@ -1,0 +1,1026 @@
+http://news.boldride.com/2014/09/tony-stewarts-fatal-track-accident-case-will-go-to-grand-jury/57392/?utm_source=dlvr.it&utm_medium=twitter
+<script>
+    window.onload = function(){
+        var link = Boldride.baseURL +  '/track/news/view/' + 57392;
+        var iframe = document.createElement('iframe');
+        iframe.frameBorder=0;
+        iframe.width="0";
+        iframe.height="0";
+        iframe.id="trackNews";
+        iframe.setAttribute("src", link);
+        document.body.appendChild(iframe);
+    }
+</script>
+
+<!DOCTYPE HTML>
+<html>
+<head prefix="og: http://ogp.me/ns#"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UAYDU1FTGwABVVZQBQA="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:21,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(3),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(4),t(5),"addEventListener"in window&&t(1),a.xhrWrappable&&t(2),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:5,2:8,3:3,4:7,5:6,6:22,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:23,ee:"QJf3ax",gos:"7eSDFh"}],6:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:23,ee:"QJf3ax"}],7:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:23,ee:"QJf3ax"}],8:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:5,2:23,ee:"QJf3ax"}],9:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:10,3:12,4:8,5:5,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],10:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],11:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:21,2:22,handle:"D5DuLP"}],12:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:21,2:11,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],21:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],22:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],23:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:22,ee:"QJf3ax"}]},{},["G9z0Bl",4,9]);</script>
+	<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+	<link rel="shortcut icon" href="http://www.boldride.com/favicon.ico" type="image/x-icon"/>
+    <link href="http://plus.google.com/104217312163173389357" rel="publisher" />
+	<meta name="google-site-verification" content="-GOEtdvG_BdHcLcrR4ByyMFeWWML6s5rykEXhGxSqhE" />
+	<meta name="alexaVerifyID" content="nvLQ7m4S-NjEje6CjzYncFvynXk" />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Tony Stewart&#039;s Fatal Track Accident Case Will Go To Grand Jury - Boldride.com</title>
+<link type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,800italic,400,600,700" rel="stylesheet" />
+<link type="text/css" href="http://static.boldride.com/assets/css/26c8915c.css" rel="stylesheet" />
+
+<!--Plugin WP Missed Schedule 2013.1231.2013 Active - Tag 6707293c0218e2d8b7aa38d418ffa608-->
+
+<!-- This website is patched against a big problem not solved from WordPress 2.5+ to date -->
+
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.2.8 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="noodp,noydir"/>
+<link rel="original-source" href="" />
+<meta name="description" content="A ruling in the fatal accident involving driver Tony Stewart will be coming from a grand jury."/>
+<link rel="canonical" href="http://news.boldride.com/2014/09/tony-stewarts-fatal-track-accident-case-will-go-to-grand-jury/57392/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tony Stewart&#039;s Fatal Track Accident Case Will Go To Grand Jury - Boldride.com" />
+<meta property="og:description" content="A ruling in the fatal accident involving driver Tony Stewart will be coming from a grand jury." />
+<meta property="og:url" content="http://news.boldride.com/2014/09/tony-stewarts-fatal-track-accident-case-will-go-to-grand-jury/57392/" />
+<meta property="og:site_name" content="Boldride.com" />
+<meta property="article:tag" content="motorsport" />
+<meta property="article:section" content="Uncategorized" />
+<meta property="article:published_time" content="2014-09-21T09:30:12-04:00" />
+<meta property="article:modified_time" content="2014-09-20T16:13:51-04:00" />
+<meta property="og:updated_time" content="2014-09-20T16:13:51-04:00" />
+<meta property="og:image" content="http://news.boldride.com/wp-content/uploads/2014/09/00-Stewart.jpg" />
+<meta property="og:image" content="http://news.boldride.com/wp-content/uploads/2014/09/01-Stewart.jpg" />
+<meta property="og:image" content="http://news.boldride.com/wp-content/uploads/2014/09/02-Stewart.jpg" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Boldride.com &raquo; Tony Stewart&#8217;s Fatal Track Accident Case Will Go To Grand Jury Comments Feed" href="http://news.boldride.com/2014/09/tony-stewarts-fatal-track-accident-case-will-go-to-grand-jury/57392/feed/" />
+<link rel='stylesheet' id='wpsqt-main-css'  href='http://news.boldride.com/wp-content/plugins/wp-survey-and-quiz-tool/css/main.css?ver=3.9' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css'  href='http://news.boldride.com/wp-content/plugins/photo-gallery/css/jquery-ui-1.10.3.custom.css?ver=1.1.14' type='text/css' media='all' />
+<link rel='stylesheet' id='bwg_frontend-css'  href='http://news.boldride.com/wp-content/plugins/photo-gallery/css/bwg_frontend.css?ver=1.1.14' type='text/css' media='all' />
+<link rel='stylesheet' id='bwg_font-awesome-css'  href='http://news.boldride.com/wp-content/plugins/photo-gallery/css/font-awesome-4.0.1/font-awesome.css?ver=4.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bwg_mCustomScrollbar-css'  href='http://news.boldride.com/wp-content/plugins/photo-gallery/css/jquery.mCustomScrollbar.css?ver=1.1.14' type='text/css' media='all' />
+<link rel='stylesheet' id='NextGEN-css'  href='http://news.boldride.com/wp-content/plugins/nextgen-gallery/css/nggallery.css?ver=1.0.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='shutter-css'  href='http://news.boldride.com/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.css?ver=1.3.4' type='text/css' media='screen' />
+<script type='text/javascript' src='http://news.boldride.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/wp-survey-and-quiz-tool/js/site.js?ver=3.9'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/photo-gallery/js/bwg_frontend.js?ver=1.1.14'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/photo-gallery/js/jquery.mobile.js?ver=1.1.14'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/photo-gallery/js/jquery.mCustomScrollbar.concat.min.js?ver=1.1.14'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/photo-gallery/js/jquery.fullscreen-0.4.1.js?ver=0.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var bwg_objectL10n = {"bwg_field_required":"field is required.","bwg_mail_validation":"This is not a valid email address."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/photo-gallery/js/bwg_gallery_box.js?ver=1.1.14'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var shutterSettings = {"msgLoading":"L O A D I N G","msgClose":"Click to Close","imageCount":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.js?ver=1.3.3'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/nextgen-gallery/js/jquery.cycle.all.min.js?ver=2.9995'></script>
+<script type='text/javascript' src='http://news.boldride.com/wp-content/plugins/nextgen-gallery/js/ngg.slideshow.min.js?ver=1.06'></script>
+<meta name="generator" content="WordPress 3.9" />
+<link rel='shortlink' href='http://news.boldride.com/?p=57392' />
+<!-- <meta name="NextGEN" version="1.9.12" /> -->
+	<link rel="stylesheet" type="text/css" media="screen,projection" href="http://news.boldride.com/wp-content/themes/boldride/css/style.css" />
+
+</head>
+
+    <!--[if IE]>
+<body class="web ie">
+    <![endif]-->
+
+<!--[if !IE]> -->
+<body class="web">
+<!-- <![endif]-->
+
+<div class="header-top-toolbar side-menu">
+    <div class="header-top-toolbar-wrap">
+        <div class="wrap tpl-prtls-header">
+                        <ul class="top-toolbar-tools">
+                
+    <li class="sign-in">
+                    <span class="account"><a class="show-register action">Create Account</a></span>
+                        <span class="account"><a class="show-login">Sign in</a></span>
+            </li>
+                </ul>
+        </div>
+        <div id="header" class="side-menu">
+            <div class="header-nav">
+                <div class="nav-wrap navigation-site">
+                    <ul id="menu">
+                        
+
+    <li class="nav-btn side-menu">
+        <div class="search-bar-container side-menu">
+	<div class="search-bar-body">
+		<form  id ="fSearch" class="search-form" action="http://www.boldride.com/search" method="get">
+			<span class='icon'>&#59407;</span>            <em>&#59407;</em>
+			<input class="text" type="text" name="q" placeholder="Search..." />
+			<input class="submit" type="submit" value=""/>
+		</form>
+	</div>
+</div>    </li>
+
+<li class="nav-btn submenu">
+    <a class="all-cars selector " href="http://www.boldride.com/brand/all">
+        All Cars
+            </a>
+    </li>
+
+<li class="nav-btn submenu">
+    <a class="tags selector " href="http://www.boldride.com/rides/tags">
+        Tags
+            </a>
+    </li>
+
+
+    <li class="nav-btn responsive"><a class="latest "  href="http://www.boldride.com/gallery/latest"><div>Latest</div></a></li>
+    <li class="nav-btn responsive"><a class="popular "  href="http://www.boldride.com/rides/popular"><div>Popular</div></a></li>
+
+<li class="nav-btn"><a class="uploads selector " href="http://www.boldride.com/uploads">Uploads</a></li>
+
+<li class="nav-btn"><a class="blog selector active" href="http://news.boldride.com/">News</a></li>
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-links" class="side-menu">
+            <ul id="footer-links-site">
+            <!--
+            <li><a href="#register" class="show-register">Create Account</a></li>
+            <li><a href="#sign-in" class="show-login">Sign In</a></li>
+            -->
+            <li><a href="http://www.boldride.com/page/why-sign-in"><span>Why Sign in?</span></a></li><li><a href="http://www.boldride.com/page/about-us"><span>About Us</span></a></li><li><a href="http://www.boldride.com/page/links"><span>Links</span></a></li><li><a href="http://www.boldride.com/brand/all"><span>Tags</span></a></li><li><a href="http://www.boldride.com/rides/tags"><span>All Cars</span></a></li><li><a href="mailto:admin@boldride.com"><span>Contact Us</span></a></li><li><a href="http://www.boldride.com/page/want-your-ride-featured"><span>Want Your Ride Featured?</span></a></li>        </ul>
+        <ul id="footer-links-follow">
+        <li><strong>Follow us</strong></li>
+        <li><a class="img-txt twitter" href="http://twitter.com/#!/boldride" target="_blank"><span>Twitter</span></a></li>
+        <li><a class="img-txt facebook" href="http://www.facebook.com/Boldride" target="_blank" ><span>Facebook</span></a></li>
+        <li><a class="img-txt rss" href="/feed/rides/latest.rss" target="_blank"><span>RSS</span></a></li>
+    </ul>
+    <div class="clear"></div>
+</div>        </div>
+        <div id="footer-legals" class="side-menu">
+    <span class="footer-copyright">Copyright &copy; 2016 Bold Ride LLC.</span>
+    <div id="footer-legals-right">
+        <a id="footer-legals-policy" href="/privacy-policy"><span>Privacy Policy</span></a>
+        <a id="footer-legals-terms" href="/terms-of-use"><span> Terms of Use</span></a>
+            </div>
+    <div class="clear"></div>
+</div>    </div>
+</div>
+
+
+<div class="header-container">
+    <div class="nav-wrap navigation-site">
+                <div class="toggle side-menu">&#9776;</div>
+        <div class="wrap header-wrap">
+                        <div class = "header-main">
+                <a id="logo" href="http://www.boldride.com/" title="Boldride">
+                    <span></span>
+                                    </a>
+                <ul id="header-nav-menu">
+                    
+
+
+<li class="nav-btn submenu">
+    <a class="all-cars selector " href="http://www.boldride.com/brand/all">
+        All Cars
+                    <em>&#59401;</em>
+            </a>
+            <div class="subnav-content brand">
+            <div class="wrap all-cars-tags site-brand-featured">
+    
+
+    <ul class="left">
+
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/acura">Acura</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/alfa-romeo">Alfa Romeo</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/aston-martin">Aston Martin</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/audi">Audi</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/bentley">Bentley</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/bmw">BMW</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/bugatti">Bugatti</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/buick">Buick</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/cadillac">Cadillac</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/chevrolet">Chevrolet</a>            </div>
+        </li>
+
+                            
+    
+    </ul>
+
+    <ul>
+
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/chrysler">Chrysler</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/citroen">Citroen</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/dodge">Dodge</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/ferrari">Ferrari</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/fiat">Fiat</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/ford">Ford</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/gmc">GMC</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/hennessey">Hennessey</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/honda">Honda</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/hyundai">Hyundai</a>            </div>
+        </li>
+
+                            
+    
+    </ul>
+
+    <ul>
+
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/infiniti">Infiniti</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/jaguar">Jaguar</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/jeep">Jeep</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/kia">Kia</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/koenigsegg">Koenigsegg</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/lamborghini">Lamborghini</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/lancia">Lancia</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/land-rover">Land Rover</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/lexus">Lexus</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/lincoln">Lincoln</a>            </div>
+        </li>
+
+                            
+    
+    </ul>
+
+    <ul>
+
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/local-motors">Local Motors</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/lotus">Lotus</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/maserati">Maserati</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/mazda">Mazda</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/mclaren">McLaren</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/mercedes-benz">Mercedes-Benz</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/mercury">Mercury</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/mini">Mini</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/mitsubishi">Mitsubishi</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/nissan">Nissan</a>            </div>
+        </li>
+
+                            
+    
+    </ul>
+
+    <ul>
+
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/oldsmobile">Oldsmobile</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/opel">Opel</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/pagani">Pagani</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/peugeot">Peugeot</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/plymouth">Plymouth</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/pontiac">Pontiac</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/porsche">Porsche</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/renault">Renault</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/rolls-royce">Rolls-Royce</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/saab">Saab</a>            </div>
+        </li>
+
+                            
+    
+    </ul>
+
+    <ul>
+
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/scion">Scion</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/smart">Smart</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/srt">SRT</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/subaru">Subaru</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/suzuki">Suzuki</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/tesla">Tesla</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/toyota">Toyota</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/unique-designs">Unique Designs</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/volkswagen">Volkswagen</a>            </div>
+        </li>
+
+                            
+            <li>
+            <div class = "brand-item">
+                <a href="http://www.boldride.com/brand/volvo">Volvo</a>            </div>
+        </li>
+
+                            
+    
+    </ul>
+<div class="clear"></div>
+    <a href="http://www.boldride.com/brand/all" class="btn see-all">
+        Show More
+        <span><em>&#59393;</em></span>
+    </a>
+
+</div>
+
+        </div>
+    </li>
+
+<li class="nav-btn submenu">
+    <a class="tags selector " href="http://www.boldride.com/rides/tags">
+        Tags
+                    <em>&#59401;</em>
+            </a>
+            <div class="subnav-content tag">
+            <div class="wrap all-cars-tags site-tag-featured">
+    
+    <ul class="tags featured">
+            <li><a href="http://www.boldride.com/tags/200mph">200MPH <span class="highlight">(376)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/2015">2015 <span class="highlight">(550)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/2016-chicago-auto-show">2016 Chicago Auto Show <span class="highlight">(3)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/classic">Classic <span class="highlight">(2639)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/concept">Concept <span class="highlight">(1745)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/convertible">Convertible <span class="highlight">(2555)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/electric">Electric <span class="highlight">(296)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/hot-rod">Hot Rod <span class="highlight">(64)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/hybrid">Hybrid <span class="highlight">(308)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/luxury">Luxury <span class="highlight">(1263)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/motorcycle">Motorcycle <span class="highlight">(111)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/muscle-car">Muscle Car <span class="highlight">(677)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/off-road">Off Road <span class="highlight">(398)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/Racing">Racing <span class="highlight">(755)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/sports-car">Sports car <span class="highlight">(3273)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/sports-sedan">Sports Sedan <span class="highlight">(469)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/supercar">Supercar <span class="highlight">(788)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/suv">SUV <span class="highlight">(1267)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/tuner">Tuner <span class="highlight">(1636)</span></a></li>
+            <li><a href="http://www.boldride.com/tags/vintage">Vintage <span class="highlight">(2033)</span></a></li>
+        </ul>
+
+	<div class="clear"></div>
+    <a href="http://www.boldride.com/rides/tags" class="btn see-all">
+        Show More
+        <span><em>&#59393;</em></span>
+    </a>
+</div>
+
+
+        </div>
+    </li>
+
+    <li class="nav-btn submenu trending">
+        <a class="trending selector " href="javascript:void(0);">
+            Trending
+                            <em>&#59401;</em>
+                    </a>
+        <div class="subnav-content trending">
+
+            <div class="trending-nav-container">
+                <a href="http://www.boldride.com/gallery/latest">Latest</a>
+                <a href="http://www.boldride.com/rides/popular">Popular</a>
+            </div>
+
+        </div>
+    </li>
+
+
+<li class="nav-btn"><a class="uploads selector " href="http://www.boldride.com/uploads">Uploads</a></li>
+
+<li class="nav-btn"><a class="blog selector active" href="http://news.boldride.com/">News</a></li>
+
+    <li class="nav-btn video"><a class="videos selector " href="http://www.boldride.com/video/all-videos">Video</a></li>
+
+
+
+                </ul>
+            </div>
+                        <div class="header-side">
+                <ul class="header-user-tools">
+                
+    <li class="sign-in">
+                    <span class="account"><a class="show-register action">Create Account</a></span>
+                            <span class="spacer-bar"></span>
+                <span class="account"><a class="show-login">Sign in</a></span>
+            </li>
+                    </ul>
+            <div class="search-bar-container ">
+	<div class="search-bar-body">
+		<form  id ="nav-search" class="search-form" action="http://www.boldride.com/search" method="get">
+			            <em>&#59407;</em>
+			<input class="text" type="text" name="q" placeholder="Search..." />
+			<input class="submit" type="submit" value=""/>
+		</form>
+	</div>
+</div>            </div>
+                    </div>
+    </div>
+</div>
+
+    <div id="content" class="content-short">
+        <div class="wrap blog single">
+            <div class="content-col-left">
+                <div class="hfeed">
+
+                    
+                        <div id="post-57392" class="hentry p1 post publish author-Nicole Wakelin category-uncategorized y2014 m09 d21 h08">
+                            <h2 class="entry-title cufon"><a href="http://news.boldride.com/2014/09/tony-stewarts-fatal-track-accident-case-will-go-to-grand-jury/57392/" title="Permalink to Tony Stewart&#8217;s Fatal Track Accident Case Will Go To Grand Jury" rel="bookmark">Tony Stewart&#8217;s Fatal Track Accident Case Will Go To Grand Jury</a></h2>
+                            <div class="entry-meta">
+                                <span class="entry-date">Posted on <abbr class="published" title="2014-09-21T09:30:12-0500">21 September 2014</abbr> by</span>
+                                <span class="entry-author author vcard"><a class="url fn" href="http://news.boldride.com/author/nicole-wakelin/" title="View all posts by Nicole Wakelin">Nicole Wakelin</a></span>
+                                <div class="social-share-buttons blog-type">
+                                    <div class="fb-share-button">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?s=100&p[url]=http%3A%2F%2Fnews.boldride.com%2F2014%2F09%2Ftony-stewarts-fatal-track-accident-case-will-go-to-grand-jury%2F57392%2F" target="_blank">
+                                            <i class="icon-facebook"></i>
+                                            <span>Facebook</span>
+                                        </a>
+                                    </div>
+
+                                    <div class="twitter-share-button">
+                                        <a href='https://twitter.com/intent/tweet?text=Tony Stewart&#8217;s Fatal Track Accident Case Will Go To Grand Jury%20http%3A%2F%2Fnews.boldride.com%2F2014%2F09%2Ftony-stewarts-fatal-track-accident-case-will-go-to-grand-jury%2F57392%2F' target="_blank">
+                                            <i class="icon-twitter-bird"></i>
+                                            <span>Twitter</span>
+                                        </a>
+                                    </div>
+                                    <div class="reddit-share-button">
+                                        <a href="http://www.reddit.com/submit?url=http%3A%2F%2Fnews.boldride.com%2F2014%2F09%2Ftony-stewarts-fatal-track-accident-case-will-go-to-grand-jury%2F57392%2F" target="_blank">
+                                            <i class="icon-reddit"></i>
+                                            <span>Reddit This</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            
+                            <div class="entry-content">
+                                <p><a href="http://news.boldride.com/wp-content/uploads/2014/09/00-Stewart.jpg"><img class="alignnone wp-image-57400 size-full" src="http://news.boldride.com/wp-content/uploads/2014/09/00-Stewart.jpg" alt="00 Stewart" width="720" height="480" /></a></p><div class="advads-responsive" id="advads-1011964281"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:block;"data-ad-client="ca-pub-7093794549664630" 
+data-ad-slot="1445717393" 
+data-ad-format="auto"></ins>
+<script> 
+(adsbygoogle = window.adsbygoogle || []).push({}); 
+</script>
+</div>
+<p>The sprint car race at Canadaigua Motorsports Park in New York on Aug. 9 came to a tragic end when driver Kevin Ward Jr. was struck and killed by driver Tony Stewart. The decision over whether or not Stewart will face criminal charges as a result of the accident will now be decided by a grand jury.<span id="more-57392"></span></p>
+<p>The case was originally received by District Attorney Michael Tantillo, who presides over Ontario County, New York, but he has decided the decision over filing criminal charges should fall to a grand jury. This is just one piece of the investigation into the accident that claimed Ward&#8217;s life.</p>
+<p><a href="http://www.boldride.com/ride/2012/chevrolet-performance-tony-stewart-camaro-zl1"><strong>PHOTOS: See More of the 2012 Chevrolet Performance Tony Stewart Camaro ZL1</strong></a></p>
+<p><a href="http://news.boldride.com/wp-content/uploads/2014/09/01-Stewart.jpg"><img class="alignnone wp-image-57401 size-full" src="http://news.boldride.com/wp-content/uploads/2014/09/01-Stewart.jpg" alt="01 Stewart" width="720" height="480" /></a></p><div class="advads-responsive-2" id="advads-1236459547"><ins class="adsbygoogle" style="display:block;"data-ad-client="ca-pub-7093794549664630" 
+data-ad-slot="7592885394" 
+data-ad-format="auto"></ins>
+<script> 
+(adsbygoogle = window.adsbygoogle || []).push({}); 
+</script>
+</div>
+<p>There are ongoing investigations being conducted by both legal officials as well as race experts who are all trying to determine exactly what happened that night and who is to blame. The accident occurred during a confrontation between Ward and Stewart, with Ward getting out of his car and then being hit by Stewart.</p>
+<p>Plenty of witnesses saw the accident and there is even video, but there are no details about what kind of evidence will be presented or about who might be called to testify as a potential witness. That information, as well as the results of the myriad investigations, will likely come during grand jury proceedings.</p>
+<p><a href="http://www.boldride.com/ride/2014/ford-f-150-tremor-ecoboost-nascar-pace-truck"><strong>PHOTOS: See More of the 2014 Ford F-150 Tremor EcoBoost NASCAR Pace Truck</strong></a></p>
+<p><a href="http://news.boldride.com/wp-content/uploads/2014/09/02-Stewart.jpg"><img class="alignnone wp-image-57402 size-full" src="http://news.boldride.com/wp-content/uploads/2014/09/02-Stewart.jpg" alt="02 Stewart" width="720" height="480" /></a></p>
+<p>Although Stewart initially withdrew from the racing circuit, he is once again behind the wheel while the investigation continues.</p>
+<p>________________________________________</p>
+<p><em>Follow BoldRide on <a href="https://twitter.com/BoldRide" target="_blank">Twitter</a> and <a href="https://www.facebook.com/Boldride" target="_blank">Facebook</a></em></p>
+                                
+                                
+                                                                <div class="content-container">
+                                    <div id="taboola-organic-below-article-thumbs-2-mix"></div>
+                                </div>
+                                <div class="content-container">
+                                    <div id="taboola-below-article-thumbs-mix"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="entry-content content-comments content-mediainfo">
+
+                                <div id="disqus_thread"></div>
+                                <script type="text/javascript">
+                                    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+                                    var disqus_shortname = 'boldride'; // required: replace example with your forum shortname
+
+                                    /* * * DON'T EDIT BELOW THIS LINE * * */
+                                    (function() {
+                                        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                    })();
+                                </script>
+                                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                            </div>
+
+                                                        
+                            <div class="entry-nav">
+                                <a href="http://news.boldride.com">&laquo; Return to Blog Home</a>
+                            </div>
+
+                        </div><!-- .post -->
+
+                        
+                </div><!-- .hfeed -->
+            </div>
+
+            <div class="col-gradient"></div>
+
+            
+<div class="content-col-right">
+
+<!--    <div class="sidebar-logo">-->
+<!--    </div>-->
+
+    <!-- Top Col Ad -->
+    <div class="ad-container"></div>
+    <div id="mid-ads-title"></div>
+    <!-- End Top Col Ad -->
+
+    
+
+    <div id="primary" class="sidebar">
+
+        
+		<ul>
+<!--	-->
+<!--	-->
+		</ul>
+	</div><!-- #primary .sidebar -->
+
+	<div id="secondary" class="sidebar">
+		<ul>
+					<li id="search">
+				<h3><label for="s">Search</label></h3>
+				<form id="searchform" method="get" action="http://news.boldride.com">
+					<div>
+						<input id="s" name="s" type="text" value="" size="10" />
+						<input id="searchsubmit" name="searchsubmit" type="submit" value="Find" />
+					</div>
+				</form>
+			</li>
+	
+		</ul>
+	</div><!-- #secondary .sidebar -->
+
+    <div class="upper-ad-container">
+        <!-- Above the Fold Placement -->
+                            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:250px"
+                 data-ad-client="ca-pub-7093794549664630"
+                 data-ad-slot="3518968194"></ins>
+        
+    </div>
+
+    <div id="boldride-gear-shirt">
+        <a href="http://gear.boldride.com/"><span></span></a>
+    </div>
+
+    <div class="widget-ad">
+        <div id="grv-personalization-17"></div>
+    </div>
+
+    <div class="widget widget_popular_tags">
+        <h3 class="cufon widgettitle">POPULAR BLOG TAGS</h3>
+        <div class="tag-list">
+            <ul class='wp-tag-cloud'>
+	<li><a href='http://news.boldride.com/tag/supercar/' class='tag-link-15' title='1,699 topics' style='font-size: 12px;'>Supercar</a></li>
+	<li><a href='http://news.boldride.com/tag/sports-car/' class='tag-link-26' title='1,573 topics' style='font-size: 12px;'>Sports Car</a></li>
+	<li><a href='http://news.boldride.com/tag/video/' class='tag-link-35' title='1,477 topics' style='font-size: 12px;'>Video</a></li>
+	<li><a href='http://news.boldride.com/tag/future-ride/' class='tag-link-56' title='1,416 topics' style='font-size: 12px;'>Future Ride</a></li>
+	<li><a href='http://news.boldride.com/tag/coupe/' class='tag-link-70' title='1,363 topics' style='font-size: 12px;'>Coupe</a></li>
+	<li><a href='http://news.boldride.com/tag/unveiled/' class='tag-link-33' title='878 topics' style='font-size: 12px;'>Unveiled</a></li>
+	<li><a href='http://news.boldride.com/tag/ford/' class='tag-link-52' title='837 topics' style='font-size: 12px;'>Ford</a></li>
+	<li><a href='http://news.boldride.com/tag/jaw-dropper/' class='tag-link-21' title='798 topics' style='font-size: 12px;'>Jaw Dropper</a></li>
+	<li><a href='http://news.boldride.com/tag/chevrolet/' class='tag-link-59' title='747 topics' style='font-size: 12px;'>Chevrolet</a></li>
+	<li><a href='http://news.boldride.com/tag/concept-car/' class='tag-link-24' title='643 topics' style='font-size: 12px;'>Concept Car</a></li>
+	<li><a href='http://news.boldride.com/tag/bold-school/' class='tag-link-16' title='577 topics' style='font-size: 12px;'>Bold School</a></li>
+	<li><a href='http://news.boldride.com/tag/muscle-car/' class='tag-link-12' title='531 topics' style='font-size: 12px;'>Muscle Car</a></li>
+	<li><a href='http://news.boldride.com/tag/ferrari/' class='tag-link-88' title='517 topics' style='font-size: 12px;'>Ferrari</a></li>
+	<li><a href='http://news.boldride.com/tag/classic-car/' class='tag-link-30' title='461 topics' style='font-size: 12px;'>Classic Car</a></li>
+	<li><a href='http://news.boldride.com/tag/bmw/' class='tag-link-68' title='435 topics' style='font-size: 12px;'>BMW</a></li>
+	<li><a href='http://news.boldride.com/tag/green/' class='tag-link-721' title='425 topics' style='font-size: 12px;'>Green</a></li>
+	<li><a href='http://news.boldride.com/tag/the-list/' class='tag-link-20' title='399 topics' style='font-size: 12px;'>The List</a></li>
+	<li><a href='http://news.boldride.com/tag/porsche/' class='tag-link-143' title='393 topics' style='font-size: 12px;'>Porsche</a></li>
+	<li><a href='http://news.boldride.com/tag/racing/' class='tag-link-55' title='373 topics' style='font-size: 12px;'>Racing</a></li>
+	<li><a href='http://news.boldride.com/tag/lamborghini/' class='tag-link-71' title='370 topics' style='font-size: 12px;'>Lamborghini</a></li>
+	<li><a href='http://news.boldride.com/tag/mustang/' class='tag-link-78' title='348 topics' style='font-size: 12px;'>Mustang</a></li>
+	<li><a href='http://news.boldride.com/tag/dodge/' class='tag-link-58' title='325 topics' style='font-size: 12px;'>Dodge</a></li>
+	<li><a href='http://news.boldride.com/tag/mercedes-benz/' class='tag-link-44' title='319 topics' style='font-size: 12px;'>Mercedes-Benz</a></li>
+	<li><a href='http://news.boldride.com/tag/tuner/' class='tag-link-246' title='311 topics' style='font-size: 12px;'>Tuner</a></li>
+</ul>
+        </div>
+    </div>
+    
+        
+    
+    
+    
+    <div class="ads content-mod top-min-margin">
+        <div class="blog-bar-ad">
+                                    <div class="boldride-ad btf" data-refreshrate="10000" data-adtype="rubicon" data-adsize="300x600" data-zonesize="134452-10"></div>
+
+
+        </div>
+
+
+        <div class="mid-ads-title"></div>
+    </div>
+
+</div>
+
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+    <!-- /4666930/BoldRide_ROS_OutOfPage -->
+    <div id="div-gpt-ad-1431121140919-0" class="undertone-unit" data-undertoneid="1431121140919-0" data-undertonetype="pagegrabber"></div>
+
+    
+
+
+<div id="footer"><div class="footer-slider sho">
+
+    <div class="footer-top-wrap">
+
+        <div class="wrap tpl-prtls-footer">
+            <div id="footer-top">
+                <div id="footer-ad">
+                    <div class="boldride-ad" data-refreshrate="10000" data-adtype="rubicon" data-adsize="720x90" data-zonesize="134454-2"></div>
+                </div>
+                <div id="footer-legals">
+                    <span class="footer-copyright">Copyright &copy; 2016 Bold Ride LLC.</span>
+                    <div class="footer-links-right">
+                        <a href="http://www.boldride.com/privacy-policy">Privacy Policy</a>
+                        <a href="http://www.boldride.com/terms-of-use"> Terms of Use</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <a class="arrow-down"><span>arrow-down</span></a>
+    </div>
+
+    <div class="footer-bottom-wrap">
+
+        <div class="wrap tpl-prtls-footer">
+            <div id="footer-bottom">
+
+                                <div id="footer-ad-top">
+                    <div class="upload-top"><a class="show-upload" href="#sign-in">Upload Your Images &raquo;</a></div>
+                    <span class="media_count">226,224</span>
+                    <span class="upload-bottom">total images</span>
+
+                    <div class="join-top"><a class="show-register" href="#register">Join the Community &raquo;</a></div>
+                    <span class="join-bottom">Save your uploads + favorite car images all in one place and share them with the world.</span>
+                </div>
+
+                
+                <!--bottom navigation-->
+                <div id="footer-links">
+                                        <ul id="footer-links-site">
+                                                                        <li><a href="http://www.boldride.com/page/why-sign-in">Why Sign in?</a></li><li><a href="http://www.boldride.com/page/about-us">About Us</a></li><li><a href="http://www.boldride.com/page/store">Store</a></li><li><a href="http://www.boldride.com/page/links">Links</a></li><li><a href="http://www.boldride.com/brand/all">Tags</a></li><li><a href="http://www.boldride.com/rides/tags">All Cars</a></li><li><a href="mailto:admin@boldride.com">Contact Us</a></li><li><a href="http://www.boldride.com/page/want-your-ride-featured">Want Your Ride Featured?</a></li>                    </ul>
+                                        <ul id="footer-links-follow">
+                        <li><strong>Follow us</strong></li>
+                        <li><a class="img-txt twitter" href="http://twitter.com/#!/boldride" target="_blank"><span>Twitter</span></a></li>
+                        <li><a class="img-txt facebook" href="http://www.facebook.com/Boldride" target="_blank" ><span>Facebook</span></a></li>
+                        <li><a class="img-txt rss" href="http://www.boldride.com/feed/rides/latest.rss" target="_blank"><span>RSS</span></a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <a class="arrow-up"><span>arrow up</span></a>
+    </div>
+
+</div></div>
+
+<ul id="share-targets">
+	<li id="twitter"><span>Share on Twitter</span></li>
+	<li id="facebook"><span>Share on Facebook</span></li>
+	<li id="digg"><span>Share on Digg</span></li>
+	<li id="delicious"><span>Share on Delicious</span></li>
+	<li id="reddit"><span>Share on Reddit</span></li>
+	<li id="stumbleupon"><span>Share on Stumbleupon</span></li>
+	<li id="blogger"><span>Share on Blogger</span></li>
+	<li id="myspace"><span>Share on MySpace</span></li>
+</ul>
+
+<!-- Facebook SiteLike -->
+<div id="fb-root"></div>
+
+
+<script type="text/javascript" src="http://static.boldride.com/assets/js/26c8915c.js"></script>
+
+<script type="text/javascript">
+    Boldride.isProdEnvironment = true;
+	$(document).ready(function() {
+		Boldride.first_login = false
+        Boldride.init("245806192135891",
+            "","","",
+            ["No Auth Found"],
+            null,
+            null,
+            "http://www.boldride.com/",
+            false,
+            "0",
+            "http://thumbs.boldride.com");
+	});
+</script>
+
+
+
+<noscript>
+    <!-- Quantcast Tag -->
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-cc5Ot57dX40OM.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+    <!-- End Quantcast tag -->
+    <!-- Comscore Tag -->
+    <img src="http://b.scorecardresearch.com/p?c1=2&c2=15555097&cv=2.0&cj=1" />
+    <!-- End Comscore Tag -->
+</noscript>
+
+
+
+
+
+<!--Plugin WP Missed Schedule 2013.1231.2013 Active - Tag 6707293c0218e2d8b7aa38d418ffa608-->
+
+<!-- This website is patched against a big problem not solved from WordPress 2.5+ to date -->
+
+<!-- Survey and Quizzes Powered by WP Survey And Quiz Tool 2.13.1 iain.cambridge at fubra.com -->
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"be996ed41f","applicationID":"3117221","transactionName":"MwNRMRYCDEVXAhILCQpJcgYQCg1YGRIPDAEIAw==","queueTime":0,"applicationTime":502,"ttGuid":"","agentToken":"","atts":"H0RSR14YH0s=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

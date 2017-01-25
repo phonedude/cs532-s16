@@ -1,0 +1,235 @@
+http://onedio.com/haber/game-of-thrones-icin-yapilmis-birbirinden-komik-35-caps-2-371715
+Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha - onedio.comwindow.oio = JSON.parse(decodeURI("%7B%22version%22:%228.2.274%22,%22assetbase%22:%22/asset-c398b783add43b0bcafd5ba37241ea1a%22,%22assetpath%22:%22//assets.onedio.com/asset-c398b783add43b0bcafd5ba37241ea1a%22,%22imgbase%22:%22/asset-c398b783add43b0bcafd5ba37241ea1a/images%22,%22cdn%22:%22http://img.onedio.com%22,%22cdns%22:%5B%22http://img-0.onedio.com%22,%22http://img-1.onedio.com%22,%22http://img-2.onedio.com%22,%22http://img-3.onedio.com%22%5D,%22baseurl%22:%22http://onedio.com%22,%22shorturl%22:%22http://oned.io%22,%22apps%22:%7B%22facebook%22:%22182553655160563%22,%22twitter%22:%22vOOSTgExVU8yRQurRlSqQ%22%7D,%22devel%22:false%7D"));
+window.oio.init = function() { (this.initializers = this.initializers || []); this.initializers.push([].slice.call(arguments)); }
+window.oio.user = { "_id": "000000000000000000000000" };
+window.oio.filteredCats = JSON.parse(decodeURI("%5B%5D"));
+(function () {
+  var gads = document.createElement('script');
+  gads.async = true;
+  gads.type = 'text/javascript';
+  var useSSL = 'https:' == document.location.protocol;
+  gads.src = (useSSL ? 'https:' : 'http:') +
+    '//www.googletagservices.com/tag/js/gpt.js';
+  var node = document.getElementsByTagName('script')[0];
+  node.parentNode.insertBefore(gads, node);
+})();
+
+var __gaC = JSON.parse(decodeURI("%7B%22create%22:%7B%7D,%22setters%22:%7B%22dimension1%22:%22Galeri%22%7D%7D"));
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-26809107-1', __gaC.create);
+if (__gaC.setters) ga('set', __gaC.setters);
+ga('set', 'dimension4', JSON.parse(decodeURI("%22desktop%22")));
+(function() {
+var _fbq = window._fbq || (window._fbq = []);
+if (!_fbq.loaded) {
+var fbds = document.createElement('script');
+fbds.async = true;
+fbds.src = '//connect.facebook.net/en_US/fbds.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(fbds, s);
+_fbq.loaded = true;
+}
+})();var categories = JSON.parse(decodeURI("%5B%2250ce951f28e98bd23f00000c%22,%2250ce951f28e98bd23f00000d%22,%224fa2e79f027fbe9d1c00001b%22,%224fa2e79f027fbe9d1c00001d%22%5D")) || [];
+
+ga('set', 'dimension5', "umutbrdk");
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+googletag.cmd.push(function() {
+  var types = [];
+  
+  if(categories.indexOf('50ce951f28e98bd23f000011') >= 0) types.push('video');
+  else if(categories.indexOf('530bd809764e7634c69c39c9') >= 0) types.push('test');
+  else if(JSON.parse(decodeURI("false")))
+    types.push('haber')
+  else
+    types.push('galeri')
+    
+  googletag.defineSlot('/21814681/habetyani300x250', [300, 250], 'div-gpt-ad-1435832693034-0').addService(googletag.pubads());
+  googletag.pubads().enableSingleRequest();
+  googletag.pubads().collapseEmptyDivs();
+  googletag.pubads().setTargeting('type', types)
+  googletag.pubads().setTargeting('kategori', categories)
+  googletag.enableServices();
+});ga('send', 'pageview');
+HABERLERGALERİLERVİDEOLARTESTLERKATEGORİLERGiriş YapFacebook ile Girişvar renderMasthead, closeMasthead;
+
+oio.init(function () {
+  if(oio.devel) return false;
+  
+  var mh = $('#mh')
+    , tMh = $('#toggleMasthead')
+    , dcSlot = $("#div-gpt-ad-1439069164341-0")
+    , closeBtn = $('<i class="fa fa-times"></i>').text("Reklamı Gizle")
+    , showBtn = $('<i class="fa fa-caret-up"></i>').text("Reklamı Göster")
+    , dayKey = (new Date).toLocaleDateString();
+    
+    
+  closeMasthead = function () {
+    if (window.localStorage) localStorage.setItem("masthead_" + dayKey, 'true');
+    dcSlot.remove();
+    tMh.html(showBtn).addClass('showmasthead').removeClass("hidemasthead")
+    window.location.reload();
+  }
+  
+  var renderMasthead = function renderMasthead() {
+    googletag.cmd.push(function () {
+      var masthead = googletag.defineSlot('/21814681/masthead', [[1100, 250], [1100, 300], [980, 300], [980, 250], [1100, 1]], 'div-gpt-ad-1439069164341-0').addService(googletag.pubads());
+      googletag.display('div-gpt-ad-1439069164341-0');
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+        if (event.isEmpty) return;
+        if (event.slot == masthead) {
+          tMh.html(closeBtn).addClass('hidemasthead');
+          dcSlot.show();
+          tMh.width(event.size[0])
+        }
+      });
+    });
+  }
+  
+  mh
+    .on("click", '.showmasthead', function () {
+      if (window.localStorage) {
+        localStorage.removeItem("masthead_" + dayKey)
+        window.location.reload();
+      }
+    })
+    .on("click", '.hidemasthead', closeMasthead)
+    
+  if (localStorage.getItem("masthead_" + dayKey)) {
+    return tMh.html(showBtn).addClass('showmasthead');
+  }
+  renderMasthead()
+});
+#mh iframe {
+  display: inline-block;
+}{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "headline": "Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha",
+  "image": [
+    "http://img-1.onedio.com/img/600/600/541e87a0f92c01663de6e985.img"
+  ],
+  "datePublished": "2014-09-21T11:54:01+03:00",
+  "description": "Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha",
+  "author": {
+        "@context": "http://schema.org",
+        "@type": "Person",
+        "name": "Umut Bardak",
+        "url": "http://onedio.com/profil/umutbrdk",
+        "jobTitle": "Onedio Üyesi"
+  }
+}Bu içerik Onedio üyesi kullanıcı tarafından üretilmiş, Onedio editör ekibi tarafından müdahale edilmemiştir. Siz de Onedio’da dilediğiniz şekilde içerik üretebilirsiniz.Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps DahaOnedio Özel > Komik-21 Eylül 2014, 11:13'te eklendiUmut BardakOnedio Üyesi639PaylaşımFacebook'ta PaylaşTwitter'da PaylaşFavorilerinize ekleyin.Favorilerinizden kaldırın.Email gönderin.1. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e862ebea2ec79439692cf/rev-0/w-635/listing/f-jpg-webp/s-446e53ee1da591327db87e476bae492ff4d01930.jpg","webp":"//img-s2.onedio.com/id-541e862ebea2ec79439692cf/rev-0/w-635/listing/f-jpg-webp/s-446e53ee1da591327db87e476bae492ff4d01930.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":423,"ratio":0.6661417322834645}
+
+2. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e8677bea2ec79439692d6/rev-0/w-635/listing/f-jpg-webp/s-c240821a5f1c8245a5ac4c491f63bb606ccf86ef.jpg","webp":"//img-s1.onedio.com/id-541e8677bea2ec79439692d6/rev-0/w-635/listing/f-jpg-webp/s-c240821a5f1c8245a5ac4c491f63bb606ccf86ef.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":375,"height":932,"ratio":2.485333333333333}
+
+3. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e86844ebedf5f1e7801b7/rev-0/w-635/listing/f-jpg-webp/s-9752ccc6597c607e60f2ac669625397791332d71.jpg","webp":"//img-s2.onedio.com/id-541e86844ebedf5f1e7801b7/rev-0/w-635/listing/f-jpg-webp/s-9752ccc6597c607e60f2ac669625397791332d71.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":597,"height":616,"ratio":1.031825795644891}
+
+4. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e8690de7ee0df1d01b7fb/rev-0/w-635/listing/f-jpg-webp/s-a5a12810ea069b8a117448e56ff1f8e514f11bc3.jpg","webp":"//img-s2.onedio.com/id-541e8690de7ee0df1d01b7fb/rev-0/w-635/listing/f-jpg-webp/s-a5a12810ea069b8a117448e56ff1f8e514f11bc3.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":349,"ratio":0.5496062992125984}
+
+5. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e86a0f92c01663de6e96b/rev-0/w-635/listing/f-jpg-webp/s-221bba8388a0aba0f27d4438d52352eccc3df05d.jpg","webp":"//img-s2.onedio.com/id-541e86a0f92c01663de6e96b/rev-0/w-635/listing/f-jpg-webp/s-221bba8388a0aba0f27d4438d52352eccc3df05d.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":635,"ratio":1}
+
+6. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e86b05245845b43fe0507/rev-0/w-635/listing/f-jpg-webp/s-bd28d0ba7b68d3f3b944f8a6aabe07980b55529a.jpg","webp":"//img-s2.onedio.com/id-541e86b05245845b43fe0507/rev-0/w-635/listing/f-jpg-webp/s-bd28d0ba7b68d3f3b944f8a6aabe07980b55529a.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":352,"ratio":0.5543307086614173}
+
+7. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e86cc6342332d4e99f88d/rev-0/w-635/listing/f-jpg-webp/s-ab6bbb5e56597a3c63094b19a2ce34cd4de0a6c8.jpg","webp":"//img-s2.onedio.com/id-541e86cc6342332d4e99f88d/rev-0/w-635/listing/f-jpg-webp/s-ab6bbb5e56597a3c63094b19a2ce34cd4de0a6c8.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":583,"height":960,"ratio":1.646655231560892}
+
+8. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e86e75245845b43fe050f/rev-0/w-635/listing/f-jpg-webp/s-5a607ca9baa50c868fab53acfd5ce531668dc045.jpg","webp":"//img-s2.onedio.com/id-541e86e75245845b43fe050f/rev-0/w-635/listing/f-jpg-webp/s-5a607ca9baa50c868fab53acfd5ce531668dc045.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":571,"height":960,"ratio":1.681260945709282}
+
+9. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e86f55245845b43fe0512/rev-0/w-635/listing/f-jpg-webp/s-603ea348a1d2464cdcc31a0acd9d8c9469a56cb0.jpg","webp":"//img-s1.onedio.com/id-541e86f55245845b43fe0512/rev-0/w-635/listing/f-jpg-webp/s-603ea348a1d2464cdcc31a0acd9d8c9469a56cb0.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":500,"height":278,"ratio":0.556}
+
+10. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e87036342332d4e99f89a/rev-0/w-635/listing/f-jpg-webp/s-3cdad0196f88e1876cdd79769c1902110e25dff2.jpg","webp":"//img-s1.onedio.com/id-541e87036342332d4e99f89a/rev-0/w-635/listing/f-jpg-webp/s-3cdad0196f88e1876cdd79769c1902110e25dff2.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":715,"ratio":1.125984251968504}
+
+11. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e871fde7ee0df1d01b80b/rev-0/w-635/listing/f-jpg-webp/s-0d69053d9a325c1e2dd1e89ed97de92048f83120.jpg","webp":"//img-s2.onedio.com/id-541e871fde7ee0df1d01b80b/rev-0/w-635/listing/f-jpg-webp/s-0d69053d9a325c1e2dd1e89ed97de92048f83120.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":357,"ratio":0.5622047244094488}
+
+12. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e8724c9cf00ba1e09f43b/rev-0/w-635/listing/f-jpg-webp/s-f67bfe96ba935eae68986070db580a5c68737f03.jpg","webp":"//img-s2.onedio.com/id-541e8724c9cf00ba1e09f43b/rev-0/w-635/listing/f-jpg-webp/s-f67bfe96ba935eae68986070db580a5c68737f03.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":576,"height":960,"ratio":1.6666666666666667}
+
+13. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e873ade7ee0df1d01b810/rev-0/w-635/listing/f-jpg-webp/s-ce328f366642a084929ca6b6c85c6aa7aab45e4d.jpg","webp":"//img-s1.onedio.com/id-541e873ade7ee0df1d01b810/rev-0/w-635/listing/f-jpg-webp/s-ce328f366642a084929ca6b6c85c6aa7aab45e4d.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":332,"ratio":0.5228346456692914}
+
+14. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e8749c9cf00ba1e09f43f/rev-0/w-635/listing/f-jpg-webp/s-1f128d75f66ab21aaf9037157faea65fa3d9ff46.jpg","webp":"//img-s2.onedio.com/id-541e8749c9cf00ba1e09f43f/rev-0/w-635/listing/f-jpg-webp/s-1f128d75f66ab21aaf9037157faea65fa3d9ff46.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":615,"height":297,"ratio":0.48292682926829267}
+
+15. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e87566342332d4e99f8aa/rev-0/w-635/listing/f-jpg-webp/s-29ba25d5cb74205e4d68feeb4259c036e22cf181.jpg","webp":"//img-s1.onedio.com/id-541e87566342332d4e99f8aa/rev-0/w-635/listing/f-jpg-webp/s-29ba25d5cb74205e4d68feeb4259c036e22cf181.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":476,"ratio":0.7496062992125985}
+
+16. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e8765c9cf00ba1e09f444/rev-0/w-635/listing/f-jpg-webp/s-2154597386e1a8ad4c0f3eef7182cb276db878ba.jpg","webp":"//img-s1.onedio.com/id-541e8765c9cf00ba1e09f444/rev-0/w-635/listing/f-jpg-webp/s-2154597386e1a8ad4c0f3eef7182cb276db878ba.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":488,"height":600,"ratio":1.2295081967213115}
+
+17. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e877b5245845b43fe051f/rev-0/w-635/listing/f-jpg-webp/s-938d169a34d52a4cc7a473f4b6316e2fb01fa417.jpg","webp":"//img-s2.onedio.com/id-541e877b5245845b43fe051f/rev-0/w-635/listing/f-jpg-webp/s-938d169a34d52a4cc7a473f4b6316e2fb01fa417.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":375,"height":600,"ratio":1.6}
+
+18. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e878d6342332d4e99f8b5/rev-0/w-635/listing/f-jpg-webp/s-8e909989111278a2fca37100738842eaa8b2b6c8.jpg","webp":"//img-s2.onedio.com/id-541e878d6342332d4e99f8b5/rev-0/w-635/listing/f-jpg-webp/s-8e909989111278a2fca37100738842eaa8b2b6c8.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":535,"height":636,"ratio":1.188785046728972}
+
+19. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e87a0f92c01663de6e985/rev-0/w-635/listing/f-jpg-webp/s-c5f22f4eaf70e0b6f1be7d5a8cb7928b88a7a2e8.jpg","webp":"//img-s2.onedio.com/id-541e87a0f92c01663de6e985/rev-0/w-635/listing/f-jpg-webp/s-c5f22f4eaf70e0b6f1be7d5a8cb7928b88a7a2e8.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":699,"ratio":1.1007874015748031}
+
+20. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e87b26342332d4e99f8be/rev-0/w-635/listing/f-jpg-webp/s-686515fc8ea435f59803a0301fb118ad2cb91bc3.jpg","webp":"//img-s1.onedio.com/id-541e87b26342332d4e99f8be/rev-0/w-635/listing/f-jpg-webp/s-686515fc8ea435f59803a0301fb118ad2cb91bc3.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":498,"height":796,"ratio":1.5983935742971886}
+
+21. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e87d8bea2ec79439692fd/rev-0/w-635/listing/f-jpg-webp/s-1d2d56cce30ade339f9b404d309507b8c00fb560.jpg","webp":"//img-s2.onedio.com/id-541e87d8bea2ec79439692fd/rev-0/w-635/listing/f-jpg-webp/s-1d2d56cce30ade339f9b404d309507b8c00fb560.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":512,"ratio":0.8062992125984252}
+
+22. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e87eb4ebedf5f1e7801df/rev-0/w-635/listing/f-jpg-webp/s-c69ae77d072fe8e9df03d57f89844d46d13da61e.jpg","webp":"//img-s2.onedio.com/id-541e87eb4ebedf5f1e7801df/rev-0/w-635/listing/f-jpg-webp/s-c69ae77d072fe8e9df03d57f89844d46d13da61e.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":357,"ratio":0.5622047244094488}
+
+23. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e87fa6342332d4e99f8cc/rev-0/w-635/listing/f-jpg-webp/s-91085fb4ecf42e410e91f4e6495cdd9770223942.jpg","webp":"//img-s1.onedio.com/id-541e87fa6342332d4e99f8cc/rev-0/w-635/listing/f-jpg-webp/s-91085fb4ecf42e410e91f4e6495cdd9770223942.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":475,"height":566,"ratio":1.191578947368421}
+
+24. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e8805de7ee0df1d01b827/rev-0/w-635/listing/f-jpg-webp/s-d40cff1497f43d227c78f37c8034cc5e4e881bcd.jpg","webp":"//img-s2.onedio.com/id-541e8805de7ee0df1d01b827/rev-0/w-635/listing/f-jpg-webp/s-d40cff1497f43d227c78f37c8034cc5e4e881bcd.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":500,"height":710,"ratio":1.42}
+
+25. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e880f6342332d4e99f8d1/rev-0/w-635/listing/f-jpg-webp/s-5a755e24a58c31b8edde0d11548059fcaa226862.jpg","webp":"//img-s2.onedio.com/id-541e880f6342332d4e99f8d1/rev-0/w-635/listing/f-jpg-webp/s-5a755e24a58c31b8edde0d11548059fcaa226862.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":480,"height":480,"ratio":1}
+
+26. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e881e5245845b43fe052f/rev-0/w-635/listing/f-jpg-webp/s-86c179bb443e7587e08fd7539ec15360c43ec8d9.jpg","webp":"//img-s2.onedio.com/id-541e881e5245845b43fe052f/rev-0/w-635/listing/f-jpg-webp/s-86c179bb443e7587e08fd7539ec15360c43ec8d9.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":950,"ratio":1.4960629921259843}
+
+27. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e88296342332d4e99f8d5/rev-0/w-635/listing/f-jpg-webp/s-24c2228b01936c00386f472bd525e1e0a3bc5274.jpg","webp":"//img-s2.onedio.com/id-541e88296342332d4e99f8d5/rev-0/w-635/listing/f-jpg-webp/s-24c2228b01936c00386f472bd525e1e0a3bc5274.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":397,"ratio":0.6251968503937008}
+
+28. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e88344ebedf5f1e7801e7/rev-0/w-635/listing/f-jpg-webp/s-fa8cb16db96e0dbd437d2d29f0450e66d0655204.jpg","webp":"//img-s2.onedio.com/id-541e88344ebedf5f1e7801e7/rev-0/w-635/listing/f-jpg-webp/s-fa8cb16db96e0dbd437d2d29f0450e66d0655204.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":500,"height":888,"ratio":1.776}
+
+29. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e883f5245845b43fe0535/rev-0/w-635/listing/f-jpg-webp/s-3c43ee979fce7388056f8b57dcb0b3a70b899fc3.jpg","webp":"//img-s2.onedio.com/id-541e883f5245845b43fe0535/rev-0/w-635/listing/f-jpg-webp/s-3c43ee979fce7388056f8b57dcb0b3a70b899fc3.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":476,"ratio":0.7496062992125985}
+
+30. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e8848bea2ec7943969309/rev-0/w-635/listing/f-jpg-webp/s-1303e4dbdc57765d375b10c6614e1520e8a64e21.jpg","webp":"//img-s2.onedio.com/id-541e8848bea2ec7943969309/rev-0/w-635/listing/f-jpg-webp/s-1303e4dbdc57765d375b10c6614e1520e8a64e21.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":357,"ratio":0.5622047244094488}
+
+31. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e885bc9cf00ba1e09f461/rev-0/w-635/listing/f-jpg-webp/s-7a016c1b43e00ad65eeadce328f759e11a81a990.jpg","webp":"//img-s2.onedio.com/id-541e885bc9cf00ba1e09f461/rev-0/w-635/listing/f-jpg-webp/s-7a016c1b43e00ad65eeadce328f759e11a81a990.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":797,"ratio":1.2551181102362206}
+
+32. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e8861bea2ec794396930f/rev-0/w-635/listing/f-jpg-webp/s-27785e87ec6d3cee69f77b6671088c91f793018a.jpg","webp":"//img-s2.onedio.com/id-541e8861bea2ec794396930f/rev-0/w-635/listing/f-jpg-webp/s-27785e87ec6d3cee69f77b6671088c91f793018a.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":510,"height":859,"ratio":1.684313725490196}
+
+33. {"type":"image-static","src":{"jpg":"//img-s1.onedio.com/id-541e88734ebedf5f1e7801f0/rev-0/w-635/listing/f-jpg-webp/s-5df12e798a898b8afed5ccc2c03ba662a7315631.jpg","webp":"//img-s1.onedio.com/id-541e88734ebedf5f1e7801f0/rev-0/w-635/listing/f-jpg-webp/s-5df12e798a898b8afed5ccc2c03ba662a7315631.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":600,"height":337,"ratio":0.5616666666666666}
+
+34. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e887ede7ee0df1d01b831/rev-0/w-635/listing/f-jpg-webp/s-b2f227ba2e48f2586e90715668a8bd7b826bbb57.jpg","webp":"//img-s2.onedio.com/id-541e887ede7ee0df1d01b831/rev-0/w-635/listing/f-jpg-webp/s-b2f227ba2e48f2586e90715668a8bd7b826bbb57.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":460,"height":623,"ratio":1.3543478260869566}
+
+35. {"type":"image-static","src":{"jpg":"//img-s2.onedio.com/id-541e89344b265825202ced1d/rev-0/w-635/listing/f-jpg-webp/s-ba5522409adab635bb0e7f14c0c54b22672df50f.jpg","webp":"//img-s2.onedio.com/id-541e89344b265825202ced1d/rev-0/w-635/listing/f-jpg-webp/s-ba5522409adab635bb0e7f14c0c54b22672df50f.webp"},"alt":"Game of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha","width":635,"height":357,"ratio":0.5622047244094488}
+
+Bu içerik Onedio üyesi kullanıcı tarafından üretilmiş, Onedio editör ekibi tarafından müdahale edilmemiştir. Siz de Onedio’da dilediğiniz şekilde içerik üretebilirsiniz.Yılın En Cool Havuz Partisi Red Bull Jump & Freeze'de Gelmiş Geçmiş En Tarz 11 Kostüm31 Ocak'ta gerçekleştirilecek Red Bull Jump and Freeze'...Onedio Medyaaracılığı ileİLGİNİZİ ÇEKEBİLECEK DİĞER İÇERİKLERGame of Thrones Oyuncularının Dizi İçin Seçildikleri İlk Halleri29 Aşırı Komik Montajla Game of Thrones'da Esen Nicholas Cage RüzgarlarıGame of Thrones'un Türkiye Versiyonu Kadrosunda Değerlendirilesi 30 AlternatifBU İÇERİĞE EMOJİYLE TEPKİ VER!FACEBOOK YORUMLARIONEDİO ÜYELERİ NE DİYOR?Yorum YazınGönderDreamgirlbu nasıl bi film heryerde bunu görüyorum13 Ağu 2015YanıtlaBeğen (0)Şikayet EtFeride Sude ÖzsevenFilm değil dizi28 Eki 17:50YanıtlaBeğen (0)Şikayet EtDreamgirlasssasas :)28 Eki 21:19YanıtlaBeğen (0)Şikayet EtDreamgirl:d tmm nasıl bi dizi28 Eki 21:19YanıtlaBeğen (0)Şikayet Etİlyada Xenovia G.:D 22 :D18 Nis 2015YanıtlaBeğen (1)Şikayet EtFatma Nur E.daha diziye yeni başladım.spolierlar sayesinde daha başında diziyi bitirdim amk20 Şub 2015YanıtlaBeğen (0)Şikayet EtBilinmeyenÇok komik ya23 Eyl 2014YanıtlaBeğen (0)Şikayet EtDiabolus5-7-8-9-18-19-21-22-23-26   koptum :)22 Eyl 2014YanıtlaBeğen (1)Şikayet EtEda Naz Akıllıoğlu35 için not; zindanda işedi22 Eyl 2014YanıtlaBeğen (0)Şikayet EtGeorge CostanzaUlan  başına kocaman bi SPOILER ibaresi koysana aq.21 Eyl 2014YanıtlaBeğen (0)Şikayet EtEda Naz AkıllıoğluBu diziyi spoiler'sız izleyemiyoruz ne yazık ki..22 Eyl 2014YanıtlaBeğen (0)Şikayet Etgorkem___OOOFF :d AHHAHAHA21 Eyl 2014YanıtlaBeğen (0)Şikayet Etabdullah demirhain jofrey21 Eyl 2014YanıtlaBeğen (1)Şikayet EtTWITTER'DA NE DİYORLAR?Oruçlu ve Öfkeli@sedaa495orospu çocukları ya yarım saattir gülüyorum asfsdafarfgsdf  http://t.co/gSfz4fYOeT5 Tem 2015YanıtlaRetweetFavoriENYO Targaryen@The_Best_Navyhttp://t.co/rXuBArjvVf
+13. caps asfasf3 Şub 2015YanıtlaRetweetFavoriHasan Güder ®@hasangdrHay mk :D | http://t.co/U6sxbtxY3H16 Oca 2015YanıtlaRetweetFavoriDila@DilasenBeyler capsler fena http://t.co/3qJIltvyVn15 Kas 2014YanıtlaRetweetFavoriÖznur Meray@BjkMerayGame of Thrones İçin Yapılmış Birbirinden Komik 35 Caps Daha http://t.co/7sRCXqNH7l cok guldugum kesin ahsjdjfk13 Eki 2014YanıtlaRetweetFavoriDaha Fazla Tweet GösterBaşlıklarGame of ThronesArabasından Vazgeçemeyenlerin Çok İyi Bildiği 11 DurumShellaracılığı ile
+
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1435832693034-0'); });
+  
+
+Hiçbir Şey Eskisi Gibi Değil Artık! Duygularından Arınan Bir Toplum Haline Geliyoruz...5839518 Şubat, 16:02Sosyal Medya Kullanması Acil Yasaklanması Gereken 14 Saykodelik Kişi1.7b3758515 Şubat, 15:05Kendini İfade Edemeyen Bir Topluma Dönüştüğümüzü Kanıtlayan 8 Feci Söz13b15848915 Şubat, 14:20Bunlara Bakınca İnsanın Tuvalet Kağıdı Olası Geliyor: 22 Harika Askı00018 Şubat, 15:3455 Yıllık Evliliklerini Rüya Gibi Bir Albüme Dönüştüren Dünyanın En Şeker Çifti5.3b4646716 Şubat, 15:27Efsane Bir Aşk Hikayesi Olanların Kalplerini Isıtacak 7 Tatlı PaylaşımNestle Damakaracılığı ile75 Yıl Boyunca Derinleşen Fırça Darbeleri: Pablo Picasso'nun Muazzam Portreleri33218 Şubat, 18:45Efkan Âlâ'nın Ankara Saldırısı Sonrası Attığı Tweete Gösterilen 15 Trajikomik Tepki6.1b12540418 Şubat, 13:20Yok Canım Ne Kıskanması? Mutluluklar Ülkesi Norveç Hakkında 16 İlginç Bilgi1.8b4617316 Şubat, 16:58Yıllardır Duyduğumuz, Aslında Gerçek Olan 14 Yemek Efsanesi03018 Şubat, 16:38Ünlülerin Sevgililer Günü'ne Özel Aşk Dolu Instagram Paylaşımları1.3b844214 Şubat, 21:28Yaratıcılık Dağlarından Serbest Stil Kayarak Aşağı İnmiş 36 İlginç Whatsapp Grup İsmi1.7b4480715 Şubat, 18:35Aynı Anda Her İşe Yetişebilen İnsanların Çok İyi Bildiği 11 DurumDimesaracılığı ile'Vurdu ve Gol Oldu' Dedirten Son Zamanlarda Verilmiş En Efsane 15 Ayar Gibi Ayar5.3b811.1b15 Şubat, 20:54Ankara Patlamasına Ünlülerden Tepkiler: Biz İyi Değiliz!2.7b05918 Şubat, 11:33İnsanoğlu Salaklığa Doymuyor: Plajdaki İnsanların Selfie Sevdası Yüzünden Ölen Yavru Yunus1171341718 Şubat, 16:37Boyu 1.80'den Kısa Olanların Hiçbir Zaman Anlam Veremeyeceği 23 Görsel6b14671713 Şubat, 22:46İlkokul Öğrencilerinin Üniversite Mezunlarından Daha Başarılı Olacağı Bilgi Testi501218 Şubat, 16:05Majesteleri 53 Yaşında: NBA'in Fantastik Efsanesi Michael Jordan'a Söylenmiş 15 Afili Söz320618 Şubat, 15:36Çocukların Ebeveynlerine Ne Kadar da Çok Benzediklerinin Kanıtı 18 Fotoğraf1.9b616514 Şubat, 22:21Kalabalık Ortamları Günahı Kadar Sevmeyen İnsanlar Hakkında Bilmeniz Gereken 15 Şey4.5b13821416 Şubat, 16:55Ayda 30 Bin Dolar Kazanan 17 Yaşındaki Dahiden Başarılı Olmanın Sırları848416417 Şubat, 20:09Bu Test 10 Yıl Sonra Yaşayacağın Evi Söylüyor!6975520514 Şubat, 15:288 Maddeyle Stres Hakkında Bilmeniz Gerekenler43518 Şubat, 16:0020'li Yaşların Kafası Yavaş Yavaş Geçerken Yaşanan 17 Fevkalade Önemli Değişim4.7b8834315 Şubat, 21:11Çocukken Hepimizin Oscarlık Performans Sergileyerek Söylediği 19 Masum Yalan1.1b108716 Şubat, 22:49Dünyanın En Genç Görünen Kadını: Christie Brinkley669619515 Şubat, 21:19Sponsorlu İçeriklerArabasından Vazgeçemeyenlerin Çok İyi Bildiği 11 DurumShell aracılığı ileEfsane Bir Aşk Hikayesi Olanların Kalplerini Isıtacak 7 Tatlı PaylaşımNestle Damak aracılığı ileAynı Anda Her İşe Yetişebilen İnsanların Çok İyi Bildiği 11 DurumDimes aracılığı ileYılın En Cool Havuz Partisi Red Bull Jump and Freeze'den Fevkaladenin Fevkinde 8 AtlayışOnedio Medya aracılığı ileHakkımızdaİletişimGeri BildirimKariyerGizlilik PolitikasıKullanıcı SözleşmesiTopluluk KurallarıYayın İlkeleriReklamSosyal Medya'da Bizi Takip Edinonedio.com sosyal içerik platformuIOS ve ANDROID CİHAZINIZA İNDİRİNGörüş Bildir Haber Ekle Galeri EkleOnedio ÖzelTürkiyeDünyaEğlenceİş DünyasıYaşamTeknolojiKültürSporOnedio ÖzelTestKadınVideoErkekİlginçKomikDosyalarTürkiyePolitikaGündemDış Politika3. SayfaEğitimDünyaOrtadoğuAvrupaAmerikaAsyaAfrikaRusyaGüney AmerikaÇinEğlenceTVÜnlülerModaAstrolojiDiğerİş DünyasıEkonomiİş YaşamıGirişimcilikYaşamSeyahatSağlıkYemekDoğaAileGüzellikİlişkilerDekorasyonTeknolojiİnternetCihazlarMobilBilimOyunUzayOtomobilKültürTarihSinemaMüzikTiyatroEdebiyatModern SanatlarFotoğrafResimSporFutbolBasketbolDiğer Sporlarrequirejs(["index"], function() { require("dispatcher").emit("initialize-page") });
+_atrk_opts = { atrk_acct:"cRrZj1acFH00iE", domain:"onedio.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "18889239" });
+(function() {
+  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+  s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+  el.parentNode.insertBefore(s, el);
+})();
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+  
+fbq('init', '418147985044065');
+fbq('track', 'PageView');
+
+(function () {
+  var a = document.getElementsByTagName('script')[0],
+    b = document.createElement('script');
+  b.async = !0;
+  b.src = '//cdn.dimml.io/dimml.js';
+  a.parentNode.insertBefore(b, a);
+})();<!--//--><![CDATA[//><!--
+var pp_gemius_identifier = 'ogKacbb84vIz2AvuDmlryZa1rmEpD9sW1tSvd_oob0P.O7';
+// lines below shouldn't be edited
+function gemius_pending(i) { window[i] = window[i] || function() {var x = window[i+'_pdata'] = window[i+'_pdata'] || []; x[x.length]=arguments;};};
+gemius_pending('gemius_hit'); gemius_pending('gemius_event'); gemius_pending('pp_gemius_hit'); gemius_pending('pp_gemius_event');
+(function(d,t) {try {var gt=d.createElement(t),s=d.getElementsByTagName(t)[0],l='http'+((location.protocol=='https:')?'s':''); gt.setAttribute('async','async');
+gt.setAttribute('defer','defer'); gt.src=l+'://gatr.hit.gemius.pl/xgemius.js'; s.parentNode.insertBefore(gt,s);} catch (e) {}})(document,'script');
+//--><!]]>
