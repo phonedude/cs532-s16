@@ -1,0 +1,367 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc}
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage{adjustbox}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{mblue}{rgb}{0,0,255}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=mblue
+}
+
+
+
+\makeindex
+
+\lstset{
+	basicstyle=\footnotesize,
+	breaklines=true,
+	 backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{dkgreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  otherkeywords={*,append,sub,.get,add,self,to\_list,.take,reduce\_by\_key,order\_by,flat\_map,
+  ...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+\begin{document} 
+
+\begin{titlepage}
+
+\begin{center}
+
+\Huge{Assignment 10}
+
+\Large{CS532-s16:  Web Sciences}
+
+\Large{Spring 2016}
+
+\Large{John Berlin}
+
+\Large Generated on \today
+
+\end{center}
+
+\end{titlepage}
+\newpage
+\printindex
+\listoftables
+\lstlistoflistings
+\newpage
+\section*{Question 1}
+\index{Question 1}
+
+\begin{verbatim}
+1.  Using the data from A8:
+
+- Consider each row in the blog-term matrix as a 500 dimension vector, 
+corresponding to a blog.  
+
+- From chapter 8, replace numpredict.euclidean() with cosine as the 
+distance metric.  In other words, you'll be computing the cosine between
+vectors of 500 dimensions.  
+
+- Use knnestimate() to compute the nearest neighbors for both:
+
+http://f-measure.blogspot.com/
+http://ws-dl.blogspot.com/
+
+for k={1,2,5,10,20}.
+\end{verbatim}
+\subsection*{Answer}
+
+As I did in A8, both the stemmed and non-stemmed words for the blogs were used. The cosign distance used was provided by the \href{http://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.spatial.distance.cosine.html}{SciPy} library. Also from A8 I used the \verb+processData.py+  file listing \hyperref[lst:pda10]{\ref{lst:pda10}} with the relavant methods from \verb+clusters.py+  required for this assignment. The code used to generate the results can be seen in listing \hyperref[lst:knnsvm]{\ref{lst:knnsvm}}, as usual please consult the comments in the listing for further details.
+
+The k nearest neighbors for F-Measure can be seen in table \hyperref[tab:fmknns]{\ref{tab:fmknns}} for non-stemmed and table \hyperref[tab:fmkns]{\ref{tab:fmkns}} for stemmed. The results for WSDL can be seen in table \hyperref[tab:wsldknns]{\ref{tab:wsldknns}} for non-stemmed and table \hyperref[tab:wsldkns]{\ref{tab:wsldkns}} for stemmed. Please not that for each k value the previous kth nearest neighbors were included, so I removed them and only include the most unique values for each k value. This means that k=20 only has ten entries, all values for k=10 were apart of the output and can be seen in the k=10 entry.
+
+Just like in A8 the WSDL first nearest neighbor was Dr. Nelsons blog F-Measure but unlike A8 F-Measure had more music blogs in its nearest neighbors.
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{2pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{rp{5cm}}
+\hline
+   k & nearest neighbors                                                                                                                                                                    \\
+\hline
+   1 & FOLK IS NOT HAPPY                                                                                                                                                                    \\ \hline
+   2 & Eli Jace | The Mind Is A Terrible Thing To Paste                                                                                                                                     \\ \hline
+   5 & DaveCromwell Writes, The Kids Are Coming Up From Behind, Blog Name Pending                                                                                                           \\ \hline
+  10 & The World's First Internet Baby, Did Not Chart, mouxlaloulouda, I Hate The 90s, turnitup!                                                                                            \\ \hline
+  20 & ., I/LOVE/TOTAL/DESTRUCTION, Tremble Under Boom Lights, The Night Mail, Encore, Flatbasset, The Power of Independent Trucking, Steel City Rust, from a voice plantation, Cherry Area \\
+\hline
+\end{tabular}
+\caption{F-Measure knearest nonstemmed}
+\label{tab:fmknns} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{rp{5cm}}
+\hline
+   k & nearest neighbors                                                                                                                                                                                          \\
+\hline
+   1 & FOLK IS NOT HAPPY                                                                                                                                                                                          \\ \hline
+   2 & Floorshime Zipper Boots                                                                                                                                                                                    \\ \hline
+   5 & mouxlaloulouda, DaveCromwell Writes, MTJR RANTS \& RAVES ON MUSIC                                                                                                                                           \\ \hline
+  10 & Encore, Samtastic! Review, I/LOVE/TOTAL/DESTRUCTION, I Hate The 90s, The Kids Are Coming Up From Behind                                                                                                    \\ \hline
+  20 & The World's First Internet Baby, Mile In Mine, Blog Name Pending, from a voice plantation, The Campus Buzz on WSOU, The Night Mail, Did Not Chart, Tremble Under Boom Lights, Interstellar Radio Shower, . \\
+\hline
+\end{tabular}
+ \caption{F-Measure knearest stemmed} 
+ \label{tab:fmkns} 
+\end{minipage}
+\end{table}
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{2pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{rp{5cm}}
+\hline
+   k & nearest neighbors                                                                                                                                                                                                         \\
+\hline
+   1 & F-Measure                                                                                                                                                                                                                 \\ \hline
+   2 & The Power of Independent Trucking                                                                                                                                                                                         \\ \hline
+   5 & I/LOVE/TOTAL/DESTRUCTION, ., MAGGOT CAVIAR                                                                                                                                                                                \\ \hline
+  10 & Swinging Singles Club, mouxlaloulouda, Steel City Rust, The World's First Internet Baby, Cherry Area                                                                                                                      \\ \hline
+  20 & Encore, Flatbasset, DaveCromwell Writes, KiDCHAIR, MTJR RANTS \& RAVES ON MUSIC, Blog Name Pending, I Hate The 90s, The Girl at the Rock Show, Eli Jace | The Mind Is A Terrible Thing To Paste, Tremble Under Boom Lights \\
+\hline
+\end{tabular}
+\caption{WSDL knearest nonstemmed}
+\label{tab:wsldknns} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{rp{5cm}}
+\hline
+   k & nearest neighbors                                                                                                                                                                                                           \\
+\hline
+   1 & F-Measure                                                                                                                                                                                                                   \\ \hline
+   2 & Flatbasset                                                                                                                                                                                                                  \\ \hline
+   5 & Tremble Under Boom Lights, I Hate The 90s, Riley Haas' blog                                                                                                                                                                 \\ \hline
+  10 & ., mouxlaloulouda, MTJR RANTS \& RAVES ON MUSIC, The Listening Ear, Cherry Area                                                                                                                                              \\ \hline
+  20 & What Am I Doing?, Karl Drinkwater, My Name Is Blue Canary, The World's First Internet Baby, But She's Not Stupid, Samtastic! Review, Pithy Title Here, I/LOVE/TOTAL/DESTRUCTION, Did Not Chart, The Jeopardy of Contentment \\
+\hline
+\end{tabular}
+ \caption{WSDL knearest stemmed} 
+ \label{tab:wsldkns} 
+\end{minipage}
+\end{table}
+\newpage
+\section*{Question 2}
+\index{Question 2}
+
+\begin{verbatim}
+2.  Rerun A9, Q2 but this time using LIBSVM.  If you have n categories,
+you'll have to run it n times.  For example, if you're classifying music
+and have the categories:
+
+metal, electronic, ambient, folk, hip-hop, pop
+
+you'll have to classify things as:
+
+metal / not-metal
+electronic / not-electronic
+ambient / not-ambient
+
+etc.
+
+Use the 500 term vectors describing each blog as the features, and
+your mannally assigned classifications as the true values.  Use
+10-fold cross-validation (as per slide 46, which shows 4-fold
+cross-validation) and report the percentage correct for 
+each of your categories.
+\end{verbatim}
+\subsection*{Answer}
+As before in A9 the percentage correct is low. Using genre as a label only results in a maximum of a 58\% for Pop/Electronic/Hip-Hop accuracy. But when using Dr. Nelsons labeling of his own blog we get a maximum of 66\% accuracy for lp review. I have included the metrics requested in A9 along with the accuracy and they had only a marginal increase. I still hold to my conclusion from A9 that using the words alone is not enough to classify these blog posts. 
+
+Genre 10 fold accuracy non stemmed can be seen in table \hyperref[tab:10fgnsa]{\ref{tab:10fgnsa}} and stemmed in table \hyperref[tab:10fgsa]{\ref{tab:10fgsa}}. Dr. Nelson label accuracy non stemmed can be seen in table \hyperref[tab:10fdrnsa]{\ref{tab:10fdrnsa}} and stemmed in table \hyperref[tab:10fdrsa]{\ref{tab:10fdrsa}}. Genre preivous metrics can be seen in table \hyperref[tab:10fgns]{\ref{tab:10fgns}} and table \hyperref[tab:10fgs]{\ref{tab:10fgs}} for non stemmed and stemmed. Dr. Nelson labels preivous metrics can be seen in table \hyperref[tab:10fdrns]{\ref{tab:10fdrns}} and table \hyperref[tab:10fdrs]{\ref{tab:10fdrs}} for stemmed and non stemmed.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\hline
+ label                                                              & mean accuracy   \\
+\hline
+ Rock, not Rock                                                     & 49.24\%          \\
+ R\&B/Jazz/Mowtown/Country/Other, not R\&B/Jazz/Mowtown/Country/Other & 56.95\%          \\
+ Pop/Electronic/Hip-Hop, not Pop/Electronic/Hip-Hop                 & 58.39\%          \\
+ Metal/Punk/Hardcore, not Metal/Punk/Hardcore                       & 58.42\%          \\
+ Indie Rock/Alternative, not Indie Rock/Alternative                 & 52.87\%          \\
+\hline
+\end{tabular}
+ \caption{Genre Ten Fold Non Stemmed Accuracy} 
+ \label{tab:10fgnsa} 
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\hline
+ label                                                              & mean accuracy   \\
+\hline
+ Rock, not Rock                                                     & 46.29\%          \\
+ R\&B/Jazz/Mowtown/Country/Other, not R\&B/Jazz/Mowtown/Country/Other & 54.84\%          \\
+ Pop/Electronic/Hip-Hop, not Pop/Electronic/Hip-Hop                 & 54.34\%          \\
+ Metal/Punk/Hardcore, not Metal/Punk/Hardcore                       & 55.32\%          \\
+ Indie Rock/Alternative, not Indie Rock/Alternative                 & 50.92\%          \\
+\hline
+\end{tabular}
+ \caption{Genre Ten Fold Stemmed Accuracy} 
+ \label{tab:10fgsa} 
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\hline
+ label                                                    & mean accuracy   \\
+\hline
+ the song remains the same, not the song remains the same & 56.42\%          \\
+ concert/spotlight, not concert/spotlight                 & 54.37\%          \\
+ lp review, not lp review                                 & 66.05\%          \\
+ forgotten song, not forgotten song                       & 46.16\%          \\
+\hline
+\end{tabular}
+ \caption{Dr. Nelson Ten Fold Non Stemmed} 
+ \label{tab:10fdrnsa} 
+ \end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{ll}
+\hline
+ label                                                    & mean accuracy   \\
+\hline
+ the song remains the same, not the song remains the same & 53.32\%          \\
+ concert/spotlight, not concert/spotlight                 & 49.26\%          \\
+ lp review, not lp review                                 & 64.05\%          \\
+ forgotten song, not forgotten song                       & 44.16\%          \\
+\hline
+\end{tabular}
+ \caption{Dr. NelsonTen Fold Stemmed} 
+ \label{tab:10fdrsa} 
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrr}
+\hline
+ label                          &   precision &   recall &       f1 \\
+\hline
+ Rock                           &    0.50297  & 0.479219 & 0.454893 \\
+ R\&B/Jazz/Mowtown/Country/Other &    0.508877 & 0.518228 & 0.449765 \\
+ Pop/Electronic/Hip-Hop         &    0.494767 & 0.481555 & 0.446287 \\
+ Metal/Punk/Hardcore            &    0.493387 & 0.492323 & 0.431816 \\
+ Indie Rock/Alternative         &    0.494432 & 0.48864  & 0.472867 \\
+\hline
+\end{tabular}
+ \caption{Genre Ten Fold Non Stemmed} 
+ \label{tab:10fgns} 
+\end{table}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrr}
+\hline
+ label                          &   precision &   recall &       f1 \\
+\hline
+ Rock                           &    0.459143 & 0.444075 & 0.43609  \\
+ R\&B/Jazz/Mowtown/Country/Other &    0.524861 & 0.553098 & 0.458025 \\
+ Pop/Electronic/Hip-Hop         &    0.500927 & 0.508585 & 0.440113 \\
+ Metal/Punk/Hardcore            &    0.515069 & 0.534176 & 0.443302 \\
+ Indie Rock/Alternative         &    0.497443 & 0.480556 & 0.47425  \\
+\hline
+\end{tabular}
+ \caption{Genre Ten Fold Stemmed} 
+ \label{tab:10fgs} 
+\end{table}
+
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrr}
+\hline
+ label                     &   precision &   recall &       f1 \\
+\hline
+ the song remains the same &    0.506409 & 0.459346 & 0.434141 \\
+ concert/spotlight         &    0.455613 & 0.431168 & 0.399722 \\
+ lp review                 &    0.629662 & 0.636321 & 0.61821  \\
+ forgotten song            &    0.408316 & 0.394083 & 0.382929 \\
+\hline
+\end{tabular}
+ \caption{Dr. Nelson Ten Fold Non Stemmed} 
+ \label{tab:10fdrns} 
+ \end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{lrrr}
+\hline
+ label                     &   precision &   recall &       f1 \\
+\hline
+ the song remains the same &    0.506409 & 0.459346 & 0.434141 \\
+ concert/spotlight         &    0.455613 & 0.431168 & 0.399722 \\
+ lp review                 &    0.629662 & 0.636321 & 0.61821  \\
+ forgotten song            &    0.408316 & 0.394083 & 0.382929 \\
+\hline
+\end{tabular}
+ \caption{Dr. NelsonTen Fold Stemmed} 
+ \label{tab:10fdrs} 
+\end{table}
+
+\newpage
+\lstinputlisting[language=Python,frame=single,
+caption={KNN and SVM Classification},label=lst:knnsvm,captionpos=b]{knnAndSVM.py}
+
+\newpage
+\lstinputlisting[language=Python,frame=single,
+caption={Proccess Data for A10},label=lst:pda10,captionpos=b]{processData.py}
+\end{document}

@@ -1,0 +1,111 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  
+  <title>IsTodaytheSuperBowl</title>
+        <meta name="description" content="0">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="../css/normalize.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/add2home.css">
+
+<script type="text/javascript">
+var addToHomeConfig = {
+	animationIn: 'bubble',
+	animationOut: 'drop',
+	lifespan:10000,
+	expire:2,
+	touchIcon:true,
+	message:'Remember to add the shortcut to your homescreen. `%icon`'
+};
+</script>
+        <script src="../js/add2home.js"></script>
+        <script src="../js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
+        
+  
+  <link rel="alternate" title="Is Today the Superbowl?" href="rss.php" type="application/rss+xml" />
+  <script type="text/javascript" src="iic.js"></script>
+</head>
+
+
+<body style="text-align: center; padding-top: 200px;">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=148226848562074";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+  <a href="rss.php" 
+    style="font-weight: bold; 
+          font-size: 120pt; 
+          font-family: Arial, sans-serif; 
+          text-decoration: none; 
+          color: black;" 
+    title="RSS"
+    id="answer">
+  <noscript>NO</noscript>
+
+  </a>
+  
+  <script type="text/javascript">
+    document.getElementById('answer').innerHTML = isTodaytheSuperBowl("US");
+  </script>
+  
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21203397-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+<br />
+
+<p style="font-size: 6pt; 
+          font-family: Arial, sans-serif; 
+          text-decoration: none; 
+          color: grey;
+padding-top: 150px;">
+<p><div class="fb-like" data-href="http://istodaythesuperbowl.com" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div></p>
+<p><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></p>
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8635952029667994";
+/* Is Today the Default */
+google_ad_slot = "0893262752";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</body>
+</html>

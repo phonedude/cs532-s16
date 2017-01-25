@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Box Sports</title>
+
+
+
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- Web Fonts -->
+    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+
+    <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css'>
+    
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="/assets/css/style.css" rel="stylesheet"/>
+<link href="/assets/css/headers/header-default.css" rel="stylesheet"/>
+<link href="/assets/plugins/animate.css" rel="stylesheet"/>
+<link href="/assets/plugins/line-icons/line-icons.css" rel="stylesheet"/>
+<link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="/assets/plugins/parallax-slider/css/parallax-slider.css" rel="stylesheet"/>
+<link href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css" rel="stylesheet"/>
+<link href="/assets/css/app.css" rel="stylesheet"/>
+<link href="/assets/css/footers/footer-v1.css" rel="stylesheet"/>
+<link href="/assets/css/pages/page_log_reg_v1.css" rel="stylesheet"/>
+<link href="/assets/css/theme-colors/dark-red.css" rel="stylesheet"/>
+<link href="/assets/css/custom.css" rel="stylesheet"/>
+
+
+    
+    
+    
+    
+
+
+    <script type="text/javascript">
+        var appInsights=window.appInsights||function(config){
+            function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+        }({
+            instrumentationKey:"4b69f6c3-46c6-4140-8287-8efd42f88950"
+        });
+
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+        <div class="header dark-menu">
+            <div class="container">
+                <!-- Logo -->
+
+                    <a class="logo" href="#">
+                        
+                        <div class="hidden-xs">
+                            <p><span class="dropcap">B</span><span class="standout-text" style="color:white">LACK</span></p><p><span class="dropcap">B</span><span class="standout-text" style="color:white">OX</span></p><p><span class="dropcap">S</span><span class="standout-text" style="color:white">PORTS</span></p>
+                        </div>
+                        <div class="hide-desktop">
+                            <p><span class="dropcap">BBS</span></p>
+                        </div>
+                    </a>
+
+                
+                <!-- End Logo-->
+
+                <!-- Topbar -->
+                <div class="topbar">
+                    <ul class="loginbar pull-right">                
+                        
+                        
+
+                            <ul class="loginbar pull-right">
+        <li class="topbar-devider"></li>
+        <li><a href="/Account/Register" id="registerLink">Register</a></li>
+        <li class="topbar-devider"></li>
+        <li><a href="/Account/Login" id="loginLink">Log in</a></li>
+    </ul>
+
+                    </ul>
+                </div>
+                <!-- End Topbar -->
+
+                <!-- Toggle get grouped for better mobile display -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="fa fa-bars"></span>
+                </button>
+                <!-- End Toggle -->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+                <div class="container">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/Picks/Nfl">NFL Picks</a>
+                        </li>                        
+                        <li>
+                            <a href="/DataCenter/Pwr">Power Rankings</a>
+                        </li> 
+                                  
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container content-sm">
+            
+
+
+
+
+
+
+
+
+<select class="select-week form-control lead" data-val="true" data-val-number="The field SelectedWeekId must be a number." data-val-required="The SelectedWeekId field is required." id="SelectedWeekId" name="SelectedWeekId"><option value="201501">Week 1</option>
+<option value="201502">Week 2</option>
+<option value="201503">Week 3</option>
+<option value="201504">Week 4</option>
+<option value="201505">Week 5</option>
+<option value="201506">Week 6</option>
+<option value="201507">Week 7</option>
+<option value="201508">Week 8</option>
+<option value="201509">Week 9</option>
+<option value="201510">Week 10</option>
+<option value="201511">Week 11</option>
+<option value="201512">Week 12</option>
+<option value="201513">Week 13</option>
+<option value="201514">Week 14</option>
+<option value="201515">Week 15</option>
+<option value="201516">Week 16</option>
+<option value="201517">Week 17</option>
+<option value="201518">Wild Card</option>
+<option value="201519">Division</option>
+<option value="201520">Conference</option>
+<option value="201521">Pro Bowl</option>
+<option selected="selected" value="201522">Super Bowl 50</option>
+</select>
+
+
+
+<div id="pickview">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default panel-transparent">
+            <div class="panel-heading">
+                <h4 class="panel-title game-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#2015220001">
+                        <div class="row" style="height:30px">
+                            <div class="col-md-4 col-xs-6 hard-left">
+                                <p class=""><strong>02/07/2016 06:30 PM</strong></p>
+                            </div>
+                            <div class="col-md-8 col-xs-6" style="height:100%">
+                                <div class="row" style="height:100%">
+                                    <div class="col-md-6 col-xs-3" style="height:100%">
+                                        <div class="row" style="height:100%">
+                                            <div class="col-md-8 hidden-phone">
+                                                <span class="pull-right hidden-xs">Carolina Panthers</span>
+                                            </div>
+                                            <div class="col-md-4 col-xs-2 " style="height:100%">
+                                                <span class="pull-right" style="height:100%"><img src="/Content/Images/Teams/5.svg" style="height:100%"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 col-xs-1" >                                        
+                                        @                                        
+                                    </div>
+                                    <div class="col-md-5 col-xs-3" style="height:100%">
+                                        <div class="row" style="height:100%">
+                                            <div class="col-md-4 col-xs-3" style="height:100%">
+                                                <span class="pull-left" style="height:100%"><img src="/Content/Images/Teams/10.svg" style="height:100%"></span>
+                                            </div>
+                                            <div class="col-md-8 hidden-phone">
+                                                <span class="pull-left hidden-xs">Denver Broncos</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </h4>
+            </div>
+            <div id="2015220001" class="panel-collapse collapse" style="background-color : transparent">
+                <div class="panel-body">
+                    
+                    
+                        <div class="container-fluid">
+                                <div>
+                                    
+                                    <p> <b>SUPER BOWL 50 RECAP: </b> Nailed it! Denver easily won the game and covered the spread, and the game went very much the way I predicted it, even hitting my MVP prediction in Von Miller at 22:1 odds (although a blow-out is not what I expected).  Cam Newton clearly has some growing up to do, and what was up with him not jumping on that fumble?? He said that wasn’t why they lost the game, but give me a break man.  It was a 6 point game at that point, and had he recovered they could have punted and easily gotten the ball back for another chance to score and pull ahead….so crazy.  </p> <p> In the end, I won 4 units on the Broncos and another 1.875 units on Props.  That concludes my Playoff run with a whopping 18.125 units in profit, with a 12-5-1 ATS record (70.5%) and a final winning streak of 8 weeks!  In fact, since Week 8, I banked just over 50 units…hello summer vacation!  </p> <p> I’m sad to see the season end, but I’m also pretty amped to regroup and begin working on all the new features we have planned for the site.  Here’s a few we’re working on right now: </br></br> <b> 1.  Data Center: </b> I use a lot of game statistics (yards per attempt, yards per carry, 3rd and 4th down %’s, defensive QBR, etc) when I do my analysis, and currently I need to either do my own back-of-the-napkin calculations or go to another website to get these stats.  Well that’s going to change.  We’re developing a data center so that Black Box Sports can provide ALL data and information needed to analyze a game.  The goal is to make it so that the only information I use is also available to you, on this site. Look out for this over the Spring, and possibly even by the end of Winter.  If you’ve <a ref="http://blackboxsports.net/Account/Register">REGISTERED</a>, we will also send a note when this is available. </br> </br> <b>2.  Pools: </b> We’re looking into building a platform for pools; specifically, Survivor and Confidence Pools.  If we do get this up for next season you will be able to create your own pools and invite your friends/co-workers.  I would probably also start a fun pool for free, potentially for some prizes as well (cash is probably preferred, right?).  Again, if you’ve <a ref="http://blackboxsports.net/Account/Register">REGISTERED</a> we will send a note when this is available. </br> </br> <b>3.  Community Features: </b> We’re looking into various ways so that you and the rest of the BBS community can share your thoughts, opinions, picks, etc on the games, and even compete with each other.  I think Pools are a good first step to this, but we know we can do more.  I don’t know if we will have a forum yet (many of you have asked me for this), but we’re looking into it!   </p> <b>4.  NBA Model: </b> This one is more of a long-shot to get prepped anytime soon, but we’re trying.  Getting the data is a bit of a challenge, as is reformatting and prepping it so we can actually create a projection Model for it.  Best-case scenario we will have something in the works for next season, but it would be in Beta phase only.  In that case I probably wouldn’t put it up on the site right away, but I may tweet/post out the projections and recommended leans through my social media channels (below)….stay tuned for this.   </p> <p> On top of all that, we’re going to keep upgrading the Guru Picks page (pick tracking, data insights, etc), and provide more information on what the Model is and how I use it.  I don’t know if ALL of this will get done this off-season, but we’re certainly going to try! If you have any other ideas PLEASE shoot me a message and let me know! <p><b> SOCIAL MEDIA - CONNECT WITH US!: </b> On that note, if you do want to reach out, of if you’re interested in hearing about our progress and new developments as we go, please do connect with us.  There’s 3 ways we have to reach you right now…do all 3! </br> 1)	<b><a ref="http://blackboxsports.net/Account/Register"> REGISTER </a></b> with the us </br> 2)	Follow me on Twitter <b><a href="http://www.twitter.com/bbsportsguru">@bbsportsguru </a></b> </br> 3)	Like us on <b> <a href="http://www.facebook.com/blackboxsports">Facebook</a></b> </p> <p> You can also reach me via email at bbsportsguru@gmail.com. Thanks for checking out the site and we look forward to making it even better for you next season! </p>
+                                </div>
+                                <hr />
+                            <h4>BBS Statistical Model</h4>
+
+                            <div>
+                                <span class="standout-text">Spread: </span><span>Panthers -5.5</span>
+                            </div>
+                            <div>
+                                <span class="standout-text">Total: </span><span>45.0</span>
+                            </div>
+
+                            <div class="padding-top-5">
+                                <span class="standout-text">Projected Outcome: </span> 
+                                <span>Panthers win by 3.4 pts</span>
+                            </div>
+                            <div>
+                                <span class="standout-text">Model Lean: </span>
+                                    <span>2 units on the Broncos</span>
+                                <br/>
+                                <div class="padding-top-5">
+                                    <p>
+                                        <br />
+                                            <span> Since 2013, when the BBS NFL model has a 2 unit lean on the HOME team</span> <br />
+                    
+                                            <span>...as UNDERDOGS of 3 pts or more, it’s 9-2 (82.00 %) ATS</span><br />
+                    
+                                            <span>...as UNDERDOGS of 3-7 pts, it’s 6-2 (75.00 %) ATS</span><br />
+                    
+                                            <span>...as UNDERDOGS of 3 or more in NON-CONFERENCE match-ups, it’s 0-1 (0.00 %) ATS</span><br />
+                    
+                                            <span>...as UNDERDOGS of 3-7 pts in NON-CONFERENCE match-ups, it's 0-1 (0.00 %) ATS</span><br />
+                                    </p>
+                                </div>
+                            </div>        
+                            <hr />
+                            <div class="container-fluid">
+       
+                                <h4>BBS Power Rankings</h4>           
+                                <table class="table table-condensed table-bordered col-lg-12">
+                                    <thead>
+                                        <tr>
+                                            <td>Power Rankings</td>
+                                            <td>Overall</td>
+                                            <td>Offense</td>
+                                            <td>Defense</td>
+                                            <td>Special Teams</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>                            
+                                                Broncos
+                                            </td>
+                                            <td>
+                                                4
+                                            </td>
+                                            <td>
+                                                21
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                26
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Panthers
+                                            </td>
+                                            <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                3
+                                            </td>
+                                            <td>
+                                                7
+                                            </td>
+                                            <td>
+                                                15
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Edge
+                                            </td>
+                                            <td>
+                                                    <img src="/Content/Images/Teams/5.svg" style="height:30px; width:auto">
+                                            </td>
+                                            <td>
+                                                    <img src="/Content/Images/Teams/5.svg" style="height:30px; width:auto">
+
+                                            </td>
+                                            <td>
+                                                    <img src="/Content/Images/Teams/10.svg" style="height:30px; width:auto">
+
+                                            </td>
+                                            <td>
+                                                    <img src="/Content/Images/Teams/5.svg" style="height:30px; width:auto">
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+            
+                            </div>
+                            <div>
+                                <br />
+                                <hr />                        
+                                <div>                            
+                                    <h4>BBS Guru’s Thoughts & Pick</h4>
+                                    <div>
+                                        <p> <b>PANTHERS OFF vs. BRONCOS DEF: </b> </br>
+Cam Newton just keeps on rolling and is easily going to walk away with MVP honors despite losing his stud receiver Kelvin Benjamin in training camp, and playing behind an O-line that was basically thrown together with duck tape and glue during the off-season (Oher?); truly a remarkable accomplishment.  None of that, however, matters in this game.  A lot of the skepticism surrounding the Panthers coming into the playoffs was their soft schedule, particularly the defenses they played.  In fact, the best defense they played in the regular season, according to our Power Rankings, was the Eagles (5th) back in week 7.  After that, the top ranked defense was actually the Cardinals last week, although I wrote last week that there were concerns with some key injuries on the Cards D.  The Broncos, on the other hand, easily have the best defense in the league and are actually historically great.  The Orange crush lead the NFL in both net YPA and YPC this season, becoming just the 4th team since the 1970 merger to pull off that feat (2008 Steelers, 1991 Eagles and 1987 Bears), so I think it’s safe to say that Cam has never played a defense of this caliber in his short career. </P>
+<P> So how will the Panthers attack? Well, it’s a safe bet that they’re not going to all of sudden move away from what got them here in the first place, which is establishing the run and using that to open up the deep passing attack.  I’ve written before that I think Stewart is overrated (that doesn’t mean he’s bad, by the way), but get’s a lot of praise because of how good the offense has been overall.  He only had 986 yards on 242 carries during the regular season (4.1 YPC), and that includes the Eagles, Redskins, Saints (twice), Colts, Giants and Packers - all bottom-10 run defenses - on the schedule.  As previously stated, the Broncos led the league in stuffing the run, so I don’t see why Stewart would run wild on them. </p>
+<p> Of course, the Panthers rushing attack is much more dynamic than just Stewart considering Cam Newton has a run package all for himself.  I’m actually not sure how the Broncos will fair against Cam-runs.  They haven’t played any QB’s this year that need to be accounted for in the run game the way Cam needs to be.  They do play in the same division as Alex Smith, who is a good scrambler, but that’s not the same thing as a designed run.  With that in mind I can say with confidence that Cam will have more success than Stewart, and the rest of the back-field for that matter, when his number is called, which is significant considering he could get 10+ carries in this game (he had 10 against the Cardinals (2 kneel downs) and 11 against the Seahawks (3 kneel downs)). </p>
+<p> That’s important because I don’t see Newton having a good game aerially.  I know he’s had a good season, including some big games passing, but he simply doesn’t have the weapons (or experience) to pull it off against a very talented Broncos secondary, in my opinion.  Chris Harris and Aqib Talib can easily take care of Ginn and Funchess, which is going to leave Cam as a massive target for a sick pass rush from Von Miller, Demarcus Ware, and Derek Wolfe. That’s not good because Cam has made some questionable throws this year, which he’s gotten away with up until now, but I question his ability to keep that up against Denver’s top ranked passing defense.  If he’s not careful, those decisions could result in some turnovers, which could be devastating for a Panthers team that is used to playing with a lead. That said, Gronkowski just had a massive game against the Broncos, so I don’t see why Olsen couldn’t have similar success, especially if they can isolate him on TJ Ward, who is a great tackler but not-so-good in coverage. </p>
+<p> <b>BRONCOS OFF vs. PANTHERS DEF: </b> </br>
+The other side of the ball is less complicated, at least on paper.  Peyton Manning still leads the Broncos, and while he’s played mistake-free playoff football for the most part, at least in terms of avoiding the back-breaking turnovers that plagued the first half of his 2015 campaign, he’s still limited physically. The biggest problem I think is the lack of zip on his passes right now, which he’s going to need against a very fast Panthers stop unit that thrives on turnovers (+20 turnover ratio in the regular season, +8 in the playoffs). </p>
+<p> With that in mind, not all hope is lost for Peyton when he does drop back to pass.  Not only does he have some incredible experience going for him, but he also has arguably the highest football IQ in the game, which will help him take care of the ball.  I wrote about this last week, but behind Josh Norman the Panthers happen to be very thin in the secondary after both Charles Tillman and Bene Benwikere were lost for the season due to injury. That means, next to Norman, the Panthers will start Robert McClain (who was signed as a FA on December 15th), and Cortland Finnegan (who was also a FA until signed on November 30th). It’s amazing to me that Palmer wasn’t able to take advantage of this last week, but he looked like a drunken deer in the headlights, for whatever reason.  Peyton is not better than Palmer at this point in his career, but he is at least smart enough to know his limitations - as well as the Panthers’ – and play within them, and for that reason I think he will find some spots in key moments to take advantage of with Demaryius Thomas, Emmanuel Sanders and Owen Daniels. </p>
+<p> That said, since Peyton does know his limitations – and everyone does at this point – he will 100% try and establish the run and stick with it for the full 60 mins.  The Panthers held opponents to just 3.9 YPC on the season, which is good enough for top-10, but that also means they aren’t impregnable, as Tyson would say.  David Johnson is a great example of this actually – he was slicing thru the Panthers run defense before the Cardinals had to abandon the run early.  CJ Anderson and Ronnie Hillman aren’t the best backs (especially the latter) – and neither are as good as David Johnson – but they’re good enough to keep the Panthers honest and open up some holes in the secondary for Peyton and co.  They ran the ball well against the Steelers and Patriots, both of which are as good (or better in the Steelers case) at stopping the run as the Panthers are, so why can’t that continue?  </p>
+<p> The match-up on the ground is soooo important not just because it opens up favorable match-ups in the passing game, but also because it will protect Peyton from the pass rush by making Kawann Short and sack-specialist Mario Addison hesitate before pinning their ears back.  The Broncos’ offensive line has been shaky all season, so if the Panthers have free reign to rush Peyton, he will be in for a long day.  Of course, Peyton will also utilize various snap counts to help in this regard as well (side note – this could very well be the last time we here “OMAHA!”…pretty crazy). </p> 
+<p> <b>FINAL THOUGHTS & PICK </b> </br>
+I may sound contrarian, but I don’t understand why everyone thinks it’s a given the Panthers are going to steamroll the Broncos.  The blueprint to beat the Panthers was laid out when the Falcons took them down in week 16. Their defense slow down Cam by stopping the inside run with their front 7, taking away the deep passing game with Trufant on Ginn, and committing the rest of their resources to Greg Olsen.  Their offense moved the ball by sticking with the run, converting manageable 3rd down situations and taking care of the football (1 turnover)….sound familiar? This is exactly what I think the Broncos will attempt to do, even without the Falcons game on tape, and the match-up analysis suggests they can execute this game plan even better, especially on defense, where they have the make-up to potentially clamp down on the entire attack.  This isn’t to say the Panthers won’t score – they won’t get shut out because their own defense will leave them in favorable field position more often than not – but there’s no guarantee they even win, let alone cover a 6 point spread (Bovada). </p>
+<p> Speaking of the spread, this line is out of control.  Pinnacle opened with the Panthers as 3.5-point favorites during half time of the Cardinals game, and since then it’s done nothing but rise as the public has been pounding the Panthers.  I get where they’re coming from. The Panthers crushed both the Seahawks and the Cardinals, and Peyton is falling apart, so how could they possibly lose?! Well, the Seahawks game should not have been surprising given the dubious scheduling position the Hawks were in, while Palmer inexplicably transformed into Brian Hoyer.  Handicapping is so much more than just 2 games and there’s a reason why Pinnacle opened at 3.5, which even then was a tad bit higher than our Model’s projection of 3.4 (taking into account neutral field). </p>
+<p> Speaking of the Model’s projection, winning by 3.4 obviously opens up a couple points of line value with the Broncos.  While a couple pts doesn’t seem like much on the surface, it is significant according to our Model, which is why it is recommending a 2 unit wager on the Broncos.  I happen to like them just a bit more.  I’m a huge proponent of the “Defense wins championships” mantra, and I’ve been saying all year that the Broncos are a “bet on” team as underdogs or short favorites, so I’m not going to stop now just because it’s the Super Bowl. </p> 
+<p> Broncos +6 is a 4 unit wager for me.  Broncos +7 won’t happen, and there’s no reason to wait for 6.5 since we would only be gaining the hook.  Losing the 6 and getting 5.5 or less, on the other hand, is much worse, so I’ll lock in the +6 (-105) now, which again is available at Bovada.  I hope I peeled the onion back enough for you to see why the Broncos have a solid chance at not just covering the spread, but winning the game as well.  Good luck on whatever you choose and enjoy the game and the end of the season!!  </p>
+<p> <b> PROP BETS: </b> Prop bets, for me anyways, are for fun, and there’s certainly no shortage of prop bets in the Super Bowl (Bovada claims to have 500 up right now).  Here's 10 that I've picked out.  I might add a couple more on the weekend, so check back or follow me on twitter <a href="http://www.twitter.com/bbsportsguru">@bbsportsguru</a> for updates. </p>
+<p><b> 1. Team to score first wins the game – No, +135 (Bovada): </b> I love this prop for 2 reasons. For starters, scoring first definitely does not guarantee a win, especially in a defensive battle.  More importantly though, it gives us Moneyline odds of +135 on whichever team does not score first.  If the Broncos score first, we get the Panthers ML at +135, which is far better than the odds available right now.  If the Panthers score first, we lose a bit of value on the Broncos since you can get them for more than that on the Moneyline right now, but the drop-off is not significant by any means. </p>
+<p><b> 2. CJ Anderson Over 56.5 rush yds, -125 (Bet365):</b> As I mentioned in my write-up, I think CJ Anderson should have a good game.  The Panthers run defense is a bit overrated, so we’re getting some value here. Besides, he’s had over 70 rush yds in each of his last 4 games, 3 of which were against very good run defenses (Steelers, Bengals, Patriots). </p>
+<p><b> 3. Broncos FG’s Made – Over 1.5, +100 (Bet365):</b> I’m pretty surprised we’re getting +odds with this.  McManus isn’t a bad kicker, and he’s had multi-FG games every game since Peyton took over, including 7 in the playoffs. </p>
+<p><b> 4. Cam Newton to score a TD (anytime), -111 (Bet365):</b> You almost have to bet this. </p>
+<p><b> 5. Most Time of Possession – Broncos, +100 (Bet365):</b> Looking at previous stats shows that the Panthers average 36 mins of possession in the post-season, which is better than the Broncos’ 31 and the reason why the Broncos are dogs in this prop.  However, since I’m projecting the Broncos to come out with a similar plan as the Falcons in week 16, I think they slow this game down and win the TOP battle (Falcons won that battle 36 mins – 24 mins). </p>
+<p> <b> 6. & 7. Panthers win by 7-12, +400; Broncos win by 1-6, +475 (Bet365 & Bovada)</b> Since I’m projecting a close game and think the Broncos can win, the latter choice is a no brainer (and would add to my winnings of Broncos +6).  That said, if the Panthers manage to just cover the spread the former play would help win back some of the losses.  For that reason, I’m going to put a little extra on the former vs the latter. </p>
+<p><b> 8. Total Band – 31-40 pts, +275 (Bet365 & Bovada):</b> My analysis suggests a low scoring game.  I thought about simply playing the under for 1 unit, but 45 isn’t all that high to begin with. This is a small play for me. </p>
+<p><b> 9. Peyton Manning to score a TD (anytime), +1600 (Bet365):</b> Why not? This is the Super Bowl, a time when you reach deep into the playbook and call things that were never called before.  How about a play-action naked bootleg from 5 yds out? Nobody would expect that! </p>
+<p> <b> 10. Super Bowl MVP – Von Miller, +2200 (Bet365):</b> Obviously the popular MVP bets are going to be the QB’s.  If the Panthers win, Cam will almost certainly get the honors (more on this in a second), but if the Broncos win it should be because of their defense.  That opens up a lot of value on a flier like Von Miller, who will need to have a big game in order for the Broncos to win anyways.  Interestingly, Cam as MVP is -168, which is better odds than Carolina ML.  There’s a chance that someone like Luke Kuechly could get it, but 99 times out of a 100 it would be Cam if the Panthers win, so you might be better off picking that than the Panthers ML.  I’m not, but thought I’d share that option with you. </p>
+
+                                    </div>
+                                    <br />
+                                    <span class="standout-text">Final Bets: </span>
+                                    <span>Broncos +6 (4 units -105) CORRECT</br> <b> PROP BETS (5.8 units): </b> </br> Team to score first wins – No (1 unit to profit 1.35u, +135 @ Bovada) INCORRECT </br> CJ Anderson O56.5 Rush yds (1.25 units to profit 1u, -125 @ Bet365) CORRECT </br> Broncos O1.5 FG’s made (1 unit to profit 1u, +100 @ Bet365) CORRECT </br> Cam Newton TD - anytime (0.55 units to profit 0.5u, -111 @ Bet365) INCORRECT</br> Most Time of Possession – Broncos (0.5 units to profit 0.5u, +100 @ Bet365) INCORRECT</br> Panthers win by 7-12 (0.65 units to profit 2.6u, +400 @ Bet365 & Bovada) INCORRECT</br> Broncos win by 1-6 (0.35 units to profit 1.4875u, +425 @ Bet365) INCORRECT</br> Total Band - 31-40 pts (0.3 units to profit 0.825u, +275 @ Bet365 & Bovada) CORRECT</br> Peyton Manning TD – anytime (0.1 units to profit 1.6u, +1600 @ Bet365) INCORRECT</br> Super Bowl 50 MVP – Von Miller (0.1 units to profit 2.2u, +2200 @ Bet365) CORRECT </span>
+                                </div>                    
+                            </div>                                            
+                        </div>
+                </div>         
+                
+            </div>           
+        </div>
+</div>
+</div>
+
+
+
+        </div>    
+        
+        <!--=== Footer Version 1 ===-->
+        <div class="footer-v1 dark-menu">
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <!-- About -->
+                        <div class="col-md-4 md-margin-bottom-40">
+                            
+
+                            <a class="logo" href="#">
+                                
+                                <p><span class="dropcap">B</span><span class="standout-text" style="color:white">LACK</span></p><p><span class="dropcap">B</span><span class="standout-text" style="color:white">OX</span></p><p><span class="dropcap">S</span><span class="standout-text" style="color:white">PORTS</span></p>
+                            </a>
+                            <br />
+                            <p>Our mission is to become your one stop shop for Betting Advice, and Analytics.</p>
+                            
+                        </div><!--/col-md-3-->
+                        <!-- End About -->
+                        <!-- Link List -->
+                        <div class="col-md-4 md-margin-bottom-40">
+                            <div class="headline"><h2>Useful Links</h2></div>
+                            <ul class="list-unstyled link-list">
+                                
+                                <li><a href="#">About us - Coming Soon</a><i class="fa fa-angle-right"></i></li>
+                                <li><a href="/Home/Terms">Terms of Service</a><i class="fa fa-angle-right"></i></li>
+                                
+                                <li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+                            </ul>
+                        </div><!--/col-md-3-->
+                        <!-- End Link List -->
+                        <!-- Address -->
+                        <div class="col-md-4 map-img md-margin-bottom-40">
+                            <div class="headline"><h2 class="footer-header">Contact Us</h2></div>
+                            <address class="md-margin-bottom-40">
+                                Email: <a href="mailto:bbsports.contact@gmail.com" class="">bbsports.contact@gmail.com</a>
+                            </address>
+                        </div><!--/col-md-3-->
+                        <!-- End Address -->
+                    </div>
+                </div>
+            </div><!--/footer-->
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                2015 &copy; All Rights Reserved.
+                                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                            </p>
+                        </div>
+                        <!-- Social Links -->
+                        <div class="col-md-6">
+                            <ul class="footer-socials list-inline">
+                                <li>
+                                    <a href="https://www.facebook.com/BlackBoxSports" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook" target="_blank">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                
+                                
+                                <li>
+                                    <a href="https://twitter.com/#!/BBSportsGuru" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter" target="_blank">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social Links -->
+                    </div>
+                </div>
+            </div><!--/copyright-->
+        </div>
+        <!--=== End Footer Version 1 ===-->     
+    </div>      
+
+
+
+            <script src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script src="/assets/plugins/jquery/jquery.min.js"></script>
+
+            <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+            <script src="/assets/plugins/back-to-top.js"></script>
+<script src="/assets/plugins/smoothScroll.js"></script>
+<script src="/assets/plugins/parallax-slider/js/modernizr.js"></script>
+<script src="/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
+<script src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/plugins/owl-carousel.js"></script>
+<script src="/assets/js/plugins/parallax-slider.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+            
+    <script>
+        $(document).ready(function () {
+            $('.select-week').change(function () {
+                $.get("/Picks/Games", { weekId: $(this).val() }, function (data) {
+                    $('#pickview').html(data);
+
+                });
+
+
+            });
+
+         
+
+        })
+    </script>
+
+</body>
+</html>

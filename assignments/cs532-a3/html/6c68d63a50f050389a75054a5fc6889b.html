@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQ8EUVRACQAFVVdbAQk="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+    <title>How Butterfinger is encouraging NFL players to break the rules - Business Insider</title>
+    <meta name="date" content="2016-02-07" />
+<meta name="sailthru.date" content="2016-02-07" />
+<meta name="news_keywords" content="NFL, Butterfinger, Cam Newton, Super Bowl, SUPER BOWL XLIX, Football, BI Original Video, Eames Yates" />
+<meta name="sailthru.tags" content="NFL, Butterfinger, Cam Newton, Super Bowl, SUPER BOWL XLIX, Football, BI Original Video, Eames Yates" />
+<meta name="description" content="VIDEO: They'll pay players up to $50K." />
+<meta name="sailthru.description" content="VIDEO: They'll pay players up to $50K." />
+<meta name="title" content="How Butterfinger is encouraging NFL players to break the rules" />
+<meta name="sailthru.verticals" content="sportspage,bi-video" />
+<meta name="sailthru.title" content="How Butterfinger is encouraging NFL players to break the rules" />
+<meta name="tbi-image" content="http://static2.businessinsider.com/image/56b534ba9037f70a430d45f9/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg" />
+<meta name="sailthru.image.full" content="http://static2.businessinsider.com/image/56b534ba9037f70a430d45f9/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg" />
+<meta name="sailthru.image.thumb" content="http://static5.businessinsider.com/image/56b534ba9037f70a430d45f9-50-50/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg" />
+<meta name="sailthru.author" content="Eames Yates" />
+<meta property="og:title" content="How Butterfinger is encouraging NFL players to break the rules" />
+<meta property="og:description" content="VIDEO: They'll pay players up to $50K." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2" />
+<meta property="og:site_name" content="Business Insider" />
+<meta property="fb:app_id" content="155043519637" />
+<meta property="article:publisher" content="businessinsider" />
+<meta property="author" content="Eames Yates" />
+<meta name="twitter:url" content="http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2" />
+<meta name="twitter:title" content="How Butterfinger is encouraging NFL players to break the rules" />
+<meta name="twitter:description" content="VIDEO: They'll pay players up to $50K." />
+<meta name="twitter:card" content="player" />
+<meta property="twitter:player" content="https://player.ooyala.com/tframe.html?embedCode=82N2twMDE6-Bb1WahBKLT1Y8QjqiAhWu&amp;pbid=6e12e8b3387a44daacfb73afba25a76e" />
+<meta property="twitter:player:width" content="435" />
+<meta property="twitter:player:height" content="251" />
+<meta property="twitter:player:stream" content="https://player.ooyala.com/tframe.html?embedCode=82N2twMDE6-Bb1WahBKLT1Y8QjqiAhWu&amp;pbid=6e12e8b3387a44daacfb73afba25a76e" />
+<meta property="twitter:player:stream:content_type" content="video/mp4; codecs=avc1.42E01E, mp4a.40.2" />
+<meta property="twitter:image" content="http://static2.businessinsider.com/image/56b534e08d3eaea323d331c8-506-253/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg" />
+<meta name="twitter:creator" content="realeames" />
+<meta name="twitter:site" content="BI_Sports" />
+<meta property="article:author" content="http://www.businessinsider.com/author/eames-yates" />
+<meta property="og:image" content="http://static4.businessinsider.com/image/56b534e08d3eaea323d331c8-1190-625/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg" />    
+<link rel="canonical" href="http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2">
+<link rel="alternate" href="http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2" hreflang="x-default">
+<link rel="alternate" href="http://www.techinsider.io/" hreflang="en-GB">
+    <link href="http://static4.businessinsider.com/assets/css/min-base-us.css?1455229258" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://static5.businessinsider.com/assets/css/min-post-us.css?1455229258" media="screen" rel="stylesheet" type="text/css" />
+<link href="" rel="syndication-source" />    <link type="text/css" rel="stylesheet" media="print" href="http://static2.businessinsider.com/assets/css/print.css?1455229258" />
+    
+    <script type="text/javascript">
+        //this should be refactored to the BI.Google_Plus object, however the BI core library will need to be moved to above the headScript call
+        window.gPlusConfigs = {client_id : '551214076990-h27puiaonnlg9a9772gq3qbe9nk6qnno.apps.googleusercontent.com', base_domain: 'businessinsider.com'}; 
+    </script>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://static2.businessinsider.com/assets/js/min2.js?1455229258"></script>
+<script type="application/ld+json">
+    //<![CDATA[
+    {"@context":"http:\/\/schema.org","@type":"NewsArticle","headline":"How Butterfinger is encouraging NFL players to break the rules","url":"http:\/\/www.businessinsider.com\/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2","thumbnailUrl":"http:\/\/static2.businessinsider.com\/image\/56b534ba9037f70a430d45f9\/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg","dateCreated":"2016-02-07T14:13:15Z","articleSection":"sportspage","creator":"Eames Yates","keywords":["NFL","Butterfinger","Cam Newton","Super Bowl","SUPER BOWL XLIX","Football","BI Original Video"]}    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    BI.post.isSlideshow=false;    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    post = {"id":"56b533b08fe4de1b251eb979","uri":"http:\/\/www.businessinsider.com\/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2","thumb":"http:\/\/static4.businessinsider.com\/image\/56b534ba9037f70a430d45f9-90-90\/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules.jpg","author":"Eames Yates","author_ids":"Eames Yates:5x","post_type":"post"};    //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        Author = "Eames Yates";
+        Category = "NFL|Butterfinger|Cam Newton|Super Bowl|SUPER BOWL XLIX|Football|BI Original Video";
+        AuthorType = "Staff";
+        Editor = "Sara Silverstein";
+        BIISub = "none"
+            //]]>
+</script>
+<script type="text/javascript">
+    //<![CDATA[
+    
+        BI.nav_select = "Sports";
+        BI.highTrafficMode = 0;
+        BI.post.isDraft = 0;
+        BI.post.url = "http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2";
+        BI.post.name = "how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2";
+        BI.comments.currentPage = 0;
+        BI.comments.filterPundits = 1;
+        BI.comments.getAllComments = 1;
+            //]]>
+</script>    <!-- optimizely desktop -->
+        <!-- End optimizely desktop -->
+
+    <!--Tech Insider Pinterest-->
+    
+    
+    
+    <meta name="tbi-vertical" content="sportspage" />
+    <meta name="viewport" content="width=1024" />
+
+    <!--[if gte IE 9]>
+    <style type="text/css">
+        .gradient {
+            filter: none;
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link type="text/css" rel="stylesheet" media="all" href="http://static5.businessinsider.com/assets/css/ie8.css" />
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="http://static3.businessinsider.com/assets/js/vendor/ie8/placeholders.min.js"></script>
+    <![endif]-->
+
+    <!--[if IE 9]>
+        <link type="text/css" rel="stylesheet" media="all" href="http://static4.businessinsider.com/assets/css/ie9.css" />
+        <script type="text/javascript" src="http://static5.businessinsider.com/assets/js/shims/Element.classList.js"></script>
+    <![endif]-->
+
+    <!--comScore Identifier: comscorekw=sportspage-->
+    <!--Tech Insider if IE 9 -->
+    
+    <script type="text/javascript">
+        var vertical = 'sportspage';
+        var PageType = 'video';
+        var post_id = '';
+        var _sf_startpt=(new Date()).getTime();
+    </script>
+
+    <!-- Kissmetrics -->
+    <script type="text/javascript">
+        var _kmq = _kmq || [];
+        var _kmk = _kmk || '999f578acebfab6dd29b540ab4ebbcbaafafa774';
+
+        function _kms(u){
+            setTimeout(function(){
+                var s = document.createElement('script');
+                var f = document.getElementsByTagName('script')[0];
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = u;
+                f.parentNode.insertBefore(s, f);
+            }, 1);
+        }
+            </script>
+    <!-- Kissmetrics -->
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/businessinsider/sportspage" />
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="http://static1.businessinsider.com/assets/images/us/favicons/apple-touch-icon-57x57.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="60x60" href="http://static3.businessinsider.com/assets/images/us/favicons/apple-touch-icon-60x60.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://static3.businessinsider.com/assets/images/us/favicons/apple-touch-icon-72x72.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="76x76" href="http://static4.businessinsider.com/assets/images/us/favicons/apple-touch-icon-76x76.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://static2.businessinsider.com/assets/images/us/favicons/apple-touch-icon-114x114.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="120x120" href="http://static1.businessinsider.com/assets/images/us/favicons/apple-touch-icon-120x120.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="144x144" href="http://static1.businessinsider.com/assets/images/us/favicons/apple-touch-icon-144x144.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="152x152" href="http://static1.businessinsider.com/assets/images/us/favicons/apple-touch-icon-152x152.png?v=zXXjpe0lwg" />
+<link rel="apple-touch-icon" sizes="180x180" href="http://static1.businessinsider.com/assets/images/us/favicons/apple-touch-icon-180x180.png?v=zXXjpe0lwg" />
+<link rel="icon" type="image/png" href="http://static3.businessinsider.com/assets/images/us/favicons/favicon-32x32.png?v=zXXjpe0lwg" sizes="32x32" />
+<link rel="icon" type="image/png" href="http://static1.businessinsider.com/assets/images/us/favicons/android-chrome-192x192.png?v=zXXjpe0lwg" sizes="192x192" />
+<link rel="icon" type="image/png" href="http://static1.businessinsider.com/assets/images/us/favicons/favicon-96x96.png?v=zXXjpe0lwg" sizes="96x96" />
+<link rel="icon" type="image/png" href="http://static3.businessinsider.com/assets/images/us/favicons/favicon-16x16.png?v=zXXjpe0lwg" sizes="16x16" />
+<link rel="manifest" href="http://static1.businessinsider.com/assets/images/us/favicons/manifest.json?v=zXXjpe0lwg" />
+<link rel="shortcut icon" href="http://static3.businessinsider.com/assets/images/us/favicons/favicon.ico?v=zXXjpe0lwg" />
+<meta name="apple-mobile-web-app-title" content="Business Insider" />
+<meta name="application-name" content="Business Insider" />
+<meta name="msapplication-TileColor" content="#1d5f7b" />
+<meta name="msapplication-TileImage" content="http://static6.businessinsider.com/assets/images/us/favicons/mstile-144x144.png?v=zXXjpe0lwg" />
+<meta name="theme-color" content="#ffffff" />
+<meta name="linkedin:owner" content="mid:1d5f7b" />
+    <!--[if gte IE 9]>
+        <meta name="application-name" content="Business Insider - sportspage"/>
+        <meta name="msapplication-tooltip" content="Start the page in Site Mode"/>
+        <meta name="msapplication-starturl" content="http://www.businessinsider.com/sportspage"/>
+        <meta name="msapplication-window" content="width=800;height=600"/>
+        <meta name="msapplication-navbutton-color" content="#4C7C8D"/>
+
+        <meta name="msapplication-task" content="name=Tech;action-uri=http://www.businessinsider.com/sai;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Media;action-uri=http://www.businessinsider.com/thewire;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Wall Street;action-uri=http://www.businessinsider.com/clusterstock;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Markets;action-uri=http://www.businessinsider.com/moneygame;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+        <meta name="msapplication-task" content="name=Strategy;action-uri=http://www.businessinsider.com/warroom;icon-uri=http://www.businessinsider.com/favicon.ico"/>
+    <![endif]-->
+
+    <script type="text/javascript">BI.site = 'US';</script>
+    <script type="text/javascript">BI.siteURI = 'http://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.secureURI = 'https://www.businessinsider.com';</script>
+    <script type="text/javascript">BI.staticURI = 'http://static1.businessinsider.com';</script>
+    <script type="text/javascript">BI.env.setDomain('http://www.businessinsider.com');</script>
+    <script type="text/javascript">BI.sailthruHorizonURI = 'horizon.businessinsider.com';</script>
+        <script type="text/javascript">BI.vertical='Sports';</script>
+
+    <script type="text/javascript">BI.configs.ads.post_load_ad_buffer= 75;</script>
+    <script type="text/javascript">BI.configs.ads.subnav_sticky_ad_buffer = 125;</script>
+
+    
+    <script type="text/javascript" src="//platform.linkedin.com/in.js">
+       api_key: x4dbohswv62d
+       authorize: true
+       scope: r_basicprofile r_emailaddress r_network rw_nus
+    </script>
+
+<!-- Taboola head -->
+
+            <!-- Standard Taboola Script -->
+        <script type="text/javascript">
+            window._taboola = window._taboola || [];
+            _taboola.push({video:'auto'});
+            !function (e, f, u) {
+                e.async = 1;
+                e.src = u;
+                f.parentNode.insertBefore(e, f);
+            }(
+                document.createElement('script'),
+                document.getElementsByTagName('script')[0],
+                'http://cdn.taboola.com/libtrc/businessinsider/loader.js'
+            );
+        </script>
+    <!-- / Taboola head -->
+</head>
+
+
+<body class="responsive ">
+
+<div data-cookie-notice-container></div>
+<!-- print only -->
+<img class="print" src="http://static1.businessinsider.com/assets/images/us/logos/logo-print.png" />
+
+<!-- FB Connect -->
+<div id="fb-root" data-bi-facebook-root="155043519637"></div>
+<!-- / FB Connect -->
+
+<!--[if lt IE 9]>
+    <div class="container>
+        <div class="row">
+            <div class="alert alert-error alert-block">
+                <h4>Warning!</h4>
+                You are using an outdated version of Internet Explorer.  For security reasons you should <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank" title="Upgrade IE">upgrade your browser</a>. Please go to Windows Updates and install the latest version.
+            </div>
+        </div>
+    </div>
+<![endif]-->
+
+<!-- masthead -->
+<div class="masthead">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span3 span3-mh">
+                <div data-hamburger class="menu">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <a href="/" class="sprites logo"></a>
+            </div>
+            <div class="span6 span6-mh">
+                                    <h2 class="vert-name"><a href="/category/video">video</a></h2>
+                            </div>
+            <!-- links -->
+            <div class="span3 span3-mh links list-pipes list-right no-pipe">
+                <ul class="search">
+                    <li>
+                        <a data-search-icon-open href="#" title="Search" class="display-none"><span class="svg sprites search-icon"></span></a>
+                        <a data-search-icon-close href="#" class="close-x display-none">
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="links-promo">
+                                                    
+
+    <li class="social">
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" aria-label="Like us on Facebook" target="_blank"><i class="fa fa-facebook ks-header-facebook"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank"><i class="fa fa-twitter ks-header-twitter"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//www.linkedin.com/company/business-insider" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank"><i class="fa fa-linkedin ks-header-linkedin"></i></a>
+    </li>
+                        
+                                                    <li class=""><a href="http://intelligence.businessinsider.com">BI Intelligence</a></li>
+                        
+                                                    <li class="login"><a href="/events">Events</a></li>
+                                            </ul>
+
+                    <ul class="links-user">
+                        
+                        
+                        
+                                                <span data-bi-ajax-route="/esi/user_menubar?0=json%3A%5B%5D"></span>                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Search Area -->
+    <div data-search-over class="nav-over transition">
+        <div class="container transition search">
+            <form method="get" action="/s" class="search-field">
+                <input data-search-input name="q" type="text" placeholder="Search" autocomplete="off">
+            </form>
+        </div>
+    </div>
+    <!-- Nav area -->
+    <div data-nav-over class="nav-over transition">
+
+        <div class="transition">
+            <div class="list-pipes nav-sections">
+                <ul class="verticals">
+
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Trending" href="/trending">
+                                Trending                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Tech" href="/sai">
+                                Tech                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Finance" href="/clusterstock">
+                                Finance                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Politics" href="/politics">
+                                Politics                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Strategy" href="/warroom">
+                                Strategy                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Life" href="/thelife">
+                                Life                            </a>
+                        </li>
+                                                                <li class="active"><a class="item verticals__anchor" data-dropdown-id="dropdown-Sports" href="/sportspage">
+                                Sports                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-Video" href="/video">
+                                Video                            </a>
+                        </li>
+                                                                <li><a class="item verticals__anchor" data-dropdown-id="dropdown-All" href="/">
+                                All                            </a>
+                        </li>
+                                    </ul>
+            </div>
+            <div class="main-nav-dropdown ks-nav-dropdown"></div>
+        </div>
+    </div>
+</div>
+
+<!-- / masthead -->
+
+
+<div data-ad-tout>
+    </div>
+
+
+<div id="main-content">
+                
+    <div class="container">
+        <!-- flash messages -->
+                <div class="siteskin-dropshadow">
+            <div class="row primary-row">
+                                    <div class="breaking-module-rendered" id="breaking-module-rendered">
+                        <div class="page-top page-top-video">
+                        <span data-bi-ajax-route="/esi/breaking_module"></span>                        </div>
+                    </div>
+                                <div class="span12 no-rightrail">
+                    <div class="breaking-module-siteskin" id="breaking-module-siteskin"></div>
+    
+<a name="post-top"></a>
+
+
+<div id="share-email-tmpl">
+    <div id="shareEmailModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="shareEmailModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="shareEmailModalLabel"></h3>
+      </div>
+      <div class="modal-body">
+        <div class="share-email-error alert alert-error display-none"></div>
+
+        <div class="share-email-body">
+            <div class="register">
+                <form id="form_form" class="form-horizontal" action="#" method="post">
+                    <div class="control-group">
+                        <label for="mail_from" class="control-label">From</label>
+                        <div class="controls">
+                            <input type="text" name="mail_from" class="mail-from" placeholder="Your Email Address" />
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label for="mail_to" class="control-label">To</label>
+                        <div class="controls">
+                            <input type="text" name="mail_to" class="mail-to" placeholder="Friend's Email Address" />
+                        </div>
+                    </div>
+                    <input type="hidden" name="action" value="email" />
+                    <div class="control-group">
+                        <div class="controls">
+                            <input type="submit" class="btn submit email-post" value="Send" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="share-email-success" style="display:none">
+            <div class="alert alert-success">
+                You have successfully emailed the post.
+            </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+
+<div  class="content post">
+    <div class="sl-layout-post">
+        
+
+<div  class="content post post-video">
+    <div class="sl-layout-post row-fluid">
+
+        <div class="span8">
+            <h1>How Butterfinger is encouraging NFL players to break the rules</h1>
+
+            <div id="content" class="content">
+                                <div
+                    class="ooyala-video-player"
+                    data-ooyala-autoplay="true"
+                    data-ooyala-player-id="6e12e8b3387a44daacfb73afba25a76e"
+                    data-ooyala-video-id="82N2twMDE6-Bb1WahBKLT1Y8QjqiAhWu"
+                    data-ooyala-ad-set-code="N0azI6b_1_veFseUUvXmfykrUSOCtuYr"
+                >
+                    <!-- BI Loading Spinner -->
+                    <div class="bi-spinner-wrapper">
+                        <div class="sprites bi-spinner">
+                            <div class="rotating"></div>
+                        </div>
+                        <div class="spinner-text">Loading video...</div>
+                    </div>
+                    <!-- /BI Loading Spinner -->
+                </div>
+
+                <!-- Sharing -->
+                <div class="share">
+                    
+<!-- RRSSB start -->
+<div class="rrssb-baseline share-container ks-share-top clearfix" data-share style="display:block;">
+    <!-- buttons start here -->
+    <ul class="rrssb-buttons rrssb-top clearfix">
+        <li class="facebook ks-byline-fb">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2" title="facebook" class="popup">
+                <i class="fa fa-facebook-square"></i>
+                <span class="text">facebook</span>
+            </a>
+        </li>
+        <li class="linkedin ks-byline-linkedin">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2&amp;title=How Butterfinger is encouraging NFL players to break the rules&amp;summary=VIDEO: They'll pay players up to $50K." title="linkedin" class="popup">
+                <i class="fa fa-linkedin"></i>
+                <span class="text">linkedin</span>
+            </a>
+        </li>
+        <li class="twitter ks-byline-tweet">
+            <a href="http://twitter.com/share?url=http://read.bi/1nN8jz8&amp;via=BI_Sports&amp;text=How Butterfinger is encouraging NFL players to break the rules" title="twitter" class="popup">
+                <i class="fa fa-twitter"></i>
+                <span class="text">twitter</span>
+            </a>
+        </li>
+        <li class="email button-email ks-byline-email" data-href="http://www.businessinsider.com/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2">
+            <a href="#" title="email">
+                <i class="fa fa-envelope"></i>
+                <span class="text">email</span>
+            </a>
+        </li>
+            </ul>
+    <!-- buttons end here -->
+</div>
+<!-- RRSSB end -->                </div>
+
+                <div class="byline list-pipes no-pipe">
+                    <ul>
+                        <li class="river-post__date">
+	<span class="svg sprites date-icon"></span>
+	<span data-bi-format="date" rel="1454854395">Feb.  7, 2016,  9:13 AM</span>
+</li>                        <li class="pageviews">
+                            <span class="svg sprites hot views"></span>
+                            <span class="hot" title="views">5,858</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="KonaBody post-content">
+                    
+<div><div>
+	<script src="https://apis.google.com/js/platform.js"></script><div class="g-ytsubscribe" data-channel="BusinessInsider" data-layout="full" data-count="default"></div>
+</div></div>
+<p class="embed-spacer"></p>
+<p>Butterfinger is going against the NFL by encouraging players to break the rules after any big play. </p>
+<p><em>Produced by <a href="http://www.businessinsider.com/author/eames-yates">Eames Yates</a><br></em></p>
+<p><strong>Follow BI Video:</strong> <a href="https://www.facebook.com/BusinessInsider.Video" target="_blank">On Facebook</a></p>
+                </div>
+                
+                <div class="see-also-video">
+                                    </div>
+                 
+                                
+            </div>
+        </div>
+
+        <div class="span4 video-page-rail">
+
+            <!-- Upper 300 -->
+                            <div class="right-ad margin-bottom">
+                    <div class="min-height-250">
+                        
+	<div data-bi-ad class="ad dfp" data-adunit="desktop/entertainment/sports/video" data-authors="eames-yates" data-companion-ad="delayed-load" data-pagetype="video" data-pos="atf" data-region="Upper 300 Video" data-responsive="null" data-rubicon_zone_id="" data-sizes="300x250" data-tag="nfl,butterfinger,cam-newton,super-bowl,super-bowl-xlix,football,bi-original-video" data-url="/how-butterfinger-is-encouraging-nfl-players-to-break-the-rules-2016-2" data-views="5001-10000">
+			</div>
+
+	<script type="text/javascript">
+		(function() {
+			'use strict';
+			// Notify the DFP code that a new ad has just been rendered
+			amplify.publish('adRender');
+		}());
+	</script>
+                    </div>
+                </div>
+            
+            <!-- Taboola right rail thumbnails (internal recirc, always show)-->
+                <div id="taboola-right-rail-thumbnails"></div>
+                <script type="text/javascript">
+                  window._taboola = window._taboola || [];
+                  _taboola.push({
+                    mode: 'organic-thumbnails-b',
+                    container: 'taboola-right-rail-thumbnails',
+                    placement: 'Right Rail Thumbnails',
+                    target_type: 'video'
+                  });
+                </script>
+
+        </div>
+
+    </div>
+
+    
+            <h3 class="underlined thin print-hide">Most Popular</h3>
+        <div class="row-fluid recirc margin-bottom ks-video-popular">
+                                        <div class="span2">
+                                <a href="http://www.businessinsider.com/tricky-common-core-2015-12">
+                                    <div class="seealso-image">
+                                        <div class="corner video">
+                                            <i class="sprites"></i>
+                                        </div>
+                                        <img src="http://static2.businessinsider.com/image/562d2a7e69bedd2b3b03dbcf-215/why-55515-is-wrong-under-common-core.jpg" alt="" />
+                                    </div>
+                                </a>
+                                <h4>
+                                    <a class="title-link" href="http://www.businessinsider.com/tricky-common-core-2015-12">Why '5+5+5=15' is wrong under Common Core</a>
+                                </h4>
+                            </div>
+                                        <div class="span2">
+                                <a href="http://www.businessinsider.com/miss-universe-conspiracy-theory-2015-12">
+                                    <div class="seealso-image">
+                                        <div class="corner video">
+                                            <i class="sprites"></i>
+                                        </div>
+                                        <img src="http://static4.businessinsider.com/image/5679ae94eab8ea523b8b456b-215/theres-a-conspiracy-theory-that-the-miss-universe-disaster-wasnt-really-steve-harveys-fault.jpg" alt="" />
+                                    </div>
+                                </a>
+                                <h4>
+                                    <a class="title-link" href="http://www.businessinsider.com/miss-universe-conspiracy-theory-2015-12">There's a conspiracy theory that the Miss Universe disaster wasn't really Steve Harvey's fault</a>
+                                </h4>
+                            </div>
+                                        <div class="span2">
+                                <a href="http://www.businessinsider.com/tony-robbins-explains-how-train-emotions-2015-12">
+                                    <div class="seealso-image">
+                                        <div class="corner video">
+                                            <i class="sprites"></i>
+                                        </div>
+                                        <img src="http://static4.businessinsider.com/image/5679de1e6da811cb278b456a-215/tony-robbins-how-to-pull-yourself-out-of-a-funk.jpg" alt="" />
+                                    </div>
+                                </a>
+                                <h4>
+                                    <a class="title-link" href="http://www.businessinsider.com/tony-robbins-explains-how-train-emotions-2015-12">TONY ROBBINS: How to pull yourself out of a funk</a>
+                                </h4>
+                            </div>
+                                        <div class="span2">
+                                <a href="http://www.businessinsider.com/macys-closing-40-us-stores-retail-california-new-york-virginia-2016-1">
+                                    <div class="seealso-image">
+                                        <div class="corner video">
+                                            <i class="sprites"></i>
+                                        </div>
+                                        <img src="http://static2.businessinsider.com/image/568e7ce9eab8ea273c85702d-215/40-macys-stores-are-closing--find-out-if-yours-is-one-of-them-and-when-the-clearance-sales-start.jpg" alt="" />
+                                    </div>
+                                </a>
+                                <h4>
+                                    <a class="title-link" href="http://www.businessinsider.com/macys-closing-40-us-stores-retail-california-new-york-virginia-2016-1">40 Macy’s stores are closing — find out if yours is one of them and when the clearance sales start</a>
+                                </h4>
+                            </div>
+                                        <div class="span2">
+                                <a href="http://www.businessinsider.com/sports-illustrated-models-in-real-life-2015-12">
+                                    <div class="seealso-image">
+                                        <div class="corner video">
+                                            <i class="sprites"></i>
+                                        </div>
+                                        <img src="http://static3.businessinsider.com/image/56782b5c69bedd5f3b6e32bc-215/heres-what-sports-illustrated-swimsuit-models-look-like-in-real-life.jpg" alt="" />
+                                    </div>
+                                </a>
+                                <h4>
+                                    <a class="title-link" href="http://www.businessinsider.com/sports-illustrated-models-in-real-life-2015-12">Here's what Sports Illustrated swimsuit models look like in real life</a>
+                                </h4>
+                            </div>
+                    </div>
+    
+    <h3 class="underlined thin print-hide">Most Recent</h3>
+    <div class="row-fluid recirc margin-bottom ks-video-recent">
+                    <div class="span2">
+                <a href="http://www.businessinsider.com/mens-guide-victorias-secret-girlfriend-gift-valentines-day-2016-2">
+                    <div class="seealso-image">
+                        <div class="corner video">
+                            <i class="sprites"></i>
+                        </div>
+                        <img src="http://static1.businessinsider.com/image/54da18df6bb3f7c976eef89f-215/4-things-every-man-should-know-before-going-into-a-victorias-secret.jpg" alt="" />
+                    </div>
+                </a>
+                <h4>
+                    <a class="title-link" href="http://www.businessinsider.com/mens-guide-victorias-secret-girlfriend-gift-valentines-day-2016-2">4 things every man should know before going into a Victoria's Secret</a>
+                </h4>
+            </div>
+                    <div class="span2">
+                <a href="http://www.businessinsider.com/brain-implant-paraplegics-walk-royal-melbourne-hospital-stentrode-2016-2">
+                    <div class="seealso-image">
+                        <div class="corner video">
+                            <i class="sprites"></i>
+                        </div>
+                        <img src="http://static4.businessinsider.com/image/56bf7b8edd0895064b8b48cc-215/scientists-have-developed-a-bionic-spinal-cord-to-help-paraplegics-walk.jpg" alt="" />
+                    </div>
+                </a>
+                <h4>
+                    <a class="title-link" href="http://www.businessinsider.com/brain-implant-paraplegics-walk-royal-melbourne-hospital-stentrode-2016-2">Scientists have developed a 'bionic spinal cord' to help paraplegics walk</a>
+                </h4>
+            </div>
+                    <div class="span2">
+                <a href="http://www.businessinsider.com/tinder-popular-woman-men-dating-mistakes-2016-2">
+                    <div class="seealso-image">
+                        <div class="corner video">
+                            <i class="sprites"></i>
+                        </div>
+                        <img src="http://static1.businessinsider.com/image/56bf69f9dd08952f568b464b-215/a-woman-whos-gone-on-150-tinder-dates-reveals-the-worst-mistakes-men-make.jpg" alt="" />
+                    </div>
+                </a>
+                <h4>
+                    <a class="title-link" href="http://www.businessinsider.com/tinder-popular-woman-men-dating-mistakes-2016-2">A woman who's gone on 150 Tinder dates reveals the worst mistakes men make</a>
+                </h4>
+            </div>
+                    <div class="span2">
+                <a href="http://www.businessinsider.com/smart-shirt-prevents-bad-posture-pain-2016-2">
+                    <div class="seealso-image">
+                        <div class="corner video">
+                            <i class="sprites"></i>
+                        </div>
+                        <img src="http://static1.businessinsider.com/image/56bf5c9edd08953a6e8b4843-215/this-japanese-shirt-could-save-you-decades-of-back-pain-thanks-to-one-genius-feature.jpg" alt="" />
+                    </div>
+                </a>
+                <h4>
+                    <a class="title-link" href="http://www.businessinsider.com/smart-shirt-prevents-bad-posture-pain-2016-2">This Japanese shirt could save you decades of back pain thanks to one genius feature</a>
+                </h4>
+            </div>
+                    <div class="span2">
+                <a href="http://www.businessinsider.com/dog-farms-south-korea-meat-fighting-video-2016-2">
+                    <div class="seealso-image">
+                        <div class="corner video">
+                            <i class="sprites"></i>
+                        </div>
+                        <img src="http://static6.businessinsider.com/image/56bf3978dd08957e6d8b47a0-215/inside-korean-dog-farms--where-millions-are-sold-as-meat-or-to-illegal-fighting-rings.jpg" alt="" />
+                    </div>
+                </a>
+                <h4>
+                    <a class="title-link" href="http://www.businessinsider.com/dog-farms-south-korea-meat-fighting-video-2016-2">Inside Korean dog farms — where millions are sold as meat or to illegal fighting rings</a>
+                </h4>
+            </div>
+            </div>
+</div>
+        <div id="social-reader-notification" class="alert clear-both" style="display:none;"></div>
+
+        <div id="facebook-notification" class="alert" style="display:none;"></div>
+
+            </div>
+
+    
+</div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+            </div>
+            <div class="footer" data-bi-footer>
+
+                <div class="container">
+
+                    <section class="top">
+                        <a href="/" class="sprites logo"></a>
+                        <section class="social-icons">
+                            <ul class="links-user">
+                                                        
+                                    
+
+    <li class="social">
+        <a href="//www.facebook.com/businessinsider" title="Like us on Facebook" aria-label="Like us on Facebook" target="_blank"><i class="fa fa-facebook ks-header-facebook"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//twitter.com/businessinsider" title="Follow us on Twitter" aria-label="Follow us on Twitter" target="_blank"><i class="fa fa-twitter ks-header-twitter"></i></a>
+    </li>
+
+    <li class="social">
+        <a href="//www.linkedin.com/company/business-insider" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn" target="_blank"><i class="fa fa-linkedin ks-header-linkedin"></i></a>
+    </li>
+                                
+                                
+                                                        </section>
+                        <a href="//www.techinsider.io" class="partner-logo"></a>
+                    </section>
+
+                    <div class="list-pipes">
+                        <ul>
+                        <li>* Copyright &copy; 2016 Business Insider Inc. All rights reserved. <span class="nowrap">Registration on or use of this site constitutes acceptance of our
+                                                                <a href="/terms">Terms of Service</a>                                and
+                                                                                                <a href="/privacy-policy">Privacy Policy</a>.</span>
+                            </li>
+                            <li><a href="/disclaimer">Disclaimer</a></li>
+                                                            <li><a href="/commerce-on-business-insider">Commerce Policy</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="list-pipes">
+                        <ul>
+                            <li>Powered by <a href="http://www.mongodb.org">MongoDB</a></li>
+                            <li>Stock quotes by <a href="http://www.finanzen.net/">finanzen.net</a></li>
+                                                            <li><a href="http://nytm.org/made">Made in NYC</a></li>
+                                                    </ul>
+                    </div>
+                    <div class="international-links list-pipes">
+                        <ul><li>International Editions:</li>
+                            <li><a href="http://uk.businessinsider.com?IR=C">UK</a></li><li><a href="http://www.businessinsider.de?IR=C">DE</a></li><li><a href="http://www.businessinsider.com.au/">AUS</a></li><li><a href="http://www.businessinsider.co.id/">ID</a></li><li><a href="http://www.businessinsider.in/">IN</a></li><li><a href="http://www.businessinsider.my/">MY</a></li><li><a href="http://www.businessinsider.sg/">SG</a></li>                        </ul>
+                    </div>
+                                           </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="http://static4.businessinsider.com/assets/js/min-foot.js?1455229258"></script>
+
+<!--[if gte IE 9]>
+<script type="text/javascript">amplify.publish("ie9-pinned-site", {"hid":null,"vertical":"sportspage"});</script><![endif]-->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src=""//www.googletagmanager.com/ns.html?id=GTM-NS64GV""
+height=""0"" width=""0"" style=""display:none;visibility:hidden""></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NS64GV');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Twitter widget.js -->
+<script type="text/javascript">
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){
+        js=d.createElement(s);
+        js.id=id;
+        js.src="https://platform.twitter.com/widgets.js";
+        js.async=true;
+        fjs.parentNode.insertBefore(js,fjs);
+    }}(document,"script","twitter-wjs");
+</script>
+<!-- /Twitter widget.js -->
+
+    
+    <!-- START Nielsen Online SiteCensus V6.0 -->
+    <!-- COPYRIGHT 2010 Nielsen Online -->
+    <script type="text/javascript">
+    (function () {
+        var d = new Image(1, 1);
+        d.onerror = d.onload = function () { d.onerror = d.onload = null; };
+        d.src = ["//secure-us.imrworldwide.com/cgi-bin/m?ci=us-103525h&cg=0&cc=1&si=", escape(window.location.href), "&rp=", escape(document.referrer), "&ts=compact&rnd=", (new Date()).getTime()].join('');
+    })();
+    </script>
+    <noscript>
+        <div><img src="//secure-us.imrworldwide.com/cgi-bin/m?ci=us-103525h&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt="" /></div>
+    </noscript>
+    <!-- END Nielsen Online SiteCensus V6.0 -->
+
+    <!-- Begin comScore Tag -->
+    <script type="text/javascript">
+        var _comscore = _comscore || [];
+        _comscore.push({ c1: "2", c2: "9900186" });
+        (function() {
+            var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+            s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+            el.parentNode.insertBefore(s, el);
+        })();
+    </script>
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=9900186&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+
+        <!-- Chartbeat -->
+    <script type="text/javascript">
+        // chartbeat wants the vars in global
+        window._sf_async_config={uid:14447,domain:"businessinsider.com"};
+        window._sf_async_config.useCanonical = true;
+
+        //only set the following if on a sponsored post
+        
+        (function(){
+          function loadChartbeat() {
+            window._sf_endpt=(new Date()).getTime();
+            var e = document.createElement('script');
+            e.setAttribute('language', 'javascript');
+            e.setAttribute('type', 'text/javascript');
+            e.setAttribute('src',
+               (("https:" == document.location.protocol) ? "https://s3.amazonaws.com/" : "http://") +
+               "static.chartbeat.com/js/chartbeat_pub.js");
+            document.body.appendChild(e);
+          }
+          var oldonload = window.onload;
+          window.onload = (typeof window.onload != 'function') ?
+             loadChartbeat : function() { oldonload(); loadChartbeat(); };
+        })();
+    </script>
+    <!-- / Chartbeat -->
+    
+    <!-- BEGIN Krux Control Tag -->
+<script class="kxct" data-id="I2I9M2yx" data-timing="async" data-version="1.9" type="text/javascript">
+  window.Krux||((Krux=function(){Krux.q.push(arguments)}).q=[]);
+  (function(){
+    var k=document.createElement('script');k.type='text/javascript';k.async=true;
+    var m,src=(m=location.href.match(/\bkxsrc=([^&]+)/))&&decodeURIComponent(m[1]);
+    k.src = /^https?:\/\/([^\/]+\.)?krxd\.net(:\d{1,5})?\//i.test(src) ? src : src === "disable" ? "" :
+      (location.protocol==="https:"?"https:":"http:")+"//cdn.krxd.net/controltag?confid=I2I9M2yx"
+  ;
+    var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(k,s);
+  }());
+</script>
+<!-- END Krux Controltag -->
+            <!-- Sailthru Concierge -->
+        <script type="text/javascript" src="http://ak.sail-horizon.com/horizon/v1.js"></script>
+        <script type="text/javascript" src="http://ak.sail-horizon.com/scout/v1.js"></script>
+        <script type="text/javascript">
+        $(function() {
+            // Sailthru Concierge
+            if (window.Sailthru) {
+                var sailthruOpts = {
+                    domain: 'horizon.businessinsider.com'
+                                    };
+                if (window.outerWidth < 800) { //on small screens we dont want the flyout to appear
+                    delete sailthruOpts.concierge;
+                }
+                Sailthru.setup(sailthruOpts);
+            }
+        });
+        </script>
+        <!-- / Sailthru Concierge -->
+            
+<!-- Perfect market JS -->
+    <!-- End Perfect market JS-->
+
+<!-- taboola foot -->
+    <script type="text/javascript">
+        window._taboola = window._taboola || [];
+        _taboola.push({flush: true});
+    </script>
+
+
+<!-- START Parse.ly Include: Standard -->
+<div id="parsely-root" style="display: none">
+  <div id="parsely-cfg" data-parsely-site="businessinsider.com"></div>
+</div>
+<script>
+(function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+      e=d.getElementById(i), r=d.getElementById(p+"-root"),
+      u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+      :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+})("script", "parsely", document);
+</script>
+<!-- END Parse.ly Include -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"4b4136998e","applicationID":"13516968","transactionName":"ZVZVZRBVXEJVVkJRDVwcdEQRQF1cG0VZSxY=","queueTime":0,"applicationTime":181,"atts":"SRFWE1hPT0w=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

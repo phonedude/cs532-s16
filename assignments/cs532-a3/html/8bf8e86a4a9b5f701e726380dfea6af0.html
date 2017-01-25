@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://ogp.me/ns/fb#"><head><!-- MacLeod loves you! --><meta content="text/html; charset=utf-8" http-equiv="Content-Type"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgQCVVdaGwAGU1VUAAE="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><meta content="en_US" http-equiv="Content-Language"><title>Powerful domestic violence Super Bowl ad shows one text can make the difference - CNET</title><meta name="description" content="Technically Incorrect: A simple ad, made with some NFL sponsorship, dramatizes a problem with which the NFL itself is familiar."><link rel="canonical" href="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/"><meta property="al:ios:app_name" content="CNET"><meta property="al:ios:app_store_id" content="383989837"><meta property="al:ios:url" content="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/?search=toapp"><link rel="alternate" hreflang="x-default" href="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/"><link rel="alternate" hreflang="en-us" href="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/"><link rel="search" type="application/opensearchdescription+xml" title="CNET Search" href="http://www.cnet.com/opensearch.xml"><meta property="og:site_name" content="CNET"><meta property="og:title" content="Powerful domestic violence Super Bowl ad shows one text can make the difference"><meta property="og:description" content="Technically Incorrect: A simple ad, made with some NFL sponsorship, dramatizes a problem with which the NFL itself is familiar."><meta property="og:image" content="http://cnet2.cbsistatic.com/hub/i/r/2016/02/05/a337e2af-829f-4613-b04e-4f9f72afafcb/thumbnail/670x503/68353f80c1841b71f76ff9b771492353/abusead.jpg"><meta property="og:type" content="Article"><meta property="og:url" content="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/"><meta property="fb:app_id" content="16995676698"><meta property="fb:admins" content="100001036810388"><meta property="article:publisher" content="https://www.facebook.com/cnet"><meta content="30261067" property="twitter:account_id"><meta content="summary" property="twitter:card"><meta content="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/" property="twitter:url"><meta content="Powerful domestic violence Super Bowl ad shows one text can make the difference" property="twitter:title"><meta content="Technically Incorrect: A simple ad, made with some NFL sponsorship, dramatizes a problem with which the NFL itself is familiar." property="twitter:description"><meta content="http://cnet2.cbsistatic.com/hub/i/r/2016/02/05/a337e2af-829f-4613-b04e-4f9f72afafcb/thumbnail/670x503/68353f80c1841b71f76ff9b771492353/abusead.jpg" property="twitter:image"><meta content="670" property="twitter:image:width"><meta content="503" property="twitter:image:height"><meta content="@CNET" property="twitter:site"><meta content="@ChrisMatyszczyk" property="twitter:creator"><meta content="I1kHyfzmmG1fEVjq8GBUgkfCHc6PNtxce1_VyUuJhws" name="google-site-verification"><meta content="wNWLoFvk5wsdZQ-u75uCNiaHNa7FLFmNtH2t7dZbXmQ" name="google-site-verification"><meta content="47524839a64b83c951afca9ef6c838e0" name="p:domain_verify"><meta content="Product reviews and prices, software downloads, and tech news - CNET" name="msapplication-tooltip"><meta content="http://www.cnet.com/" name="msapplication-starturl"><meta content="width=1024;height=768" name="msapplication-window"><meta content="#424244" name="msapplication-navbutton-color"><meta content="name=Home; action-uri=http://www.cnet.com/; icon-uri=http://www.cnet.com/favicon.ico" name="msapplication-task"><meta content="name=Downloads; action-uri=http://download.cnet.com/; icon-uri=http://download.cnet.com/favicon.ico" name="msapplication-task"><meta content="name=News; action-uri=http://www.cnet.com/news/; icon-uri=http://www.cnet.com/favicon.ico" name="msapplication-task"><meta content="name=Reviews; action-uri=http://www.cnet.com/reviews/; icon-uri=http://www.cnet.com/favicon.ico" name="msapplication-task"><meta content="name=Videos; action-uri=http://www.cnet.com/videos/; icon-uri=http://www.cnet.com/favicon.ico" name="msapplication-task"><meta content="name=Forums; action-uri=http://forums.cnet.com/; icon-uri=http://www.cnet.com/favicon.ico" name="msapplication-task"><meta name="tp:baseUrl" content="http://cnet2.cbsistatic.com/fly/bundles/cnetmpxpdk/pdk"><meta name="viewport" content="width=device-width"><meta name="fragment" content="!"><link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="http://cnet1.cbsistatic.com/fly/css/core/main.desktop-65720a2b23-rev.css"><link rel="stylesheet" href="http://cnet4.cbsistatic.com/fly/css/article/article.desktop-a25deeade1-rev.css"><!--[if IE 8]> <link rel="stylesheet" href="http://cnet3.cbsistatic.com/fly/css/core/ie/ie8-8b304ec002-rev.css" /> <![endif]--><!--[if IE 9]> <link rel="stylesheet" href="http://cnet2.cbsistatic.com/fly/css/core/ie/ie9-2df090d0d6-rev.css" /> <![endif]--><script>
+                (function(){
+    if(window.BOOMR && window.BOOMR.version){return;}
+
+    var dom,doc,where,iframe = document.createElement('iframe');
+
+    iframe.src = "javascript:false";
+    iframe.title = ""; iframe.role="presentation";
+    (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+
+    where = document.getElementsByTagName('script')[0];
+    where.parentNode.insertBefore(iframe, where);
+
+    try {
+        doc = iframe.contentWindow.document;
+    } catch(e) {
+        dom = document.domain;
+        iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+        doc = iframe.contentWindow.document;
+    }
+
+    doc.open()._l = function() {
+        var js = this.createElement("script");
+        if(dom) this.domain = dom;
+        js.id = "boomr-if-as";
+        js.src = '//c.go-mpulse.net/boomerang/' + '38QDY-8CT77-8XNH2-VJQTD-EK4YX';
+        BOOMR_lstart=new Date().getTime();
+        this.body.appendChild(js);
+    };
+
+    doc.write('<body onload="document._l();">');
+    doc.close();
+})();            </script><script type="text/javascript">
+
+    
+    window.CnetPageVars = {
+        ads: {
+            enabled: true,
+            data: {"gpt":{"targeting":{"section":"news","pid":"aa14b6dc-130c-42b9-b057-452f721efc4b","tag":[],"collection":"technically-incorrect","subcollection":"super-bowl","edition":"us","test":"||","device":"desktop","ptype":"article","cid":"powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference","env":"prod"},"adConfig":{"network":{"dev":8264,"prod":8264},"method":"async-inline","regions":[{"region":"uk","countries":["gb","ie","za","bh","kw","om","qa","sa","ae","iq","eg","ye","fr"]},{"region":"au","countries":["au","nz"]},{"region":"asia","countries":["sg","my","th","id","ph","hk","vn","in","tw"]}],"adUnits":{"intromercial":{"outOfPage":true,"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"skin":{"sizes":[[1600,1000]],"position":"top","eventCallbacks":{"slotRenderEnded":"adSkinCallback"}},"resourceCenterTop":{"sizes":[[371,301]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,250],[300,600],[300,1050]],"position":"top","eventCallbacks":{"slotRenderEnded":"mpuPlusTopCallback"}},"marqueeTop":{"sizes":[[300,60]],"position":"top"},"mpuTop":{"sizes":[[300,250]],"position":"top","eventCallbacks":{"slotRenderEnded":"mpuTopCallback"}},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderPlusTop":{"sizes":[[970,66],[728,90],[970,250]],"position":"top","eventCallbacks":{"slotRenderEnded":"leaderboardTopPlusCallback"}},"leaderTop":{"sizes":[[970,66],[728,90]],"position":"top","eventCallbacks":{"slotRenderEnded":"leaderTopCallback"}},"buttonTop":{"sizes":[[88,31],[70,20],[155,40]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"omnibarTop":{"sizes":[[980,45]],"position":"top","eventCallbacks":{"slotRenderEnded":"omnibarTopCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"sponsoredSearchTop":{"sizes":[[501,11]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"dynamicTextLinkTop":{"sizes":[[1171,61]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"mpuMiddle":{"sizes":[[300,250]],"position":"middle","eventCallbacks":{"slotRenderEnded":"mpuMiddleCallback"}},"mpuMiddle2":{"sizes":[[300,250]],"position":"middle2"},"leaderPlusMiddle":{"sizes":[[970,66],[728,90],[970,250]],"position":"middle"},"leaderPlusMantle":{"sizes":[[970,66],[728,90],[970,250]],"position":"mantle","eventCallbacks":{"slotRenderEnded":"leaderPlusMantleCallback"}},"leaderMiddle":{"sizes":[[970,66],[728,90]],"position":"middle","eventCallbacks":{"slotRenderEnded":"leaderMiddleCallback"}},"leaderMiddle2":{"sizes":[[970,66],[728,90]],"position":"middle2"},"leaderBottom":{"sizes":[[970,66],[728,90]],"position":"bottom"},"leaderPlusBottom":{"sizes":[[970,66],[728,90]],"position":"bottom"},"dynamicShowcaseTop":{"sizes":[[371,771]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"infoBoardTop":{"sizes":[[771,201],[620,90]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"infoButtonsTop":{"sizes":[[771,61]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"socialLogoBottom":{"sizes":[[88,31]],"position":"bottom","eventCallbacks":{"slotRenderEnded":"sharebarCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"socialLogoTop":{"sizes":[[88,31]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"sponsoredFeedTop":{"sizes":[[571,121]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"inlineProductCarouselTop":{"sizes":[[621,221],[621,471],[321,31]],"position":"top","eventCallbacks":{"slotRenderEnded":"inlineProductCarouselTopCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"inpageVideoTop":{"sizes":[[641,321],[321,31]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"windowTop":{"sizes":[[120,90]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"windowBottom":{"sizes":[[120,90]],"position":"bottom","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"sponsoredMatchTop":{"sizes":[[971,201]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"replaySquareTop":{"sizes":[[271,271]],"position":"top","eventCallbacks":{"slotRenderEnded":"replaySquareCallBack"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"replayWideTop":{"sizes":[[771,131],[11,11]],"position":"top","eventCallbacks":{"slotRenderEnded":"replayWideTopCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"replayWideBottom":{"sizes":[[771,131],[11,11]],"position":"bottom","eventCallbacks":{"slotRenderEnded":"replayWideBottomCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"replayWideEditorspicks":{"sizes":[[771,131],[11,11]],"position":"editorspicks","eventCallbacks":{"slotRenderEnded":"replayWideEditorspicksCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"replayShowcaseTop":{"sizes":[[371,291]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"nativeThisweekoncnet":{"sizes":[[11,11]],"position":"thisweekoncnet","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true,"customTargeting":{"strr":"d320ba44","strb":"2434f2df"}},"nativeCompare":{"sizes":[[11,11]],"position":"compare","eventCallbacks":{"slotRenderEnded":"nativeCompareCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"overgifTop":{"sizes":[[251,11]],"position":"top","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"showcaseBottom":{"sizes":[[3,3],[728,90],[970,66]],"position":"bottom"},"showcaseTop":{"sizes":[[3,3],[728,90],[970,66]],"position":"top"},"videoThumbnailTop":{"sizes":[[171,231],[771,131],[11,11]],"position":"thumbnail","eventCallbacks":{"slotRenderEnded":"videoThumbnailTopCallback"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true,"customTargeting":{"strr":"ec8036a4","strb":"bfdbade1"}},"nativeToc":{"sizes":[[300,90],[11,11]],"position":"toc","eventCallbacks":{"slotRenderEnded":"nativeTocCallBack"},"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true,"customTargeting":{"strr":"9bebd1e1","strb":"12b2a632"}},"customAd":{"sizes":[[330,100],[330,59]],"position":"top"},"incontentAd":{"sizes":[[321,31]],"position":"top"}},"mobile":{"adUnits":{"hpto":{"outOfPage":true,"collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"mobileBannerTop":{"sizes":[[320,50],[6,1]],"position":"increment"},"mobileBannerMpuHptoOverlay":{"outOfPage":true},"mobileMpuBottom":{"sizes":[[300,250]],"position":"increment"},"mobileBanner":{"sizes":[[320,50]],"position":"increment"},"mobileCustomAd":{"sizes":[[330,100]],"position":"increment"},"mobileReplaySquare":{"sizes":[[271,271]],"position":"increment"},"mobileReplayWide":{"sizes":[[771,131],[11,11]],"position":"increment"},"mobileReplayWideInc":{"sizes":[[771,131],[11,11]],"position":"inc"},"mobileReplayWidePlus":{"sizes":[[771,131],[320,50],[11,11]],"position":"increment","eventCallbacks":{"slotRenderEnded":"mobileReplayWidePlusCallBack"}},"mobileBannerPlus":{"sizes":[[300,250],[320,50],[621,221]],"position":"increment"},"mobileMpu":{"sizes":[[300,250]],"position":"increment"},"mobileOvergif":{"sizes":[[251,11]],"position":"increment","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"mobileShowcase":{"sizes":[[3,3]],"position":"increment","collapseEmptyDiv":true,"collapseEmptyDivOnPageload":true},"mobileIncontentAd":{"sizes":[[321,31],[300,250]],"position":"increment"}}},"tablet":{"adUnits":{"resourceCenterTop":{"sizes":[[300,300]],"position":"top"},"resourceCenterBottom":{"sizes":[[632,160]],"position":"bottom"},"mpuPlusTop":{"sizes":[[300,600],[300,250]]},"marqueeTop":{"sizes":[[234,60]],"position":"top"},"mpuTop":{"sizes":[[300,250],[300,600]],"position":"top"},"mpuBottom":{"sizes":[[300,250]],"position":"bottom"},"leaderTop":{"sizes":[[728,90],[970,66]],"position":"bottom"},"leaderPlusTop":{"sizes":[[728,90],[970,66],[970,250]],"position":"top"}}},"siteName":"cnet","collapseEmptyDiv":false,"setRefreshUnfilledSlots":true,"setClearUnfilledSlots":false,"disableInitialLoad":false,"disableInitialLoadCompanions":false,"enableSingleRequest":true,"enableAsyncRendering":true,"defaultRegion":"aw","adOrder":["leader_top","leader_plus_top","mpu_top","mpu_plus_top","leader_plus_middle","leader_middle","leader_middle2","mpu_middle","mpu_middle2","mpu_bottom","leader_bottom","skin","incontent_ad","omnibar_top","marquee_top","window_top","window_bottom","inpage_video_top","intromercial","replay_wide_top","replay_wide_bottom","replay_wide_editorspicks","video_thumbnail_top","nativ_toc","native_compare","native_thisweekoncnet","inline_product_carousel_top","resource_center_top","social_logo_bottom","showcase_top","info_board_top","sponsored_feed_top","info_buttons_top","dynamic_text_link_top","dynamic_showcase_top","sponsored_search_top","custom_ad"],"disableInitialLoadRefresh":true,"deviceRegions":{"mobile":[{"region":"aw","countries":["all"]}],"desktop":[],"tablet":[]}},"containerId":"56bfda255fd69","slotVars":{"network":"8264","siteName":"cnet","collapseEmptyDiv":"","topics":"tech-culture","platform":"desktop"},"adType":"gpt","adDivIds":["native-toc-56bfda255fd69","inpage-video-top-56bfda255fd69","social-logo-bottom-56bfda255fd69","mpu-plus-top-56bfda255fd69","mpu-bottom-56bfda255fd69","video-thumbnail-top-56bfda255fd69","leader-bottom-56bfda255fd69","omnibar-top-56bfda255fd69","intromercial-56bfda255fd69","skin-56bfda255fd69","leader-top-56bfda255fd69","dynamic-text-link-top-56bfda255fd69"]},"cookieName":"cnet_ad","cookieServicePath":"http:\/\/www.cnet.com\/ad\/ad-cookie\/","session":4,"subSession":6}
+        },
+        assetsVersion: {
+            version: '2175-fly'
+        },
+        auto: false,
+        build: true,
+        cmsEdit: {
+            contentId: 'aa14b6dc-130c-42b9-b057-452f721efc4b',
+            contentType: 'article'
+        },
+        device: 'desktop',
+        deviceOriginal: 'desktop',
+        edition: {
+            code: 'us'
+        },
+        environment: 'prod',
+        pageType: 'article',
+        promotionals: {
+            flyoutPromo:{
+                url: '/flyout-promo/'
+            }
+        },
+        tracking: {
+            enabled: true
+        },
+        txId: '89649e49-499a-43b3-a45e-fd2068d55a33',
+        user: {
+            baseUrl: 'https://secure-fly.cnet.com',
+            'urls': {
+                'login': "https://secure-fly.cnet.com/user/login/",
+                'register': "https://secure-fly.cnet.com/user/registration/",
+                'confirmRegistration': "http://www.cnet.com/user/instructions-confirm-registration/",
+                'forgotPassword': "https://secure-fly.cnet.com/user/forgotten-password/",
+                'passwordSent': "http://www.cnet.com/user/password-sent/",
+                'createUsername': "http://www.cnet.com/user/create-username/",
+                'sendConfirmation': "http://www.cnet.com/user/send-confirmation/?registered=1",
+                'userData': "http://www.cnet.com/user/get-data/",
+                'flag': "http://www.cnet.com/user/flag/",
+                'socialAdditionalInformation': "http://www.cnet.com/user/social-additional-information/"
+            }
+        },
+        video: {
+            tpBaseUrl: 'http://cnet2.cbsistatic.com/fly/bundles/cnetmpxpdk/pdk',
+            playCount: 0
+        }
+    };
+
+
+    
+    
+    
+    
+    var utag_data = {"isEnabled":true,"articleAuthorId":["1bc61ae6-8176-11e2-9d12-0018fe8a00b0"],"articleAuthorName":["chris matyszczyk"],"articleId":"aa14b6dc-130c-42b9-b057-452f721efc4b","articlePubDate":"2016-02-05 22:50:30","articleTitle":"powerful domestic violence super bowl ad shows one text can make the difference","articleType":"magnet_article","collectionId":["8442c601-5ee5-4ec8-9442-186f2c4f470c"],"collectionName":["technically incorrect"],"deviceType":"desktop","isDev":"0","pageNum":"1","pageType":"article","siteEdition":"us","siteHier":["news","tech-culture"],"siteSection":"news","siteType":"responsive web","topicId":["1c31d95d-c387-11e2-8208-0291187b029a"],"topicName":["tech culture"],"dwAccount":"cbsicnetglobalsite","dwHost":"dw.cbsi.com","siteId":1,"reportSuiteId":"cbsicnetglobalsite","bkSiteId":3321,"limit":4,"brand":"cnet","collectionSlug":["technically-incorrect"],"tagSlugs":[],"topicSlugs":["tech-culture"],"siteName":"cnet","tealium":{"profile":"cnetglobalsite","env":"prod"},"soastaBucket":"","soastaPageType":"article"};
+</script><script type="text/javascript" id="beanstockNucleusInjector">
+        window.CnetPageVars.ads.beanstockNucleus = {
+            isEnabled:      false,
+            isInitialized:  false,
+            isCompleted:    false,
+            isTimedOut:     false,
+            timeout:        null,
+            injector:       'injectBeanStockNucleusTag',
+            tagId:          'cx-nuke',
+            initTime:       new Date().getTime()
+        };
+
+            </script><!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]--></head><body class="not-logged-in
+    us
+        
+    
+    
+    
+    
+    
+    
+" data-cms-edit='{"url":"http:\/\/cms-beta.cnet.com\/content\/article\/aa14b6dc-130c-42b9-b057-452f721efc4b"}'>
+                                    
+    
+<header id="rbHeader" class="page-header"><div id="secondary" class="">
+                                    
+<div id="socialHeader">
+    <span>Connect with us</span>
+           	
+            <div class="socialWrapper" data-component='["touchMenuHover","iframeHoverFix"]'>
+                
+                        <div class="networkWrapper">
+        <a target="_blank" href="http://www.facebook.com/CNET" class="social-menu-facebook" data-component="socialTracking" data-social-tracking-options='{"socialSite":"facebook"}'>facebook</a>
+    </div>
+
+        
+                        <div class="networkWrapper">
+        <a target="_blank" href="https://twitter.com/intent/user?screen_name=CNET" class="social-menu-twitter" data-component="socialTracking" data-social-tracking-options='{"socialSite":"twitter"}'>twitter</a>
+    </div>
+
+        
+            </div>
+
+</div>
+                            </div>
+            
+                        <div class="fixation" data-component="stickyElement">
+                                    <div id="omnibar_top">
+                    
+                                    <div id="omnibar-top-56bfda255fd69" class="ad-omnibar-top" data-ad="omnibar-top">
+    <script>
+        window.console && console.log && console.log("ADS: queuing omnibar-top-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("omnibar-top-56bfda255fd69");
+    </script></div>
+                            </div>
+                        <div id="primary">
+                                    <a id="rbLogo" href="/">CNET</a>
+                
+                                        <form method="get" action="/search/" class="col-3 headerSearchForm single" data-auto-suggest-options='{"url":"\/autosuggest\/xhr\/"}' data-component='["formTrim","autoSuggest"]'>
+    <div class="searchBar">
+        <input type="text" placeholder="Search CNET" id="primarySearch" name="query" value="" autocomplete="off"><button type="submit" class="searchButton" value="Search"></button>
+    </div>
+</form>                
+                                    
+
+<nav id="primaryNav" section="brandnav"><div class="menu single" id="reviewsMenu" data-component="touchMenuHover">
+        <a class="menuHead" data-trigger="menu" href="/reviews/">Reviews</a>
+                    <div class="menuWrapper">
+                <!--[if lt IE 9]>
+                <noscript><div class="navTag"></noscript>
+                <![endif]-->
+                <nav><div class="navWrapper">
+                        <ul class="topCategories"><li class="hed">Top Categories</li>
+                            <li><a href="/cnet100/">CNET 100</a></li> <!-- debate with seo over editions, see footer -->
+                            <li><a href="/topics/appliances/">Appliances</a></li>
+                            <li><a href="/topics/audio/">Audio</a></li>
+                            <li><a href="/topics/cameras/">Cameras</a></li>
+                            <li><a href="/topics/desktops/">Desktops</a></li>
+                            <li><a href="/topics/headphones/">Headphones</a></li>
+                            <li><a href="/topics/laptops/">Laptops</a></li>
+                            <li><a href="/topics/networking/">Networking</a></li>
+                            <li><a href="/topics/phones/">Phones</a></li>
+                            <li><a href="/topics/printers/">Printers</a></li>
+                            <li><a href="/roadshow/" target="_blank">Roadshow</a></li>
+                            <li><a href="/smart-home/" data-vanity-rewritten="true">Smart Home</a></li>
+                            <li><a href="/topics/software/">Software</a></li>
+                            <li><a href="/topics/storage/">Storage</a></li>
+                            <li><a href="/topics/tablets/">Tablets</a></li>
+                            <li><a href="/topics/tvs/">TVs</a></li>
+                            <li><a href="/topics/wearable-tech/">Wearable Tech</a></li>
+                                                            <li><a href="/deals/">Deals</a></li>
+                                <li><a href="/web-hosting/" data-vanity-rewritten="true">Web Hosting</a></li>
+                                                        <li><a href="/forums/">Forums</a></li>
+                        </ul><ul class="topItems forums" data-menu="reviews-forums"><li class="hed">Popular Forums</li>
+<li class="topItem">
+    <a href="/forums/computer-help/">
+            <h3>Computer Help</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/computer-newbies/">
+            <h3>Computer Newbies</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/laptops/">
+            <h3>Laptops</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/phones/">
+            <h3>Phones</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/tvs-home-theaters/">
+            <h3>TVs &amp; Home Theaters</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/networking-wireless/">
+            <h3>Networking &amp; Wireless</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/windows-7/">
+            <h3>Windows 7</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/windows-10/">
+            <h3>Windows 10</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/cameras/">
+            <h3>Cameras</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/">
+            <h3>All Forums</h3>
+    </a>
+</li>                        </ul></div>
+                </nav><!--[if lt IE 9]>
+                <noscript></div></noscript>
+                <![endif]--></div>
+            </div>
+    <div class="menu single active" id="newsMenu" data-component="touchMenuHover">
+        <a class="menuHead" data-trigger="menu" href="/news/">News</a>
+        <div class="menuWrapper">
+            <!--[if lt IE 9]>
+            <noscript><div class="navTag"></noscript>
+            <![endif]-->
+            <nav><div class="navWrapper">
+                    <ul class="topCategories"><li class="hed">Top Categories</li>
+                        <li><a href="/apple/" data-vanity-rewritten="true">Apple</a></li>
+                        <li><a href="/topics/computers/" data-vanity-rewritten="true">Computers</a></li>
+                        <li><a href="/crave/" data-vanity-rewritten="true">Crave</a></li>
+                                                    <li><a href="/deals/">Deals</a></li>
+                                                <li><a href="/google/" data-vanity-rewritten="true">Google</a></li>
+                        <li><a href="/topics/internet/" data-vanity-rewritten="true">Internet</a></li>
+                        <li><a href="/tags/microsoft/">Microsoft</a></li>
+                        <li><a href="/topics/mobile/" data-vanity-rewritten="true">Mobile</a></li>
+                        <li><a href="/topics/photography/" data-vanity-rewritten="true">Photography</a></li>
+                        <li><a href="/topics/security/" data-vanity-rewritten="true">Security</a></li>
+                        <li><a href="/topics/sci-tech/" data-vanity-rewritten="true">Sci-Tech</a></li>
+                        <li><a href="/topics/tech-culture/" data-vanity-rewritten="true">Tech Culture</a></li>
+                        <li><a href="/topics/tech-industry/" data-vanity-rewritten="true">Tech Industry</a></li>
+                        <li><a href="/pictures/">Photo Galleries</a></li>
+                        <li><a href="/videos/cnet-news/" data-vanity-rewritten="true">Video</a></li>
+                        <li><a href="/forums/">Forums</a></li>
+                    </ul><ul class="topItems forums" data-menu="news-forums"><li class="hed">Popular Forums</li>
+<li class="topItem">
+    <a href="/forums/computer-help/">
+            <h3>Computer Help</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/computer-newbies/">
+            <h3>Computer Newbies</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/laptops/">
+            <h3>Laptops</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/phones/">
+            <h3>Phones</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/tvs-home-theaters/">
+            <h3>TVs &amp; Home Theaters</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/networking-wireless/">
+            <h3>Networking &amp; Wireless</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/windows-7/">
+            <h3>Windows 7</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/windows-10/">
+            <h3>Windows 10</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/cameras/">
+            <h3>Cameras</h3>
+    </a>
+</li>
+<li class="topItem">
+    <a href="/forums/">
+            <h3>All Forums</h3>
+    </a>
+</li>                    </ul></div>
+            </nav><!--[if lt IE 9]>
+            <noscript></div></noscript>
+            <![endif]--></div>
+    </div>
+    <div class="menu single" id="videoMenu" data-component="touchMenuHover">
+        <a class="menuHead" data-trigger="menu" href="/videos/">Video</a>
+        <div class="menuWrapper">
+        <!--[if lt IE 9]>
+        <noscript><div class="navTag"></noscript>
+        <![endif]-->
+        <nav><div class="navWrapper">
+                <ul class="topCategories"><li class="hed">Top Categories</li>
+                    <li><a href="/apple-byte/" data-vanity-rewritten="true">Apple Byte</a></li>
+                    <li><a href="/carfection/" target="_blank" data-vanity-rewritten="true">Carfection</a></li>
+                    <li><a href="/cnet-top-5/" data-vanity-rewritten="true">CNET Top 5</a></li>
+                    <li><a href="/cnet-update/" data-vanity-rewritten="true">CNET Update</a></li>
+                    <li><a href="/googlicious/" data-vanity-rewritten="true">Googlicious</a></li>
+                    <li><a href="/how-to/videos/" data-vanity-rewritten="true">How To</a></li>
+                    <li><a href="/netpicks/" data-vanity-rewritten="true">Netpicks</a></li>
+                    <li><a href="/next-big-thing/" data-vanity-rewritten="true">Next Big Thing</a></li>
+                    <li><a href="/videos/cnet-news/" data-vanity-rewritten="true">News</a></li>
+                    <li><a href="/cnet-on-cars/" target="_blank" data-vanity-rewritten="true">On Cars</a></li>
+                    <li><a href="/topics/phones/videos/" data-vanity-rewritten="true">Phones</a></li>
+                    <li><a href="/prizefight/" data-vanity-rewritten="true">Prizefight</a></li>
+                    <li><a href="/topics/tablets/videos/" data-vanity-rewritten="true">Tablets</a></li>
+                    <li><a href="/tomorrow-daily/" data-vanity-rewritten="true">Tomorrow Daily</a></li>
+                    <li><a href="/cnet-podcasts/" data-vanity-rewritten="true">CNET Podcasts</a></li>
+                </ul></div>
+        </nav><!--[if lt IE 9]>
+        <noscript></div></noscript>
+        <![endif]--></div>
+    </div>
+    <div class="menu single" id="howtoMenu" data-component="touchMenuHover">
+        <a class="menuHead" data-trigger="menu" href="/how-to/">How To</a>
+        <div class="menuWrapper">
+            <!--[if lt IE 9]>
+            <noscript><div class="navTag"></noscript>
+            <![endif]-->
+            <nav><ul class="topCategories"><li class="hed">Top Categories</li>
+                    <li><a href="/topics/appliances/how-to/">Appliances</a></li>
+                    <li><a href="/topics/computers/how-to/">Computers</a></li>
+                    <li><a href="/topics/gaming/how-to/">Gaming</a></li>
+                    <li><a href="/topics/home-entertainment/how-to/">Home Entertainment</a></li>
+                    <li><a href="/topics/internet/how-to/">Internet</a></li>
+                    <li><a href="/topics/mobile-apps/how-to/">Mobile Apps</a></li>
+                    <li><a href="/topics/phones/how-to/">Phones</a></li>
+                    <li><a href="/topics/photography/how-to/">Photography</a></li>
+                    <li><a href="/topics/security/how-to/">Security</a></li>
+                    <li><a href="/topics/smart-home/how-to/">Smart Home</a></li>
+                    <li><a href="/topics/tablets/how-to/">Tablets</a></li>
+                    <li><a href="/topics/wearable-tech/how-to/">Wearable Tech</a></li>
+                    <li><a href="/forums/">Forums</a></li>
+                    <li><a href="/internet-speed-test/" data-vanity-rewritten="true">Speed Test</a></li>
+                </ul></nav><!--[if lt IE 9]>
+            <noscript></div></noscript>
+            <![endif]--></div>
+    </div>
+            <div class="menu single " id="dealsMenu" data-component="touchMenuHover">
+            <a class="menuHead" href="/deals/" data-vanity-rewritten="true">Deals</a>
+            <div class="menuWrapper">
+                <!--[if lt IE 9]>
+                <noscript><div class="navTag"></noscript>
+                <![endif]-->
+                <nav><ul class="topCategories"><li class="hed">Top Categories</li>
+                        <li><a href="/deals/" data-vanity-rewritten="true">All Deals</a></li>
+                        <li><a href="/cheapskate/" data-vanity-rewritten="true">Cheapskate</a></li>
+                        <li><a href="/holiday-gift-guide/under-50/" data-vanity-rewritten="true">Best tech under $50</a></li>
+                        <li><a href="/web-hosting/" data-vanity-rewritten="true">Web Hosting Deals</a></li>
+                    </ul></nav><!--[if lt IE 9]>
+                <noscript></div></noscript>
+                <![endif]--></div>
+        </div>
+        <div class="menu" id="download">
+        <a class="menuHead" href="http://download.cnet.com" data-user-action="legacy" data-component="trackDownload">Download</a>
+    </div>
+
+    
+                
+    
+<div id="headerLogin" class="menu single headerLogin" data-component="touchMenuHover">
+    <div class="menuHead" data-trigger="menu">
+        <span data-user-var="userName">Log In / Join</span>
+        <div class="user-avatar" data-user-var="avatar"></div>
+            </div>
+    <div class="menuWrapper">
+        <nav><ul class="topCategories logged-out"><li>
+                    <a data-user-show='{"action":"login","params":{"appId":376},"suppressReload":true}'>Log In to CNET</a>
+                </li>
+                <li class="social-login">
+                    <span class="sign-in-with">Sign In with</span>
+                                            <span class="social-site sa-facebook" data-user-social='{"socialSite":"facebook","action":"login","params":{"appId":376}}'>Facebook
+                                                </span>
+                                            <span class="social-site sa-googleplus" data-user-social='{"socialSite":"googleplus","action":"login","params":{"appId":376}}'>Googleplus
+                                                </span>
+                                            <span class="social-site sa-yahoo" data-user-social='{"socialSite":"yahoo","action":"login","params":{"appId":376}}'>Yahoo
+                                                </span>
+                                    </li>
+                <li>
+                    <a data-user-show='{"action":"register","params":{"appId":376}}'>Join CNET</a>
+                </li>
+                <li><a href="/user/join-cnet/">Member Benefits</a></li>
+            </ul><ul class="topCategories logged-in"><li class="social-login">
+                    <span>
+                                            <span class="social-site sa-facebook" data-user-link="facebook">
+                            Facebook
+                                                    </span>
+                                            <span class="social-site sa-googleplus" data-user-link="googleplus">
+                            Googleplus
+                                                    </span>
+                                            <span class="social-site sa-yahoo" data-user-link="yahoo">
+                            Yahoo
+                                                    </span>
+                                        </span>
+                </li>
+                <li><a data-user-var="profileLink" data-template="/profiles/__username__/">My Profile</a></li>
+                <li><a href="/forums/">Forums</a></li>
+                <li><a href="/user/logout/" data-user-action="logout" data-user-suppress-refresh="true">Log Out</a></li>
+            </ul></nav></div>
+</div>
+
+    
+<div class="menu single" id="editionMenu" data-component="touchMenuHover">
+    <span class="menuHead" data-trigger="menu"><span id="selectedEdition">US</span> Edition</span>
+    <div class="menuWrapper">
+        <!--[if lt IE 9]>
+        <noscript><div class="navTag"></noscript>
+        <![endif]-->
+        <nav><ul class="topCategories" data-component="editionToggler"><li class="hed">Other editions</li>
+                                                    <li><a data-edition="uk" href="/uk/">United Kingdom</a></li>
+                                                    <li><a data-edition="au" href="/au/">Australia</a></li>
+                                <li><a target="_blank" href="http://www.cnetnews.com.cn/">China</a></li>
+                <li><a target="_blank" href="http://www.cnetfrance.fr/">France</a></li>
+                <li><a target="_blank" href="http://www.cnet.de/">Germany</a></li>
+                <li><a target="_blank" href="http://japan.cnet.com/">Japan</a></li>
+                <li><a target="_blank" href="http://www.cnet.co.kr/">Korea</a></li>
+                                    <li><a data-edition="es" href="/es/">CNET en Español</a></li>
+                            </ul></nav><!--[if lt IE 9]>
+        <noscript></div></noscript>
+        <![endif]--></div>
+</div>
+</nav></div>
+        </div>
+    </header><div class="container">
+    <div class="row">
+                    <div class="row">
+        <div class="col-12">
+                                            <div class="row">
+                                    <div class="col-8">
+                                                    
+                                                        
+                                            
+
+
+        
+                        
+    
+    
+    <nav class="tocNav " section="tocNav" data-component="tocNav"><a class="rbLogo" href="/" section="rbLogo">CNET</a>
+        <div class="expand"><div></div></div>
+        <ul><li class="selected" data-asset-id="aa14b6dc-130c-42b9-b057-452f721efc4b" data-asset-title="Powerful domestic violence Super Bowl ad shows one text can make the difference" data-asset-url="/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/">
+                        <a href="/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/" data-toc-asset-options='{"id":"aa14b6dc-130c-42b9-b057-452f721efc4b","ajaxUrl":"\/news\/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet2.cbsistatic.com/hub/i/r/2016/02/05/a337e2af-829f-4613-b04e-4f9f72afafcb/thumbnail/70x70/e29004d51ec37fa8614ca200fd47cb9e/abusead.jpg"><noscript><img src="http://cnet2.cbsistatic.com/hub/i/r/2016/02/05/a337e2af-829f-4613-b04e-4f9f72afafcb/thumbnail/70x70/e29004d51ec37fa8614ca200fd47cb9e/abusead.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Powerful domestic violence Super Bowl ad shows one text can make the difference</span>
+                            </div>
+                        </a>
+                    </li>
+                                            <li class="topStoriesHeading">
+                            <h5>Top Stories</h5>
+                        </li>
+                                                                                                                            
+                    <li data-asset-id="b6896571-1620-47e1-8e02-020ed105664a" data-asset-title="Hoopla! The inventor of basketball returns -- via hologram" data-asset-url="/news/basketball-naismith-hologram-nba-toronto/">
+                        <a href="/news/basketball-naismith-hologram-nba-toronto/" data-toc-asset-options='{"id":"b6896571-1620-47e1-8e02-020ed105664a","ajaxUrl":"\/news\/basketball-naismith-hologram-nba-toronto\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet3.cbsistatic.com/hub/i/r/2016/02/13/37c6492e-16d7-49a5-8e0b-0762f5547725/thumbnail/70x70/c4784ffa9d3575515e415d5db9efde54/jamesnaismithcorbis.jpg"><noscript><img src="http://cnet3.cbsistatic.com/hub/i/r/2016/02/13/37c6492e-16d7-49a5-8e0b-0762f5547725/thumbnail/70x70/c4784ffa9d3575515e415d5db9efde54/jamesnaismithcorbis.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Hoopla! The inventor of basketball returns -- via hologram</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="6d3e2d65-58eb-4f9c-b2ad-7f629ba44ee2" data-asset-title="Google may disconnect the phone for its VR vision of the future" data-asset-url="/news/google-may-disconnect-the-phone-for-its-vr-vision-of-the-future/">
+                        <a href="/news/google-may-disconnect-the-phone-for-its-vr-vision-of-the-future/" data-toc-asset-options='{"id":"6d3e2d65-58eb-4f9c-b2ad-7f629ba44ee2","ajaxUrl":"\/news\/google-may-disconnect-the-phone-for-its-vr-vision-of-the-future\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet1.cbsistatic.com/hub/i/r/2015/10/16/c82e86b5-d5c5-444f-b15a-df7a09fc7278/thumbnail/70x70/a7ad1c474eea3a7c08d3063c419099ef/google-cardboard.png"><noscript><img src="http://cnet1.cbsistatic.com/hub/i/r/2015/10/16/c82e86b5-d5c5-444f-b15a-df7a09fc7278/thumbnail/70x70/a7ad1c474eea3a7c08d3063c419099ef/google-cardboard.png" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Google may disconnect the phone for its VR vision of the future</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="67ebfdc4-d718-49b9-9665-a4149dc92186" data-asset-title="How to keep your geek happy on Valentine's" data-asset-url="/news/how-to-keep-your-geek-happy-on-valentines/">
+                        <a href="/news/how-to-keep-your-geek-happy-on-valentines/" data-toc-asset-options='{"id":"67ebfdc4-d718-49b9-9665-a4149dc92186","ajaxUrl":"\/news\/how-to-keep-your-geek-happy-on-valentines\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet4.cbsistatic.com/hub/i/r/2016/02/12/98ace260-03b7-45cb-9c52-e93479061dfc/thumbnail/70x70/8506cd74a621d269981bc4cc374cacb0/datastartrek.jpg"><noscript><img src="http://cnet4.cbsistatic.com/hub/i/r/2016/02/12/98ace260-03b7-45cb-9c52-e93479061dfc/thumbnail/70x70/8506cd74a621d269981bc4cc374cacb0/datastartrek.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">How to keep your geek happy on Valentine's</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="50cd7159-4fb4-448a-bbf2-31947b98e907" data-asset-title="Space graffiti discovered inside Apollo 11 command module" data-asset-url="/news/space-graffiti-discovered-inside-apollo-11-command-module/">
+                        <a href="/news/space-graffiti-discovered-inside-apollo-11-command-module/" data-toc-asset-options='{"id":"50cd7159-4fb4-448a-bbf2-31947b98e907","ajaxUrl":"\/news\/space-graffiti-discovered-inside-apollo-11-command-module\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet4.cbsistatic.com/hub/i/r/2016/02/12/357573d5-c07e-4bd0-adb3-9e9a69f3c0eb/thumbnail/70x70/b49e4251b50620629408c8509ca69d10/apollo-panel.jpg"><noscript><img src="http://cnet4.cbsistatic.com/hub/i/r/2016/02/12/357573d5-c07e-4bd0-adb3-9e9a69f3c0eb/thumbnail/70x70/b49e4251b50620629408c8509ca69d10/apollo-panel.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Space graffiti discovered inside Apollo 11 command module</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="98ee8606-f111-4b1d-8082-b445479ee3ea" data-asset-title="Dr. Dre may get R-rated in Apple's first original TV series" data-asset-url="/news/dr-dre-creating-first-apple-original-tv-series-report-says/">
+                        <a href="/news/dr-dre-creating-first-apple-original-tv-series-report-says/" data-toc-asset-options='{"id":"98ee8606-f111-4b1d-8082-b445479ee3ea","ajaxUrl":"\/news\/dr-dre-creating-first-apple-original-tv-series-report-says\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet1.cbsistatic.com/hub/i/r/2016/02/12/68f03549-19af-4a68-81b4-a85e8e075cf9/thumbnail/70x70/a54cb83cacea3875c88b5affe0d29251/applebeats1.jpg"><noscript><img src="http://cnet1.cbsistatic.com/hub/i/r/2016/02/12/68f03549-19af-4a68-81b4-a85e8e075cf9/thumbnail/70x70/a54cb83cacea3875c88b5affe0d29251/applebeats1.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Dr. Dre may get R-rated in Apple's first original TV series</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="b3448838-a422-4dc5-8895-42c8c93af9ae" data-asset-title="If 'Deadpool' is a Valentine's Day movie, so are these" data-asset-url="/news/if-deadpool-is-a-valentines-day-movie-so-are-these/">
+                        <a href="/news/if-deadpool-is-a-valentines-day-movie-so-are-these/" data-toc-asset-options='{"id":"b3448838-a422-4dc5-8895-42c8c93af9ae","ajaxUrl":"\/news\/if-deadpool-is-a-valentines-day-movie-so-are-these\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet1.cbsistatic.com/hub/i/r/2016/02/11/8b0246cd-7e8f-4c92-b091-6d0165a55dd6/thumbnail/70x70/a592621dc8120e4faff7e6a5d74243de/croppedmax.jpg"><noscript><img src="http://cnet1.cbsistatic.com/hub/i/r/2016/02/11/8b0246cd-7e8f-4c92-b091-6d0165a55dd6/thumbnail/70x70/a592621dc8120e4faff7e6a5d74243de/croppedmax.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">If 'Deadpool' is a Valentine's Day movie, so are these</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="03d41676-4dd1-47f6-89ab-371bb4f19ab9" data-asset-title="Apple Music gains subscribers at a fast clip" data-asset-url="/news/apple-music-gains-subscribers-at-a-fast-clip/">
+                        <a href="/news/apple-music-gains-subscribers-at-a-fast-clip/" data-toc-asset-options='{"id":"03d41676-4dd1-47f6-89ab-371bb4f19ab9","ajaxUrl":"\/news\/apple-music-gains-subscribers-at-a-fast-clip\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet4.cbsistatic.com/hub/i/r/2015/06/30/4a0fcb42-142f-4e54-a6ea-c8b025b7dd35/thumbnail/70x70/ee76264f4506fe5c3f5dee422731b3db/apple-music-63015-08.jpg"><noscript><img src="http://cnet4.cbsistatic.com/hub/i/r/2015/06/30/4a0fcb42-142f-4e54-a6ea-c8b025b7dd35/thumbnail/70x70/ee76264f4506fe5c3f5dee422731b3db/apple-music-63015-08.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Apple Music gains subscribers at a fast clip</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="4d514174-f883-4eeb-9ceb-2093f234ece6" data-asset-title="Romancing a pigeon: The weird, wonderful world of dating sims" data-asset-url="/news/romancing-a-dinosaur-the-weird-wonderful-world-of-dating-sims/">
+                        <a href="/news/romancing-a-dinosaur-the-weird-wonderful-world-of-dating-sims/" data-toc-asset-options='{"id":"4d514174-f883-4eeb-9ceb-2093f234ece6","ajaxUrl":"\/news\/romancing-a-dinosaur-the-weird-wonderful-world-of-dating-sims\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet2.cbsistatic.com/hub/i/r/2016/02/11/d14bf2f4-b17f-4a59-a5e6-83625d000c52/thumbnail/70x70/61b5dc98246046d29d4a7c26ae649dd4/otome.jpg"><noscript><img src="http://cnet2.cbsistatic.com/hub/i/r/2016/02/11/d14bf2f4-b17f-4a59-a5e6-83625d000c52/thumbnail/70x70/61b5dc98246046d29d4a7c26ae649dd4/otome.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Romancing a pigeon: The weird, wonderful world of dating sims</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="e689bc43-e3c3-499d-8c23-775d8c21afbe" data-asset-title="Einstein nailed it! Gravitational waves do exist" data-asset-url="/news/ligo-proves-einstein-right-black-holes-gravitational-waves/">
+                        <a href="/news/ligo-proves-einstein-right-black-holes-gravitational-waves/" data-toc-asset-options='{"id":"e689bc43-e3c3-499d-8c23-775d8c21afbe","ajaxUrl":"\/news\/ligo-proves-einstein-right-black-holes-gravitational-waves\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet2.cbsistatic.com/hub/i/r/2016/02/10/b98e733d-4aab-479f-a53d-99ff966f2144/thumbnail/70x70/adfb83122740e21e26797be579336947/gwaves1.jpg"><noscript><img src="http://cnet2.cbsistatic.com/hub/i/r/2016/02/10/b98e733d-4aab-479f-a53d-99ff966f2144/thumbnail/70x70/adfb83122740e21e26797be579336947/gwaves1.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Einstein nailed it! Gravitational waves do exist</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="a6927be0-1db0-4e4a-a739-be2e8cd7766e" data-asset-title="See OK Go go weightless in dizzying new music video" data-asset-url="/news/see-ok-go-go-weightless-in-dizzying-new-music-video/">
+                        <a href="/news/see-ok-go-go-weightless-in-dizzying-new-music-video/" data-toc-asset-options='{"id":"a6927be0-1db0-4e4a-a739-be2e8cd7766e","ajaxUrl":"\/news\/see-ok-go-go-weightless-in-dizzying-new-music-video\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet1.cbsistatic.com/hub/i/r/2016/02/11/06e5a9a2-8093-42fe-9c4c-a18918e1aa83/thumbnail/70x70/0e226698ee81d6977d85f7ef7041eb96/kgo-2.jpg"><noscript><img src="http://cnet1.cbsistatic.com/hub/i/r/2016/02/11/06e5a9a2-8093-42fe-9c4c-a18918e1aa83/thumbnail/70x70/0e226698ee81d6977d85f7ef7041eb96/kgo-2.jpg" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">See OK Go go weightless in dizzying new music video</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                                                                            
+                    <li data-asset-id="95fb6b40-d75d-4cdf-ad3d-f0d6850aa4c5" data-asset-title="Livestream your gunshot wound? It may save your life" data-asset-url="/news/your-smartphone-can-now-livestream-a-medical-emergency-to-a-nearby-responder/">
+                        <a href="/news/your-smartphone-can-now-livestream-a-medical-emergency-to-a-nearby-responder/" data-toc-asset-options='{"id":"95fb6b40-d75d-4cdf-ad3d-f0d6850aa4c5","ajaxUrl":"\/news\/your-smartphone-can-now-livestream-a-medical-emergency-to-a-nearby-responder\/xhr\/"}'>
+                                        
+                                <figure class="col-1 img"><img src="" class="lazy " alt="" height="70" width="70" data-original="        http://cnet3.cbsistatic.com/hub/i/r/2016/02/10/3b3dd7ce-7e2b-4b9e-bf2d-4ee03b1be566/thumbnail/70x70/d1dceccb07c4f4ddf779b27aa0245709/goodsamvideo.png"><noscript><img src="http://cnet3.cbsistatic.com/hub/i/r/2016/02/10/3b3dd7ce-7e2b-4b9e-bf2d-4ee03b1be566/thumbnail/70x70/d1dceccb07c4f4ddf779b27aa0245709/goodsamvideo.png" class="" alt="" height="70" width="70"></noscript></figure><div class="desc">
+                                <span class="hed">Livestream your gunshot wound? It may save your life</span>
+                            </div>
+                        </a>
+                    </li>
+                                                                            </ul><div id="native-toc-56bfda255fd69" class="ad-native-toc" data-ad="native-toc">
+    <script>
+        window.console && console.log && console.log("ADS: queuing native-toc-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("native-toc-56bfda255fd69");
+    </script></div>
+                </nav></div>
+                                </div>
+                        </div>
+            </div>
+        </div>
+</div>
+
+
+                            
+                                    <div id="intromercial-56bfda255fd69" class="ad-intromercial" data-ad="intromercial">
+    <script>
+        window.console && console.log && console.log("ADS: queuing intromercial-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("intromercial-56bfda255fd69");
+    </script></div>
+            
+                    <div id="rbContent" class="" data-component="magnet">
+                <div class="pageContainer " data-container-asset-id="aa14b6dc-130c-42b9-b057-452f721efc4b" data-teads-num="1">
+        
+        <div class="content-header"><div class="hero-content"><div class="container"><div class="row"><div class="col-8"><ul class="breadcrumb" section="bc"><li><a href="/">CNET</a><span class="divider"></span></li><li><a href="/topics/tech-culture/">Tech Culture</a><span class="divider"></span></li><li>Powerful domestic violence Super Bowl ad shows one text can make the difference</li></ul></div></div><div class="articleHead"><h1>Powerful domestic violence Super Bowl ad shows one text can make the difference</h1><p class="article-dek">Technically Incorrect: A simple ad, made with some NFL sponsorship, dramatizes a problem with which the NFL itself is familiar.</p></div></div></div></div><div class="container"><div class="row"><div id="article-info" class="authorHeader article-byline"><span class="byText">by</span><a rel="author" class="author" href="http://www.cnet.com/profiles/chrismatyszczyk/">
+                        Chris Matyszczyk
+                    </a><span class="asset-twitter" data-component="socialTracking" data-social-tracking-options='{"socialSite":"twitter"}'><a class="twitterIcon" target="_blank" href="https://twitter.com/intent/user?screen_name=ChrisMatyszczyk"><div class="twitter"><div class="icon icon-twitter-red"></div></div></a><a class="twitterHandle" target="_blank" href="https://twitter.com/intent/user?screen_name=ChrisMatyszczyk">@ChrisMatyszczyk</a></span><span> / </span><time class="timeStamp" itemprop="datePublished" content="2016-02-05T14:50:30-0800"><span class="formattedDate">February 5, 2016</span><span class="formattedTime">2:50 PM PST</span></time></div></div></div><div id="rbSkin" data-article-num="1"><span id="adSkinLeft"></span><span id="adSkinRight"></span><div id="skin-56bfda255fd69" class="ad-skin" data-ad="skin"><script>
+        window.console && console.log && console.log("ADS: queuing skin-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("skin-56bfda255fd69");
+    </script></div><div class="sticky-leader" data-component="stickyLeader"><div id="leader-top-56bfda255fd69" class="ad-leader-top" data-ad="leader-top"><script>
+        window.console && console.log && console.log("ADS: queuing leader-top-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("leader-top-56bfda255fd69");
+    </script></div></div><div class="articleContent container  "><div class="container"><div class="row"><div class="row"><div class="col-12"><div class="row"><div class="col-8"></div><div class="col-4"></div></div></div></div><div class="row"><div class="col-12"><article itemscope itemtype="http://schema.org/Article" id="article-body" section="articleBody"><meta itemprop="thumbnailUrl" content="http://cnet1.cbsistatic.com/hub/i/r/2016/02/05/a337e2af-829f-4613-b04e-4f9f72afafcb/thumbnail/770x433/e208b31d4ee0b250e064dd8e70f9a7f8/abusead.jpg"><meta itemprop="keywords" content="Technically Incorrect, Super Bowl 50, Tech Culture"><meta itemprop="url" content="http://www.cnet.com/news/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference/"><meta itemprop="headline" content="Powerful domestic violence Super Bowl ad shows one text can make the difference"><meta itemprop="description" content="Technically Incorrect: A simple ad, made with some NFL sponsorship, dramatizes a problem with which the NFL itself is familiar."><div class="col-2"><div id="article-info" class="sideBar article-byline" section="author"><h6><a href="/topics/tech-culture/">Tech Culture</a></h6><time class="timeStamp" itemprop="datePublished" content="2016-02-05T14:50:30-0800"><span class="formattedDate">February 5, 2016</span><span class="formattedTime">2:50 PM PST</span></time><ul><li itemscope itemtype="http://schema.org/Person"><div class="col-1 profilePic articleProfilePic"><a itemprop="name"><figure class=" img"><img src="http://cnet2.cbsistatic.com/hub/i/r/2011/10/09/ca43f6eb-eacb-11e2-8339-d4ae52e62bcc/thumbnail/70x70/09f558384b489ad2767cb9665f65cf1d/headshots_Chris_Matyszczyk.jpg" class="" alt="Chris Matyszczyk mugshot" height="70" width="70"></figure></a></div><div class="col-2 profileInfo articleProfileInfo"><span class="byText">by</span><a itemprop="name" rel="author" class="author" href="http://www.cnet.com/profiles/chrismatyszczyk/">
+                                    Chris Matyszczyk
+                                </a><span class="asset-twitter" data-component="socialTracking" data-social-tracking-options='{"socialSite":"twitter"}'><a class="twitterIcon" target="_blank" href="https://twitter.com/intent/user?screen_name=ChrisMatyszczyk"><div class="twitter"><div class="icon icon-twitter-red"></div></div></a><a class="twitterHandle" target="_blank" href="https://twitter.com/intent/user?screen_name=ChrisMatyszczyk">@ChrisMatyszczyk</a></span></div></li></ul></div></div><div class="col-10 article-main-body row" itemprop="articleBody" data-use-autolinker="true" data-component="lazyloadImages"><div class="sharebarRedesign inline-view atTop" section="topSharebar" data-component="sharebar" data-sharebar-options='{"title":"Powerful domestic violence Super Bowl ad shows one text can make the difference","description":"Technically Incorrect: A simple ad, made with some NFL sponsorship, dramatizes a problem with which the NFL itself is familiar.","url":"http:\/\/www.cnet.com\/news\/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference\/","popupWidth":780,"popupHeight":510,"data":{"media":"http:\/\/cnet2.cbsistatic.com\/hub\/i\/r\/2016\/02\/05\/a337e2af-829f-4613-b04e-4f9f72afafcb\/thumbnail\/170x128\/c78ac92a980c8d41199c5878d14b0030\/abusead.jpg"}}'><div class="sharebarWrapper "><ul class="sharebarContainer"><li class="share-button sharebarRedesignButton"><a data-popup="facebook"><div class="social-button-small-redesign facebook"><div class="icon icon-small-facebook">facebook</div></div></a></li><li class="share-button sharebarRedesignButton"><a data-popup="twitter"><div class="social-button-small-redesign twitter"><div class="icon icon-small-twitter">twitter</div></div></a></li><li class="share-button sharebarRedesignButton"><a data-popup="linkedin"><div class="social-button-small-redesign linkedin"><div class="icon icon-small-linkedin">linkedin</div></div></a></li><li class="share-button sharebarRedesignButton"><a data-popup="googleplus"><div class="social-button-small-redesign googleplus"><div class="icon icon-small-googleplus">googleplus</div></div></a></li><li class="share-button sharebarRedesignButton"><a data-popup="email"><div class="social-button-small-redesign email"><div class="icon icon-small-email">email</div></div></a></li><li class="share-button sharebarRedesignButton comment-count-redesign" data-livefyre-count-redesign="aa14b6dc-130c-42b9-b057-452f721efc4b"><a href="#comments"><div class="social-button-small-redesign comments"><div class="icon icon-small-comments">comments</div></div></a></li><li class="share-button sharebarRedesignButton moreButton" data-component="touchMenuHover"><span class="moreWrap"><a><div class="social-button-small-redesign more"><div class="icon icon-small-more">more</div></div></a></span><div class="hoverWrap"><ul><li class="share-button sharebarRedesignButton"><a data-popup="reddit"><div class="social-button-small-redesign reddit"><div class="icon icon-small-reddit">reddit</div></div></a></li><li class="share-button sharebarRedesignButton"><a data-popup="pinterest"><div class="social-button-small-redesign pinterest"><div class="icon icon-small-pinterest">pinterest</div></div></a></li><li class="share-button sharebarRedesignButton"><a data-popup="tumblr"><div class="social-button-small-redesign tumblr"><div class="icon icon-small-tumblr">tumblr</div></div></a></li></ul></div></li></ul></div><div id="sponsor_ad" class="sponsor"><div id="social-logo-bottom-56bfda255fd69" class="ad-social-logo-bottom" data-ad="social-logo-bottom"><script>
+        window.console && console.log && console.log("ADS: queuing social-logo-bottom-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("social-logo-bottom-56bfda255fd69");
+    </script></div></div></div><div class="col-8"><div id="mpu-plus-top-56bfda255fd69" class="ad-mpu-plus-top" data-ad="mpu-plus-top"><script>
+        window.console && console.log && console.log("ADS: queuing mpu-plus-top-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("mpu-plus-top-56bfda255fd69");
+    </script></div><p><em>Technically Incorrect offers a slightly twisted take on the tech that's taken over our lives.</em></p><hr><figure class="image image-medium
+                pull-none  col-6
+                " section="shortcodeImage"><div class="originalImage" data-open="modal" data-target="#a337e2af-829f-4613-b04e-4f9f72afafcb" data-component="modalEnlargeImage"><img src="http://cnet4.cbsistatic.com/hub/i/r/2016/02/05/a337e2af-829f-4613-b04e-4f9f72afafcb/resize/570xauto/4437681e1bfd74c6a7226b1a0086a298/abusead.jpg" class="" alt="" itemprop="image" height="auto" width="570"><a class="clickToEnlarge"><button type="submit" class="searchButton" value="Search"></button><span>Enlarge Image</span></a><div id="a337e2af-829f-4613-b04e-4f9f72afafcb" class="enlargeImage" data-component="globalModal" data-global-modal-options='{"content":"&lt;img src=\u0027http:\/\/cnet4.cbsistatic.com\/hub\/i\/2016\/02\/05\/a337e2af-829f-4613-b04e-4f9f72afafcb\/d9717c5d1f13681a9bd5defd68363d3e\/abusead.jpg\u0027 style=\u0027width: 889px; height: 587;\u0027&gt;","modalTemplate":"&lt;div class=\u0022enlargeContainer\u0022&gt;&lt;div class=\u0022enlargeImageWrapper\u0022&gt;&lt;a class=\u0022close\u0022 data-close=\u0022modal\u0022&gt;&lt;\/a&gt;{{content}}&lt;\/div&gt;&lt;\/div&gt;","setContentOnInit":false}'></div></div><figcaption><span class="caption"><p>A text conversation between friends. And then... </p></span><span class="credit">
+                                            No More; YouTube screenshot by Chris Matyszczyk/CNET
+                                        </span></figcaption></figure><p> On Sunday, America celebrates a violent game.</p><p> People come together in groups to cheer on the excess and participate in it.</p><p> Before the third quarter starts, I hope that everyone puts down the beer, stops and watches an ad. Just for 50 seconds.</p><p><a href="https://www.youtube.com/watch?v=cy6gjkICKfk" target="_blank" data-component="externalLink">The ad</a> is from a nonprofit called <a href="http://nomore.org/" target="_blank" data-component="externalLink">No More</a>.</p><div id="inpage-video-top-56bfda255fd69" class="ad-inpage-video-top" data-ad="inpage-video-top"><script>
+        window.console && console.log && console.log("ADS: queuing inpage-video-top-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("inpage-video-top-56bfda255fd69");
+    </script></div><p> This organization exists to end domestic violence and sexual assault. Those are things with which  the NFL has been associated <a href="http://www.usatoday.com/sports/nfl/arrests/" target="_blank" data-component="externalLink">with painful regularity</a>. So much so that football's governing body has contributed financially to the making and airing of this ad.</p><p><a href="http://nomore.org/how-to-help/resources/" target="_blank" data-component="externalLink">No More says</a> one in three women and one in four men experiences some form of violence at the hands of a partner. One in five women is a survivor of rape.</p><p> The whole ad is just a series of texts being sent between friends on Super Bowl Sunday.</p><div class="shortcode iframe">
+    <iframe src="https://www.youtube.com/embed/cy6gjkICKfk" width="620" height="371" frameborder="0">
+    </iframe>
+</div><p><br> All seems well at first. The texts begin to reveal a little more information. Then the conversation suddenly stops. The troubling truth hangs in the air.</p><p> Texts have become such a familiar method of communicating. We fancy we can interpret nuances from the words our friends type, from the speed with which they type them, even from the things they don't say.</p><div class="shortcode related-links float_left" section="shortcodeRelatedLinks">
+            <h6>
+                            <span>More Technically Incorrect</span>
+                    </h6>
+        <ul><li>
+                                                                                <a href="http://www.cnet.com/news/watch-a-robot-golfer-make-a-hole-in-one-on-the-pga-tour/">Watch a robot golfer make a hole-in-one on the PGA Tour</a>
+                                            </li>
+                                    <li>
+                                                                                <a href="http://www.cnet.com/news/gps-spelling-mistake-sends-american-the-wrong-way-and-onto-tv/">GPS spelling mistake sends American the wrong way, and onto TV</a>
+                                            </li>
+                                    <li>
+                                                                                <a href="http://www.cnet.com/news/in-first-ever-super-bowl-ad-paypal-insults-benjamin-franklin/">PayPal's first Super Bowl ad insults Ben Franklin</a>
+                                            </li>
+                                    </ul></div><p><a href="http://www.prnewswire.com/news-releases/no-more-psa-set-to-appear-in-super-bowl-50-300215509.html" target="_blank" data-component="externalLink">In a press release</a>, No More said, "The recognizable iOS typing indicator thought bubble icon is used,  symbolically, to point out one of the many signs of domestic violence:  her inability to talk about an abusive relationship."</p><p> In a simple, evocative way, the ad asks for awareness and action.</p><div id="mpu-bottom-56bfda255fd69" class="ad-mpu-bottom" data-ad="mpu-bottom"><script>
+        window.console && console.log && console.log("ADS: queuing mpu-bottom-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("mpu-bottom-56bfda255fd69");
+    </script></div><p> It shows that sometimes we have to use our interpretive skills to  help those who are truly in need. It encourages viewers  to text "NO MORE" to 94543 to find out how to help.</p><p><a href="http://nomore.org/how-to-help/resources/" target="_blank" data-component="externalLink">On its Web site</a>, No More offers advice on how to contact <a href="http://www.thehotline.org/" target="_blank" data-component="externalLink">the National Domestic Violence Hotline</a> and what to do if you suspect a friend might be the victim of  domestic violence or if, indeed, you are.</p><p> Just one text during the big game might make all the difference to someone's life.</p></div><footer><div class="row collections-topics-and-tags" section="tag"><dl><dt><b>Tags: </b></dt><dd><a href="/technically-incorrect/" data-vanity-rewritten="true">Technically Incorrect</a></dd><dd><a href="/collections/super-bowl/">Super Bowl 50</a></dd><dd><a href="/topics/tech-culture/">Tech Culture</a></dd></dl></div></footer></div></article><div class="row"><div class="col-8 subfooter"><div class="collapsible hidden" data-component="toggle" data-toggle-options='{"openOnInit":false}'><!-- General comments --><div id="livefyreContainer-aa14b6dc-130c-42b9-b057-452f721efc4b" class="livefyreContainer"><a name="comments" class="livefyreJumpTarget"> </a><h3><span>Discuss: Powerful domestic violence Super Bowl ad...</span></h3><div id="livefyreConversation-aa14b6dc-130c-42b9-b057-452f721efc4b" class="livefyreConversation" data-component="livefyreConversation" data-livefyre-conversation-options='{"urlUserToken":"\/livefyre\/user-token\/","globalConfig":{"network":"cnet.fyre.co","stringOverrides":[]},"commentStreamConfigs":{"initialNumVisible":5,"maxVisible":5,"siteId":311569,"articleId":"aa14b6dc-130c-42b9-b057-452f721efc4b","el":"livefyreConversation-aa14b6dc-130c-42b9-b057-452f721efc4b","checksum":"51b926cad2de7b2c8b5ed479c54fe869","collectionMeta":"eyJ0eXAiOiJqd3QiLCJhbGciOiJIUzI1NiJ9.eyJ0aXRsZSI6IlBvd2VyZnVsIGRvbWVzdGljIHZpb2xlbmNlIFN1cGVyIEJvd2wgYWQgc2hvd3Mgb25lIHRleHQgY2FuIG1ha2UgdGhlIGRpZmZlcmVuY2UiLCJ1cmwiOiJodHRwOlwvXC93d3cuY25ldC5jb21cL25ld3NcL3Bvd2VyZnVsLWRvbWVzdGljLXZpb2xlbmNlLXN1cGVyLWJvd2wtYWQtc2hvd3Mtb25lLXRleHQtY2FuLW1ha2UtdGhlLWRpZmZlcmVuY2VcLyIsImNoZWNrc3VtIjoiNTFiOTI2Y2FkMmRlN2IyYzhiNWVkNDc5YzU0ZmU4NjkiLCJhcnRpY2xlSWQiOiJhYTE0YjZkYy0xMzBjLTQyYjktYjA1Ny00NTJmNzIxZWZjNGIifQ.ppFK_s5vaRVyFYSOzgSexJhdoo4SdDLfcJv22NQ-Ko0"},"profileURL":"\/profiles\/%7Busername%7D\/","edition":"us"}'></div><div class="livefyreFooter"><p class="livefyrePowered">Conversation powered by Livefyre</p></div></div><div class="toggleComments" data-item="trigger"><span class="showComments">Show Comments</span><span class="hideComments">Hide Comments</span></div></div><div class="fixate-bottom-anchor"></div></div></div><div class="row"><div class="col-2"></div><div class="col-8 videoPromoContainer"><div class="videoWrapper"><div section="videoPromo" class="videoPromo" data-component="productReviewVideo" data-product-review-video-options='{"videoParent":"[data-container-asset-id=aa14b6dc-130c-42b9-b057-452f721efc4b] .videoPromo","closeButtonParent":"[data-container-asset-id=aa14b6dc-130c-42b9-b057-452f721efc4b] .videoPromo"}'><h6><span>Featured Video</span></h6><div class="cnetVideoPlayer hide" data-tpbaseurl="http://cnet2.cbsistatic.com/fly/bundles/cnetmpxpdk/pdk" data-component="cnetVideo" data-cnet-video-options='{"video":null,"videos":[{"id":"4622c3ba-30de-4660-8040-eef0c5c71e8b","title":"Huge scientific breakthrough and a big hole in Windows patched","description":"Researchers find a new way to observe the universe. Meanwhile, Microsoft issued an update that fixes a major flaw in Windows.","slug":"huge-scientific-breakthrough-and-a-big-hole-in-windows-patched","chapters":"","mpxId":"621978691858","mpxRefId":"mpXaL0kauKglRBvAZ8ZVCRwbI1dcen_E","primaryTopic":{"id":""},"author":{"id":"74504c8d-a5f9-4894-9cc3-b7e94f30d64b","firstName":"Iyaz","lastName":"Akhtar"},"primaryCollection":{"id":"cee43eaa-1cbc-4558-8c84-6a289fb8c7a3","title":"CNET Radar"},"duration":121,"files":{"hds":"zWcf0IKO8urp","hls_tablet":"eqKCDiWfvIQr","wifi":"fVT7Vm0FMyy3","3g":"7Mbn72siqO33","hls_phone":"RtV93_TLFMOU"},"isVertical":false},{"id":"49d1f8fc-ca50-46f3-a3b8-5835d0d92de3","title":"Google\u0027s future plans and Microsoft knows what dog you are","description":"A report says Google\u0027s next wearable won\u0027t need a phone. Meanwhile, a Microsoft garage project tests image recognition.","slug":"googles-future-plans-and-microsoft-knows-what-dog-you-are","chapters":"","mpxId":622056003967,"mpxRefId":"aaVOUVTlvOZ05j9tLECKKH4ofalvLnuh","primaryTopic":{"id":""},"author":{"id":"74504c8d-a5f9-4894-9cc3-b7e94f30d64b","firstName":"Iyaz","lastName":"Akhtar"},"primaryCollection":{"id":"8cd2040c-3418-4f94-8b69-f04447141857","title":["CNET Update"]},"duration":145,"files":{"hls_phone":"u_YuXGO9rkRM","3g":"kasCTrPRqB5N","hds":"iSccoEt46iez","hls_tablet":"B_AhSdTLYzDI","wifi":"BMSQ1RCDceTp"},"isVertical":false},{"id":"12684ddb-8b24-483f-a673-6237b4889b17","title":"Crave\u0027s creepy-robot roundup, Ep. 230","description":"This week on Crave, we explore robots with elevated levels of freaky, like the cockroach robot that might someday find you buried under a pile rubble. Let\u0027s kick it up a notch with a robot that prints portraits in blood. Hope you\u0027re sitting down because this is not for the faint of heart.","slug":"craves-creepy-robot-roundup-ep-230","chapters":"","mpxId":621868099818,"mpxRefId":"RFbYzNQ5rcv6Vx3e6u_wVStc_qe8HRgh","primaryTopic":{"id":""},"author":{"id":"9d83a369-96dc-4684-9f6e-dc3ae89969b1","firstName":"Stephen","lastName":"Beacham"},"primaryCollection":{"id":"849b21d8-3d06-452b-a349-9d80f6595f76","title":["Crave"]},"duration":209,"files":{"hds":"SEgi7wfX8gzC","3g":"FNWdQnxZ_o2O","hls_tablet":"Pj7SA2H21uzZ","wifi":"lznfC4w_9yYr","hls_phone":"cmt1uFsRMR2P"},"isVertical":false},{"id":"9063363e-d444-4cc4-a601-e0a913c5e590","title":"Paola \u0027PancakePow\u0027 Alejandra talks e-sports, cosplay and galaxy hair (Tomorrow Daily 314)","description":"Ashley and Jeff deep dive into Epic\u0027s Unreal Editor for virtual reality, the Curatio hand scanner and the VR art exhibit \u0022Doors.\u0022 We also welcome Paola Alejandra (aka \u0022PancakePow\u0022) to the show, and debate the 20:16 MoonWalker shoe crowdfunding campaign.","slug":"paola-pancakepow-alejandra-esports-cosplay-nebula-hair-tomorrow-daily-314","chapters":"","mpxId":621358147508,"mpxRefId":"pE9ELLRfAZwJ3S1zdQ7sF5bbWR6LTBYX","primaryTopic":{"id":""},"author":{"id":"b163284d-6b73-44fc-b3e6-3da66c392d40","firstName":"Ashley","lastName":"Esqueda"},"primaryCollection":{"id":"b1ef852a-377b-4a87-832a-72f27fe57c57","title":["Tomorrow Daily"]},"duration":2759,"files":{"hds":"e6GLvZs2yXVV","hls_tablet":"JOFDBZtFP8m9","wifi":"oEDk1K7QbrxU","3g":"ekLdZ560DQ5X","hls_phone":"0uKA_qWtEAh9"},"isVertical":false},{"id":"9b4d606f-be6f-4417-826d-e420bb48f134","title":"Art installation opens door to virtual world (Tomorrow Daily 313)","description":"A prototype device designed to help the blind interact with visual imagery, plus an art exhibit designed to get people talking about shared virtual-reality experiences.","slug":"art-installation-opens-door-to-virtual-world-tomorrow-daily-313","chapters":"","mpxId":620677187604,"mpxRefId":"J_V9h8M63CSEMGG8f7QN2X5_6IaRCAMo","primaryTopic":{"id":""},"author":{"id":"b163284d-6b73-44fc-b3e6-3da66c392d40","firstName":"Ashley","lastName":"Esqueda"},"primaryCollection":{"id":"b1ef852a-377b-4a87-832a-72f27fe57c57","title":["Tomorrow Daily"]},"duration":297,"files":{"hds":"yC6LPTcJEkIt","hls_phone":"lbSkL5_NF9Dh","wifi":"U8xgCsIG_Mw8","3g":"mR23r1ONpIGo","hls_tablet":"c8QCiMHXkeg_"},"isVertical":false},{"id":"5fc5abe8-fa97-401f-9c87-c521e549b2e7","title":"Making 3D hand scans with cameras, lasers and Raspberry Pi (Tomorrow Daily 312)","description":"Engineering student creates a DIY scanner aimed at making better 3D images of our hands, and a designer collaborates on a project combining pottery, sound waves and 3D printing.","slug":"curatio-3d-hand-scanner-32-cameras-lasers-raspberry-pi-tomorrow-daily-312","chapters":"","mpxId":619728963668,"mpxRefId":"c9COPh4mHXvxYa7IlUgZf3_zZTeCHEK4","primaryTopic":{"id":""},"author":{"id":"b163284d-6b73-44fc-b3e6-3da66c392d40","firstName":"Ashley","lastName":"Esqueda"},"primaryCollection":{"id":"b1ef852a-377b-4a87-832a-72f27fe57c57","title":["Tomorrow Daily"]},"duration":252,"files":{"hds":"E6jFXUxsmTb1","wifi":"vlcCJRZ6C8YS","hls_phone":"JPVtx_zmK_nZ","3g":"UDEVYYMFewAx","hls_tablet":"u46KHTLLrk6m"},"isVertical":false},{"id":"2cd9c8e0-a212-42f8-9ade-5e6c26f30afa","title":"Apple TV stretches Siri voice search in beta update","description":"A developer preview of an Apple TV software update reveals new perks. Meanwhile, Twitter puts video ads on top of your feed and assembles a new troll-fighting task force.","slug":"apple-tv-stretches-siri-voice-search-in-beta-update","chapters":"","mpxId":619614787723,"mpxRefId":"D9iTIuk4aZ0fA_PyPK_TYq9aHGIvom1l","primaryTopic":{"id":""},"author":{"id":"95981d0c-8175-11e2-9d12-0018fe8a00b0","firstName":"Bridget","lastName":"Carey"},"primaryCollection":{"id":"8cd2040c-3418-4f94-8b69-f04447141857","title":["CNET Update"]},"duration":142,"files":{"hls_phone":"IACTS36y4JT_","hds":"CS5_7Vll5BRj","wifi":"6k9UqNEj59qb","3g":"nUNUgNzp9_1o","hls_tablet":"zuClyNYF2CVe"},"isVertical":false},{"id":"6a613fb9-8553-4600-af3c-2b686909638a","title":"Using VR to make games in VR is VR-riffic (Tomorrow Daily 311)","description":"Epic announces an upcoming virtual-reality component for its Unreal Editor, and a team at Wuhan University shows off its real-time adaptive camouflage system.","slug":"epic-unreal-vr-editor-make-games-tomorrow-daily-311","chapters":"","mpxId":618935875702,"mpxRefId":"zAP2FLl2lbrkGOFZ2o7pxfOEn8jMxh34","primaryTopic":{"id":""},"author":{"id":"b163284d-6b73-44fc-b3e6-3da66c392d40","firstName":"Ashley","lastName":"Esqueda"},"primaryCollection":{"id":"b1ef852a-377b-4a87-832a-72f27fe57c57","title":["Tomorrow Daily"]},"duration":277,"files":{"hds":"K0L8V4gI_buv","hls_phone":"Ffg71QmH7kM6","3g":"HYvDsRaPIb2j","hls_tablet":"9NCUiSd7saHg","wifi":"2zl2EP7g6Wy5"},"isVertical":false},{"id":"9a2a808c-b560-4e04-b8ff-11051f566f1d","title":"Google Cardboard getting an upgrade?","description":"The virtual reality headset may come in a new form this year. Meanwhile, the Super Bowl was streamed online in record numbers and people are already wondering why Venmo had troubles after the big game.","slug":"google-cardboard-getting-an-upgrade","chapters":"","mpxId":618833475968,"mpxRefId":"PP7hoQB5Amdc_l__Nrb1zSKfaI7En5xe","primaryTopic":{"id":""},"author":{"id":"95981d0c-8175-11e2-9d12-0018fe8a00b0","firstName":"Bridget","lastName":"Carey"},"primaryCollection":{"id":"8cd2040c-3418-4f94-8b69-f04447141857","title":["CNET Update"]},"duration":144,"files":{"hds":"ggJuWsT0l_Op","wifi":"aJayQdNAI9os","hls_phone":"Z7BF3mUTP8K5","hls_tablet":"wPGPIXsx2t1B","3g":"CxBh6Wy9PneP"},"isVertical":false},{"id":"6be187b5-4d83-47ad-a5eb-0890ada7d5aa","title":"Outcry over iPhone \u0027Error 53\u0027 and bad USB Type-C cables","description":"Be careful when replacing parts. Poorly made cables can fry a laptop, and iPhones will stop working if the Touch ID button is repaired outside of Apple. It\u0027s a lesson some are learning the hard way.","slug":"outcry-over-iphone-error-53-and-bad-usb-type-c-cables","chapters":"","mpxId":617153091603,"mpxRefId":"DQjuLYKT_l9CfWMH8pB4cbxOqidlzUUn","primaryTopic":{"id":""},"author":{"id":"95981d0c-8175-11e2-9d12-0018fe8a00b0","firstName":"Bridget","lastName":"Carey"},"primaryCollection":{"id":"8cd2040c-3418-4f94-8b69-f04447141857","title":["CNET Update"]},"duration":144,"files":{"hls_phone":"vAZ8Odg3RslO","hds":"i980IVMNHf5x","hls_tablet":"v8sjERZkNyvG","wifi":"hbDw0HhnPfap","3g":"hBfR91K386iP"},"isVertical":false},{"id":"55056460-6b42-48f7-a128-994e5eb793c3","title":"A look at what makes this the most high-tech Super Bowl to date","description":"For the first time Silicon Valley is hosting the Super Bowl, and it\u0027s set to be the techiest big game yet.","slug":"a-look-at-what-makes-this-the-most-high-tech-super-bowl-to-date","chapters":"","mpxId":616486979785,"mpxRefId":"uSwXMgxCFpkD1T9k6FhcujiD5yGRcK7s","primaryTopic":{"id":""},"author":{"id":"","firstName":"","lastName":""},"primaryCollection":{"id":"8cd2040c-3418-4f94-8b69-f04447141857","title":["CNET Update"]},"duration":108,"files":{"wifi":"69iFXWqTjc7v","hds":"ITko_HBnxt6t","3g":"AhLQvUcSZAvR","hls_tablet":"eW_Q99AshW8R","hls_phone":"FPX5OgTIZ3q1"},"isVertical":false}],"relatedItems":null,"autoplay":"false","timelineContainer":".videoPromo","vidInfoContainer":null,"monitorProgress":null,"refreshAds":["mpu-plus-top","skin","leader-bottom","leader-top","social-logo-bottom","inline-product-carousel-top"],"timeRange":"","popOnScroll":false,"config":{"policies":{"default":11417438},"players":{"default":{"mpx_account":"kYEXFC","runtimes":"Flash,HTML5","playerUrl":"http:\/\/player.theplatform.com\/p\/kYEXFC\/cnet-video-player","layoutUrl":{"desktop":"\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetLayout.desktop.xml","mobile":"\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetLayout.mobile.xml","videoDoor":"\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetLayout.videoDoor.xml"},"skinUrl":{"desktop":"\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetSkin.desktop.json","mobile":"\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetSkin.mobile.json"},"colors":{"controlFrameColor":"0x3e3e3e","controlBackgroundColor":"0x656565","controlHoverColor":"0xffffff","controlSelectedColor":"0xffffff","controlColor":"0xbbbbbb","frameColor":"0x3e3e3e","playProgressColor":"0x4583b2","scrubberFrameColor":"0x61809e","scrubberColor":"0xffffff","scrubTrackColor":"0x3a424d","pageBackgroundColor":"0x000000"},"plugins":{"1":"vast","2":"omniture","3":"dw","4":"comscore","5":"nielsen"}}},"tracking":{"can_partner_id":"canPartnerID","comscore_id":"3000085","comscore_home":"3000085","comscore_news":"3000078","comscore_reviews":"3000087","comscore_videos":"3000088","nielsen_cid":"us-200330","nielsen_vcid":"c07","nielsen_vcid_reviews":"c05","nielsen_vcid_home":"c07","nielsen_vcid_news":"c08","nielsen_vcid_how_to":"c09","nielsen_vcid_videos":"c20"}},"layoutUrl":"http:\/\/cnet4.cbsistatic.com\/fly\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetLayout.desktop.xml","skinUrl":"http:\/\/cnet1.cbsistatic.com\/fly\/bundles\/cnetvideo\/pdk\/skins\/cnet\/cnetSkin.desktop.json","baseUrl":"http:\/\/www.cnet.com\/","runtime":"Flash","policy":null,"adBlockTitle":"Sorry about that","adBlockMessage":"It looks like you\u0027re using an ad blocker. We know you don\u0027t love ads. But they allow us to pay the writers, editors and producers who work to make your favorite CNET videos. To watch this video, please disable your ad blocker and refresh the page. Thanks for tuning in. You\u0027re the best.","noFlashTitle":"Flash Player upgrade required","noFlashMessage":"Please &lt;a href=\u0022http:\/\/get.adobe.com\/flashplayer\/\u0022 target=\u0022_new\u0022&gt;download and install&lt;\/a&gt;  the latest version of the Adobe Flash Player to watch this video.","hideItem":null,"targetItem":null,"partnerId":null}'><div data-item="loadingCircle" id="countdownSpinner" data-iteration="5"><div id="countdownCount"></div></div><script type="text/javascript">
+
+            if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+                document.getElementById('countdownSpinner').setAttribute('id', 'loadingCircle');
+                document.getElementById('countdownCount').innerHTML = "";
+            }
+
+            var cdcIntervalId = setInterval(function () {
+                var iteration = (document.getElementById('countdownSpinner')) ? document.getElementById('countdownSpinner').getAttribute('data-iteration') : 0;
+                if (iteration == undefined || iteration == 'NaN' || iteration == 0) {
+                    clearInterval(cdcIntervalId);
+                } else {
+                    document.getElementById('countdownCount').innerHTML = iteration;
+                    document.getElementById('countdownSpinner').setAttribute('data-iteration', iteration - 1);
+                }
+            }, 1000);
+        </script><div id="customPlayerCards"></div><script data-item="abCheck" src="http://cnet2.cbsistatic.com/fly/bundles/cnetjs/js/utils/advertisement3.js" type="text/javascript"></script></div><div class="videoSlide"><div><div class="playOverlay" data-item="playOverlay"></div><figure class=" img"><img src="http://cnet1.cbsistatic.com/hub/i/r/2015/08/19/2014c4b8-d10a-43b6-8018-4c7e26bdf44d/thumbnail/770x433/019b80061a89f489c2c2f0ca4ef3babc/istock000052863050large.jpg" class="photo" alt="" height="433" width="770"></figure></div><div class="meta"><h4>Huge scientific breakthrough and a big hole in Windows patched</h4><p class="dek">Researchers find a new way to observe the universe. Meanwhile, Microsoft issued an update that fixes a major flaw in Windows.</p><span class="author">by <span class="name">Iyaz Akhtar</span></span><span class="date"><time datetime="February 13, 2016">February 13, 2016</time></span></div></div></div></div><div class="sponsoredContentHeader"><h6></h6></div><div id="video-thumbnail-top-56bfda255fd69" class="ad-video-thumbnail-top" data-ad="video-thumbnail-top"><script>
+        window.console && console.log && console.log("ADS: queuing video-thumbnail-top-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("video-thumbnail-top-56bfda255fd69");
+    </script></div></div><div class="col-2"></div></div><div id="leader-bottom-56bfda255fd69" class="ad-leader-bottom" data-ad="leader-bottom"><script>
+        window.console && console.log && console.log("ADS: queuing leader-bottom-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("leader-bottom-56bfda255fd69");
+    </script></div><div class="taboola col-8" id="taboola-powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference-below-article-thumbnails" data-component="taboola" data-taboola-options='{"mode":"alternating-thumbnails-a","container":"taboola-powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference-below-article-thumbnails","canonicalUrl":"http:\/\/www.cnet.com\/news\/powerful-domestic-violence-super-bowl-ad-shows-one-text-can-make-the-difference\/","placement":"Below Article Thumbnails","width":"col-8","isXhr":false}'></div></div></div></div></div></div></div>    </div>
+        </div>
+
+                                    
+<footer id="rbFooter"><div id="footerCopyright" class="col-12">
+        <span class="copyright">© CBS Interactive Inc.  /  All Rights Reserved.</span>
+        <div id="legal">
+            <a href="http://cbsi.force.com/CBSi/privacy" rel="nofollow">Privacy Policy</a>
+            <a href="http://legalterms.cbsinteractive.com/adchoice" rel="nofollow">Ad Choice</a>
+            <a href="http://legalterms.cbsinteractive.com/terms-of-use" rel="nofollow">Terms of Use</a>
+            <a href="http://legalterms.cbsinteractive.com/eula" rel="nofollow">Mobile User Agreement</a>
+        </div>
+    </div>
+
+    <div class="container">
+        
+                                    <div id="dynamic-text-link-top-56bfda255fd69" class="ad-dynamic-text-link-top" data-ad="dynamic-text-link-top">
+    <script>
+        window.console && console.log && console.log("ADS: queuing dynamic-text-link-top-56bfda255fd69 for display");
+        var cbsiGptDivIds = cbsiGptDivIds || [];
+        cbsiGptDivIds.push("dynamic-text-link-top-56bfda255fd69");
+    </script></div>
+                </div>
+
+    <nav id="footerMap" class="container"><ul class="col-2 first"><li><a href="/">cnet</a></li>
+        </ul><ul class="col-2"><li class="section">Reviews</li>
+            <li><a href="/reviews/">All Reviews</a></li>
+            <li><a href="/topics/audio/">Audio</a></li>
+            <li><a href="/topics/cameras/">Cameras</a></li>
+            <li><a href="/topics/desktops/">Desktops</a></li>
+            <li><a href="/topics/laptops/">Laptops</a></li>
+            <li><a href="/topics/phones/">Phones</a></li>
+            <li><a href="/roadshow/" target="_blank">Roadshow</a></li>
+            <li><a href="/topics/tablets/">Tablets</a></li>
+            <li><a href="/topics/tvs/">TVs</a></li>
+        </ul><ul class="col-2"><li class="section">News</li>
+            <li><a href="/news/">All News</a></li>
+            <li><a href="/apple/" data-vanity-rewritten="true">Apple</a></li>
+            <li><a href="/crave/" data-vanity-rewritten="true">Crave</a></li>
+            <li><a href="/topics/internet/" data-vanity-rewritten="true">Internet</a></li>
+            <li><a href="/tags/microsoft/">Microsoft</a></li>
+            <li><a href="/topics/mobile/" data-vanity-rewritten="true">Mobile</a></li>
+            <li><a href="/topics/sci-tech/" data-vanity-rewritten="true">Sci-Tech</a></li>
+            <li><a href="/topics/security/" data-vanity-rewritten="true">Security</a></li>
+            <li><a href="/topics/tech-industry/" data-vanity-rewritten="true">Tech Industry</a></li>
+        </ul><ul class="col-2"><li class="section">Video</li>
+            <li><a href="/videos/">All Video</a></li>
+            <li><a href="/apple-byte/" data-vanity-rewritten="true">Apple Byte</a></li>
+            <li><a href="/carfection/" target="_blank" data-vanity-rewritten="true">Carfection</a></li>
+            <li><a href="/cnet-top-5/" data-vanity-rewritten="true">CNET Top 5</a></li>
+            <li><a href="/cnet-update/" data-vanity-rewritten="true">CNET Update</a></li>
+            <li><a href="/next-big-thing/" data-vanity-rewritten="true">Next Big Thing</a></li>
+            <li><a href="/cnet-on-cars/" target="_blank" data-vanity-rewritten="true">On Cars</a></li>
+            <li><a href="/tomorrow-daily/" data-vanity-rewritten="true">Tomorrow Daily</a></li>
+            <li><a href="/cnet-podcasts/" data-vanity-rewritten="true">CNET Podcasts</a></li>
+        </ul><ul class="col-2" data-component="mobileFooterLink"><li class="section">More</li>
+            <li><a href="http://www.cbsinteractive.com/">About CBS Interactive</a></li>
+            <li><a href="/about/" data-vanity-rewritten="true">About CNET</a></li>
+            <li><a href="/cnet100/">CNET 100</a></li>
+                            <li><a href="/deals/">CNET Deals</a></li>
+                        <li><a href="/forums/">CNET Forums</a></li>
+            <li><a href="http://subscribe.cnet.com/magazine/subscribe/">CNET Magazine</a></li>
+            <li><a href="/news/mobile/" data-vanity-rewritten="true">CNET Mobile</a></li>
+            <li><a href="https://cbsi.secure.force.com/CBSi/knowledgehome?referer=cnet.com">Help Center</a></li>
+            <li><a href="http://reprints.ygsgroup.com/m/cnet/">Permissions</a></li>
+        </ul><ul class="col-2 last"><li class="section">Follow CNET via...</li>
+            <li><a href="http://www.facebook.com/cnet" class="social-core-facebook">Facebook</a></li>
+            <li><a href="http://twitter.com/cnet" class="social-core-twitter">Twitter</a></li>
+            <li><a href="https://plus.google.com/u/0/105198124856956810263/posts" class="social-core-google">Google+</a></li>
+            <li><a href="http://www.youtube.com/user/CNETTV" class="social-core-youtube">YouTube</a></li>
+            <li><a href="https://www.linkedin.com/company/cnet" class="social-core-linkedin">LinkedIn</a></li>
+            <li><a href="http://cnet.tumblr.com/" class="social-core-tumblr">Tumblr</a></li>
+            <li><a href="http://pinterest.com/cnet" class="social-core-pinterest">Pinterest</a></li>
+            <li><a href="/user/join-cnet/" class="social-core-newsletters">Newsletters</a></li>
+            <li><a href="/rss/" class="social-core-rss" data-vanity-rewritten="true">RSS</a></li>
+        </ul></nav></footer><!--Visual Revenue Reader Response Tracking Script (v6) --><script type="text/javascript">
+        function vr_init() {
+            $('.load-more').trigger('click');
+        }
+
+        var _vrq = _vrq || [];
+        _vrq.push(['id', 514]);
+        _vrq.push(['automate', false]);
+        _vrq.push(['track', function(){}]);
+        (function(d, a){
+            var s = d.createElement(a),
+            x = d.getElementsByTagName(a)[0];
+            s.async = true;
+            s.src = 'http://a.visualrevenue.com/vrs.js';
+            x.parentNode.insertBefore(s, x);
+        })(document, 'script');
+    </script><!-- End of VR RR Tracking Script - All rights reserved --><div data-component="yahooBeacon" data-yahoo-beacon-options='{"yahooId":"3dea089e-a865-35a2-aee5-6271e85057cf","yahooClass":"YAD-3dea089e-a865-35a2-aee5-6271e85057cf"}'></div><script>
+    function addVars() {
+    BOOMR.addVar({
+            "txId": (window.CnetPageVars && window.CnetPageVars.txId) ? window.CnetPageVars.txId : ""
+            });
+    }
+
+if (document.addEventListener) {
+    document.addEventListener("onBoomerangLoaded", addVars);
+    }
+else if (document.attachEvent) {
+    document.attachEvent("onpropertychange", function(e) {
+            if (!e) e = window.event;
+            if (e && e.propertyName === "onBoomerangLoaded") {
+                    addVars();
+                    }
+            });
+    }
+
+/*! mpulse v0.0.2 */
+
+!function(a){"use strict";function b(b,c){j||("object"==typeof XDomainRequest?(r=!0,j=function(){return new XDomainRequest}):"function"==typeof XMLHttpRequest||"object"==typeof XMLHttpRequest?j=function(){return new XMLHttpRequest}:"function"==typeof require?j=function(){var a=require("xmlhttprequest").XMLHttpRequest;return new a}:a&&"undefined"!=typeof a.ActiveXObject&&(j=function(){return new a.ActiveXObject("Microsoft.XMLHTTP")}));var d=j();"function"==typeof c&&(r?d.onload=function(){c(d.responseText)}:d.onreadystatechange=function(){4===d.readyState&&c(d.responseText)}),d.open("GET",b,!0),d.send()}function c(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(a){var b=16*Math.random()|0,c="x"===a?b:3&b|8;return c.toString(16)})}function d(d,e){function f(b){return-1!==b.indexOf("http://")||-1!==b.indexOf("https://")?b:(Q?b="https:"+b:"undefined"==typeof a?-1===b.indexOf("http:")&&(b="http:"+b):"undefined"!=typeof a&&"file:"===a.location.protocol&&-1===b.indexOf("http:")&&(b="http:"+b),b)}function g(){var a=P;return a+=-1!==a.indexOf("?")?"&":"?",a+="key="+O,a+="&acao=",f(a)}function h(){var a=R.beacon_url;return a+=-1!==a.indexOf("?")?"&":"?",a+="acao=1",f(a)}function i(a){try{var b=JSON.parse(a);for(var c in b)b.hasOwnProperty(c)&&(R[c]=b[c])}catch(d){return void(T=!1)}if($||I(R.session_id),_={},ba={},Z={},R.PageParams){var e=R.PageParams.customMetrics,f=R.PageParams.customTimers,g=R.PageParams.customDimensions;if(e)for(q=0;q<e.length;q++){var h=e[q];_[h.name]=h.label}if(f)for(q=0;q<f.length;q++){var i=f[q];ba[i.name]=i.label}if(g)for(q=0;q<g.length;q++){var m=g[q];Z[m.name]=m.label}}T=!0,S=!0,setTimeout(j,l),k(r)}function j(){if(""!==P){var a=g();S&&(a+="&r="),b(a,i)}}function n(){var a={};for(var b in Y)Y.hasOwnProperty(b)&&(a[b]=Y[b]);return a}function o(a,b,c){U.push({type:a,name:b,value:c,group:W,ab:X,dimensions:n()})}function r(a){if(0!==U.length){if(!T)return void((!V||a)&&(V=!0,setTimeout(function(){r(!0)},m)));var b=U.shift(),c=b.type,d=b.name,e=b.value,f={};"boolean"!=typeof b.group&&(f["h.pg"]=b.group),"boolean"!=typeof b.ab&&(f["h.ab"]=b.ab);for(var g in b.dimensions)b.dimensions.hasOwnProperty(g)&&"undefined"!=typeof Z[g]&&(f[Z[g]]=b.dimensions[g]);"metric"===c?"undefined"!=typeof _[d]&&(f[_[d]]=e,t(f)):"timer"===c&&"undefined"!=typeof ba[d]&&(f.t_other=ba[d]+"|"+e,t(f)),k(r)}}function t(a){a.d=R.site_domain,a["h.key"]=R["h.key"],a["h.d"]=R["h.d"],a["h.cr"]=R["h.cr"],a["h.t"]=R["h.t"],a["http.initiator"]="api",$!==!1&&(a["rt.si"]=$,a["rt.ss"]=da,a["rt.sl"]=ea),a.api=1,a.v=1,a.u="http://"+R.site_domain,a.t_done=0,N("before_beacon",a);var c=[];for(var d in a)a.hasOwnProperty(d)&&c.push(encodeURIComponent(d)+"="+(void 0===a[d]||null===a[d]?"":encodeURIComponent(a[d])));var e=h(),f=e+(e.indexOf("?")>-1?"&":"?")+c.join("&");N("beacon",a),b(f)}function u(a){return"string"!=typeof a?-1:(ca++,aa[ca]={time:s(),name:a},ca)}function v(a){if("number"!=typeof a||0>a)return-1;var b=aa[a],c=0;return b?(c=Math.round(s()-b.time),w(b.name,c),delete aa[a],c):-1}function w(a,b){return"string"!=typeof a?-1:"number"!=typeof b||0>b?-1:(b=Math.round(b),o("timer",a,b),k(r),b)}function x(a,b){"string"==typeof a&&("undefined"==typeof b||"number"==typeof b)&&("undefined"==typeof b&&(b=1),o("metric",a,b),k(r))}function y(a){"string"==typeof a&&(W=a)}function z(){return W}function A(){W=!1}function B(a){return"string"!=typeof a?!1:/^[a-zA-Z0-9_ -]{1,25}$/.test(a)===!1?!1:(X=a,!0)}function C(){return X}function D(){X=!1}function E(a,b){return"undefined"!=typeof a?"undefined"==typeof b?void F(a):void(Y[a]=b):void 0}function F(a){"undefined"!=typeof a&&"undefined"!=typeof Y[a]&&delete Y[a]}function G(a){("string"==typeof a||"number"==typeof a)&&("number"==typeof a&&(a=""+a),$=a)}function H(){return $}function I(a){return G(a||c()),K(0),H()}function J(){ea++}function K(a){"number"!=typeof a||0>a||(ea=a)}function L(){return ea}function M(a,b){fa.hasOwnProperty(a)&&"function"==typeof b&&fa[a].push(b)}function N(a,b){for(var c=0;c<fa[a].length;c++)fa[a][c](b)}e=e||{};var O=d,P="//c.go-mpulse.net/api/config.json",Q=!1,R={},S=!1,T=!1,U=[],V=!1,W=!1,X=!1,Y={},Z={},$=!1,_={},aa={},ba={},ca=-1,da=s(),ea=0,fa={};for(q=0;q<p.length;q++)fa[p[q]]=[];"undefined"!=typeof e.configUrl&&(P=e.configUrl),e.forceSSL&&(Q=!0),j();var ga={startTimer:u,stopTimer:v,sendTimer:w,sendMetric:x,setPageGroup:y,getPageGroup:z,resetPageGroup:A,setABTest:B,getABTest:C,resetABTest:D,setDimension:E,resetDimension:F,setSessionID:G,getSessionID:H,startSession:I,incrementSessionLength:J,setSessionLength:K,getSessionLength:L,subscribe:M,parseConfig:i};return ga}function e(){return w.mPulse=x,v}function f(a,b){if(b=b||{},"undefined"!=typeof b.name&&"undefined"!=typeof z[b.name])return z[b.name];var c=d(a,b);if(y===!1){y=c;for(var e=0;e<o.length;e++){var f=o[e];v[f]=y[f]}}return"undefined"!=typeof b.name&&(z[b.name]=c),c}function g(a){return z[a]}function h(){}function i(a){"undefined"!=typeof z[a]&&delete z[a]}var j,k,l=3e5,m=5e3,n="0.0.1",o=["startTimer","stopTimer","sendTimer","sendMetric","setPageGroup","getPageGroup","resetPageGroup","setABTest","getABTest","resetABTest","setDimension","resetDimension","setSessionID","getSessionID","startSession","incrementSessionLength","setSessionLength","getSessionLength","subscribe"],p=["before_beacon","beacon"],q=0,r=!1,s=!1,t=+new Date;if(k="undefined"!=typeof process&&"function"==typeof process.nextTick?process.nextTick.bind(process):"undefined"!=typeof a?a.setImmediate?a.setImmediate.bind(a):a.msSetImmediate?a.msSetImmediate.bind(a):a.webkitSetImmediate?a.webkitSetImmediate.bind(a):a.mozSetImmediate?a.mozSetImmediate.bind(a):function(a){setTimeout(a,10)}:function(a){setTimeout(a,10)},"undefined"!=typeof a)if("undefined"!=typeof a.performance&&"function"==typeof a.performance.now)s=a.performance.now.bind(a.performance);else if("undefined"!=typeof a.performance){var u=["webkitNow","msNow","mozNow"];for(q=0;q<u.length;q++)if("function"==typeof a.performance[u[q]]){s=a.performance[u[q]];break}}s||("undefined"!=typeof a&&a.performance&&a.performance.timing&&a.performance.timing.navigationStart&&(t=a.performance.timing.navigationStart),s="undefined"!=typeof Date&&Date.now?function(){return Date.now()-t}:function(){return+new Date-t});var v,w,x,y=!1,z={};for("undefined"!=typeof a&&(w=a,x=w.mPulse),v={version:n,noConflict:e,init:f,getApp:g,stop:i},q=0;q<o.length;q++)v[o[q]]=h;"function"==typeof define&&define.amd?define([],function(){return v}):"undefined"!=typeof module&&module.exports?module.exports=v:"undefined"!=typeof w&&(w.mPulse=v)}("undefined"!=typeof window?window:void 0);
+
+(function(){
+    try {
+    window.mPulseApp = mPulse.init("38QDY-8CT77-8XNH2-VJQTD-EK4YX");
+    } catch(e) {}
+    })();
+
+mPulseApp.previousFullyLoadedTimer = null;
+mPulseApp.fullyLoadedTimer = setInterval(function() {
+    try{
+    var myTimer = performance.getEntriesByType('resource')[performance.getEntriesByType('resource').length - 1];
+    if(mPulseApp.previousFullyLoadedTimer === myTimer) {
+    mPulseApp.setSessionID(BOOMR.session.ID);
+    mPulseApp.setPageGroup(CnetPageVars.tracking.data.soastaPageType);
+    mPulseApp.setABTest(CnetPageVars.tracking.data.soastaBucket);
+    if(myTimer !== undefined) {
+    mPulseApp.sendTimer("page_full_load", myTimer.responseEnd);
+    }
+    clearInterval(mPulseApp.fullyLoadedTimer);
+    }
+    mPulseApp.previousFullyLoadedTimer = myTimer;
+    } catch(e) {
+    clearInterval(mPulseApp.fullyLoadedTimer);
+    }
+    }, 4000);
+
+document['addEventListener']?document['addEventListener']('DOMContentLoaded',mPulseApp.fullyLoadedTimer):window.attachEvent('onload',mPulseApp.fullyLoadedTimer);</script><script data-main="http://cnet3.cbsistatic.com/fly/2175-fly/js/main.default.js" src="http://cnet2.cbsistatic.com/fly/js/libs/require-2.1.2.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"252d33b7c9","applicationID":"3674670","transactionName":"Y1xRYUdUX0ICUUxaDloWclZBXF5fTFNKRwhXVVZqRlxfVg9XFkYS","queueTime":0,"applicationTime":519,"atts":"TxtGFw9OTB1BUxoJGklE","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>

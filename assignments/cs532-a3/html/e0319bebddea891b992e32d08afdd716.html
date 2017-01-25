@@ -1,0 +1,1524 @@
+<!doctype html >
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+    
+    <meta charset="UTF-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(e,n){function t(e){function n(n,t,a){e&&e(n,t,a),a||(a={});for(var u=c(n),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(e,n){f[e]=c(e).concat(n)}function c(e){return f[e]||[]}function u(){return t(n)}var f={};return{on:a,emit:n,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=e("gos");n.exports=t()},{gos:"7eSDFh"}],ee:[function(e,n){n.exports=e("QJf3ax")},{}],3:[function(e,n){function t(e){return function(){r(e,[(new Date).getTime()].concat(i(arguments)))}}var r=e("handle"),o=e(1),i=e(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(e,n){window.NREUM[n]=t("api-"+n)}),n.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(e,n){n.exports=e("7eSDFh")},{}],"7eSDFh":[function(e,n){function t(e,n,t){if(r.call(e,n))return e[n];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return e[n]=o,o}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],D5DuLP:[function(e,n){function t(e,n,t){return r.listeners(e).length?r.emit(e,n,t):void(r.q&&(r.q[e]||(r.q[e]=[]),r.q[e].push(n)))}var r=e("ee").create();n.exports=t,t.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(e,n){n.exports=e("D5DuLP")},{}],XL7HBI:[function(e,n){function t(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:i(e,o,function(){return r++})}var r=1,o="nr@id",i=e("gos");n.exports=t},{gos:"7eSDFh"}],id:[function(e,n){n.exports=e("XL7HBI")},{}],G9z0Bl:[function(e,n){function t(){var e=d.info=NREUM.info,n=f.getElementsByTagName("script")[0];if(e&&e.licenseKey&&e.applicationID&&n){c(p,function(n,t){n in e||(e[n]=t)});var t="https"===s.split(":")[0]||e.sslForHttp;d.proto=t?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=d.proto+e.agent,n.parentNode.insertBefore(r,n)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=e("handle"),c=e(1),u=window,f=u.document;e(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},d=n.exports={offset:i(),origin:s,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",t,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],loader:[function(e,n){n.exports=e("G9z0Bl")},{}],12:[function(e,n){function t(e,n){var t=[],o="",i=0;for(o in e)r.call(e,o)&&(t[i]=n(o,e[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;n.exports=t},{}],13:[function(e,n){function t(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(0>o?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=t},{}]},{},["G9z0Bl"]);</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="pingback" href="http://cover32.com/xmlrpc.php" />
+
+<!-- MOBIFY - DO NOT ALTER - PASTE IMMEDIATELY AFTER OPENING HEAD TAG 
+<script>
+(function(window, document, mjs) {
+window.Mobify = {points: [+new Date], tagVersion: [1, 0]};
+var isMobile = /ip(hone|od|ad)|android|blackberry.*applewebkit|bb1d.*mobile/i.test(navigator.userAgent);
+var optedOut = /mobify-path=($|;)/.test(document.cookie);
+var isBlackList = /Android 2\.|Silk|iPhone OS 4_|iPad; CPU OS 4_|iPhone OS 5_|iPad; CPU OS 5_/i.test(navigator.userAgent);
+if (!isMobile || optedOut || isBlackList) {
+    return;
+}
+document.write("<plaintext style='display:none'></plaintext>");
+setTimeout(function() {
+    var mobifyjs = document.createElement('script');
+    var script = document.getElementsByTagName('script')[0];
+
+    mobifyjs.src = mjs;
+    script.parentNode.insertBefore(mobifyjs, script);
+});
+})(this, document, '//bundle.padsquad.com/cover32/production/mobify.js');
+</script>
+END MOBIFY -->
+
+<!-- BEGIN GOOGLE SITE VERIFICATION CODE -->
+    <meta name="google-site-verification" content="pu_IhoEenwtz8K3cUn5KhFaLStuoRtPIWMRXebZgi1E" />
+<!-- END GOOGLE SITE VERIFICATION CODE -->
+    <meta property="og:image" content="http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres.jpg" /><meta name="author" content="Bob Okroi III">
+
+<!-- This site is optimized with the Yoast SEO plugin v3.0.7 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Chicago writer&#039;s Super Bowl picks! | Cover32</title>
+<meta name="description" content="Chicago Bears and Arizona Cardinals writers get together to give their predictions on who the Super Bowl winner will be this season."/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="http://cover32.com/2016/02/06/94933/" />
+<link rel="next" href="http://cover32.com/2016/02/06/94933/2/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Chicago writer&#039;s Super Bowl picks! | Cover32" />
+<meta property="og:description" content="Chicago Bears and Arizona Cardinals writers get together to give their predictions on who the Super Bowl winner will be this season." />
+<meta property="og:url" content="http://cover32.com/2016/02/06/94933/" />
+<meta property="og:site_name" content="Cover32" />
+<meta property="article:author" content="https://www.facebook.com/Cover32ChicagoBears/?ref=aymt_homepage_panel" />
+<meta property="article:tag" content="Chicago Bears" />
+<meta property="article:tag" content="Super Bowl" />
+<meta property="article:section" content="Chicago Bears" />
+<meta property="article:published_time" content="2016-02-06T03:58:38+00:00" />
+<meta property="article:modified_time" content="2016-02-06T04:21:03+00:00" />
+<meta property="og:updated_time" content="2016-02-06T04:21:03+00:00" />
+<meta property="og:image" content="http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres.jpg" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:description" content="Chicago Bears and Arizona Cardinals writers get together to give their predictions on who the Super Bowl winner will be this season."/>
+<meta name="twitter:title" content="Chicago writer&#039;s Super Bowl picks! | Cover32"/>
+<meta name="twitter:image" content="http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres.jpg"/>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="Cover32 &raquo; Feed" href="http://cover32.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Cover32 &raquo; Comments Feed" href="http://cover32.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Cover32 &raquo; Chicago writer&#8217;s Super Bowl picks! Comments Feed" href="http://cover32.com/2016/02/06/94933/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/cover32.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.2"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d"),f=String.fromCharCode;return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(f(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(f(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(f(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(f(55357,56835),0,0):e.fillText(f(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='contact-form-7-css'  href='http://cover32.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='post-plugin-css'  href='http://cover32.com/wp-content/plugins/post/post-plugin.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='google_font_open_sans-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C400%2C600%2C700&#038;ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='google_font_roboto-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A500%2C400italic%2C700%2C500italic%2C400&#038;ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='google-fonts-style-css'  href='http://fonts.googleapis.com/css?family=Oswald%3A400%2C700%7CPassion+One%3A400%2C700%7CLato%3A400%2C700&#038;ver=4.4.2' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='http://cover32.com/wp-content/plugins/js_composer/assets/css/js_composer.css?ver=4.7.4' type='text/css' media='all' />
+<link rel='stylesheet' id='td-theme-css'  href='http://cover32.com/wp-content/themes/Newspaper/style.css?ver=6.3.2' type='text/css' media='all' />
+<script type='text/javascript' src='http://cover32.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://cover32.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel='https://api.w.org/' href='http://cover32.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cover32.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cover32.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.4.2" />
+<link rel='shortlink' href='http://cover32.com/?p=94933' />
+<link rel="alternate" type="application/json+oembed" href="http://cover32.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcover32.com%2F2016%2F02%2F06%2F94933%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://cover32.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcover32.com%2F2016%2F02%2F06%2F94933%2F&#038;format=xml" />
+<script type="text/javascript">
+(function ()
+{
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = ('https:' == document.location.protocol ? 'https://s' : 'http://i') + '.po.st/share/script/post-widget.js#publisherKey=op2ku4qch7o338lsg9lh&retina=true';
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+})();
+</script><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://cover32.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.css" media="screen"><![endif]--><!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://cover32.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+<!-- JS generated by theme -->
+
+<script>
+    
+
+var td_blocks = []; //here we store all the items for the current page
+
+//td_block class - each ajax block uses a object of this class for requests
+function td_block() {
+    this.id = '';
+    this.block_type = 1; //block type id (1-234 etc)
+    this.atts = '';
+    this.td_column_number = '';
+    this.td_current_page = 1; //
+    this.post_count = 0; //from wp
+    this.found_posts = 0; //from wp
+    this.max_num_pages = 0; //from wp
+    this.td_filter_value = ''; //current live filter value
+    this.td_filter_ui_uid = ''; //used to select a item from the drop down filter
+    this.is_ajax_running = false;
+    this.td_user_action = ''; // load more or infinite loader (used by the animation)
+    this.header_color = '';
+    this.ajax_pagination_infinite_stop = ''; //show load more at page x
+}
+
+    
+    
+        // td_js_generator - mini detector
+        (function(){
+            var html_tag = document.getElementsByTagName("html")[0];
+
+            if(navigator.userAgent.indexOf("MSIE 10.0") > -1) {
+                html_tag.className+=' ie10';
+            }
+
+            if(!!navigator.userAgent.match(/Trident.*rv\:11\./)) {
+                html_tag.className+=' ie11';
+            }
+
+            if (/(iPad|iPhone|iPod)/g.test( navigator.userAgent )) {
+                html_tag.className+=' td-md-is-ios';
+            }
+
+            var user_agent = navigator.userAgent.toLowerCase();
+            if(user_agent.indexOf("android") > -1) {
+                html_tag.className+=' td-md-is-android';
+            }
+
+            if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+                html_tag.className+=' td-md-is-os-x';
+            }
+
+            if(/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())) {
+               html_tag.className+=' td-md-is-chrome';
+            }
+
+            if (navigator.userAgent.indexOf('Firefox') != -1) {
+                html_tag.className+=' td-md-is-firefox';
+            }
+
+            if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+                html_tag.className+=' td-md-is-safari';
+            }
+
+        })();
+    
+    
+var td_viewport_interval_list=[{"limit_bottom":767,"sidebar_width":228},{"limit_bottom":1018,"sidebar_width":300},{"limit_bottom":1140,"sidebar_width":324}];
+var td_animation_stack_effect="type0";
+var tds_animation_stack=true;
+var td_animation_stack_specific_selectors=".entry-thumb, img";
+var td_animation_stack_general_selectors=".td-animation-stack img, .post img";
+var td_ajax_url="http:\/\/cover32.com\/wp-admin\/admin-ajax.php?td_theme_name=Newspaper&v=6.3.2";
+var td_get_template_directory_uri="http:\/\/cover32.com\/wp-content\/themes\/Newspaper";
+var tds_snap_menu="";
+var tds_logo_on_sticky="";
+var tds_header_style="2";
+var td_please_wait="Please wait...";
+var td_email_user_pass_incorrect="User or password incorrect!";
+var td_email_user_incorrect="Email or username incorrect!";
+var td_email_incorrect="Email incorrect!";
+var tds_more_articles_on_post_enable="";
+var tds_more_articles_on_post_time_to_wait="";
+var tds_more_articles_on_post_pages_distance_from_top=0;
+var tds_theme_color_site_wide="#de2225";
+var tds_smart_sidebar="";
+var td_theme_v="Ni4zLjI=";
+var td_theme_n="TmV3c3BhcGVy";
+var td_magnific_popup_translation_tPrev="Previous (Left arrow key)";
+var td_magnific_popup_translation_tNext="Next (Right arrow key)";
+var td_magnific_popup_translation_tCounter="%curr% of %total%";
+var td_magnific_popup_translation_ajax_tError="The content from %url% could not be loaded.";
+var td_magnific_popup_translation_image_tError="The image #%curr% could not be loaded.";
+var td_ad_background_click_link="";
+var td_ad_background_click_target="";
+</script>
+
+
+<!-- Header style compiled by theme -->
+
+<style>
+    
+
+body {
+	background-color:#c4c4c4;
+}
+.td-header-wrap .black-menu .sf-menu > .current-menu-item > a,
+    .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a,
+    .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a,
+    .td-header-wrap .black-menu .sf-menu > li > a:hover,
+    .td-header-wrap .black-menu .sf-menu > .sfHover > a,
+    .td-header-style-12 .td-header-menu-wrap-full,
+    .sf-menu > .current-menu-item > a:after,
+    .sf-menu > .current-menu-ancestor > a:after,
+    .sf-menu > .current-category-ancestor > a:after,
+    .sf-menu > li:hover > a:after,
+    .sf-menu > .sfHover > a:after,
+    .sf-menu ul .td-menu-item > a:hover,
+    .sf-menu ul .sfHover > a,
+    .sf-menu ul .current-menu-ancestor > a,
+    .sf-menu ul .current-category-ancestor > a,
+    .sf-menu ul .current-menu-item > a,
+    .td-header-style-12 .td-affix,
+    .header-search-wrap .td-drop-down-search:after,
+    .header-search-wrap .td-drop-down-search .btn:hover,
+    input[type=submit]:hover,
+    .td-read-more a,
+    .td-post-category:hover,
+    .td-grid-style-1.td-hover-1 .td-big-grid-post:hover .td-post-category,
+    .td-grid-style-5.td-hover-1 .td-big-grid-post:hover .td-post-category,
+    .td_top_authors .td-active .td-author-post-count,
+    .td_top_authors .td-active .td-author-comments-count,
+    .td_top_authors .td_mod_wrap:hover .td-author-post-count,
+    .td_top_authors .td_mod_wrap:hover .td-author-comments-count,
+    .td-404-sub-sub-title a:hover,
+    .td-search-form-widget .wpb_button:hover,
+    .td-rating-bar-wrap div,
+    .td_category_template_3 .td-current-sub-category,
+    .td-login-wrap .btn,
+    .td_display_err,
+    .td_display_msg_ok,
+    .dropcap,
+    .td_wrapper_video_playlist .td_video_controls_playlist_wrapper,
+    .wpb_default,
+    .wpb_default:hover,
+    .td-left-smart-list:hover,
+    .td-right-smart-list:hover,
+    .woocommerce-checkout .woocommerce input.button:hover,
+    .woocommerce-page .woocommerce a.button:hover,
+    .woocommerce-account div.woocommerce .button:hover,
+    #bbpress-forums button:hover,
+    .bbp_widget_login .button:hover,
+    .td-footer-wrapper .td-post-category,
+    .td-footer-wrapper .widget_product_search input[type="submit"]:hover,
+    .woocommerce .product a.button:hover,
+    .woocommerce .product #respond input#submit:hover,
+    .woocommerce .checkout input#place_order:hover,
+    .woocommerce .woocommerce.widget .button:hover,
+    .single-product .product .summary .cart .button:hover,
+    .woocommerce-cart .woocommerce table.cart .button:hover,
+    .woocommerce-cart .woocommerce .shipping-calculator-form .button:hover,
+    .td-next-prev-wrap a:hover,
+    .td-load-more-wrap a:hover,
+    .td-post-small-box a:hover,
+    .page-nav .current,
+    .page-nav:first-child > div,
+    .td_category_template_8 .td-category-header .td-category a.td-current-sub-category,
+    .td_category_template_4 .td-category-siblings .td-category a:hover,
+    #bbpress-forums .bbp-pagination .current,
+    #bbpress-forums #bbp-single-user-details #bbp-user-navigation li.current a,
+    .td-theme-slider:hover .slide-meta-cat a,
+    a.vc_btn-black:hover,
+    .td-trending-now-wrapper:hover .td-trending-now-title,
+    .td-scroll-up-visible,
+    .td-mobile-close a {
+        background-color: #de2225;
+    }
+
+    .woocommerce .woocommerce-message .button:hover,
+    .woocommerce .woocommerce-error .button:hover,
+    .woocommerce .woocommerce-info .button:hover {
+        background-color: #de2225 !important;
+    }
+
+    .woocommerce .product .onsale,
+    .woocommerce.widget .ui-slider .ui-slider-handle {
+        background: none #de2225;
+    }
+
+    .woocommerce.widget.widget_layered_nav_filters ul li a {
+        background: none repeat scroll 0 0 #de2225 !important;
+    }
+
+    a,
+    cite a:hover,
+    .td_mega_menu_sub_cats .cur-sub-cat,
+    .td-mega-span h3 a:hover,
+    .td_mod_mega_menu:hover .entry-title a,
+    .header-search-wrap .result-msg a:hover,
+    .top-header-menu li a:hover,
+    .top-header-menu .current-menu-item > a,
+    .top-header-menu .current-menu-ancestor > a,
+    .top-header-menu .current-category-ancestor > a,
+    .td-social-icon-wrap > a:hover,
+    .td-header-sp-top-widget .td-social-icon-wrap a:hover,
+    .td-page-content blockquote p,
+    .td-post-content blockquote p,
+    .mce-content-body blockquote p,
+    .comment-content blockquote p,
+    .wpb_text_column blockquote p,
+    .td_block_text_with_title blockquote p,
+    .td_module_wrap:hover .entry-title a,
+    .td-subcat-filter .td-subcat-list a:hover,
+    .td-subcat-filter .td-subcat-dropdown a:hover,
+    .td_quote_on_blocks,
+    .dropcap2,
+    .dropcap3,
+    .td_top_authors .td-active .td-authors-name a,
+    .td_top_authors .td_mod_wrap:hover .td-authors-name a,
+    .td-post-next-prev-content a:hover,
+    .author-box-wrap .td-author-social a:hover,
+    .td-author-name a:hover,
+    .td-author-url a:hover,
+    .td_mod_related_posts:hover h3 > a,
+    .td-post-template-11 .td-related-title .td-related-left:hover,
+    .td-post-template-11 .td-related-title .td-related-right:hover,
+    .td-post-template-11 .td-related-title .td-cur-simple-item,
+    .td-post-template-11 .td_block_related_posts .td-next-prev-wrap a:hover,
+    .comment-reply-link:hover,
+    .logged-in-as a:hover,
+    #cancel-comment-reply-link:hover,
+    .td-search-query,
+    .td-category-header .td-pulldown-category-filter-link:hover,
+    .td-category-siblings .td-subcat-dropdown a:hover,
+    .td-category-siblings .td-subcat-dropdown a.td-current-sub-category,
+    .td-login-wrap .td-login-info-text a:hover,
+    .widget a:hover,
+    .widget_calendar tfoot a:hover,
+    .woocommerce a.added_to_cart:hover,
+    #bbpress-forums li.bbp-header .bbp-reply-content span a:hover,
+    #bbpress-forums .bbp-forum-freshness a:hover,
+    #bbpress-forums .bbp-topic-freshness a:hover,
+    #bbpress-forums .bbp-forums-list li a:hover,
+    #bbpress-forums .bbp-forum-title:hover,
+    #bbpress-forums .bbp-topic-permalink:hover,
+    #bbpress-forums .bbp-topic-started-by a:hover,
+    #bbpress-forums .bbp-topic-started-in a:hover,
+    #bbpress-forums .bbp-body .super-sticky li.bbp-topic-title .bbp-topic-permalink,
+    #bbpress-forums .bbp-body .sticky li.bbp-topic-title .bbp-topic-permalink,
+    .widget_display_replies .bbp-author-name,
+    .widget_display_topics .bbp-author-name,
+    .footer-email-wrap a,
+    .td-subfooter-menu li a:hover,
+    .footer-social-wrap a:hover,
+    a.vc_btn-black:hover,
+    .td-mobile-content li a:hover{
+        color: #de2225;
+    }
+
+    .td_login_tab_focus,
+    a.vc_btn-black.vc_btn_square_outlined:hover,
+    a.vc_btn-black.vc_btn_outlined:hover,
+    .td-mega-menu-page .wpb_content_element ul li a:hover {
+        color: #de2225 !important;
+    }
+
+    .td-next-prev-wrap a:hover,
+    .td-load-more-wrap a:hover,
+    .td-post-small-box a:hover,
+    .page-nav .current,
+    .page-nav:first-child > div,
+    .td_category_template_8 .td-category-header .td-category a.td-current-sub-category,
+    .td_category_template_4 .td-category-siblings .td-category a:hover,
+    #bbpress-forums .bbp-pagination .current,
+    .td-login-panel-title,
+    .post .td_quote_box,
+    .page .td_quote_box,
+    a.vc_btn-black:hover {
+        border-color: #de2225;
+    }
+
+    .td_wrapper_video_playlist .td_video_currently_playing:after {
+        border-color: #de2225 !important;
+    }
+
+    .header-search-wrap .td-drop-down-search:before {
+        border-color: transparent transparent #de2225 transparent;
+    }
+
+    .block-title > span,
+    .block-title > a,
+    .block-title > label,
+    .widgettitle,
+    .widgettitle:after,
+    .td-trending-now-title,
+    .td-trending-now-wrapper:hover .td-trending-now-title,
+    .wpb_tabs li.ui-tabs-active a,
+    .wpb_tabs li:hover a,
+    .td-related-title .td-cur-simple-item,
+    .woocommerce .product .products h2,
+    .td-subcat-filter .td-subcat-dropdown:hover .td-subcat-more {
+    	background-color: #de2225;
+    }
+    .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    	background-color: #de2225 !important;
+    }
+    .block-title,
+    .td-related-title,
+    .wpb_tabs .wpb_tabs_nav,
+    .woocommerce div.product .woocommerce-tabs ul.tabs:before {
+        border-color: #de2225;
+    }
+    .td_block_wrap .td-subcat-item .td-cur-simple-item {
+	  color: #de2225;
+	}
+
+
+    
+    .td-grid-style-4 .entry-title
+    {
+        background-color: rgba(222, 34, 37, 0.7);
+    }
+
+    
+    .td-header-wrap .td-header-menu-wrap-full,
+    .sf-menu > .current-menu-ancestor > a,
+    .sf-menu > .current-category-ancestor > a,
+    .td-header-menu-wrap.td-affix,
+    .td-header-style-3 .td-header-main-menu,
+    .td-header-style-3 .td-affix .td-header-main-menu,
+    .td-header-style-4 .td-header-main-menu,
+    .td-header-style-4 .td-affix .td-header-main-menu,
+    .td-header-style-8 .td-header-menu-wrap.td-affix {
+        background-color: #444444;
+    }
+
+
+    .td-boxed-layout .td-header-style-3 .td-header-menu-wrap,
+    .td-boxed-layout .td-header-style-4 .td-header-menu-wrap {
+    	background-color: #444444 !important;
+    }
+
+
+    @media (min-width: 1019px) {
+        .td-header-style-1 .td-header-sp-recs,
+        .td-header-style-1 .td-header-sp-logo {
+            margin-bottom: 28px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1018px) {
+        .td-header-style-1 .td-header-sp-recs,
+        .td-header-style-1 .td-header-sp-logo {
+            margin-bottom: 14px;
+        }
+    }
+
+    .td-header-style-7 .td-header-top-menu {
+        border-bottom: none;
+    }
+
+
+    
+    .sf-menu ul .td-menu-item > a:hover,
+    .sf-menu ul .sfHover > a,
+    .sf-menu ul .current-menu-ancestor > a,
+    .sf-menu ul .current-category-ancestor > a,
+    .sf-menu ul .current-menu-item > a,
+    .sf-menu > .current-menu-item > a:after,
+    .sf-menu > .current-menu-ancestor > a:after,
+    .sf-menu > .current-category-ancestor > a:after,
+    .sf-menu > li:hover > a:after,
+    .sf-menu > .sfHover > a:after,
+    .td_block_mega_menu .td-next-prev-wrap a:hover,
+    .td-mega-span .td-post-category:hover,
+    .td-header-wrap .black-menu .sf-menu > li > a:hover,
+    .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a,
+    .td-header-wrap .black-menu .sf-menu > .sfHover > a,
+    .header-search-wrap .td-drop-down-search:after,
+    .header-search-wrap .td-drop-down-search .btn:hover,
+    .td-header-wrap .black-menu .sf-menu > .current-menu-item > a,
+    .td-header-wrap .black-menu .sf-menu > .current-menu-ancestor > a,
+    .td-header-wrap .black-menu .sf-menu > .current-category-ancestor > a,
+    .td-mobile-close a {
+        background-color: #de2225;
+    }
+
+
+    .td_block_mega_menu .td-next-prev-wrap a:hover {
+        border-color: #de2225;
+    }
+
+    .header-search-wrap .td-drop-down-search:before {
+        border-color: transparent transparent #de2225 transparent;
+    }
+
+    .td_mega_menu_sub_cats .cur-sub-cat,
+    .td_mod_mega_menu:hover .entry-title a,
+    .td-mobile-content li a:hover {
+        color: #de2225;
+    }
+
+
+    
+    .td-header-wrap .td-header-menu-wrap .sf-menu > li > a,
+    .td-header-wrap .header-search-wrap .td-icon-search {
+        color: #ffffff;
+    }
+
+    
+    .td-banner-wrap-full,
+    .td-header-style-11 .td-logo-wrap-full {
+        background-color: #000000;
+    }
+
+    .td-header-style-11 .td-logo-wrap-full {
+        border-bottom: 0;
+    }
+
+    @media (min-width: 1019px) {
+        .td-header-style-2 .td-header-sp-recs,
+        .td-header-style-5 .td-a-rec-id-header > div,
+        .td-header-style-5 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-6 .td-a-rec-id-header > div,
+        .td-header-style-6 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-7 .td-a-rec-id-header > div,
+        .td-header-style-7 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-8 .td-a-rec-id-header > div,
+        .td-header-style-8 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-12 .td-a-rec-id-header > div,
+        .td-header-style-12 .td-g-rec-id-header > .adsbygoogle {
+            margin-bottom: 24px !important;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1018px) {
+        .td-header-style-2 .td-header-sp-recs,
+        .td-header-style-5 .td-a-rec-id-header > div,
+        .td-header-style-5 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-6 .td-a-rec-id-header > div,
+        .td-header-style-6 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-7 .td-a-rec-id-header > div,
+        .td-header-style-7 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-8 .td-a-rec-id-header > div,
+        .td-header-style-8 .td-g-rec-id-header > .adsbygoogle,
+        .td-header-style-12 .td-a-rec-id-header > div,
+        .td-header-style-12 .td-g-rec-id-header > .adsbygoogle {
+            margin-bottom: 14px !important;
+        }
+    }
+
+
+
+
+    
+    .sf-menu > .td-menu-item > a {
+        font-family:Oswald;
+	font-size:18px;
+	font-style:normal;
+	font-weight:normal;
+	text-transform:none;
+	
+    }
+    
+    .sf-menu ul .td-menu-item a {
+        font-family:Oswald;
+	font-size:14px;
+	font-style:normal;
+	font-weight:normal;
+	text-transform:none;
+	
+    }
+	
+    .block-title > span,
+    .block-title > a,
+    .widgettitle,
+    .wpb_tabs li a,
+    .td-related-title a,
+    .woocommerce div.product .woocommerce-tabs ul.tabs li a,
+    .woocommerce .product .products h2 {
+        font-family:"Passion One";
+	font-size:24px;
+	font-weight:normal;
+	
+    }
+    
+    .td-post-author-name a {
+        font-family:Oswald;
+	font-size:13px;
+	font-weight:normal;
+	
+    }
+    
+    .td-post-date .entry-date {
+        font-family:Oswald;
+	font-weight:normal;
+	
+    }
+    
+    .td-excerpt {
+        font-family:Lato;
+	
+    }
+
+
+	
+    .td_module_10 .td-module-title {
+    	font-family:"Passion One";
+	font-size:26px;
+	font-weight:normal;
+	
+    }
+    
+    .td_module_11 .td-module-title {
+    	font-family:Arvo;
+	font-size:26px;
+	font-weight:normal;
+	
+    }
+    
+    .td_module_13 .td-module-title {
+    	font-family:"Roboto Condensed";
+	font-weight:bold;
+	
+    }
+    
+    .td_module_14 .td-module-title {
+    	font-family:"Source Sans Pro";
+	font-weight:bold;
+	
+    }
+    
+    .td-post-template-default .td-post-header .entry-title {
+        font-family:"Passion One";
+	font-weight:normal;
+	
+    }
+    
+    .td-post-content h1 {
+        font-family:"Passion One";
+	font-weight:normal;
+	
+    }
+    
+    .td-post-content h3 {
+        font-family:"Passion One";
+	font-style:normal;
+	font-weight:normal;
+	text-transform:none;
+	
+    }
+    
+    .td-page-title,
+    .woocommerce-page .page-title,
+    .td-category-title-holder .td-page-title {
+    	font-family:"Passion One";
+	font-weight:normal;
+	
+    }
+    
+    .td-page-content h3 {
+    	font-family:"Passion One";
+	font-style:normal;
+	font-weight:normal;
+	text-transform:none;
+	
+    }
+    
+    body, p {
+    	font-family:Lato;
+	
+    }
+</style>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42842530-1', 'auto');
+  ga('send', 'pageview');
+
+</script><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
+
+<body class="single single-post postid-94933 single-format-standard 94933 wpb-js-composer js-comp-ver-4.7.4 vc_responsive td-animation-stack-type0 td-boxed-layout" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+
+
+<div class="td-scroll-up"><i class="td-icon-menu-up"></i></div>
+
+<div id="td-outer-wrap">
+
+    <div class="td-transition-content-and-menu td-mobile-nav-wrap">
+        <div id="td-mobile-nav">
+    <!-- mobile menu close -->
+    <div class="td-mobile-close">
+        <a href="#">CLOSE</a>
+        <div class="td-nav-triangle"></div>
+    </div>
+
+    <div class="td-mobile-content">
+        <div class="menu-main-container"><ul id="menu-main" class=""><li id="menu-item-80207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first menu-item-80207"><a href="http://cover32.com/">HOME</a></li>
+<li id="menu-item-80211" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80211"><a href="#">AFC EAST</a>
+<ul class="sub-menu">
+	<li id="menu-item-80328" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80328"><a href="http://cover32.com/bills/">BILLS</a></li>
+	<li id="menu-item-80293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80293"><a href="http://cover32.com/patriots/">PATRIOTS</a></li>
+	<li id="menu-item-80332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80332"><a href="http://cover32.com/jets/">JETS</a></li>
+	<li id="menu-item-80335" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80335"><a href="http://cover32.com/dolphins/">DOLPHINS</a></li>
+</ul>
+</li>
+<li id="menu-item-80212" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80212"><a href="#">AFC NORTH</a>
+<ul class="sub-menu">
+	<li id="menu-item-80341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80341"><a href="http://cover32.com/ravens/">RAVENS</a></li>
+	<li id="menu-item-80347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80347"><a href="http://cover32.com/bengals/">BENGALS</a></li>
+	<li id="menu-item-80350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80350"><a href="http://cover32.com/browns/">BROWNS</a></li>
+	<li id="menu-item-80308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80308"><a href="http://cover32.com/steelers/">STEELERS</a></li>
+</ul>
+</li>
+<li id="menu-item-80213" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80213"><a href="#">AFC SOUTH</a>
+<ul class="sub-menu">
+	<li id="menu-item-80353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80353"><a href="http://cover32.com/texans/">TEXANS</a></li>
+	<li id="menu-item-80356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80356"><a href="http://cover32.com/colts/">COLTS</a></li>
+	<li id="menu-item-80360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80360"><a href="http://cover32.com/jaguars/">JAGUARS</a></li>
+	<li id="menu-item-80363" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80363"><a href="http://cover32.com/titans/">TITANS</a></li>
+</ul>
+</li>
+<li id="menu-item-80214" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80214"><a href="#">AFC WEST</a>
+<ul class="sub-menu">
+	<li id="menu-item-80242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80242"><a href="http://cover32.com/broncos/">BRONCOS</a></li>
+	<li id="menu-item-80318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80318"><a href="http://cover32.com/chiefs/">CHIEFS</a></li>
+	<li id="menu-item-80323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80323"><a href="http://cover32.com/raiders/">RAIDERS</a></li>
+	<li id="menu-item-80325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80325"><a href="http://cover32.com/chargers/">CHARGERS</a></li>
+</ul>
+</li>
+<li id="menu-item-80215" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80215"><a href="#">NFC EAST</a>
+<ul class="sub-menu">
+	<li id="menu-item-80367" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80367"><a href="http://cover32.com/cowboys/">COWBOYS</a></li>
+	<li id="menu-item-80370" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80370"><a href="http://cover32.com/giants/">GIANTS</a></li>
+	<li id="menu-item-80373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80373"><a href="http://cover32.com/eagles/">EAGLES</a></li>
+	<li id="menu-item-80376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80376"><a href="http://cover32.com/redskins/">REDSKINS</a></li>
+</ul>
+</li>
+<li id="menu-item-80216" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80216"><a href="#">NFC NORTH</a>
+<ul class="sub-menu">
+	<li id="menu-item-80379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80379"><a href="http://cover32.com/bears/">BEARS</a></li>
+	<li id="menu-item-80382" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80382"><a href="http://cover32.com/lions/">LIONS</a></li>
+	<li id="menu-item-80385" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80385"><a href="http://cover32.com/packers/">PACKERS</a></li>
+	<li id="menu-item-80388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80388"><a href="http://cover32.com/vikings/">VIKINGS</a></li>
+</ul>
+</li>
+<li id="menu-item-80217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80217"><a href="#">NFC SOUTH</a>
+<ul class="sub-menu">
+	<li id="menu-item-80391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80391"><a href="http://cover32.com/falcons/">FALCONS</a></li>
+	<li id="menu-item-80395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80395"><a href="http://cover32.com/panthers/">PANTHERS</a></li>
+	<li id="menu-item-80398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80398"><a href="http://cover32.com/saints/">SAINTS</a></li>
+	<li id="menu-item-80401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80401"><a href="http://cover32.com/buccaneers/">BUCCANEERS</a></li>
+</ul>
+</li>
+<li id="menu-item-80218" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-80218"><a href="#">NFC WEST</a>
+<ul class="sub-menu">
+	<li id="menu-item-80404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80404"><a href="http://cover32.com/cardinals/">CARDINALS</a></li>
+	<li id="menu-item-80407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80407"><a href="http://cover32.com/49ers/">49ERS</a></li>
+	<li id="menu-item-80462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80462"><a href="http://cover32.com/seahawks/">SEAHAWKS</a></li>
+	<li id="menu-item-80461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-80461"><a href="http://cover32.com/rams/">RAMS</a></li>
+</ul>
+</li>
+</ul></div>    </div>
+</div>    </div>
+
+        <div class="td-transition-content-and-menu td-content-wrap">
+
+
+
+<!--
+Header style 2
+-->
+
+<div class="td-header-wrap td-header-style-2">
+
+    <div class="td-header-top-menu-full">
+        <div class="td-container td-header-row td-header-top-menu">
+                    </div>
+    </div>
+
+    <div class="td-header-menu-wrap-full">
+        <div class="td-header-menu-wrap td-header-gradient">
+            <div class="td-container td-header-row td-header-main-menu">
+                <div id="td-header-menu" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+    <div id="td-top-mobile-toggle"><a href="#"><i class="td-icon-font td-icon-mobile"></i></a></div>
+    <div class="td-main-menu-logo">
+                <a itemprop="url" href="http://cover32.com/"><img src="http://cover32.com/wp-content/uploads/2015/10/cover32.png" alt=""/></a>
+        <meta itemprop="name" content="Cover32">
+        </div>
+    <div class="menu-main-container"><ul id="menu-main-1" class="sf-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-80207"><a href="http://cover32.com/">HOME</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80211"><a href="#">AFC EAST</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80328"><a href="http://cover32.com/bills/">BILLS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80293"><a href="http://cover32.com/patriots/">PATRIOTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80332"><a href="http://cover32.com/jets/">JETS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80335"><a href="http://cover32.com/dolphins/">DOLPHINS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80212"><a href="#">AFC NORTH</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80341"><a href="http://cover32.com/ravens/">RAVENS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80347"><a href="http://cover32.com/bengals/">BENGALS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80350"><a href="http://cover32.com/browns/">BROWNS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80308"><a href="http://cover32.com/steelers/">STEELERS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80213"><a href="#">AFC SOUTH</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80353"><a href="http://cover32.com/texans/">TEXANS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80356"><a href="http://cover32.com/colts/">COLTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80360"><a href="http://cover32.com/jaguars/">JAGUARS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80363"><a href="http://cover32.com/titans/">TITANS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80214"><a href="#">AFC WEST</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80242"><a href="http://cover32.com/broncos/">BRONCOS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80318"><a href="http://cover32.com/chiefs/">CHIEFS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80323"><a href="http://cover32.com/raiders/">RAIDERS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80325"><a href="http://cover32.com/chargers/">CHARGERS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80215"><a href="#">NFC EAST</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80367"><a href="http://cover32.com/cowboys/">COWBOYS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80370"><a href="http://cover32.com/giants/">GIANTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80373"><a href="http://cover32.com/eagles/">EAGLES</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80376"><a href="http://cover32.com/redskins/">REDSKINS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80216"><a href="#">NFC NORTH</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80379"><a href="http://cover32.com/bears/">BEARS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80382"><a href="http://cover32.com/lions/">LIONS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80385"><a href="http://cover32.com/packers/">PACKERS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80388"><a href="http://cover32.com/vikings/">VIKINGS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80217"><a href="#">NFC SOUTH</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80391"><a href="http://cover32.com/falcons/">FALCONS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80395"><a href="http://cover32.com/panthers/">PANTHERS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80398"><a href="http://cover32.com/saints/">SAINTS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80401"><a href="http://cover32.com/buccaneers/">BUCCANEERS</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children td-menu-item td-normal-menu menu-item-80218"><a href="#">NFC WEST</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80404"><a href="http://cover32.com/cardinals/">CARDINALS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80407"><a href="http://cover32.com/49ers/">49ERS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80462"><a href="http://cover32.com/seahawks/">SEAHAWKS</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80461"><a href="http://cover32.com/rams/">RAMS</a></li>
+</ul>
+</li>
+</ul></div></div>
+
+
+<div class="td-search-wrapper">
+    <div id="td-top-search">
+        <!-- Search -->
+        <div class="header-search-wrap">
+            <div class="dropdown header-search">
+                <a id="td-header-search-button" href="#" role="button" class="dropdown-toggle " data-toggle="dropdown"><i class="td-icon-search"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="header-search-wrap">
+	<div class="dropdown header-search">
+		<div class="td-drop-down-search" aria-labelledby="td-header-search-button">
+			<form role="search" method="get" class="td-search-form" action="http://cover32.com/">
+				<div class="td-head-form-search-wrap">
+					<input id="td-header-search" type="text" value="" name="s" autocomplete="off" /><input class="wpb_button wpb_btn-inverse btn" type="submit" id="td-header-search-top" value="Search" />
+				</div>
+			</form>
+			<div id="td-aj-search"></div>
+		</div>
+	</div>
+</div>            </div>
+        </div>
+    </div>
+
+    <div class="td-banner-wrap-full">
+        <div class="td-container td-header-row td-header-header">
+            <div class="td-header-sp-logo">
+                        <a itemprop="url" href="http://cover32.com/"><img src="http://cover32.com/wp-content/uploads/2015/10/cover32.png" alt=""/></a>
+        <meta itemprop="name" content="Cover32">
+                </div>
+            <div class="td-header-sp-recs">
+                <div class="td-header-rec-wrap">
+    <div class="td-a-rec td-a-rec-id-header "><script src="https://www.googletagservices.com/tag/js/gpt.js">    googletag.pubads().definePassback("/20893548/yb/cover32", [728,90]).setClickUrl("%%CLICK_URL_UNESC%%").display();
+</script></div>
+</div>            </div>
+        </div>
+    </div>
+
+</div><div class="td-main-content-wrap">
+
+    <div class="td-container td-post-template-default ">
+        <div class="td-crumb-container"></div>
+
+        <div class="td-pb-row">
+                                    <div class="td-pb-span8 td-main-content" role="main">
+                            <div class="td-ss-main-content">
+                                
+    <article id="post-94933" class="post-94933 post type-post status-publish format-standard has-post-thumbnail hentry category-chicago-bears tag-chicago-bears tag-super-bowl" itemscope itemtype="http://schema.org/Article">
+        <div class="td-post-header">
+
+            
+            <header class="td-post-title">
+                <h1 class="entry-title">Chicago writer&#8217;s Super Bowl picks!</h1>
+
+                                    <p class="td-post-sub-title">Super Bowl picks from our writing staff</p>
+                
+
+                <div class="td-module-meta-info">
+                    <div class="td-post-author-name">By <a itemprop="author" href="http://cover32.com/author/bobokroi/">Bob Okroi III</a> - </div>                    <div class="td-post-date"><time  itemprop="dateCreated" class="entry-date updated td-module-date" datetime="2016-02-06T03:58:38+00:00" >February 6, 2016</time><meta itemprop="interactionCount" content="UserComments:0"/></div>                    <div class="td-post-comments"><a href="http://cover32.com/2016/02/06/94933/#respond"><i class="td-icon-comments"></i>0</a></div>                    <div class="td-post-views"><i class="td-icon-views"></i><span class="td-nr-views-94933">152</span></div>                </div>
+
+            </header>
+
+        </div>
+
+        <div class="td-post-sharing td-post-sharing-top ">
+				<div class="td-default-sharing">
+		            <a class="td-social-sharing-buttons td-social-facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fcover32.com%2F2016%2F02%2F06%2F94933%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-facebook"></i><div class="td-social-but-text">Share on Facebook</div></a>
+		            <a class="td-social-sharing-buttons td-social-twitter" href="https://twitter.com/intent/tweet?text=Chicago+writer%E2%80%99s+Super+Bowl+picks%21&url=http%3A%2F%2Fcover32.com%2F2016%2F02%2F06%2F94933%2F&via=Cover32"  ><i class="td-icon-twitter"></i><div class="td-social-but-text">Tweet on Twitter</div></a>
+		            <a class="td-social-sharing-buttons td-social-google" href="http://plus.google.com/share?url=http://cover32.com/2016/02/06/94933/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-googleplus"></i></a>
+		            <a class="td-social-sharing-buttons td-social-pinterest" href="http://pinterest.com/pin/create/button/?url=http://cover32.com/2016/02/06/94933/&amp;media=http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres.jpg" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;"><i class="td-icon-pinterest"></i></a>
+	            </div></div>
+
+        <div class="td-post-content">
+
+<!--BEGIN TOUT TOP ARTICLE
+          <div class="tout-sdk tout-top-article"></div>
+END TOUT TOP ARTICLE-->
+
+        <div class="td-post-featured-image"><a href="http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres.jpg" data-caption=""><img width="696" height="464" itemprop="image" class="entry-thumb td-modal-image" src="http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres-696x464.jpg" alt="" title="USATSI_9095578_164063748_lowres"/></a></div>
+        
+ <!-- A generated by theme --> 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><div class="td-g-rec td-g-rec-id-content_top">
+<script type="text/javascript">
+var td_screen_width = document.body.clientWidth;
+
+                    if ( td_screen_width >= 1140 ) {
+                        /* large monitors */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-8284670119199250" data-ad-slot="3226691328"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+            
+	                    if ( td_screen_width >= 1019  && td_screen_width < 1140 ) {
+	                        /* landscape tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-8284670119199250" data-ad-slot="3226691328"></ins>');
+	                        (adsbygoogle = window.adsbygoogle || []).push({});
+	                    }
+	                
+                    if ( td_screen_width >= 768  && td_screen_width < 1019 ) {
+                        /* portrait tablets */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:468px;height:60px" data-ad-client="ca-pub-8284670119199250" data-ad-slot="3226691328"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                
+                    if ( td_screen_width < 768 ) {
+                        /* Phones */
+                        document.write('<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-8284670119199250" data-ad-slot="3226691328"></ins>');
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    }
+                </script>
+</div>
+
+ <!-- end A --> 
+
+<style type="text/css">
+	#fb_content_25 .pw-icon{
+  display: none!important;
+}
+#fb_content_25 .pw-box-counter{
+  float: right!important;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 42px;font-weight: bold;
+  position: relative;
+  text-align: center;
+  background: #fff;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  -moz-transition: all 0.3s ease-in-out !important;
+  -ms-transition: all 0.3s ease-in-out !important;
+  -o-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;
+}
+#fb_content_25 .pw-button{
+  cursor: pointer !important; 
+  display: inline-block !important; 
+  font:normal 13px Helvetica, Arial, sans-serif !important;
+  margin-right: 5px !important;
+  overflow: hidden !important;
+  position: relative !important;
+}
+#fb_content_25 .pw-share:before{
+  line-height: 1!important;
+  display: block!important;
+  font-family: 'Genericons'!important;
+  font-size: 13px!important;
+  height: 20px!important;
+  top: 4px!important;
+  left: 6px!important;
+  text-indent: 0!important;
+  -webkit-font-smoothing: antialiased!important;
+  position: absolute!important;
+  width: 20px;
+}
+#fb_content_25 .pw-share{
+  width: 0px;
+  padding: 0 0 0 24px ;
+  border-top-left-radius: 3px!important;
+  border-bottom-left-radius: 3px!important;
+  font-size: 12px!important;
+  height: 22px!important;
+  line-height: 20px!important;
+  color: #fff!important;
+  float: left !important;
+  font-weight: bold !important;
+  -moz-box-sizing: border-box!important;
+  -webkit-box-sizing: border-box!important;
+  box-sizing: border-box!important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  -moz-transition: all 0.3s ease-in-out !important;
+  -ms-transition: all 0.3s ease-in-out !important;
+  -o-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;	
+}
+#fb_content_25 .pw-button-facebook .pw-share:before{
+  content: '\f204' !important;
+}
+#fb_content_25 .pw-button-facebook .pw-share{
+  background: #3d5a98 !important;
+}	   
+#fb_content_25 .pw-box-counter-facebook{
+  border: 1px solid #3d5a98;
+  color: #3d5a98;
+}
+#fb_content_25 .pw-button-facebook:hover .pw-box-counter-facebook{
+  background: #3d5a98 !important;
+  color: white !important;
+}
+#fb_content_25 .pw-button-facebook:hover .pw-share-facebook{
+  width: 50px !important;
+}
+#fb_content_25 .pw-button-twitter .pw-share:before{
+  content: '\f202' !important;
+}
+#fb_content_25 .pw-button-twitter .pw-share{
+  background: #09b0ed !important;
+}	   
+#fb_content_25 .pw-box-counter-twitter{
+  border: 1px solid #09b0ed;
+  color: #09b0ed;
+}
+#fb_content_25 .pw-button-twitter:hover .pw-box-counter-twitter{
+  background: #09b0ed !important;
+  color: white !important;
+}
+#fb_content_25 .pw-button-twitter:hover .pw-share-twitter{
+  width: 65px !important;
+}
+#fb_content_25 .pw-button-googleplus .pw-share:before{
+  content: '\f218' !important;
+}
+#fb_content_25 .pw-button-googleplus .pw-share{
+  background: #dd4c39 !important;
+}	   
+#fb_content_25 .pw-box-counter-googleplus{
+  border: 1px solid #dd4c39;
+  color: #dd4c39;
+}
+#fb_content_25 .pw-button-googleplus:hover .pw-box-counter-googleplus{
+  background: #dd4c39 !important;
+  color: white !important;
+}
+#fb_content_25 .pw-button-googleplus:hover .pw-share-googleplus{
+  width: 40px !important;
+}
+#fb_content_25 .pw-button-stumbleupon .pw-share:before{
+  content: '\f223' !important;
+}
+#fb_content_25 .pw-button-stumbleupon .pw-share{
+  background: #eb4924 !important;
+}    
+#fb_content_25 .pw-box-counter-stumbleupon{
+  border: 1px solid #eb4924;
+  color: #eb4924;
+}
+#fb_content_25 .pw-button-stumbleupon:hover .pw-box-counter-stumbleupon{
+  background: #eb4924 !important;
+  color: white !important;
+}
+#fb_content_25 .pw-button-stumbleupon:hover .pw-share-stumbleupon{
+  width: 65px !important;
+}
+#fb_content_25 .pw-button-pinterest .pw-share:before{
+  content: '\f209' !important;
+}
+#fb_content_25 .pw-button-pinterest .pw-share{
+  background: #cb2127 !important;
+}	   
+#fb_content_25 .pw-box-counter-pinterest{
+  border: 1px solid #cb2127;
+  color: #cb2127;
+}
+#fb_content_25 .pw-button-pinterest:hover .pw-box-counter-pinterest{
+  background: #cb2127 !important;
+  color: white !important;
+}
+#fb_content_25 .pw-button-pinterest:hover .pw-share-pinterest{
+  width: 45px !important;
+}
+#fb_content_25 .pw-button-reddit .pw-share:before{
+  content: '\f222' !important;
+}
+#fb_content_25 .pw-button-reddit .pw-share{
+  background: #999 !important;
+}    
+#fb_content_25 .pw-box-counter-reddit{
+  border: 1px solid #999;
+  color: #999;
+}
+#fb_content_25 .pw-button-reddit:hover .pw-box-counter-reddit{
+  background: #999 !important;
+  color: white !important;
+}
+#fb_content_25 .pw-button-reddit:hover .pw-share-reddit{
+  width: 65px !important;
+}
+@font-face {
+    font-family: 'Genericons';
+    src: url(data:application/font-woff;charset=utf-8;base64,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) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+
+
+
+
+
+<div id="fb_content_25">
+					<div class="pw-widget" style="margin-bottom:8px;width: 490px;">
+						<a class="pw-button-twitter">
+							<span class="pw-box-counter pw-box-counter-twitter" pw:channel="twitter"></span>
+							<span class="pw-share pw-share-twitter">Tweet</span>	   
+						</a>
+						<a class="pw-button-googleplus">
+						    <span class="pw-box-counter pw-box-counter-googleplus" pw:channel="googleplus"></span>
+						    <span class="pw-share pw-share-googleplus">+1</span>	   
+					    </a>
+					    <a class="pw-button-facebook">
+						    <span class="pw-box-counter pw-box-counter-facebook" pw:channel="facebook"></span>
+						    <span class="pw-share pw-share-facebook">Like</span>
+					    </a>
+					    <a class="pw-button-stumbleupon">
+						    <span class="pw-box-counter pw-box-counter-stumbleupon" pw:channel="stumbleupon"></span>
+						    <span class="pw-share pw-share-stumbleupon">Share</span>	   
+					    </a>
+					    <a class="pw-button-pinterest">
+						    <span class="pw-box-counter pw-box-counter-pinterest" pw:channel="pinterest"></span>
+						    <span class="pw-share pw-share-pinterest">Pin</span>	   
+					    </a>
+					    <a class="pw-button-reddit">
+						    <span class="pw-box-counter pw-box-counter-reddit" pw:channel="reddit"></span>
+						    <span class="pw-share pw-share-reddit">Reddit</span>	   
+					    </a>
+					</div>
+					
+				</div><p>This Sunday is the biggest day in the NFL no matter what team you root for, it&#8217;s Super Bowl Sunday!  Now we could reminisce about the &#8217;85 Bears some more (but we save that for the other 364 days of the year), or talk about what the Chicago Bears need to do in 2016.  We could breakdown Jay Cutler&#8217;s obvious improvement from 2014 to 2015. But, instead we&#8217;re just going to focus on the big game this weekend, like everybody else.</p>
+<p>Writers for the Chicago Bears and Arizona Cardinals have come together and give their two-cents and who they&#8217;re picking for this year&#8217;s match-up between the Carolina Panthers and Denver Broncos.  And I&#8217;ll start us off&#8230;</p>
+<hr />
+<p><span style="color: #800000;"><strong>AROUND COVER32</strong></span></p>
+<p><strong>Super Bowl 50:</strong> <a href="http://cover32.com/?p=94578">Five bold predictions for the big game</a></p>
+<p><strong>NFL Draft:</strong> <a href="http://cover32.com/?p=94620" target="_blank">Profiling the top 31 prospects</a></p>
+<p><strong>Super Bowl History:</strong> <a href="http://cover32.com/?p=94434" target="_blank">Watch the top ten Super Bowl commercials ever</a></p>
+<p><strong>Hot Seat:</strong> <a href="http://cover32.com/?p=94437">Three people under the most pressure at the Super Bowl</a></p>
+<hr />
+<p><strong>B. Okroi&#8217;s Super Bowl pick</strong></p>
+<p>Everyone&#8217;s riding Carolina Panthers in the National media, and only a handful of people have picked the Broncos.  To me it&#8217;s obvious why, the Carolina Panthers are the better overall team.  Cam Newton is at a whole other level in comparison to Peyton Manning this season, and the defenses and special team play have been comparable to each other.</p>
+<p>With that being said, I&#8217;m picking the Denver Broncos. Ha.  I&#8217;ve said it once, I&#8217;ll say it again, it&#8217;s his year. It&#8217;s fate.  It&#8217;s his 18th season in the NFL and he wears the number 18, so it doesn&#8217;t matter if the Panthers are better, the stage has already been set for the greatest quarterback of all time to seal his legacy and ride off into the sunset, like his GM John Elway.</p>
+<p><strong>SB Final:  Denver Broncos win, 20-27<br />
+MVP:  Peyton Manning</strong></p>
+<h3>
+
+<!--BEGIN TOUT MID ARTICLE
+          <div class="tout-sdk tout-mid-article"></div>
+END TOUT MID ARTICLE-->
+
+        </div>
+
+
+        <footer>
+            <div class="page-nav page-nav-post td-pb-padding-side"> <div>1</div> <a href="http://cover32.com/2016/02/06/94933/2/"><div>2</div></a><a href="http://cover32.com/2016/02/06/94933/2/"><div><i class="td-icon-menu-right"></i></div></a></div>            
+            <div class="td-post-source-tags">
+                                            </div>
+
+                        <div class="td-block-row td-post-next-prev"><div class="td-block-span6 td-post-prev-post"><div class="td-post-next-prev-content"><span>Previous article</span><a href="http://cover32.com/2016/02/06/tyrann-mathieuw/">Tyrann Mathieu, an Arizona Cardinal for life?</a></div></div><div class="td-next-prev-separator"></div><div class="td-block-span6 td-post-next-post"><div class="td-post-next-prev-content"><span>Next article</span><a href="http://cover32.com/2016/02/06/john-lund-free-agents/">John Lund: Oakland Raiders stadium situation impacts free agents</a></div></div></div><!-- BEGIN RevContent -->
+            <div id="rcjsload_69056d"></div>
+            <script type="text/javascript">
+            (function() {
+            var rcel = document.createElement("script");
+            rcel.id = 'rc_' + Math.floor(Math.random() * 1000);
+            rcel.type = 'text/javascript';
+            rcel.src = "http://trends.revcontent.com/serve.js.php?w=17692&t="+rcel.id+"&c="+(new Date()).getTime()+"&width="+(window.outerWidth || document.documentElement.clientWidth);
+            rcel.async = true;
+            var rcds = document.getElementById("rcjsload_69056d"); rcds.appendChild(rcel);
+            })();
+            </script>
+<!-- END RevContent -->
+<!-- BEGIN Earnify 
+            <script type="text/javascript">
+            var a = document.createElement("script");
+            var b = document.getElementsByTagName("script")[0];
+            a.async = 1;
+            a.src = "//cdn.earnify.com/widget.min.js";
+            b.parentNode.insertBefore(a, b);
+            </script>
+            <div class="earnify-widget" data-widget-id="833"></div>
+ Earnify -->
+            <div class="td-author-name vcard author" style="display: none"><span class="fn"><a href="http://cover32.com/author/">Bob Okroi III</a></span></div>	        <meta itemprop="author" content = "Bob Okroi III"><meta itemprop="datePublished" content="2016-02-06T03:58:38+00:00"><meta itemprop="headline " content="Chicago writer&#039;s Super Bowl picks!"><meta itemprop="image" content="http://cover32.com/wp-content/uploads/2016/02/USATSI_9095578_164063748_lowres.jpg"><meta itemprop="interactionCount" content="UserComments:0"/>        </footer>
+
+    </article> <!-- /.post -->
+
+    <script>var block_td_uid_1_56bfd951bf738 = new td_block();
+block_td_uid_1_56bfd951bf738.id = "td_uid_1_56bfd951bf738";
+block_td_uid_1_56bfd951bf738.atts = '{"limit":3,"ajax_pagination":"next_prev","live_filter":"cur_post_same_categories","td_ajax_filter_type":"td_custom_related","class":"td_block_id_2918947095 td_uid_1_56bfd951bf738_rand","td_column_number":3,"live_filter_cur_post_id":94933,"live_filter_cur_post_author":"563"}';
+block_td_uid_1_56bfd951bf738.td_column_number = "3";
+block_td_uid_1_56bfd951bf738.block_type = "td_block_related_posts";
+block_td_uid_1_56bfd951bf738.post_count = "3";
+block_td_uid_1_56bfd951bf738.found_posts = "140";
+block_td_uid_1_56bfd951bf738.header_color = "";
+block_td_uid_1_56bfd951bf738.ajax_pagination_infinite_stop = "";
+block_td_uid_1_56bfd951bf738.max_num_pages = "47";
+td_blocks.push(block_td_uid_1_56bfd951bf738);
+</script><div class="td_block_wrap td_block_related_posts td_block_id_2918947095 td_uid_1_56bfd951bf738_rand td_with_ajax_pagination td-pb-border-top"><h4 class="td-related-title"><a id="td_uid_2_56bfd951c26d0" class="td-related-left td-cur-simple-item" data-td_filter_value="" data-td_block_id="td_uid_1_56bfd951bf738" href="#">RELATED ARTICLES</a><a id="td_uid_3_56bfd951c276f" class="td-related-right" data-td_filter_value="td_related_more_from_author" data-td_block_id="td_uid_1_56bfd951bf738" href="#">MORE FROM AUTHOR</a></h4><div id=td_uid_1_56bfd951bf738 class="td_block_inner">
+
+	<div class="td-related-row">
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://cover32.com/2016/02/13/chicago-bears-week-in-review/" rel="bookmark" title="Chicago Bears: Week in review"><img width="218" height="150" itemprop="image" class="entry-thumb" src="http://cover32.com/wp-content/uploads/2016/02/USATSI_9035488_164063748_lowres-218x150.jpg" alt="Chicago Bears" title="Chicago Bears: Week in review"/></a></div>                            </div>
+            <div class="item-details">
+                <h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://cover32.com/2016/02/13/chicago-bears-week-in-review/" rel="bookmark" title="Chicago Bears: Week in review">Chicago Bears: Week in review</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://cover32.com/2016/02/12/ryan-pace-we-will-not-extend-a-contract-offer-to-matt-forte/" rel="bookmark" title="Ryan Pace &#8220;We will not extend a contract offer&#8221; to Matt Forte"><img width="218" height="150" itemprop="image" class="entry-thumb" src="http://cover32.com/wp-content/uploads/2016/02/USATSI_8296621_164063748_lowres-218x150.jpg" alt="" title="Ryan Pace &#8220;We will not extend a contract offer&#8221; to Matt Forte"/></a></div>                            </div>
+            <div class="item-details">
+                <h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://cover32.com/2016/02/12/ryan-pace-we-will-not-extend-a-contract-offer-to-matt-forte/" rel="bookmark" title="Ryan Pace &#8220;We will not extend a contract offer&#8221; to Matt Forte">Ryan Pace &#8220;We will not extend a contract offer&#8221; to Matt Forte</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 -->
+
+	<div class="td-related-span4">
+
+        <div class="td_module_related_posts td-animation-stack td_mod_related_posts">
+            <div class="td-module-image">
+                <div class="td-module-thumb"><a href="http://cover32.com/2016/02/12/95872/" rel="bookmark" title="Chicago Bears 2015 draft class could be foundation of team&#8217;s future"><img width="218" height="150" itemprop="image" class="entry-thumb" src="http://cover32.com/wp-content/uploads/2016/02/USATSI_8980565_164063748_lowres-218x150.jpg" alt="" title="Chicago Bears 2015 draft class could be foundation of team&#8217;s future"/></a></div>                            </div>
+            <div class="item-details">
+                <h3 itemprop="name" class="entry-title td-module-title"><a itemprop="url" href="http://cover32.com/2016/02/12/95872/" rel="bookmark" title="Chicago Bears 2015 draft class could be foundation of team&#8217;s future">Chicago Bears 2015 draft class could be foundation of team&#8217;s future</a></h3>            </div>
+        </div>
+        
+	</div> <!-- ./td-related-span4 --></div><!--./row-fluid--></div><div class="td-next-prev-wrap"><a href="#" class="td-ajax-prev-page ajax-page-disabled" id="prev-page-td_uid_1_56bfd951bf738" data-td_block_id="td_uid_1_56bfd951bf738"><i class="td-icon-font td-icon-menu-left"></i></a><a href="#"  class="td-ajax-next-page" id="next-page-td_uid_1_56bfd951bf738" data-td_block_id="td_uid_1_56bfd951bf738"><i class="td-icon-font td-icon-menu-right"></i></a></div></div> <!-- ./block -->
+<!-- Interyield PopUp Advertise.com
+<script src="http://interyield.td553.com/InterYield/bindevent.do?e=click&affiliate=mjaycox&subid=nosubid&ecpm=0&debug=false&snoozeMinutes=4&adCountIntervalHours=24&maxAdCountsPerInterval=2&pop=under&attributionDisabled=true&endpoint=http%3A%2F%2Finteryield.td553.com" type="text/javascript"></script>
+END Interyield PopUp -->
+
+<!-- DraftKings PopUp -->
+        <!-- advertising cbkBO43k05imkTINWuyf5EBEOx18PMIMJ5UFvSZYrkg=-->
+        <script data-cfasync="false" type="text/javascript">
+        (function (document, window) {
+        var c = document.createElement("script");
+        c.type = "text/javascript";
+        c.async = !0;
+        c.src = "//megapopads.com/scripts/a4dd744e92640154f03c9613cca8fbdb.min.js?20151006=" + Math.floor((new Date).getTime());
+        var a = !1;
+        try {
+        a = parent.document.getElementsByTagName("script")[0] || document.getElementsByTagName("script")[0];
+        } catch (e) {
+        a = !1;
+        }
+        a || ( a = document.getElementsByTagName("head")[0] || document.getElementsByTagName("body")[0]);
+        a.parentNode.insertBefore(c, a);
+        })(document, window);
+        </script>
+        <!-- end advertising -->
+<!-- END Draftkings PopUp -->
+
+<div id="disqus_thread">
+    </div>
+
+                            </div>
+                        </div>
+                        <div class="td-pb-span4 td-main-sidebar" role="complementary">
+                            <div class="td-ss-main-sidebar">
+                                <aside class="widget widget_text">			<div class="textwidget"><div style="margin-top:0px">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- cover32 - 300x600 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-8284670119199250"
+     data-ad-slot="3713424524"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><div id="ybn-badge-wrap" style="margin-top:0px"><a href="http://ww.yardbarker.com/"><img border="0" width="300" src="http://www.yardbarker.com/images/ybn/badge_300.gif" height="33"/></a></div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=314672&u=MileHighSports&width=300&height=250"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=314673&u=MileHighSports&width=300&height=250"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=314674&u=MileHighSports&width=300&height=250"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><div id="ybn-badge-wrap" style="margin-top:0px"><a
+href="http://buzztap.com/denver-broncos" ><img
+border="0" src="http://cover32.com/wp-content/uploads/2015/04/broncos_promo.png"
+/></a></div></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=314675&u=MileHighSports&width=300&height=250"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=314676&u=MileHighSports&width=300&height=250"></script></div>
+		</aside><aside class="widget widget_text">			<div class="textwidget"><script type="text/javascript" src="http://ap.lijit.com/www/delivery/fpi.js?z=314677&u=MileHighSports&width=300&height=250"></script></div>
+		</aside>                            </div>
+                        </div>
+                            </div> <!-- /.td-pb-row -->
+    </div> <!-- /.td-container -->
+</div> <!-- /.td-main-content-wrap -->
+
+
+<!-- Footer -->
+
+
+<!-- Sub Footer -->
+    <div class="td-sub-footer-container">
+        <div class="td-container">
+            <div class="td-pb-row">
+                <div class="td-pb-span7 td-sub-footer-menu">
+                        <div class="menu-sub-footer-menu-container"><ul id="menu-sub-footer-menu" class="td-subfooter-menu"><li id="menu-item-80264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-first td-menu-item td-normal-menu menu-item-80264"><a href="http://cover32.com/contact/">Contact</a></li>
+<li id="menu-item-80265" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80265"><a href="http://cover32.com/employment/">Employment</a></li>
+<li id="menu-item-80266" class="menu-item menu-item-type-post_type menu-item-object-page td-menu-item td-normal-menu menu-item-80266"><a href="http://cover32.com/feedback/">Feedback</a></li>
+</ul></div>                </div>
+
+                <div class="td-pb-span5 td-sub-footer-copy">
+                    &copy; Cover32 All photos courtesy of USA Today Sports Images, unless otherwise noted.                 </div>
+            </div>
+        </div>
+    </div>
+    </div><!--close content div-->
+</div><!--close td-outer-wrap-->
+
+
+
+    <!--
+
+        Theme: Newspaper by tagDiv 2015
+        Version: 6.3.2 (rara)
+        Deploy mode: deploy
+        
+        uid: 56bfd951cf7b3
+    -->
+
+    
+<!-- Custom css form theme panel -->
+<style type="text/css" media="screen">
+/* custom css theme panel */
+aside.widget.widget_text {
+    padding: 5px 0px 0px 5px;
+    /* box-shadow: 0 0 2px #ABABAB; */
+    border: 1px solid #E6E6E6;
+    margin-bottom: 15px;
+    margin-left: 26px;
+    position: relative;
+    background: #fff;
+}
+time.entry-date.updated.td-module-date {
+    color: #1B3D72;
+}
+.td-pb-span5 {
+    width: 50%;
+}
+.td-pb-span7 {
+    width: 50%;
+}
+.block-title a, .block-title span, .block-title label {
+    width: 100%;
+}
+.td-post-author-name a {
+    color: #444444;
+    text-transform: uppercase;
+}
+.td-header-sp-recs {
+    margin-bottom: 21px !important;
+}
+.td-post-source-tags {
+    border-bottom-color: #de2225;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+.td-block-row.td-post-next-prev {
+    padding-top: 13px;
+}
+.earnify-widget {
+    margin-bottom: 0em;
+}
+</style>
+
+  <script>
+    window.TOUT = {
+      propertyUid: "ef560a",
+      topArticleLoaded: function(attrs){
+        if(attrs.matchExists){
+          jQuery('.td-post-featured-image').remove();
+        }
+      }    
+    };
+  </script>
+  <script src="http://platform.tout.com/sdk.js" async></script>	
+<script type='text/javascript' src='http://cover32.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/cover32.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptchaEmpty":"Please verify that you are not a robot.","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cover32.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.3.1'></script>
+<script type='text/javascript' src='http://cover32.com/wp-content/themes/Newspaper/js/tagdiv_theme.js?ver=6.3.2'></script>
+<script type='text/javascript' src='http://cover32.com/wp-includes/js/comment-reply.min.js?ver=4.4.2'></script>
+<script type='text/javascript' src='http://cover32.com/wp-includes/js/wp-embed.min.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var embedVars = {"disqusConfig":{"platform":"wordpress@4.4.2","language":""},"disqusIdentifier":"94933 http:\/\/cover32.com\/?p=94933","disqusShortname":"cover32","disqusTitle":"Chicago writer\u2019s Super Bowl picks!","disqusUrl":"http:\/\/cover32.com\/2016\/02\/06\/94933\/","options":{"manualSync":false},"postId":"94933"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cover32.com/wp-content/plugins/disqus-comment-system/media/js/disqus.js?ver=4.4.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"cover32"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cover32.com/wp-content/plugins/disqus-comment-system/media/js/count.js?ver=4.4.2'></script>
+
+<!-- JS generated by theme -->
+
+<script>
+    
+
+	
+
+		(function(){
+			var html_jquery_obj = jQuery('html');
+
+			if (html_jquery_obj.length && (html_jquery_obj.is('.ie8') || html_jquery_obj.is('.ie9'))) {
+
+				var path = 'http://cover32.com/wp-content/themes/Newspaper/style.css';
+
+				jQuery.get(path, function(data) {
+
+					var str_split_separator = '#td_css_split_separator';
+					var arr_splits = data.split(str_split_separator);
+					var arr_length = arr_splits.length;
+
+					if (arr_length > 1) {
+
+						var dir_path = 'http://cover32.com/wp-content/themes/Newspaper';
+						var splited_css = '';
+
+						for (var i = 0; i < arr_length; i++) {
+							if (i > 0) {
+								arr_splits[i] = str_split_separator + ' ' + arr_splits[i];
+							}
+							//jQuery('head').append('<style>' + arr_splits[i] + '</style>');
+
+							var formated_str = arr_splits[i].replace(/\surl\(\'(?!data\:)/gi, function regex_function(str) {
+								return ' url(\'' + dir_path + '/' + str.replace(/url\(\'/gi, '').replace(/^\s+|\s+$/gm,'');
+							});
+
+							splited_css += "<style>" + formated_str + "</style>";
+						}
+
+						var td_theme_css = jQuery('link#td-theme-css');
+
+						if (td_theme_css.length) {
+							td_theme_css.after(splited_css);
+						}
+					}
+				});
+			}
+		})();
+
+	
+	
+</script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8469cbd77b","applicationID":"9976123","transactionName":"bgQHN0cCDBAHUUBYCldOJABBCg0NSUFdXwJVBA==","queueTime":0,"applicationTime":571,"atts":"QkMEQQ8YHx4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-768.min.js"}</script></body>
+</html>

@@ -1,0 +1,1355 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="nfl-mobile nfl-headless">
+<head>
+  <!-- BEGIN DECORATOR mobile-headless -->
+  
+
+<!-- BEGIN INCLUDE one-web/page-title -->
+
+<meta charset="utf-8">
+
+
+<title>Super Bowl 50 Viewer's Guide | NFL.com</title>
+<!-- END INCLUDE one-web/page-title -->
+
+
+  <!-- Load global JavaScript environment -->
+  
+  
+  
+    <!-- BEGIN INCLUDE global/nfl-constants -->
+    <script>/* SS_TYPE : SB */
+
+
+https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=16423630&PluID=0&ord=%%CACHEBUSTER%%
+/* scoresStripSponsorshipTracking : https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=16423630&PluID=0&ord=%%CACHEBUSTER%%&rtu=-1 */
+
+
+
+if (window.location.href.search('nfl.com/scores') > -1){ window.useYUIQueryString = true; }
+
+
+
+
+<!-- begin /static/html/widgets/config-files/photogallery/presby-config.html -->
+
+<!-- end /static/html/widgets/config-files/photogallery/presby-config.html -->
+try {
+	(function(){
+		var linkInterval = setInterval(function(){ if(nfl != undefined && nfl.Y != undefined){
+		    clearInterval(linkInterval);
+			nfl.use('node', function(Y) {
+				Y.on('contentready', function() {
+					var teamLinks = Y.all('#team-sites-header-bar .team-sites-header-bar-logo-container a');
+					teamLinks.each(function (linkNode) {
+						var abbr = linkNode.get('className').toUpperCase();
+						var href = linkNode.get('href') + "?icampaign=nflcom-header-clublogos-" + abbr;
+						linkNode.set('href', href);
+					});
+				}, '#team-sites-header-bar');
+			});
+		}},100);
+	})();
+} catch(err){}
+
+
+
+// requestURI: /labs/rr/superbowlviewersguide/superbowlviewersguide
+
+
+
+
+window.NFL_GLOBAL_CACHE = {};
+window.NFL_GLOBAL_CACHE.NFL_SUBS = [];
+
+(function (w) {
+  "use strict";
+  var nfl = w.nfl = w.nfl || {};
+  nfl.constants = {
+    ASSET_VERSION:            "7.3",
+    ASSET_BUILD:              "hotfix-7.3.6",
+    IMAGE_PATH:               "http:\/\/i.nflcdn.com\/static\/site\/7.3",
+    STYLE_PATH:               "http:\/\/s.nflcdn.com\/static\/site\/7.3",
+    SCRIPT_PATH:              "http:\/\/s.nflcdn.com\/static\/site\/7.3",
+    FLASH_PATH:               "http:\/\/flash.static.nfl.com\/static\/site\/7.3",
+    ENV:                      "PROD",
+    IS_MOBILE:                false,
+    IS_TABLET:                false,
+    DEVICE_CONTEXT:           "DESKTOP",
+    APP_CONTEXT:              {
+                                app: "",
+                                view: "",
+                                video: ""
+                              },
+    CARRIER:                  "",
+    ID_MANAGER:               "https:\/\/id2.s.nfl.com",
+    ECM_IMAGE_PATH:           "http:\/\/static.nfl.com\/static\/content\/",
+    SEARCH_DOMAIN:            "search.nfl.com",
+    SITELIFE_URL:             "http:\/\/pluck.nfl.com",
+    SITE_URL:                 "http:\/\/www.nfl.com",
+    FANTASY_DOMAIN:           "http:\/\/fantasy.nfl.com",
+    FANTASY_API:              "http:\/\/api.fantasy.nfl.com",
+    PLAYOFF_CHALLENGE_DOMAIN: "http:\/\/playoffchallenge.fantasy.nfl.com",
+    PLAYOFF_CHALLENGE_API:    "http:\/\/api.playoffchallenge.fantasy.nfl.com",
+    FEEDS_URL:                "http:\/\/feeds.nfl.com",
+    PREDICTPICK_DOMAIN:       "http:\/\/predictpick.nfl.com",
+    FACEBOOK_APP_ID:          "108273802559405",
+    TWITTER_ID:               "DkWLqcP3j8i9wHuJ7fiw",
+    YUI_ENABLED:              true,
+    YUI_COMBO_URL:            "http:\/\/combine.nflcdn.com\/yui\/min2\/index.php",
+    YUI_DEPLOY_URL:           "http:\/\/s.nflcdn.com\/yui",
+    YUI_VERSION:              "3.10.0",
+    NFL_COMBO_ENABLED:        true,
+    NFL_COMBO_URL:            "http:\/\/combine.nflcdn.com\/yui\/min2\/index.php",
+    NFL_MIN_ENABLED:          false,
+    COUNTRY_CODE:             "us",
+    ET_OFFSET:                (function () {
+      var offset  = ("-0500").match(/([\+\-]\d\d)(\d\d)/),
+        hours   = parseInt(offset[1], 10),
+        minutes = parseInt(offset[2], 10);
+
+      return (hours + (minutes / 60)) * 60 * 60 * 1000;
+    }()),
+    GIGYA_CONF: {
+      APIKey: "2_kMCvXUlFCZJhwaNXbxzePaXPYb9T__rgiF5y7EnWuEM5a84cueVv-MkPRKjVFc31",
+      enabledProviders: "facebook,twitter,google,yahoo,messenger",
+      facebookExtraPermissions: "offline_access",
+      cid: w.location.pathname.substr(0, 100),
+      shortURLs: "whenRequired",
+      sessionExpiration: 0
+    },
+    SS_TYPE: 'SB',
+    AD_CONF: {
+      networkId: '4595',
+      site: '.other',
+      zone: 'labs/rr/superbowlviewersguide/superbowlviewersguide',
+      zoneUrl: 'url=labs_rr_superbowlviewersguide_superbowlviewersguide',
+      zoneKeys: 's1=labs;s2=rr;s3=superbowlviewersguide;s4=superbowlviewersguide',
+      env: '',
+      pageKeyValues: ''
+    }
+  };
+
+
+
+
+nfl.constants.SS_CONF = nfl.constants.SS_CONF || {};
+
+  nfl.constants.SS_CONF.year = parseInt('2015');
+
+
+  nfl.constants.SS_CONF.responsive = true;
+
+nfl.constants.SS_CONF.trackingSponPixel = 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=16423630&PluID=0&ord=%%CACHEBUSTER%%&rtu=-1';
+nfl.constants.SS_CONF.sponClickThrough = '';
+nfl.constants.SS_CONF.trackingMobileSponPixel = 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=19&mc=imp&pli=16423630&PluID=0&ord=%%CACHEBUSTER%%&rtu=-1';
+nfl.constants.SS_CONF.sponMobileClickThrough = 'https://bs.serving-sys.com/BurstingPipe/adServer.bs?cn=tf&c=20&mc=click&pli=16423630&PluID=0&ord=%%CACHEBUSTER%%';
+
+  // set s_account on the window, allow it to be overriden, and set it on nfl.constants too
+  nfl.constants.ANALYTICS = w.s_account = w.s_account || "cbsnfl,nflmultiplatform";
+  nfl.SHARED_VIDEO_URL = "http://combine.nflcdn.com/yui/min2/index.php?7.3hotfix-7.3.6&g=nflui";
+
+}(window));</script>
+    
+      
+      
+      
+      
+      
+        
+      
+    
+	
+	
+    
+      
+        <script src="http://combine.nflcdn.com/yui/min2/index.php?7.3hotfix-7.3.6&amp;g=mobilebase,nflui"></script>
+        
+      
+      
+    
+    <!-- END INCLUDE global/nfl-constants -->
+    <!-- BEGIN HEADER ADDITIONS -->
+    
+<style>
+	
+		body {
+			background: #013369 url('http://static.nfl.com/static/content/public/static/img/head/jan-20-2016-background.jpg') no-repeat top center;
+		}
+	
+
+	
+
+	
+	/* remove this after 6.4 when photo.tag serves image on mobile */
+	/*.nfl-mobile .nfl-tag-photo img {
+		width: 100%;
+	}*/
+
+	.nfl-tag-photo table {
+		width: 1px !important;
+	}
+	@media screen and (max-width: 767px) {
+		.nfl-responsive .nfl-tag-photo table {
+			width: 100% !important;
+		}
+	}
+
+
+</style>
+
+
+
+<!-- BEGIN page-header-fix -->
+<style>
+	.article-decorator .content-link,
+	.article-decorator .sponsor-link {top: 0;}
+</style>
+<!-- END page-header-fix -->
+
+
+
+
+
+
+
+<script>
+	(function(win){
+		// This code disables HP personalization
+		nfl.Y.use('event-custom', function(Y){
+			var pathName = win.location.pathname,
+				isDesktop = nfl.constants.DEVICE_CONTEXT === 'DESKTOP';
+			if(isDesktop && (pathName === '/' || pathName.substr(0, 5) === '/home')){
+				nfl.Y.Global.once('home:nflNowVideoLoaded', function(e){
+					nfl.Y.Global.detachAll('home:nflNowVideoLoaded');
+				});
+			}
+		});
+	})(window);
+</script>
+
+<!-- BEGIN TAG javascript files="modules/geocode/geocode.js,modules/nfl-user/nfl-user.js,modules/nfl-subscriptions/nfl-subscriptions.js" type="" -->
+<!-- 
+	nfl_combo_enabled: true
+	nfl_combo_url:     http://combine.nflcdn.com/yui/min2/index.php
+	nfl_min_enabled:   false
+	use_debug:         false
+-->
+
+	
+	
+	
+		
+		<script src="http://combine.nflcdn.com/yui/min2/index.php?7.3hotfix-7.3.6&amp;b=yui3%2Fstatic%2F7.3%2Fscripts&amp;f=modules/geocode/geocode.js,modules/nfl-user/nfl-user.js,modules/nfl-subscriptions/nfl-subscriptions.js"></script>
+	
+	
+
+<!-- END TAG javascript -->
+
+<script>
+    (function(){
+        YUI.add("hp-subscriptions", (function(Y) {
+          "use strict";
+          var headerNode;
+
+          var getHeaderNode = (function () {
+            if (window.Y && window.Y.NFL && window.Y.NFL.Header2012) {
+              headerNode = window.Y.NFL.Header2012.headerNode;
+            }
+
+            if (headerNode) {
+              return personalizeSubscriptions();
+            }
+          });
+
+          /**
+          @namespace Y.NFL.Header2012
+          @method PersonalizeSubscriptions
+          @static
+          */
+          var personalizeSubscriptions = (function () {
+            return Y.namespace("NFL.Header2012").PersonalizeSubscriptions = function() {
+              var GAME_PASS_SECTION_WIDTH, LAUNCH_BUTTON, LEARN_MORE_BUTTON, RENEW_BUTTON, SUBSCRIPTIONS, applySubProductsVisibility, headerSubProducts, subscriptionKey, subscriptions, uris, useJSONP,
+                _this = this;
+              RENEW_BUTTON = "<span class='button button-red'>RENEW</span>";
+              LEARN_MORE_BUTTON = "<span class='button button-gray'>LEARN MORE</span>";
+              LAUNCH_BUTTON = "<span class='button button-green'>LAUNCH</span>";
+              GAME_PASS_SECTION_WIDTH = 945;
+              SUBSCRIPTIONS = {
+                "PRESEASON_LIVE": {
+                  active: false,
+                  selector: "preseasonLiveClass",
+                  geoURI: "/gamecenter/preseasonLive"
+                },
+                "GAME_PASS": {
+                  active: false,
+                  selector: "gamePassClass",
+                  geoURI: "/gamecenter/gamePass"
+                },
+                "GAME_REWIND": {
+                  active: false,
+                  selector: "gameRewindClass",
+                  geoURI: "/gamecenter/gameRewind"
+                },
+                "NETWORK_ONLINE": {
+                  active: false,
+                  selector: "nflnOnlineClass",
+                  geoURI: "/gamecenter/nflNetworkOnline"
+                },
+                "AUDIO_PASS": {
+                  active: false,
+                  selector: "audioPassClass",
+                  geoURI: null
+                }
+              };
+
+              setTimeout(function(){
+                  var gamePassNode, subscription, subscriptionKey, subscriptionNode, _i, _len, _ref, _ref2, _results;
+                  gamePassNode = headerNode.one("div.content.game-pass");
+                  subscriptions = [];
+                  console.info('hp-subscriptions overwritten');
+                  for (_i = 0, _len = subscriptions.length; _i < _len; _i++) {
+                    subscription = subscriptions[_i];
+                    if ((_ref = SUBSCRIPTIONS[subscription]) != null) _ref.active = true;
+                  }
+                  _results = [];
+                  for (subscriptionKey in SUBSCRIPTIONS) {
+                    subscription = SUBSCRIPTIONS[subscriptionKey];
+                    subscriptionNode = gamePassNode != null ? gamePassNode.one("." + subscription.selector) : void 0;
+                    _results.push(subscriptionNode != null ? (_ref2 = subscriptionNode.one("span.button")) != null ? _ref2.replace(subscription.active ? LAUNCH_BUTTON : LEARN_MORE_BUTTON) : void 0 : void 0);
+                  }
+                  return _results;
+
+              }, 1000);
+
+              /**
+              @method applySubProductsVisibility
+              @private
+              @param String - selectors - comma-separated CSS classes string
+              */
+              applySubProductsVisibility = function(selectors) {
+                var columnWidthRegExp, columns, gamePassSectionNode, lastColumn, sectionWidth, subscription, subscriptionKey;
+                for (subscriptionKey in SUBSCRIPTIONS) {
+                  subscription = SUBSCRIPTIONS[subscriptionKey];
+                  if (subscription.geoURI === null) {
+                    headerNode.all("." + subscription.selector).setStyle("visibility", "visible");
+                  } else if (selectors.indexOf(subscription.selector) >= 0) {
+                    headerNode.all("." + subscription.selector).each(function(elm) {
+                      if (!elm.hasClass("force-hide")) {
+                        return elm.setStyle("visibility", "visible");
+                      } else {
+                        return elm.remove();
+                      }
+                    });
+                  } else {
+                    headerNode.all("." + subscription.selector).remove();
+                  }
+                }
+                /**
+                Game pass section node columns needs to fill up
+                the entire content container, if there are less than 3 sub-products
+                available to the visitor based on their geo-location. The last columns
+                width would need to fill up the remainder of the width.
+                */
+                gamePassSectionNode = headerNode.one(".content.game-pass");
+                columnWidthRegExp = /column-(\d+)/;
+                if (gamePassSectionNode) {
+                  sectionWidth = 0;
+                  columns = gamePassSectionNode.all("div.column");
+                  columns.each(function(elm, index) {
+                    if (columnWidthRegExp.test(elm.get("className")) && index !== (columns.size() - 1)) {
+                      return sectionWidth += parseInt(RegExp.$1, 10);
+                    }
+                  });
+                  if (GAME_PASS_SECTION_WIDTH - sectionWidth > 0) {
+                    lastColumn = columns.item(columns.size() - 1);
+                    lastColumn.set("className", "column column-" + (GAME_PASS_SECTION_WIDTH - sectionWidth));
+                  }
+                }
+              };
+              headerSubProducts = Y.Cookie.get("headerSubProducts");
+              if (headerSubProducts) {
+                console.info("Sub products visibility: " + headerSubProducts);
+                applySubProductsVisibility(headerSubProducts);
+              } else {
+                /**
+                Get the geocode response
+                */
+                uris = [];
+                for (subscriptionKey in SUBSCRIPTIONS) {
+                  if (SUBSCRIPTIONS[subscriptionKey]["geoURI"]) {
+                    uris.push(SUBSCRIPTIONS[subscriptionKey]["geoURI"]);
+                  }
+                }
+                useJSONP = true;
+                Y.getNFLGeoCode(uris.join(","), function(result) {
+                  var classRule, cookiedResults, d, expirationDate, results, subProductResult, _i, _len;
+                  try {
+                    results = result instanceof String ? Y.JSON.parse(result) : result;
+                    cookiedResults = [];
+                    if (results instanceof Array) {
+                      for (_i = 0, _len = results.length; _i < _len; _i++) {
+                        subProductResult = results[_i];
+                        classRule = subProductResult.classRule;
+                        if (classRule) cookiedResults.push(classRule);
+                      }
+                    }
+                    if (cookiedResults.length > 0) {
+                      applySubProductsVisibility(cookiedResults.join(","));
+                      try {
+                        d = new Date();
+                        expirationDate = new Date(d.setTime(d.getTime() + (7 * 24 * 60 * 60 * 1000)));
+                        Y.Cookie.set("headerSubProducts", cookiedResults.join(","), {
+                          path: "/",
+                          domain: ".nfl.com",
+                          expires: expirationDate
+                        });
+                      } catch (error) {
+                        return console.error("Error setting headerSubProducts cookie " + error);
+                      }
+                    }
+                   else {
+                    applySubProductsVisibility([]);
+                   }
+                  } catch (error) {
+                    return console.error(error);
+                  }
+                }, useJSONP);
+              }
+            };
+          });
+
+          getHeaderNode();
+          
+        }), "1.0.0", {
+          requires: ["nfl-user", "nfl-subscriptions", "geocode", "node", "json-parse", "cookie"]
+        });
+    })();
+</script>
+    <!-- END HEADER ADDITIONS -->
+  
+
+
+
+  <!-- Head elements shared with partners -->
+  
+<!-- BEGIN INCLUDE one-web/mobile-head -->
+
+<!-- Load custom fonts -->
+
+<!-- BEGIN TAG custom-fonts fonts="NFLEndzoneSansCondMedium,NFLEndzoneTechBold,nflicons" -->
+
+
+
+<script>
+(function () {
+	var NOOP = function () {},
+		embedFonts = function() {
+			if (!window.YUI) {
+				return setTimeout(embedFonts, 500);
+			}
+			
+  				YUI.add("font-endzonesans-condmedium", NOOP);
+				
+  				YUI.add("font-endzonetech-bold", NOOP);
+				
+  				YUI.add("font-nflicons", NOOP);
+				
+		};
+	embedFonts();
+}());
+</script>
+
+
+
+
+
+
+
+
+<!-- BEGIN TAG stylesheet files="font-endzonesans-condmedium/font-endzonesans-condmedium.css,font-endzonetech-bold/font-endzonetech-bold.css,font-nflicons/font-nflicons.css" media="all" type="" -->
+
+
+	
+	
+	
+			
+		
+		<link href="http://combine.nflcdn.com/yui/min2/index.php?7.3hotfix-7.3.6&amp;b=yui3%2Fstatic%2F7.3%2Fscripts%2Fmodules&amp;f=font-endzonesans-condmedium/font-endzonesans-condmedium.css,font-endzonetech-bold/font-endzonetech-bold.css,font-nflicons/font-nflicons.css" rel="stylesheet" media="handheld, all"/>
+		
+	
+	
+
+
+<!-- END TAG stylesheet -->
+
+<!-- END TAG custom-fonts -->
+
+
+<!-- Load stylesheet -->
+
+
+
+
+
+
+
+
+<!-- BEGIN TAG stylesheet files="decorators/one-web/base.css" media="all" type="" -->
+
+
+	
+	
+	
+	
+		
+		  
+			<link href="http://s.nflcdn.com/static/site/7.3/styles/decorators/one-web/base.css?7.3hotfix-7.3.6" rel="stylesheet" media="handheld, all" />
+  		
+		
+	
+
+
+<!-- END TAG stylesheet -->
+
+
+
+
+
+
+
+
+
+<!-- BEGIN TAG stylesheet files="decorators/one-web/print.css" media="print" type="" -->
+
+
+	
+	
+	
+	
+		
+		  
+			<link href="http://s.nflcdn.com/static/site/7.3/styles/decorators/one-web/print.css?7.3hotfix-7.3.6" rel="stylesheet" media="print" />
+  		
+		
+	
+
+
+<!-- END TAG stylesheet -->
+
+
+<!-- Allow the content to adjust to the user's viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+<meta name="twitter:site" content="nfl"/>
+
+<!-- Shortcut &amp; home screen icons -->
+<!-- BEGIN INCLUDE one-web/favicons -->
+<link rel="shortcut icon" href="http://i.nflcdn.com/static/site/7.3/img/favicon.png?7.3hotfix-7.3.6" type="image/png" />
+<link rel="apple-touch-icon" href="http://i.nflcdn.com/static/site/7.3/img/apple/apple-touch-icon-57x57.png?7.3hotfix-7.3.6" />
+<link rel="apple-touch-icon" sizes="72x72" href="http://i.nflcdn.com/static/site/7.3/img/apple/apple-touch-icon-72x72.png?7.3hotfix-7.3.6" />
+<link rel="apple-touch-icon" sizes="114x114" href="http://i.nflcdn.com/static/site/7.3/img/apple/apple-touch-icon-114x114.png?7.3hotfix-7.3.6" />
+<!-- END INCLUDE one-web/favicons -->
+
+
+<!-- END INCLUDE one-web/mobile-head -->
+
+
+  <meta charset="utf-8">
+<meta name='viewport' content='content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0' />
+<meta name="decorator" content="mobile-headless" />
+<meta property="og:title" content="Super Bowl Viewer's Guide" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://www.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/cfg_socialshare.JPG" />
+<meta property="og:site_name" content="NFL.com" />
+<meta property="og:description" content="The Super Bowl 50 Viewer's Guide has it all for every type of fan. It's the ultimate source for all your Super Bowl Sunday needs." />
+<meta property="og:url" content="http://www.nfl.com/labs/rr/superbowlviewersguide/superbowlviewersguide" />
+<meta property="fb:app_id" content="108273802559405" />
+<link href="http://www.nfl.com/content/public/static/config/labs/css/fonts.css" rel="stylesheet" type="text/css">
+<link href="http://www.nfl.com/content/public/static/config/labs/css/reset.css" rel="stylesheet" type="text/css">
+<link href="http://www.nfl.com/content/public/static/config/labs/css/labs-main.css" rel="stylesheet" type="text/css">
+<style>
+/************************************************************************************
+SECTION STYLING
+*************************************************************************************/
+body {
+    background-color: #eeeeee;
+}
+
+#pagewrap {
+    // background-image: url("http://www.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/bg_body.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #01A0E2;
+}
+
+#ad-unit-top {
+    background-color: #000000;
+}
+
+#page-content {
+    background-color: #ffffff;
+}
+
+h1 {
+    font-family: "NFLEndzoneSansBold", Arial, sans-serif;
+    font-size: 18pt;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+h2 {
+    font-family: "NFLEndzoneSansBold", Arial, sans-serif;
+    font-size: 18pt;
+    text-transform: uppercase;
+    display: block;
+    width: 80%;
+    padding: 10px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+    #top-hero {
+        background-image: url("http://www.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/top-hero-mobile.jpg?v=2");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 200px;
+    }
+        #th-spacer-top {
+            height: 110px;
+        }
+
+        .th-ribbon {
+            width: 100px;
+            margin: 0 auto;
+            font-size: 0px;
+            height: 2px;
+            background-color: #ffffff;
+
+        }
+        #th-title {
+            font-family: "NFLEndzoneSansCondMedium", Arial, sans-serif;
+            font-size: 30pt;
+            text-align: center;
+            color: #ffffff;
+            text-transform: uppercase;
+            padding: 10px 0;
+            letter-spacing: 0.2pt;
+        }
+        #pressBy {
+            display: none;
+            height: 50px;
+            width: 150px;
+            margin: 0 auto;
+            opacity: 0.5;
+        }
+        #pressBy.mobile {
+            display: none;
+            height: 30px;
+            width: 120px;
+            margin: 0 auto;
+            opacity: 0.5;
+        }
+    #headline {
+        display:table;
+        width: 100%;
+    }
+        #headline-content {
+            display: table-cell;
+            vertical-align: top;
+        }
+            #headline-content p {
+                font-family: "NFLEndzoneSansMedium", Arial, sans-serif;
+                font-size: 10pt;
+                padding: 10px 20px;
+            }
+        .ad300x250 {
+            display: none;
+            width: 320px;
+            padding: 20px 0 20px 20px;
+        }
+
+    #section-container section {
+        width: 100%;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+        .section-hero {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+            font-family: "NFLEndzoneSansBold", Arial, sans-serif;
+            font-size: 20pt;
+            color: #ffffff;
+            text-transform: uppercase;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+            #sh-spacer-top {
+                height: 120px;
+            }
+
+            .sh-ribbon {
+                width: 30px;
+                font-size: 0px;
+                height: 5px;
+                margin-bottom: 8px;
+                background-color: #ffffff;
+            }
+        .section-content {
+            padding: 20px 0 10px 0;
+        }
+            .section-content p {
+                display: block;
+                font-family: "NFLEndzoneSansLight", Arial, sans-serif;
+                font-size: 10pt;
+            }
+
+            .links-tile {
+                padding-top: 10px;
+                vertical-align: top;
+                background-color: #ffffff;
+            }
+                .lt-row {
+                    display: block;
+                    font-family: "NFLEndzoneSansMedium", Arial, sans-serif;
+                    font-size: 12pt;
+                }
+                .lt-row, .lt-row:hover, .lt-row:link, .lt-row:visited {
+                    text-decoration: none;
+                    color: #000000;
+                }
+                    .ltr-icon {
+                        display: inline-block;
+                        width: 25px;
+                        padding: 10px 0;
+                        vertical-align: top;
+                    }
+                        .ltri-img {
+                            width: 17px;
+                            height: 12px;
+                        }
+                    .ltr-text {
+                        display: inline-block;
+                        border-top: 1px solid #eeeeee;
+                        padding: 10px 0;
+                        width: 88%;
+                    }
+/************************************************************************************
+MEDIAQUERIES
+*************************************************************************************/
+@media (min-width: 768px) {
+    h1 {
+        font-size: 30pt;
+        padding-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 25pt;
+        padding: 16px 0;
+        margin: 0 20px;
+    }
+
+    #top-hero {
+        background-image: url("http://www.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/top-hero.jpg?v=2");
+        height: 400px;
+    }
+        #th-spacer-top {
+            height: 200px;
+        }
+        .th-ribbon {
+            width: 200px;
+            height: 5px;
+        }
+        #th-title {
+            font-size: 60pt;
+            padding: 20px 0;
+        }
+
+        #headline-content p {
+            font-size: 14pt;
+            line-height: 20pt;
+            padding: 20px 20px;
+        }
+
+    .section-hero {
+        height: 300px;
+        font-size: 40pt;
+        padding-left: 40px;
+    }
+        #sh-spacer-top {
+            height: 190px;
+        }
+
+        .sh-ribbon {
+            width: 100px;
+            height: 6px;
+            margin-bottom: 12px;
+        }
+    .section-content p {
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+        padding-right: 10px;
+        font-size: 11pt;
+        line-height: 15pt;
+    }
+
+    .links-tile {
+        display: inline-block;
+        width: 49%;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-top: 0;
+    }
+
+}
+
+@media (min-width: 985px) {
+    .ad300x250 {
+        display: table-cell;
+    }
+
+    .lt-row:hover {
+        color: #fd9572;
+    }
+}
+</style>
+<script type="text/javascript" src="http://www.nfl.com/content/public/static/config/labs/js/libs/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://www.nfl.com/content/public/static/config/labs/js/libs/handlebars/handlebars-v2.0.0.js"></script>
+<script type="text/javascript" src="http://www.nfl.com/content/public/static/config/labs/js/libs/handlebars/handlebars-helpers.js"></script>
+<script type="text/javascript">
+    var sections_json_wrapper = {data: 
+{
+	"header": "Welcome!",
+	"summary": "On February 7, Super Bowl 50 between the Carolina Panthers and Denver Broncos will kick off at Levi’s Stadium in Santa Clara, Cali. The Panthers will be looking for their first championship in franchise history while the Broncos hope to secure their third. But we all know the Super Bowl is bigger than just the game. From advertisements to parties, it’s become a pop cultural phenomenon in our society. The Viewer's Guide has it all for every type of fan: food recipes, party tips, games and more. It's the ultimate source for all your Super Bowl 50 needs.",
+	"sections": [{
+		"image": "football.jpg",
+		"title": "The Game",
+		"description": "The Carolina Panthers and Denver Broncos are preparing to square off in Super Bowl 50. But who has the advantage heading into the game? Find out everything you need to know surrounding the matchup from the players to the commercials.",
+		"links": [{
+			"href": "http://www.nfl.com/superbowl/story/0ap3000000629588/article/super-bowl-50-what-to-watch-for-between-the-lines",
+			"text": "Viewer's Guide to Super Bowl 50",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000630049/article/super-bowl-50-faq-everything-you-need-to-know",
+			"text": "Super Bowl 50 FAQ",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/videos/nfl-videos/0ap3000000632698/The-Mind-Boggling-Numbers-Behind-the-Super-Bowl",
+			"text": "Super Bowl infographic",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/videos/game-day-pulse/0ap3000000630163/Panthers-Broncos-Super-Bowl-50-movie-trailer",
+			"text": "Super Bowl 50 Trailer",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000629093/article/gridiron-breakdown-carolina-vs-denver",
+			"text": "Gridiron Breakdown: Carolina vs. Denver",
+			"target": "_self"
+		}]
+	}, {
+		"image": "party-tips.jpg",
+		"title": "Recipes and Food",
+		"description": "You can’t talk about Super Bowl Sunday without talking about a Super Bowl feast. Check out some of these hot recipes from celebrity chef Michael Symon as well as from some popular eateries in the Bay Area. It’s the perfect way to spice up your party!",
+		"links": [{
+			"href": "http://www.nfl.com/news/story/0ap3000000629475/article/iron-chef-michael-symon-talks-food-football-and-parties",
+			"text": "Iron Chef Michael Symon talks food and Peyton Manning",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000629980/article/super-bowl-snacks-from-celebrity-chefs",
+			"text": "Celebrity Super Bowl recipes",
+			"target": "_self"
+		}, {
+			"href": "https://www.youtube.com/playlist?list=PLRdw3IjKY2gm9Z7WgGsYhvTDMcDfVykom",
+			"text": "Homegating Recipes",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000629647/article/food-network-stars-journey-from-nfl-to-chef",
+			"text": "Former NFL player turns into Food Network host",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000629424/article/super-bowl-50-local-recipes",
+			"text": "Local and healthy recipes",
+			"target": "_self"
+		}]
+	}, {
+		"image": "kids.jpg",
+		"title": "Games and GIFS",
+		"description": "Super Bowl Sunday isn’t just a day for the grownups! Get the little ones pumped up for the game with these fun and engaging Super Bowl related activities. See if they can navigate through a maze to the end zone, and find out if they have what it takes to “Dab” like Cam Newton.",
+		"links": [{
+			"href": "http://static.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/KidsGuide.pdf",
+			"text": "Mazes, Sudoko and coloring dabs (printable)",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000630102/article/super-bowl-gifs",
+			"text": "Animated GIFs to download",
+			"target": "_self"
+		}]
+	}, {
+		"image": "games.jpg",
+		"title": "Party Tips and Style",
+		"description": "We show you had to to prep for Super Bowl Sunday with party tips, workout and style tips.",
+		"links": [{
+			"href": "http://www.nfl.com/news/story/0ap3000000628289/article/super-bowl-party-tips-from-top-chef-richard-blais",
+			"text": "Party tips from Top Chef Richard Blais",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000628984/article/how-super-bowl-contenders-train-to-be-champs",
+			"text": "Get your Super Bowl workout ",
+			"target": "_self"
+		}, {
+			"href": "http://www.nfl.com/news/story/0ap3000000630114/article/why-football-fashion-will-rule-super-bowl-50",
+			"text": "What is Super Bowl style",
+			"target": "_self"
+		}]
+	}]
+}};
+    var sections_json = sections_json_wrapper.data;
+    function init() {
+        dom = {
+            sections: {
+                sourceElement: $("#section-tpl"),
+                handlebarsTemplate: {},
+                targetElement: $("#section-container")
+            }
+        };
+
+        //init and compile sections
+        dom.sections.handlebarsTemplate = Handlebars.compile(dom.sections.sourceElement.html());
+        dom.sections.targetElement.html(dom.sections.handlebarsTemplate(sections_json));
+    }
+
+    $(document).ready(init);
+</script>
+
+  <!-- END DECORATOR mobile-headless -->
+</head>
+<body  class="">
+  <!-- BEGIN DECORATOR mobile-headless -->
+  
+
+
+
+<!-- BEGIN TAG javascript files="decorators/one-web/mobile-only.js,nfl.carrier.js,analytics/multiplatform.js,nfl.omniture.js" type="" -->
+<!-- 
+	nfl_combo_enabled: true
+	nfl_combo_url:     http://combine.nflcdn.com/yui/min2/index.php
+	nfl_min_enabled:   false
+	use_debug:         false
+-->
+
+	
+	
+	
+		
+		<script src="http://combine.nflcdn.com/yui/min2/index.php?7.3hotfix-7.3.6&amp;b=yui3%2Fstatic%2F7.3%2Fscripts&amp;f=decorators/one-web/mobile-only.js,nfl.carrier.js,analytics/multiplatform.js,nfl.omniture.js"></script>
+	
+	
+
+<!-- END TAG javascript -->
+
+  <div style="display:none">
+
+	
+
+	
+	<script type="text/javascript">
+	var loggingOff = true,
+	noOmnitureCall = noOmnitureCall || false;
+//applyFireBugX();
+window.isPageTypeError && isPageTypeError();
+//moved all the functions into s_code_common.js until we can overhaul this atrocity
+
+/**
+* s_analytics.trackLinkClick will send a request to omniture indicating a minor level page event occurred
+* @param {String} _propNum is a number provided by Marketing.  ex, prop1, prop14, prop35, etc.
+* @param {String} _propValue is the value to place within the prop.  ex, Avatar, Friends_alerts, Message_Alerts, Global_Alerts, etc.
+* TO DO: update this function so it accepts multiple prop values.
+*/
+s_analytics.trackLinkClick = function(_propNum, _propValue) {
+	var s_analytics = s_gi(s_account),
+	    propName    = 'prop' + _propNum;
+	s_analytics.linkTrackEvents = "";
+	s_analytics.linkTrackVars = "prop" + _propNum;
+	s_analytics[propName] = _propValue;
+	s_analytics.events = '';
+	s_analytics.tl(true, 'o', _propValue);
+	// should empty out the track properties after the call is made.  this is a directive from omniture.
+	s_analytics.linkTrackEvents = "";
+	s_analytics.linkTrackVars = "";
+}
+
+	/* analytics_file: blank.js */
+	function initAnalytics() { 
+	isLog('hello from initAnalytics() written in blank.js');
+	// the below code was added to ensure we didn't forget to tag any pages
+	var section = 'nfl';
+	var pathname = window.location.pathname;
+	var channel = pathname.split('/')[1];
+	var pageName = '';
+	var heir = '';
+	var queryString = window.location.search.substring(1);
+	var sortQueryStringParams = function(str) {
+	    var sortedStr = '';
+		var strArray = str.split("&");
+		if (strArray.length > 1) {
+			strArray.sort();
+		}
+		for (var i = 0; i < strArray.length; i++) {
+			var pos = strArray[i].indexOf('=');
+			if (pos == -1) continue;
+			var argname = strArray[i].substring(0, pos);
+			if (argname == "campaign" || argname == "icampaign") continue;
+			sortedStr += strArray[i];
+		}
+		return sortedStr;
+	}
+	var formatPathName = function(str) {
+		str = str.replace(/\..+$/, '');
+		str = str.replace(/\//, '');
+		if (str.length == 0) str = 'landing';
+		return formatStr(str);
+	}
+	var formatPageName = function(section, str, query) {
+		str = section + ":" + str.replace(/\//g, ':');
+		if (str.indexOf(':') == -1) {str = str + ':landing';} 
+		if (query.length > 0) {
+			str += ":" + query.replace(/\&/g, ':');
+		}
+		return formatStr(str);
+	}
+	var formatHierarchy = function(section, str, query) {
+		str = section + ":" + str.replace(/\//g, '|');
+		if (str.indexOf('|') == -1) {str = str + '|landing';}  
+		if (query.length > 0) {
+			str += "|" + query.replace(/\&/g, '|');
+		}
+		return formatStr(str);
+	}
+	var setOmnitureTags = function(ch, pn, hr) {
+		s_analytics.server='nfl.com';	
+		s_analytics.prop22='www.nfl.com'; 
+		s_analytics.channel = ch; 
+		s_analytics.eVar3 = ch;
+		s_analytics.pageName = pn; 
+		s_analytics.eVar2 = pn;
+		s_analytics.hier1 = hr;  
+		s_analytics.prop5 = hr;
+		s_analytics.eVar4 = hr;
+	}	
+	var formatStr = function(str) {
+		str = str.replace(/;jsessionid=(.+)/, ""); //strip out jsessionid var that gets added by server at random times
+		return str;
+	}
+	pathname = formatPathName(pathname);
+	queryString = sortQueryStringParams(queryString);
+	pageName = formatPageName(section, pathname, queryString);
+	hier = formatHierarchy(section, pathname, queryString);
+	setOmnitureTags(channel, pageName, hier);
+} 
+	function applyFooter() {  
+	if (noOmnitureCall == true) return;
+	/******* ****** DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+	try { 
+		var s_code = s_analytics.t();
+		if (s_code) document.write(s_code);
+	} catch(e) { 
+		console.warn(e);
+	}
+}
+	/* Fix for Omniture code which fails VML element check. */
+(function(w) { 
+	if(w.Y && w.Y.UA && w.Y.UA.ie && w.Y.UA.ie <= 8){
+		var fn = function(){
+			var orig = s_analytics.ot; 
+			if(!orig){
+				setTimeout(fn, 1000);
+			}else{
+			   s_analytics.ot = function(el) { 
+			       return el.tagUrn ? '' : ('shape,group,path,rect,roundrect,line,polyline,oval,image,curve,arc'.indexOf(el.tagName) != -1 ? '' : orig(el)); 
+			   };
+			}
+		}
+		fn();
+	}
+})(window);
+
+	</script>
+	
+
+</div>
+
+  <div id="wrap">
+    <div id="doc">
+	  <!-- Show top-level ads -->
+	  
+  	  <section id="bd">
+        <div id="ad-unit-top">
+    
+        
+        
+            
+		
+	
+	
+		
+	
+		<div class="adcontainer" id="ad1455413804435top-container">
+			
+			<script>
+				nfl.Y.use("ads-v3", function (Y) {
+					var w = '728',
+						h = '90',
+						szs = '',
+						tmpH,
+						variableHeight = false;
+
+					if (szs) {
+						szs = szs.split(',');
+						for (var i = 0; i < szs.length; i++) {
+							szs[i] = szs[i].split('x');
+							for (var i2 in szs[i]) {
+								szs[i][i2] = parseInt(szs[i][i2]);
+								if (i2 === '0') {
+									if (!w || w < szs[i][i2]) {
+										w = szs[i][i2];
+									}
+								} else {
+									if (!h || h < szs[i][i2]) {
+										h = szs[i][i2];
+									}
+									if (!variableHeight && tmpH > 0 && tmpH !== szs[i][i2]) {
+										variableHeight = true;
+									}
+									tmpH = szs[i][i2];
+								}
+							}
+						}
+					}
+
+					var type = '',
+						sizes = (szs) ? szs : [[w, h]],
+						responsive = '',
+						mapping = '',
+						Ads = Y.NFL.Ads,
+						Ad,
+						adConf = {
+							id: 'ad1455413804435top',
+							path: 'http://pubads.g.doubleclick.net/gampad/ads?sz=728x90&iu=/4595/nfl.other/labs/rr/superbowlviewersguide/superbowlviewersguide&t=slot%3Dtop%26url%3Dlabs_rr_superbowlviewersguide_superbowlviewersguide%26s1%3Dlabs%26s2%3Drr%26s3%3Dsuperbowlviewersguide%26s4%3Dsuperbowlviewersguide&c={correlator}',
+							width: w,
+							height: variableHeight ? 'auto' : h, // limit to apply `height: auto` to the necessary scenario only since this can cause flicker.
+							sizes: sizes,
+							render: '#ad1455413804435top-container',
+							isSticky: '',
+							shouldRenderWhenViewable: '',
+							renderOnEvent: ''
+						};
+
+					var adContainer = Y.one(adConf.render);
+					
+					if(type === 'interstitial'){
+						adConf.sizes.push([1, 1]);
+						adConf.interstitial = true;
+					}
+					if(responsive === 'true' && mapping){
+						adConf.responsive = true;
+						
+					}
+					Ad = new Ads.Ad(adConf);
+					
+					
+				});
+			</script>
+		</div>
+
+	
+
+	
+
+        
+    
+</div>
+<header>
+    <div id="header-home"><a id="header-home-link" href="http://www.nfl.com"><img src="http://www.nfl.com/content/public/static/config/labs/img/header-home-arrow.svg" /><span>NFL.com</span></a></div>
+    
+
+
+
+
+
+
+	<div class="yui3-share-buttons yui3-share-buttons-light" style="display: none;" id="header-share">
+		<a href="https://plus.google.com/share?url=" class="share-button share-gplus nflicon gplus" data-mobile="false" data-width="600" data-height="600" target="sharing"></a>
+		<a href="http://www.facebook.com/share.php?u=" class="share-button share-facebook nflicon facebook" data-mobile="false" data-width="600" data-height="400" target="sharing"></a>
+		<a href="http://www.twitter.com/share?url=" class="share-button share-twitter nflicon twitter" data-mobile="false" data-width="600" data-height="300" target="sharing"></a>
+		Share
+	</div>
+
+<script>
+	nfl.Y.use('node','share-buttons',function(Y){
+		var _n = Y.one('#header-share');
+		var _gplus = _n.one('.share-gplus'),
+		_fb = _n.one('.share-facebook'),
+		_tw = _n.one('.share-twitter');
+		
+		_n.plug(Y.ShareButtons,{
+			containerId: 'header-share',
+			isMobile: false, 
+			nodes: {
+				gplus: _gplus,
+				facebook: _fb,
+				twitter: _tw
+			}
+		});
+	});
+</script>
+
+    <div class="clear-both">&nbsp;</div>
+</header>
+<div id="pagewrap">
+    <div id="page-content">
+        <div id="top-hero">
+            <div id="th-spacer-top">&nbsp;</div>
+
+            <div id="th-title">Viewer&rsquo;s Guide</div>
+            
+        </div>
+        <div id="headline">
+            <div id="headline-content">
+                <h2>Watch with your network</h2>
+                <p>
+                    On February 7, Super Bowl 50 between the Carolina Panthers and Denver Broncos will kick off at Levi’s Stadium in Santa Clara, Cali. The Panthers will be looking for their first championship in franchise history while the Broncos hope to secure their third. But we all know the Super Bowl is bigger than just the game. From advertisements to parties, it’s become a pop cultural phenomenon in our society. The Viewer's Guide has it all for every type of fan: food recipes, party tips, games and more. It's the ultimate source for all your Super Bowl 50 needs. 
+                </p>
+            </div>
+            <div class="ad300x250 ad">
+                
+	
+	
+		
+	
+		<div class="adcontainer" id="ad1455413804461-container">
+			
+			<script>
+				nfl.Y.use("ads-v3", "ads-rotate", function (Y) {
+					var w = '300',
+						h = '250',
+						szs = '',
+						tmpH,
+						variableHeight = false;
+
+					if (szs) {
+						szs = szs.split(',');
+						for (var i = 0; i < szs.length; i++) {
+							szs[i] = szs[i].split('x');
+							for (var i2 in szs[i]) {
+								szs[i][i2] = parseInt(szs[i][i2]);
+								if (i2 === '0') {
+									if (!w || w < szs[i][i2]) {
+										w = szs[i][i2];
+									}
+								} else {
+									if (!h || h < szs[i][i2]) {
+										h = szs[i][i2];
+									}
+									if (!variableHeight && tmpH > 0 && tmpH !== szs[i][i2]) {
+										variableHeight = true;
+									}
+									tmpH = szs[i][i2];
+								}
+							}
+						}
+					}
+
+					var type = 'adi',
+						sizes = (szs) ? szs : [[w, h]],
+						responsive = '',
+						mapping = '',
+						Ads = Y.NFL.Ads,
+						Ad,
+						adConf = {
+							id: 'ad1455413804461',
+							path: 'http://pubads.g.doubleclick.net/gampad/ads?sz=300x250&iu=/4595/nfl.other/labs/rr/superbowlviewersguide/superbowlviewersguide&t=url%3Dlabs_rr_superbowlviewersguide_superbowlviewersguide%26s1%3Dlabs%26s2%3Drr%26s3%3Dsuperbowlviewersguide%26s4%3Dsuperbowlviewersguide&c={correlator}',
+							width: w,
+							height: variableHeight ? 'auto' : h, // limit to apply `height: auto` to the necessary scenario only since this can cause flicker.
+							sizes: sizes,
+							render: '#ad1455413804461-container',
+							isSticky: '',
+							shouldRenderWhenViewable: '',
+							renderOnEvent: ''
+						};
+
+					var adContainer = Y.one(adConf.render);
+					
+					if(type === 'interstitial'){
+						adConf.sizes.push([1, 1]);
+						adConf.interstitial = true;
+					}
+					if(responsive === 'true' && mapping){
+						adConf.responsive = true;
+						
+					}
+					Ad = new Ads.Ad(adConf);
+					
+					Ad.plug(Ads.Rotator);
+						
+					
+					
+				});
+			</script>
+		</div>
+
+	
+
+            </div>
+        </div>
+        <div id="section-container">
+            <script id="section-tpl" type="text/x-handlebars-template">
+                {{#sections}}
+                    <section>
+                        <div class="section-hero" style="background-image: url(http://www.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/sections/{{image}});">
+                            <div id="sh-spacer-top">&nbsp;</div>
+                            <div class="sh-ribbon">&nbsp;</div>
+                            {{title}}
+                        </div>
+                        <div class="section-content">
+                            <p>{{{description}}}</p>
+                            <div class="links-tile">
+                                {{#links}}
+                                    <a class="lt-row" href="{{href}}">
+                                        <div class="ltr-icon"><img class="ltri-img" src="http://www.nfl.com/static/content/public/static/html/labs/rr/superbowlviewersguide/img/tile-link-icon.svg" /></div>
+                                        <div class="ltr-text">{{text}}</div>
+                                    </a>
+                                {{/links}}
+                            </div>
+                        </div>
+                    </section>
+                {{/sections}}
+            </script>
+        </div>
+    </div>
+</div>
+<footer>
+    <img src="http://www.nfl.com/content/public/static/config/labs/img/nfl-labs-footer-logo.png" alt="NFL"/>
+    <p>&#169;2014 NFL Enterprises LLC. NFL and the NFL shield design are registered trademarks of the National Football League. The team names, logos and uniform designs are registered trademarks of the teams indicated. All other NFL-related trademarks are trademarks of the National Football League. NFL footage &#169; NFL Productions LLC.</p>
+</footer>
+      </section>
+    </div>
+  </div>
+  <!-- track the page view -->
+  <script>if (nfl.omniture && !nfl.omniture.async) { nfl.omniture.track();}</script>
+  <script>(function(w){if(w._satellite){_satellite.pageBottom();}}(window))</script>
+  <!-- END DECORATOR mobile-headless -->
+</body>
+</html>

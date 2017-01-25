@@ -1,0 +1,214 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{pgfplotstable}
+\usepackage{float}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+\lstset{
+	basicstyle=\footnotesize,
+	breaklines=true,
+	 backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{dkgreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  otherkeywords={*,grep,sort,head,mv,perl,chmod,...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+\begin{document} 
+
+\begin{titlepage}
+
+\begin{center}
+
+\Huge{Assignment 6}
+
+\Large{CS532-s16:  Web Sciences}
+
+\Large{Spring 2016}
+
+\Large{John Berlin}
+
+\Large Generated on \today
+
+\end{center}
+
+\end{titlepage}
+\newpage
+\section*{1}
+\subsection*{Question}
+\begin{verbatim}
+
+1.  D3 graphing (5 points)
+
+Use D3 to visualize your Twitter followers.  Use my twitter account
+("@phonedude_mln") if you do not have >= 50 followers.  For example,
+@hvdsomp follows me, as does @mart1nkle1n.  They also follow each
+other, so they would both have links to me and links to each other.
+
+To see if two users follow each other, see:
+https://dev.twitter.com/rest/reference/get/friendships/show
+
+Attractiveness of the graph counts!  Nodes should be labeled (avatar
+images are even better), and edge types (follows, following) should
+be marked.
+
+Note: for getting GitHub to serve HTML (and other media types), see:
+http://stackoverflow.com/questions/6551446/can-i-run-html-files-directly-from-github-instead-of-just-viewing-their-source
+
+Be sure to include the URI(s) for your D3 graph in your report. 
+\end{verbatim}
+\newpage
+\subsection*{Answer}
+
+The twitter account I choose to visualize was the WebSciDL. Doing so proved to be an undertaking. The python file seen in listing \ref{lst:cf} shows the process. The first thing I do is to get the followers of the WebSciDl group, this was easy as the rate limit for this was not an issue. After getting that comes the hard part.
+\newline
+\newline
+In checking if the followers friends follow each other was not easy. The rate limit for ``reference/get/friendships/show" only let me get through about 3 a day with sleeping to avoid rate limit hits. So I decided to do it a ``longer way". 
+So I simply got the friends the normal way and computed the friendship by code. It must be noted that in the method \verb+getFriends+ the json output is simply appended to the file. To correct this you must when finished do so by hand. 
+The past assignments we have been asking twitter and I simply re-used the majority of that code to complete this portion.
+\newline
+\newline
+Building the graph was simple enough thanks to using the networkx python library as seen in listing \ref{lst:bwsdlg}.
+As usual for more information please see the comments in the listing for details but in short the process is as such.
+\begin{enumerate}
+\item Get the twitter followers and those followers friends
+\item Add the followers as nodes to the directed graph
+\item Add WebSciDL edge to all nodes except WebSciDL
+\item Add rest of the edges
+\item Prepare data for output
+\item Write out data
+\end{enumerate}
+Please not that the image url contains \_normal so I by hand well editor find replace removed it for the full image.
+\newline
+\newline
+The javascript used for the vis is seen in listing \ref{lst:wsdlJS} and the vis can be seen at 
+\begin{verbatim}
+http://www.cs.odu.edu/~jberlin/WebSciGraphVis/a6.html
+\end{verbatim}
+
+\newpage
+\section*{2}
+
+\subsection*{Question}
+\begin{verbatim}
+2.  Gender homophily in your Twitter graph (5 points)
+
+Take the Twitter graph you generated in question #1 and test for
+male-female homophily.  For the purposes of this question you can
+consider the graph as undirected (i.e., no distinction between
+"follows" and "following").  Use the twitter name (not "screen
+name"; for example "Michael L. Nelson" and not "@phonedude_mln")
+and programatically determine if the user is male or female.  Some
+sites that might be useful:
+
+https://genderize.io/
+https://pypi.python.org/pypi/gender-detector/0.0.4
+
+Create a table of Twitter users and their likely gender.  List any 
+accounts that can't be determined and remove them from the graph.
+
+Perform the homophily test as described in slides 11-15, Week 7.
+
+Does your Twitter graph exhibit gender homophily?
+\end{verbatim}
+
+As seen in the table below yes because crossEdge Percent(0.33) is greater than 2pq(0.32).
+The code used to generate the results is seen in listing \ref{lst:gnder}
+I used a method found on github to ask genderize.io for the results.
+The actual data is too large to put in this report and can be found in the file wsdlGenderResults2.csv.
+\begin{table}[]
+\centering
+\caption{Gender Homophilly results}
+\label{my-label}
+\begin{tabular}{lllllllllll}
+males & females & nodes & edges & p    & q    & 2pq  & crossEdges & crossEdgesP & homophily &     \\
+120   & 82      & 38    & 120   & 1181 & 0.68 & 0.32 & 0.43       & 386         & 0.33      & Yes
+\end{tabular}
+\end{table}
+
+\newpage
+\newpage
+\lstinputlisting[language=Python,frame=single,
+caption={Get Twitter Data for the WSDL},label=lst:cf,captionpos=b]{./TwitterFriendShip/checkFriendship.py}      
+\newpage
+\lstinputlisting[language=Python,frame=single,
+caption={Build The WSDL Graph},label=lst:bwsdlg,captionpos=b]{./TwitterFriendShip/buildWSDLGraph.py}
+\newpage
+\lstinputlisting[language=Python,frame=single,
+caption={Check Gender},label=lst:gnder,captionpos=b]{./TwitterFriendShip/genderChecker.py}           
+\newpage
+\lstinputlisting[language=JavaScript,frame=single,
+caption={WebSciDL graph vis},label=lst:wsdlJS,captionpos=b]{./WebSciGraphVis/js/wsdlGraph.js}           
+\newpage
+
+
+
+\end{document}

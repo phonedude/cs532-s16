@@ -1,0 +1,194 @@
+import csv
+import json
+
+import networkx as nx
+h
+class Node:
+    def __init__(self, row):
+        # name,screenName,imurl
+        self.name = row['name']
+        self.screenName = row['screenName']
+        self.imurl = row['imurl']
+        self.indegree = 0
+        self.outdegree = 0
+        self.group = 0
+        self.eGroup = set()
+
+    def to_jdic(self):
+        out = {'name': self.name, 'screenName': self.screenName, 'imurl': self.imurl,
+               'indegree': self.indegree, 'outdegree': self.outdegree, 'group': self.group,
+               'egroups': list(self.eGroup)}
+        return out
+
+    def __str__(self):
+        return self.screenName
+
+
+class Edge:
+    def __init__(self, source, sIndex, target, tIndex, edgeToGroup):
+        self.source = source
+        self.sIndex = sIndex
+        self.target = target
+        self.tIndex = tIndex
+        self.edgeToGroup = edgeToGroup
+
+    def to_jdic(self):
+        out = {'source': self.sIndex, 'sname': self.source, 'target': self.tIndex, 'tname': self.target,
+               'egroup': self.edgeToGroup}
+        return out
+
+
+class Edge2:
+    def __init__(self, source, target):
+        self.source = source
+        self.target = target
+
+    def to_jdic(self):
+        out = {'source': self.source, 'target': self.target}
+        return out
+
+
+'''
+These are the groups I got after inspecting the wsdl twitter followers by hand
+wsdlTwitterHandles  members themselves
+digLibHandles digital libraries and archival twitter accounts
+
+'''
+wsdlTwitterHandles = ['machawk1', 'aalsum', 'justinfbrunelle', 'phonedude_mln', 'weiglemc', 'Galsondor',
+                      'shawnmjones', 'ibnesayeed', 'LulwahMA', 'yasmina_anwar', 'kaylamarie0110',
+                      'maturban1', 'CorrenMcCoy', 'acnwala', 'hanysalaheldeen', 'simplesimon2013', 'fmccown',
+                      'mart1nkle1n', 'joansm1th', 'hvdsomp', 'johnaberlin', 'WebSciDL', 'DanMilanko']
+
+digLibHandles = ['internetarchive', 'HistWebArchives', 'TPDL2016', 'UKWebArchive', "NetPreserve", "ijdl",
+                 'JCDLConf', 'archiveitorg', "archiveis", "idjl", "webrecorder_io", "tpdl2016", "WOSP2014",
+                 "WebArch_RT"]
+
+userToGroup = {}
+
+'''
+    node groups:
+    normal: 0
+    wsdl: 1
+    diglib: 2
+    odu: 3
+    
+    edge groups means which node groups 
+    point to another node groups
+    
+    edge groups:
+    normal -> normal 0
+    normal -> wsdl 1
+    normal -> dlib 2
+    normal -> odu 3
+
+    wsdl -> normal 4
+    wsdl -> wsdl 5
+    wsdl -> dlib 7
+    wsdl -> odu 6
+
+
+    dlib -> normal 8
+    dlib -> wsdl 9
+    dlib -> dlib 10
+    dlib -> odu 11
+
+    odu -> normal 12
+    odu -> wsdl 13
+    odu -> dlib 14
+    odu -> odu 15
+    '''
+
+
+def getGroup(test):
+    g = 0
+    if test in wsdlTwitterHandles:
+        # print("We have a wsdl person ", test)
+        g = 1
+    elif test in digLibHandles:
+        # print("We have a diglib person",test)
+        g = 2
+    elif 'odu' in test.lower() or 'monarch' in test.lower() or 'MaceandCrown' in test.lower():
+        # print("We have odu",test)
+        g = 3
+    userToGroup[test] = g
+    return g
+
+#simple enumeration of the edge groups possibilities
+edgeTGroup = {(0, 0): 0, (0, 1): 1, (0, 2): 2, (0, 3): 3, (1, 0): 4, (1, 1): 5, (1, 2): 6, (1, 3): 7,
+              (2, 0): 8, (2, 1): 9, (2, 2): 10, (2, 3): 11,
+              (3, 0): 12, (3, 1): 13, (3, 2): 14, (3, 3): 15}
+
+
+def bg():
+    with open("wsdlfollwerFriends.json", "r+") as r:
+        it = json.load(r)
+
+    it = it['followers']
+
+    nlist = []
+    #get a directed graph object
+    graph = nx.DiGraph()
+    
+    # add the nodes to the graph
+    with open('wsdltwitterfollwers.csv', "r") as o:
+        reader = csv.DictReader(o)
+        for row in reader:
+            nlist.append(row['screenName'])
+            n = Node(row)
+            sname = row['screenName']
+
+            if sname in "WebSciDL":
+                print(sname)
+            n.group = getGroup(sname)
+
+            graph.add_node(row['screenName'], attr_dict={'nclass': n})
+    
+    # since I know that these nodes were gotten by the followers of the wsdl I add by hand the edge to it
+    for sname in nlist:
+        if "WebSciDL" not in sname:
+            graph.add_edge(sname, "WebSciDL")
+
+    nlist = sorted(nlist)
+    '''
+        get the friendship for the followers by adding the edges 
+        and checking if graph has the node we added first from the 
+        only wsdl follower file
+    '''
+    for ff in it:
+        fflist = []
+        screanname = ff['screenname']
+        for ffFriend in ff['friends']:
+            if graph.has_node(ffFriend) and "WebSciDL" not in ffFriend:
+                fflist.append(ffFriend)
+                graph.add_edge(screanname, ffFriend)
+
+    nodeList = []
+    edgeList = []
+    '''
+        build our output 
+        for each node in the graph
+        get its python class and determine the in out degree
+        for each edge for the node add its edge groups
+    '''
+    for node, ndata in sorted(graph.nodes(data=True), key=lambda x: x[0]):
+        # print(node, ndata['nclass'])
+        nodeClass = ndata['nclass']
+        # print(nodeClass.screenName)
+        nodeClass.indegree = graph.in_degree(node)
+        nodeClass.outdegree = graph.out_degree(node)
+        nodeList.append(nodeClass)
+        for source, target in graph.edges(node):
+            nodeClass.eGroup.add(edgeTGroup[(userToGroup[source], userToGroup[target])])
+            e = Edge(source, nlist.index(source), target, nlist.index(target),
+                     edgeTGroup[(userToGroup[source], userToGroup[target])])
+            edgeList.append(e)
+            print("%s-->%s" % (source, target))
+        print("++++++++++++++++++++++++++++++\n")
+
+    g = {}
+    g['nodes'] = nodeList
+    g['links'] = edgeList
+    print(json.dumps(g, default=lambda c: c.to_jdic(), indent=1))
+    with open("wsdlgraphData.json", "w+") as out:
+        out.write(json.dumps(g, default=lambda c: c.to_jdic(), indent=1))
+

@@ -1,0 +1,740 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{listings}
+\usepackage{alltt}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{pgfplotstable}
+\usepackage{float}
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc}
+\usepackage [english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+\usepackage{adjustbox}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+\definecolor{mblue}{rgb}{0,0,255}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=mblue
+}
+
+
+
+\makeindex
+
+\lstset{
+	basicstyle=\footnotesize,
+	breaklines=true,
+	 backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{dkgreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  otherkeywords={*,append,sub,.get,add,self,to\_list,.take,reduce\_by\_key,order\_by,flat\_map,
+  ...},           % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{gray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+\begin{document} 
+
+\begin{titlepage}
+
+\begin{center}
+
+\Huge{Assignment 9}
+
+\Large{CS532-s16:  Web Sciences}
+
+\Large{Spring 2016}
+
+\Large{John Berlin}
+
+\Large Generated on \today
+
+\end{center}
+
+\end{titlepage}
+\newpage
+\listoffigures
+  \listoftables
+\newpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+\newpage
+\section*{Question 1}
+\index{Question 1}
+
+\begin{verbatim}
+1.  Choose a blog or a newsfeed (or something similar with an Atom
+or RSS feed).  Every student should do a unique feed, so please
+"claim" the feed on the class email list (first come, first served).
+It should be on a topic or topics of which you are qualified to
+provide classification training data.  Find something with at least
+100 entries (or items if RSS).
+
+Create between four and eight different categories for the entries
+in the feed:
+
+examples: 
+
+work, class, family, news, deals
+
+liberal, conservative, moderate, libertarian
+
+sports, local, financial, national, international, entertainment
+
+metal, electronic, ambient, folk, hip-hop, pop
+
+Download and process the pages of the feed as per the week 12 
+class slides.
+
+Be sure to upload the raw data (Atom or RSS) to your github account.
+\end{verbatim}
+
+\subsection*{Answer}
+The blog selected for this assignment is \href{http://f-measure.blogspot.com/}{f-measure}. As a fan of music and currently looking to broaden my musical horizons, choosing f-measure was a no brainer. Another reason was that I noticed something about the blog when I first checked it out. The author Dr. Nelson, adds categories to his own blog titles. Take for instance his latest post \verb+Merle Haggard - "Mama Tried" (forgotten song)+, with the category in parentheses being \emph{forgotten song}. This self categorization of the posts lead me to use them for this assignment. But mainly because I wondered if his own tagging could be enough classify each post.\newline \newline
+But when I went to count the total number of posts for each category I noticed that the category and spotlight labels were not used enough. This deficiency lead me to combine the two into a single category \emph{concert/spotlight}. The total counts of these categories can be found in table \hyperref[tab:BlogSTotalCount]{\ref{tab:BlogSTotalCount}}. As seen in the table \emph{lp review} and \emph{forgotten song} dominate the categories of his blog but as seen in table \hyperref[tab:f50s]{\ref{tab:f50s}} the categories trained on, only \emph{the song remains the same} was less than ten and the others were well within a "healthy" number.
+\newline \newline
+Now since the question asked specifically for us to create four to eight categories, I choose to classify each entry on the genre of the artist the blog post is about. To obtain the genres I created an account to access the Gracenote Music \href{https://developer.gracenote.com/web-api}{web api} and utilized the library \href{https://github.com/cweichen/pygn}{pygn} to query the api for the genre of each artist. Each query of the api returned at most the top three genres for each artist, of which I choose the first one as the genre. The genres returned by each query can be seen in the file \emph{artistInfo.json} in the datafiles folder accompanying this report.\newline \newline  
+Some of the artists in the blog posts did not have an entry in Gracenote Music or I did not agree with the top genre assigned to them. These artists namely David Bowie who was labled glam and The Nerves, Blacktask whom had no genre. I know that David Bowie and The Nerves are rock and Blacktask is metal/punk. Doing a count of the top genres showed that all the artists represented in this blog covered a vast number of sub-genres, which lead to categories that were sparse. To correct this represented my own personal logic for condensing sub-genres to a single one in a method \verb+determine_genre+ seen in the code for this assignment which can be found in listing \hyperref[lst:cf]{\ref{lst:cf}}. This method also combines genres into composite genres such that the categories used for this assignment are have enough data. The total count for these composite genres can be seen in table \hyperref[tab:GenreTotalCount]{\ref{tab:GenreTotalCount}} and the number of composite genres trained on can be seen in table \hyperref[tab:f50g]{\ref{tab:f50g}}.
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ class                     &   count \\
+\hline
+ the song remains the same &           28 \\
+ concert/spotlight         &           28 \\
+ forgotten song            &           60 \\
+ lp review                 &           81 \\
+\hline
+\end{tabular}
+\caption{Blog Structure Count}
+\label{tab:BlogSTotalCount} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ class                          &   count \\
+\hline
+ Rock                           &           42 \\
+ R\&B/Jazz/Mowtown/Country/Other &           35 \\
+ Indie Rock/Alternative         &           37 \\
+ Metal/Punk/Hardcore            &           30 \\
+ Pop/Electronic/Hip-Hop         &           53 \\
+\hline
+\end{tabular}
+ \caption{Genre Category Count} 
+ \label{tab:GenreTotalCount} 
+\end{minipage}
+\end{table}
+\newpage
+\clearpage
+
+\section*{Question 2}
+\index{Question 2}
+\begin{verbatim}
+2.  Manually classify the first 50 entries, and then classify (using
+the fisher classifier) the remaining 50 entries. 
+
+Create a table with the title, predicted category, actual category,
+and cprob() and fisherprob() for the actual category.
+\end{verbatim}
+\subsection*{Answer}
+In order to use docclass.py for python three I had to modify it slightly to remove html content using beautiful soup and it can be seen in listing \hyperref[lst:dc]{\ref{lst:dc}}. I also modified its usage of the databases to ensure I had a clean db each time I ran a classifier by adding a schema file(listing \hyperref[lst:schema]{\ref{lst:schema}}) that is read in and executed and moved the queries executed into a file called \emph{queries.txt} which is also read in. Both files can be found in the datafiles folder. \newline \newline
+As discussed in the answer section for question one, the manual classification portion can be automated and is done so in the code used to answer these questions which can be seen in listing \hyperref[lst:cf]{\ref{lst:cf}}. Per usual please consult the comments in the code for further details as in this report I will discuss the results rather than details of the code used to generate the answers.\newline \newline
+I used both categories when running the classifiers and the number of categories trained on per each category group can be seen in tables \hyperref[tab:f50s]{\ref{tab:f50s}} for Dr. Nelson's self categorization and table \hyperref[tab:f50g]{\ref{tab:f50g}} for genre. The results can be seen in table \hyperref[tab:dnresults]{\ref{tab:dnresults}} for Dr. Nelsons self categories and in table \hyperref[tab:gresults]{\ref{tab:gresults}} for genres. The tables had to be shrunk to fit into this report. \newline \newline
+
+I also trained and ran the classifier on a 50/50 split of the data which I explain the purpose of this in the answer to question 3. The numbers of the categories for this can be seen in tables \hyperref[tab:falls]{\ref{tab:falls}} for Dr. Nelsons categories and \hyperref[tab:fallg]{\ref{tab:fallg}} for genres.
+
+ \begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ class                     &   count \\
+\hline
+ the song remains the same &            6 \\
+ concert/spotlight         &           15 \\
+ forgotten song            &           16 \\
+ lp review                 &           13 \\
+\hline
+\end{tabular}
+\caption{Blog Structure Trained On For 100 Entries}
+\label{tab:f50s} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ class                          &   count \\
+\hline
+ Rock                           &           11 \\
+ R\&B/Jazz/Mowtown/Country/Other &           11 \\
+ Indie Rock/Alternative         &            9 \\
+ Metal/Punk/Hardcore            &           11 \\
+ Pop/Electronic/Hip-Hop         &            8 \\
+\hline
+\end{tabular}
+ \caption{Genres Trained On For 100 Entries} 
+ \label{tab:f50g} 
+\end{minipage}
+\end{table}
+
+ \begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ class                     &   classCount \\
+\hline
+ lp review                 &           29 \\
+ concert/spotlight         &           27 \\
+ the song remains the same &           13 \\
+ forgotten song            &           29 \\
+\hline
+\end{tabular}
+\caption{Blog Structure Trained On For All Entries}
+\label{tab:falls} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ class                          &   classCount \\
+\hline
+ R\&B/Jazz/Mowtown/Country/Other &           22 \\
+ Metal/Punk/Hardcore            &           16 \\
+ Rock                           &           23 \\
+ Indie Rock/Alternative         &           14 \\
+ Pop/Electronic/Hip-Hop         &           23 \\
+\hline
+\end{tabular}
+ \caption{Genres Trained On For All Entries} 
+ \label{tab:fallg} 
+\end{minipage}
+\end{table}
+
+\begin{table}[H]
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrl}
+\hline
+ title                                                                            & predicted\_cat             &   acat\_fprob & actual\_cat                \\
+\hline
+ The Beatles - "I Want You (She's So Heavy)" (spotlight)                          & lp review                 &  0.000900145 & concert/spotlight         \\
+ The Everly Brothers - "Cathy's Clown" (spotlight)                                & lp review                 &  0.0110278   & concert/spotlight         \\
+ Peter Seeger - "Turn! Turn! Turn! (to Everything There Is a Season)" (spotlight) & lp review                 &  0.0106328   & concert/spotlight         \\
+ Squeeze - "Up The Junction" (forgotten song)                                     & lp review                 &  0.0414196   & forgotten song            \\
+ Camera Obscura - "Biggest Bluest Hi-Fi" (LP Review)                              & lp review                 &  0.40074     & lp review                 \\
+ Andy Stott - "Moogfest 2012" (concert)                                           & lp review                 &  0.00466945  & concert/spotlight         \\
+ The Beastie Boys - "No Sleep Till Brooklyn" (spotlight)                          & lp review                 &  0.0933825   & concert/spotlight         \\
+ Pink Floyd - "Live At Pompeii" (concert)                                         & lp review                 &  0.0449999   & concert/spotlight         \\
+ Negativland - "Live at Lewis's, Norfolk VA, November 21, 1992" (concert)         & lp review                 &  0.027483    & concert/spotlight         \\
+ Red Rider - "Lunatic Fringe" (forgotten song)                                    & lp review                 &  0.202943    & forgotten song            \\
+ The Green Pajamas - "Kim The Waitress" (forgotten song)                          & lp review                 &  0.00309035  & forgotten song            \\
+ The Naked and Famous - "Passive Me, Aggressive You" (LP Review)                  & lp review                 &  0.38523     & lp review                 \\
+ Rachel Goswell - "Waves Are Universal" (LP Review)                               & lp review                 &  0.652459    & lp review                 \\
+ The Brains - "Money Changes Everything" (the song remains the same)              & lp review                 &  0.000158907 & the song remains the same \\
+ The Beastie Boys - "The Mix-Up" (LP Review)                                      & lp review                 &  0.495966    & lp review                 \\
+ Houndmouth - "Houndmouth" (LP Review)                                            & lp review                 &  0.129944    & lp review                 \\
+ Husker Du - "Candy Apple Grey" (LP Review)                                       & lp review                 &  0.685206    & lp review                 \\
+ Stanley Jordan - "Stairway to Heaven" (the song remains the same)                & lp review                 &  0.0893994   & the song remains the same \\
+ Discharge - "Protest and Survive" (the song remains the same)                    & lp review                 &  0.205744    & the song remains the same \\
+ Galaxie 500 - "Peel Sessions" (LP Review)                                        & lp review                 &  0.191561    & lp review                 \\
+ My Bloody Valentine - "Loveless" (LP Review)                                     & lp review                 &  0.604418    & lp review                 \\
+ Sonic Youth - "Diamond Sea" (forgotten song)                                     & lp review                 &  0.0292781   & forgotten song            \\
+ Slayer - "Haunting The Chapel" (LP Review)                                       & lp review                 &  0.564059    & lp review                 \\
+ Hank Williams Jr. - "All My Rowdy Friends (Have Settled Down)" (forgotten song)  & the song remains the same &  0.0029125   & forgotten song            \\
+ Unkle - "Do Androids Dream of Electric Beats?" (LP Review)                       & lp review                 &  0.674837    & lp review                 \\
+ Pink Floyd - "Cymbaline" (forgotten song)                                        & lp review                 &  0.00153018  & forgotten song            \\
+ The Cribs - "Payola" (LP Review)                                                 & lp review                 &  0.514895    & lp review                 \\
+ Dale Watson - "Quick Quick, Slow Slow" (spotlight)                               & lp review                 &  0.0399479   & concert/spotlight         \\
+ The Rave Ups - "Positively Lost Me" (forgotten song)                             & lp review                 &  0.03228     & forgotten song            \\
+ Damian Marley - "Welcome To Jamrock" (spotlight)                                 & lp review                 &  0.00157387  & concert/spotlight         \\
+ Mariachi El Bronx - "Cell Mates" (spotlight)                                     & lp review                 &  0.0377341   & concert/spotlight         \\
+ Beyonce - "Single Ladies (Put a Ring on It)" (the song remains the same)         & lp review                 &  0.0105216   & the song remains the same \\
+ Ass Ponys - "Little Bastard" (forgotten song)                                    & forgotten song            &  0.0470319   & forgotten song            \\
+ This Mortal Coil - "Song to the Siren" (the song remains the same)               & lp review                 &  0.0249224   & the song remains the same \\
+ School of Seven Bells - "Ghostory" (LP Review)                                   & lp review                 &  0.511663    & lp review                 \\
+ DJ Shadow - "The Less You Know, The Better" (LP review)                          & lp review                 &  0.994952    & lp review                 \\
+ Waxing Poetics - "Blue-Eyed Soul" (forgotten song)                               & forgotten song            &  0.0416508   & forgotten song            \\
+ Zomes - "Earth Grid" (LP Review)                                                 & lp review                 &  0.885645    & lp review                 \\
+ Matt and Kim - "Daylight" (spotlight)                                            & lp review                 &  0.0228493   & concert/spotlight         \\
+ The Dave Brubeck Quartet - "Time Out" (LP Review)                                & lp review                 &  0.100313    & lp review                 \\
+ The Beach Boys - "Heroes and Villains" (forgotten song)                          & lp review                 &  0.0018678   & forgotten song            \\
+ Saxon - "Princess of the Night" (forgotten song)                                 & lp review                 &  0.082235    & forgotten song            \\
+ Ph Balance - "Ph Balance" (LP Review)                                            & lp review                 &  0.826309    & lp review                 \\
+ Sirah - "Double Yellow Lines" (spotlight)                                        & lp review                 &  0.00635146  & concert/spotlight         \\
+ Bow Wow Wow - "I Want Candy" (forgotten song)                                    & lp review                 &  0.00979798  & forgotten song            \\
+ The Cure - "High" (forgotten song)                                               & lp review                 &  0.0160724   & forgotten song            \\
+ The Beach Boys - "Good Vibrations" (the song remains the same)                   & lp review                 &  0.000164846 & the song remains the same \\
+ The Equals - "Police On My Back" (the song remains the same)                     & lp review                 &  0.0578675   & the song remains the same \\
+ The Clash - "I Fought The Law" (The Song Remains The Same)                       & lp review                 &  0.200442    & the song remains the same \\
+ Catherine Wheel - "Ferment" (LP Review)                                          & lp review                 &  0.425535    & lp review                 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Dr, Nelson Results}
+  \label{tab:dnresults}
+\end{table}
+
+\begin{table}[H]
+ \begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llrl}
+\hline
+ title                                                                            & predicted\_cat          &   acat\_fprob & actual\_cat                     \\
+\hline
+ The Beatles - "I Want You (She's So Heavy)" (spotlight)                          & Indie Rock/Alternative &  5.81592e-05 & Rock                           \\
+ The Everly Brothers - "Cathy's Clown" (spotlight)                                & Indie Rock/Alternative &  0.00348602  & Rock                           \\
+ Peter Seeger - "Turn! Turn! Turn! (to Everything There Is a Season)" (spotlight) & Metal/Punk/Hardcore    &  0.00042724  & Rock                           \\
+ Squeeze - "Up The Junction" (forgotten song)                                     & Indie Rock/Alternative &  0.0127401   & Indie Rock/Alternative         \\
+ Camera Obscura - "Biggest Bluest Hi-Fi" (LP Review)                              & Indie Rock/Alternative &  0.02337     & Indie Rock/Alternative         \\
+ Andy Stott - "Moogfest 2012" (concert)                                           & Indie Rock/Alternative &  3.31013e-05 & Pop/Electronic/Hip-Hop         \\
+ The Beastie Boys - "No Sleep Till Brooklyn" (spotlight)                          & Metal/Punk/Hardcore    &  2.08461e-07 & Pop/Electronic/Hip-Hop         \\
+ Pink Floyd - "Live At Pompeii" (concert)                                         & Indie Rock/Alternative &  0.000290808 & Rock                           \\
+ Negativland - "Live at Lewis's, Norfolk VA, November 21, 1992" (concert)         & Indie Rock/Alternative &  0.0707163   & Indie Rock/Alternative         \\
+ Red Rider - "Lunatic Fringe" (forgotten song)                                    & Indie Rock/Alternative &  0.0778946   & Rock                           \\
+ The Green Pajamas - "Kim The Waitress" (forgotten song)                          & Indie Rock/Alternative &  0.237983    & Indie Rock/Alternative         \\
+ The Naked and Famous - "Passive Me, Aggressive You" (LP Review)                  & Indie Rock/Alternative &  0.0514449   & Indie Rock/Alternative         \\
+ Rachel Goswell - "Waves Are Universal" (LP Review)                               & Indie Rock/Alternative &  1.0004e-05  & Rock                           \\
+ The Brains - "Money Changes Everything" (the song remains the same)              & Indie Rock/Alternative &  0.0405007   & Indie Rock/Alternative         \\
+ The Beastie Boys - "The Mix-Up" (LP Review)                                      & Indie Rock/Alternative &  4.6062e-09  & Pop/Electronic/Hip-Hop         \\
+ Houndmouth - "Houndmouth" (LP Review)                                            & Indie Rock/Alternative &  0.000640891 & R\&B/Jazz/Mowtown/Country/Other \\
+ Husker Du - "Candy Apple Grey" (LP Review)                                       & Indie Rock/Alternative &  0.12089     & Indie Rock/Alternative         \\
+ Stanley Jordan - "Stairway to Heaven" (the song remains the same)                & Indie Rock/Alternative &  0.0133826   & R\&B/Jazz/Mowtown/Country/Other \\
+ Discharge - "Protest and Survive" (the song remains the same)                    & Indie Rock/Alternative &  0.0523455   & Metal/Punk/Hardcore            \\
+ Galaxie 500 - "Peel Sessions" (LP Review)                                        & Indie Rock/Alternative &  0.0964701   & Indie Rock/Alternative         \\
+ My Bloody Valentine - "Loveless" (LP Review)                                     & Indie Rock/Alternative &  0.0219168   & Metal/Punk/Hardcore            \\
+ Sonic Youth - "Diamond Sea" (forgotten song)                                     & Indie Rock/Alternative &  0.0844261   & Indie Rock/Alternative         \\
+ Slayer - "Haunting The Chapel" (LP Review)                                       & Indie Rock/Alternative &  0.0157278   & Metal/Punk/Hardcore            \\
+ Hank Williams Jr. - "All My Rowdy Friends (Have Settled Down)" (forgotten song)  & Indie Rock/Alternative &  0.000494957 & R\&B/Jazz/Mowtown/Country/Other \\
+ Unkle - "Do Androids Dream of Electric Beats?" (LP Review)                       & Indie Rock/Alternative &  7.18402e-07 & Pop/Electronic/Hip-Hop         \\
+ Pink Floyd - "Cymbaline" (forgotten song)                                        & Indie Rock/Alternative &  6.06206e-06 & Rock                           \\
+ The Cribs - "Payola" (LP Review)                                                 & Indie Rock/Alternative &  0.254918    & Indie Rock/Alternative         \\
+ Dale Watson - "Quick Quick, Slow Slow" (spotlight)                               & Indie Rock/Alternative &  0.000510025 & R\&B/Jazz/Mowtown/Country/Other \\
+ The Rave Ups - "Positively Lost Me" (forgotten song)                             & Indie Rock/Alternative &  1.17354e-06 & Pop/Electronic/Hip-Hop         \\
+ Damian Marley - "Welcome To Jamrock" (spotlight)                                 & Indie Rock/Alternative &  0.00014292  & R\&B/Jazz/Mowtown/Country/Other \\
+ Mariachi El Bronx - "Cell Mates" (spotlight)                                     & Indie Rock/Alternative &  0.114283    & Indie Rock/Alternative         \\
+ Beyonce - "Single Ladies (Put a Ring on It)" (the song remains the same)         & Indie Rock/Alternative &  0.00324419  & R\&B/Jazz/Mowtown/Country/Other \\
+ Ass Ponys - "Little Bastard" (forgotten song)                                    & Indie Rock/Alternative &  0.0387984   & Indie Rock/Alternative         \\
+ This Mortal Coil - "Song to the Siren" (the song remains the same)               & Indie Rock/Alternative &  0.301464    & Indie Rock/Alternative         \\
+ School of Seven Bells - "Ghostory" (LP Review)                                   & Indie Rock/Alternative &  0.0352295   & Indie Rock/Alternative         \\
+ DJ Shadow - "The Less You Know, The Better" (LP review)                          & Indie Rock/Alternative &  1.18196e-08 & Pop/Electronic/Hip-Hop         \\
+ Waxing Poetics - "Blue-Eyed Soul" (forgotten song)                               & Indie Rock/Alternative &  5.96e-05    & Rock                           \\
+ Zomes - "Earth Grid" (LP Review)                                                 & Indie Rock/Alternative &  0.150787    & Indie Rock/Alternative         \\
+ Matt and Kim - "Daylight" (spotlight)                                            & Indie Rock/Alternative &  0.230078    & Indie Rock/Alternative         \\
+ The Dave Brubeck Quartet - "Time Out" (LP Review)                                & Indie Rock/Alternative &  2.78336e-05 & R\&B/Jazz/Mowtown/Country/Other \\
+ The Beach Boys - "Heroes and Villains" (forgotten song)                          & Indie Rock/Alternative &  0.00348093  & Rock                           \\
+ Saxon - "Princess of the Night" (forgotten song)                                 & Indie Rock/Alternative &  0.00458431  & Metal/Punk/Hardcore            \\
+ Ph Balance - "Ph Balance" (LP Review)                                            & Indie Rock/Alternative &  3.61317e-06 & Pop/Electronic/Hip-Hop         \\
+ Sirah - "Double Yellow Lines" (spotlight)                                        & Indie Rock/Alternative &  0.000252111 & Metal/Punk/Hardcore            \\
+ Bow Wow Wow - "I Want Candy" (forgotten song)                                    & Indie Rock/Alternative &  0.16264     & Indie Rock/Alternative         \\
+ The Cure - "High" (forgotten song)                                               & Indie Rock/Alternative &  0.161629    & Indie Rock/Alternative         \\
+ The Beach Boys - "Good Vibrations" (the song remains the same)                   & Indie Rock/Alternative &  5.23178e-05 & Rock                           \\
+ The Equals - "Police On My Back" (the song remains the same)                     & Indie Rock/Alternative &  0.0135199   & R\&B/Jazz/Mowtown/Country/Other \\
+ The Clash - "I Fought The Law" (The Song Remains The Same)                       & Metal/Punk/Hardcore    &  0.193105    & Metal/Punk/Hardcore            \\
+ Catherine Wheel - "Ferment" (LP Review)                                          & Indie Rock/Alternative &  0.0266902   & Indie Rock/Alternative         \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Genres Results}
+  \label{tab:gresults}
+\end{table}
+
+
+
+\newpage
+\section*{Question 3}
+\index{Question 3}
+\begin{verbatim}
+3.  Assess the performance of your classifier in each of your
+categories by computing precision, recall, and F-measure.  
+\end{verbatim}
+\subsection*{Answer}
+The results of the classification for Dr. Nelson categorization can be seen in listing
+\hyperref[lst:50drn]{\ref{lst:50drn}} and for genres in listing \hyperref[lst:50mt]{\ref{lst:50mt}}. These reports were generated by scikit-learn \emph{classification\_report}. Using Dr. Nelson's categories did not give us great results nor did using the genres. The precision for forgotten song was 1.0 with as f1-score of .27. Recall for lp review was also 1.0 with a f1-score of .53 as its precision was .36 whereas the rest were very low. As seen in the table showing the blog structure counts both of these were the most present. For genres Indie Rock/Alternative had a recall of 1.0, precision of .36 and f1-score of .53. Metal/Punk/Hardcore had precision of 0.33, recall of 0.17 and f1-score of 0.22. I can only attribute this to the limited amount of training data and how that each post does not necessarily talk about the genre or self categorization that much. To test this I re-ran the classification for both using a 50,50 split of the data and the results can be seen in listings \hyperref[lst:Alldrn]{\ref{lst:Alldrn}} for Dr. Nelsons self categories and \hyperref[lst:Allmt]{\ref{lst:Allmt}} for genres.\newline \newline
+Sadly the numbers for the aforementioned categories only went up. The only conclusion from this is that using only the words of the blog is not good enough to classify them.
+
+
+\lstinputlisting[caption={Scores Dr. Nelson Categorization},label=lst:50drn,captionpos=b]{reports/regClassificationReport.txt}
+
+\lstinputlisting[caption={Scores Genre Categorization},label=lst:50mt,captionpos=b]{reports/myTestClassificationReport.txt}  
+
+\lstinputlisting[caption={Scores Dr. Nelson Categorization All},label=lst:Alldrn,captionpos=b]{reports/regClassificationReportAll.txt}
+
+\lstinputlisting[caption={Scores Genre Categorization All},label=lst:Allmt,captionpos=b]{reports/myTestClassificationReportAll.txt} 
+\newpage
+\section*{Question 4}
+\index{Question 4}
+\begin{verbatim}
+4.  Redo the questions above, but with the extensions on slide 27
+and pp. 136--138.
+\end{verbatim}
+\subsection*{Answer}
+The results of the classification for Dr. Nelson categorization can be seen in listing
+\hyperref[lst:50drne]{\ref{lst:50drne}} and for genres in listing \hyperref[lst:50mte]{\ref{lst:50mte}}.
+I re-ran the classification for both using a 50,50 split of the data for extended as well and the results can be seen in listings \hyperref[lst:Alldrne]{\ref{lst:Alldrne}} for Dr. Nelsons self categories and \hyperref[lst:Allmte]{\ref{lst:Allmte}} for genres.
+
+\lstinputlisting[caption={Scores Dr. Nelson Categorization Extended},label=lst:50drne,captionpos=b]{reports/regClassificationReport-e.txt}
+
+\lstinputlisting[caption={Scores Genre Categorization Extended},label=lst:50mte,captionpos=b]{reports/myTestClassificationReport-e.txt}  
+
+\lstinputlisting[caption={Scores Dr. Nelson Categorization All Extended},label=lst:Alldrne,captionpos=b]{reports/regClassificationReportAll-e.txt}
+
+\lstinputlisting[caption={Scores Genre Categorization All Extended},label=lst:Allmte,captionpos=b]{reports/myTestClassificationReportAll-e.txt} 
+\newpage
+\section*{Question 5}
+\index{Question 5}
+\begin{verbatim}
+5.  A 1:1 split for training:test data typically not a good split;
+5:1 or even 10:1 is preferable.  We also typically use something
+called "10-fold cross validation" to make sure we spread the training
+out and don't "overfit" on a particular sequence of tranining data.
+
+Rerun questions 2 & 3, but manually classifying all 100 documents,
+then using 90 for training and 10 for testing.  Use 10-fold cross
+validation and generate the table from Q2, but this time with the
+average of all 10 values.  What was the change, if any, in precision
+and recall (and thus F-Measure)?
+\end{verbatim}
+\subsection*{Answer}
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ metric    &     mean \\
+\hline
+ precision & 0.303765 \\
+ f1        & 0.301631 \\
+ recall    & 0.386904 \\
+\hline
+\end{tabular}
+\caption{Dr Nelson Ten Fold All}
+\label{tab:10falldr} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ metric    &     mean \\
+\hline
+ precision & 0.254458 \\
+ f1        & 0.265861 \\
+ recall    & 0.357708 \\
+\hline
+\end{tabular}
+ \caption{Dr Nelson Ten Fold Hundred} 
+ \label{tab:10f100dr} 
+\end{minipage}
+\end{table}
+
+\begin{table}[H]
+\centering
+\setlength\tabcolsep{4pt}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tabular}{lr}
+\hline
+ metric    &      mean \\
+\hline
+ precision & 0.0378548 \\
+ f1        & 0.0582969 \\
+ recall    & 0.177919  \\
+\hline
+\end{tabular}
+\caption{Genre Ten Fold All}
+\label{tab:10fallg} 
+\end{minipage}%
+\hfill
+\begin{minipage}{0.48\textwidth}
+\begin{tabular}{lr}
+\hline
+ metric    &      mean \\
+\hline
+ precision & 0.0848377 \\
+ f1        & 0.110486  \\
+ recall    & 0.206     \\
+\hline
+\end{tabular}
+ \caption{Genre Ten Fold Hundred} 
+ \label{tab:10f100g} 
+\end{minipage}
+\end{table}
+
+
+\begin{table}[H]
+ \begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{rlll}
+\hline
+   acat\_fprob & actual\_cat                & title                                                                                                        & predicted\_cat             \\
+\hline
+  0.00829925  & forgotten song            & Merle Haggard - "Mama Tried" (forgotten song)                                                                & the song remains the same \\
+  0.000586942 & the song remains the same & INXS - "Don't Change" (the song remains the same)                                                            & lp review                 \\
+  1.42309e-05 & forgotten song            & The Time - "Jungle Love" (forgotten song)                                                                    & lp review                 \\
+  0.000142731 & concert/spotlight         & The Eagles - "Seven Bridges Road" (spotlight)                                                                & lp review                 \\
+  1.17538e-05 & concert/spotlight         & David Bowie - "Blackstar" (spotlight)                                                                        & lp review                 \\
+  7.6536e-08  & forgotten song            & Hawkwind - "Silver Machine" (forgotten song)                                                                 & lp review                 \\
+  0.885591    & lp review                 & Waxahatchee - "Cerulean Salt" (LP Review)                                                                    & lp review                 \\
+  0.942373    & lp review                 & Balam Acab - "See Birds" (LP Review)                                                                         & lp review                 \\
+  0.0255489   & concert/spotlight         & Gina Chavez - Live NPR Tiny Desk Concert 2015-09-22 (concert)                                                & lp review                 \\
+  0.00238738  & forgotten song            & The Robbin Thompson Band - "Candy Apple Red" (forgotten song)                                                & lp review                 \\
+  0.00148934  & concert/spotlight         & Avett Brothers - "Kick Drum Heart" (spotlight)                                                               & lp review                 \\
+  0.00358476  & concert/spotlight         & Waxahatchee - Live KEXP 2015-05-03 (concert)                                                                 & lp review                 \\
+  4.12992e-06 & the song remains the same & Galaxie 500 - "Rain" (the song remains the same)                                                             & lp review                 \\
+  1.02912e-08 & the song remains the same & LCD Soundsystem - "All My Friends" (the song remains the same)                                               & lp review                 \\
+  0.0228689   & forgotten song            & Translator - "Everywhere That I'm Not" (forgotten song)                                                      & forgotten song            \\
+  0.858726    & lp review                 & Andy Stott - "Luxury Problems" (LP Review)                                                                   & lp review                 \\
+  0.536274    & lp review                 & Connan Mockasin - "Caramel" (LP Review)                                                                      & lp review                 \\
+  0.325539    & lp review                 & Minutemen - "Double Nickels on the Dime" (LP review)                                                         & lp review                 \\
+  0.0118787   & forgotten song            & Split Enz - "History Never Repeats" (forgotten song)                                                         & forgotten song            \\
+  0.00017994  & forgotten song            & Hum - "Stars" (forgotten song)                                                                               & lp review                 \\
+  0.453167    & lp review                 & Celtic Frost - "Morbid Tales" (LP Review)                                                                    & lp review                 \\
+  0.0551286   & lp review                 & The Beach Boys - "Wild Honey" (LP Review)                                                                    & lp review                 \\
+  0.0453624   & the song remains the same & Lesley Gore - "You Don't Own Me" (the song remains the same)                                                 & the song remains the same \\
+  9.82159e-10 & concert/spotlight         & Avett Brothers - Austin, TX 2014-10-11 (concert)                                                             & lp review                 \\
+ 7.2537e-05  & forgotten song            & Jill Sobule - "I Kissed A Girl" (forgotten song)                                                            & lp review                 \\
+  0.102236    & lp review                 & Iron Maiden - "Iron Maiden" (LP Review)                                                                      & lp review                 \\
+  3.31497e-05 & concert/spotlight         & The Avett Brothers - Raleigh, NC 2014-12-31 (concert)                                                        & lp review                 \\
+  0.0029604   & forgotten song            & States - "My Latest Girl" (forgotten song)                                                                   & lp review                 \\
+  0.00140737  & forgotten song            & Utopia - "Feet Don't Fail Me Now" (forgotten song)                                                           & lp review                 \\
+  0.00377996  & forgotten song            & Jimmy Ruffin - "What Becomes of the Broken Hearted?" (forgotten song)                                        & lp review                 \\
+  0.883463    & lp review                 & Waxahatchee - "American Weekend" (LP Review)                                                                 & lp review                 \\
+  0.0160982   & the song remains the same & Blackstreet - "No Diggity" (the song remains the same)                                                       & lp review                 \\
+  0.000582417 & forgotten song            & Ani DiFranco - "32 Flavors" (forgotten song)                                                                 & lp review                 \\
+  2.00316e-05 & forgotten song            & Let's Active - "Every Word Means No" (forgotten song)                                                        & lp review                 \\
+  0.000150813 & concert/spotlight         & The Specials - "Rock Goes to College (1979)" (concert)                                                       & lp review                 \\
+  3.15345e-06 & concert/spotlight         & St. Paul \& The Broken Bones - Live KEXP 2014-04-19 (concert)                                                 & lp review                 \\
+  1.11289e-06 & concert/spotlight         & Horseback - "Live at Nightlights 2011-11" (concert)                                                          & lp review                 \\
+  0.000203459 & concert/spotlight         & Motorhead - "Ace of Spades" (spotlight)                                                                      & lp review                 \\
+  2.85102e-07 & concert/spotlight         & Motorhead - "R.A.M.O.N.E.S." (spotlight)                                                                     & lp review                 \\
+  1.43843e-05 & concert/spotlight         & We Were Promised Jetpacks - "Live in Nashville, 2012-03-29" (concert)                                        & lp review                 \\
+  0.30056     & lp review                 & We Were Promised Jetpacks - "These Four Walls" (LP Review)                                                   & lp review                 \\
+  0.539964    & lp review                 & Camera Obscura - "My Maudlin Career" (LP Review)                                                             & lp review                 \\
+  0.00522835  & forgotten song            & Ultravox - "Vienna" (forgotten song)                                                                         & forgotten song            \\
+  0.00276339  & the song remains the same & Queen \& David Bowie - "Under Pressure" (the song remains the same)                                           & lp review                 \\
+  0.56915     & lp review                 & Times New Viking - "Dancer Equired!" (LP Review)                                                             & lp review                 \\
+  4.81931e-06 & concert/spotlight         & Wire - "On The Box: 1979" (concert)                                                                          & lp review                 \\
+  1.82821e-07 & concert/spotlight         & GWAR - "Phallus in Wonderland" (spotlight)                                                                   & lp review                 \\
+  0.213787    & lp review                 & Mission of Burma - "Signals, Calls, and Marches" (LP Review)                                                 & lp review                 \\
+  0.000241497 & forgotten song            & Neil Young and Devo - "Hey Hey, My My (Into the Black)" (forgotten song)                                     & lp review                 \\
+  2.95192e-05 & forgotten song            & Stevie Wonder - "Higher Ground" (forgotten song)                                                             & lp review                 \\
+  1.72047e-07 & concert/spotlight         & The Beatles - "I Want You (She's So Heavy)" (spotlight)                                                      & lp review                 \\
+  2.22158e-05 & concert/spotlight         & The Everly Brothers - "Cathy's Clown" (spotlight)                                                            & lp review                 \\
+  5.23079e-06 & concert/spotlight         & Peter Seeger - "Turn! Turn! Turn! (to Everything There Is a Season)" (spotlight)                             & lp review                 \\
+  0.000115866 & forgotten song            & Squeeze - "Up The Junction" (forgotten song)                                                                 & lp review                 \\
+  0.16036     & lp review                 & Camera Obscura - "Biggest Bluest Hi-Fi" (LP Review)                                                          & lp review                 \\
+  5.23624e-05 & concert/spotlight         & Andy Stott - "Moogfest 2012" (concert)                                                                       & lp review                 \\
+  7.69054e-05 & concert/spotlight         & The Beastie Boys - "No Sleep Till Brooklyn" (spotlight)                                                      & lp review                 \\
+  2.52318e-07 & concert/spotlight         & Pink Floyd - "Live At Pompeii" (concert)                                                                     & lp review                 \\
+  1.23764e-07 & concert/spotlight         & Negativland - "Live at Lewis's, Norfolk VA, November 21, 1992" (concert)                                     & lp review                 \\
+  0.0122729   & forgotten song            & Red Rider - "Lunatic Fringe" (forgotten song)                                                                & lp review                 \\
+  1.86461e-09 & forgotten song            & The Green Pajamas - "Kim The Waitress" (forgotten song)                                                      & lp review                 \\
+  0.317351    & lp review                 & The Naked and Famous - "Passive Me, Aggressive You" (LP Review)                                              & lp review                 \\
+  0.761564    & lp review                 & Rachel Goswell - "Waves Are Universal" (LP Review)                                                           & lp review                 \\
+  0.00139494  & the song remains the same & The Brains - "Money Changes Everything" (the song remains the same)                                          & lp review                 \\
+  0.769315    & lp review                 & The Beastie Boys - "The Mix-Up" (LP Review)                                                                  & lp review                 \\
+  0.0756969   & lp review                 & Houndmouth - "Houndmouth" (LP Review)                                                                        & lp review                 \\
+  0.699192    & lp review                 & Husker Du - "Candy Apple Grey" (LP Review)                                                                   & lp review                 \\
+  0.024669    & the song remains the same & Stanley Jordan - "Stairway to Heaven" (the song remains the same)                                            & lp review                 \\
+  0.142757    & the song remains the same & Discharge - "Protest and Survive" (the song remains the same)                                                & lp review                 \\
+  0.286404    & lp review                 & Galaxie 500 - "Peel Sessions" (LP Review)                                                                    & lp review                 \\
+  0.712191    & lp review                 & My Bloody Valentine - "Loveless" (LP Review)                                                                 & lp review                 \\
+  1.34057e-05 & forgotten song            & Sonic Youth - "Diamond Sea" (forgotten song)                                                                 & lp review                 \\
+  0.270206    & lp review                 & Slayer - "Haunting The Chapel" (LP Review)                                                                   & lp review                 \\
+  1.27901e-05 & forgotten song            & Hank Williams Jr. - "All My Rowdy Friends (Have Settled Down)" (forgotten song)                              & lp review                 \\
+  0.86955     & lp review                 & Unkle - "Do Androids Dream of Electric Beats?" (LP Review)                                                   & lp review                 \\
+  2.35542e-07 & forgotten song            & Pink Floyd - "Cymbaline" (forgotten song)                                                                    & lp review                 \\
+  0.858767    & lp review                 & The Cribs - "Payola" (LP Review)                                                                             & lp review                 \\
+  7.90432e-08 & concert/spotlight         & Dale Watson - "Quick Quick, Slow Slow" (spotlight)                                                           & lp review                 \\
+  0.00204828  & forgotten song            & The Rave Ups - "Positively Lost Me" (forgotten song)                                                         & lp review                 \\
+  6.37284e-12 & concert/spotlight         & Damian Marley - "Welcome To Jamrock" (spotlight)                                                             & lp review                 \\
+  0.000374377 & concert/spotlight         & Mariachi El Bronx - "Cell Mates" (spotlight)                                                                 & lp review                 \\
+  0.00515597  & the song remains the same & Beyonce - "Single Ladies (Put a Ring on It)" (the song remains the same)                                     & lp review                 \\
+  0.00289928  & forgotten song            & Ass Ponys - "Little Bastard" (forgotten song)                                                                & lp review                 \\
+  0.000952902 & the song remains the same & This Mortal Coil - "Song to the Siren" (the song remains the same)                                           & lp review                 \\
+  0.214369    & lp review                 & School of Seven Bells - "Ghostory" (LP Review)                                                               & lp review                 \\
+  0.964615    & lp review                 & DJ Shadow - "The Less You Know, The Better" (LP review)                                                      & lp review                 \\
+  4.95668e-05 & forgotten song            & Waxing Poetics - "Blue-Eyed Soul" (forgotten song)                                                           & lp review                 \\
+  0.945019    & lp review                 & Zomes - "Earth Grid" (LP Review)                                                                             & lp review                 \\
+  0.000120524 & concert/spotlight         & Matt and Kim - "Daylight" (spotlight)                                                                        & lp review                 \\
+  0.0989495   & lp review                 & The Dave Brubeck Quartet - "Time Out" (LP Review)                                                            & lp review                 \\
+  6.15297e-06 & forgotten song            & The Beach Boys - "Heroes and Villains" (forgotten song)                                                      & lp review                 \\
+  0.000598057 & forgotten song            & Saxon - "Princess of the Night" (forgotten song)                                                             & lp review                 \\
+  0.827962    & lp review                 & Ph Balance - "Ph Balance" (LP Review)                                                                        & lp review                 \\
+  2.58567e-05 & concert/spotlight         & Sirah - "Double Yellow Lines" (spotlight)                                                                    & lp review                 \\
+  0.000137517 & forgotten song            & Bow Wow Wow - "I Want Candy" (forgotten song)                                                                & lp review                 \\
+  0.000341937 & forgotten song            & The Cure - "High" (forgotten song)                                                                           & lp review                 \\
+  1.23812e-05 & the song remains the same & The Beach Boys - "Good Vibrations" (the song remains the same)                                               & lp review                 \\
+  0.0195592   & the song remains the same & The Equals - "Police On My Back" (the song remains the same)                                                 & lp review                 \\
+  0.00920798  & the song remains the same & The Clash - "I Fought The Law" (The Song Remains The Same)                                                   & lp review                 \\
+  0.293363    & lp review                 & Catherine Wheel - "Ferment" (LP Review)                                                                      & lp review                 \\
+  0.0205435   & lp review                 & Velocity Girl - "Velocity Girl" (LP Review)                                                                  & lp review                 \\
+  0.299915    & lp review                 & Yngwie Malmsteen - "Rising Force" (LP Review)                                                                & lp review                 \\
+  6.73502e-05 & forgotten song            & Deep Purple - "Child In Time" (forgotten song)                                                               & lp review                 \\
+  0.945474    & lp review                 & The Caretaker - "An Empty Bliss Beyond This World" (LP Review)                                               & lp review                 \\
+  0.340475    & lp review                 & Husker Du - "Land Speed Record" (LP Review)                                                                  & lp review                 \\
+  0.490925    & lp review                 & Black Sabbath - "Born Again" (LP Review)                                                                     & lp review                 \\
+  0.82963     & lp review                 & The Magnetic Fields - "Distortion" (LP Review)                                                               & lp review                 \\
+  0.59083     & lp review                 & The Magnetic Fields - "69 Love Songs" (LP Review)                                                            & lp review                 \\
+  0.267212    & lp review                 & Mazzy Star - "Common Burn/Lay Myself Down" (LP Review)                                                       & lp review                 \\
+  0.773815    & lp review                 & DJ Shadow \& Cut Chemist - "Product Placement" (LP Review)                                                    & lp review                 \\
+  0.891637    & lp review                 & DJ Shadow - "Preemptive Strike" (LP Review)                                                                  & lp review                 \\
+  0.000314281 & forgotten song            & Jim Carroll - "People Who Died" (forgotten song)                                                             & the song remains the same \\
+  1.71236e-08 & the song remains the same & Townes Van Zandt - "Pancho and Lefty" (the song remains the same)                                            & lp review                 \\
+  4.95283e-06 & forgotten song            & Montrose - "I Got the Fire" (forgotten song)                                                                 & lp review                 \\
+  0.593258    & lp review                 & Rainbow - "Rising" (LP Review)                                                                               & lp review                 \\
+  0.843885    & lp review                 & Autechre - "Peel Session" (LP Review)                                                                        & lp review                 \\
+  0.00120013  & forgotten song            & The Clash - "Straight to Hell" (forgotten song)                                                              & lp review                 \\
+  1.42811e-05 & forgotten song            & Roseanne Cash - "Seven Year Ache" (forgotten song)                                                           & lp review                 \\
+  0.632481    & lp review                 & Negativland - "U2" (LP Review)                                                                               & lp review                 \\
+  4.41345e-05 & the song remains the same & Ice-T - "99 Problems" (the song remains the same)                                                            & lp review                 \\
+  0.493356    & lp review                 & Liz Phair - "Juvenilia" (LP Review)                                                                          & lp review                 \\
+  0.896297    & lp review                 & Zomes - "Zomes" (LP Review)                                                                                  & lp review                 \\
+  0.779329    & lp review                 & The Cribs - "Ignore the Ignorant" (LP Review)                                                                & lp review                 \\
+  0.0132366   & forgotten song            & States - "Picture Me With You" (forgotten song)                                                              & lp review                 \\
+  0.637912    & lp review                 & Mayer Hawthorne - "A Strange Arrangement" (LP Review)                                                        & lp review                 \\
+  0.7293      & lp review                 & Deathprod - "Treetop Drive 1-3, Towboat" (LP Review)                                                         & lp review                 \\
+  1.03802e-05 & forgotten song            & Blink-182 - "Josie" (forgotten song)                                                                         & lp review                 \\
+  3.0828e-05  & the song remains the same & R.E.M. - "Superman" (the song remains the same)                                                              & lp review                 \\
+  0.0806372   & the song remains the same & Bruce Springsteen - "The Ghost of Tom Joad" (the song remains the same)                                      & lp review                 \\
+  0.801063    & lp review                 & Lissy Trullie - "Self-Taught Learner" (LP Review)                                                            & lp review                 \\
+  0.732728    & lp review                 & Perfume Tree - "Tides' Out" (LP Review)                                                                      & lp review                 \\
+  0.560927    & lp review                 & Ultra Orange \& Emmanuelle - "Ultra Orange \& Emmanulle" (LP Review)                                           & lp review                 \\
+  0.421679    & lp review                 & Arctic Monkeys - "Whatever People Say I Am, That's What I'm Not" (LP Review)                                 & lp review                 \\
+  0.646167    & lp review                 & Husker Du - "Everything Falls Apart and More" (LP Review)                                                    & lp review                 \\
+  0.386722    & lp review                 & Husker Du - "Eight Miles High / Makes No Sense At All" (LP Review)                                           & lp review                 \\
+  0.000462348 & the song remains the same & Bruce Springsteen - "For You" (the song remains the same)                                                    & lp review                 \\
+  0.349635    & lp review                 & Cowboy Junkies - "The Trinity Session" (LP Review)                                                           & lp review                 \\
+  0.620501    & lp review                 & Julee Cruise - "Floating Into the Night" (LP Review)                                                         & lp review                 \\
+  0.483677    & lp review                 & Red House Painters - Red House Painters (LP Review)                                                          & lp review                 \\
+  0.000197102 & the song remains the same & Bruce Springsteen - "Blinded by the Light" (the song remains the same)                                       & lp review                 \\
+  1.91215e-05 & forgotten song            & The Shelia Divine - "Hum" (forgotten song)                                                                   & lp review                 \\
+  1.47033e-05 & forgotten song            & Pink Floyd - "When the Tigers Broke Free" (forgotten song)                                                   & lp review                 \\
+  0.00820931  & forgotten song            & K's Choice - "Not An Addict" (forgotten song)                                                                & lp review                 \\
+  0.656127    & lp review                 & Liz Phair - "whitechocolatespaceegg" (LP Review)                                                             & lp review                 \\
+  0.00204845  & the song remains the same & Gil Scott-Heron - "Me and the Devil" (the song remains the same)                                             & lp review                 \\
+  0.570885    & lp review                 & Air - "Cherry Blossom Girl" (LP Review)                                                                      & lp review                 \\
+  4.21464e-07 & the song remains the same & Foo Fighters - "Best of You" (the song remains the same)                                                     & lp review                 \\
+  0.00262749  & forgotten song            & The Primitives - "Crash" (forgotten song)                                                                    & lp review                 \\
+  0.752017    & lp review                 & Slowdive - "Holding Our Breath" (LP Review)                                                                  & lp review                 \\
+  0.771711    & lp review                 & Jane Siberry - "When I Was a Boy" (LP Review)                                                                & lp review                 \\
+  0.00247418  & forgotten song            & Nick Lowe - "Cruel to be Kind" (forgotten song)                                                              & lp review                 \\
+  0.820248    & lp review                 & Howie B - "Another Late Night" (LP Review)                                                                   & lp review                 \\
+  0.00242281  & forgotten song            & The Specials - "Ghost Town" (forgotten song)                                                                 & lp review                 \\
+  0.47441     & lp review                 & Sky Larkin - "The Golden Spike" (LP review)                                                                  & lp review                 \\
+  6.47937e-06 & the song remains the same & Jim Ingram - "Drumbeat" (the song remains the same)                                                          & lp review                 \\
+  0.952805    & lp review                 & (Various) - "Until the End of the World" (LP Review)                                                         & lp review                 \\
+  0.00414582  & forgotten song            & 2 Skinnee J's - "Riot Nrrrd" (forgotten song)                                                                & lp review                 \\
+  2.37546e-06 & the song remains the same & The Nerves - "Hanging on the Telephone" (the song remains the same)                                          & lp review                 \\
+  0.72548     & lp review                 & DJ Shadow - "What Does Your Soul Look Like" (LP review)                                                      & lp review                 \\
+  0.00920594  & forgotten song            & The Specials - "Rat Race" (forgotten song)                                                                   & forgotten song            \\
+  0.422347    & lp review                 & Cut Chemist - "Bunky's Pick" (LP Review)                                                                     & lp review                 \\
+  4.28848e-05 & forgotten song            & The Clash - "Bankrobber" (forgotten song)                                                                    & lp review                 \\
+  0.00123812  & forgotten song            & Big Audio Dynamite II - "Rush" (forgotten song)                                                              & lp review                 \\
+  0.856654    & lp review                 & DJ Shadow - "Funky Skunk" (LP review)                                                                        & lp review                 \\
+  0.78181     & lp review                 & Dntel - "Dumb Luck" (LP review)                                                                              & lp review                 \\
+  0.576654    & lp review                 & (Various) - "The Bridge: A Tribute to Neil Young" (LP Review  )                                              & lp review                 \\
+  0.000149939 & the song remains the same & The Cribs - "Men's Needs"  (the song remains the same)                                                       & lp review                 \\
+  0.799174    & lp review                 & Husker Du - "New Day Rising" (LP Review)                                                                     & lp review                 \\
+  1.28848e-05 & the song remains the same & Dag Nasty - "Wig Out at Denko's" (forgotten song) (the song remains the same)                                & lp review                 \\
+  0.860276    & lp review                 & Husker Du - "Flip Your Wig" (LP Review)                                                                      & lp review                 \\
+  0.630637    & lp review                 & The Cribs - "Arigato Cockers" (LP Review)                                                                    & lp review                 \\
+  1.21984e-05 & forgotten song            & The Rentals - "Friends of P" (forgotten song)                                                                & lp review                 \\
+  0.000264791 & the song remains the same & The Band - "The Night They Drove Old Dixie Down" (the song remains the same)                                 & lp review                 \\
+  0.000111644 & concert/spotlight         & Pink Floyd - "An Hour With Pink Floyd (KQED)" (concert)                                                      & lp review                 \\
+  0.554239    & lp review                 & Roger Waters - "The Pros and Cons of Hitch Hiking" (LP Review)                                               & lp review                 \\
+  0.000741997 & forgotten song            & Schon \& Hammer - "No More Lies" (forgotten song)                                                             & lp review                 \\
+  0.714587    & lp review                 & Weezer - "Pinkerton" (LP Review)                                                                             & lp review                 \\
+  3.18585e-06 & forgotten song            & The Connells - "Scotty's Lament"  (forgotten song)                                                           & lp review                 \\
+  0.519817    & lp review                 & Blacktask - "Blacktask" (LP Review)                                                                          & lp review                 \\
+  0.000304326 & the song remains the same & Slapp Happy - "Blue Flower"  (the song remains the same)                                                     & lp review                 \\
+  4.97045e-11 & forgotten song            & Toots \& the Maytals - "Pressure Drop"  (the song remains the same) (forgotten song)                          & lp review                 \\
+  0.691729    & lp review                 & DJ Shadow - "The Outsider"  (LP Review)                                                                      & lp review                 \\
+  0.00504778  & forgotten song            & Orchestral Manoeuvres in the Dark - "So In Love"  (forgotten song)                                           & lp review                 \\
+  0.0148005   & forgotten song            & The Highwaymen - "Highwayman"  (forgotten song)                                                              & lp review                 \\
+  0.691204    & lp review                 & Lukid - "Onandon"  (LP Review)                                                                               & lp review                 \\
+  3.43479e-05 & forgotten song            & Misfits - "Where Eagles Dare"  (forgotten song)                                                              & lp review                 \\
+  9.92167e-05 & forgotten song            & Barnes and Barnes - "Fish Heads"  (forgotten song)                                                           & lp review                 \\
+  3.22166e-06 & forgotten song            & My Bloody Valentine - "You Made Me Realise"  (forgotten song)                                                & lp review                 \\
+  0.601133    & lp review                 & New Order - "Movement"  (LP Review)                                                                          & lp review                 \\
+  2.26192e-08 & forgotten song            & Dr. Octagon / Handsome Boy Modeling School / Dan the Automator - "Bear Witness I, II, III"  (forgotten song) & lp review                 \\
+  0.00321188  & forgotten song            & Ric Ocasek - "Something To Grab For"  (forgotten song)                                                       & lp review                 \\
+  0.110017    & forgotten song            & The Members - "Working Girl"  (forgotten song)                                                               & forgotten song            \\
+  0.684515    & lp review                 & The Cribs - "Men's Needs, Women's Needs, Whatever"  (LP Review)                                              & lp review                 \\
+  4.63566e-06 & forgotten song            & The Clash - "This is Radio Clash"  (forgotten song)                                                          & lp review                 \\
+  0.694241    & lp review                 & The Cribs - "The New Fellas"  (LP review)                                                                    & lp review                 \\
+  0.00698179  & forgotten song            & Graham Parker - "Local Girls"   (forgotten song)                                                             & lp review                 \\
+  0.729625    & lp review                 & The Cribs - "The Cribs"  (LP review)                                                                         & lp review                 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Dr Nelson 10 fold Results}
+  \label{tab:dnresults10f}
+\end{table}
+
+\newpage
+\lstinputlisting[language=SQL,frame=single,
+caption={Database Schema},label=lst:schema,captionpos=b]{datafiles/dbschema.sql}  
+
+\newpage
+\clearpage
+
+
+\clearpage
+\lstinputlisting[language=Python,frame=single,
+caption={Code To Classify Blog Posts},label=lst:cf,captionpos=b]{classifyFeeds.py}
+\clearpage
+\lstinputlisting[language=Python,frame=single,
+caption={Python3 docclass file},label=lst:dc,captionpos=b]{docclass.py}   
+
+\end{document}

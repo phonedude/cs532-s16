@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9.2. Introduction to Networkx — python_for_ss 0.1.1 documentation</title>
+  
+
+  
+  
+
+  
+  <link href="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/css.css" rel="stylesheet" type="text/css">
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/theme.css" type="text/css">
+  
+
+  
+
+  
+    <link rel="top" title="python_for_ss 0.1.1 documentation" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/index.html">
+        <link rel="up" title="9. Introduction to Social Networks" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks_intro.html">
+        <link rel="next" title="9.3. Using gephi" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/using_gephi.html">
+        <link rel="prev" title="9.1. Social Networks" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks.html"> 
+
+  
+  <script src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/modernizr.js"></script>
+
+<style type="text/css"> #fi #fic {margin-right:100px !important}  #fi #rh {margin-left:-115px !important;width:95px !important}  #fi .rh {display:none !important}  body:not(.xE) div[role='main'] .Bu:not(:first-child) {display: none !important} </style></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        
+          <a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/index.html" class="fa fa-home"> python_for_ss</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input name="q" placeholder="Search docs" type="text">
+    <input name="check_keywords" value="yes" type="hidden">
+    <input name="area" value="default" type="hidden">
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Preface/Preface.html">1. Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Introduction/Introduction.html">2. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Introduction/what_will_we_learn.html">2.1. What will we learn?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Introduction/python_preliminaries.html">2.2. Python preliminaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Introduction/why_open_source.html">2.3. Why open source?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/Python_introduction.html">3. Introduction to Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/python_example.html">3.1. Python example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/hello_world.html">3.2. Your first Python program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/python_types_first_pass.html">3.3. Python types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/python_types_more_types.html">3.4. More Python types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/python_types_assignment.html">3.5. Python types assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/variables.html">3.6. Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/import_this.html">3.7. Poetry break</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/summary.html">3.8. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Python_introduction/quiz.html">3.9. Python types quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/programming_intro.html">4. Introduction to basic Python constructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/if_then.html">4.1. If-then construction (Conditionals)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/boolean_results.html">4.2. Operators that return Boolean results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/boolean_results.html#how-boolean-tests-work">4.3. How Boolean tests work</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/loops.html">4.4. Loops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/list_comprehension.html">4.5. List comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/functions.html">4.6. Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/functions_assignment.html">4.7. Functions, loops, and types assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/nims_assignment.html">4.8. Nims assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/recursion.html">4.9. Recursion (advanced)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/student_scholarship_fund_problem.html">4.10. Student scholarship problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/permutation_example.html">4.11. Permutation (advanced)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/summary.html">4.12. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/programming_intro/midterm.html">4.13. Midterm</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/anatomy_introduction.html">5. The Anatomy of a Python program</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/import_statements.html">5.1. Import statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/name_space.html">5.2. Python names and namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/block_structure_indentation.html">5.3. Block structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/functions.html">5.4. Functions and function parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/classes.html">5.5. Classes and class attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/files.html">5.6. Files and file IO streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/help_and_docstrings.html">5.7. Help and doc strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/making_a_script.html">5.8. A Python program</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/putting_it_all_together.html">5.9. Putting it all together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/anatomy/summary.html">5.10. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/text/text_intro.html">6. Introduction to Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/text/putting_it_all_together.html">6.1. Putting it all together</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/text/text_classification.html">6.2. Text Classification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/text/regular_expression_intro.html">6.3. Introduction to Python regular expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Visualization_introduction.html">7. Visualization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Plotting.html">7.1. Plotting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Multidimensional_scaling.html">7.2. Dimensionality reduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Visualizing_Social_Networks.html">7.3. Visualizing Social Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Word_clouds.html">7.4. Word clouds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Twitter_example.html">7.5. Twitter Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/visualization/Python_for_visualization.html">7.6. Python tools for visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/data_intro.html">8. Data Frames</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/arrays.html">8.1. Numpy and Arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/ipython_cookbook_markov_chain_example.html">8.2. A simple Markov chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/ipython_cookbook_markov_chain_example.html#vectorized-operations-multiple-simulations">8.3. Vectorized operations: Multiple simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/data_frames.html">8.4. Data Frames</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/aggregation.html">8.5. Aggregation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/aggregation.html#split-apply-combine">8.6. Split, apply, combine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/PUMS_data.html">8.7. PUMS Census data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/PUMS_data.html#appendix-data-types">8.8. Appendix: Data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/data/numpy_pandas_quiz.html">8.9. Numpy Pandas quiz</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks_intro.html">9. Introduction to Social Networks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks.html">9.1. Social Networks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">9.2. Introduction to Networkx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/using_gephi.html">9.3. Using gephi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/facebook_network_assignment.html">9.4. Facebook Network Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/anna_karenina_network_assignment.html">9.5. Anna Karenina Network Assignment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/geo/geo_intro.html">10. Introduction to Python geo tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/geo/geopy.html">10.1. Introduction to ggeocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/geo/using_shapefiles.html">10.2. Using shapefiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/geo/shapefile_assignment.html">10.3. Shapefile assignment</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/web/web_intro.html">11. Introduction to web-crawling in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/web/urllib.html">11.1. Using urllib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/web/HTMLParser.html">11.2. Using HTMLParser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/web/simple_scraping.html">11.3. Simple scraping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/web/web_crawling.html">11.4. Web Crawling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/web/twitter.html">11.5. The Twitter API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/Assignments.html">12. Assignments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/basic.html">12.1. Basic exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/make_file.html">12.2. Read and create a file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/babynames.html">12.3. Baby names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/word_puzzle.html">12.4. A word puzzle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/turtles.html">12.5. A Turtle problem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/proper_name_gender.html">12.6. A programming task</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/babyname_by_state.html">12.7. Baby names by state</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/ss_card_holders.html">12.8. Social security card holders</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/social_network_questions.html">12.9. Social Network questions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/social_networks_assignment.html">12.10. Social Network Assignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/assorted.html">12.11. Assorted assignments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Assignments/final_projects.html">12.12. Final projects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/References/references.html">13. References</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/index.html">python_for_ss</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/index.html">Docs</a> »</li>
+      
+          <li><a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks_intro.html">9. Introduction to Social Networks</a> »</li>
+      
+    <li>9.2. Introduction to Networkx</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_sources/Social_Networks/Networkx.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="introduction-to-networkx">
+<span id="networkx-intro"></span><h1>9.2. Introduction to Networkx<a class="headerlink" href="#introduction-to-networkx" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Most of the points covered here are covered in
+an ipython notebook (<a class="reference download internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_downloads/using_networkx.ipynb"><code class="xref download docutils literal"><span class="pre">.ipynb</span></code></a>).
+Help with the homework assigned for this module is also available there.</p>
+</div>
+<p>In this section we present a very brief introduction
+to <code class="samp docutils literal"><span class="pre">networkx</span></code>, one of the more widely used Python
+tools for network analysis.
+For the code below to work you must have installed
+packages named <code class="samp docutils literal"><span class="pre">networkx</span></code> and
+(for <code class="samp docutils literal"><span class="pre">graphviz</span></code>) <code class="samp docutils literal"><span class="pre">pydot</span></code>.  These
+are part of the standard Canopy distribution.</p>
+<p>Some additional <code class="samp docutils literal"><span class="pre">networkx</span></code> help:</p>
+<ol class="arabic simple">
+<li>For a tutorial on using <code class="samp docutils literal"><span class="pre">networkx</span></code>,
+look <a class="reference external" href="http://networkx.lanl.gov/">here</a>.
+Detailed documentation of <code class="samp docutils literal"><span class="pre">networkx</span></code> and many resources and tutorials
+are available at the <a class="reference external" href="http://networkx.github.io/">Networkx website.</a>
+But use the Enthought package manager rather than the website
+for installation.</li>
+<li>This <a class="reference external" href="https://www.clear.rice.edu/comp200/resources/howto/networkx.shtml">Rice University Tutorial</a>.
+is very stripped down and very well done.</li>
+</ol>
+<div class="section" id="basics">
+<h2>9.2.1. Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>We will import as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+</pre></div>
+</div>
+<p>Networkx provides some graphs as examples.  One of these happens to be Zachary’s
+karate club.  That can be read in as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">kn</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">karate_club_graph</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>In general, you will be reading in graphs that you construct yourself
+and save in a file in some standard format or that are available as
+course data.   An alternative way of constructing Zachary’s graph is to download <a class="reference download internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_downloads/karate.gml"><code class="xref download docutils literal"><span class="pre">Zachary's</span> <span class="pre">karate</span> <span class="pre">club</span> <span class="pre">network</span></code></a>
+and save this in the directory you start Python in.  GML format is a standard
+graph format <code class="samp docutils literal"><span class="pre">networkx</span></code> knows about,  so that file can be read into Python
+as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">kn</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_gml</span><span class="p">(</span><span class="s">'karate.gml'</span><span class="p">)</span>
+<span class="go">&lt;networkx.classes.graph.Graph object at 0x1014b7f90&gt;</span>
+</pre></div>
+</div>
+<p>You will often find it useful to do:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">filename</span> <span class="o">=</span> <span class="s">'yourfile.gml'</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_gml</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">relabel</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="samp docutils literal"><span class="pre">relabel=True</span></code> flag builds a graph that
+uses names (actually, whatever occurs as value of the <code class="samp docutils literal"><span class="pre">label</span></code>
+attribute) as node identifiers.
+For example, when reading in the <em>Les Miserables</em> graph
+or the <em>Anna Karenina</em> graph, this will give you characters
+identified by their two character IDs.</p>
+<p><code class="samp docutils literal"><span class="pre">networkx</span></code> also provides a number of methods
+that compute statistics of your graph, many of which
+we will discuss below. To get the number of nodes in your graph,
+for example, do:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">num_nodes</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="s">'number of nodes: '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num_nodes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="graph-generators-in-networkx1">
+<h2>9.2.2. Graph generators in <code class="samp docutils literal"><span class="pre">networkx1</span></code><a class="headerlink" href="#graph-generators-in-networkx1" title="Permalink to this headline">¶</a></h2>
+<p><code class="samp docutils literal"><span class="pre">Networkx</span></code> provides a number of functions that generate famous
+graphs. We have already seen one example.  Zachary’s
+karate club graph can be generated with a simple
+function call:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">kn</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">karate_club_graph</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To create a Watts-Strogatz (WS) small world graph, do:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">watts_strogatz_graph</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="o">.</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>G is a WS-graph with 24 nodes, each of which is linked
+to its four nearest neighbors in the original circular layout.
+The probability of rewiring is set to .3. Now draw the result.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">nx</span><span class="o">.</span><span class="n">draw_circular</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>To create an <strong>erdos-renyi</strong> graph with <em>80</em> nodes, and edge
+connection probability <em>.1</em>, do:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">nx</span><span class="o">.</span><span class="n">gnp_random_graph</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For more examples of graphs that can be generated,
+see the <a class="reference external" href="http://networkx.github.io/documentation/latest/reference/generators.html">Networkx docs.</a></p>
+</div>
+<div class="section" id="a-simple-example">
+<h2>9.2.3. A simple example<a class="headerlink" href="#a-simple-example" title="Permalink to this headline">¶</a></h2>
+<p>As our first example, we will reproduce the result discussed
+in the visualization section, in which we visualize
+Zachary’s karate club in  a way which that shows
+the factionalized nature of the social relationships.</p>
+<p>First, download <a class="reference download internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_downloads/karate.gml"><code class="xref download docutils literal"><span class="pre">Zachary's</span> <span class="pre">karate</span> <span class="pre">club</span> <span class="pre">network</span></code></a>
+and save it in your Python directory, if you haven’t already.  Then
+read it into Python:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">kn</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_gml</span><span class="p">(</span><span class="s">'karate.gml'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can now draw the graph:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nx</span><span class="o">.</span><span class="n">draw_circular</span><span class="p">(</span><span class="n">kn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If you are not working in Ipython  with pylab active, you will
+need to execute the <code class="samp docutils literal"><span class="pre">show</span></code> command to actually display the graph:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You may want to make some small adjustments to the
+display in the display window.  You can then save
+the figure in an image file in various formats.  Here we choose “png”,
+a standard webbrowser friendly format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">'networkx_circular_karate.png'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="graph-analysis">
+<h2>9.2.4. Graph analysis<a class="headerlink" href="#graph-analysis" title="Permalink to this headline">¶</a></h2>
+<p><code class="samp docutils literal"><span class="pre">networkx</span></code> has a standard dictionary-based
+format for representing graph analysis computations
+that are based on properties of nodes.</p>
+<p>We will illustrate this with the example of
+<strong>betweenness_centrality</strong>.
+The problem of centrality and the various ways
+of defining it was discussed in Section <a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks.html#social-networks"><span>Social Networks</span></a>.
+As noted there, key facts about the karate graph can be revealed with
+a measure of graph centrality called betweenness centrality.
+<code class="samp docutils literal"><span class="pre">networkx</span></code> offers an implementation, along with a host of
+other graph analysis tools:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">betweenness</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">betweenness_centrality</span><span class="p">(</span><span class="n">kn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Like the other centrality
+measures discussed below,
+<code class="samp docutils literal"><span class="pre">betweenness_centrality</span></code> returns
+a dictionary associating each node in the graph with
+a betweenness score.  Higher is better.  That is, higher means
+that node is evaluated as occupying a more central position in
+the graph:</p>
+<div class="highlight-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">betweenness</span>
+<span class="go">{1: 0.43763528138528146, 2: 0.053936688311688304, 3: 0.14365680615680618,</span>
+<span class="go"> 4: 0.011909271284271283, 5: 0.0006313131313131313, 6: 0.02998737373737374,</span>
+<span class="go"> 7: 0.029987373737373736, 8: 0.0, 9: 0.05592682780182781, 10: 0.0008477633477633478,</span>
+<span class="go"> ...</span>
+<span class="go">}</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Computing centrality measures is often followed by sorting
+the results to find the nodes with highest centrality.
+Here’s an example of how to do that. Dictionaries have
+no concept of order, so to sort their contents you must first
+turn them into lists, and then sort the resulting list:</p>
+<div class="highlight-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">b_il</span> <span class="o">=</span> <span class="n">betweenness</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b_il</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b_il</span>
+<span class="go">[(1, 0.43763528138528146), (34, 0.30407497594997596), (33, 0.14524711399711399),</span>
+<span class="go"> (3, 0.14365680615680618), (32, 0.13827561327561325), (9, 0.05592682780182781),</span>
+<span class="go"> (2, 0.053936688311688304), (14, 0.04586339586339586), (20, 0.03247504810004811),</span>
+<span class="go"> ....</span>
+<span class="go">]</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>So we’ve discovered that node 1 and node 34 have the highest betweenness
+scores, and might therefore be thought to be the most
+central people in this social organization, in accord
+with what is suggested by the display produced by the
+Fruchterman-Reingold algorithm.</p>
+<p>We can compare the results obtained from <code class="samp docutils literal"><span class="pre">betweenness_centrality</span></code> with
+those from <code class="samp docutils literal"><span class="pre">degree_centrality</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">deg</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">degree_centrality</span><span class="p">(</span><span class="n">kn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The results in this case aren’t very different from those of
+betweenness centrality, so we omit them here.</p>
+<p>Other analysis tools implemented in <code class="samp docutils literal"><span class="pre">networkx</span></code>.</p>
+<ol class="arabic simple">
+<li><code class="samp docutils literal"><span class="pre">edge_betweenness(G):</span></code>  Illustrated below in the the
+Girvan-Newman example.</li>
+<li><code class="samp docutils literal"><span class="pre">eigenvector_centrality(G)</span></code>: (also eigenvector_centrality_numpy).
+Explaining this concept of centrality is beyond the
+scope of this course.  It requires computing the eigenvectors
+of the adjacency matrix of the graph, and is closely related
+to pagerank score used by Google to rank the centrality
+of websites on the Internet.</li>
+<li><code class="samp docutils literal"><span class="pre">nx.closeness_centrality(G)</span></code>. Closeness centrality of a node <strong>u</strong> is the
+reciprocal of the sum of the shortest path distances from <strong>u</strong>
+to all <strong>n-1</strong>  other nodes. Since the sum of distances depends on the
+number of nodes in the graph, closeness is normalized by the sum of minimum
+possible distances n-1.  So if node <em>n</em> is a neighbor of all <em>n-1</em>
+other nodes in the graph, closeness_centrality is 1.</li>
+<li><code class="samp docutils literal"><span class="pre">current_flow_betweenness_centrality</span></code>.  This kind
+of centrality was first discussed in <a class="reference internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/References/references.html#newman2003" id="id1">[NEWMAN2003]</a> . Newman
+calls it “random walk centrality”, also known as “current flow
+centrality”.  The current flow
+centrality of a node <em>n</em> can be defined as the probability
+of passing through <em>n</em> on a random walk starting
+at some node <em>s</em> and ending at some other node <em>t</em> (neither
+equal to <em>n</em>),  Newman  argues that betweenness for some social networks
+should not be computed just as a function
+of shortest paths, but of all paths, assigning the
+shortest the greatest weight.  This is because messages in in such
+networks may get to where they’re going not by the shortest
+path, but by a random path, such
+as that of sexual disease through a sexual contact network.</li>
+<li><code class="samp docutils literal"><span class="pre">nx.clustering</span> <span class="pre">coefficient(G)</span></code>:
+clustering(G, nbunch=None, with_labels=False, weights=False)
+Clustering coefficient for each node in nbunch.</li>
+<li><code class="samp docutils literal"><span class="pre">nx.average_clustering(G)</span></code>: Average clustering coefficient for a graph. Note: this is a space
+saving function ; It might be faster to use clustering to get a list and then take average.</li>
+<li><code class="samp docutils literal"><span class="pre">nx.triangles(G,</span> <span class="pre">nbunch=None,</span> <span class="pre">with_labels=False)</span></code>:
+Returns number of triangles for nbunch of nodes as a dictionary.
+If nbunch is None, then return triangles
+for every node. If with_labels is True, return a dict keyed by node.
+Note: Each triangle is counted three times: once at each vertex.  Note if
+G is the graph, and  t is thenumber  triangles of a node n, and d is its degree, then
+:math:
+<cite>nx.clustering_coefficient(G,n) = frac{t}{d(d-1)}</cite></li>
+<li><code class="samp docutils literal"><span class="pre">nx.connected_component_subgraphs(G)</span></code>:  Used in the Girvan-Newman
+implementation below.  This returns
+a list of the fully connected components of graph G.  If the graph is fully
+connected it returns a list containing the graph</li>
+<li><code class="samp docutils literal"><span class="pre">nx.number_connected_components(G)</span></code>:  This just returns the
+length of the list returned by <code class="samp docutils literal"><span class="pre">nx.connected_component_subgraphs(G)</span></code>.</li>
+</ol>
+</div>
+<div class="section" id="implementing-girvan-newman">
+<h2>9.2.5. Implementing Girvan-Newman<a class="headerlink" href="#implementing-girvan-newman" title="Permalink to this headline">¶</a></h2>
+<p>Here is a simple python implementation of the Girvan-Newman graph-partition
+method using <code class="samp docutils literal"><span class="pre">networkx</span></code>.  The source code is
+<a class="reference download internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_downloads/girvan_newman.py"><code class="xref download docutils literal"><span class="pre">here.</span></code></a></p>
+<p>The Girvan-Newman algorithm is divisive.  It tries to find an optimal
+way of cutting the graph into two pieces, and then it does the same on
+the pieces.  Hence the <code class="samp docutils literal"><span class="pre">girvan_newman</span></code> function is recursive.
+Each time it finds a way to split a graph into two optimal
+pieces, it calls itself on the pieces.  It terminates when it is given
+a graph with only one node.  It returns a list of all the components
+it has found:</p>
+<div class="highlight-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+
+<span class="k">def</span> <span class="nf">girvan_newman</span> <span class="p">(</span><span class="n">G</span><span class="p">):</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+    <span class="k">def</span> <span class="nf">find_best_edge</span><span class="p">(</span><span class="n">G0</span><span class="p">):</span>
+        <span class="sd">"""</span>
+<span class="sd">        Networkx implementation of edge_betweenness</span>
+<span class="sd">        returns a dictionary. Make this into a list,</span>
+<span class="sd">        sort it and return the edge with highest betweenness.</span>
+<span class="sd">        """</span>
+        <span class="n">eb</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">edge_betweenness_centrality</span><span class="p">(</span><span class="n">G0</span><span class="p">)</span>
+        <span class="n">eb_il</span> <span class="o">=</span> <span class="n">eb</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="n">eb_il</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">eb_il</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">components</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">connected_component_subgraphs</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">components</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">remove_edge</span><span class="p">(</span><span class="o">*</span><span class="n">find_best_edge</span><span class="p">(</span><span class="n">G</span><span class="p">))</span>
+        <span class="n">components</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">connected_component_subgraphs</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="o">.</span><span class="n">nodes</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">components</span><span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">components</span><span class="p">:</span>
+        <span class="n">result</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">girvan_newman</span><span class="p">(</span><span class="n">c</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Note the use of a
+<code class="samp docutils literal"><span class="pre">while</span></code> loop in line 21.  This keeps removing
+the remaining edge with highest betweenness. Each time an edge is removed
+we recompute the edge with highest betweenness as well as the
+components in the graph.  When we get two components,
+the condition for re-entering the <code class="samp docutils literal"><span class="pre">while</span></code> loop fails,
+and we exit the loop, having
+succeeded in splitting the graph.  For densely connected
+graphs, many edges may have to be removed to split
+the graph.</p>
+</div>
+<div class="section" id="using-weighted-links">
+<h2>9.2.6. Using weighted links<a class="headerlink" href="#using-weighted-links" title="Permalink to this headline">¶</a></h2>
+<p>We read in <a class="reference download internal" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_downloads/weighted_karate.gml"><code class="xref download docutils literal"><span class="pre">a</span> <span class="pre">weighted</span> <span class="pre">version</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">karate</span> <span class="pre">graph</span></code></a>, which has Zachary’s original
+weights for the intensity of the relationship (this was measured by
+how many extra-club activities the two club members shared):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+<span class="n">kn</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">read_gml</span><span class="p">(</span><span class="s">'weighted_karate.gml'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Nex we sort the edge list by weight</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">all_edges</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">kn</span><span class="o">.</span><span class="n">edges</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">kn</span><span class="o">.</span><span class="n">get_edge_data</span><span class="p">(</span><span class="o">*</span><span class="n">x</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s">'value'</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now for each edge we print the edge and its weight:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">Counter</span>
+<span class="n">all_node_ctr</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">all_edges</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">):</span>
+        <span class="n">all_node_ctr</span><span class="p">[</span><span class="n">x</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span> <span class="s">'</span><span class="si">%-4s</span><span class="s"> </span><span class="si">%-4s</span><span class="s"> </span><span class="si">%.3f</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">weight</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre>26   32   7.000
+26   32   7.000
+2    3    6.000
+2    3    6.000
+1    3    5.000
+1    3    5.000
+.....
+</pre></div>
+</td></tr></tbody></table></div>
+<p>Next we sort by degree:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">all_nodes_il</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">all_node_ctr</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">ct</span><span class="p">)</span> <span class="ow">in</span> <span class="n">all_nodes_il</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'</span><span class="si">%4s</span><span class="s">  </span><span class="si">%.3f</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">char</span><span class="p">,</span> <span class="n">ct</span><span class="p">)</span>
+
+<span class="n">top_chars_degree_centrality</span> <span class="o">=</span> <span class="n">all_nodes_il</span><span class="p">[:</span><span class="mi">12</span><span class="p">]</span>
+<span class="k">print</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">ct</span><span class="p">)</span> <span class="ow">in</span> <span class="n">top_chars_degree_centrality</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">'</span><span class="si">%4s</span><span class="s"> </span><span class="si">%.3f</span><span class="s">'</span> <span class="o">%</span> <span class="p">(</span><span class="n">ch</span><span class="p">,</span> <span class="n">ct</span><span class="p">,</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Now we draw.  We’ll use a force-spring layout, and we’ll try increasing spring tension for high weighted edges</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">new_labels_kn</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([(</span><span class="n">char</span><span class="p">,</span><span class="n">char</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">char</span><span class="p">,</span><span class="n">score</span><span class="p">)</span> <span class="ow">in</span> <span class="n">top_chars_degree_centrality</span><span class="p">])</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">weight</span><span class="o">=</span><span class="s">'value'</span><span class="p">)</span> <span class="c">#</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span><span class="n">node_size</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">node_color</span><span class="o">=</span><span class="s">"lightgray"</span><span class="p">)</span>  <span class="c">#Default node size=300</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">new_labels_kn</span><span class="p">,</span><span class="n">font_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span><span class="n">font_color</span><span class="o">=</span><span class="s">'blue'</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">new_labels_kn</span><span class="p">,</span><span class="n">node_color</span><span class="o">=</span><span class="s">'red'</span><span class="p">,</span><span class="n">node_size</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span><span class="n">label_pos</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span><span class="n">node_shape</span><span class="o">=</span><span class="s">'D'</span><span class="p">,</span><span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="coloring-factions">
+<h2>9.2.7. Coloring factions<a class="headerlink" href="#coloring-factions" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="samp docutils literal"><span class="pre">networkx</span></code> version of the karate graph has
+nodes annotated with faction membership information.
+Let’s use that to color our factions.</p>
+<p>The following are the steps taken to produce the colored FG
+layout figure in the lecture notes. Some of the commented out lines show
+experiments you could try.</p>
+<p>Start with faction1_color as the default node color
+We make a list of L tokens of the faction1_color string, where L is the length of kn.nodes()</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#nx.draw_spring(kn)</span>
+<span class="c">#plt.savefig('networkx_spring_karate.png')</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c">#(faction1_col, faction2_col) = ('lightgray','salmon')</span>
+<span class="p">(</span><span class="n">faction1_col</span><span class="p">,</span> <span class="n">faction2_col</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="s">'yellow'</span><span class="p">,</span><span class="s">'lightgreen'</span><span class="p">)</span>
+
+<span class="n">node_color</span> <span class="o">=</span> <span class="p">[</span><span class="n">faction1_col</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">kn</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+<span class="c"># Now using the faction membership abnnotations from Zachary's data, change the known faction2 nodes to faction2_color.</span>
+
+<span class="n">node_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">kn</span><span class="o">.</span><span class="n">nodes</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="bp">True</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">kn</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">node_dict</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="s">'club'</span><span class="p">]</span> <span class="o">==</span> <span class="s">'Officer'</span><span class="p">:</span>
+        <span class="n">node_color</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">faction2_col</span>
+<span class="k">print</span> <span class="n">node_dict</span>
+<span class="k">print</span> <span class="n">node_color</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">1</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">2</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">3</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">4</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">5</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">6</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">7</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">8</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">9</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">10</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">11</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">12</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">13</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">14</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">15</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">16</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">17</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">18</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">19</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">20</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">21</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Mr. Hi'</span><span class="p">},</span> <span class="mi">22</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">23</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">24</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">25</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">26</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">27</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">28</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">29</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">30</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">31</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">32</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">},</span> <span class="mi">33</span><span class="p">:</span> <span class="p">{</span><span class="s">'club'</span><span class="p">:</span> <span class="s">'Officer'</span><span class="p">}}</span>
+<span class="p">[</span><span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'yellow'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">,</span> <span class="s">'lightgreen'</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Next lay out the network:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Now put in the labels, using a label-&gt;new_label mapping. We’ll change the labels to agree with
+Zachary’s original indexing, so <img class="math" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/ac9a233e3acb6d48dfb9e2d4a28b9a059acd08df.png" alt="x \mapsto x+1">.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">new_labels</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">x</span><span class="p">,</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">kn</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">new_labels</span><span class="p">,</span><span class="n">font_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span><span class="n">font_color</span><span class="o">=</span><span class="s">'black'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We’ll highlight the two leader nodes, by drawing slightly larger black circles round them.
+Notice how the edges and nodes have to be drawn separately now.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">,{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="mi">33</span><span class="p">:</span><span class="mi">33</span><span class="p">},</span><span class="n">node_color</span><span class="o">=</span><span class="p">[</span><span class="s">'black'</span><span class="p">,</span><span class="s">'black'</span><span class="p">],</span><span class="n">node_size</span><span class="o">=</span><span class="mi">800</span><span class="p">)</span>
+<span class="c"># Now draw all the nodes, including leaders, using faction color scheme.</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">,</span><span class="n">new_labels</span><span class="p">,</span><span class="n">node_color</span><span class="o">=</span><span class="n">node_color</span><span class="p">,</span><span class="n">node_size</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="n">pos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notes-on-color">
+<h2>9.2.8. Notes on color<a class="headerlink" href="#notes-on-color" title="Permalink to this headline">¶</a></h2>
+<p>For  your choices with matplotlib colors, look  <a class="reference external" href="http://matplotlib.org/api/colors_api.html">here in the matplotlib docs</a>.
+Or you can use direct html color specs replacing line ?? above with something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="p">(</span><span class="n">faction1_col</span><span class="p">,</span> <span class="n">faction2_col</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="s">'#00CCFF'</span><span class="p">,</span><span class="s">'#FF00FF'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This following table shows the HTML color scheme:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_images/hexmap.png"><img alt="../_images/hexmap.png" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/hexmap.png" style="width: 500px;"></a>
+</div>
+</div>
+<div class="section" id="using-the-graphviz-interface">
+<h2>9.2.9. Using the graphviz interface<a class="headerlink" href="#using-the-graphviz-interface" title="Permalink to this headline">¶</a></h2>
+<p>Here is another way to access tools outside of
+Python for graph drawing, in particular
+a popular graph drawing program named <code class="samp docutils literal"><span class="pre">graphviz</span></code>.</p>
+<p>Via the module <code class="samp docutils literal"><span class="pre">pydot</span></code> <code class="samp docutils literal"><span class="pre">networkx</span></code> provides an interface
+to <code class="samp docutils literal"><span class="pre">graphviz</span></code>.  This
+is loaded automatically whenever <code class="samp docutils literal"><span class="pre">graphviz</span></code> -relevant functions
+are called. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">nx</span><span class="o">.</span><span class="n">write_dot</span><span class="p">(</span><span class="n">kn</span><span class="p">,</span><span class="s">'networkx_circular_karate.dot'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This writes a ”.dot” file.  This is a layout neutral representation
+of the graph.  Now graphviz can be called with various layout
+functions to create an image file from the the graph
+representation in <code class="samp docutils literal"><span class="pre">networkx_circular_karate.dot</span></code>.</p>
+<p>The most interesting result for the karate graph was via the graphviz <em>circo</em>
+function:</p>
+<div class="highlight-python"><div class="highlight"><pre>circo -Teps -o networkx_circular_karate_via_dot.eps networkx_circular_karate.dot
+</pre></div>
+</div>
+<p>The result looks like this.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/_images/networkx_circular_karate_via_dot.png"><img alt="../_images/networkx_circular_karate_via_dot.png" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/networkx_circular_karate_via_dot.png" style="width: 300px;"></a>
+</div>
+<p><code class="samp docutils literal"><span class="pre">networkx</span></code> also offers the option of calling
+<code class="samp docutils literal"><span class="pre">graphviz</span></code> layout programs directly and plotting them using
+matplotlib.  For example, <code class="samp docutils literal"><span class="pre">graphviz</span></code> ‘s version of
+a Fruchterman-Reingold layout can be  computed
+as follows:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">networkx</span> <span class="kn">import</span> <span class="n">graphviz_layout</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">layout</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">graphviz_layout</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pos</span> <span class="o">=</span> <span class="n">layout</span><span class="p">(</span><span class="n">pb</span><span class="p">,</span><span class="n">prog</span><span class="o">=</span><span class="s">'sfdp'</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then <code class="samp docutils literal"><span class="pre">networkx</span></code> ‘s interface to plotting facilities can be called.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/using_gephi.html" class="btn btn-neutral float-right" title="9.3. Using gephi">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="http://www-rohan.sdsu.edu/%7Egawron/python_for_ss/course_core/book_draft/Social_Networks/Social_Networks.html" class="btn btn-neutral" title="9.1. Social Networks"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr>
+
+  <div role="contentinfo">
+    <p>
+        © Copyright 2015, Jean Mark Gawron.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org/">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/jquery.js"></script>
+      <script type="text/javascript" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/underscore.js"></script>
+      <script type="text/javascript" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="9.2.%20Introduction%20to%20Networkx%20%E2%80%94%20python_for_ss%200.1.1%20documentation_files/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+
+<div style="right: 93px ! important; bottom: 93px ! important;" class="" id="UNIQUE_ID-ghostery"><div id="UNIQUE_ID-box-shadow"></div><div id="UNIQUE_ID-box-pulse"></div><div id="UNIQUE_ID-box-background"></div><div id="UNIQUE_ID-box-menu"><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-back"></div><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-hide">Hide Box</div><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-settings">Settings</div><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-dismiss">Dismiss <span>after 15 seconds</span></div><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-position">Display <span>in Bottom Right</span></div></div><div id="UNIQUE_ID-box-list"></div><div id="UNIQUE_ID-box-main"><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-options"></div><div class="UNIQUE_ID-button" id="UNIQUE_ID-box-trackers-text">Looking</div><div style="right: 41.5px ! important; bottom: 49px ! important;" class="UNIQUE_ID-button" id="UNIQUE_ID-box-trackers-count">0</div></div></div></body></html>
