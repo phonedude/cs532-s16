@@ -1,0 +1,10 @@
+#!/cygdrive/c/Users/jacob_000/Desktop/CS432/assignmentTwo/venv/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'twitter==1.17.1','console_scripts','twitterbot'
+__requires__ = 'twitter==1.17.1'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('twitter==1.17.1', 'console_scripts', 'twitterbot')()
+    )

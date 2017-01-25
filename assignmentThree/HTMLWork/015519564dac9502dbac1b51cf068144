@@ -1,0 +1,1543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" class="">
+<head>
+<script>window._t={start:(new Date).getTime()};</script>
+
+<base href="//dailynewsx.net" />
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="google" value="notranslate">
+<meta http-equiv="x-dns-prefetch-control" content="off" />
+
+<meta http-equiv="Content-Language" content="en" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<meta property="og:image" content="http://likes.images.s3.amazonaws.com/img/36e0ffa5e6cdf44f428bd00a06be4a6d" />
+
+<meta name="twitter:image:src" content="http://likes.images.s3.amazonaws.com/img/36e0ffa5e6cdf44f428bd00a06be4a6d" />
+
+
+<title>
+ dailynewsx
+</title>
+<link type="text/css" rel="stylesheet" href="//o.mlv-cdn.com/s/479028efe2d2299fd3614f9f7153a763/sky__custom_theme_arcadia.css" />
+
+
+<link href='//fonts.googleapis.com/css?family=Poiret+One|Montserrat:400,700|Fjalla+One|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Alegreya+Sans:700|Alegreya+Sans:700|Fjalla+One|Alegreya+Sans:700|Fjalla+One|Montserrat:400,700|Alegreya+Sans:700|Fjalla+One|Alegreya+Sans:700|Montserrat:400,700|Fjalla+One|Candal|Montserrat:400,700|Fjalla+One|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Candal|Alegreya+Sans:700|Fjalla+One|Montserrat:400,700|Candal|Candal|Fjalla+One|Montserrat:400,700|Montserrat:400,700|Fjalla+One|Montserrat:400,700|Montserrat:400,700|Alegreya+Sans:700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Alegreya+Sans:700|Montserrat:400,700|Montserrat:400,700|Montserrat:400,700|Fjalla+One|Fjalla+One|Passion+One' rel='stylesheet' type='text/css'>
+
+<link rel="icon" type="image/x-icon" href="/images/favicons/template_favicons/arcadia/sky.ico" />
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4983970-4']);
+var _gaq_var_index = 1;
+</script>
+
+<script id="bounce_tracking" type="text/javascript">
+    function supports_localstorage() {
+        try {
+            return 'localStorage' in window && window['localStorage'] !== null;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function setup_bounce_tracking(ad_doc) {
+        ad_doc = ad_doc || document;
+        if (!ad_doc.querySelectorAll){
+            setTimeout(function(){setup_bounce_tracking(ad_doc)}, 20);
+        }
+        var bounce_ad_slots = ad_doc.querySelectorAll('a[slot_id]');
+        if (bounce_ad_slots.length) {
+            for (var i = 0; i < bounce_ad_slots.length; i++) {
+                bounce_ad_slots[i].addEventListener("click", function(e) {
+                    if (supports_localstorage()) {
+                        localStorage.setItem('back_info_time', "" + Math.round((new Date()).getTime() / 1000));
+                        localStorage.setItem('back_info_pid', "" + this.getAttribute('prid'));
+                        localStorage.setItem('back_info_slot', "" + this.getAttribute('slot_id'));
+                        if (window.likes_tracking) {
+                            localStorage.setItem('back_info_cid', "" + window.likes_tracking.pv_params.click_id);
+                            localStorage.setItem('back_info_p', "" + window.likes_tracking.pv_params.page_type);
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+</script>
+
+<script type="text/javascript">
+var likes_tracking_create = function() {
+    var obj = {};
+
+
+    obj.pvid = null;
+    obj.load_dt = new Date();
+    obj.load_ts = obj.load_dt.getTime();
+    obj.event_log = [];
+    obj.imp_event_index = -1;
+    obj.sent_index = 0;
+    obj.network_ads_by_position = new Array();
+    obj.pending_timeouts = [];
+    obj.tracking_in_progress = false;
+    obj.tracking_hbs = [];
+    obj.imp_events_timeout = 100;
+    obj.bad_ad_detect_ms = 4000;
+    obj.bad_ad_detect_throttle = 100;
+    obj.detect_bad_ads = (Math.random()*100 <= obj.bad_ad_detect_throttle);
+    obj.report_pubm_throttle = 0;
+    obj.report_pubm_ads = function() {return (Math.random()*100 <= obj.report_pubm_throttle);}
+    obj.report_appnexus_throttle = 0;
+    obj.report_appnexus_ads = function() {return (Math.random()*100 <= obj.report_appnexus_throttle);}
+    obj.record_event_log_throttle = 0;
+    obj.should_record_event_log = function() {return (Math.random()*100 <= obj.record_event_log_throttle);}
+
+
+
+    obj.is_final_network_ad = function(event) {
+        var final = false;
+        return final;
+    };
+
+    obj.get_potential_bad_ads = function(pagehide_event) {
+        var potentials = [];
+        var i, event;
+        for (i = 0; i < obj.event_log.length; i++) {
+            event = obj.event_log[i];
+            if (event.type == "begin_pubmatic_render" && pagehide_event.latency_ms - event.latency_ms < obj.bad_ad_detect_ms) {
+                potentials.push(event);
+            }
+        }
+        return potentials;
+    };
+
+    obj.report_bad_ads = function() {
+        if (!obj.detect_bad_ads) {
+            return;
+        }
+        var i, j, event, ad;
+        var report = [];
+        var reported_events = [];
+        for (i = 0; i < window.likes_tracking.event_log.length; i++) {
+            event = window.likes_tracking.event_log[i];
+            if (event.type == 'pagehide' && event.potential_bad_ads.length > 0 && !event.reported) {
+                for (j = 0; j < event.potential_bad_ads.length; j++) {
+                    ad = event.potential_bad_ads[j];
+                    report.push({'url': ad.ad.PubMatic_Bid.landing_page,
+                                'tag': ad.ad.PubMatic_Bid.creative_tag,
+                                'cpm': ad.ad.PubMatic_Bid.ecpm,
+                                'pos': ad.position,
+                                'loc': '',
+                                'suspect': 1});
+                }
+                reported_events.push(event);
+            }
+        }
+        if (report.length > 0) {
+            $.ajax({
+                url: '//' + window.location.host + '/api/record_pubmatic_ads',
+                type: 'POST',
+                   dataType: 'json',
+                   data: {'report': JSON.stringify(report)},
+                   context: {'reported_events': reported_events},
+                   success: function() {
+                       var events = this.reported_events;
+                       for (var j = 0; j < events.length; j++) {
+                           events[j].reported = 1;
+                       }
+                   },
+            });
+        }
+    };
+
+    obj.track_event = function(event) {
+        event.latency_ms = (new Date).getTime() - obj.load_ts;
+        obj.event_log.push(event);
+        if (obj.is_final_network_ad(event)) {
+            var orig_imp_event_index = obj.imp_event_index;
+            obj.imp_event_index = obj.event_log.length - 1;
+            if (orig_imp_event_index <= obj.sent_index && window.$) {
+                obj.pending_timeouts.push(window.setTimeout(obj.send_events, obj.imp_events_timeout));
+            }
+        }
+    };
+
+    obj.track_house_ad = function(ad_slot) {
+        var h_event = {'network': 'mylikes',
+                       'slot_name': ad_slot.slot_name,
+                       'promo_id': ad_slot.promo_id,
+                       'promo_hash': ad_slot.promo_hash,
+
+                       'type': 'ad_slot_rendered'};
+        if (ad_slot.csrc) {
+            h_event.csrc = ad_slot.csrc;
+        }
+        obj.track_event(h_event);
+    };
+
+    obj.get_new_track_id = function() {
+        var random = Math.floor(Math.random()*90000) + 10000;
+        return +((obj.pv_params.click_id + '') + (random + ''))
+    };
+
+    obj.update_ads_data = function(send_params, event_log) {
+        var house_ads = '';
+        var network_ads = '';
+        var redis_ads = '';
+        obj.network_ads_by_position = new Array();
+        var i = 0;
+        js_bundle = window.pass_to_js || window.PageData;
+        for (; i < event_log.length; i++) {
+            if (event_log[i]['network'] == 'mylikes' && event_log[i]['type'] == 'ad_slot_rendered') {
+                delimiter = '';
+                var event = event_log[i];
+                if (event.rotate_list && event.rotate_list.length){
+                    event = event.rotate_list[event.active_promo];
+                }
+                var process_redis_imp = false;
+                var process_house_ad = true;
+                if (event['tracking_infos']) {
+                    tracking_infos = event['tracking_infos'];
+                    house_ads += ',{';
+                    if (tracking_infos[0] && tracking_infos[0]['base_slot_name']){
+                        if (js_bundle && js_bundle.ad_page_slots.indexOf(tracking_infos[0]['base_slot_name']) == -1) {
+                            process_redis_imp = obj.track_redis_imps;
+                            process_house_ad = !obj.skip_house_ad;
+                        }
+                        if (process_house_ad) {
+                            house_ads += '"base_slot_name":"' + tracking_infos[0]['base_slot_name'] + '"';
+                        }
+                        delimiter = ',';
+                    }
+                    if (process_house_ad) {
+                        house_ads += delimiter + '"pairs":' + '[';
+                    }
+                    if (process_redis_imp) {
+                        redis_ads += '::' + event['slot_id'];
+                    }
+                    var pair_iterator = (event.refresh_count) ? event.promo_list : event.tracking_infos;
+                    for (var j = 0; j < pair_iterator.length; j++) {
+                        if (process_house_ad) {
+                            if (j != 0) {
+                                house_ads += ',';
+                            }
+                            house_ads += '[';
+                        }
+                        if (pair_iterator[j]['promo_id']){
+                            if (process_house_ad) {
+                                house_ads += '"' + pair_iterator[j]['promo_id'] + '"';
+                            }
+                            if (process_redis_imp) {
+                                redis_ads += ',' + pair_iterator[j]['promo_id'];
+                            }
+                        }
+                        if (pair_iterator[j]['promo_hash']){
+                            if (process_house_ad) {
+                                house_ads += ',"' + pair_iterator[j]['promo_hash'] + '"';
+                            }
+                            if (process_redis_imp) {
+                                redis_ads += ':' + pair_iterator[j]['promo_hash'];
+                            }
+                        }
+                        if (process_house_ad) {
+                            house_ads += ']';
+                        }
+                    }
+                    if (process_house_ad) {
+                        house_ads += ']';
+                    }
+                    house_ads += '}';
+                } else {
+                    if (js_bundle && js_bundle.ad_page_slots.indexOf(event['slot_name']) == -1) {
+                        process_redis_imp = obj.track_redis_imps;
+                        process_house_ad = !obj.skip_house_ad;
+                    }
+                    if (process_house_ad) {
+                        house_ads += ',{';
+                        }
+                    if (event['position'] && process_house_ad){
+                        house_ads += '"position":"' + event['position'] + '"';
+                        delimiter = ',';
+                    }
+                    if (process_redis_imp) {
+                        redis_ads += '::' + event['slot_id'];
+                    }
+                    if (event['promo_id']){
+                        if (process_house_ad) {
+                            house_ads += delimiter + '"promo_id":"' + event['promo_id'] + '"';
+                        }
+                        delimiter = ',';
+                        if (process_redis_imp) {
+                            redis_ads += ',' + event['promo_id'];
+                        }
+                    }
+                    if (event['slot_name'] && process_house_ad){
+                        house_ads += delimiter + '"slot_name":"' + event['slot_name'] + '"';
+                        if (event['slot_name'].indexOf('ad_page_') == 0) {
+                            if (event.csrc) {
+                                house_ads += ',"csrc":"' + event.csrc + '"';
+                            }
+                        }
+                        delimiter = ',';
+                    }
+                    if (event['promo_hash']){
+                        if (process_house_ad) {
+                            house_ads += delimiter + '"promo_hash":"' + event['promo_hash'] + '"';
+                        }
+                        delimiter = ',';
+                        if (process_redis_imp) {
+                            redis_ads += ':' + event['promo_hash'];
+                        }
+                    }
+                    if (event['slot_id'] && process_house_ad){
+                        house_ads += delimiter + '"slot_id":"' + event['slot_id'] + '"';
+                    }
+                    if (process_house_ad) {
+                        house_ads += '}';
+                    }
+                }
+            } else if (obj.track_network_ads) {
+                if (!event_log[i]['type']
+                    || (event_log[i]['type'] != 'attempted_passback' && event_log[i]['type'] != 'ad_slot_rendered' && event_log[i]['type'] != 'pubmatic_api_response' && event_log[i]['type'] != 'amazon_response' && event_log[i]['type'] != 'appnexus_api_response')
+                    || !event_log[i]['network']
+                    || !event_log[i]['position']) {
+                    continue;
+                }
+                var position = event_log[i]['position'];
+                var network = event_log[i]['network'];
+                js_bundle = window.pass_to_js || window.PageData;
+                if (network in js_bundle.net_names && js_bundle.experiment_config.shorten_net_names) {
+                    network = js_bundle.net_names[network];
+                }
+                var cpm = event_log[i]['cpm'];
+                var state = '';
+                if (position in obj.network_ads_by_position) {
+                    state = obj.network_ads_by_position[position];
+                }
+                state += ',{';
+                state += '"' + network + '":';
+                if (cpm != null){
+                    cpm = Math.round(cpm*1000)/1000;
+                    state += '[';
+                    state += event_log[i]['latency_ms'];
+                    state += ',' + cpm;
+                    state += ']';
+                } else {
+                    state += event_log[i]['latency_ms'];
+                }
+                state += '}';
+                obj.network_ads_by_position[position] = state;
+            }
+        }
+
+        for (var position in obj.network_ads_by_position) {
+            if (obj.network_ads_by_position.hasOwnProperty(position)) {
+                state = obj.network_ads_by_position[position];
+                network_ads += ',"' + position + '":[' + state.substr(1) + ']';
+            }
+        }
+
+        obj.sent_index += i;
+        if (house_ads.length > 0){
+            house_ads = house_ads.substr(1);
+        }
+        if (network_ads.length > 0){
+            network_ads = network_ads.substr(1);
+        }
+        send_params['house_ads'] = '[' + house_ads + ']';
+        send_params['network_ads'] ='[{' + network_ads + '}]';
+        if (redis_ads.length > 0) {
+            send_params['redis_ads'] = redis_ads.substr(2);
+        }
+    };
+
+    obj.record_event_log = function() {
+        if (!window.top.likes_tracking.event_log){
+            return;
+        }
+        var event_log = escape(JSON.stringify(window.top.likes_tracking.event_log));
+        var data = {
+            'event_log':event_log,
+            'page_url': window.top.location.href,
+        };
+        if (window.top.likes_ad_server.rtb_errors && window.top.likes_ad_server.rtb_errors.length){
+            data['errors'] = escape(JSON.stringify(window.top.likes_ad_server.rtb_errors));
+            window.top.likes_ad_server.rtb_errors = [];
+        }
+        $.ajax({
+            url: '/api/record_event_log',
+               type: 'POST',
+               data: data,
+        });
+    }
+
+    obj.send_events = function(cancel_pending) {
+        if (obj.tracking_in_progress || obj.pvid < 0) {
+            return;
+        }
+
+        if (cancel_pending) {
+            obj.cancel_pending();
+        }
+
+        var send_params = {};
+        for (var k in obj.pv_params) {
+            if (obj.pv_params.hasOwnProperty(k) && obj.pv_params[k]) {
+               send_params[k] = obj.pv_params[k];
+            }
+        }
+
+        try {
+            if ((obj.should_record_event_log() && obj.pvid) || (window.top.likes_ad_server && window.top.likes_ad_server.rtb_errors && window.top.likes_ad_server.rtb_errors.length)){
+                obj.record_event_log();
+            }
+        } catch (e) {}
+
+        /*
+        // We only need to send data if we have pending events in the event log
+        // or if we have not yet recorded a pageview (pvid == null)
+        */
+        if (obj.sent_index < obj.event_log.length) {
+            obj.update_ads_data(send_params, obj.event_log.slice(obj.sent_index));
+        } else {
+            if (obj.pvid) {
+                return;
+            }
+        }
+
+        if (!obj.pvid || obj.pvid < 0) {
+            send_params['track_id'] = obj.current_track_id;
+        } else {
+            send_params['pvid'] = obj.pvid;
+        }
+        var method = obj.pvid ? 'update_pv' : 'track_pv';
+        if (method == 'update_pv') {
+            if (!obj.track_network_ads && obj.track_house_ads ) {
+                if (send_params.house_ads == "[]" && !send_params.redis_ads) {
+                    return;
+                } else {
+                    send_params.network_ads = "[{}]";
+                }
+            } else if (obj.track_network_ads && !obj.track_house_ads) {
+                if (send_params.network_ads == "[{}]") {
+                    return;
+                } else {
+                    send_params.house_ads = "[]";
+                }
+            } else if (!obj.track_network_ads && !obj.track_house_ads) {
+                return;
+            }
+        }
+        $.ajax({
+            url: '//' + window.location.host + '/api/' + method,
+            type: 'POST',
+            dataType: 'json',
+            beforeSend: function() {
+               obj.tracking_in_progress = true;
+            },
+            data: send_params,
+            success: function(result) {
+               if (result && !obj.pvid && result.pvid) {
+                    obj.pvid = result.pvid;
+                    obj.ncvid = result.ncvid;
+               }
+            },
+            complete: function() {
+                obj.tracking_in_progress = false;
+                if (!obj.pvid) obj.pvid = -1;
+                if (obj.sent_index < obj.imp_event_index) {
+                    obj.send_events();
+                }
+            }
+        });
+    };
+
+    obj.cancel_pending = function() {
+        if (obj.pending_timeouts) {
+            while ((t = obj.pending_timeouts.pop()) != null) {
+                window.clearTimeout(t);
+            }
+        }
+    };
+
+
+
+
+
+
+    obj.start_tracking = function(track_id, page_type, page_num, gallery_id) {
+        if (window.top.likes_ad_passbacks){
+            window.top.likes_ad_passbacks.clear_valid_passbacks();
+        }
+    };
+
+    if (window.top.likes_tracking) {
+        window.top.likes_tracking.cancel_pending();
+    }
+
+    window.likes_tracking = obj;
+    window.top.likes_tracking = window.likes_tracking;
+};
+
+likes_tracking_create();
+
+window.onbeforeunload = function() {
+    if (window.top.likes_tracking) {
+        window.top.likes_tracking.send_events(true);
+    }
+    return;
+};
+
+</script>
+<script type="text/javascript">
+window.addEventListener("pagehide", function(e) {
+    if (window.likes_tracking) {
+        var event = {'type': 'pagehide'};
+        window.likes_tracking.track_event(event);
+        event.potential_bad_ads = window.likes_tracking.get_potential_bad_ads(event);
+    }
+}, false);
+window.addEventListener("pageshow", function(e) {
+    if (window.likes_tracking) {
+        window.likes_tracking.report_bad_ads();
+    }
+}, false);
+</script>
+
+<script type="text/javascript">
+try {
+(function() {
+    var obj = {};
+    obj.p_list = [];
+    obj.completed = {};
+    obj.loops = {};
+    obj.load_ts = (new Date).getTime();
+    obj.valid_passbacks = {};
+
+    obj.clear_valid_passbacks = function(){
+        obj.valid_passbacks = {};
+    }
+
+    obj.create_iframe = function (width, height, defer_size_ms) {
+        var ifrm = document.createElement('iframe');
+        ifrm.setAttribute('margin', '0 auto');
+        ifrm.setAttribute('padding', '0');
+        ifrm.setAttribute('frameBorder', '0');
+        if (!defer_size_ms) {
+            ifrm.setAttribute('width', width + '');
+            ifrm.setAttribute('height', height + '');
+        } else {
+            ifrm.setAttribute('width', '0');
+            ifrm.setAttribute('height', '0');
+        }
+        ifrm.setAttribute('scrolling','no');
+        try {
+            if (width == 1 && height == 1) {
+                ifrm.style.float = "left";
+            }
+            ifrm.style.margin = "0px auto";
+            ifrm.style.padding = "0px";
+            ifrm.style.border = '0px none';
+            if (!defer_size_ms) {
+                ifrm.style.width = width + "px";
+                ifrm.style.height = height + "px";
+            }
+            ifrm.style.overflow = 'hidden';
+        } catch (e) {
+        }
+        return ifrm;
+    };
+    obj.hide_all_in_div = function(ad_div_id) {
+        var ad_div = document.getElementById(ad_div_id);
+        if (ad_div) {
+            for (var i = 0; i < ad_div.childNodes.length; i++) {
+                if (ad_div.childNodes[i].style) {
+                    ad_div.childNodes[i].style.display = 'none';
+                }
+            }
+            if (document.getElementById("bottom_mobile_ad") && document.getElementById("bottom_mobile_ad").classList)
+                document.getElementById("bottom_mobile_ad").parentNode.classList.remove("dummy_ad_wrapper");
+        }
+        return ad_div;
+    };
+    obj.render_ad = function(ad_div_id, width, height, ad_script, ad_src, defer_size_ms, network, position) {
+        if (network && position){
+            obj.valid_passbacks[network + "." + position] = 1;
+        }
+        var ad_div = window.likes_ad_passbacks.hide_all_in_div(ad_div_id);
+        if (ad_div) {
+            var dummy_ad;
+            if (ad_src.indexOf("dummy_mob_bottomtall") > -1) {
+                width = 0;
+                height = 0;
+                dummy_ad = 1;
+            }
+            var ifrm = window.likes_ad_passbacks.create_iframe(width, height, defer_size_ms);
+            ad_div.appendChild(ifrm);
+            if (!defer_size_ms) {
+                ad_div.width = width;
+                ad_div.height = height;
+            } else {
+                ifrm.onload = function() {
+                    window._defered_size_timeout = setTimeout(function() {
+                        ifrm.width = width;
+                        ifrm.height = height;
+                    }, defer_size_ms);
+                };
+            }
+            if (dummy_ad && ad_div_id == "bottom_mobile_ad") {
+                ad_div.parentNode.classList.add("dummy_ad_wrapper");
+            }
+            if (ad_src) {
+                ifrm.src = ad_src;
+            } else {
+                ifrm.src = 'javascript:document.write(unescape("' + escape(ad_script) + '"));document.close();';
+            }
+
+            return true;
+        }
+        return false;
+    };
+
+    obj.render_passback = function(network, position, div_id) {
+        if (window.top.likes_tracking) {
+            window.top.likes_tracking.track_event({'type': 'attempted_passback', 'network': network, 'position': position});
+        }
+        if (network == "criteo" && position == "top"){
+            window.likes_ad_passbacks.criteo_top_reload = true;
+        }
+
+        if (((network == "openx_lowval") || (network == "fedmedia_passback")) && position == "right") {
+            clearTimeout(window._defered_size_timeout);
+            obj.hide_all_in_div("ad_slot_right");
+            //document.getElementById("ad_slot_right").innerHTML = '';
+            var spacing_div = document.createElement('div');
+            spacing_div.setAttribute('style', 'height:6px');
+            document.getElementById("ad_slot_right").appendChild(spacing_div);
+        }
+        var key = network + '_' + position;
+        if (key in window.likes_ad_passbacks.completed) {
+            likes_ad_passbacks.loops[key] = 1;
+            return false;
+        }
+        for (var i = 0; i < window.likes_ad_passbacks.p_list.length; i++) {
+            var p = window.likes_ad_passbacks.p_list[i];
+            if ((p.network == network) && (p.position == position)) {
+                if (p.to_network == "mylikes") {
+                    window.likes_ad_server.render_any_ad_when_available(position);
+                    return true;
+                }
+                if (window.likes_ad_passbacks.render_ad(div_id || p.div_id, p.width, p.height, p.passback_slot_script, p.passback_iframe_src, p.defer_size_ms,p.to_network, p.position)) {
+                    window.likes_ad_passbacks.completed[key] = 1;
+                    return true;
+                }
+            }
+        }
+        if (window.likes_ad_server && (network == "openx_lowval" || network == "criteo") && position == "right") {
+            if (!window.likes_ad_server.render_better_ad("right", 0, "ad_slot_right") && !window.likes_ad_server.networks.amazon.ready) {
+                window.likes_ad_server.add_rtb_ready_listener("right", function(){
+                    window.likes_ad_server.clear_rtb_ready_listener("right");
+                    window.likes_ad_server.render_better_ad("right", 0, "ad_slot_right");
+                });
+            }
+        } else {
+            window.likes_ad_server.render_any_ad_when_available(position);
+        }
+    };
+
+    window.likes_ad_passbacks = obj;
+    window.top.likes_ad_passbacks = obj;
+})();
+} catch (e) {
+    window.likes_ad_passbacks = {
+        'render_passback': function(a, b) {}
+    };
+}
+</script>
+
+
+
+
+
+
+</head>
+<!--[if lte IE 9 ]> <body class="ie8  "> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <body class="not_ie   "> <!--<![endif]-->
+
+
+
+<div id="user_page_header_wrapper">
+<div id="header_outer" class="">
+<div id="logo_outer">
+<div id="logo_inner" class="row">
+<a id="logo" href="http://dailynewsx.net">dailynewsx</a>
+</div>
+</div>
+<div class="logo_nav">
+<a class="nav_sort" href="?sort=shared">Popular</a>
+<a class="nav_sort" href="?sort=trending">Trending</a>
+<a class="nav_sort" href="?sort=homepage_new">New</a>
+</div>
+<div class="header_img_link" style="background-image:url('http://img-cdn.likes.com/img/36e0ffa5e6cdf44f428bd00a06be4a6d')">
+<div class="image-container">
+<img id="small_header_img" src="http://img-cdn.likes.com/img/36e0ffa5e6cdf44f428bd00a06be4a6d" alt="">
+</div>
+<div class="header_img_title">
+<a href="http://dailynewsx.net/her-brain-was-fried-by-ecstasy-what-she-now-looks-like-you-ll-never-believe" class="header_img_link">
+Her Brain was Fried by Ecstasy. What she Now Looks Like, You’ll Never Believe!
+<div class="post_info">
+#brain 566
+</div>
+</a>
+</div>
+</div>
+
+<div class="header_categories">
+<a class="tab first  " href="http://dailynewsx.net/?q=funny">funny</a>
+<a class="tab  " href="http://dailynewsx.net/?q=weird">weird</a>
+<a class="tab  " href="http://dailynewsx.net/?q=photography">photography</a>
+<a class="tab  " href="http://dailynewsx.net/?q=celebrity">celebrity</a>
+<a class="tab  " href="http://dailynewsx.net/?q=comedy">comedy</a>
+<a class="tab  " href="http://dailynewsx.net/?q=art">art</a>
+
+</div>
+</div>
+</div>
+
+
+
+<div id="posts_container">
+<div id="main_row_outer">
+<div id="main_row" class="row">
+<div id="main_col" class="col-8">
+<h3 class="sec tag">Newest</h3>
+
+<a class="list_post" href="http://dailynewsx.net/old-woman-beaten">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/e0bb69ef513785e3cc2aeb73e4479c4a')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Daughter's Hidden Camera Catches The Brutal Beating Of 94 Year Old Grandma</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">Daughter's Hidden Camera Catches The Brutal Beating Of 94 Year Old Grandma</p>
+<p class="desc">When people think they aren't being watched they can be awful; luckily this woman had a camera. </p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#abuse</span>&nbsp;&#124;&nbsp; 623695 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/can-you-guess-which-one-is-photoshopped-2">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/80081714622a802b391f9a184c694ce5')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Can You Guess Which One is Photoshopped?</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">Can You Guess Which One is Photoshopped?</p>
+<p class="desc">Look closely. It may be hard to tell.</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#guess</span>&nbsp;&#124;&nbsp; 167578 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/reasons-to-check-behind-you-before-snapping-that-selfie">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/989a98e9e56b867c4bb5499b20a39e07')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Reasons To Check Behind You Before Snapping That Selfie</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">Reasons To Check Behind You Before Snapping That Selfie</p>
+<p class="desc">If you want to take a great selfie, be mindful of what's behind you. No one wants to see your dirty toilet, or worse yet, don't fall.</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#behind you</span>&nbsp;&#124;&nbsp; 1257079 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/there-is-a-right-way-to-brush-and-there-is-a-wrong-way-find-out-what-works">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/bdd4f1be4aeafa6b0803d78bb782727a')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">There Is A Right Way To Brush And There Is  A Wrong Way - Find Out What Works</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">There Is A Right Way To Brush And There Is  A Wrong Way - Find Out What Works</p>
+<p class="desc">do it right</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#brushing</span>&nbsp;&#124;&nbsp; 258373 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/reasons-to-check-behind-you-before-snapping-that-selfie-1">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/72abe931f777401413295fdc1f76ede7')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Reasons To Check Behind You Before Snapping That Selfie</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">Reasons To Check Behind You Before Snapping That Selfie</p>
+<p class="desc">Next time look BEHIND YOU!</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#check</span>&nbsp;&#124;&nbsp; 303427 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/this-girl-has-a-pretty-face-but-it-s-her-body-that-will-surprise-you-wow">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/82da471810bcf9d528912abf338075a0')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">This Girl Has A Pretty Face, But It's Her Body That Will Surprise You... WOW!</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">This Girl Has A Pretty Face, But It's Her Body That Will Surprise You... WOW!</p>
+<p class="desc">Not everything is as it seems at first glance.</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#beauty</span>&nbsp;&#124;&nbsp; 613217 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/the-perfect-guide-to-what-your-children-might-look-like">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/0fa1b873246a2f3a80c88ec6646a771a')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">The Perfect Guide To What Your Children Might Look Like</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">The Perfect Guide To What Your Children Might Look Like</p>
+<p class="desc">A look at genetics and dominant traits.</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#babies</span>&nbsp;&#124;&nbsp; 1245298 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/eminem-s-daughter-hailie-jade-is-all-grown-up-you-won-t-believe-what-she-looks-like-now">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/c49642e38d31ded1809a1715f2ee6071')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Eminem's Daughter Hailie Jade Is ALL grown up! You Won't Believe What She Looks Like No...</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">Eminem's Daughter Hailie Jade Is ALL grown up! You Won't Believe What She Looks Like No...</p>
+<p class="desc">Did you know that Eminem had a daughter? Did you know that she's not a little girl anymore?</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#daughter</span>&nbsp;&#124;&nbsp; 1466076 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/94-of-people-failed-to-answer-this-1">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/47d7500129a60524c1652231f830689f')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">94% of People FAILED to Answer this...</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">94% of People FAILED to Answer this...</p>
+<p class="desc">Can you Answer this Correctly?</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+602299 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/a-husband-divorced-his-wife-after-looking-closer-at-this-photo-he-took-of-her-10">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/128f55ee69c324fe745eaff752399ca8')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">A Husband Divorced His Wife After Looking Closer At This Photo He Took Of Her</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">A Husband Divorced His Wife After Looking Closer At This Photo He Took Of Her</p>
+<p class="desc">After this husband was away for 20 days, he returned to take this photo of her, then he took a closer look . . .</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#creepy</span>&nbsp;&#124;&nbsp; 241997 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/pictures-that-will-surely-make-your-day-6-is-actually-needed">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/740b66d6941d9cb7cc5a04b44776cacb')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Pictures That Will Surely Make Your Day. #6 Is Actually Needed</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">Pictures That Will Surely Make Your Day. #6 Is Actually Needed</p>
+<p class="desc">Put a smile on your face! </p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#best</span>&nbsp;&#124;&nbsp; 282514 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+<a class="list_post" href="http://dailynewsx.net/the-evolution-of-kim-and-kylie-s-faces-is-freaky">
+<div class=" image_wrapper">
+<div class="list_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/a6d0b045cd48c769ff498359bcc30a31')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">The Evolution Of Kim And Kylie's Faces Is FREAKY!</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+<div class="list_txt">
+<p class="title">The Evolution Of Kim And Kylie's Faces Is FREAKY!</p>
+<p class="desc">We've seen the Kardashians grow and change, but Kim and Kylie's faces changed A LOT over the years.</p>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>#change</span>&nbsp;&#124;&nbsp; 877402 <span class="shares_text">views</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+
+</a>
+
+
+
+</div>
+<div id="right_col" class="col-4">
+<h3 class="share_title">Share this</h3>
+<div class="social_links">
+<a class="fb_link" href="https://www.facebook.com/sharer/sharer.php?u=dailynewsx.net" onclick="window.open($(this).attr('href'),'fb_popup','width=600,height=310');return false;"  gallery_share_url="dailynewsx.net"
+ ></a>
+<a class="twitter_link" onclick="window.open($(this).attr('link'),'twitter_popup','width=600,height=460');" link="https://twitter.com/share?url=dailynewsx.net&text=dailynewsx.net" ></a>
+</div>
+
+<div class="subscribe_option">
+<form class="email_form">
+<h2>Get the latest right in your inbox!</h2>
+<div class="email_sect">
+<input type="email" class="email_input side_email" placeholder="Email Address" />
+<button type="submit" class="subscribe_btn side">Subscribe</button>
+</div>
+</form>
+</div>
+<h3 class="trending">Must Read</h3>
+<a class="rect_side" href="http://dailynewsx.net/this-girl-lived-on-3-apples-a-day-for-8-months-here-s-what-she-looks-like-now">
+<div class="rect_side_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/547628008868c2f37907cd417708358d')">
+
+</div>
+<div class="rect_side_txt">
+<span class="rect_title">This Girl Lived on 3 Apples a Day for 8 Months, Here's What She Looks Like Now </span>
+<p class="desc">What would a young girl do to pursue her dream of a modeling career? The body transformation will shock you.</p>
+
+</div>
+<div class="post_stats">
+<span>#anorexia</span>&nbsp;&#124;&nbsp; 703724 <span class="shares_text">Views</span>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+
+<span class="icon like_stats"></span>
+
+</span>
+</div>
+
+</a>
+
+<a class="rect_side" href="http://dailynewsx.net/he-made-a-promise-in-the-4th-grade-no-one-thought-he-d-keep-but-then-he-sees-her">
+<div class="rect_side_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/e0582e25b38a1ba28fd2c5b2b8ae4b79')">
+
+</div>
+<div class="rect_side_txt">
+<span class="rect_title">He Made A Promise In The 4th Grade No One Thought He'd Keep, But Then He Sees Her</span>
+<p class="desc">Some people do not have a fair shot at a normal life, and one high school QB did his part to make one girl's day.</p>
+
+</div>
+<div class="post_stats">
+<span>#cute</span>&nbsp;&#124;&nbsp; 255082 <span class="shares_text">Views</span>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+
+<span class="icon like_stats"></span>
+
+</span>
+</div>
+
+</a>
+
+<a class="rect_side" href="http://dailynewsx.net/this-is-how-butthole-chocolates-are-made">
+<div class="rect_side_img bg_img" style="background-image:url('http://img-cdn.likes.com/img/d871ab7a9cd1f786dea2339e576d6bbd')">
+
+</div>
+<div class="rect_side_txt">
+<span class="rect_title">This Is How Butthole Chocolates Are Made</span>
+<p class="desc">Yes, as weird as it may sound, they are real. Check out what they look like!</p>
+
+</div>
+<div class="post_stats">
+<span>#are</span>&nbsp;&#124;&nbsp; 380511 <span class="shares_text">Views</span>
+</div>
+
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+
+<span class="icon like_stats"></span>
+
+</span>
+</div>
+
+</a>
+
+
+
+
+<div id="overlay_post_list">
+<h3 class="popular">Popular Posts</h3>
+<span class="overlay_post_wrapper">
+<a class="overlay_post bg_img" href="http://dailynewsx.net/awkward-russian-mail-order-brides-meeting-their-husbands-for-the-first-time" style="background-image:url('http://img-cdn.likes.com/img/07bb93c12efc3e00f234bdd380d2c84b')">
+<div class="overlay_bg"></div>
+<div class="overlay_txt">
+<div class="overlay_title">AWKWARD: Russian Mail-Order Brides Meeting Their Husbands For The First Time</div>
+<div class="overlay_desc">The look on her face says it all.</div>
+</div>
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">AWKWARD: Russian Mail-Order Brides Meeting Their Husbands For The First Time</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div>
+</a>
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>awkward</span>&nbsp;&#124;&nbsp; 1544 <span class="shares_text">Shares</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+</span>
+<span class="overlay_post_wrapper">
+<a class="overlay_post bg_img" href="http://dailynewsx.net/kanye-west-tells-kylie-jenner-stop-copying-kim-kardashian-get-your-own-look" style="background-image:url('http://img-cdn.likes.com/img/11eceaee9b419f6b3bfa3528578e0b13')">
+<div class="overlay_bg"></div>
+<div class="overlay_txt">
+<div class="overlay_title">Kanye West Tells Kylie Jenner ... Stop Copying Kim Kardashian, Get Your Own Look!</div>
+<div class="overlay_desc">Uh oh. Looks like there's some trouble with the brother-in-law. </div>
+</div>
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Kanye West Tells Kylie Jenner ... Stop Copying Kim Kardashian, Get Your Own Look!</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div>
+</a>
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>copycat</span>&nbsp;&#124;&nbsp; 712 <span class="shares_text">Shares</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+</span>
+<span class="overlay_post_wrapper">
+<a class="overlay_post bg_img" href="http://dailynewsx.net/she-sees-a-homeless-man-every-day-then-he-hands-her-a-piece-of-paper" style="background-image:url('http://img-cdn.likes.com/img/24935d69b860f0d7d7682ba2fd24dedb')">
+<div class="overlay_bg"></div>
+<div class="overlay_txt">
+<div class="overlay_title">She Sees A Homeless Man Every Day. Then He Hands Her a Piece of Paper</div>
+<div class="overlay_desc">You'll never believe who this homeless man was...</div>
+</div>
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">She Sees A Homeless Man Every Day. Then He Hands Her a Piece of Paper</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div>
+</a>
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+<span>homeless</span>&nbsp;&#124;&nbsp; 848 <span class="shares_text">Shares</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+</span>
+<span class="overlay_post_wrapper">
+<a class="overlay_post bg_img" href="http://dailynewsx.net/now-this-is-what-we-call-a-read-amber-rose-hits-khloe-where-it-hurts-these-are-fightin-words-girl-1" style="background-image:url('http://img-cdn.likes.com/img/b86d76465c11596fea42fe60633c1eab')">
+<div class="overlay_bg"></div>
+<div class="overlay_txt">
+<div class="overlay_title">Now THIS is what we call a READ. Amber Rose hits Khloe where it hurts ― These are fightin' words girl!</div>
+<div class="overlay_desc"></div>
+</div>
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">Now THIS is what we call a READ. Amber Rose hits Khloe where it hurts ― These are fight...</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div>
+</a>
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+789 <span class="shares_text">Shares</span>
+
+<span class="num_shares">
+
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+
+</span>
+</span>
+</div>
+</span>
+
+
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div id="loading_row" class="row">
+
+<div id="loading_msg">Loading ...</div>
+
+</div>
+</div>
+</div>
+<div class='gallery_footer_container'>
+<div class='inner'>
+<div id='gallery_footer'>
+
+<div class='links'>
+<a href='http://dailynewsx.net/terms'>Terms of Use</a>
+&nbsp;|&nbsp;
+<a href='http://dailynewsx.net/privacy'>Privacy Policy</a>
+
+&nbsp;|&nbsp;<a href='http://dailynewsx.net/contact'>Contact</a>
+
+</div>
+<div class="footer_subscribe">
+<form class="email_form">
+<h2>Subscribe to us!</h2>
+<div class="email_input_wrapper">
+<input type="email" class="email_input footer_email" placeholder="Signup for the email newsletter" />
+<button type="submit" class="subscribe_btn footer">Subscribe</button>
+</div>
+</form>
+</div>
+
+
+<div id='copyright_notice'>Copyright © 2015 dailynewsx, All rights reserved.</div>
+<div class="clear"></div>
+
+</div>
+
+</div>
+</div>
+<div class="email_notification">
+<span>Thanks for subscribing!</span>
+</div>
+<script type="text/html" id="list_post"><a class="list_post" href="{{# domain_url }}http://{{ domain_url }}{{/ domain_url }}/{{# gallery_info }}{{^ custom}}{{ user_name }}/{{/ custom}}{{ path_name }}{{# post_id }}?utm_campaign=ml&utm_term={{ post_id }}{{/ post_id }}{{/ gallery_info }}">
+<div class="{{# theme_format == "sulu"}}sulu_list_post{{/ theme_format == "sulu"}} image_wrapper">
+<div class="list_img bg_img" style="background-image:url('{{ thumb_url }}')">
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">{{ gallery_info.title|truncate:90 }}</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div> 
+</div>
+</div>
+{{^ mobile }}
+<div class="list_txt">
+<p class="title">{{ gallery_info.title|truncate:90 }}</p>
+<p class="desc">{{{ gallery_info.gallery_description|truncate_html:250 }}}</p>
+</div>
+{{/ mobile }}
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+{{^ mobile }}
+{{# gallery_info.main_tag }}<span>#{{ gallery_info.main_tag }}</span>{{/ gallery_info.main_tag }}{{# gallery_info.main_tag && gallery_info.num_clicks }} &nbsp;&#124;&nbsp; {{/ gallery_info.main_tag && gallery_info.num_clicks }}{{# gallery_info.num_clicks }}{{ gallery_info.num_clicks }} <span class="shares_text">views</span>{{/ gallery_info.num_clicks }}
+{{/ mobile }}
+<span class="num_shares">
+{{# mobile }}
+{{^ gallery_info.num_shares }}0{{/ gallery_info.num_shares }}{{# gallery_info.num_shares }}{{ gallery_info.num_shares }}{{/ gallery_info.num_shares }}
+{{/ mobile }}
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+{{# mobile }}
+{{^ gallery_info.num_likes }}0{{/ gallery_info.num_likes }}{{# gallery_info.num_likes }}{{ gallery_info.num_likes }}{{/ gallery_info.num_likes }}
+{{/ mobile }}
+</span>
+</span>
+</div>
+{{# link_icon }}
+<span class="link_icon"></span>
+{{/ link_icon }}
+</a>
+{{# show_social_tags }}
+{{> social_share }}
+{{/ show_social_tags }}</script>
+<script type="text/html" id="rect_post"><a class="rect_side" href="{{# domain_url }}http://{{ domain_url }}{{/ domain_url }}/{{# gallery_info }}{{^ custom}}{{ user_name }}/{{/ custom}}{{ path_name }}{{# post_id }}?utm_campaign=ml&utm_term={{ post_id }}{{/ post_id }}{{/ gallery_info }}">
+<div class="rect_side_img bg_img" style="background-image:url('{{ thumb_url }}')">
+{{# theme_format == "sulu" && mobile }}
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">{{ gallery_info.title|truncate:90 }}</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div>
+{{/ theme_format == "sulu" && mobile }}
+</div>
+<div class="rect_side_txt">
+<span class="rect_title">{{ gallery_info.title|truncate:90 }}</span>
+{{# show_desc }}
+<p class="desc">{{{ gallery_info.gallery_description|truncate_html:250 }}}</p>
+{{/ show_desc }}
+</div>
+{{# side_gall_tags }}
+<div class="post_stats">
+{{# gallery_info.main_tag }}<span>#{{ gallery_info.main_tag }}</span>{{/ gallery_info.main_tag }}{{# gallery_info.main_tag && gallery_info.num_clicks }} &nbsp;&#124;&nbsp; {{/ gallery_info.main_tag && gallery_info.num_clicks }}{{# gallery_info.num_clicks }}{{ gallery_info.num_clicks }} <span class="shares_text">Views</span>{{/ gallery_info.num_clicks }}
+</div>
+{{/ side_gall_tags }}
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+{{# mobile }}
+{{^ gallery_info.num_shares }}0{{/ gallery_info.num_shares }}{{# gallery_info.num_shares }}{{ gallery_info.num_shares }}{{/ gallery_info.num_shares }}
+{{/ mobile }}
+<span class="icon like_stats"></span>
+{{# mobile }}
+{{^ gallery_info.num_likes }}0{{/ gallery_info.num_likes }}{{# gallery_info.num_likes }}{{ gallery_info.num_likes }}{{/ gallery_info.num_likes }}
+{{/ mobile }}
+</span>
+</div>
+{{# link_icon }}
+<span class="link_icon"></span>
+{{/ link_icon }}
+</a>
+</script>
+<script type="text/html" id="overlay_post"><span class="overlay_post_wrapper">
+<a class="overlay_post bg_img" href="{{# domain_url }}http://{{ domain_url }}{{/ domain_url }}/{{# gallery_info }}{{^ custom}}{{ user_name }}/{{/ custom}}{{ path_name }}{{# post_id }}?utm_campaign=ml&utm_term={{ post_id }}{{/ post_id }}{{/ gallery_info }}" style="background-image:url('{{ thumb_url }}')">
+<div class="overlay_bg"></div>
+<div class="overlay_txt">
+<div class="overlay_title">{{ gallery_info.title }}</div>
+<div class="overlay_desc">{{{ gallery_info.gallery_description|truncate_html:100 }}}</div>
+</div>
+<div class="gallery_title_collage_overlay button blue_button sulu_post_title">
+<h2 class="gallery_collage_title">{{ gallery_info.title|truncate:90 }}</h2>
+<div class="white underline gallery_collage_link">View Full Gallery</div>
+</div>
+</a>
+<div class="list_stats">
+<span class="stats_wrapper">
+<span class="icon share_stats"></span>
+{{^ mobile }}
+{{# gallery_info.main_tag }}<span>{{ gallery_info.main_tag }}</span>{{/ gallery_info.main_tag }}{{# gallery_info.main_tag && gallery_info.num_shares }} &nbsp;&#124;&nbsp; {{/ gallery_info.main_tag && gallery_info.num_shares }}{{# gallery_info.num_shares }}{{ gallery_info.num_shares }} <span class="shares_text">Shares</span>{{/ gallery_info.num_shares }}
+{{/ mobile }}
+<span class="num_shares">
+{{# mobile }}
+{{^ gallery_info.num_shares }}0{{/ gallery_info.num_shares }}{{# gallery_info.num_shares }} {{ gallery_info.num_shares }} {{/ gallery_info.num_shares }}
+{{/ mobile }}
+</span>
+<span class="icon like_stats"></span>
+<span class="num_likes">
+{{# mobile }}
+{{^ gallery_info.num_likes }}0{{/ gallery_info.num_likes }}{{# gallery_info.num_likes }}{{ gallery_info.num_likes }}{{/ gallery_info.num_likes }}
+{{/ mobile }}
+</span>
+</span>
+</div>
+</span></script>
+<script type="text/html" id="social_media">{{# sm_info }}
+{{# in_browser }}
+<div class="share_url_full hidden">
+<div id="browser_share_url">{{ url }}</div>
+</div>
+<div class="clear"></div>
+{{/ in_browser }}
+<a class="button flat_button share_button share_fb" onclick="window.open($(this).attr('link'),'fb_popup','width=600,height=310');" {{^ custom_profile }}link="https://www.facebook.com/dialog/feed?{{# SHARE_APPID }}app_id={{ SHARE_APPID }}&{{/ SHARE_APPID }}link={{ url|quote_plus }}&display=popup&redirect_uri=http://{{ external_host }}/close_window.html&caption="{{/ custom_profile }}{{# custom_profile }}link="https://www.facebook.com/sharer/sharer.php?u={{ url|quote_plus }}"{{/ custom_profile }}><span class="fb"></span></a>
+<a class="button flat_button share_button share_plus" onclick="window.open($(this).attr('link'),'plus_popup','width=600,height=660');" link="//plus.google.com/share?url={{ url|quote_plus }}"><span class="plus"></span></a>
+<a class="button flat_button share_button share_twitter" onclick="window.open($(this).attr('link'),'twitter_popup','width=600,height=315');" link="https://twitter.com/share?url={{ url|quote_plus }}{{# text }}&text={{ text|quote_plus }}{{/ text }}"><span class="twitter"></span></a>
+<a class="button flat_button share_button share_tumblr" onclick="window.open($(this).attr('link'),'tumblr_popup','width=450,height=450');" link="http://www.tumblr.com/share/photo?source={{ pic|quote_plus }}{{# text }}&caption={{ text|quote_plus }}{{/ text }}&click_thru={{ url|quote_plus }}"><span class="tumblr"></span></a>
+<a class="button flat_button share_button share_pin" onclick="window.open($(this).attr('link'),'pin_popup','width=750,height=315');" link="http://www.pinterest.com/pin/create/button/?url={{ url|quote_plus }}&media={{ pic|quote_plus }}{{# text }}&description={{ text|quote_plus }}{{/ text }}"><span class="pin"></span></a>
+{{# in_browser || custom_profile }}
+<a class="button flat_button share_button share_url"><span class="url_share"></span></a>
+{{/ in_browser || custom_profile }}
+{{^ in_browser }}
+<div class="share_url_full hidden basic_dialog">
+<div class="basic_dialog_inner">
+{{# custom_profile }}
+<span class="close">close <span class="strong">x</span></span>
+{{/ custom_profile }}
+<p>
+Share this link:
+</p>
+<div class="list_share_url">{{ url }}</div>
+</div>
+</div>
+{{/ in_browser }}
+{{/ sm_info }}
+</script>
+<script type="text/html" id="social_share_home"><div class="social_links">
+<a class="fb_link" {{jinja_now> fb_share_src }} ></a>
+<a class="twitter_link" onclick="window.open($(this).attr('link'),'twitter_popup','width=600,height=460');" link="https://twitter.com/share?url={{ gallery_share_url|quote_plus }}&text={{ gallery_share_url|quote_plus }}" ></a>
+</div>
+</script>
+<script>window._t.footer=(new Date).getTime();</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<script type="text/javascript"><!--
+var pass_to_js = {"feed": {"include_user_id": 1897009, "palette": "sky", "common_domain_arcadia": 1, "custom_profile": true, "format": "arcadia"}, "next_page": 1, "domain_url": "dailynewsx.net", "gallery_sort": "share_date", "MOBILE": false, "js_url": "//o.mlv-cdn.com/s/5e4cae8e3c6563d5a84b161e3463e9c7/sky__custom_theme_arcadia.js", "gallery_keywords": "", "custom_profile": true, "page_path": "tweetpic", "tag_path": null, "theme_format": "arcadia", "css_url": "//o.mlv-cdn.com/s/479028efe2d2299fd3614f9f7153a763/sky__custom_theme_arcadia.css", "net_names": {"c_pubmatic": "c_pb", "appnexus_api_premium": "apnap", "c_cpxi": "c_ci", "c_dummy": "c_d", "c_appnexus": "c_apn", "c_valueclick": "c_vc", "c_pm1": "c_p1", "c_pm2": "c_p2", "c_pm3": "c_p3", "dfp": "dp", "aolm": "am", "rubicon": "r", "c_mylikes": "c_ml", "openx": "ox", "ox_resp": "or", "c_amazon": "c_az", "adcom": "ac", "amazon": "az", "amz": "amz", "c_openx": "c_ox", "c_appnexus_api_premium": "c_apnap", "c_rubicon": "c_r", "appnexus": "apn", "pubm_api_1": "pb1", "pubm_api_2": "pb2", "pubm_api_3": "pb3", "pubm_api_4": "pb4", "valueclick": "vc", "pulsepoint": "pp", "google": "g", "c_openx_lowval": "c_oxlv", "appnexus_api": "apna", "c_criteo": "c_c", "c_aolm": "c_am", "c_appnexus_api_highval": "c_apnah", "c_appnexus_api": "c_apna", "c_pubm_api_4": "c_pb4", "criteo": "c", "pubmatic_highval": "pbmh", "pm1": "p1", "pm2": "p2", "pm3": "p3", "c_amz": "c_amz", "ox_api": "oa", "c_pubmatic_highval": "c_pbmh", "c_pulsepoint": "c_pp", "dummy": "d", "c_adcom": "c_ac", "openx_lowval": "oxlv", "mylikes": "ml", "c_dfp": "c_dp", "appnexus_api_highval": "apnah", "c_pubm_api_1": "c_pb1", "c_pubm_api_2": "c_pb2", "c_pubm_api_3": "c_pb3", "cpxi": "ci", "c_google": "c_g", "pubmatic": "pb"}, "internal_only": false, "banners": null, "subdomain": "tweetpic", "experiment_config": {"backfill_ads_mobile": 1, "ad_page_4_grid": 0, "ignore_late_passbacks": 0, "side_big_share_buttons": 0, "full_width_ads": 1, "ads_head_min": 0, "track_big_share_button": 1, "appnexus_delay": 1, "use_page_image_for_fb_share": 1, "big_next_gallery": 0, "ad_page_4_stacked_blue": 0, "pubmatic_api_loc": 1, "track_pubm": 1, "remove_sticky_fb": 0, "disable_page_url_updation": 0, "close_pubm_doc": 1, "disable_final_ad_tracking": 1, "ad_page_4_grid_blue": 0, "bottom_backfill_ads_mobile": 0, "use_page_link_for_fb_share": 0, "ad_page_top_share": 0, "ad_page_stacked_full": 0, "hide_earnings_all_time": 1, "show_next_arrow_ad_page": 0, "video_ads_delay": 5000, "clickable_image": 1, "enable_ugc_video": 1, "video_end_desktop": 1, "track_report_error": 0, "bounce_clicks_max_t": 120, "show_social_page": 1, "big_share_button": 0, "report_pubm_throttle": 1, "related_grid": 1, "use_crc_front_page_desktop": 0, "start_page_og": 0, "start_page_spinny": 1, "use_crc_front_page": 1, "disable_upsell_url_updation": 1, "report_ad_blacklist": 1, "likes_homepage_sulu": 1, "bad_ad_detect_throttle": 100, "redis_ads_slots": ["top_backfill", "bottom_backfill", "multi_backfill", "multi_related", "multi_small_grid", "multi_grid_last_page", "multi_stacked_last_page"], "ad_page_title": 0, "big_start_page_height": 0, "disable_ad_page_url_updation": 1, "big_next_ad_page": 0, "related_small_mixed": 0, "big_start_page": 0, "detect_bad_ads": 1, "render_js_rtb_ads_for_mylikes": 1, "report_appnexus_throttle": 1, "report_double_renders": 1, "video_ads_2_dark": 1, "audience_gender": 1, "multi_stacked_last_page": 0, "stop_double_ads": 0, "hide_like_button": 0, "insert_in_place": 1, "page_caption_on_fb_share": 1, "big_next_button": 0, "big_next_ad_page_settings": {"top": "5px 15px", "bot": "5px 52px"}, "backfill_iframe": 0, "js_error_event": 0, "js_rtb_report_error": 0, "bad_ad_detect_ms": 4000, "related_right_dark": 1, "report_pubm_api_error": 0, "bottom_desk_rtb": 0, "shorten_net_names": 1, "hide_mob_video_top_ad": 1, "multi_grid_last_page": 0, "retain_ads": 1, "hide_upsell_signup": 0, "video_ads_2_light": 0, "multi_no_header": 1, "multi_list": 0, "ad_page_4_stacked": 0, "choose_cover_image": 1, "big_share_button_inline": 0, "video_ads_3_light": 0, "use_new_video_page": 1, "log_gallery_click_predictions": 1}};
+//-->
+</script>
+<script src="//o.mlv-cdn.com/s/5e4cae8e3c6563d5a84b161e3463e9c7/sky__custom_theme_arcadia.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+_gaq.push(['_setDomainName', 'likes.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script');
+ga.type = 'text/javascript';
+ga.async = true;
+ga.src = '//stats.g.doubleclick.net/dc.js';
+var s = document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+
+
+
+
+<script>
+window.global_ich_data = window.global_ich_data || {};
+global_ich_data.base_domain = "dailynewsx.net";
+global_ich_data.external_host = "dailynewsx.net";
+global_ich_data.product_name = "Likes.com";
+
+
+
+;
+if (window.Mustache) {
+Mustache.FILTERS.profile = function(user_name, path) {
+user_name = user_name || '';
+return '/' + user_name + (path || '');
+};
+if (window.Jasinja) Jasinja.filters.profile = Mustache.FILTERS.profile;
+}
+</script>
+
+
+<script>window._t.end=(new Date).getTime();</script>
+
+
+
+
+
+</body>
+</html>

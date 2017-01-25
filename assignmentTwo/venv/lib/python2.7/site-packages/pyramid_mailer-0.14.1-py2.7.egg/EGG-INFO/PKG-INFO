@@ -1,0 +1,221 @@
+Metadata-Version: 1.1
+Name: pyramid-mailer
+Version: 0.14.1
+Summary: Sendmail package for Pyramid
+Home-page: http://docs.pylonsproject.org/projects/pyramid-mailer/en/latest/
+Author: Dan Jacob
+Author-email: danjac354@gmail.com
+License: BSD
+Description: ``pyramid_mailer``
+        ==================
+        
+        .. image:: https://travis-ci.org/Pylons/pyramid_mailer.png?branch=master
+           :target: https://travis-ci.org/Pylons/pyramid_mailer
+        
+        .. image:: https://readthedocs.org/projects/pyramid_mailer/badge/?version=latest
+           :target: http://docs.pylonsproject.org/projects/pyramid_mailer/en/latest/
+           :alt: Documentation Status
+        
+        pyramid_mailer is a package for sending email from your Pyramid application.
+        It is compatible with Python 2.6. 2.7, 3.2, 3.3, and 3.4, as well as PyPy
+        and PyPy3.
+        
+        This package includes:
+        
+        1. Wrapping the low-level Python ``email`` library with an easy-to-use
+           API, which includes attachments and mulipart content.
+        
+        2. Send emails immediately or to add to a maildir queue.
+        
+        3. Managing email sends inside a transaction, to prevent emails being sent
+           if your code raises an exception.
+        
+        4. Features to help with unit testing.
+        
+        ``pyramid_mailer`` uses the ``repoze.sendmail`` library for managing email
+        sending and transacton management, and borrows code (with permission) from
+        Zed Shaw's ``lamson`` for wrapping email messages (http://lamsonproject.org/).
+        See the LICENSE.txt file for more information.
+        
+        Links
+        -----
+        
+        - `documentation
+          <http://docs.pylonsproject.org/projects/pyramid_mailer/en/latest/>`_
+        
+        - `development version
+          <https://github.com/Pylons/pyramid_mailer>`_
+        
+        
+        Changelog
+        =========
+        
+        0.14.1 (2015-05-21)
+        -------------------
+        
+        - Enable compatibility testing with Pyramid all the way back to 1.2. It may
+          work earlier but we aren't testing it any longer.
+        
+        - Fix a bug where the ``mailer.debug`` ini option was not properly being
+          cast to an ``int``. This did not show up on Python 2 because string
+          to int comparisons are valid there but it was a latent bug.
+          See https://github.com/Pylons/pyramid_mailer/pull/68
+        
+        0.14 (2014-12-10)
+        -----------------
+        
+        - Added support for Python3.4, PyPy3.
+        
+        - Pull #56: Ensure that ``DebugMailer`` emulates ``Mailer`` by generating
+          a sender if none is passed.
+        
+        - Pull #52: Add configuration options for ``mail.sendmail_app`` and
+          ``mail.sendmail_template`` to allow use with non-default sendmail
+          configurations.
+        
+        - Pull #50: Add ``pyramid_mailer.debug`` shorthand:  via one line in
+          ``development.ini``, enables writing emails to a file instead of sending
+          them.
+        
+        0.13 (2013-07-13)
+        -----------------
+        
+        - Pull #45:  Default transfer encoding for mail messages is now
+          'quoted-printable'.
+        
+        0.12 (2013-06-26)
+        -----------------
+        
+        - Pull #35:  aadded support for sendmail binary via repoze.sendmail >= 4.0b2.
+        
+        - Remove "all_parts" and "attach_all_parts" from MailResponse object (unused by
+          pyramid_mailer).
+        
+        - The Attachment class no longer supports reading data from the a file based on
+          the ``filename`` it is passed.  Instead, use the filename argument only as
+          something that should go in the Content-Disposition header, and pass a
+          filelike object as ``data``.
+        
+        - Major code overhaul: nonascii attachment sending now actually works, most of
+          the code stolen from Lamson was gutted and replaced.
+        
+        - Requires repoze.sendmail >= 4.1
+        
+        0.11 (2013-03-28)
+        -----------------
+        
+        - Issue #29: Allow setting Content-Transfer-Encoding for body and html
+          via Attachments.
+        
+        - Issue #32: Fix handling of messages with both HTML and plain text
+          bodies that also have attachments.
+        
+        - Issue #24:  ensure that ``pyramid_mailer.response.to_message`` returns
+          text under Python 3.x.
+        
+        - Dropped support for Python 2.5.
+        
+        0.10 (2012-11-22)
+        -----------------
+        
+        - Set default transfer encoding for attachments to ``base64`` and allow
+          an optional ``transfer_encoding`` argument for attachments. This currently
+          supports ``base64`` or ``quoted-printable``.
+        
+        - Properly handle ``Mailer.from_settings`` boolean options including ``tls``
+          and ``ssl``.
+        
+        - Support ``setup.py dev`` (installs testing dependencies).
+        
+        - Use ``setup.py dev`` in tox.ini.
+        
+        0.9 (2012-05-03)
+        ----------------
+        
+        - Add a test for uncode encoding in multipart messages.
+        
+        - Depend on ``repoze.sendmail`` >= 3.2 (fixes unicode multipart message
+          encoding).
+        
+        0.8 (2012-03-26)
+        ----------------
+        
+        - Work around a Python 3.2.0 bug in handling emails with empty headers.  This
+          allows cc-only and bcc-only emails to be handled properly on all platforms
+          (no recipient= required anymore).  See
+          https://github.com/Pylons/pyramid_mailer/issues/14.
+        
+        0.7 (2012-03-26)
+        ----------------
+        
+        - Packaging release
+        
+        0.6 (2012-03-20)
+        ----------------
+        
+        - Python 2.5, 2.6, 2.7, 3.2, and pypy compatibility.
+        
+        - Remove explicit Jython support.  It may work, but we no longer test it
+          using automated testing.
+        
+        - Requires repoze.sendmail 3.0+.
+        
+        - More descriptive exception raised when attempting to send cc-only or
+          bcc-only messages.  See https://github.com/Pylons/pyramid_mailer/issues/14
+        
+        0.6 (2012-01-22)
+        ----------------
+        
+        - Use ',' as an email header field separator rather than ';' when multiple
+          values are in the same header (as per RFC822).
+        
+        - Allow lists of recipient emails to be tuples or lists (previously it was
+          just lists).
+        
+        - Don't include ``Bcc`` header in mail messages (breaks secrecy of BCC).
+          See https://github.com/Pylons/pyramid_mailer/pull/10
+        
+        0.5.1 (2011-11-13)
+        ------------------
+        
+        - Fixed a bug where the mailer was only sending email to addresses in
+          the "TO" field.
+        
+        0.5 (2011-10-24)
+        ----------------
+        
+        - Drop Lamson dependency by copying Lamson's MailResponse and dependent code
+          into ``pyramid_mailer.response``.
+        
+        0.4.X
+        -----
+        
+        - ``pyramid_mailer.includeme`` function added for
+          ``config.include('pyramid_mailer')`` support
+        
+        - ``pyramid_mailer.testing`` module added for
+          ``config.include('pyramid_mailer.testing')`` support.
+        
+        - ``pyramid_mailer.get_mailer`` API added (see docs).
+        
+        - ``pyramid_mailer.interfaces`` module readded (with marker IMailer interface
+          for ZCA registration).
+        
+        - ``setup.cfg`` added with coverage parameters to allow for ``setup.py
+          nosetests --with-coverage``.
+        
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Communications :: Email
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Framework :: Pyramid
