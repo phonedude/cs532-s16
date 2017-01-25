@@ -1,0 +1,889 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/css/UIv8/jquery/Classic/ui.core.css">
+<link type="text/css" rel="stylesheet" href="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/css/UIv8/jquery/Classic/ui.theme.css">
+<link type="text/css" rel="stylesheet" href="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/css/UIv8/jquery/Classic/ui.datepicker.css">
+<link type="text/css" rel="stylesheet" href="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/css/UIv8/jquery/Classic/ui.dialog.css">
+
+
+<style type="text/css">
+
+    select:focus, a:focus {
+        outline: #1e90ff solid 2px
+    }
+
+    input[type=submit] {
+        background: #00438C;
+    }
+
+    input[type=button] {
+        background: #00438C;
+    }
+
+    input[type=submit]:hover {
+        background: #1e31ff;
+    }
+
+    input[type=button]:hover {
+        background: #1e31ff;
+    }
+
+    input[type=submit]:focus {
+        background: #1e90ff;
+    }
+
+    input[type=button]:focus {
+        background: #1e90ff
+    }
+
+    .ui-dialog .ui-dialog-buttonpane {
+        text-align: right;
+    }
+
+    .ui-dialog .ui-dialog-buttonpane button {
+        float: none;
+    }
+
+        /*a.ui-dialog-titlebar-close.ui-corner-all.ui-state-focus {*/
+        /*border: 1px solid #000;*/
+        /*}*/
+
+</style>
+
+
+
+<style type="text/css">
+    .alert-error {
+        color: #990000;
+        font-weight: bold;
+    }
+
+    td.top {
+        vertical-align: top !important;
+    }
+
+    td.left {
+        float: none;
+        text-align: left;
+    }
+
+    td.right {
+        float: none;
+        text-align: right;
+    }
+
+    .nowrapFormLabel {
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    h1 {
+        font-size: 120%
+    }
+
+    h2 {
+        font-size: 110%
+    }
+
+    h3 {
+        font-size: 100%
+    }
+
+    .hidden-accessibility-text {
+        position: absolute;
+        left: -2000px;
+        top: 0;
+        width: 1;
+        height: 1;
+        overflow: hidden;
+        font-size: 0.1em;
+    }
+
+    .ofcc305table TD, .ofcc305table TH, .ofcc305table textarea,
+    .ofcc305table textfield, .ofcc305table select,
+    .ofcc305table input, .ofcc305table a {
+        font-size:12px !important;
+        font-family:Arial,sans-serif,Helvetica !important;
+    }
+
+    #cws-search-results th, #cws-job-alerts th {
+        border-top: #CCCCCC 2px solid;
+        border-bottom: #CCCCCC 2px solid;
+    }
+
+    #cws-search-results tr:last-of-type td, #cws-job-alerts tr:last-of-type td {
+        border-bottom: #CCCCCC 2px solid;
+        padding-bottom: 3px;
+    }
+</style>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang='en' xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#">
+<head>
+<BASE HREF="http://jobs.cancercenter.com/job-opportunities">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta property="fb:page_id" content="256360261081353" />
+
+<meta property="og:image" content="http://imgsg.jobing.com/company/logos/300x145/logo135160.gif" />
+
+	<title>Job Opportunities | Cancer Treatment Centers of America</title>
+<meta name="Description" content="Discover your potentialCareer possibilities at Cancer Treatment Centers of America® (CTCA) are u" />
+<meta name="Keywords" content="Cancer Treatment Centers of America jobs, jobs at Cancer Treatment Centers of America, Cancer Treatment Centers of America careers, work for Cancer Treatment Centers of America, jobing" />
+
+    <script type="text/javascript" src="/js-apps/jobing.js?v=29"></script>
+
+<script type="text/javascript">
+var ProfileID=1;
+var ProfileAlias="jobs";
+var URLAlias="www";
+var UseALine="";
+if (!window.name) window.name = "Jobing_7399741172";
+</script>
+
+<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/globjs-goog-v8-min.js"></script><!-- All-Purpose Utilities -->
+			<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/globjs-yui-v8-min.js"></script><!-- Yahoo Libraries -->
+			
+				<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/jquery-ui-ALL-1.5.3.min.js"></script>
+		
+				<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/jquery-ui-autogrow.js"></script>
+
+				<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/jquery.hint.min.js"></script>
+		
+	<script type="text/javascript">
+	jQuery.noConflict();
+	
+	window.google_analytics_uacct = "";
+	
+	jQuery(document).ready(function() {
+	
+	//Disable click
+	jQuery("a.nolink").click(function() { return false; });
+	});
+	</script>
+	<link rel="stylesheet" href="http://d2i2zd9axwkr7h.cloudfront.net/4/29/css/careercenter-v11.css?v=29" type="text/css" /><link rel="apple-touch-icon" href="http://imgpg.jobing.com/company/iphone/135160.gif"/><link rel="shortcut icon" href="http://imgpg.jobing.com/company/favicon/135160.ico"/>
+					<link rel="stylesheet" href="http://api.recruiting.com/4.2/unsecure/companies/135160.css" type="text/css" />
+					
+<!--[if lte IE 7]>
+<style type="text/css">
+form .post .text, form .blogform .text, form.jobing-form .text {
+    padding: 0px 1px 0px 0px;
+}
+</style>
+<![endif]-->
+<link rel="shortcut icon" href="http://dy5f5j6i37p1a.cloudfront.net/jobing/spacer.gif" />
+
+<STYLE type="text/css">#taleoContent {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-spacing: normal;
+}
+
+#taleoContent td, #taleoContent th {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-spacing: normal;
+}
+
+#taleoContent textarea {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-variant: normal;
+  height: auto;
+  width: auto;
+}
+
+#taleoContent textfield {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-variant: normal;
+  height: auto;
+  width: auto;
+}
+
+#taleoContent select {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-variant: normal;
+  height: auto;
+  width: auto;
+}
+
+#taleoContent input {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-size-adjust: none;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  font-variant: normal;
+  height: auto;
+  width: auto;
+}
+
+</STYLE>
+
+</head>
+<body id="company-profile-page"  class=" body browserFirefox typeWeb mtA cc page-job-opportunities"  onload="">
+
+<script type="text/javascript">
+	var SocialLinksLoaded = false;
+</script>
+
+
+<!-- header for career center -->
+<div class="container">
+	<div id="CompHTMLTop"><!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://img.jobing.com/company/images/135160/css/ie7.css">
+<![endif]-->
+<!--[if IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://img.jobing.com/company/images/135160/css/ie8.css">
+<![endif]-->
+<script>
+/*@cc_on
+@if (@_jscript_version == 10)
+document.write(' <link type= "text/css" rel="stylesheet" href="http://img.jobing.com/company/images/135160/css/ie10.css" />');
+@end
+@*/
+</script >
+
+
+<style>
+@font-face {
+	font-family: 'MYRIADPROREGULAR';
+	src: url('/css/fonts/MYRIADPRO-REGULAR.eot');
+    src: url('/css/fonts/MYRIADPRO-REGULAR.eot?#iefix') format('embedded-opentype'),
+		url('/css/fonts/MYRIADPRO-REGULAR.woff') format('woff'), 
+		url('/css/fonts/MYRIADPRO-REGULAR.ttf') format('truetype'), 
+		url('/css/fonts/MYRIADPRO-REGULAR.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'myriadpro-semibold';
+	src: url('/css/fonts/myriadpro-semibold.eot');
+    src: url('/css/fonts/myriadpro-semibold.eot?#iefix') format('embedded-opentype'),
+		url('/css/fonts/myriadpro-semibold.woff') format('woff'), 
+		url('/css/fonts/myriadpro-semibold.ttf') format('truetype'), 
+		url('/css/fonts/myriadpro-semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'myriadpro-lite';
+	src: url('/css/fonts/myriadprolight1.eot');
+    src: url('/css/fonts/myriadpro-semibold.eot?#iefix') format('embedded-opentype'),
+		url('/css/fonts/myriadprolight1.woff') format('woff'), 
+		url('/css/fonts/myriadprolight1.ttf) format('truetype'), 
+		url('/css/fonts/myriadprolight1.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+</style></div>
+	<div id="Page" class="co-content">
+		
+		
+		<div id="PHead">
+
+			<div id="HeadStyleAbove"><!-- Custom HTML Page Top --><div id="CompHTMLPageTop"><div id="toplogo"><a href="http://jobs.cancercenter.com/"><img src="http://img.jobing.com/company/images/135160/t/toplogo.png"></a></div>
+<!--<div id="contactus"><ul><li> We're here to help</li><li class="second">800.268.0786<div id="contactbutton"><p><a href="">Contact Us</a></p></div></li><li><img src=""></li></ul></div>-->
+<li class="ctcalocation"><a href="/locations">Our Locations</a></li><br>
+<div id="rightlogo">
+<img src="http://img.jobing.com/company/images/135160/t/beckers.jpg">
+    <img src="http://img.jobing.com/company/images/135160/t/for_physicians_sm.png"><a href="http://physicianjobs.cancercenter.com"></a></div></div>
+			</div>
+			<div id="CompCareerHead">
+			
+				<a class="co-logo" href="http://jobs.cancercenter.com/"><img src="http://imgsg.jobing.com/company/logos/logo135160.gif" alt="Cancer Treatment Centers of America Logo" /></a>
+			
+			<ul class="co-nav">
+				<li><a href="http://jobs.cancercenter.com/" class="overview"><span>Overview</span></a></li><li><a href="http://jobs.cancercenter.com/jobs" class="jobs job-main-link"><span>Jobs</span></a></li>
+<li><a href="http://jobs.cancercenter.com/about-ctca" class="about-ctca"><span>About CTCA</span></a></li>
+<li><a href="http://jobs.cancercenter.com/benefits-and-wellness" class="benefits-and-wellness"><span>Benefits & Wellness</span></a></li>
+<li><a href="http://jobs.cancercenter.com/technology-and-results" class="technology-and-results"><span>Technology-and-results</span></a></li>
+<li><a href="http://jobs.cancercenter.com/job-opportunities" class="job-opportunities selected"><span>Job Opportunities</span></a></li>	</ul>
+			<a class="co-url" href="http://www.cancercenter.com">www.cancercenter.com</a>
+			</div>
+		</div>
+	
+	<div id="PContentContainer">
+		<!-- Main Page Content -->
+		<div id="PContentwrapper"><div id="PContent"><div class="inner">
+    	<!-- Page Title -->
+
+		<div id="PTitle"><h1>Job Opportunities</h1></div>
+		
+<div id='taleoContent' style="width: 940px; text-align: left; margin: 0 auto;">
+<script type='text/javascript' src="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/js/UIv8/tbe-basic-cws.js"></script>
+<script type='text/javascript' src="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/dwr-cws/engine.js"></script>
+<script type='text/javascript' src="https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/dwr-cws/interface/CwsDWRFacade.js"></script>
+<script type="text/javascript">
+function jobAlertShowEmailSection() {
+   document.theForm.showEmailSection.value = true;
+   document.theForm.submit();
+}
+function cancelForm() {
+   document.loginForm.showPwdSection.value=false;
+   document.loginForm.showEmailSection.value=false;
+   document.loginForm.action=document.theForm.action;
+   document.loginForm.submit();
+}
+</script><script type='text/javascript'> CwsDWRFacade._path = 'http://chj.tbe.taleo.net/chj06/ats/dwr-cws';
+var DWRFacade = CwsDWRFacade; </script>
+<script type="text/javascript">
+var timer;
+var calendarArray = new Array ();
+function startSessionTimer(){
+	timer=setTimeout("sessionAboutToEnd()", 86100000);
+}
+function sessionAboutToEnd(){
+	var oHead = document.getElementsByTagName('head')[0];
+	loadScript(oHead, 'https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/js/UIv8/engine.js',  function() {
+		var answer = confirm("Your session is about to expire. Would you like to continue your session?");
+		if(answer){
+			dwr.engine.setErrorHandler( function(errorString, exception) {
+				window.location = "https://chj.tbe.taleo.net/chj06/ats/sessionTimedOut.jsp?locale=enUS"
+			});
+			CwsDWRFacade.refreshSession();
+			clearTimeout(timer);
+			startSessionTimer();
+		} else {
+			window.location = "https://chj.tbe.taleo.net/chj06/ats/sessionTimedOut.jsp?locale=enUS";
+		}
+	});
+}
+startSessionTimer();</script>
+
+
+
+
+
+
+
+
+
+    <script>
+
+      //name spacing TBE global variables
+      //the csrfInclude.jsp may be included multiple times in jsp/jsps. Make sure this is only executed once.
+      if(typeof window.TBE_OBJ=='undefined') {
+        var TBE_OBJ ={};
+        window.TBE_OBJ=TBE_OBJ;
+        TBE_OBJ.CSRF={};
+        TBE_OBJ.CSRF.enabled=false;
+        TBE_OBJ.CSRF.tokenParam = '_csrf';
+        TBE_OBJ.CSRF.tokenValue='';
+
+          
+
+            TBE_OBJ.CSRF.enabled=true;
+            TBE_OBJ.CSRF.tokenValue = 'v1:;1455655829230:;iku3BSBlvdYc+NJtDJjFkppa4/Jyc+QAGOR4uvg9LC0=';
+            var _jq = $;
+            if (typeof $ == 'undefined') {
+              _jq = jQuery;
+            }
+            if(typeof _jq !=='undefined') {
+              _jq(document).ready(function () {
+                appendCsrfTokenToForms(TBE_OBJ.CSRF.tokenParam, TBE_OBJ.CSRF.tokenValue,'chj.tbe.taleo.net');
+              });
+            }
+        
+      }
+    </script>
+
+
+
+
+
+<table border=0 cellspacing=0 cellpadding=2 width='100%' role='presentation'>
+<tr>
+<td colspan=2><hr width='100%' size='1' color='silver'></td></tr><tr><td colspan=2><h1>Building / Stationary Engineer &ndash; Per Diem</h1></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Location:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>Eastern Regional Medical Center</b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Region:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>Philadelphia, PA</b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Department:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>340002 Plant Operations-Tech</b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Employment Status:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>Part time</b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Shift Hours / Days:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>Flexible schedule required</b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Hours / Pay Period:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b></b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Position ID:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>EG.ERMC.10</b></td>
+</tr>
+<tr>
+<td class='nowrapFormLabel width160 top'>Job Function:</td>
+<td class='formFieldNormal top' colspan=1 style='width: 100%'><b>Support Services</b></td>
+</tr>
+<tr>
+<tr><td colspan=2><hr width='100%' size='1' color='silver'></td></tr>
+<tr><td colspan=2><h1>Description</h1></td></tr>
+<tr><td colspan=2><p><strong><span style="font-size:14.0pt;">Building / Stationary Engineer &ndash; Per Diem&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></strong></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:13.5pt;">We Fight Cancer: Care That Never Quits</span></strong><strong><span style="font-size:8.0pt;">&reg; </span></strong></p>
+
+<p><span style="font-size:10.5pt;">Cancer Treatment Centers of America</span><span style="font-size:7.0pt;">&reg; </span><span style="font-size:10.5pt;">(CTCA</span><span style="font-size:7.0pt;">&reg;</span><span style="font-size:10.5pt;">) delivers an extraordinary patient experience we call <em>Patient Empowered Care</em></span><span style="font-size:7.0pt;">&reg;</span><span style="font-size:10.5pt;">. We deliver state-of-the-art, high quality care through an integrative model where a team of experts puts patients at the center of their own care. Every day, you will help patients win the fight against cancer. Every day is challenging and rewarding beyond your imagination. </span></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:13.5pt;">A Culture of Teamwork, Empowerment &amp; Development </span></strong></p>
+
+<p><span style="font-size:10.5pt;">CTCA provides Stakeholders with exceptional support and easy access to a wide range of tools and resources they need to bring the best of themselves, every day. Our benefits, wellness, and compensation programs lead the market. Imagine access to your own personal health coach! We also provide extensive training and career development opportunities that encourage professional and personal growth&mdash;it is a point of pride. We empower our Stakeholders to deliver the highest standard of care, which we call the Mother Standard</span><span style="font-size:7.0pt;">&reg;</span><span style="font-size:10.5pt;">. </span></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:13.5pt;">Position Overview </span></strong></p>
+
+<p><span style="font-size:10.5pt;">The Building Engineer is responsible for monitoring, troubleshooting, repair, maintenance, operation and management of physical plant systems (mechanical, electrical and plumbing) and structures. They are also responsible for pro-active preventive maintenance of all equipment.</span></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:13.5pt;">Key Position Qualifications </span></strong></p>
+
+<ul>
+	<li><span style="font-size:10.5pt;">Minimum 5 years&rsquo; experience with commercial equipment, building trades and plant/facilities maintenance</span></li>
+	<li><span style="font-size:10.5pt;">Philadelphia &ldquo;A&rdquo; license preferred</span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Universal &ldquo;CFC&rdquo; license preferred</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">High school diploma or GED required</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Knowledge of building automated systems</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Advanced electrical and mechanical skills</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Skilled in use and care of power tools</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Ability to read blue prints and electrical schematics</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Ability to work independently and unsupervised</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Adjustments to the building systems as indicated by the BAS</span></span></li>
+	<li style="line-height:normal;"><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Ability to perform electrical, plumbing repairs and all other work as assigned</span></span></li>
+</ul>
+
+<p><strong><span style="font-size:13.5pt;">The Best Place to Work </span></strong></p>
+
+<p><span style="font-size:10.5pt;">We call ourselves Stakeholders because we all have a stake in the care and success of every patient. Today, CTCA Stakeholders deliver healing and hope to patients fighting complex and advanced cancer in Atlanta, GA, Chicago, IL, Philadelphia, PA, Phoenix, AZ and Tulsa, OK. Each of our hospitals, and corporate entities, earned a <em>Best Place to Work </em>distinction and receives numerous accreditations that celebrate our culture of clinical quality, innovation, high performance and wellness. </span></p>
+
+<p>&nbsp;</p>
+
+<p><strong><span style="font-size:13.5pt;">Beyond The Resume, What We Look For </span></strong></p>
+
+<p><span style="font-size:10.5pt;">We select people with talent&mdash;people who value working with others and thrive in an environment of continuous improvement. We are creative and resourceful problem solvers. We are inventors and innovators. As a CTCA Stakeholder, you make <em>the </em>difference in the life of a patient. </span></p>
+
+<p><span style="font-family:arial,sans-serif;"><span style="font-size:10.5pt;">Do you see yourself working with a passionate team in a dynamic, high growth environment? If so, we hope you begin the application process, today.</span></span></p></td></tr>
+</tr>
+<tr>
+<tr><td class='left'><br>
+<form action='http://chj.tbe.taleo.net/chj06/ats/careers/apply.jsp;jsessionid=1E9DD930E5DA3A88C4D490A98C8C6AB7?org=CANCERCENTER&cws=1&rid=8226' method='post' name='apply'>
+<input type='hidden' name='act' value='addCart'>
+<input type='hidden' name='org' value='CANCERCENTER'>
+<input type='hidden' name='cws' value='1'>
+<input type='submit' name='tbe_cws_submit' value='Apply for this Position' style="
+padding:2px;margin-right:5px;
+color:#FFFFFF;
+border-left: 2px solid #11A9F7;
+border-bottom:1px solid #333333;
+border-right:1px solid #333333;
+border-top:2px solid #11A9F7;
+font-size: 10px;
+font-weight: bold;
+font-family:Verdana;" tabIndex="13"></form></td>
+</td>
+<td align='right' colspan=1><br>
+<form action='http://chj.tbe.taleo.net/chj06/ats/careers/email.jsp;jsessionid=1E9DD930E5DA3A88C4D490A98C8C6AB7?org=CANCERCENTER&cws=1' method='post' name='send'>
+<input type='hidden' name='org' value='CANCERCENTER'>
+<input type='hidden' name='cws' value='1'>
+<input type='hidden' name='rid' value='8226'>
+<input type='submit' name='tbe_cws_submit' value='Send to a Friend' style="
+padding:2px;margin-right:5px;
+color:#FFFFFF;
+border-left: 2px solid #11A9F7;
+border-bottom:1px solid #333333;
+border-right:1px solid #333333;
+border-top:2px solid #11A9F7;
+font-size: 10px;
+font-weight: bold;
+font-family:Verdana;" tabIndex="14"></form>
+</td></tr>
+</tr>
+<tr>
+<td colspan=2 width='100%'><br></td>
+</tr>
+<tr>
+<td colspan=2><hr width='100%' size='1' color='silver'>
+<h1><span class='head1'>Are you a returning applicant?</span></h1></td>
+</tr>
+<tr>
+<form action='http://chj.tbe.taleo.net/chj06/ats/careers/applyModal.jsp;jsessionid=1E9DD930E5DA3A88C4D490A98C8C6AB7?org=CANCERCENTER&cws=1' method='post' name='TBE_theForm'>
+<input type='hidden' name='org' value='CANCERCENTER'>
+<input type='hidden' name='cws' value='1'>
+<input type='hidden' name='rid' value='8226'>
+<input type='hidden' name='currentTime' value='1455655829241'>
+<input type='hidden' name='signature' value='iskJJNSpn3QE7Mn7EXyoMUmgtJrOg9b6MUGQKmSPvjs='>
+<input type='hidden' name='et' value='CAND'>
+<input type='hidden' name='act' value='addCart'>
+<tr><td colspan=2>
+<table border=0 cellpadding=2 cellspacing=0 role="presentation"><tr>
+<td nowrap colspan=2>Previous Applicants:</td>
+</tr>
+<tr>
+<td nowrap align='right'><label for='email'>Email:</label></td>
+<td class='nowrap'><input type='text' id='email' name='email' maxlength=50 autocomplete='off' tabindex='32'></td>
+</tr>
+<input type='text' style='display:none'>
+<input type='password' style='display:none'>
+<tr>
+<td nowrap align='right'><label for='cwsPassword'>Password:</label></td>
+<td class='nowrap'><input type='password' id='cwsPassword' name='cwsPassword' maxlength=30 autocomplete='off' tabindex='33'></td>
+</tr>
+<tr><td nowrap colspan=2>
+<input type='submit' name='tbe_cws_submit' value='Add to My Jobs' style="
+padding:2px;margin-right:5px;
+color:#FFFFFF;
+border-left: 2px solid #11A9F7;
+border-bottom:1px solid #333333;
+border-right:1px solid #333333;
+border-top:2px solid #11A9F7;
+font-size: 10px;
+font-weight: bold;
+font-family:Verdana;" tabIndex="34"></td></tr>
+<tr><td nowrap colspan=2><br>
+If you do not remember your password <a href='http://chj.tbe.taleo.net/chj06/ats/careers/forgotID.jsp?org=CANCERCENTER&cws=1' tabIndex='35'>click here</a>.<br><br></td></tr>
+</table>
+</td></tr></form>
+</tr>
+<tr>
+<td colspan=2 width='100%'><a  tabindex='38' href='http://chj.tbe.taleo.net/chj06/ats/careers/searchResults.jsp;jsessionid=1E9DD930E5DA3A88C4D490A98C8C6AB7?org=CANCERCENTER&cws=1' title='Back to Search Results' >Back to Search Results</a><br><br></td>
+</tr>
+<tr>
+<td colspan=2 width='100%'><a  tabindex='39' href='http://chj.tbe.taleo.net/chj06/ats/careers/jobSearch.jsp;jsessionid=1E9DD930E5DA3A88C4D490A98C8C6AB7?org=CANCERCENTER&cws=1&rid=8226' title='New Search' >New Search</a><br><br></td>
+</tr>
+<tr>
+<td colspan=2 width='100%'><br><div align='right'><img src='http://tbe.taleo.net/graphics/Taleo_powered_by_small.gif' alt='Powered By Taleo' border='0'></div><br><br></td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        //jQuery Calendar
+        jQuery(document).ready(function($) {
+	$('.jquerycalendar').datepicker({
+altField:'',altFormat:'',appendText:'',buttonImage:'https://staticchj.tbe.taleo.net/chj06/ats/cacheable/R16-02-08-11-37-15-16.A1_prod/img/UIv8/calendar.gif',buttonImageOnly:true,buttonText:'Calendar',changeMonth:true,changeYear:true,closeText:'\'Close\'',constrainInput:true,currentText:'Today',dateFormat:'mm/dd/yy',monthYearDateFormat:'MM/yy',dayNames:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesShort:['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesMin:['Su','Mo','Tu','We','Th','Fr','Sa'],defaultDate:null,duration:'normal',firstDay:0,gotoCurrent:false,hideIfNoPrevNext:false,isRTL:false,maxDate:null,minDate:null,monthNames:['January','February','March','April','May','June','July','August','September','October','November','December'],monthNamesShort:['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],navigationAsDateFormat:false,nextText:'Next',numberOfMonths:1,prevText:'Previous',shortYearCutoff:'+10',showAnim:'show',showButtonPanel:false,showCurrentAtPos:0,showMonthAfterYear:false,showOn:'button',showOptions:{},showOtherMonths:false,stepMonths:1,yearRange:'1940:2030'});});
+    </script>
+
+</div>	
+		
+		
+</div><!--end inner--></div><!--end PContent--></div><!--end PContentwrapper-->
+
+<!--end PDetails-->
+
+<span class="clear-content"> <!-- hack to break float --></span>
+</div><!--end PContentContainer -->
+
+		<div id="PFoot">
+			<!-- Autogenerated Page Footer -->
+			<ul id="footerpowered">
+
+				<li class="PoweredBy">Powered By <a class="RecruitingIcon" href="http://www.recruiting.com">Recruiting.com</a></li> 
+			</ul>
+		</div>
+            
+                    <script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/jquery-1.7.2.min.js"></script>
+                
+
+<link href="http://d2i2zd9axwkr7h.cloudfront.net/4/29/css/bootstrap.css" rel="stylesheet" />
+<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/bootstrap.min.js"></script>
+
+
+                
+                <script type="text/javascript">
+                    var jq172 = jQuery.noConflict(true);
+                </script>
+
+                
+
+            <div id="email-job-ajax-data"></div>
+            
+            
+        </div>        
+		</div><!-- end #Page -->
+		
+
+	<div id="emailFriendModal" class="modal hide">
+		<div class="modal-header">
+			<a class="close" data-dismiss="modal">x</a>
+			<h3>Share this Page</h3>
+		</div>	
+		<div class="modal-body" id="modalBody">
+
+			
+			
+			<div class="modalPageTitle">Cancer Treatment Centers of America Company Profile</div>
+			
+			
+			
+			<div id="modalText">
+			
+				
+			
+			</div>
+			
+			
+		</div>
+		<div class="modal-footer">
+			
+		</div>
+	</div>
+
+
+<script type="text/javascript">
+	var modalvars = {
+		'jobID': '0',
+		'url': '/company_profile.asp',
+		'linkName': 'Job Opportunities | Cancer Treatment Centers of America',
+		'postID': '0',
+		'email': '',
+		'fileName': 'company_profile.asp',
+		'apiURL': 'http://api.recruiting.com/4.2',
+		'recruiterList': '',
+		'prepend': 'http://jobs.cancercenter.com/',
+		'company': 'Cancer Treatment Centers of America',
+        'jobGUID': '',
+        'companyID': '135160'
+	};
+</script>
+
+<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/modal-functions.js"></script>
+
+
+
+	<script type="text/javascript">
+		var socialvars = {
+			'prepend': 'http://jobs.cancercenter.com/',
+			'jobID': '0',
+			'apiURL': 'http://api.recruiting.com/4.2',
+			'recruiterList': '',
+			'fileName': 'company_profile.asp',
+            'compUniqueName' : 'jobscancercenter'
+		};
+	</script>
+
+	<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/social-widgets.js"></script>
+
+	<script type="text/javascript">
+		jq172(window).load(function(){
+			loadSocialJS("emailFriendModal", "socialWidgetsList", 0);
+		});
+	</script>
+
+<!-- Custom HTML Site Bottom --><div id="CompHTMLBottom"><div id="mainfooter"><ul>
+<li><img src="http://img.jobing.com/company/images/135160/t/care_logo.png"></li>
+<li class="smicons" ><a href="https://twitter.com/ctcacareers"><img src="http://img.jobing.com/company/images/135160/t/twitter.png"></a></li>
+<li class="smicons"><a href="http://www.facebook.com/cancercenter"><img src="http://img.jobing.com/company/images/135160/t/facebook.png"></a></li>
+<li class="smicons"><a href="https://www.linkedin.com/company/cancer-treatment-centers-of-america/careers?trk=top_nav_careers"><img src="http://img.jobing.com/company/images/135160/t/linkedin.png"></a></li>
+<li class="foottag" > © 2015 Rising Tide</li>
+</ul></div>
+
+
+<!--<div id="smicons"><ul><li><img src="http://img.jobing.com/company/images/135160/t/twitter.png"></li>
+<li><img src="http://img.jobing.com/company/images/135160/t/facebook.png"></li>
+<li><img src="http://img.jobing.com/company/images/135160/t/linkedin.png"></li>
+</ul>
+</div>-->
+<script type="text/javascript" src="http://img.jobing.com/company/images/135160/t/jquery.cycleease.min.js"></script>
+
+<script type="text/javascript">
+
+   jQuery(document).ready(function($) {
+        $('.rotator-ctca').cycle();
+    });
+</script></div>
+	<script type="text/javascript" src="http://d2i2zd9axwkr7h.cloudfront.net/4/29/javascript/globjavascript-v8.js"></script>
+	</div><!-- contains entire page .container -->
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+
+
+
+		jQuery('input#submitExistingLogin_top').click(function(){
+		_gaq.push(['_trackEvent', 'Job Seeker & Resume', 'Login & Signup', 'Header Login']);
+		_gaq.push(['b._trackEvent', 'Job Seeker & Resume', 'Login & Signup', 'Header Login']);
+		_gaq.push(['c._trackEvent', 'Job Seeker & Resume', 'Login & Signup', 'Header Login']);
+		});
+		
+		jQuery('.seeker-menu .sign-up').click(function(){
+		_gaq.push(['_trackEvent', 'Job Seeker & Resume', 'Login & Signup', 'Header Sign Up']);
+		_gaq.push(['b._trackEvent', 'Job Seeker & Resume', 'Login & Signup', 'Header Sign Up']);
+		_gaq.push(['c._trackEvent', 'Job Seeker & Resume', 'Login & Signup', 'Header Sign Up']);
+		});
+		
+		jQuery('.for-employer-links a.employer-login-tracking').click(function(){
+		_gaq.push(['_trackEvent', 'Employers', 'Employer Login', 'Header Employer Login ']);
+		_gaq.push(['b._trackEvent', 'Employers', 'Employer Login', 'Header Employer Login ']);
+		_gaq.push(['c._trackEvent', 'Employers', 'Employer Login', 'Header Employer Login ']);
+		});
+		
+		jQuery('#employer-products a.employer-products-login').click(function(){
+		_gaq.push(['_trackEvent', 'Employers', 'Looking to Hire Toggle', 'Employer Login']);
+		_gaq.push(['b._trackEvent', 'Employers', 'Looking to Hire Toggle', 'Employer Login']);
+		_gaq.push(['c._trackEvent', 'Employers', 'Looking to Hire Toggle', 'Employer Login']);
+		});
+		
+		jQuery('#employer-products a.employer-post-jobs').click(function(){
+		_gaq.push(['_trackEvent', 'Employers', 'Looking to Hire Toggle', 'Post Jobs']);
+		_gaq.push(['b._trackEvent', 'Employers', 'Looking to Hire Toggle', 'post Jobs']);
+		_gaq.push(['c._trackEvent', 'Employers', 'Looking to Hire Toggle', 'post Jobs']);
+		});
+		
+		jQuery('#employer-products a.employer-other-links').click(function(){
+		_gaq.push(['_trackEvent', 'Employers', 'Looking to Hire Toggle', 'Other Links']);
+		_gaq.push(['b._trackEvent', 'Employers', 'Looking to Hire Toggle', 'Other Links']);
+		_gaq.push(['c._trackEvent', 'Employers', 'Looking to Hire Toggle', 'Other Links']);
+		});
+		
+		
+		jQuery('ul.social-share li a').click(function(){
+		_gaq.push(['_trackEvent', 'Share', jQuery(this).attr('title')+' Share', jQuery(this).attr('href')]);
+		_gaq.push(['b._trackEvent', 'Share', jQuery(this).attr('title')+' Share', jQuery(this).attr('href')]);
+		_gaq.push(['c._trackEvent', 'Share', jQuery(this).attr('title')+' Share', jQuery(this).attr('href')]);
+		});		
+
+		jQuery('div#site-footer .tools ul li a').click(function(){
+		_gaq.push(['_trackEvent', 'Tools', jQuery(this).attr('title'), jQuery(this).attr('href')]);
+		_gaq.push(['b._trackEvent', 'Tools', jQuery(this).attr('title'), jQuery(this).attr('href')]);
+		_gaq.push(['c._trackEvent', 'Tools', jQuery(this).attr('title'), jQuery(this).attr('href')]);
+		});		
+
+
+		jQuery('.recent-jobs h2 a').click(function(){
+		_gaq.push(['_trackEvent', 'RSS', 'RSS', 'RSS Company Jobs']);
+		_gaq.push(['b._trackEvent', 'RSS', 'RSS', 'RSS Company Jobs']);
+		_gaq.push(['c._trackEvent', 'RSS', 'RSS', 'RSS Company Jobs']);
+		});	
+
+	});
+	</script>	
+<!-- JobingSite=False DomainName: cancercenter ProfileType: 5; JobingGA=*empty*; CompanyGA=UA-34931183-22; AllGA=UA-917342-54 --><script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['b._setAccount', 'UA-34931183-22'],['b._trackPageview'],['b._trackPageLoadTime'],['c._setAccount', 'UA-917342-54'],['c._trackPageview'],['c._trackPageLoadTime']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);})();</script>
+<div data-jobing-app="navigation-tracking" data-type="navigation" data-user-id="-1310070076" data-page-name="Job Opportunities" data-source="recruiting" data-file-name="Company Content" data-company-name="jobscancercenter" data-job-id=""></div>
+<!--0.171875-->
+</body>
+</html>
+
+
+

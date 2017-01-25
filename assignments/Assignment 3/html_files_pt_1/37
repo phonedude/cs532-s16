@@ -1,0 +1,548 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head><script type="text/javascript">/* <![CDATA[ */_cf_loadingtexthtml="<img alt=' ' src='/ja_cf_scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/ja_cf_scripts/ajax";
+_cf_jsonprefix='//';
+_cf_clientid='4C456900B7AD8F899928BA60B5F85F39';/* ]]> */</script><script type="text/javascript" src="/ja_cf_scripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/ja_cf_scripts/ajax/package/cfajax.js"></script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	var _cf_registration=ColdFusion.AjaxProxy.init('/apply/cfc/registration.cfc','registration_udf');
+	_cf_registration.prototype.SubmitReferences=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitReferences","7047EB9BE5", {});};
+	_cf_registration.prototype.SendToReferences=function() { return ColdFusion.AjaxProxy.invoke(this, "SendToReferences","7047EB9BE5", {});};
+	_cf_registration.prototype.SubmitResume=function(email_sent) { return ColdFusion.AjaxProxy.invoke(this, "SubmitResume","7047EB9BE5", {email_sent:email_sent});};
+	_cf_registration.prototype.getEmploymentHistory=function(emp_num) { return ColdFusion.AjaxProxy.invoke(this, "getEmploymentHistory","7047EB9BE5", {emp_num:emp_num});};
+	_cf_registration.prototype.SubmitEducation=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitEducation","7047EB9BE5", {});};
+	_cf_registration.prototype.SubmitProfile=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitProfile","7047EB9BE5", {});};
+	_cf_registration.prototype.SubmitEmploymentHistory=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitEmploymentHistory","7047EB9BE5", {});};
+	_cf_registration.prototype.SubmitSchedule=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitSchedule","7047EB9BE5", {});};
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	var _cf_jobAppl=ColdFusion.AjaxProxy.init('/apply/cfc/jobAppl.cfc','application_udf');
+	_cf_jobAppl.prototype.RegisterForETC=function() { return ColdFusion.AjaxProxy.invoke(this, "RegisterForETC","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitDOT_EmploymentHistory=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitDOT_EmploymentHistory","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SignBCRelease=function() { return ColdFusion.AjaxProxy.invoke(this, "SignBCRelease","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitResume=function(email_sent) { return ColdFusion.AjaxProxy.invoke(this, "SubmitResume","7047EB9BE5", {email_sent:email_sent});};
+	_cf_jobAppl.prototype.CheckAutoRelease=function() { return ColdFusion.AjaxProxy.invoke(this, "CheckAutoRelease","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.deleteDOT_accidentHist_row=function(acct_id) { return ColdFusion.AjaxProxy.invoke(this, "deleteDOT_accidentHist_row","7047EB9BE5", {acct_id:acct_id});};
+	_cf_jobAppl.prototype.RefreshSession=function() { return ColdFusion.AjaxProxy.invoke(this, "RefreshSession","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitDOT_AccidentHist=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitDOT_AccidentHist","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitBCRelease=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitBCRelease","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitStandardForms=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitStandardForms","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.GetApplicationCompleteVideo=function() { return ColdFusion.AjaxProxy.invoke(this, "GetApplicationCompleteVideo","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitWOTCQuestion=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitWOTCQuestion","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.GetApplicationSteps=function(proc_num,job_id) { return ColdFusion.AjaxProxy.invoke(this, "GetApplicationSteps","7047EB9BE5", {proc_num:proc_num,job_id:job_id});};
+	_cf_jobAppl.prototype.deleteDOT_empHist_row=function(hist_id) { return ColdFusion.AjaxProxy.invoke(this, "deleteDOT_empHist_row","7047EB9BE5", {hist_id:hist_id});};
+	_cf_jobAppl.prototype.SubmitEEOC=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitEEOC","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitPosifitInterview=function(v_job_posifit) { return ColdFusion.AjaxProxy.invoke(this, "SubmitPosifitInterview","7047EB9BE5", {v_job_posifit:v_job_posifit});};
+	_cf_jobAppl.prototype.LoadJobOnSession=function(job_id,ext_num,proc_num) { return ColdFusion.AjaxProxy.invoke(this, "LoadJobOnSession","7047EB9BE5", {job_id:job_id,ext_num:ext_num,proc_num:proc_num});};
+	_cf_jobAppl.prototype.SubmitDOT_ResidenceHist=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitDOT_ResidenceHist","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.deleteDOT_residenceHist_row=function(res_id) { return ColdFusion.AjaxProxy.invoke(this, "deleteDOT_residenceHist_row","7047EB9BE5", {res_id:res_id});};
+	_cf_jobAppl.prototype.Submit_checkForMissingData_EmpHistRows=function() { return ColdFusion.AjaxProxy.invoke(this, "Submit_checkForMissingData_EmpHistRows","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.FinishWOTC=function(opt_in,is_FormsMgmt_wotcTask,emp_fullname,emp_ssn) { return ColdFusion.AjaxProxy.invoke(this, "FinishWOTC","7047EB9BE5", {opt_in:opt_in,is_FormsMgmt_wotcTask:is_FormsMgmt_wotcTask,emp_fullname:emp_fullname,emp_ssn:emp_ssn});};
+	_cf_jobAppl.prototype.SubmitApplication=function(job_id,mobile) { return ColdFusion.AjaxProxy.invoke(this, "SubmitApplication","7047EB9BE5", {job_id:job_id,mobile:mobile});};
+	_cf_jobAppl.prototype.SubmitHireUp=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitHireUp","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitDOT_TrafficConviction=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitDOT_TrafficConviction","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.GetPreviousStep=function() { return ColdFusion.AjaxProxy.invoke(this, "GetPreviousStep","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitResumeEmail=function(resume_email,is_salaried) { return ColdFusion.AjaxProxy.invoke(this, "SubmitResumeEmail","7047EB9BE5", {resume_email:resume_email,is_salaried:is_salaried});};
+	_cf_jobAppl.prototype.deleteDOT_drivingExp_row=function(exp_id) { return ColdFusion.AjaxProxy.invoke(this, "deleteDOT_drivingExp_row","7047EB9BE5", {exp_id:exp_id});};
+	_cf_jobAppl.prototype.SubmitStandardFormsComplete=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitStandardFormsComplete","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.Submit_DOT_drivingExpGrid=function() { return ColdFusion.AjaxProxy.invoke(this, "Submit_DOT_drivingExpGrid","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitWOTCOptIn=function(opt_in) { return ColdFusion.AjaxProxy.invoke(this, "SubmitWOTCOptIn","7047EB9BE5", {opt_in:opt_in});};
+	_cf_jobAppl.prototype.AssessmentOptIn=function() { return ColdFusion.AjaxProxy.invoke(this, "AssessmentOptIn","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.LoadApplicationOnSession=function(proc_num,job_id) { return ColdFusion.AjaxProxy.invoke(this, "LoadApplicationOnSession","7047EB9BE5", {proc_num:proc_num,job_id:job_id});};
+	_cf_jobAppl.prototype.SubmitAssessment=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitAssessment","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.deleteDOT_trafficConviction_row=function(conviction_id) { return ColdFusion.AjaxProxy.invoke(this, "deleteDOT_trafficConviction_row","7047EB9BE5", {conviction_id:conviction_id});};
+	_cf_jobAppl.prototype.SubmitDOT_DriverExp=function() { return ColdFusion.AjaxProxy.invoke(this, "SubmitDOT_DriverExp","7047EB9BE5", {});};
+	_cf_jobAppl.prototype.SubmitPosifitInterviewMobile=function(posifit_query) { return ColdFusion.AjaxProxy.invoke(this, "SubmitPosifitInterviewMobile","7047EB9BE5", {posifit_query:posifit_query});};
+	_cf_jobAppl.prototype.Submit_DOT_empHistGrid=function() { return ColdFusion.AjaxProxy.invoke(this, "Submit_DOT_empHistGrid","7047EB9BE5", {});};
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	var _cf_noSession=ColdFusion.AjaxProxy.init('/apply/cfc/noSession.cfc','noSession_udf');
+	_cf_noSession.prototype.forgotValidateLogin=function(is_salaried,login_captcha,mobile) { return ColdFusion.AjaxProxy.invoke(this, "forgotValidateLogin","7047EB9BE5", {is_salaried:is_salaried,login_captcha:login_captcha,mobile:mobile});};
+	_cf_noSession.prototype.mailLogin=function(login_email,is_salaried,login_captcha) { return ColdFusion.AjaxProxy.invoke(this, "mailLogin","7047EB9BE5", {login_email:login_email,is_salaried:is_salaried,login_captcha:login_captcha});};
+	_cf_noSession.prototype.SubmitContactInformation=function(customer,signed_in,isSalaried) { return ColdFusion.AjaxProxy.invoke(this, "SubmitContactInformation","7047EB9BE5", {customer:customer,signed_in:signed_in,isSalaried:isSalaried});};
+	_cf_noSession.prototype.sendJobEmail=function(job_url) { return ColdFusion.AjaxProxy.invoke(this, "sendJobEmail","7047EB9BE5", {job_url:job_url});};
+	_cf_noSession.prototype.CheckSessionApply=function(sal_job_id,isSalaried) { return ColdFusion.AjaxProxy.invoke(this, "CheckSessionApply","7047EB9BE5", {sal_job_id:sal_job_id,isSalaried:isSalaried});};
+	_cf_noSession.prototype.logout=function() { return ColdFusion.AjaxProxy.invoke(this, "logout","7047EB9BE5", {});};
+	_cf_noSession.prototype.ApplicantSalariedSignIn=function(sal_job_id,from_salaried) { return ColdFusion.AjaxProxy.invoke(this, "ApplicantSalariedSignIn","7047EB9BE5", {sal_job_id:sal_job_id,from_salaried:from_salaried});};
+	_cf_noSession.prototype.getJobList=function(page,pageSize,gridsortcolumn,gridsortdir,keyword,department,position_category,position_type,state,city,country,customer,database_lang_ext,button_click,is_mobile) { return ColdFusion.AjaxProxy.invoke(this, "getJobList","7047EB9BE5", {page:page,pageSize:pageSize,gridsortcolumn:gridsortcolumn,gridsortdir:gridsortdir,keyword:keyword,department:department,position_category:position_category,position_type:position_type,state:state,city:city,country:country,customer:customer,database_lang_ext:database_lang_ext,button_click:button_click,is_mobile:is_mobile});};
+	_cf_noSession.prototype.CheckSession=function(error_msg) { return ColdFusion.AjaxProxy.invoke(this, "CheckSession","7047EB9BE5", {error_msg:error_msg});};
+	_cf_noSession.prototype.getActiveCities=function(state,customer,selectCityString) { return ColdFusion.AjaxProxy.invoke(this, "getActiveCities","7047EB9BE5", {state:state,customer:customer,selectCityString:selectCityString});};
+	_cf_noSession.prototype.getPositionTypes=function(catg_value,selectTypeString,database_lang_ext) { return ColdFusion.AjaxProxy.invoke(this, "getPositionTypes","7047EB9BE5", {catg_value:catg_value,selectTypeString:selectTypeString,database_lang_ext:database_lang_ext});};
+	_cf_noSession.prototype.StartSalariedApplication=function(sal_job_id,isSalaried) { return ColdFusion.AjaxProxy.invoke(this, "StartSalariedApplication","7047EB9BE5", {sal_job_id:sal_job_id,isSalaried:isSalaried});};
+	_cf_noSession.prototype.getActiveStates=function(country,customer,selectStateString) { return ColdFusion.AjaxProxy.invoke(this, "getActiveStates","7047EB9BE5", {country:country,customer:customer,selectStateString:selectStateString});};
+	_cf_noSession.prototype.registrationStarted=function(sal_job_id,isSalaried) { return ColdFusion.AjaxProxy.invoke(this, "registrationStarted","7047EB9BE5", {sal_job_id:sal_job_id,isSalaried:isSalaried});};
+	_cf_noSession.prototype.ApplicantSignIn=function(from_salaried,mobile) { return ColdFusion.AjaxProxy.invoke(this, "ApplicantSignIn","7047EB9BE5", {from_salaried:from_salaried,mobile:mobile});};
+	_cf_noSession.prototype.LogGoogleMapsUse=function(client_id,account,call_type) { return ColdFusion.AjaxProxy.invoke(this, "LogGoogleMapsUse","7047EB9BE5", {client_id:client_id,account:account,call_type:call_type});};
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	var _cf_upload=ColdFusion.AjaxProxy.init('/apply/cfc/upload.cfc','upload_proxy_udf');
+	_cf_upload.prototype.UnlinkFile=function(slotID) { return ColdFusion.AjaxProxy.invoke(this, "UnlinkFile","7047EB9BE5", {slotID:slotID});};
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	var _cf_applied=ColdFusion.AjaxProxy.init('/apply/cfc/applied.cfc','applied_proxy_udf');
+	_cf_applied.prototype.createScormCourseRegistration=function(hired_profile_id,form_id) { return ColdFusion.AjaxProxy.invoke(this, "createScormCourseRegistration","7047EB9BE5", {hired_profile_id:hired_profile_id,form_id:form_id});};
+	_cf_applied.prototype.get_TCQ_pdf=function(proc_num) { return ColdFusion.AjaxProxy.invoke(this, "get_TCQ_pdf","7047EB9BE5", {proc_num:proc_num});};
+	_cf_applied.prototype.GetFormsSortingOption=function(client_id) { return ColdFusion.AjaxProxy.invoke(this, "GetFormsSortingOption","7047EB9BE5", {client_id:client_id});};
+	_cf_applied.prototype.getFormStatus=function(hired_profile_id,form_id) { return ColdFusion.AjaxProxy.invoke(this, "getFormStatus","7047EB9BE5", {hired_profile_id:hired_profile_id,form_id:form_id});};
+	_cf_applied.prototype.updateFormComplete=function(hired_profile_id,form_id,employee_confirm,employee_signed,manager_signed) { return ColdFusion.AjaxProxy.invoke(this, "updateFormComplete","7047EB9BE5", {hired_profile_id:hired_profile_id,form_id:form_id,employee_confirm:employee_confirm,employee_signed:employee_signed,manager_signed:manager_signed});};
+	_cf_applied.prototype.okToSendInStoreSMS=function() { return ColdFusion.AjaxProxy.invoke(this, "okToSendInStoreSMS","7047EB9BE5", {});};
+	_cf_applied.prototype.createScormCourseRegistrationLog=function(registration_id,message,log_type_id) { return ColdFusion.AjaxProxy.invoke(this, "createScormCourseRegistrationLog","7047EB9BE5", {registration_id:registration_id,message:message,log_type_id:log_type_id});};
+	_cf_applied.prototype.sendSMS=function() { return ColdFusion.AjaxProxy.invoke(this, "sendSMS","7047EB9BE5", {});};
+	_cf_applied.prototype.getFormStatistics=function(hired_profile_id) { return ColdFusion.AjaxProxy.invoke(this, "getFormStatistics","7047EB9BE5", {hired_profile_id:hired_profile_id});};
+	_cf_applied.prototype.get_WOTCTask_hp_fid=function() { return ColdFusion.AjaxProxy.invoke(this, "get_WOTCTask_hp_fid","7047EB9BE5", {});};
+	_cf_applied.prototype.updateScormCourseRegistration=function(registration_id) { return ColdFusion.AjaxProxy.invoke(this, "updateScormCourseRegistration","7047EB9BE5", {registration_id:registration_id});};
+	_cf_applied.prototype.updateTrainingStarted=function(hired_profile_id,form_id) { return ColdFusion.AjaxProxy.invoke(this, "updateTrainingStarted","7047EB9BE5", {hired_profile_id:hired_profile_id,form_id:form_id});};
+/* ]]> */</script>
+<script type="text/javascript" src="/ja_cf_scripts/ajax/yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="/ja_cf_scripts/ajax/yui/animation/animation-min.js"></script>
+<script type="text/javascript" src="/ja_cf_scripts/ajax/ext/adapter/yui/ext-yui-adapter.js"></script>
+<script type="text/javascript" src="/ja_cf_scripts/ajax/ext/ext-all.js"></script>
+<script type="text/javascript" src="/ja_cf_scripts/ajax/package/cfwindow.js"></script>
+<link rel="stylesheet" type="text/css" href="/ja_cf_scripts/ajax/resources/ext/css/ext-all.css" />
+<link rel="stylesheet" type="text/css" href="/ja_cf_scripts/ajax/resources/cf/cf.css" />
+
+  <meta charset="utf-8">
+  <meta property="og:title" content="Work for ACG Texas" />
+  <meta property="og:image" content="http://secure.jobappnetwork.com/apply/img/JobApp_fb.jpg" />
+  <meta property="og:description" content="Work as a Host for ACG Texas" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="talentReef Applicant Portal">
+  <meta name="designer" content="talentReef Inc.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+  <title>talentReef Applicant Portal</title>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="css/custom-theme/jquery-ui-1.8.16.custom.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/style.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/welcome.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/effects.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/salaried.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/forgotten.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/uniform.ja.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/chosen.ja.custom.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/tipTip.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/ui.css?v=94&sal=0" media="all" />
+  <link rel="stylesheet" href="css/description.css?v=94&sal=0" media="all" />
+
+  <!-- Fonts -->
+  
+    <link href="css/fonts.css?v=94&sal=0" rel="stylesheet" type="text/css" />
+  
+
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33193141-1']);
+  _gaq.push(['_setSiteSpeedSampleRate', 100]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	ColdFusion.Ajax.importTag('CFWINDOW');
+/* ]]> */</script>
+
+<script type="text/javascript">/* <![CDATA[ */
+	var _cf_window_init_1455655449534=function()
+	{
+		var _cf_window=ColdFusion.Window.create('MapWindow','<cfoutput>Location address map</cfoutput>','',{ modal:true, closable:true, divid:'cf_window1455655449533', draggable:false, resizable:false, fixedcenter:true, width:795, height:505, shadow:true, bodystyle:'background-color: white;', callfromtag:true, initshow:false, destroyonclose:false});
+	};ColdFusion.Event.registerOnLoad(_cf_window_init_1455655449534);
+/* ]]> */</script>
+</head>
+
+<body ontouchstart="">
+
+<!-- Preloader graphics -->
+<div id="main-preloader-wrapper" class="canvas-loader-wrapper">
+	<div id="canvas-loader-main"></div>
+</div>
+
+
+
+<input type="hidden" name="signed_in" id="signed_in" value="0">
+<input type="hidden" name="profile_complete" id="profile_complete" value="0">
+<input type="hidden" name="isSalaried" id="isSalaried" value="0">
+<input type="hidden" name="applicant_name" id="applicant_name" value="">
+
+<div class="background-container">
+    <div class="main-container">
+
+      <div class="spacer-2"></div>
+
+      <header>
+<div id="main-menu" class="bar rounded-1 shadow-2">
+  <div class="bar-items">
+    <div id="bar-item-myjobapp" class="bar-item rounded-5">
+      <div class="bar-icon bar-icon-myjobapp"></div>
+      <div class="bar-text bar-text-myjobapp">My Profile</div>
+    </div>
+
+    <div class="bar-separator"></div>
+
+    <div id="bar-item-opportunities" class="bar-item">
+      <div class="bar-icon bar-icon-opportunities"></div>
+      <div class="bar-text bar-text-opportunities">New opportunities</div>
+    </div>
+
+    <div class="bar-separator"></div>
+
+    <div id="bar-item-applications" class="bar-item">
+      <div class="bar-icon bar-icon-applications"></div> 
+      <div class="bar-text bar-text-applications">My applications</div>
+    </div>
+
+    <div class="bar-separator"></div>
+
+    <!-- <div class="bar-separator float-right"></div> -->
+    <a href="http://support.jobappnetwork.com" target="_blank">
+    <div class="bar-item float-right rounded-4-8">
+      <div class="bar-icon bar-icon-help"></div>
+      <div class="bar-text bar-text-help rounded-4-8">Help</div>
+    </div>
+    </a>
+    
+    
+
+      <div class="bar-separator float-right"></div>
+
+      <div id="bar-sign-in" class="bar-item float-right">
+        <div class="bar-icon bar-icon-signin"></div>
+        <div class="bar-text bar-text-signin">Sign in</div>
+      </div>
+      
+      <div id="bar-sign-out" class="bar-item float-right">
+        <div class="bar-icon bar-icon-signout"></div>
+        <div class="bar-text bar-text-signout">Sign out</div>
+      </div>
+
+    
+
+    <div class="bar-separator float-right"></div>
+  </div><!-- bar-items -->
+</div><!-- main-menu -->
+</header>
+
+      <div class="spacer-2"></div>
+
+      <div role="main">
+	      <div class="whole-frame rounded-1 glow-1">
+	          <div class="global-border rounded-1 shadow-3 salaried-standalone-container">
+                
+
+<div class="s-job-desc-container">
+<input type="hidden" id="selected_job_id" value="454955">
+<input type="hidden" id="selected_job_url" value="https://secure.jobappnetwork.com/apply/c_hop/l_en/Host-job-Austin-TX-US-454955.html">
+	<table class="table_cls" cellpadding=0 cellspacing=0 align="center" style="width: 100%;">
+		<tr class="row-gradient-bg">
+			<td class="salaried-description-row" style="width: 20%"><span class="salaried-description-title">Company:</span></td>
+			<td class="salaried-description-cell" style="width: 30%"><div class="s-client-name">ACG Texas</div></td>
+			<td class="salaried-description-row"><span class="salaried-description-title salaried-job-location">Location:</span>
+					<img class="salaried-location-map-icon" src="images/map.png" style="cursor: pointer;"  title="Click to see the map address of the job location." alt="Job Location Address Map"
+								onclick="javascript:openMapsWindow('454955','');">
+			</td>
+
+			
+			<td class="salaried-description-cell salaried-job-address-itself">
+							<div class="job-address-overflow">
+							14310 N I-35 Southbound, IHOP Location #1487<br>
+							Austin, TX, 78728, US 
+							 </div>
+
+			</td>
+		</tr>
+		<tr class="row-gradient-bg">
+			<td class="salaried-description-row" style="width: 20%"><span class="salaried-description-title">Date posted:</span></td>
+			
+			<td class="salaried-description-cell" style="width: 30%">January 13, 2016</td>
+			
+				<td class="salaried-description-row"><span class="salaried-description-title">Job category:</span></td>
+				<td class="salaried-description-cell">Restaurant</td>
+			
+		</tr>
+		<tr class="row-gradient-bg">
+			<td class="salaried-description-row"><span class="salaried-description-title">Department:</span></td>
+			<td class="salaried-description-cell">Restaurant Staff</td>
+			<td class="salaried-description-row"><span class="salaried-description-title">Position:</span></td>
+			<td class="salaried-description-cell">Host </td>
+		</tr>
+	
+		<tr class="row-gradient-bg">
+			<td class="salaried-description-row"><span class="salaried-description-title">Req #:</span></td>
+			<td class="salaried-description-cell">454955</td>
+			<td class="salaried-description-row"><span class="salaried-description-title">Job link:</span></td>
+			<td class="salaried-description-cell"><span><img id="img-direct-link" name="img-direct-link" src="images/link.png" style="cursor: pointer;" alt="Direct job link" /></span></td>
+		</tr>
+	
+		<tr class="row-gradient-bg">
+			
+				<td class="salaried-description-row">
+					<span class="salaried-description-title">
+						Status:
+					</span>
+				</td>
+
+				<td class="salaried-description-cell">
+					Part Time
+				</td>
+
+				<td class="salaried-description-row">
+					<span class="salaried-description-title">
+						Shift:
+					</span>
+				</td>
+
+				<td class="salaried-description-cell">
+					First / Day Second / Afternoon Third / Night 
+				</td>
+			
+		</tr>
+
+		<tr>
+			
+			
+			<td colspan="4" class="salaried-description-cell no-padding">
+				<div class="salaried-description-text-container">
+					<div class="salaried-description-text">
+
+						<P class=MsoNormal style='MARGIN: 0in 0in 12pt; TEXT-ALIGN: justify'>As a Host or Hostess, you will be responsible for greeting guests and seating them promptly, cheerfully and courteously.  Duties of this position include, seating guests, answering the phone, taking, entering and packaging To-Go orders.  A qualified applicant must have good communication skills, able to lift 25-50 pounds, stand for up to 8 hours, occasionally use motion which entails pushing, pulling, stretching and continuous bilateral use of fingers and wrists.</P> The above is not an all-inclusive job description.<br> 
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+                <div id="single-desc-bottom">
+                  <div class="single-desc-social">
+
+		    <button id="print-button" name="print-button" class="print-button">
+                      <span></span>
+                    </button>
+
+                    <button id="mail-friend-button" name="mail-friend-button" class="mail-friend-button">
+                      <span></span>
+                    </button>
+
+                    <button id="tweet-button" name="tweet-button" class="tweet-button">
+                      <span></span>
+                    </button>
+
+                    
+
+                    <div id="gplus-button-container">
+                      <div id="gplus-share" class="g-plus" data-height="24" data-annotation="none" data-action="share" data-href="https%3A%2F%2Fsecure%2Ejobappnetwork%2Ecom%2Fapply%2Fc%5Fhop%2Fl%5Fen%2FHost%2Djob%2DAustin%2DTX%2DUS%2D454955%2Ehtml"></div>
+                    </div>
+
+                    <div id="fb-iframe">
+                      <iframe src="https://www.facebook.com/plugins/like.php?locale=en_US&href=https%3A%2F%2Fsecure%2Ejobappnetwork%2Ecom%2Fapply%2Fc%5Fhop%2Fl%5Fen%2FHost%2Djob%2DAustin%2DTX%2DUS%2D454955%2Ehtml&show_faces=false&width=358&height=28&layout=standard&action=like" scrolling="no" frameborder="0" style="width: 412px; height: 28px; float: left; margin-top: 12px; margin-left: 2px;"></iframe>
+                    </div>
+
+                  </div>
+                  <div class="single-desc-apply">
+                    <button id="single-desc-apply-btn" class="single-next-button">
+                      <span>Apply now</span>
+                    </button>
+                  </div>
+                </div>
+                
+                <div id="canvasLoader"></div>
+            </div>
+        </div>
+      </div>
+
+      
+      <div  id="cf_window1455655449533" class="x-hidden">
+	
+	<div  id="MapWindow_title" class="x-window-header">
+		<cfoutput>Location address map</cfoutput>
+	 </div>
+	<div  id="MapWindow_body" class="x-window-body" style="background-color: white;">
+		
+		
+	 </div>
+ </div> <footer>
+<div class="footer footer-text">
+
+  <select id="global-language-switch" onchange="switchLanguageGlobal('es');">
+    <option value="en" selected>English</option>
+    <option value="es">Español</option>
+  </select>
+    
+    
+    
+  <div class="footer-separator"></div>
+
+  <div class="verisign-logo"></div>
+
+  <div class="footer-separator"></div>
+
+  <div class="powered-by-text text-shadow-black">
+    <p>Copyright  2016&nbsp;&copy; All rights reserved</p>      
+  </div>
+
+  <div class="powered-by">
+    <div class="powered-by-logo"></div>
+  </div>
+
+</div>
+</footer> <div id="sign-in-box-wrapper" class="sign-in-box-wrapper rounded-bottom-1"></div>
+<div id="sign-in-box" class="sign-in-box rounded-bottom-1">
+<form id="sign-in-form" class="sign-in-form" action="" method="post" onsubmit="return false;">
+  <div class="sign-in-box-body rounded-bottom-1">
+    <div class="phone-no-label text-shadow-black-2">Phone number</div>
+    <div class="phone-no">
+      
+      
+        <input id="input-phone-no" class="input-phone-no text-shadow-black-2" type="text" name="input-phone-no" />
+      
+    </div>
+    <div class="pin-label text-shadow-black-2">PIN</div>
+    <div class="pin">
+      <input id="input-pin" class="input-pin text-shadow-black-2" type="password" name="input-pin" />
+    </div>
+    <button data-role="button" role="button" class="sign-in-button"><span class="text-shadow-black-2">Sign in<span></button>
+    <div class="forgotten-password">
+      <a id="forgot-password-link" class="forgot-password-link text-shadow-black-2" href="#" title="Forgot your password?" alt="Forgot your password?">Forgot your password?
+      </a>
+    </div>
+  </div>
+  
+</form>
+</div>
+
+      <!-- Generic pop-up -->
+      <div id="modal-message" class="dialog-message" title="Any title here...">
+        <div id="message-container"></div>
+      </div>
+
+      <!-- Datepicker holder -->
+      <div id="dp-dialog"></div>
+
+      <!-- Salaried logon pop-up -->
+      <div id="salaried-login-window">
+          <div id="salaried-login-content">
+              <div id="salaried-login-left">
+                <div id="salaried-new-account-header">Don't have a talentReef account yet?</div>
+                <div id="salaried-new-account-text">
+                  <div id="start-from-sal" class="new-applicants-start rounded-3px glow-4">
+                    <div class="start-button-wrapper rounded-3px animate-btn">
+                      <div class="start-top">Start here</div>
+                      <div class="start-bottom">Create new application</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="salaried-login-separator"></div>
+
+              <div id="salaried-login-right">
+                <form id="salaried-login-form">
+                  <div id="salaried-login-phone-no-label">Phone number</div>
+                  <div id="salaried-login-phone-no">
+                    <input id="salaried-login-phone" name="salaried-login-phone" type="text" maxlength="12" value="" />
+                  </div>
+                  <div id="salaried-login-pin-label">PIN</div>
+                  <div id="salaried-login-pin-no">
+                    <input id="salaried-login-pin" name="salaried-login-pin" type="password" maxlength="4" value="" />
+                  </div>
+
+                  <div id="salaried-button-separator"></div>
+
+                  <div id="salaried-login-button">
+                    <button role="button" id="salaried-sign-in-button" class="salaried-sign-in-button">
+                      <span id="salaried-login-button-text">Sign in<span>
+                    </button>
+                  </div>
+                  <div id="salaried-login-forgot">
+                    <a id="salaried-forgot-password-link" class="salaried-forgot-password-link" href="#" title="Forgot your password?" alt="Forgot your password?">Forgot your password?</a>
+                  </div>
+                </form>
+              </div>
+          </div>
+      </div>
+
+      <input type="hidden" name="salaried-standalone-page" id="salaried-standalone-page" value="1" />
+
+      <!-- JavaScript at the bottom for fast page loading -->
+
+      <!-- Loader/spinner -->
+      <script src="./js/libs/spin.min.js"></script>
+
+      <!-- Loading routines -->
+      <script src="./js/scripts/loader.js?v=94&sal=0"></script>
+
+      
+      <script src="./js/scripts/locationMap.js?v=94&sal=0" type="text/javascript"></script>
+
+      <!-- jQ & jqUI -->
+      
+        <script src="./js/libs/jquery-1.7.1.min.js"></script>
+      
+
+      <script src="./js/libs/jquery-ui.min.js"></script>
+
+      <!-- Fonts -->
+      
+
+      <!-- Proper cross-browser box-shadow -->
+      <script src="./js/libs/boxshadow.js"></script>
+
+      <!-- Translate touch events to clicks -->
+      <script src="./js/libs/jquery.ui.touch-punch.min.js"></script>
+
+      <!-- Devices with touch ability API -->
+      <script src="./js/libs/touchable.js"></script>
+
+      <!-- Hardware accelerated animation -->
+      <script src="./js/libs/jquery.animate-enhanced.min.js"></script>
+
+      <!-- Devices with touchscreen get gesture recognition -->
+      <script src="./js/libs/hammer.js"></script>
+      <script src="./js/libs/jquery.hammer.js"></script>
+
+      <!-- Tooltips -->
+      <script src="./js/libs/jquery.tipTip.minified.js"></script>
+
+      <!-- Scrolling routines -->
+      <script src="./js/libs/jquery.lionbars.0.3.js"></script>
+
+      <!-- Masking -->
+      <script src="./js/libs/jquery.meio.mask.min.js"></script>
+      <script src="./js/libs/regex-mask.js"></script>
+      <script src="./js/scripts/masks.js?v=94&sal=0"></script>
+
+      <!-- Placeholder -->
+      
+        <script src="./js/libs/jquery.placeholder.min.js"></script>
+      
+
+      <script src="./js/scripts/browser.js?v=94&sal=0"></script>
+      <script src="./js/scripts/functions.js?v=94&sal=0"></script>
+      <script src="./js/scripts/events.js?v=94&sal=0"></script>
+      <script src="./js/scripts/mainsalaried.js?v=94&sal=0"></script>
+      <script src="./js/scripts/salaried.js?v=94&sal=0"></script>
+      <script src="./js/scripts/validation.js?v=94&sal=0"></script>
+
+      
+    </div>
+  </div>
+</body>
+</html> 

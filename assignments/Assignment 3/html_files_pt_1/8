@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+		
+        <title>
+            Job Opportunities
+        </title>
+		
+			<link href="https://www.healthcaresource.com/slhn/style.css" rel="stylesheet" type="text/css" />
+			<link href="https://www.healthcaresource.com/slhn/style_JobSearch.css" rel="stylesheet" type="text/css" />
+		
+
+		<script type="text/javascript">
+    	/* keeps popup on top */
+	  	function checkPopup()
+	  	{
+	    	try
+	    	{
+	      		if (newwindow != null && !newwindow.closed)
+	      		{
+		      		newwindow.focus();
+	      		}
+	    	}
+	    	catch(e)
+	    	{
+  	
+    		}
+	  	}
+  		</script>
+    </head>
+    <body  onfocus="checkPopup();" >
+        <div id="popupMessage" style="display: none;">
+            <p>
+                It has been determined that you are currently running a &quot;Popup Blocker&quot;. In order to continue, please <strong>allow</strong> this site from within your &quot;Popup
+                Blocker&quot; preferences.
+            </p>
+        </div>
+<script type="text/javascript">
+	function toggleElement(element)
+	{
+		if(document.getElementById(element).style.display == 'none')
+		{
+	   		document.getElementById(element).style.display = '';
+	 	}
+	 	else if(document.getElementById(element).style.display != 'none')
+		{
+	   		document.getElementById(element).style.display = 'none';
+	 	}
+	}
+</script>
+<script type="text/javascript" src="/documents/siteManager/mx/js/xmlhttprequest.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+  var URL_PATH = "index.cfm";
+  var XHR = getHTTPObject();
+  
+  var sURL = "";
+
+  /* called to begin XMLHTTPRequest activity */
+  function XHR_ClearSession()
+  {  	
+  	XHR.open("POST", URL_PATH, true);
+		XHR.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+		XHR.onreadystatechange = handleXHR_ClearSession;
+ 		XHR.send("fuseaction=login.logout");
+  }
+ 
+  /* used to output data received via ajax */
+  function handleXHR_ClearSession()
+  {
+    if (XHR.readyState == 4 && XHR.status == 200)
+    {
+    	/* handle popup new window */
+      newwindow = open(sURL+"&blnNewWindowStart=true","newwin", "scrollbars=yes,toolbar=no,directories=no,menubar=no,resizable=yes,status=yes,width=660,height=500,left=10,top=10");
+	
+	    try
+	    {
+	      var obj = newwindow.name;
+        document.getElementById('popupMessage').style.display = "none";
+	    }
+	    catch(e)
+	    {    	
+        if (newwindow != null && !newwindow.closed)
+	      {
+	        newwindow.focus();
+	      }
+	      document.getElementById('popupMessage').style.display = "block";
+	    }
+    }
+  }
+
+  /* begin application */
+  function openit(URL)
+  {		
+  	  sURL = URL;
+  	
+  	  //remote call to login.logout
+      XHR_ClearSession();
+  } 
+  
+  /* send to friend */
+  function new_window(url)
+  {
+    link = window.open(url,"Link","toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=1,width=660,height=400,left=20,top=40");
+  }
+  
+//]]>
+</script>
+
+<div id="jobDetails">
+  <div class="navBar">
+	  <form action="?fuseaction=home.main">
+		  <input type="submit" name="submit" value="New Search">
+      <input type="button" VALUE="Return To Jobs" onClick="history.back()">
+		</form>
+	</div>
+
+  
+
+  <div class="sendJobToFriend">
+	  <a class="bannertext" href="#" onclick="new_window('?fuseaction=search.jobDetails&template=dsp_email_job.cfm&cJobId=100106839')">
+		  Send this job to a friend
+		</a>
+  </div>
+
+  <table>
+    <tr class="banner">
+      <td colspan="2" nowrap="nowrap">
+      	<div class="jobTitle" style="color: #FFFFFF">RN</div>
+			</td>
+	  </tr>
+          <tr>
+      <td class="formOffsetColor" width="25%">Facility:</td>
+      <td class="form">Shea Medical Center, , </td>
+    </tr>
+    
+         <tr>
+    <td class="formOffsetColor tableLabel">Additional Information:</td>
+    <td class="form"></td>
+   </tr>
+    
+    <tr>
+      <td class="formOffsetColor">Job Category:</td>
+      <td class="form">Nursing</td>
+    </tr>
+     <tr>
+      <td class="formOffsetColor">Department:</td>
+      <td class="form">Med/Surg Tele 2A2A2&2A3</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Schedule:</td>
+      <td class="form">Full-time</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Shift:</td>
+      <td class="form">Days</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Hours:</td>
+      <td class="form">7:00am-7:30pm</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Hours/PP:</td>
+      <td class="form">72</td>
+    </tr>
+    <tr>
+      <td class="formOffsetColor">Req #:</td>
+      <td class="form">59183</td>
+    </tr>
+    
+    <tr>
+		  <td class="formOffsetColor" valign="top">Job Details:</td>
+      <td class="form">
+        <ul>
+		    
+			    <li><H5 style="MARGIN: 0in 0in 0pt"><SPAN style="FONT-STYLE: normal; FONT-FAMILY: 'Arial','sans-serif'; mso-bidi-font-size: 12.0pt"><FONT size=3>POSITION SUMMARY<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></SPAN></H5>  <P style="MARGIN: 0in 0in 12pt; mso-margin-top-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #333333; FONT-SIZE: 10pt">The RN's practice is guided by the ANA Standard for Professional Nurse and Code of Ethics. The RN h</SPAN><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt">as knowledge of professional nursing principles, practices, concepts, and procedures as applied to the care of the patient population served. </SPAN><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #333333; FONT-SIZE: 10pt">The RN records patients' medical history and symptoms, help perform diagnostic tests and analyze results, operate medical equipment, administer treatment and medications, and help with patient follow-up and rehabilitation. </SPAN><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>  <P style="MARGIN: 0in 0in 12pt; mso-margin-top-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #333333; FONT-SIZE: 10pt">The RN establishes a care plan or contributes to an existing plan. The plan may include activities, such as administering medication, including careful checking of dosages and avoiding interactions; starting, maintaining, and discontinuing intravenous (IV) lines for fluid, medication, blood, and blood products; administering therapies and treatments; observing the patient and recording those observations; and consulting with physicians and other healthcare clinicians. The RN teaches patients and their families how to manage their illnesses or injuries, explain post-treatment and home care needs; diet, nutrition, and exercise programs; and self-administration of medication and therapy. The RN provides direction to licensed practical nurses and nursing aides regarding patient care and delegates when appropriate.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN></SPAN><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt"><o:p></o:p></SPAN></P>  <P style="MARGIN: 0in 0in 12pt; mso-margin-top-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt">The RN supports efforts to advance clinical knowledge and skills.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>The RN precepts new hire staff and students.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>The RN assists the staff and students to seek and complete the tasks required to complete their competency skills.<SPAN style="mso-spacerun: yes">&nbsp;&nbsp; </SPAN>The RN continues to enhance their knowledge in the nursing management and care of patient problems and conditions as required.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>The </SPAN><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: #333333; FONT-SIZE: 10pt">RN may continue to improve the patients experience, clinical outcomes and works to promote a healthy work environment.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>HonorHealth</SPAN><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt"> Nursing practices theory based nursing that is evidenced based utilizing a Shared Governance model for decision-making.<o:p></o:p></SPAN></P>  <P style="MARGIN: 3pt 0in" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt">All RN staff who have direct responsibility for the care of stroke patients must have knowledge of:<o:p></o:p></SPAN></P>  <UL type=disc>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Stroke symptoms and warning signs<o:p></o:p></SPAN></LI>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Protocols and pathways used to identify, evaluate and management of stroke patients<o:p></o:p></SPAN></LI>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">NIHSS and Modified Rankin Stroke scales<o:p></o:p></SPAN></LI>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Code Brain activation and protocol<o:p></o:p></SPAN></LI>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Stoke quality indicators<o:p></o:p></SPAN></LI>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Available stroke patient education materials and community resources<o:p></o:p></SPAN></LI>  <LI style="MARGIN: 0in 0in 0pt; COLOR: black; tab-stops: list .5in; mso-margin-top-alt: auto; mso-list: l0 level1 lfo1; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">Educational requirements<o:p></o:p></SPAN></LI></UL>  <P style="MARGIN: auto auto 12pt; mso-add-space: auto; mso-margin-top-alt: auto" class=MsoNormalCxSpMiddle><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt"><SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>HonorHealth Stroke Center website resources<o:p></o:p></SPAN></P>  <P style="MARGIN: 3pt 0in" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt"><o:p>&nbsp;</o:p></SPAN></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 12pt">POSITION QUALIFICATIONS</SPAN></B></P>  <P style="MARGIN: 0in 0in 0pt" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 12pt"><o:p></o:p></SPAN></B>&nbsp;</P>  <P style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">EDUCATION: <SPAN style="mso-spacerun: yes">&nbsp;</SPAN></SPAN></B><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt">Licensure as a registered nurse in the State of Arizona. <SPAN style="mso-spacerun: yes">&nbsp;</SPAN>Associates Degree in Nursing.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Graduated from an accredited NLN/CCNE institution.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Certification in BLS training course C.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Unit specific certification if required by specialty area.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>All staff who have direct responsibility for the care of stroke patients must have 8 hours of initial stroke specific education, and then 1 hour annually.</SPAN></P>  <P style="MARGIN: 0in 0in 0pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto" class=MsoNormal><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; COLOR: black; FONT-SIZE: 10pt"><o:p></o:p></SPAN>&nbsp;</P>  <P style="MARGIN: 0in 0in 0pt; mso-layout-grid-align: none; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto" class=MsoNormal><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt">EXPERIENCE:</SPAN></B><SPAN style="FONT-FAMILY: 'Arial','sans-serif'; FONT-SIZE: 10pt"> <SPAN style="mso-spacerun: yes">&nbsp;</SPAN><SPAN style="COLOR: black">1 year RN experience in med-surg or acute specialty setting.<o:p></o:p></SPAN></SPAN></P> <P></li>
+		    
+				</ul>
+	    </td>
+    </tr>
+    
+  </table>
+  <br />
+<div class="content applyLinks" id="applyLinks_1" style="text-align:center;">
+            
+            
+			<span class="bannertext" onclick="toggleElement('applyLinks_1'); toggleElement('externalApplyConfirm_1');">
+				External Applicant Click here to apply<br />
+			</span>
+            <br />
+            
+            <span class="bannertext" onclick="toggleElement('applyLinks_1'); toggleElement('internalApplyConfirm_1');">
+                Current Employees Click here to apply
+            </span>
+			<br />
+        </div>
+        <div class="applicantShield" id="externalApplyConfirm_1" style="display:none;">
+            <h1 class="confirmBanner banner">External Application Confirm</h1>
+            <div class="messageContainer">
+                <p>Are you sure you want to continue as an <strong>EXTERNAL</strong> applicant?</p>
+                <div class="buttonContainer">
+                	<div class="button banner"  style="margin-right:20px;" onclick="javascript:openit('?fuseaction=apply.login&template=dsp_apply_login.cfm&cJobId=100106839');toggleElement('applyLinks_1'); toggleElement('externalApplyConfirm_1');">
+                        Yes
+                    </div>
+					<div class="button banner" onclick="toggleElement('applyLinks_1'); toggleElement('externalApplyConfirm_1');">
+                        No
+                    </div>
+                    <br style="clear:both;" />
+                </div>
+            </div>
+        </div>
+        <div class="applicantShield" id="internalApplyConfirm_1" style="display:none;">
+            <h1 class="confirmBanner banner">Internal Application Confirm</h1>
+            <div class="messageContainer">
+                <p>Are you sure you want to continue as an <strong>INTERNAL</strong> applicant?</p>
+                <div class="buttonContainer">
+                    <div class="button banner" style="margin-right:20px;" onclick="javascript:openit('https://www.healthcaresource.com/slhn_i/index.cfm?fuseaction=apply.login&template=dsp_apply_login.cfm&cJobId=100106839');toggleElement('applyLinks_1'); toggleElement('internalApplyConfirm_1');">
+                        Yes
+                    </div>
+                    <div class="button banner" onclick="toggleElement('applyLinks_1'); toggleElement('internalApplyConfirm_1');">
+                        No
+                    </div>
+                    <br style="clear:both;" />
+                </div>
+            </div>
+        </div>
+	
+<br />
+
+
+<div class="navBar">
+  <form action="?fuseaction=home.main">
+	  <input type="submit" name="submit" value="New Search">
+    <input type="button" VALUE="Return To Jobs" onClick="history.back()">
+	</form>
+</div>
+
+
+
+  <a class="back_to_top" href="#" onclick="self.scrollTo(0,0)">back to top</a>
+
+</div>
+</form>
+
+
+
+</body>
+</html> 

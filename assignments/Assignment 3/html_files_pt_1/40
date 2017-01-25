@@ -1,0 +1,695 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+<head>
+<script type="text/javascript">
+function icims_stripIFrameParameter(url) {
+url = url.replace(/\?in_iframe=1\&?/, '?');
+url = url.replace(/\&in_iframe=1\&?/, '&');
+url = url.replace(/(\?|&)$/, '');
+return url;
+}
+
+document.cookie = "jsEnabled=true;path=/";
+var icimsWindow = false;
+try {
+icimsWindow = window.top.location.href.indexOf('') >= 0;
+} catch (e) {}
+
+if (icimsWindow) {
+try {
+
+if (window.history.replaceState) {
+parent.updateUrl(icims_stripIFrameParameter(window.location.href));
+}
+} catch (e) {}
+
+try {
+
+var windowUrl = window.top.location.href;
+if (windowUrl.match(/\?in_iframe=1\&?/) || windowUrl.match(/\&in_iframe=1\&?/)) {
+document.cookie = 'icims_iframeRedirReferer=' + encodeURIComponent(document.referrer) + ';path=/';
+window.top.location.href = icims_stripIFrameParameter(windowUrl);
+}
+} catch (e) {}
+
+}
+</script>
+<title>Careers Center - Senior Manager, Utility Development</title>
+
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function c(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),c=a.length,u=0;c>u;u++)a[u].apply(i,r);return i}function u(t,e){p[t]=f(t).concat(e)}function f(t){return p[t]||[]}function s(){return r(c)}var p={};return{on:u,emit:c,create:s,listeners:f,context:e,_events:p}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!v++){var t=l.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(p,function(e,n){t[e]||(t[e]=n)});var n="https"===s.split(":")[0]||t.sslForHttp;l.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=l.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),c=t(1),u=window,f=u.document;t(2);var s=(""+location).split("?")[0],p={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},d=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),l=e.exports={offset:i(),origin:s,features:{},xhrWrappable:d};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),u.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),u.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var v=0},{1:12,2:3,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],12:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],13:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}]},{},["G9z0Bl"]);</script><link rel="stylesheet" type="text/css" href="https://cdn09.icims.com/a/images.icims.com/content/provider_16.1.160209.86846/css/social-portal.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn01.icims.com/platform_15.2.160209.86848/sunpower.icims.com/icims2/servlet/icims2?module=AppInert&action=renderDynamicPortalCss&a=0&portal=17&page=job&group=base%2Cbase_media_query%2Cjob_header%2Clogin%2Csocial_distro_widget&asv=1455250723560&type=adaptive" />
+<link rel="stylesheet" type="text/css" href="https://cdn01.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/css/bootstrap-3.3.0.css" />
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/lib/jquery/jquery-1.11.2.js"></script>
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/lib/domreplacement/domReplacement.js"></script>
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/common/icims.js"></script>
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/utils.js"></script>
+<script type="text/javascript" src="https://cdn03.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/dataLayer/apply.js"></script>
+<script type="text/javascript" src="https://cdn03.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/dataLayer/youtube.js"></script>
+<script type="text/javascript" src="https://cdn03.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/dataLayer/vimeo.js"></script>
+<script type="text/javascript" src="https://cdn03.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/showMoreTextAbstract.js"></script>
+<script type="text/javascript" src="https://cdn03.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/job.js"></script>
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<script type="text/javascript">
+var isMobile = false;
+
+var redirectUrl = 'https:\/\/careers-sunpower.icims.com\/jobs\/14780\/senior-manager%2c-utility-development\/job?in_iframe=1&mode=job&iis=SOURCE&iisn=TweetMyJobs';
+</script>
+<script type="text/javascript" src="https://cdn07.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/mobileDetect.js"></script>
+<meta name="robots" content="index,follow" />
+<meta name="og:url" content="https://careers-sunpower.icims.com/jobs/14780/senior-manager%2c-utility-development/job?mobile=true&needsRedirect=false" />
+<meta property="keywords" content="Senior Manager, Utility Development,job,jobs,job search,job match,job matching,employment,employment opportunities,job openings,job sites,job listings,find a job,career,manager,director,executive,recruiters,jobmagic.com,jobmagic,iCIMS,iCIMS.com,social.icims.com,Social,Distribution" />
+<meta property="twitter:card" content="summary" />
+
+<meta property="og:title" content="Senior Manager, Utility Development" />
+<meta property="twitter:title" content="Senior Manager, Utility Development" />
+<meta property="title" content="Senior Manager, Utility Development" />
+
+
+<meta property="og:description" content="- 8+ years’ experience with commercial and/or utility solar project development
+- MBA preferred
+- Experience in the CAISO and with CEQA permitting
+- Specific expertise in one or more of the following areas: permitting, interconnection, and/or real estate
+- Track record of independently leading multi-disciplinary teams in closing utility-scale renewable energy projects
+- Knowledge of finance and business concepts
+- Energetic and aggressive in pursuing opportunities
+- Results-oriented with the ability to work independently, with light supervision, in an entrepreneurial environment
+- Strong desire to advance the adoption of renewable energies in the global energy mix
+LI-NT*" />
+<meta property="twitter:description" content="- 8+ years’ experience with commercial and/or utility solar project development
+- MBA preferred
+- Experience in the CAISO and with CEQA permitting
+- Specific expertise in one or more of the following areas: permitting, interconnection, and/or real estate
+- Track record of independently leading multi-disciplinary teams in closing utility-scale renewable energy projects
+- Knowledge of finance and business concepts
+- Energetic and aggressive in pursuing opportunities
+- Results-oriented with the ability to work independently, with light supervision, in an entrepreneurial environment
+- Strong desire to advance the adoption of renewable energies in the global energy mix
+LI-NT*" />
+<meta property="description" content="- 8+ years’ experience with commercial and/or utility solar project development
+- MBA preferred
+- Experience in the CAISO and with CEQA permitting
+- Specific expertise in one or more of the following areas: permitting, interconnection, and/or real estate
+- Track record of independently leading multi-disciplinary teams in closing utility-scale renewable energy projects
+- Knowledge of finance and business concepts
+- Energetic and aggressive in pursuing opportunities
+- Results-oriented with the ability to work independently, with light supervision, in an entrepreneurial environment
+- Strong desire to advance the adoption of renewable energies in the global energy mix
+LI-NT*" />
+
+
+<meta property="og:site_name" content="Careers" />
+
+
+<meta property="og:image" content="https://sunpower.icims.com/icims2/servlet/icims2?module=AppInert&amp;amp;action=download&amp;amp;id=27596&amp;amp;hashed=-24" />
+<meta property="twitter:image" content="https://sunpower.icims.com/icims2/servlet/icims2?module=AppInert&amp;amp;action=download&amp;amp;id=27596&amp;amp;hashed=-24" />
+
+<link rel="canonical" href="https://careers-sunpower.icims.com/jobs/14780/senior-manager%2c-utility-development/job?mobile=true&needsRedirect=false" />
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _c2a = _c2a || [];
+
+var _iCIMSRecommendationEvents = _iCIMSRecommendationEvents || [];
+var icimsRecommendationEventParameters = new Array();
+icimsRecommendationEventParameters['id'] = 'icims-recommendation';
+icimsRecommendationEventParameters['data-icims-recommendation-service-url'] = 'https://provider.icims.com';
+icimsRecommendationEventParameters['data-icims-recommendation-service-cdn-url'] = 'https://cdn09.icims.com/a/images.icims.com/content/provider_16.1.160209.86846/';
+icimsAsyncLoadScript('https://cdn09.icims.com/a/images.icims.com/content/provider_16.1.160209.86846/scripts/recommendation/recommendation.js', icimsRecommendationEventParameters);
+
+
+
+
+_c2a.push(['View', '14780', null, 'Senior Manager, Utility Development']);
+
+_iCIMSRecommendationEvents.push(['VIEW_JOB', '14780' + '-' + '3118', 'Senior Manager, Utility Development', function(){return $("span[itemprop|='address']").text()}]);
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+(function () {
+var initialize = function() {
+// Require _c2a object
+if(typeof _c2a === 'undefined') return;
+// Prevent multiple initializations
+if(typeof _c2a === 'object' && _c2a.initialized === true) return;
+var pendingCommands = _c2a || [];
+var i = 0;
+var commandHandler = {
+initialized: true,
+push: function(arr) {
+try {
+if(typeof Click2Apply === 'object' && Object.prototype.toString.call(arr) === '[object Array]') {
+var eventName = arr[0];
+var s_jobId = arr[1];
+var s_userId = arr[2];
+var s_title = arr[3];
+switch (eventName) {
+case "View":
+Click2Apply.analytics.View({
+jobid: s_jobId,
+title: s_title
+});
+break;
+case "Start":
+Click2Apply.analytics.Start({
+jobid: s_jobId,
+userId: s_userId
+});
+break;
+case "Apply":
+Click2Apply.analytics.Apply({
+jobid: s_jobId,
+userId: s_userId
+});
+break;
+}
+}
+} catch (e){};
+}
+}
+for(i=0; i < pendingCommands.length; i++) {
+commandHandler.push(pendingCommands[i]);
+}
+_c2a = commandHandler;
+}
+var loadScript = function () {
+var c2a = document.createElement('script'),
+scriptElem = document.getElementsByTagName('script')[0],
+scriptUrl = 'https://code.click2apply.net/js/1.0/click2apply.js?',
+atsId = '1043',
+recruiterId = '';
+c2a.type = 'text/javascript';
+c2a.async = true;
+c2a.src = scriptUrl + (recruiterId ? 'recruiter_id=' + recruiterId : 'ats_id=' + atsId);
+if (c2a.readyState) { // IE.
+c2a.onreadystatechange = function() {
+if (c2a.readyState == "loaded" || c2a.readyState == "complete") {
+c2a.onreadystatechange = null;
+initialize();
+};
+};
+} else { // Others.
+c2a.onload = initialize;
+}
+scriptElem.parentNode.insertBefore(c2a, scriptElem);
+};
+if (window.addEventListener) {
+window.addEventListener('load', loadScript, false);
+} else if (window.attachEvent) {
+window.attachEvent('onload', loadScript);
+} else if (typeof window.onload === 'function'){
+var originalOnload = window.onload;
+window.onload = function() {
+originalOnload();
+loadScript();
+}
+} else {
+window['onload'] = loadScript;
+}
+})();
+</script>
+
+
+
+<script type="text/javascript">
+icimsAsyncLoadScript('https://cdn07.icims.com/a/images.icims.com/content/platform_15.2.160209.86848/script/portal/login.js');
+icimsAddOnload(function() {
+if (isMobile) {
+var showMoreTextAbstract = new ShowMoreTextAbstract();
+showMoreTextAbstract.initialize(110, '&#9660;&nbsp;<u>Read more</u>', '&#9650;&nbsp;<u>Read less</u>');
+}
+});
+var icimsSD = {"person":{},"companyName":"SunPower Corporation","env":"prod","job":{"zipCode":"94804","jid":14780,"jobUrls":[{"name":"Careers","url":"https://careers-sunpower.icims.com/jobs/14780/senior-manager%2c-utility-development/job"}],"location":"Richmond, California, United States","title":"Senior Manager, Utility Development"},"version":"1.015","key":"1","cid":"INpMloBq0lnlMqy+/l3hH6qnug7aOcmovFphHHniOf9V0OBSrzeAeoUV5aJV"};
+window.mobile = false;
+loadWidget();
+function loadWidget() {
+if(typeof icimsSD !== 'undefined') {
+icimsSD["callback"] = sdWidgetReadyCallback;
+$.ajaxSetup({
+cache: true
+});
+$.getScript('https://cdn06.icims.com/social_1/social.icims.com/javascript/socialDistro.js');
+}
+}
+</script><script type="text/javascript">
+function icims_resizeIFrameHeight() {
+
+icims_resizeIFrame('https://careers-sunpower.icims.com');
+
+}
+function icims_scroll(x, y) {
+icims_scrollIFrame(x, y, 'https://careers-sunpower.icims.com');
+}
+icimsAddOnload(function() {
+icimsCheckCookie();
+icims_resizeIFrameHeight();
+
+});
+var icimsIframeResizeTimer = setInterval(icims_resizeIFrameHeight, 500);
+
+try {
+if (window.orientation) {
+window.addEventListener("orientationchange", icims_resizeIFrameHeight, false);
+}
+} catch (e) {}
+
+var isHub = false;
+if (!window.history.replaceState || isHub) {
+icimsAddOnload(function() {
+var links = document.getElementsByTagName("a");
+for (var i = 0; i < links.length; i++) {
+if (!links[i].target) {
+var href = links[i].getAttribute('href')
+if (href) {
+var prevInnerHTML = links[i].innerHTML;
+links[i].setAttribute('href', icims_stripIFrameParameter(href));
+
+links[i].innerHTML = prevInnerHTML;
+}
+links[i].target = icimsWindow ? "_top" : "_parent";
+}
+}
+});
+}
+
+icimsAddOnload(function() {
+try {
+if (icimsWindow && parent) {
+parent.document.title = document.title;
+}
+} catch (e) {}
+});
+</script>
+</head>
+<body class="iCIMS_Body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+dataLayer = [{"hasVideo":"no","environment":"prod","currentUser":{"dataSource":"SOURCE","dataSourceName":"TweetMyJobs"},"pageType":"jobDetailsPage","instance":{"id":"2W9oWjuFAFzmDSCjR","type":"careers"},"releasePhase":"Wave2","build":"platform_15.2.160209.86848","release":"15.2","icimsGAAnonymizeIP":false,"customerId":"2W6XcJLkRXMU2RhVP","job":{"positionType":"Employee","company":"SunPower Corporation","location":{"zip":"94804","country":"USA","city":"Richmond","state":"CA"},"id":"n8poR3MbL5t9GZrj","title":"Senior Manager, Utility Development","category":"Sales","postedDate":"2016-02-09"},"icimsGAAccount":"UA-35875149-10"}];
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id="
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W8W92P');</script>
+<!-- End Google Tag Manager -->
+<script type="text/javascript">
+try {
+document.body.className += " iCIMS_Other iCIMS_Other";
+} catch(e) {}
+</script>
+<div id="iCIMS_NoCookiesMessage" class="iCIMS_ErrorMsg iCIMS_ErrorMessage iCIMS_NoCookies" style="display: none">
+<div class="iCIMS_ErrorMsgTitle">Please Enable Cookies to Continue</div>
+Please enable cookies in your browser to experience all the personalized features of this site, including the ability to apply for a job.</div>
+
+<!-- Job Core -->
+<div class="iCIMS_MainWrapper iCIMS_JobPage iCIMS_Desktop ">
+
+
+
+
+<div class="iCIMS_profilePicture">
+<div class="iCIMS_userMenu">
+<div class="iCIMS_userMenuName">Returning Candidate?</div>
+<div class="iCIMS_userMenuLink">
+<a tabindex="0" href="https://careers-sunpower.icims.com/jobs/14780/senior-manager%2c-utility-development/login?loginOnly=1&amp;redirect=job&amp;in_iframe=1&amp;hashed=-435775287">Log back in!</a>
+</div>
+</div>
+<div class="iCIMS_FloatHack"></div>
+</div>
+
+
+
+<h1 class="iCIMS_Header" itemprop="title">Senior Manager, Utility Development</h1>
+<div class="iCIMS_JobContainer">
+<div class="iCIMS_JobContent">
+<h1 class="iCIMS_Header" itemprop="title">Senior Manager, Utility Development</h1>
+<div class="iCIMS_TimeZone">
+All times are in Eastern Standard Time.</div>
+
+<div class="iCIMS_ShadowContainer iCIMS_JobHeader">
+
+<div class="iCIMS_JobHeaderTable iCIMS_Table">
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="iCIMS_TableRow">
+<div class="iCIMS_JobHeaderGroup iCIMS_TableCell">
+<div class="iCIMS_JobHeaderField iCIMS_TableHeader" scope="row">Req #&nbsp;</div>
+<div class="iCIMS_JobHeaderData" itemprop="">
+
+2016-14780
+
+</div>
+<div style="clear: both;"></div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="iCIMS_JobHeaderGroup iCIMS_TableCell">
+<div class="iCIMS_JobHeaderField iCIMS_TableHeader" scope="row">Job Location&nbsp;</div>
+<div class="iCIMS_JobHeaderData" ><span itemprop="JobLocation" itemscope itemtype="http://schema.org/Place"><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemProp="addressCountry">US</span>-<span itemProp="addressRegion">CA</span>-<span itemProp="addressLocality">Richmond</span></span></span><BR /></div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="iCIMS_TableRow">
+<div class="iCIMS_JobHeaderGroup iCIMS_TableCell">
+<div class="iCIMS_JobHeaderField iCIMS_TableHeader" scope="row">Posted Date&nbsp;</div>
+<div class="iCIMS_JobHeaderData" itemprop="datePosted">
+<span itemprop="datePosted"  content="2016-02-09T00:00:00.000-05:00">
+2/9/2016
+</span>
+</div>
+<div style="clear: both;"></div>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="iCIMS_JobHeaderGroup iCIMS_TableCell">
+<div class="iCIMS_JobHeaderField iCIMS_TableHeader" scope="row">Category&nbsp;</div>
+<div class="iCIMS_JobHeaderData" itemprop="occupationalCategory">Sales</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="iCIMS_SubHeader iCIMS_SubHeader_Job">
+More information about this job:
+</h2>
+
+
+
+<div class="iCIMS_InfoMsg iCIMS_InfoField_Job">
+Overview:
+</div>
+<div class="iCIMS_InfoMsg iCIMS_InfoMsg_Job" >
+<div class="iCIMS_Expandable_Container">
+<div class="iCIMS_Expandable_Text">
+<p style="margin: 0px">Do you want to change the world? We do, too.</p><p style="margin: 0px">&nbsp;</p><p style="margin: 0px">The energy market is roughly $4 trillion globally, and solar penetration is less than 1%.&nbsp; But just one hour of sunlight, if harnessed, could power the entire world for a year. We have the opportunity to completely change the way energy is produced, distributed and consumed on a global scale, and we&rsquo;re looking for talented, committed people to help us drive our growth and achieve our goals.</p><p style="margin: 0px">&nbsp;</p><p style="margin: 0px">SunPower is a global solar energy solutions company with a rich heritage of pioneering the best energy technologies in the world. Our solutions are unrivaled in terms of long-term reliability, efficiency and guaranteed performance, and our company is unmatched in terms of global reach and scale. Through design, manufacturing, installation and ongoing maintenance and monitoring, SunPower provides its proprietary, world-record efficient solar technology to residential, commercial and utility customers worldwide.</p><p style="margin: 0px">&nbsp;</p><p style="margin: 0px">SunPower is changing the way our world is powered every day with a brilliant, passionate and driven team of more than 7,000 in North America, Europe, Africa, Asia and Australia. In an industry that is reshaping the world&rsquo;s energy future, there&rsquo;s no better place to be than SunPower.</p><p style="margin: 0px">&nbsp;</p><p style="margin: 0px">We believe that our employees create our brand &ndash; with each project, each communication, each task completed and each interaction. Experience is critical to SunPower in regards to not only our customers but also our employees and dealer partners. As such, we strive to hire candidates that are service focused. The experience we would expect the ideal person to deliver is:</p>
+<div id="iCIMS_Expandable_Button"></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="iCIMS_InfoMsg iCIMS_InfoField_Job">
+Summary of Role:
+</div>
+<div class="iCIMS_InfoMsg iCIMS_InfoMsg_Job" itemprop="responsibilities">
+<div class="iCIMS_Expandable_Container">
+<div class="iCIMS_Expandable_Text">
+<p style="margin: 0px;">The Senior Manager, Development for the Americas Utility Power Plant Group will be responsible for managing the real estate, permitting and interconnection aspects of multiple utility and commercial scale PV projects in California and Nevada.&nbsp; This cross functional position will be responsible for all phases of the projects&rsquo; life cycle, including prospecting, site identification, site acquisition, mid- and late-stage development, and support of project financing and closing of transactions.</p><p style="margin: 0px;">&nbsp;</p><p style="margin: 0px;">This is a new position at SunPower. It will report to the Director of Development, West Region.</p><p style="margin: 0px;">&nbsp;</p><p style="margin: 0px;">Essential duties and responsibilities include the following.&nbsp; Other duties may be assigned:&nbsp;&nbsp;</p><ul><li>Managing the interconnection, real estate and permitting aspects of multiple utility and commercial scale projects from approximately 20MW in size and up</li><li>Working very cross-functionally with other departments involved in the overall advancement of projects including Origination, Engineering, Construction, Legal, Accounting and Finance teams</li><li>Supporting M&amp;A and project financing activities at various stages of the project lifecycle</li><li>Leading the due diligence and fatal flaw analysis of potential project acquisitions</li><li>Incorporating the input of subject matter experts, including those with expertise in real estate, permitting and interconnection. At times, playing a lead role in real estate, permitting and interconnection activities</li><li>Identifying and managing relationships with consultants and external legal counsel</li><li>Representing SunPower with external project stakeholders including landowners, permitting agencies, transmission providers, and at public hearings and government and community events</li><li>Supporting the submittal of origination proposals to customers and partners</li></ul>
+<div id="iCIMS_Expandable_Button"></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="iCIMS_InfoMsg iCIMS_InfoField_Job">
+Minimum Requirements:
+</div>
+<div class="iCIMS_InfoMsg iCIMS_InfoMsg_Job" itemprop="qualifications">
+<div class="iCIMS_Expandable_Container">
+<div class="iCIMS_Expandable_Text">
+<ul><li><p style="margin: 0px;"><strong>Education and Experience:</strong></p><ul><li>8+ years&rsquo; experience in:<ul><li>the renewable energy electric industry,</li><li>Renewable Energy project development, including permitting, real estate, and transmission,</li><li>Managing multidisciplinary development projects</li></ul></li><li>Experience developing renewable energy projects through project financing and closing of transactions</li><li>Strong track record of managing large interdisciplinary projects</li><li>Network of consultants and other professional relationships to support SunPower in-house development efforts</li><li>Experience working with project stakeholders and in public environments</li><li>Experience presenting project development proposals and activities to senior management</li><li>Fluency in MS Excel, PowerPoint, and Word</li></ul><p style="margin: 0px;">&nbsp;</p><p style="margin: 0px;"><strong>Skills and Qualifications:</strong></p><p style="margin: 0px;">&nbsp;</p><ul><li>Tenacious problem solver &ndash; able to accurately assess, solve, implement, and communicate solutions to problems</li><li>Proven ability to adapt to change in a calm and measured manner</li><li>Proven project manager with demonstrated execution experience and people management skills</li><li>Highly effective communicator -- able to craft and present excellent written presentations and analyze data to support arguments.</li><li>Skilled at creating, summarizing and presenting information logically, for executive decision-making</li><li>Strong leadership and strategic skills with an ability to balance and prioritize competing interests</li><li>Demonstrated ability to develop new business relationships quickly and to close business</li><li>Demonstrated ability to work effectively in a fast-paced, dynamic environment</li><li>Demonstrated ability to manage and interface effectively with cross-functional employee groups of all levels and competencies</li><li>Ability to perform and interpret financial analysis and provide appropriate data and information</li><li>Excellent oral and written communication and presentation skills</li><li>Excellent interpersonal and time management skills</li><li>Entrepreneurial, self-starter with a burning desire to learn and win</li></ul></li></ul>
+<div id="iCIMS_Expandable_Button"></div>
+</div>
+</div>
+</div>
+
+
+
+<div class="iCIMS_InfoMsg iCIMS_InfoField_Job">
+Preferred Requirements:
+</div>
+<div class="iCIMS_InfoMsg iCIMS_InfoMsg_Job" >
+<div class="iCIMS_Expandable_Container">
+<div class="iCIMS_Expandable_Text">
+<ul><li>8+ years&rsquo; experience with commercial and/or utility solar project development</li><li>MBA preferred</li><li>Experience in the CAISO and with CEQA permitting</li><li>Specific expertise in one or more of the following areas: permitting, interconnection, and/or real estate</li><li>Track record of independently leading multi-disciplinary teams in closing utility-scale renewable energy projects</li><li>Knowledge of finance and business concepts</li><li>Energetic and aggressive in pursuing opportunities</li><li>Results-oriented with the ability to work independently, with light supervision, in an entrepreneurial environment</li><li>Strong desire to advance the adoption of renewable energies in the global energy mix</li></ul><p style="margin: 0px;">LI-NT*</p>
+<div id="iCIMS_Expandable_Button"></div>
+</div>
+</div>
+</div>
+
+
+<div class="iCIMS_JobOptions">
+
+<h2 class="iCIMS_SubHeader iCIMS_SubHeader_Job">Options:</h2>
+
+<div id="jobOptionsMobile" class="iCIMS_JobOptionsMobile">
+
+
+
+
+<a href="https://careers-sunpower.icims.com/jobs/14780/senior-manager%2c-utility-development/job?mode=apply&apply=yes&in_iframe=1&hashed=-336210825" class="iCIMS_Anchor iCIMS_Action_Button iCIMS_ApplyOnlineButton" title="Apply for this job online"><div class="iCIMS_Action_ButtonText"><span class="iCIMS_LongLabel">Apply for this job online</span><span class="iCIMS_ShortLabel">Apply</span></div></a><a onclick="showSocialOptions()" id="mobileShowSocialOptionsButton" class="iCIMS_Anchor iCIMS_Action_Button iCIMS_JobShareButton iCIMS_NoDisplay" title="Share"><div class="iCIMS_Action_ButtonText"><span class="iCIMS_ShortLabel">Share</span></div></a><a href="https://careers-sunpower.icims.com/jobs/14780/senior-manager%2c-utility-development/referral?in_iframe=1&hashed=-435775287" class="iCIMS_Anchor iCIMS_Action_Button" title="Refer this job to a friend"><div class="iCIMS_Action_ButtonText"><span class="iCIMS_LongLabel">Refer this job to a friend</span><span class="iCIMS_ShortLabel">Refer</span></div></a>
+
+
+
+
+
+
+</div>
+<div id="jobSocialOptions" class="iCIMS_jobSocialOptions iCIMS_NoDisplay">
+
+
+<div class="iCIMS_Divider"></div>
+<div class="iCIMS_BroadcastJob_Label">Share on your newsfeed</div>
+<div class="iCIMS_BroadcastJob icimsSD_widget" id="icimsSD_widget_share" data-icims-sd-type="share" data-icims-sd-jid="14780" data-icims-sd-size="24"></div>
+
+</div>
+</div>
+
+
+
+<div class="iCIMS_PageFooter">
+<p><strong>Equal Employment Opportunity</strong><br>
+The Company is an equal employment opportunity employer and makes employment decisions, including but not limited to, hiring, firing, promotion, demotion, training, and/or
+compensation, on the basis of merit.  Employment decisions are based on an individual’s qualifications as they relate to the job under consideration.<br />  The Company’s policy prohibits unlawful discrimination based on sex (which includes pregnancy, childbirth,
+breastfeeding, or related medical conditions, the actual sex of the individual, or the gender identity or gender expression), race, color, religion, including religious dress practices and religious grooming practices, sexual orientation, national origin,
+ancestry, citizenship, marital status, familial status, age, physical disability, mental disability, medical condition, genetic information, protected veteran or military status, or any other consideration made unlawful by federal, state or local laws, ordinances,
+or regulations.<br />
+The Company is committed to complying with all applicable laws providing equal employment opportunities.  This commitment applies to all persons involved in the operations
+of the Company and prohibits unlawful discrimination by any employee of the Company, including supervisors and co-workers. 
+</p>
+
+<p style="font-weight:bold">EOE Minorities/Females/Protected Veterans/Disabled</p>
+<a style="font-weight:bold" href="http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf" target="_blank">SunPower Supports EEO</a><p><strong>Accommodation for Applicants to SunPower Corporation</strong><br>
+SunPower Corporation is an Equal Employment Opportunity / Affirmative Action employer and provides reasonable accommodation for qualified individuals with disabilities and disabled veterans in job application procedures. If you have any difficulty using our
+online system and you need a reasonable accommodation due to a disability, you may use the following alternative email address to contact us about your interest in employment at SunPower Corporation:
+mailto:jobs@sunpower.com. Please indicate in the subject that line of your email that you are requesting accommodation. Only candidates being considered for a position who require an accommodation will receive a follow-up response.
+<br>
+</div>
+<div class="iCIMS_Navigation">
+
+
+<div class="iCIMS_NavigationIconContainer"><a class="iCIMS_Anchor_Nav" href="https://careers-sunpower.icims.com/jobs/intro?in_iframe=1"><img alt="" src="https://cdn07.icims.com/platform_15.2.160209.86848/careers-sunpower.icims.com/jobs/image?img=ccciconthemes/images3/back&amp;color=FFFFFF-cccccc-000000&amp;a=" class="iCIMS_NavIcon" width="20" height="20" />Go back to the welcome page</a></div>
+
+</div>
+<div class="iCIMS_Logo"><a class="iCIMS_Faq_Link" title="Application FAQs (Opens new window)" href="https://media.icims.com/training/candidatefaq/faq.html" target="_blank">Application FAQs</a><a href="http://www.icims.com/platform_help?utm_source=platform&utm_medium=link&utm_content=page1&utm_campaign=platform%20help" target="_blank" title="Powered by the iCIMS Talent Platform (Opens new window)"  class="iCIMS_Logo_Link"><span class="iCIMS_Logo_Image"></span></a><p class="iCIMS_Logo_Text">Software Powered by iCIMS<br>www.icims.com</p></div>
+
+</div>
+<div id="popupOverlay" class="iCIMS_Portal_PopupOverLay iCIMS_NoDisplay"></div>
+</div>
+
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+if (icimsWindow) {
+try {
+window.parent.document.getElementById('icims_content_iframe').title = document.title;
+} catch (e) {}
+}
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"4e547d37d0","agent":"","beacon":"bam.nr-data.net","applicationTime":43,"applicationID":"3926118,3836168,9851306","transactionName":"ZQdXYRMAD0ZUBkAIVlxNdkASFQ5YGhVbE01TDhpfDgNOcnAx","queueTime":0}</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+// New Relic PageViewName Logging. Ensure this cannot ever halt page execution.
+try {
+var pageViewName ='portal/job/GET';
+newrelic.setPageViewName(pageViewName);
+} catch (e) {}
+</script>
+</body>
+</html>
+
+

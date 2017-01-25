@@ -1,0 +1,262 @@
+<html>
+<head>
+	<title>
+		Employment Opportunities
+	</title>
+    
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<link href="style_JobSearch.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+<style media="print">
+	.printHide{
+		display:none;
+	}
+</style>
+
+
+<table class="printHide" width="500"  valign="top">
+	<tr>
+		<td width="100%" valign="top" align="right">
+		<form action="#self#?fuseaction=home.main">
+				<input type="submit" name="submit" value="New Search">
+				<input type="button" VALUE="Return To Jobs" onClick="history.back()">
+			</form>
+		</td>
+	</tr>
+</table>
+
+
+
+
+
+<script type="text/javascript" src="/documents/siteManager/mx/js/xmlhttprequest.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+var URL_PATH = "index.cfm";  var XHR = getHTTPObject();
+  
+  var sURL = "";
+
+  /* called to begin XMLHTTPRequest activity */
+  function XHR_ClearSession()
+  {  	
+  	XHR.open("POST", URL_PATH, true);
+		XHR.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+		XHR.onreadystatechange = handleXHR_ClearSession;
+ 		XHR.send("fuseaction=login.logout");
+  }
+ 
+  /* used to output data received via ajax */
+  function handleXHR_ClearSession()
+  {
+    if (XHR.readyState == 4 && XHR.status == 200)
+    {
+    	/* handle popup new window */
+      newwindow = open(sURL+"&blnNewWindowStart=true","newwin", "scrollbars=yes,toolbar=no,directories=no,menubar=no,resizable=yes,status=yes,width=660,height=500,left=10,top=10");
+	
+	    try
+	    {
+	      var obj = newwindow.name;
+        document.getElementById('popupMessage').style.display = "none";
+	    }
+	    catch(e)
+	    {    	
+        if (newwindow != null && !newwindow.closed)
+	      {
+	        newwindow.focus();
+	      }
+	      document.getElementById('popupMessage').style.display = "block";
+	    }
+    }
+  }
+
+  /* begin application */
+  function openit(URL)
+  {		
+  	  sURL = URL;
+  	
+  	  //remote call to login.logout
+      XHR_ClearSession();
+  } 
+  
+  /* send to friend */
+  function new_window(url)
+  {
+    link = window.open(url,"Link","toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=1,width=660,height=400,left=20,top=40");
+  }
+  
+//]]>
+</script>
+
+
+
+
+	
+<font class="content">
+	
+		<table border="0" width="500"  cellpadding="0">
+			<tr>
+				<td width="100%" valign="top" align="right">&nbsp;
+					
+				</td>
+			</tr>
+		</table>
+		
+	<table border="0" width="500"  cellpadding="0">
+			<tr>
+            	<td width="50%" valign="top" align="left">
+                	&nbsp;<a class="printHide" style="border:none;" href="javascript:window.print();"><img style="border:none;" src='https://www.healthcaresource.com/msgeorgetown//images/print_button.gif'></a>
+                </td>
+				<td width="50%" valign="top" align="right">
+					<a class='middle printHide'  href="javascript:new_window('https://www.healthcaresource.com/msgeorgetown/index.cfm?fuseaction=search.jobDetails&template=dsp_email_job.cfm&cJobId=101750')">
+			  		<font  face="verdana,arial,helvetica"  size="2" color="333366"><strong>Send this job to a friend</strong></font>
+					</a>
+					
+				</td>
+			</tr>
+		</table>
+
+<table border="0" cellspacing="2" cellpadding="6" width="500">
+
+<tr bgcolor="333366">
+<td colspan=2 nowrap>
+	<table width='100%'>
+	<tr>
+	<td>
+	<font class='subtitle'>
+	<font color=ffffff><b>Patient Pre-certification Associate </font></font></td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+<tr>
+<td align='right' bgcolor=cccccc>
+<font class='content'><b>Department:
+</td>
+<td bgcolor=e5e5e5>
+<font class='content'>Cyberknife II
+</td>
+</tr>
+
+<tr>
+<td align='right' bgcolor=cccccc>
+<font class='content'><b>Schedule:</td>
+<td bgcolor=e5e5e5>
+<font class='content'>Regular Full-Time</td>
+</tr>
+
+
+<tr>
+<td align='right' bgcolor=cccccc>
+<font class='content'><b>Shift:</td>
+<td bgcolor=e5e5e5>
+<font class='content'>Day</td>
+</tr>
+
+
+
+<tr>
+<td align='right' bgcolor=cccccc>
+<font class='content'><b>Hours:</td>
+<td bgcolor=e5e5e5>
+<font class='content'></td>
+</tr>
+<tr>
+<td align='right' bgcolor=cccccc>
+<font class='content'><b>Job Grade:</td>
+<td bgcolor=e5e5e5>
+<font class='content'>07</td>
+</tr>
+
+
+<tr>
+<td align='right' bgcolor=cccccc valign=top>
+<font class='content'><b>Job Details:</td>
+<td bgcolor=e5e5e5>
+<font class='content'>
+		
+			- Associates
+			<br>
+		<P><FONT face=arial,helvetica,sans-serif><FONT size=2><U><STRONG>Position Summary:</STRONG></U> <SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">The individual in this position provides assistance to patients in the department.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>The individual is responsible for coordinating all the functions and activities related to patient pre-certification/authorization including, but not limited to: accurate and complete patient registration in the approved organization electronic scheduling and billing systems and on-site insurance verification. These functions are performed in accordance with all applicable laws and regulations and Georgetown University Hospital's (GUH) philosophy, policies, procedures and standards.</SPAN></SPAN></FONT></FONT></P>  <P><FONT face=arial,helvetica,sans-serif><FONT size=2><U editor_id="mce_editor_0"><STRONG>Required Education and Training:</STRONG></U> <SPAN style="FONT-SIZE: 10pt"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Associate</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New'; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">'</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">s Degree<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><?xml:namespace prefix = "o" ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></FONT></FONT></P>  <P><FONT face=arial,helvetica,sans-serif><FONT size=2><U><STRONG>Required Experience:</STRONG></U> <SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: Arial; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">At least three years experience in a medical/clinical office required.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Previous experience with computerized scheduling and registration systems.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Working knowledge of IDX / GE Centricity Business preferred.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Previous experience with an electronic health record system desired, especially GE Centricity Clinical or Aria. <SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Arial','sans-serif'; LAYOUT-GRID-MODE: line; mso-fareast-font-family: 'Times New Roman'; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Excellent interpersonal communication and customer service skills, and good telephone etiquette. Knowledge of medical terminology.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Effective oral and written communication skills.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Ability to deal effectively and professionally with a variety of different individuals. Ability to perform in a high pressure environment.<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Ability to organize and prioritize work.</SPAN></SPAN></P></SPAN></FONT></FONT> <P> 
+								
+</td>
+</tr>
+
+<tr>
+	<td align='right'>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+
+
+<tr class="printHide">
+	<td bgcolor="FFFFFF" align="center" valign="middle" colspan="2">
+		<font class="content">
+		
+		
+
+
+					<a class='middle' href="javascript:openit('?fuseaction=apply.login&template=dsp_apply_login.cfm&cJobId=101750')">
+						<font face="arial" size="4" color="333366">
+							<strong>
+								Click Here to Apply Online
+							</strong>
+						</font>
+						</a>
+						<br>
+						<br>
+		
+
+
+					<a href="javascript:openit('https://www.healthcaresource.com/msgeorgetown_i/index.cfm?fuseaction=apply.login&template=dsp_apply_login.cfm&cJobId=101750')">
+						<font color ="333366" face="Arial" size="4">
+							<strong>
+								Current Georgetown Employees Apply Here
+							</strong>
+						</font>
+					</a>				
+						
+	</td>
+</tr>
+</table>
+
+
+<table border="0" cellpadding="3" cellspacing="0" width="500">
+	<tr>
+		<td valign="bottom" width="60%">&nbsp;</td>
+      <td valign="bottom" width="10%">&nbsp;</td>
+		<td valign="bottom" width="20%">&nbsp;</td>
+	</tr>
+</table>
+
+<table class="printHide" width="500"  valign="top">
+	<tr>
+		<td width="100%" valign="top" align="right">
+		<form action="#self#?fuseaction=home.main">
+				<input type="submit" name="submit" value="New Search">
+				<input type="button" VALUE="Return To Jobs" onClick="history.back()">
+			</form>
+		</td>
+	</tr>
+</table>
+
+<table class="printHide" border="0" width="500" bgcolor="FFFFFF">
+		<tr>
+			<td width="100%"><br>
+				<p>
+					<a href="#top">
+					<font  face="verdana,arial,helvetica"  size="1" color="000000">
+						
+							back to top
+						
+					</font>
+				</a>
+				</p>
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html> 

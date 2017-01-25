@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_Head1"><title>
+	جريدة استاد الدوحة
+</title><link href="Style/demo.css" rel="stylesheet" /><link href="Style/default.css" rel="stylesheet" /><link href="Style/StyleSheet.css" rel="stylesheet" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+    <script src="../Scripts/modernizr.custom.js"></script>
+    <script src="../Scripts/jquery-2.1.0.min.js"></script>
+    <script src="../Scripts/jquery.cycle.all.js"></script>
+    <script src="../Scripts/jquery.newsTicker.js"></script>
+    <script src="../Scripts/jquery.newsTicker.min.js"></script>
+    <script src="../Scripts/toucheffects.js"></script>
+    <script src="../Scripts/jquery.tickertype.js"></script>
+
+    <script>
+        // Wait until the DOM has loaded before querying the document
+        $(document).ready(function () {
+            $('ul.tabs').each(function () {
+                // For each set of tabs, we want to keep track of
+                // which tab is active and it's associated content
+                var $active, $content, $links = $(this).find('a');
+
+                // If the location.hash matches one of the links, use that as the active tab.
+                // If no match is found, use the first link as the initial active tab.
+                $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[2]);
+                $active.addClass('active');
+
+                $content = $($active[0].hash);
+
+                // Hide the remaining content
+                $links.not($active).each(function () {
+                    $(this.hash).hide();
+                });
+
+                // Bind the click event handler
+                $(this).on('click', 'a', function (e) {
+                    // Make the old tab inactive.
+                    $active.removeClass('active');
+                    $content.hide();
+
+                    // Update the variables with the new link and content
+                    $active = $(this);
+                    $content = $(this.hash);
+
+                    // Make the tab active.
+                    $active.addClass('active');
+                    $content.show();
+
+                    // Prevent the anchor's default click action
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+    <script>
+        function send()
+        { document.theform.submit() }
+    </script>
+
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./News.aspx?Id=19833" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4ODMzNjc3MzJkZG6EysJzJZSeyZGY/YKW501tW6fqK2Wm8jGJ0Isb56Bw" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA8C29DA" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAWjWUkT3qOYcwKON1xj48HDpQXh6ctc7d6Z8yTyIGLWq9dOlcLCJUp7vkd35ijeezF/2i7OlKCH0kBh9oGA4EXWn1RcjtHAj66REed34CUNnq11ZYrDUNdyH2QtzL65yE94xP1GfdBA1QaQJ6g6Me3B" />
+        <div id="site">
+            <div id="Header">
+                <div id="Header-Right">
+                    <img id="Logo-Up" src="../Images/Logo.jpg" />
+                </div>
+                <div id="Header-Left">
+                    <div id="Nav-Head">
+
+                        <a href="https://www.facebook.com/stadaldoha?fref=ts">
+                            <img src="../Images/facebook.png" height="35" /></a>
+                        <a href="https://twitter.com/stadeldoha">
+                            <img src="../Images/twitter.png" height="35" /></a>
+                        <a href="https://instagram.com/estadaldoha/">
+                            <img src="../Images/instagram.png" height="35" /></a>
+                        <a href="https://www.youtube.com/user/estadaldohamagazine">
+                            <img src="../Images/you-tube.png" height="35" /></a>
+                        <a href="http://estadaldoha.com/rss/All_News.aspx">
+                        <img src="../Images/rss.png" height="35" /></a>
+               <input type="submit" name="ctl00$Button2" value="" id="ctl00_Button2" class="Back_Button_search" />
+
+                        <input name="ctl00$sf" type="text" id="ctl00_sf" class="SearchBox" />
+
+
+                    </div>
+                </div>
+            </div>
+                <div id="Navigation">
+                <div class="container" id="main" role="main">
+                    <ul class="menu">
+                        <li><a href="ArchiveMain.aspx">أعداد الجريدة</a></li>
+                        <li><a href="#">المركز الإعلامي</a>
+                            <ul class="submenu">
+                                <li><a href="PicturesGallery.aspx">الصور </a></li>
+                                <li><a href="Video.aspx">الفيديو</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="CategoryPage.aspx?CategoryType=InterViews">الحوارات</a>
+                        </li>
+                        <li><a href="editors.aspx">المقالات </a>
+                            <ul class="submenu">
+                                <li><a href="CategoryPage.aspx?CategoryType=other&Category=مقال رئيس التحرير">مقال رئيس التحرير</a></li>
+                                <li><a href="editors.aspx">مقالات استاد الدوحة</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="CategoryPage.aspx?CategoryType=News">الأخبار</a>
+                            <ul class="submenu">
+                                              <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات المحلية">أخبار الدوريات المحلية</a></li>
+                                <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات العربية">أخبار الدوريات العربية</a></li>
+                                <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات العالمية">أخبار الدوريات العالمية</a></li>
+                                <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار رياضية اخرى">اخبار رياضية اخرى</a></li>
+                                <li><a href="CategoryPage.aspx?CategoryType=other&Category=تقارير وتحقيقات">تقارير وتحقيقات</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="home.aspx">الرئيسية</a></li>
+                    </ul>
+                </div>
+            </div>
+                         <div id="news-ticker">
+            <div id="News-Line">
+                <div id="News-Line-Right">اخر الاخبار</div>
+                <div id="News-Line-Canter">
+                    <div id='ticker-area'><ul><li><a href=News.aspx?Id=19984>آسيوية ألعاب القوى داخل الصالات على خط الانطلاق  </li></a><li><a href=News.aspx?Id=19983>يد الجيش تنسحب من المشاركة في البطولة العربية  </li></a><li><a href=News.aspx?Id=19982> الفريق السوداني يتوج بكأس ج في نسختها الثانية  </li></a><li><a href=News.aspx?Id=19981>بونجاح يظهر فى تدريبات السد  </li></a></ul></div>
+                </div>
+                <div id="News-Line-Left">
+                        <a id="A2" href="managment.aspx">هيئة التحرير</a> | <a id="A1" href="contactus.aspx">اتصل بنا</a>             
+                </div>
+            </div>
+</div>
+            <div id="main-wapper">
+                <div id="wapper-2">
+                    
+    <link href="Style/NewsStyle.css" rel="stylesheet" />
+    <div id="rightcontainer">
+        <div id="news-title">
+            تحكيم قطري لمباريات الجولة 18 من دوري النجوم
+        </div>
+        <div id="details">
+
+            <div id="writer">
+
+                        الإتحاد القطري لكرة القدم 
+            </div>
+            <div id="date">
+                تاريخ النشر  :
+                        <div class="date-fromater">
+                            10/02/2016
+                        </div>
+            </div>
+
+            <div id="views">
+              
+                        <div class="date-fromater">
+                            
+                        </div>
+            </div>
+            <div id="social">
+                <div class="addthis_toolbox addthis_default_style addthis_32x32_style " style="float: right; width: 100%">
+                    <a class="addthis_button_print"></a>
+                    <a class="addthis_button_email"></a>
+                    <a class="addthis_button_google_plusone_share"></a>
+                    <a class="addthis_button_twitter"></a>
+                    <a class="addthis_button_facebook"></a>
+                </div>
+                <script type="text/javascript" src="Scripts/addthis_widget.js"></script>
+            </div>
+
+        </div>
+        <div id="social-saring">
+        </div>
+        <div id='news-images'>  <img src=../NewsImageUploadFolder/49792669210201691234AM.jpg alt=تحكيم قطري لمباريات الجولة 18 من دوري النجوم />    <div style="text-align: right;">
+	أعلنت إدارة الحكام التابعة للاتحاد القطري لكرة القدم تعييناتها لحكام الأسبوع الثامن عشر من منافسات دوري نجوم قطر للموسم الرياضي 2015-2016، وسيدير جميع مباريات الجولة الحالية حكام قطريون.</div>
+<div style="text-align: right;">
+	&nbsp;</div>
+<div style="text-align: right;">
+	ويدير مباراة العربيو لخويا خميس الكواري، والخريطيات والأهلي أحمد السيد، والريان والخور محمد أحمد الشمري، والسيلية والوكرة سعود العذبة، وأم صلال ومسيمير عبدالله العذبة، والجيش والغرافة عبدالهادي الرويلي، وقطر والسد خميس المري.</div>
+<div>
+	&nbsp;</div>
+     </div>
+        <div class="divider"></div>
+        <div id="News-Related">
+            <div id="news-Related-Header"><a href='CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات المحلية'>اخبار اخرى</a></div>
+            <div id="left">
+                 <div class='more-news-Image'>     <img src=../NewsImageUploadFolder/5542638122162016115917AM.jpg alt=إدارة الوكرة تعد اللاعبين بحل مشكلة المستحقات المتأخرة /> </div> <div class='more-news-title'>    <a href=News.aspx?Id=19985>إدارة الوكرة تعد اللاعبين بحل مشكلة المستحقات المتأخرة </a> </div> <div class='more-news-summar'>أبلغ الشيخ ناصر بن حسن آل ثاني عضو مجلس إدارة نادي إلى جميع لاعبي الفريق وجهازهم الفني والإداري رسالة من الشيخ خليفة بن  </div>
+            </div>
+            <div id="middle">
+                 <div class='more-news-Image'>     <img src=../NewsImageUploadFolder/7659402842162016103408AM.jpg alt=بونجاح يظهر فى تدريبات السد  /> </div> <div class='more-news-title'>    <a href=News.aspx?Id=19981>بونجاح يظهر فى تدريبات السد  </a> </div> <div class='more-news-summar'>شهد مران الفريق الاول لكرة القدم بنادي السد مساء الثلاثاء المشاركه الاولى لمهاجم عيال الذيب الجزائري بغداد بونجاح عقب </div>
+            </div>
+            <div id="right">
+                 <div class='more-news-Image'>     <img src=../NewsImageUploadFolder/4634125402162016102635AM.jpg alt=سعادة وزير الثقافة والرياضة فى زيارة لنادي السد /> </div> <div class='more-news-title'>    <a href=News.aspx?Id=19980>سعادة وزير الثقافة والرياضة فى زيارة لنادي السد </a> </div> <div class='more-news-summar'>قام سعادة وزير الثقافة والرياضة صلاح بن غانم العلي بزيارة لمقر نادي السد مساء الثلاثاء، وكان في استقباله سعادة ناصر  </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+                </div>
+                <div id="wapper">
+                    <div id="Left-bar">
+                        <div class="rightheader">
+                            &nbsp;
+                         <a href="#">أحدث التغريدات</a>
+                        </div>
+                                   <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/stadeldoha" data-widget-id="615559003397976064">Tweets by @stadeldoha</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+          
+                        
+                        <div class="rightheader">
+                            &nbsp;
+                        <a href="#">اشترك في النشرة الاسبوعية</a>
+                        </div>
+                        <div id="Subscribe-Content">
+                            <div id="Subscribe-Content-text">ادخل بريدك الالكتروني</div>
+                            <div id="Subscribe-Content-text-box">
+                                <input name="ctl00$TextBox2" type="text" id="ctl00_TextBox2" class="TXT" />
+                                <input type="submit" name="ctl00$Button1" value="اشترك" id="ctl00_Button1" class="Back_Button" />
+                            </div>
+                        </div>
+
+<div class="rightheader">
+&nbsp;
+<a href="#" > مسابقة استاد الدوحة </a>
+</div>
+<div class="Carton-Content" >
+<img src="/Style/New_Estad.jpg"  />
+</div>
+
+
+
+              
+                    </div>
+                </div>
+
+            </div>
+            <div id="Footer">
+                <!--
+                <div id="footer-top">
+                    البطولات و الدوريات
+                </div>
+                <div id="footer-Middles">
+                    <div id='Champs'><ul><li><a href='CategoryPage.aspx?Categorytype=Championships&Category=روسيا 2018'><img src=../LeagueImageUploadFolder/8947288228051515415PM.png width=90px height=80px /></a></li><li><a href='CategoryPage.aspx?Categorytype=Championships&Category=دوري ابطال اوروبا'><img src=../LeagueImageUploadFolder/30807494628051515352PM.png width=90px height=80px /></a></li><li><a href='CategoryPage.aspx?Categorytype=Championships&Category=دوري ابطال اسيا'><img src=../LeagueImageUploadFolder/84799501128051515330PM.jpg width=90px height=80px /></a></li><li><a href='CategoryPage.aspx?Categorytype=Championships&Category=قطر 2022'><img src=../LeagueImageUploadFolder/20169424028051515300PM.png width=90px height=80px /></a></li><li><a href='CategoryPage.aspx?Categorytype=Championships&Category=دوري نجوم قطر'><img src=../LeagueImageUploadFolder/92999390328051515240PM.png width=90px height=80px /></a></li></div></ul>
+                </div>
+                -->
+                <div id="footer-footer">
+                    <div id="footer-h3">
+                        اقسام الموقع
+                    </div>
+                    <div id="footer-right">
+                        <ul>
+                            <li><a href="home.aspx">الرئيسية</a></li>
+                            <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات المحلية">اخبار الدوريات المحلية</a></li>
+                            <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات العربية">اخبار الدوريات العربية</a></li>
+                            <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار الدوريات العالمية">اخبار الدوريات العالمية</a></li>
+                            <li><a href="CategoryPage.aspx?CategoryType=other&Category=اخبار رياضية اخرى">اخبار رياضية اخرى</a></li>
+                        </ul>
+                    </div>
+                    <div id="footer-middle">
+                        <ul>
+                            <li><a href="CategoryPage.aspx?CategoryType=other&Category=تقارير وتحقيقات">تقارير وتحقيقات</a></li>
+                            <li><a href="CategoryPage.aspx?CategoryType=ED-IN-CHEF">مقال رئيس التحرير</a></li>
+                            <li><a href="editors.aspx">المقالات </a></li>
+                            <li><a href="CategoryPage.aspx?CategoryType=InterViews">الحوارات</a></li>
+                            <li><a href="CartoonPage.aspx">الكريكاتير</a></li>
+                          
+                        </ul>
+                    </div>
+                    <div id="footer-left">
+                        <ul>
+                              <li><a href="ArchiveMain.aspx">الارشيف</a></li>
+                            <li><a href="PicturesGallery.aspx">الصور</a></li>
+                            <li><a href="Video.aspx">الفيديو</a></li>
+                            <li><a href="Managment.aspx">هيئة التحرير</a></li>
+                            <li><a href="contactus.aspx">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <img  src="../Images/Logo.jpg" width="380px" height="auto" style="float:left;margin-left:15px"/>
+                </div>
+                <div id="Copyright">
+                     2015 © جميع الحقوق محفوظة لموقع استاد الدوحة
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+
+</body>
+</html>

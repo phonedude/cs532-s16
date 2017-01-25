@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RA player</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script src="js/jquery.showinfo.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+$(document).ready(function(){
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+	// Local copy of jQuery selectors, for performance.
+	var	my_jPlayer = $("#jquery_jplayer"),
+		my_trackName = $("#jp_container .track-name"),
+		my_playState = $("#jp_container .play-state"),
+		my_extraPlayInfo = $("#jp_container .extra-play-info");
+
+	// Some options
+	var	opt_play_first = false, // If true, will attempt to auto-play the default track on page loads. No effect on mobile devices, like iOS.
+		opt_auto_play = false, // If true, when a track is selected, it will auto-play.
+		opt_text_playing = "Now playing", // Text when playing
+		opt_text_selected = "Track selected"; // Text when not playing
+
+	// A flag to capture the first track
+	var first_track = true;
+
+	// Change the time format
+	$.jPlayer.timeFormat.padMin = false;
+	$.jPlayer.timeFormat.padSec = false;
+	$.jPlayer.timeFormat.sepMin = " min ";
+	$.jPlayer.timeFormat.sepSec = " sec";
+
+	// Initialize the play state text
+	my_playState.text(opt_text_selected);
+
+	// Instance jPlayer
+	my_jPlayer.jPlayer({
+		ready: function () {
+			$("#jp_container .track-default").click();
+		},
+		timeupdate: function(event) {
+			my_extraPlayInfo.text(parseInt(event.jPlayer.status.currentPercentAbsolute, 10) + "%");
+		},
+		play: function(event) {
+			my_playState.text(opt_text_playing);
+		},
+		pause: function(event) {
+			my_playState.text(opt_text_selected);
+		},
+		ended: function(event) {
+			my_playState.text(opt_text_selected);
+		},
+		swfPath: "../../dist/jplayer",
+		cssSelectorAncestor: "#jp_container",
+		supplied: "mp3",
+		wmode: "window"
+	});
+
+	// Create click handlers for the different tracks
+	$("#jp_container .track").click(function(e) {
+		my_trackName.text($(this).text());
+		my_jPlayer.jPlayer("setMedia", {
+			mp3: $(this).attr("href")
+		});
+		if((opt_play_first && first_track) || (opt_auto_play && !first_track)) {
+			my_jPlayer.jPlayer("play");
+		}
+		first_track = false;
+		$(this).blur();
+		return false;
+	});
+
+$("#headerLiveHolder").hyrrdyrr({
+        sourceDomain: "http://listen.radioaktywne.pl/schedule",
+        text: {onAirNow:"On Air Now", offline:"Offline", current:"Current", next:"Next"},
+        updatePeriod: 5 //seconds
+		});
+
+$(".ogg-button").click(function () {
+		$(".aac-button").removeClass("active");
+		$(this).addClass("active");
+});
+$(".aac-button").click(function () {
+		$(".ogg-button").removeClass("active");
+		$(this).addClass("active");
+});
+if (isFirefox===true){
+	$(".aac-button").removeClass("track-default");
+	$(".ogg-button").addClass("track-default");
+}
+
+});
+$(function() {
+        var scroll_text;
+        var $elmt = $(this);
+        scroll_text = setInterval(function() {
+            scrollText($elmt);
+        }, 40);
+    }, function() {
+        clearInterval(scroll_text);
+        $("#headerLiveHolder", this).css({
+            left: 0
+        });
+    });
+
+    var scrollText = function($elmt) {
+        var h1 = $("#headerLiveHolder", $elmt),
+            width = h1.width(),                
+            left = h1.position().left - 1;
+        left = -left > width ? width : left;
+        h1.css({
+            left: left
+        });
+    };
+
+
+//]]>
+</script>
+
+<style>
+@font-face {
+    font-family: 'open_sansbold_italic';
+    src: url('fonts/OpenSans-BoldItalic-webfont.eot');
+    src: url('fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-BoldItalic-webfont.svg#open_sansbold_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sanslight_italic';
+    src: url('fonts/OpenSans-LightItalic-webfont.eot');
+    src: url('fonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-LightItalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.jp-volume-bar {
+	position:absolute;
+	top: 46px;
+	left:260px;
+	width: 50px;
+    height: 11px;
+    background: #3a6f9b url(img/slidercaly.png) repeat-x ;    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	opacity:0.5;
+  cursor: pointer; }
+
+.jp-volume-bar-value {
+    width: 0;
+    height: 11px;
+    top: 0px;
+    left: 0px;
+    background: #427baa url(img/slideraktualny.png) repeat-x;    
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	opacity:0.8;}
+
+.jp-mute{
+	opacity:0.4;
+	position:absolute;
+	top:40px;
+	left:240px;
+	width: 13px;
+   height: 25px;
+	background: transparent url(img/ikony.png) -121px 0;
+}
+.jp-mute:hover{
+	opacity:1;
+	background: transparent url(img/ikony.png) -135px 0;
+	 cursor: pointer;
+}
+
+.jp-unmute{
+opacity:0.4;
+	position:absolute;
+	top:40px;
+	left:235px;
+	width: 25px;
+    height: 25px;
+    background: transparent url(img/ikony.png) -121px -26px;
+}
+.jp-unmute:hover{
+opacity:1;
+	background: transparent url(img/ikony.png) -121px -52px;
+	 cursor: pointer;
+}
+.jp-play{
+	position:absolute;
+	opacity:0.4;
+	top:20px;
+	left:160px;
+	width: 70px;
+	height: 70px;
+	background: url(img/p.png);
+	background-size:70px 70px;
+}
+.jp-play:hover{
+	opacity:1;
+	background: url(img/phover.png);
+	background-size:70px 70px;
+	cursor: pointer;
+}
+.jp-pause{
+	opacity:0.4;
+	position:absolute;
+	top:20px;
+	left:160px;
+	 width: 70px;
+    height: 70px;
+    background: url(img/p2.png);
+	background-size:70px 70px;
+}
+.jp-pause:hover{
+	opacity:1;
+	background: url(img/p2hover.png);
+	background-size:70px 70px;
+	cursor:pointer;
+}
+
+
+.container {
+background: url(img/tlo.png);
+width:380px;
+height:130px;
+}
+
+.ogg-button {
+	position:absolute;
+	top:0;
+	left:5px;
+	font-family: 'open_sansbold_italic', Sans;
+	font-weight:bold;
+	font-size:20px;
+
+	opacity:0.3;
+}
+.ogg-button:hover{
+	opactiy:1.0;
+	cursor:pointer;
+	color: #f6edc8;
+}
+.aac-button {
+	position:absolute;
+	top: 25px;
+	left:5px;
+	font-family: 'open_sansbold_italic', Sans;
+	font-weight:bold;
+	font-size:20px;
+
+	opacity:0.3;
+}
+.aac-button:hover{
+	opactiy:1.0;
+	cursor:pointer;
+	color: #f6edc8;
+}
+.active{
+	color: #000000;
+	text-decoration: underline;
+	opacity:0.7;
+	
+}
+.streamy{
+	position:absolute;
+	left:325px;
+	top:27px;
+}
+a, a:visited, a:focus, a:active {
+	text-decoration:none;
+	outline:none;
+	color:#000000;
+}
+a:hover {
+	outline:none;
+	color: f6edc8;
+	opacity:1;
+}
+body{
+	background-color:#000;
+}
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 175px;
+    font-family: 'open_sanslight_italic', Sans;
+    font-size: 18px;
+    font-style:italic;
+    color: #595959;
+}
+
+
+h1 a:hover {
+	color: #ee3338 !important;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.strong {
+	font-family: 'open_sansbold_italic', Sans;
+	font-weight:bold;
+	font-size:19px;
+}
+
+
+#logo{
+background: url(img/ralogo.png);
+width:138px;
+height:101px;
+position: absolute;
+top: 20px;
+left: 15px;
+opacity:0.7;
+}
+#logo:hover{
+opacity:1;
+cursor:pointer;
+}
+
+.m3u {
+	opacity:0.4;
+    position: absolute;
+    top: 35px;
+    left: 330px;
+    width:25px;
+    height:25px;
+    background: transparent url(img/ikony.png) -121px -105px;
+
+}
+
+.m3u:hover {
+	opacity:1;
+	background: transparent url(img/ikony.png) -121px -79px;
+}
+#headerLiveHolder{
+opacity:1;
+position:relative;
+left:0px;
+font-family: 'open_sansbold_italic', Sans;
+	font-weight:bold;
+	font-size:14px;
+	color:#f6edc8;
+}
+#rds{
+opacity:0.4;
+top:105px;
+left:160px;
+width:200px;
+overflow:hidden;
+height:20px;
+position:absolute;
+white-space:nowrap;
+border-radius: 10px / 8px ;
+background-color:#000000;
+}
+
+</style>
+
+</head>
+<body>
+		<div id="jquery_jplayer"></div>
+
+		<!-- Using the cssSelectorAncestor option with the default cssSelector class names to enable control association of standard functions using built in features -->
+
+		<div id="jp_container" class="container">
+		<a href="http://radioaktywne.pl"><div id="logo"></div></a>
+		<div id="rds"><div id="headerLiveHolder"></div></div>
+				<div class="streamy">
+				 
+					<a href="http://listen.radioaktywne.pl:8000/ra_airtime.ogg" class="track ogg-button">OGG</a>
+				  
+					<a href="http://listen.radioaktywne.pl:8000/ra_airtime.aac" class="track track-default aac-button active">AAC</a>
+				
+				</div> 
+				<!-- <div href="http://listen.radioaktywne.pl:8000/ra_airtime.ogg" class="track track-default"></div> -->
+				<!-- <a href="http://listen.radioaktywne.pl:8000/ra_airtime.ogg.m3u"><div class="m3u"></div></a> -->
+				
+				<div class="jp-play"></div>
+				<div class="jp-pause"></div>
+			
+			
+				<div class="jp-mute"></div>
+				<div class="jp-unmute"></div>
+					<div class="jp-volume-bar">
+						<div class="jp-volume-bar-value"></div>
+					</div>
+			
+		</div>
+
+</body>
+
+</html>

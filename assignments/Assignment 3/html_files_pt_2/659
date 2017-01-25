@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Lead Hardware Engineer
+</title><link href="/HHStyles.css" rel="Stylesheet" type="text/css" /><link href="/HHStylesCustom.css" rel="Stylesheet" type="text/css" />
+<link rel="canonical" href="Lead_Hardware_Engineer_J02295266.aspx" />
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script src="../scripts/jquery.highlight-3.js" type="text/javascript"></script>
+    
+<script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+    	if (document.getElementById("uxKeywords") != null)
+    		var keywords = document.getElementById("uxKeywords").value.split(",");
+    		$.each(keywords, function (i) {
+    			var keyword = keywords[i];
+    			var wordsOnly = (keyword.indexOf(".") == -1 && keyword.indexOf("#") == -1 && keyword.indexOf("+") == -1 && keyword.indexOf("*") == -1);
+    			$("#dvSearchDetailContainer").highlight($.trim(keyword.replace("\*", "")), { wordsOnly: wordsOnly });
+    		});
+    });
+        
+    function Keepers(val){
+        var spn = document.getElementById('spnKeepers_' + val);
+        $.post("Keepers.ashx?bcJobAdId=REX" + val, function(data){
+            var txt = data.toLowerCase() == "removed" ? "Add To My Jobs" : "Remove From My Jobs";
+            if(document.all){
+                spn.innerText = txt;
+            } else{
+                spn.textContent = txt;
+            }
+        });
+    }
+	
+    function ShowSendForm(){
+        if (document.getElementById('dvSendToFriend').style.display=='none')
+            document.getElementById('dvSendToFriend').style.display='';
+        else
+            document.getElementById('dvSendToFriend').style.display='none';
+    }
+	
+    function RefreshImage(valImageId) {
+        var objImage = document.images[valImageId];
+        if (objImage == undefined) {
+            return;
+        }
+        var now = new Date();
+        objImage.src = objImage.src.split('?')[0] + '?x=' + now.toUTCString();
+    }
+
+    function SendEmail(){
+        var frm = document.forms[0];
+        if (CheckForm()){
+            $.post("SendToFriend.ashx", { FromEmail: frm.ctl00$ContentPlaceHolder1$txtFromEmail.value, ToEmail: frm.ctl00$ContentPlaceHolder1$txtToEmail.value, Subject: frm.ctl00$ContentPlaceHolder1$txtSubject.value, Message: frm.ctl00$ContentPlaceHolder1$txtBody.value, Captcha: frm.ctl00$ContentPlaceHolder1$txtTuring.value },
+                function(data){
+                    if (data.toLowerCase() == "sent"){
+                        alert("Your email has been sent.");
+                        ShowSendForm();
+                    }
+                    else
+                        alert("The following error occurred trying to send your email.\n" + data);
+                });
+        }	
+    }
+	 
+
+    function stringIsEmail(elementValue){      
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(elementValue); 
+    }
+
+	
+    function CheckForm(){
+
+        var frmSendToFriend = document.forms[0];
+        var prefix = "ctl00$ContentPlaceHolder1$";
+    
+        if (!stringIsEmail(frmSendToFriend.elements[prefix + "txtFromEmail"].value))
+        {
+            alert("Please provide a valid to address.");
+            frmSendToFriend.elements[prefix + "txtFromEmail"].focus();
+            return false;
+        }
+				
+        if (!stringIsEmail(frmSendToFriend.elements[prefix + "txtToEmail"].value))
+        {
+            alert("Please provide a valid to address.");
+            frmSendToFriend.elements[prefix + "txtToEmail"].focus();
+            return false;
+        }
+		
+        if (frmSendToFriend.elements[prefix + "txtSubject"].value == ""){
+            alert("Please provide a subject.");
+            frmSendToFriend.elements[prefix + "txtSubject"].focus();
+            return false;
+        }
+		
+        if (frmSendToFriend.elements[prefix + "txtBody"].value == ""){
+            alert("Please provide a message.");
+            frmSendToFriend.elements[prefix + "txtBody"].focus();
+            return false;
+        }
+				
+        if (frmSendToFriend.elements[prefix + "txtTuring"].value == ""){
+            alert("Invalid verification code.");
+            frmSendToFriend.elements[prefix + "txtTuring"].focus();
+            return false;
+        }
+        return true;
+    }
+</script>	
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="Detail.aspx?jid=02295266&amp;utm_campaign=XMLFeed&amp;utm_medium=CareerArc&amp;utm_source=CaTW" id="aspnetForm">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUHMjkzOTczMQ9kFgJmD2QWBAIBD2QWAgIDD2QWAmYPFgIeBFRleHQFRTxsaW5rIHJlbD0iY2Fub25pY2FsIiBocmVmPSJMZWFkX0hhcmR3YXJlX0VuZ2luZWVyX0owMjI5NTI2Ni5hc3B4IiAvPmQCAw9kFgQCAQ9kFgJmDxYCHwAF/AI8dWw+PGxpPjxhIGhyZWY9Ii9Kb2JTZWVrZXIvVXBsb2FkUmVzdW1lLmFzcHgiPkFkZCBSZXN1bWUgb3IgTG9naW48L2E+PC9saT48bGk+PGEgaHJlZj0iL0pvYlNlZWtlci9TZWFyY2hSZXN1bHRzLmFzcHg/cnVuc2VhcmNoPTEmZmVhdHVyZWQ9MSZkZWZhdWx0c2VhcmNoPTEiPkZlYXR1cmVkIEpvYnM8L2E+PC9saT48bGk+PGEgaHJlZj0iL0pvYlNlZWtlci9TZWFyY2guYXNweCI+U2VhcmNoIEpvYnM8L2E+PC9saT48bGk+PGEgaHJlZj0iL0pvYlNlZWtlci9BbGVydHMuYXNweCI+Sm9iIEFsZXJ0czwvYT48L2xpPjxsaT48YSBocmVmPSIvSm9iU2Vla2VyL1NlYXJjaFJlc3VsdHMuYXNweD9EZWZhdWx0U2VhcmNoPTEiPlZpZXcgQWxsIEpvYnM8L2E+PC9saT48L3VsPmQCAw9kFgICAQ9kFhYCBw8PFgIfAAUWTGVhZCBIYXJkd2FyZSBFbmdpbmVlcmRkAggPZBYCAgEPDxYCHwAFFEZhcm1pbmd0b24gSGlsbHMsIE1JZGQCCQ9kFgICAQ8PFgIfAAULRGlyZWN0IEhpcmVkZAIKD2QWAgIBDw8WAh8ABRgkOTAsMDAwLjAwIC0gJDEyNSwwMDAuMDBkZAILDxYCHgdWaXNpYmxlaBYCAgEPDxYCHwBlZGQCDA8WAh8BaGQCDQ9kFgICAQ8PFgIfAAUJMi8xMy8yMDE2ZGQCDg9kFgICAQ8PFgIfAAUIMDIyOTUyNjZkZAIPDw8WAh4LTmF2aWdhdGVVcmwFHlVwbG9hZFJlc3VtZS5hc3B4P2ppZD0wMjI5NTI2NmRkAhAPFgIfAAVhPGEgaHJlZj0iamF2YXNjcmlwdDpLZWVwZXJzKCcwMjI5NTI2NicpIj48c3BhbiBpZD0ic3BuS2VlcGVyc18wMjI5NTI2NiI+QWRkIFRvIE15IEpvYnM8L3NwYW4+PC9hPmQCEQ8PFgIfAAXdFjxkaXYgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPjxzdHJvbmc+PHNwYW4gc3R5bGU9ImZvbnQtc2l6ZToxNnB0OyI+TGVhZCBIYXJkd2FyZSBFbmdpbmVlciAtIE1JPC9zcGFuPjwvc3Ryb25nPjwvZGl2PjxkaXY+PGJyIC8+PGJyIC8+PHN0cm9uZz5TdW1tYXJ5PC9zdHJvbmc+PGJyIC8+T3VyIGNsaWVudCwgYSBkZXZlbG9wZXIgb3Igc3VwcGxpZXIgb2YgYWR2YW5jZWQgdmVoaWNsZSBzYWZldHkgc3lzdGVtcywgaXMgZ3Jvd2luZyBhdCBhIHN0ZWFkeSByYXRlLiZuYnNwOyBCZWNhdXNlIG9mIHRoaXMsIHRoZXkmcnNxdW87cmUgbG9va2luZyBmb3IgYSBMZWFkIEhhcmR3YXJlIEVuZ2luZWVyIHRvIGpvaW4gdGhlaXIgdGVhbS4gVGhlIExlYWQgSGFyZHdhcmUgRW5naW5lZXIgaXMgcHJpbWFyaWx5Jm5ic3A7cmVzcG9uc2libGUgZm9yIHRoZSBkZXNpZ24gYW5kIGRldmVsb3BtZW50IG9mIHJlc3RyYWludCBjb250cm9sIGFuZCBzZW5zaW5nIGVsZWN0cm9uaWNzIHVuZGVyIHRpbWUgYW5kIGNvc3QgcmVzdHJhaW50cy4gWW91Jm5ic3A7d2lsbCBsZWFkIGFsbCBoYXJkd2FyZSByZWxhdGVkIGRldmVsb3BtZW50IGFjdGl2aXRpZXMgYW5kIGJlIHJlc3BvbnNpYmxlIGZvciBoYXJkd2FyZSB0YXNrIHBsYW5uaW5nIGFuZCBleGVjdXRpb24uPGJyIC8+PGJyIC8+T3RoZXIgUmVzcG9uc2liaWxpdGllczo8dWw+CTxsaT5Db21wb25lbnQgc2VsZWN0aW9uIGFuZCBhbmFseXNpcyAoTW9udGUgQ2FybG8sIHdvcnN0IGNhc2UgZXRjLikgdG8gZnVsZmlsbCBoYXJkd2FyZSByZXF1aXJlbWVudHMuPC9saT4JPGxpPlNjaGVtYXRpYyBjYXB0dXJlIGFuZCBjaXJjdWl0IHNpbXVsYXRpb24uPC9saT4JPGxpPkludGVyZmFjZSB3aXRoIEVDQUQgZm9yIFBDQiBsYXlvdXQgd2l0aCBjb21wbGlhbmNlIHRvIEVNQyAmYW1wOyBtYW51ZmFjdHVyaW5nIGRlc2lnbiBydWxlcy48L2xpPgk8bGk+Q29udHJvbCBhbmQgcmVsZWFzZSBjb21wb25lbnQgQk9NLjwvbGk+CTxsaT5Xb3JrIHdpdGggUHJvZHVjdCBBc3N1cmFuY2UgZ3JvdXAgdG8gZGV2ZWxvcCB0ZXN0IHNwZWNpZmljYXRpb25zIGFuZCBhc3Npc3QgaW4gdHJvdWJsZXNob290aW5nLjwvbGk+CTxsaT5JbnRlcmZhY2Ugd2l0aCBzdXBwbGllcnMgZm9yIGRldmVsb3BtZW50IG9mIGNvbXBvbmVudCBzcGVjaWZpY2F0aW9ucywgcmVzb2x2aW5nIG9wZW4gaXNzdWVzIGFuZCBlbnN1cmUgcGFydCBhdmFpbGFiaWxpdHkgZm9yIGRlc2lnbiBtaWxlc3RvbmVzLjwvbGk+PC91bD48YnIgLz48c3Ryb25nPlF1YWxpZmljYXRpb25zPC9zdHJvbmc+PHVsPgk8bGk+QmFjaGVsb3JzIGluIEVsZWN0cmljYWwgb3IgQ29tcHV0ZXIgRW5naW5lZXJpbmcgcmVxdWlyZWQsIE1TIHByZWZlcnJlZCZuYnNwOzwvbGk+CTxsaT5NaW4uIDUgeWVhcnMgb2YgZXhwZXJpZW5jZSB3aXRoJm5ic3A7bWl4ZWQgc2lnbmFsIGNpcmN1aXQgZGVzaWduICZhbXA7IGFuYWx5c2lzIGZvciBhdXRvbW90aXZlIGFwcGxpY2F0aW9ucy48L2xpPgk8bGk+RWxlY3RyaWNhbCBkZXNpZ24gZXhwZXJpZW5jZSZuYnNwO2ZvciBhdXRvbW90aXZlIHNhZmV0eSBhcHBsaWNhdGlvbnMgaXMgcHJlZmVycmVkPC9saT4JPGxpPkV4cGVyaWVuY2UgYW5kIGZhbWlsaWFyaXR5IHdpdGggbWljcm9jb250cm9sbGVycyBhbmQgZWxlY3Ryb25pYyBjb21wb25lbnQgdGVjaG5vbG9naWVzIGlzIGVzc2VudGlhbC4gRmFtaWxpYXJpdHkgaW4gQVNJQyBkZXZlbG9wbWVudCBhbmQvb3IgdGVzdGluZyBpcyBhZHZhbnRhZ2VvdXMuPC9saT4JPGxpPkV4cGVyaWVuY2UgaW4gZGVzaWduIGFuZCBhbmFseXNpcyBmb3IgRk1FQSBpcyByZXF1aXJlZC48L2xpPgk8bGk+U3Ryb25nIHByb2JsZW0gc29sdmluZyBza2lsbHMgdG8gYWlkIGluIGFuYWx5c2lzIGFuZCB0cm91Ymxlc2hvb3Rpbmcgb2YgZWxlY3Ryb25pYyBwcm9kdWN0czwvbGk+CTxsaT5Lbm93bGVkZ2Ugb2Ygc2VyaWFsIGNvbW11bmljYXRpb24gdG9vbHMsIHN1Y2ggYXMgQ0FOYWx5emVyIGlzIHByZWZlcnJlZC48L2xpPgk8bGk+RXhwZXJpZW5jZSB3aXRoIG9mZmljZSBwcm9kdWN0aXZpdHkgYXBwbGljYXRpb25zIHN1Y2ggYXMgTVMgRXhjZWwgaXMgcmVxdWlyZWQsIFZCQSBleHBlcmllbmNlIGlzIGFuIGFkdmFudGFnZS48L2xpPjwvdWw+PGJyIC8+PGJyIC8+TG9jYXRpb246IFNvdXRoZWFzdCBNSTxiciAvPlR5cGU6IERpcmVjdDxiciAvPlNhbGFyeSBSYW5nZTombmJzcDsgJDkwLDAwMC0xMjUsMDAwL3llYXIsIGJhc2VkIG9uIGV4cGVyaWVuY2U8YnIgLz5UcmF2ZWw6Jm5ic3A7IE1pbmltYWw8YnIgLz5SZWxvY2F0aW9uIEFzc2lzdGFuY2U6Jm5ic3A7IFN1YmplY3QgdG8gcmV2aWV3PGJyIC8+VmlzYSBTcG9uc29yc2hpcDombmJzcDsgU3ViamVjdCB0byByZXZpZXc8YnIgLz48YnIgLz5LZXl3b3JkczogQlMsICZxdW90O0IuUy4mcXVvdDssIEJhY2hlbG9ycywgQmFjaGVsb3IsICZxdW90O1ByaW50ZWQgQ2lyY3VpdCBCb2FyZCZxdW90OywgJnF1b3Q7Q29tcHV0ZXIgQWlkZWQmcXVvdDssICZxdW90O0NvbXB1dGVyLUFpZGVkJnF1b3Q7LCAmcXVvdDtlbGVjdHJvbWFnbmV0aWMgY29tcGF0aWJpbGl0eSZxdW90OywgJnF1b3Q7Q29udHJvbGxlciBBcmVhIE5ldHdvcmsmcXVvdDssICZxdW90O0ZhaWx1cmUgbW9kZSBhbmQgZWZmZWN0cyBhbmFseXNpcyZxdW90OywmbmJzcDtSRiwgV2lyZWxlc3MsIFZIRiwgVUhGICwgUmFkYXIsIE1pY3Jvd2F2ZSwgYW50ZW5uYSwgb3JjYWQsIHBhZHMsIGFsdGl1bSwgZHhkZXNpZ25lciwgJnF1b3Q7ZHggZGVzaWduZXImcmRxdW87LCAmbGRxdW87bWl4ZWQgc2lnbmFsJnJkcXVvOywgU2Vuc29ycywgJmxkcXVvO2luZHVjdGl2ZSBjaGFyZ2VyJnJkcXVvOywgd2lyZWxlc3MsIGluZHVjdGlvbiwgaW5kdWN0b3IsIGluZHVjdGl2ZSwgc2NoZW1hdGljPC9kaXY+ZGRktYhasebkLgYul8xmyonlFOKW8kY=" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="9B6A77FB" />
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBgK3wqqKDALur67BBwKf782jDgKG0+i/BgKOzOm5AwKXroGgDSWWcLauN1665qV/fG8mRn9E8KuP" />
+        
+        <table width="99%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="148" height="0" valign="top" bgcolor="#018e6b"><img src="http://www.gablessearch.com/images/new_01.gif" width="148" 				height="233"><br>
+<img src="http://www.gablessearch.com/images/new_07.gif" width="148" height="169"
+						border="0" usemap="#Map2"><br>
+					<br>
+				</td>
+				<td rowspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="10">
+						<tr>
+							<td>&nbsp;</td>
+							<td><div align="center"><a href="http://www.gablessearch.com"><img  src="http://www.gablessearch.com/images/new_04.gif" width="365" height="165"></a></div>
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+						
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td valign="top">
+								
+       <div id="dvHookCntr">
+            	<P><div id="jsmenu">
+            <ul><li><a href="/JobSeeker/UploadResume.aspx">Add Resume or Login</a></li><li><a href="/JobSeeker/SearchResults.aspx?runsearch=1&featured=1&defaultsearch=1">Featured Jobs</a></li><li><a href="/JobSeeker/Search.aspx">Search Jobs</a></li><li><a href="/JobSeeker/Alerts.aspx">Job Alerts</a></li><li><a href="/JobSeeker/SearchResults.aspx?DefaultSearch=1">View All Jobs</a></li></ul>
+        </div>
+        
+       
+
+    
+        
+    <input type="hidden" id="uxKeywords" value=""/>
+
+
+<div id="dvSearchDetailContainer">
+    <span id="ctl00_ContentPlaceHolder1_lblError"><b><font color="Red"></font></b></span>
+    <div id="ctl00_ContentPlaceHolder1_pnlJobDetail">
+	
+        <div id="dvSendToFriend" style="display:none;">
+            <table class="tbSendToAFriend">
+                <tr>
+                  <td>Your Email<br />
+                    <input name="ctl00$ContentPlaceHolder1$txtFromEmail" type="text" maxlength="100" id="ctl00_ContentPlaceHolder1_txtFromEmail" /></td>
+                  <td>Friend's Email<br />
+                    <input name="ctl00$ContentPlaceHolder1$txtToEmail" type="text" maxlength="100" id="ctl00_ContentPlaceHolder1_txtToEmail" /></td>
+                  </tr>
+                <tr>
+                  <td colspan="2">Subject<br />
+                    <input name="ctl00$ContentPlaceHolder1$txtSubject" type="text" value="Job Listing on Gables Search Group, Inc." maxlength="100" id="ctl00_ContentPlaceHolder1_txtSubject" /></td>
+                  </tr>
+                <tr>
+                  <td colspan="2">Your Email<br />
+                    <textarea name="ctl00$ContentPlaceHolder1$txtBody" rows="4" cols="20" id="ctl00_ContentPlaceHolder1_txtBody" style="width:95%;height:100px;">I thought you might be interested in the Lead Hardware Engineer job listed at Gables Search Group, Inc..  Just copy and paste the following link into your browser: http://jobs.gablessearch.com/JobSeeker/Detail.aspx?jid=02295266&amp;utm_campaign=XMLFeed&amp;utm_medium=CareerArc&amp;utm_source=CaTW</textarea></td>
+                  </tr>
+                <tr>
+                    <td>Enter the number in the image to the right
+                            <input name="ctl00$ContentPlaceHolder1$txtTuring" type="text" maxlength="5" id="ctl00_ContentPlaceHolder1_txtTuring" />&nbsp; 
+                            <span id="ctl00_ContentPlaceHolder1_lblTuring"><font color="Red"></font></span>
+                    </td>
+                    <td><img height="30" alt="" src="../Turing.aspx" width="80"></td>
+                 </tr>
+                <tr>
+                    <td colspan="2" style="text-align:right">
+                        <a href="javascript:SendEmail();">Send Email</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        
+        <div id="dvPositionTitle">
+             <h1><span id="ctl00_ContentPlaceHolder1_lblPositionTitle">Lead Hardware Engineer</span></h1>
+        </div>
+        <div id="dvXtras">
+            
+            <div id="ctl00_ContentPlaceHolder1_dvLocation"><span class="hdr">Location:</span> <span id="ctl00_ContentPlaceHolder1_lblLocation">Farmington Hills, MI</span></div> 
+            <div id="ctl00_ContentPlaceHolder1_dvJobType"><span class="hdr">Job Type:</span> <span id="ctl00_ContentPlaceHolder1_lblJobType">Direct Hire</span></div>
+            <div id="ctl00_ContentPlaceHolder1_dvSalary"><span class="hdr">Salary:</span> <span id="ctl00_ContentPlaceHolder1_lblSalary">$90,000.00 - $125,000.00</span></div> 
+             
+            
+            <div id="ctl00_ContentPlaceHolder1_dvPosted"><span class="hdr">Date:</span> <span id="ctl00_ContentPlaceHolder1_lblDatePosted">2/13/2016</span></div>
+            <div id="ctl00_ContentPlaceHolder1_dvJobID"><span class="hdr">Job ID:</span> <span id="ctl00_ContentPlaceHolder1_lblJobId">02295266</span></div>
+        </div>
+        <div id="dvLinks">
+            <a id="ctl00_ContentPlaceHolder1_lnkApply" href="UploadResume.aspx?jid=02295266">Apply Now</a> | 
+            <a href="javascript:Keepers('02295266')"><span id="spnKeepers_02295266">Add To My Jobs</span></a> | 
+            <a href="KeepersList.aspx">View My Jobs</a> |
+            <a href="javascript:ShowSendForm();">Send To Friend</a>
+        </div>
+        <div id="dvDescription">
+            <fieldset>
+                <legend>Job Description</legend>
+                <div class="desc">
+                    <span id="ctl00_ContentPlaceHolder1_lblDescription"><div style="text-align: center;"><strong><span style="font-size:16pt;">Lead Hardware Engineer - MI</span></strong></div><div><br /><br /><strong>Summary</strong><br />Our client, a developer or supplier of advanced vehicle safety systems, is growing at a steady rate.&nbsp; Because of this, they&rsquo;re looking for a Lead Hardware Engineer to join their team. The Lead Hardware Engineer is primarily&nbsp;responsible for the design and development of restraint control and sensing electronics under time and cost restraints. You&nbsp;will lead all hardware related development activities and be responsible for hardware task planning and execution.<br /><br />Other Responsibilities:<ul>	<li>Component selection and analysis (Monte Carlo, worst case etc.) to fulfill hardware requirements.</li>	<li>Schematic capture and circuit simulation.</li>	<li>Interface with ECAD for PCB layout with compliance to EMC &amp; manufacturing design rules.</li>	<li>Control and release component BOM.</li>	<li>Work with Product Assurance group to develop test specifications and assist in troubleshooting.</li>	<li>Interface with suppliers for development of component specifications, resolving open issues and ensure part availability for design milestones.</li></ul><br /><strong>Qualifications</strong><ul>	<li>Bachelors in Electrical or Computer Engineering required, MS preferred&nbsp;</li>	<li>Min. 5 years of experience with&nbsp;mixed signal circuit design &amp; analysis for automotive applications.</li>	<li>Electrical design experience&nbsp;for automotive safety applications is preferred</li>	<li>Experience and familiarity with microcontrollers and electronic component technologies is essential. Familiarity in ASIC development and/or testing is advantageous.</li>	<li>Experience in design and analysis for FMEA is required.</li>	<li>Strong problem solving skills to aid in analysis and troubleshooting of electronic products</li>	<li>Knowledge of serial communication tools, such as CANalyzer is preferred.</li>	<li>Experience with office productivity applications such as MS Excel is required, VBA experience is an advantage.</li></ul><br /><br />Location: Southeast MI<br />Type: Direct<br />Salary Range:&nbsp; $90,000-125,000/year, based on experience<br />Travel:&nbsp; Minimal<br />Relocation Assistance:&nbsp; Subject to review<br />Visa Sponsorship:&nbsp; Subject to review<br /><br />Keywords: BS, &quot;B.S.&quot;, Bachelors, Bachelor, &quot;Printed Circuit Board&quot;, &quot;Computer Aided&quot;, &quot;Computer-Aided&quot;, &quot;electromagnetic compatibility&quot;, &quot;Controller Area Network&quot;, &quot;Failure mode and effects analysis&quot;,&nbsp;RF, Wireless, VHF, UHF , Radar, Microwave, antenna, orcad, pads, altium, dxdesigner, &quot;dx designer&rdquo;, &ldquo;mixed signal&rdquo;, Sensors, &ldquo;inductive charger&rdquo;, wireless, induction, inductor, inductive, schematic</div></span>
+                </div>
+            </fieldset>
+        </div>
+    
+</div>
+</div>
+</strong></u></P>
+
+
+
+							</td>
+							<td>&nbsp;</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" bgcolor="#018e6b">&nbsp;</td>
+			</tr>
+		</table>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td bgcolor="#1d2d82">&nbsp;</td>
+			</tr>
+		</table>
+		<p><map name="Map" id="Map">
+				<area shape="RECT" coords="14,41,139,60" href="http://employment.topechelon.com/web35155/jobseeker/ssetup.asp">
+				<area shape="RECT" coords="13,60,143,78" href="http://employment.topechelon.com/web35155/jobseeker/ssetup.asp?runsearch=1&amp;defaultsearch=1&amp;spagencykeyidlist=35155">
+			</map>
+		</p>
+		<map name="Map2" id="Map2">
+			<area shape="RECT" coords="2,9,47,28" href="http://www.gablessearch.com/default.asp">
+			<area shape="rect" coords="1,36,127,50" href="http://www.gablessearch.com/about.htm" />
+			<area shape="rect" coords="1,54,111,70" href="http://www.gablessearch.com/expertise.htm" />
+			<area shape="rect" coords="1,75,88,86" href="http://www.gablessearch.com/pressrelease.htm" />
+			<area shape="rect" coords="2,95,69,111" href="http://www.gablessearch.com/advantages.htm" />
+			<area shape="rect" coords="1,115,147,128" href="http://www.gablessearch.com/contract.htm" />
+			<area shape="rect" coords="1,135,73,150" href="http://www.gablessearch.com/info_submit.asp" />
+		</map>
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9080017-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+      
+        </div>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-9080017-1");
+pageTracker._trackPageview();
+} catch(err) {}</script></form>
+</body>
+</html>

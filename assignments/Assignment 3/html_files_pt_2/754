@@ -1,0 +1,942 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="UTF-8" />
+        <title>:: Identidad Grupera :::</title>
+        <meta name="generator" content="Luis.Cano - tl. 355.6179 - id. 72*13*77350 - luis.canom@atusordenes.com.mx">
+        <meta name="title" content="Identidad Grupera">
+        <meta http-equiv="sbu" content="Identidad Grupera">
+        <meta http-equiv="description" content="La Nueva Fuerza Musical">
+        <meta http-equiv="keywords" content="Revista, Grupera, Musical, Identidad, Fuerza, Grupos, Norteños, Corridos, Radio, Horoscopos, Noticias, Entrevistas, Musicos, Bandas, Bailes">
+        <meta name="zipcode" content="37400">
+        <meta name="revisit-after" content="1 days">
+        <meta name="city" content="Mexico DF">
+        <meta name="state" content="Mexico DF">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />         
+	</head>
+    <body>
+    	        <link rel="stylesheet" type="text/css" href="css/stylepc.css" />
+        <script type="text/javascript" src="noticias/jquery.js"></script>
+        <script type="text/javascript">
+						
+			function lPages(P,nId){
+				
+				if(P == "noticias.php" ){ 
+					//alert(P);
+					$("#Pages").load("noticias.php?nId="+nId);
+				}else{				
+					$("#Pages").load(P);
+				}
+				
+			}
+			
+			function lVota(P, Opt){
+				
+				//alert(Opt)
+				//alert(P+"?votar=" + sugerencias.votar.value + "&valor=" + sugerencias.valor.value)
+				
+				if(Opt == "C" ){
+					$("#Consentidas").load(P);
+				}else if(Opt == "S" ){
+					$("#Sugerencias").load(P);
+				}else if(Opt == "Cv" ){
+					$("#Consentidas").load(P+"?votar=" + v_consentidas.votar.value + "&valor=" + v_consentidas.valor.value);
+				}else if(Opt == "Sv" ){
+					$("#Sugerencias").load(P+"?votar=" + v_sugerencias.votar.value + "&valor=" + v_sugerencias.valor.value);
+				}
+				
+			}
+		</script>
+		<script type="text/javascript">
+        
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-52825400-1']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        
+        </script>
+		<div class="container" align="center">
+        	<div class="header">
+            	<div id="logo" style="position:fixed; display:block; z-index: 501; left: 80px; top:2px;">
+                    <a href=".">
+                    	<img src="images/_logo_idg.png" width="339" height="110" style="outline:none" />
+                    </a>
+                </div>
+                <div style="position:fixed; display:block; z-index: 501; right: 80px; top:15px;" >
+                	<table align="center" style="display:block; width:510px; height:60px; margin:0" border="0">
+                        <tr>
+                            <td align="left" valign="bottom">
+                            	<img src="images/titulo_radio.png" width="171" height="12" style="outline:none" />
+                            </td>
+                            <td rowspan="2">&nbsp;</td>
+                            <td rowspan="2" align="left" valign="middle" height="60" width="70">
+                            	<img src="images/ico_face_b.png" width="63" height="55" style="outline:none" />
+                            </td>
+                            <td rowspan="2" align="left" valign="middle" height="60" width="70">
+                            	<img src="images/ico_twt_b.png" width="63" height="55" style="outline:none" />
+                            </td>
+                            <td rowspan="2" align="left" valign="middle" height="60" width="70">
+                            	<img src="images/ico_you_b.png" width="63" height="55" style="outline:none" />
+                            </td>
+                        </tr>
+                        <tr>
+                       		<td align="left" valign="middle">
+                            	<audio controls autoplay loop style="display:block; width:300px;">
+                                    <source src="http://142.4.216.91:8006/;*.nsv" type="audio/mpeg">
+                                    <source src="http://142.4.216.91:8006/" type="audio/mpeg">
+                                    <source src="http://142.4.216.91:8006/stream" type="audio/mpeg">
+                                    <source src="http://142.4.216.91:8006/listen.pls" type="audio/mpeg">
+                                    <source src="http://142.4.216.91:8006/;stream.mp3" type="audio/mpeg">
+                                    <source src="http://142.4.216.91:8006/;stream.nsv&type=mp3" type="audio/mpeg">
+                                    <source src="http://142.4.216.91:8006/;&type=mp3" type="audio/mpeg">				
+                                    <source src="http://142.4.216.91:8006" type="audio/ogg">
+                                    <source src="http://142.4.216.91:8006" type="audio/wav">
+                                    <p>Tu navegador no implementa el elemento audio</p>
+                                </audio>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="menu" align="center" style="background-color:#F00; vertical-align:central; position:fixed; display:block; z-index: 500; top: 90px; height:35px; width:100%;">
+                    <nav>
+                        <ul>
+                        	<li><a href="."><img src="images/_home.png" width="20" height="18" style="outline:none;" /></a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('idgsomos.php')">QUIENES SOMOS</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('entrevista.php')">LA ENTREVISTA</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('noticias.php','n0320')">NOTICIAS</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('topten.php')">TOP TEN</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('laradio.php')">LA RADIO</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('promosidg.php')">PROMOCIONES</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('bailes.php')">BAILES</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('columnistas.php')">COLUMNISTAS</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('zonafans.php')">ZONA FAN</a></li>
+                            <li><img src="images/line_menu.jpg" width="2" height="12" style="outline:none" /></li>
+                            <li><a href="#" onClick="lPages('horoscopos.php')">HOROSCOPOS</a></li>
+                        </ul>
+                    </nav>
+              	</div>
+            </div>
+            <div id="space" align="center" style="height:125px; width:100%;"></div>     
+            <div class="content" align="center">            	
+                <table align="center" border="0" style="padding-top:10px;" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td width="850px" align="center" valign="top">
+                            <section id="Pages" style="display: block;">
+                                <div id="top_noticias" style="background-color: transparent; position:static; width:850px; margin-left:0px; margin-top:0px;">
+                                    <link rel="stylesheet" type="text/css" href="noticias/style_sliders.css" />
+                                    <div id="wowslider-container1">
+                                        <div class="ws_images">
+                                            <ul>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0320')"><img src="noticias/n0320.jpg" alt="Alfredo Olvidas" title="Alfredo Olvidas" id="noti_0320"/></a>Por Más De Tres Horas Revienta El Auditorio Telmex</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0319')"><img src="noticias/n0319.jpg" alt="Edwin Luna Y La Trakalosa" title="Edwin Luna Y La Trakalosa" id="noti_0319"/></a>Reconquistan Guatemala En Carnaval</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0318')"><img src="noticias/n0318.jpg" alt="El Gigante De América" title="El Gigante De América" id="noti_0318"/></a>A Dueto Con Liberación </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0317')"><img src="noticias/n0317.jpg" alt="Joss Favela" title="Joss Favela" id="noti_0317"/></a>Grabó Video De "Cuando Fuimos Nada"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0316')"><img src="noticias/n0316.jpg" alt="Banda La Alta Potencia" title="Banda La Alta Potencia" id="noti_0316"/></a>Más Famosos En Estados Unidos Que En México</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0315')"><img src="noticias/n0315.jpg" alt="A Alejandra Orozco" title="A Alejandra Orozco" id="noti_0315"/></a>Ya Se Le Hizo Con Julión Álvarez</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0314')"><img src="noticias/n0314.jpg" alt="El Recodo" title="El Recodo" id="noti_0314"/></a>Garantía De Llenos Gran Éxito En Todo México </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0313')"><img src="noticias/n0313.jpg" alt="Real-C Norteño" title="Real-C Norteño" id="noti_0313"/></a>Sin Temor A Los Grandes</li>
+                                                
+                                                <!--li><a href="#" onClick="lPages('noticias.php','n0312')"><img src="noticias/n0312.jpg" alt="Pequeños Musical" title="Pequeños Musical" id="noti_0312"/></a>en el Festival Grupero del Amor</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0311')"><img src="noticias/n0311.jpg" alt="Horacio Palencia" title="Horacio Palencia" id="noti_0311"/></a>Deja La Banda Por La Balada Romántica</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0310')"><img src="noticias/n0310.jpg" alt="Banda MS," title="Banda MS," id="noti_0310"/></a>¡cumple sus sueños! Sus metas Auditorio Nacional y Viña del Mar</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0309')"><img src="noticias/n0309.jpg" alt="Banda Ms" title="Banda Ms" id="noti_0309"/></a>Noche de Lujo en Pachuca</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0308')"><img src="noticias/n0308.jpg" alt="Ruby Escobar," title="Ruby Escobar," id="noti_0308"/></a>casi deja la música por presiones de su padre</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0307')"><img src="noticias/n0307.jpg" alt="Claudio Alcaraz" title="Claudio Alcaraz" id="noti_0307"/></a>Tendencia en redes socailes</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0306')"><img src="noticias/n0306.jpg" alt="La Tierra Mojada" title="La Tierra Mojada" id="noti_0306"/></a>Estrena video Como Auja en un Pajar</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0305')"><img src="noticias/n0305.jpg" alt="Remmy Valenzuela" title="Remmy Valenzuela" id="noti_0305"/></a>Espera con Ansias</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0304')"><img src="noticias/n0304.jpg" alt="Los Recoditos…" title="Los Recoditos…" id="noti_0304"/></a>En Los Primeros Lugares</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0303')"><img src="noticias/n0303.jpg" alt="Fievre Looka" title="Fievre Looka" id="noti_0303"/></a>Y Súper Lamas Juntos Por "La Pelusa"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0302')"><img src="noticias/n0302.jpg" alt="EL BEBETO" title="EL BEBETO" id="noti_0302"/></a>Estrena su video “Mente Degenerada”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0301')"><img src="noticias/n0301.jpg" alt="Pedro Fernández" title="Pedro Fernández" id="noti_0301"/></a>en La Voz Kids y le canta al Papa Francisco</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0300')"><img src="noticias/n0300.jpg" alt="Marco Flores" title="Marco Flores" id="noti_0300"/></a>Rechaza El Hueso Declina Candidatura A Gobierno De Zacatecas</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0299')"><img src="noticias/n0299.jpg" alt="La Bandononona" title="La Bandononona" id="noti_0299"/></a>Clave Nueva Dice… Nadie Como Tú </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0298')"><img src="noticias/n0298.jpg" alt="Noche De" title="Noche De" id="noti_0298"/></a>La Poderosa Banda San Juan En La Noria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0297')"><img src="noticias/n0297.jpg" alt="Farid" title="Farid" id="noti_0297"/></a>Aun Estrena Su Sencillo “Afirmativo”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0296')"><img src="noticias/n0296.jpg" alt="Claudio Alcaráz" title="Claudio Alcaráz" id="noti_0296"/></a>Prepara Su Nuevo Videoclip</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0295')"><img src="noticias/n0295.jpg" alt="Tercer Temporada" title="Tercer Temporada" id="noti_0295"/></a>Arrolladora Noche De Éxito En Auditorio</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0294')"><img src="noticias/n0294.jpg" alt="Impacto Sinaloense" title="Impacto Sinaloense" id="noti_0294"/></a>Llega Para Impactar A Su Público</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0293')"><img src="noticias/n0293.jpg" alt="Se Graba El Video De “Luz”," title="Se Graba El Video De “Luz”," id="noti_0293"/></a>Canción Que Dará La Bienvenida Al Papa Francisco.</li>                                               
+                                                <li><a href="#" onClick="lPages('noticias.php','n0292')"><img src="noticias/n0292.jpg" alt="Roberto Junior" title="Roberto Junior" id="noti_0292"/></a>Recibe Reconocimiento En Su Natal Concordia</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0291')"><img src="noticias/n0291.jpg" alt="Pancho Y Julio Barraza" title="Pancho Y Julio Barraza" id="noti_0291"/></a>Te Presentan “MI NIÑA”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0290')"><img src="noticias/n0290.jpg" alt="" title="" id="noti_0290"/></a>La Tierra Sagrada Se Echa Un Shot Sensual</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0289')"><img src="noticias/n0289.jpg" alt="El Komander" title="El Komander" id="noti_0289"/></a>Exitazo En E.U Y Actuará En La Ciudad De México</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0288')"><img src="noticias/n0288.jpg" alt="Espinoza Paz" title="Espinoza Paz" id="noti_0288"/></a>Con Nuevo Sencillos A Veces</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0287')"><img src="noticias/n0287.jpg" alt="La Banda Selección Mx" title="La Banda Selección Mx" id="noti_0287"/></a>Filma El Peor De Mis Fracasos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0286')"><img src="noticias/n0286.jpg" alt="Alejandra Orozco" title="Alejandra Orozco" id="noti_0286"/></a>Cantará Como Nadie, Espinoza Paz Así Lo Asegura</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0285')"><img src="noticias/n0285.jpg" alt="Claudio Alcaráz" title="Claudio Alcaráz" id="noti_0285"/></a>Busca Consolidarse Este 2016</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0284')"><img src="noticias/n0284.jpg" alt="Ruby Escobar" title="Ruby Escobar" id="noti_0284"/></a>Presenta Su Nuevo Disco</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0283')"><img src="noticias/n0283.jpg" alt="Revolver Cannabis" title="Revolver Cannabis" id="noti_0283"/></a>Sin Rencores Hacia La Adictiva</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0282')"><img src="noticias/n0282.jpg" alt="" title="" id="noti_0282"/></a>Súper Lamas Y Fievre Looka A Dueto</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0281')"><img src="noticias/n0281.jpg" alt="El Bebeto" title="El Bebeto" id="noti_0281"/></a>Choca Y Sale Ileso Afirma Que Es El Culpable Del Hecho</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0280')"><img src="noticias/n0280.jpg" alt="Roberto Junior" title="Roberto Junior" id="noti_0280"/></a>Recibirá Reconocimiento En Su Tierra Natal</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0279')"><img src="noticias/n0279.jpg" alt="Edwin Luna" title="Edwin Luna" id="noti_0279"/></a>Y La Trakalosa Víctimas De Fraude</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0278')"><img src="noticias/n0278.jpg" alt="" title="" id="noti_0278"/></a>Los Hijos Del Señor Estrenan Vocalista</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0277')"><img src="noticias/n0277.jpg" alt="Edwin Luna" title="Edwin Luna" id="noti_0277"/></a>y La Trakalosa Reyes en Centroamérica</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0276')"><img src="noticias/n0276.jpg" alt="Remmy Valenzuela" title="Remmy Valenzuela" id="noti_0276"/></a>De Lo Mejor En 2015 Así Lo Dice The New York Times</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0275')"><img src="noticias/n0275.jpg" alt="La Incomparable" title="La Incomparable" id="noti_0275"/></a>La Incomparable</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0274')"><img src="noticias/n0274.jpg" alt="Toño Lizárraga" title="Toño Lizárraga" id="noti_0274"/></a>en carrera a… Los Primeros Lugares</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0273')"><img src="noticias/n0273.jpg" alt="Horóscopos de Durango" title="Horóscopos de Durango" id="noti_0273"/></a>Filman Me Gustaría Conocerte</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0272')"><img src="noticias/n0272.jpg" alt="La Noria," title="La Noria," id="noti_0272"/></a>14 Años El Mejor Lugar De Banda</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0271')"><img src="noticias/n0271.jpg" alt="El Gavilancillo" title="El Gavilancillo" id="noti_0271"/></a>Deja Adicciones Por La Música</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0270')"><img src="noticias/n0270.jpg" alt="Gran Rugido de" title="Gran Rugido de" id="noti_0270"/></a>Tigres del Norte En el Auditorio Nacional</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0269')"><img src="noticias/n0269.jpg" alt="El Bebeto" title="El Bebeto" id="noti_0269"/></a>Tiene Una Mente Degenerada</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0268')"><img src="noticias/n0268.jpg" alt="Camila Fernández" title="Camila Fernández" id="noti_0268"/></a>Se Lanza Como Cantante Hija De Potrillo… Pintito</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0267')"><img src="noticias/n0267.jpg" alt="Los Cazadores" title="Los Cazadores" id="noti_0267"/></a>Presentan Videoclip Y Producción.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0266')"><img src="noticias/n0266.jpg" alt="Los Rieleros Se Lucen" title="Los Rieleros Se Lucen" id="noti_0266"/></a>En Los Tres Grandes Comparte Tarima Con Huracanes Y Conjunto Primavera</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0265')"><img src="noticias/n0265.jpg" alt="¡Subéleee!," title="¡Subéleee!," id="noti_0265"/></a>Los Valedores Alistan Gira Por Estados Unidos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0264')"><img src="noticias/n0264.jpg" alt="Pequeños Musical" title="Pequeños Musical" id="noti_0264"/></a>Festejó Sus 25 Años De Trayectoria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0263')"><img src="noticias/n0263.jpg" alt="Rafa Becerra" title="Rafa Becerra" id="noti_0263"/></a>Está De Regreso Con Su Banda Súper Corona</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0262')"><img src="noticias/n0262.jpg" alt="A Juan Gabriel" title="A Juan Gabriel" id="noti_0262"/></a>Ya Le Gustaron Los Duetos… </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0261')"><img src="noticias/n0261.jpg" alt="Banda Yurirense" title="Banda Yurirense" id="noti_0261"/></a>Cumplen 30 Años De Trayectoria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0260')"><img src="noticias/n0260.jpg" alt="El Chapo De Sinaloa" title="El Chapo De Sinaloa" id="noti_0260"/></a>Será Actor De Telenovela</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0259')"><img src="noticias/n0259.jpg" alt="El Mimoso" title="El Mimoso" id="noti_0259"/></a>Festeja 36 Años Bien Vividos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0258')"><img src="noticias/n0258.jpg" alt="Gerardo Ortiz" title="Gerardo Ortiz" id="noti_0258"/></a>Arrasa En El Auditorio Nacional</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0257')"><img src="noticias/n0257.jpg" alt="Gerardo Ortiz" title="Gerardo Ortiz" id="noti_0257"/></a>Al Cine… Como Un Sueño</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0256')"><img src="noticias/n0256.jpg" alt="" title="" id="noti_0256"/></a>La Noria Satélite Invade El Norte Del D.F</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0255')"><img src="noticias/n0255.jpg" alt="Edwin Luna" title="Edwin Luna" id="noti_0255"/></a>Y La Trakalosa De Monterrey Reyes En Su Tierra</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0254')"><img src="noticias/n0254.jpg" alt="José Manuel Figueroa" title="José Manuel Figueroa" id="noti_0254"/></a>Gran Exitazo En La Noria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0253')"><img src="noticias/n0253.jpg" alt="" title="" id="noti_0253"/></a>Carlos Y José Adiós…</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0252')"><img src="noticias/n0252.jpg" alt="" title="" id="noti_0252"/></a>Julión Álvarez Continúa Triunfando</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0251')"><img src="noticias/n0251.jpg" alt="La Santanera" title="La Santanera" id="noti_0251"/></a>Y María Fernanda Vienen Navideñamente Tropicales.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0250')"><img src="noticias/n0250.jpg" alt="Luminarias Se Reúnen" title="Luminarias Se Reúnen" id="noti_0250"/></a>En El D.F Y Celebran Posada Navideña</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0249')"><img src="noticias/n0249.jpg" alt="El Duelo" title="El Duelo" id="noti_0249"/></a>Llega a La Arena Monterrey</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0248')"><img src="noticias/n0248.jpg" alt="Daddy Yankee" title="Daddy Yankee" id="noti_0248"/></a>Llena De Adrenalina A México</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0247')"><img src="noticias/n0247.jpg" alt="En La 6ª Entrega" title="En La 6ª Entrega" id="noti_0247"/></a>De Premios De La Radio Puro Lujo Y Grandes Estrellas.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0246')"><img src="noticias/n0246.jpg" alt="Julio Preciado" title="Julio Preciado" id="noti_0246"/></a>Devela Su Estrella En Mazatlán, Sinaloa </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0245')"><img src="noticias/n0245.jpg" alt="Pesado" title="Pesado" id="noti_0245"/></a>Presente en la Final de la Copa MX del Futbol Mexicano</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0244')"><img src="noticias/n0244.jpg" alt="Jeaneth Guadalupe" title="Jeaneth Guadalupe" id="noti_0244"/></a>Una Mini Madrina Angelical</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0243')"><img src="noticias/n0243.jpg" alt="Banda Puro Quelite" title="Banda Puro Quelite" id="noti_0243"/></a>Te Dice Se Terminó Lo Nuestro</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0242')"><img src="noticias/n0242.jpg" alt="German Montero" title="German Montero" id="noti_0242"/></a>Repite Éxito Lanza El Video Yo Te Vi</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0241')"><img src="noticias/n0241.jpg" alt="Gianna Interpretó 6 Personajes" title="Gianna Interpretó 6 Personajes" id="noti_0241"/></a>En El Video De Su Nuevo Sencillo "Te Seguiré"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0239')"><img src="noticias/n0239.jpg" alt="El Gigante De América" title="El Gigante De América" id="noti_0239"/></a>Se Presentó Con Éxito En Bolivia</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0238')"><img src="noticias/n0238.jpg" alt="En Jalisco, " title="En Jalisco, " id="noti_0238"/></a>La Adictiva Baja De Su Escenario A Revolver Cannabis. </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0237')"><img src="noticias/n0237.jpg" alt="La Adictiva" title="La Adictiva" id="noti_0237"/></a>Estrena Su Video "El Viejón"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0236')"><img src="noticias/n0236.jpg" alt="Max Peraza" title="Max Peraza " id="noti_0236"/></a>Y Su Clave Nueva Los Patrones De Mazatlán</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0235')"><img src="noticias/n0235.jpg" alt="La Inolvidable Banda Agua de la Llave" title="La Inolvidable Banda Agua de la Llave" id="noti_0235"/></a>Es Sold Out en las Fiestas de Octubre</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0234')"><img src="noticias/n0234.jpg" alt="Marco Flores" title="Marco Flores" id="noti_0234"/></a>Ya Brilla Con Su Estrella En Las Vegas.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0233')"><img src="noticias/n0233.jpg" alt="" title="" id="noti_0233"/></a>Todo Para Julión Y Nada Para Nadie </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0232')"><img src="noticias/n0232.jpg" alt="Banda Santo Domingo" title="Banda Santo Domingo" id="noti_0232"/></a>“Joan Sebastian Siempre Nos Tuvo Fe”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0231')"><img src="noticias/n0231.jpg" alt="La Mejor Reúne A" title="La Mejor Reúne A" id="noti_0231"/></a>Los Grandes En El Juego De Las Estrellas</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0230')"><img src="noticias/n0230.jpg" alt="Fidel Rueda" title="Fidel Rueda" id="noti_0230"/></a>Dona Medio Millón De Pesos En Aparatos Auditivos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0229')"><img src="noticias/n0229.jpg" alt="Pesado" title="Pesado" id="noti_0229"/></a>Apantalló En Su Tierra</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0228')"><img src="noticias/n0228.jpg" alt="Saúl El Jaguar y Régulo Caro" title="Saúl El Jaguar y Régulo Caro" id="noti_0228"/></a>#UnEstilodeVidaSinSenzurah</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0227')"><img src="noticias/n0227.jpg" alt="Larry Hernández," title="Larry Hernández," id="noti_0227"/></a>8 Años En La Cárcel</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0226')"><img src="noticias/n0226.jpg" alt="Karina Catalán" title="Karina Catalán" id="noti_0226"/></a>Presenta “A Tu Salud”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0225')"><img src="noticias/n0225.jpg" alt="Edwin Luna… " title="Edwin Luna… " id="noti_0225"/></a>Se Camuflajea Con FATO</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0224')"><img src="noticias/n0224.jpg" alt="“SEBASTIANES”," title="“SEBASTIANES”," id="noti_0224"/></a>MÁS QUE INDELEBLES…</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0223')"><img src="noticias/n0223.jpg" alt="Zona Prieta " title="Zona Prieta " id="noti_0223"/></a>Dueños de Swing Latino</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0222')"><img src="noticias/n0222.jpg" alt="El Gigante De América" title="El Gigante De América" id="noti_0222"/></a>Graba Video En El Metro</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0221')"><img src="noticias/n0221.jpg" alt="" title="" id="noti_0221"/></a>Bobby Pulido “No Es Como Tú”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0220')"><img src="noticias/n0220.jpg" alt="Roberto Junior" title="Roberto Junior" id="noti_0220"/></a>Sufre Accidente</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0219')"><img src="noticias/n0219.jpg" alt="Meño Lugo Viene…" title="Meño Lugo Viene…" id="noti_0219"/></a> Abriendo Caminos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0218')"><img src="noticias/n0218.jpg" alt="Charly" title="Charly" id="noti_0218"/></a>Se Vuelve Escritor En El Video De El Recodo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0217')"><img src="noticias/n0217.jpg" alt="Roberto Junior" title="Roberto Junior" id="noti_0217"/></a>Está De Regreso Con Estaba Equivocado</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0216')"><img src="noticias/n0216.jpg" alt="Horóscopos De Durango..." title="Horóscopos De Durango..." id="noti_0216"/></a>Nos Invitan A Vivir En Pecado</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0215')"><img src="noticias/n0215.jpg" alt="Se Hizo La Fiesta" title="Se Hizo La Fiesta" id="noti_0215"/></a> Con La Fievre Looka</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0214')"><img src="noticias/n0214.jpg" alt="Gerardo Ortiz " title="Gerardo Ortiz " id="noti_0214"/></a>Se Presentará En El Auditorio Nacional</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0213')"><img src="noticias/n0213.jpg" alt="Óscar Cruz es…" title="Óscar Cruz es…" id="noti_0213"/></a>Hombre sin corazón </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0212')"><img src="noticias/n0212.jpg" alt="José Julián" title="José Julián" id="noti_0212"/></a>Conquista A Los Ticos </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0211')"><img src="noticias/n0211.jpg" alt="El Bebeto… " title="El Bebeto… " id="noti_0211"/></a>Eternamente Mexicano </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0210')"><img src="noticias/n0210.jpg" alt="La Leyenda " title="La Leyenda " id="noti_0210"/></a>Cumplió 10 Años De Trayectoria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0209')"><img src="noticias/n0209.jpg" alt="Premios De La Radio 2015" title="Premios De La Radio 2015" id="noti_0209"/></a>Próximamente Darán De Que Hablar</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0208')"><img src="noticias/n0208.jpg" alt="Grabaron Su Nuevo Video..." title="Grabaron Su Nuevo Video..." id="noti_0208"/></a>"Pregúntale" A Edwin Luna Y La Trakalosa De Monterrey</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0207')"><img src="noticias/n0207.jpg" alt="Banda Playa Grande " title="Banda Playa Grande " id="noti_0207"/></a>¡Conquistan el corazón del público y de colegas!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0206')"><img src="noticias/n0206.jpg" alt="Voz De Mando" title="Voz De Mando " id="noti_0206"/></a>Triunfa En Su Regreso Al D.F</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0205')"><img src="noticias/n0205.jpg" alt="Alejandro Fernández" title="Alejandro Fernández" id="noti_0205"/></a>Se Acerca A Sus Fans</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0204')"><img src="noticias/n0204.jpg" alt="Ada Elorza " title="Ada Elorza " id="noti_0204"/></a>Un Muñeca Que Viene Con Otra Oportunidad</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0203')"><img src="noticias/n0203.jpg" alt="Es Neta Que Irasema " title="Es Neta Que Irasema " id="noti_0203"/></a>Le Canta Al Desamor Irasema “Agua De Arcoíris”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0202')"><img src="noticias/n0202.jpg" alt="David Venegas " title="David Venegas " id="noti_0202"/></a>Presenta Nueva Agrupación Y Demanda Para Recuperar Yaguarú</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0201')"><img src="noticias/n0201.jpg" alt="Los Cardenales De Nuevo León " title="Los Cardenales De Nuevo León " id="noti_0201"/></a>Imponen La Música Norteña En La Noria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0200')"><img src="noticias/n0200.jpg" alt="Julio Preciado " title="Julio Preciado " id="noti_0200"/></a>En La Noria El Gigante Vuelve A Triunfar</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0199')"><img src="noticias/n0199.jpg" alt="Vive Joan Sebastian " title="Vive Joan Sebastian " id="noti_0199"/></a>José Manuel Rindió Tributo A Su Padre</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0198')"><img src="noticias/n0198.jpg" alt="Premios Bandamax 2015 " title="Premios Bandamax 2015 " id="noti_0198"/></a>El Glamour Hecho Banda</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0197')"><img src="noticias/n0197.jpg" alt="Expo Compositores " title="Expo Compositores " id="noti_0197"/></a>La Plataforma Que Dignifica Y Apoya A Los Autores</li>                                                
+                                                <li><a href="#" onClick="lPages('noticias.php','n0196')"><img src="noticias/n0196.jpg" alt="Los Recoditos " title="Los Recoditos " id="noti_0196"/></a>Son los Reyes en Nicaragua</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0195')"><img src="noticias/n0195.jpg" alt="Germán Montero " title="Germán Montero " id="noti_0195"/></a>En La Noria Tiene Una Gran Noche</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0194')"><img src="noticias/n0194.jpg" alt="Claudio Alcaraz " title="Claudio Alcaraz " id="noti_0194"/></a>Echa tiros en San Salvador, Cuauhtenco, Milpa Alta</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0193')"><img src="noticias/n0193.jpg" alt="" title="" id="noti_0193"/></a>Presentan Elenco De Premios Bandamax</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0192')"><img src="noticias/n0192.jpg" alt="Pesado " title="Pesado " id="noti_0192"/></a>En La Feria De Palin, Escuintla, Guatemala</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0191')"><img src="noticias/n0191.jpg" alt="El Gigante de América, " title="El Gigante de América, " id="noti_0191"/></a>35 años Más Bronco que Nunca</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0190')"><img src="noticias/n0190.jpg" alt="Villa 5 " title="Villa 5 " id="noti_0190"/></a>Revoluciona La Música Regional Mexicana</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0189')"><img src="noticias/n0189.jpg" alt="David Zepeda" title="David Zepeda" id="noti_0189"/></a>Se Estrena Como Empresario</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0188')"><img src="noticias/n0188.jpg" alt="" title="" id="noti_0188"/></a>¡Viva Por Siempre Joan Sebastian!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0187')"><img src="noticias/n0187.jpg" alt="Don Chayo " title="Don Chayo " id="noti_0187"/></a>Homenajeado En Su Tierra</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0186')"><img src="noticias/n0186.jpg" alt="Edwin Luna" title="Edwin Luna" id="noti_0186"/></a>Y La Trakalosa De Monterrey Abren Su Corazón</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0185')"><img src="noticias/n0185.jpg" alt="Edwin Luna " title="Edwin Luna " id="noti_0185"/></a>Y La Trakalosa De Monterrey En Grandiosa Firma De Autógrafos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0184')"><img src="noticias/n0184.jpg" alt="La Leyenda Denuncia" title="La Leyenda Denuncia" id="noti_0184"/></a>Servando Cano Por Alteración De Contrato Artístico</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0183')"><img src="noticias/n0183.jpg" alt="La Trakalosa " title="La Trakalosa " id="noti_0183"/></a>Sigue Regalando Temas A Través De Sus Redes Sociales</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0182')"><img src="noticias/n0182.jpg" alt="" title="" id="noti_0182"/></a>Espectacular Presentación De El Recodo En España</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0181')"><img src="noticias/n0181.jpg" alt="Joan Sebastian…" title="Joan Sebastian…" id="noti_0181"/></a>Porras, cantos y lágrimas en su adiós en el D.F</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0180')"><img src="noticias/n0180.jpg" alt="Christian Molina" title="Christian Molina" id="noti_0180"/></a>Se Estrenó Por Fin Como Papá</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0179')"><img src="noticias/n0179.jpg" alt="La Muerte De Joan Sebastian" title="La Muerte De Joan Sebastian" id="noti_0179"/></a>Conmovió Al Mundo Grupero</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0178')"><img src="noticias/n0178.jpg" alt="Saúl El Jaguar" title="Saúl El Jaguar" id="noti_0178"/></a>Estrena Su Tema “Mi Niña Adorada”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0177')"><img src="noticias/n0177.jpg" alt="" title="" id="noti_0177"/></a>Fallece El Gran Ídolo De Juliantla…</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0176')"><img src="noticias/n0176.jpg" alt="Edwin Luna" title="Edwin Luna" id="noti_0176"/></a>Y La Trakalosa De Monterrey Ahora En Televisión</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0175')"><img src="noticias/n0175.jpg" alt="Un Nuevo Imperio" title="Un Nuevo Imperio" id="noti_0175"/></a>Llega A Conquistar El Distrito Federal</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0174')"><img src="noticias/n0174.jpg" alt="Vicky Y Marisol" title="Vicky Y Marisol" id="noti_0174"/></a>Nos Presumen: "Estoy Con Otro En La Cama"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0173')"><img src="noticias/n0173.jpg" alt="Edwin Luna…" title="Edwin Luna…" id="noti_0173"/></a>En Triángulo Amoroso</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0172')"><img src="noticias/n0172.jpg" alt="El Recodo Son…" title="El Recodo Son…" id="noti_0172"/></a>Los Más Vendidos En Estados Unidos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0171')"><img src="noticias/n0171.jpg" alt="El Komander" title="El Komander" id="noti_0171"/></a>Detrás del Miedo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0170')"><img src="noticias/n0170.jpg" alt="Anny" title="Anny" id="noti_0170"/></a>Celebró Su Baby Shower</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0169')"><img src="noticias/n0169.jpg" alt="" title="" id="noti_0169"/></a>Súper Disco De La Sonora Dinamita</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0168')"><img src="noticias/n0168.jpg" alt="El Recodo " title="El Recodo " id="noti_0168"/></a>Presenta Mi Vicio Más Grande</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0167')"><img src="noticias/n0167.jpg" alt="Edwin Luna Y La Trakalosa " title="Edwin Luna Y La Trakalosa " id="noti_0167"/></a>Reúnen ¡76 Mil Personas En La Feria De Morelia, Michoacán!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0166')"><img src="noticias/n0166.jpg" alt="" title="" id="noti_0166"/></a>El Gigante De América “ES AMOR”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0165')"><img src="noticias/n0165.jpg" alt="Se Cae Escenario" title="Se Cae Escenario" id="noti_0165"/></a>De El Yaki Por La Lluvia</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0164')"><img src="noticias/n0164.jpg" alt="Arturo Jaimes" title="Arturo Jaimes" id="noti_0164"/></a>Fallece De Cáncer</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0163')"><img src="noticias/n0163.jpg" alt="El Recodo " title="El Recodo " id="noti_0163"/></a>Aquí Y En España Son La Número 1</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0162')"><img src="noticias/n0162.jpg" alt="José Julián " title="José Julián " id="noti_0162"/></a>Rinde Homenaje A Los Papás</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0161')"><img src="noticias/n0161.jpg" alt="La Trakalosa, Original " title="La Trakalosa, Original " id="noti_0161"/></a>Y Demás Dan Música Y Vida A Chapultepec</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0160')"><img src="noticias/n0160.jpg" alt="Pesado " title="Pesado " id="noti_0160"/></a>Paraliza Nuevo Laredo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0158')"><img src="noticias/n0158.jpg" alt="Madrina" title="Madrina" id="noti_0158"/></a>Sexy Para Desfile</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0157')"><img src="noticias/n0157.jpg" alt="Huichol Musical" title="Huichol Musical" id="noti_0157"/></a>Llega Con Todo El Sabor A México</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0156')"><img src="noticias/n0156.jpg" alt="El Bebeto" title="El Bebeto" id="noti_0156"/></a>Lanza "Besos Nuevos"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0155')"><img src="noticias/n0155.jpg" alt="América Sierra " title="América Sierra " id="noti_0155"/></a>Presume A "Su Gordito" </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0159')"><img src="noticias/n0159.jpg" alt="Joan Sebastian " title="Joan Sebastian " id="noti_0159"/></a>Cada Vez Más Enfermo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0149')"><img src="noticias/n0149.jpg" alt="Fidel Rueda: " title="Fidel Rueda: " id="noti_0149"/></a>¡Ya no es mandadero de nadie!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0154')"><img src="noticias/n0154.jpg" alt="Alejandro Mariscal" title="Alejandro Mariscal" id="noti_0154"/></a>En La Nascar</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0153')"><img src="noticias/n0153.jpg" alt="Los Primos Mx" title="Los Primos Mx" id="noti_0153"/></a>Nos Presentan A Su “Mentirosa”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0152')"><img src="noticias/n0152.jpg" alt="El Gigante De América" title="El Gigante De América" id="noti_0152"/></a>Triunfa En El Machaca Fest</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0151')"><img src="noticias/n0151.jpg" alt="Salomón Robles " title="Salomón Robles " id="noti_0151"/></a>Y Sus Legendarios Quiere Crear Conciencia</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0150')"><img src="noticias/n0150.jpg" alt="Meño Lugo " title="Meño Lugo " id="noti_0150"/></a>Regresa con Nuestra Canción</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0148')"><img src="noticias/n0148.jpg" alt="Joan Sebastian" title="Joan Sebastian" id="noti_0148"/></a>Como El Ave Fenix</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0147')"><img src="noticias/n0147.jpg" alt="La Iniciativa" title="La Iniciativa" id="noti_0147"/></a>En Video Con Irán Castillo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0146')"><img src="noticias/n0146.jpg" alt="Julión Álvarez" title="Julión Álvarez" id="noti_0146"/></a>Tiene su Amor de Barrio</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0145')"><img src="noticias/n0145.jpg" alt="Saúl El Jaguar" title="Saúl El Jaguar" id="noti_0145"/></a>Se Estrena Como Empresario</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0144')"><img src="noticias/n0144.jpg" alt="Gerardo Ortiz" title="Gerardo Ortiz" id="noti_0144"/></a>Hoy Es Más Fuerte Y Viene A Romper Ma….</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0143')"><img src="noticias/n0143.jpg" alt="La Adictiva " title="La Adictiva " id="noti_0143"/></a>5 Trancazos En 1 Los Tiene Imparables.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0142')"><img src="noticias/n0142.jpg" alt="Ramón Ayala Y La Leyenda" title="Ramón Ayala Y La Leyenda" id="noti_0142"/></a>En Gran Noche Norteña</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0141')"><img src="noticias/n0141.jpg" alt="América Sierra" title="América Sierra" id="noti_0141"/></a>Lleva Alegría A Honduras</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0140')"><img src="noticias/n0140.jpg" alt="El Recodo" title="El Recodo" id="noti_0140"/></a>Hace Historia En el Domo Care de Monterrey</li>
+                                                <li><a href="http://bit.ly/1EqMYiV" target="_blank"><img src="noticias/n0139.jpg" alt="" title="" id="noti_0139"/></a></li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0138')"><img src="noticias/n0138.jpg" alt="MÚSICA Y VIDA POR CHAPULTEPEC" title="MÚSICA Y VIDA POR CHAPULTEPEC" id="noti_0138"/></a>LA TRAKALOSA DE MONTERREY, La Original Banda El Limón, Marco Flores y muchos mas...</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0137')"><img src="noticias/n0137.jpg" alt="Recoditos Y Fidel Rueda" title="Recoditos Y Fidel Rueda" id="noti_0137"/></a>Confirmados Para Jennivive2015</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0136')"><img src="noticias/n0136.jpg" alt="Banda Arsenal" title="Banda Arsenal" id="noti_0136"/></a>Lanza Su Primer Cañonazo: Hay Que Seguirla</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0135')"><img src="noticias/n0135.jpg" alt="Stereomax" title="Stereomax" id="noti_0135"/></a>Espectacular 19 Aniversario</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0134')"><img src="noticias/n0134.jpg" alt="Auténticos de la Tuba " title="Auténticos de la Tuba " id="noti_0134"/></a>Te dicen Ya Se Te Olvido </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0133')"><img src="noticias/n0133.jpg" alt="TOÑO LIZÁRRAGA" title="TOÑO LIZÁRRAGA" id="noti_0133"/></a> PIERDE A UN GRAN AMIGO</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0132')"><img src="noticias/n0132.jpg" alt="Pesado Canta Con Juan Gabriel" title="Pesado Canta Con Juan Gabriel" id="noti_0132"/></a>En El Auditorio Nacional</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0131')"><img src="noticias/n0131.jpg" alt="La Tierra Sagarada" title="La Tierra Sagarada" id="noti_0131"/></a>Tiene nueva integrante</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0130')"><img src="noticias/n0130.jpg" alt="América Sierra" title="América Sierra" id="noti_0130"/></a>Visitará El Salvador</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0129')"><img src="noticias/n0129.jpg" alt="El Nene Torres" title="El Nene Torres" id="noti_0129"/></a>Regresa Con Disco Y Negocio</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0128')"><img src="noticias/n0128.jpg" alt="Fidel Rueda" title="Fidel Rueda" id="noti_0128"/></a>Dona Más De Medio Millón A Escucha-T</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0127')"><img src="noticias/n0127.jpg" alt="Leo Ibarría" title="Leo Ibarría" id="noti_0127"/></a>De Lo Más Asegurado Con Sencillo Y Video</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0126')"><img src="noticias/n0126.jpg" alt="Los Rieleros Del Norte" title="Los Rieleros Del Norte" id="noti_0126"/></a>Tendrán Estrella En Paseo De La Fama De Las Vegas</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0125')"><img src="noticias/n0125.jpg" alt="La Tierra Sagrada" title="La Tierra Sagrada" id="noti_0125"/></a>A Chimalhuacán llega De lo Bueno… Lo Mejor</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0124')"><img src="noticias/n0124.jpg" alt="Los Tigres del Norte" title="Los Tigres del Norte" id="noti_0124"/></a>Rugen en la Feria de Chimalhuacán</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0123')"><img src="noticias/n0123.jpg" alt="Liz Clapés" title="Liz Clapés" id="noti_0123"/></a>Le Canta Al “Pinchi Borracho”</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0122')"><img src="noticias/n0122.jpg" alt="" title="" id="noti_0122"/></a>¡LOS SEBASTIANES SE LLEVAN UN GRAN SUSTO!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0121')"><img src="noticias/n0121.jpg" alt="Alberto Barros" title="Alberto Barros" id="noti_0121"/></a>Productor De Gigantes Colombianos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0120')"><img src="noticias/n0120.jpg" alt="El Flaco Sufre" title="El Flaco Sufre" id="noti_0120"/></a>Por Amor Le Tocó Perder Y Sufrir</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0119')"><img src="noticias/n0119.jpg" alt="Jenni Vive 2015" title="Jenni Vive 2015" id="noti_0119"/></a>Un Gran Legado De La Diva De La Banda</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0118')"><img src="noticias/n0118.jpg" alt="La Adictiva" title="La Adictiva" id="noti_0118"/></a>Los Reyes De San Marcos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0117')"><img src="noticias/n0117.jpg" alt="El Recodo" title="El Recodo" id="noti_0117"/></a>Y Su Vicio Más Grande</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0116')"><img src="noticias/n0116.jpg" alt="Los Cardenales De Nuevo León" title="Los Cardenales De Nuevo León" id="noti_0116"/></a>Se Pasean En Ny</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0115')"><img src="noticias/n0115.jpg" alt="El Gigante De América" title="El Gigante De América" id="noti_0115"/></a>En Firma De Autógrafos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0114')"><img src="noticias/n0114.jpg" alt="Alex Lora" title="Alex Lora" id="noti_0114"/></a>Confía En Que La Banda El Recodo Cante Su Tema</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0113')"><img src="noticias/n0113.jpg" alt="" title="" id="noti_0113"/></a>"Buscaré Ganar Tres Veces Más Que En El Recodo": Yaki</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0112')"><img src="noticias/n0112.jpg" alt="Exterminador" title="Exterminador" id="noti_0112"/></a>Es tiempo de…</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0111')"><img src="noticias/n0111.jpg" alt="Juntos Para Hacer Ruido" title="Juntos Para Hacer Ruido" id="noti_0111"/></a>Tigres Del Norte, La Original Y Emilio Navaira</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0110')"><img src="noticias/n0110.jpg" alt="Spotify" title="Spotify" id="noti_0110"/></a>de Fiesta Cumplen 2 Años de Vida</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0109')"><img src="noticias/n0109.jpg" alt="Pesado" title="Pesado" id="noti_0109"/></a>Te Pide Abrázame En Su Nuevo Disco</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0108')"><img src="noticias/n0108.jpg" alt="El Tono de México" title="El Tono de México" id="noti_0108"/></a>Estrena video ¿Dónde Quedó? </li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0107')"><img src="noticias/n0107.jpg" alt="Paola Preciado" title="Paola Preciado" id="noti_0107"/></a>Defiende su estilo con su disco</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0106')"><img src="noticias/n0106.jpg" alt="A César Navarro" title="A César Navarro" id="noti_0106"/></a>de la Tierra Sagrada Le dicen el Cristiano Ronaldo de la Banda.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0105')"><img src="noticias/n0105.jpg" alt="La Trakalosa" title="La Trakalosa" id="noti_0105"/></a>A Dueto Con Tatiana Le Cantan A Los Peques</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0104')"><img src="noticias/n0104.jpg" alt="Arnoldo Tapia" title="Arnoldo Tapia" id="noti_0104"/></a>Llega el Justin Beiber de la Banda</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0103')"><img src="noticias/n0103.jpg" alt="Claudio Alcaráz" title="Claudio Alcaráz" id="noti_0103"/></a>Pronto Estrenará Su Nuevo Sencillo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0102')"><img src="noticias/n0102.jpg" alt="La Trakalosa de Monterrey" title="La Trakalosa de Monterrey" id="noti_0102"/></a>¡IMPACTANTE FIRMA DE AUTÓGRAFOS!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0101')"><img src="noticias/n0101.jpg" alt="Espinoza Paz" title="Espinoza Paz" id="noti_0101"/></a>Multipremiado en los BMI</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0100')"><img src="noticias/n0100.jpg" alt="Lupillo Rivera" title="Lupillo Rivera" id="noti_0100"/></a>Gran presentación en La Feria del Caballo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0099')"><img src="noticias/n0099.jpg" alt="Pancho Barraza" title="Pancho Barraza" id="noti_0099"/></a> A Dueto Con Horacio Palencia</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0098')"><img src="noticias/n0098.jpg" alt="Emotivo Homenaje" title="Emotivo Homenaje" id="noti_0098"/></a>Reciben Los Tigres del Norte!!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0097')"><img src="noticias/n0097.jpg" alt="Rieleros Del Norte" title="Rieleros Del Norte" id="noti_0097"/></a>Estrena Disco</li>                                            
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0096')"><img src="noticias/n0096.jpg" alt="Pancho Uresti" title="Pancho Uresti" id="noti_0096"/></a>Estrena Imagen</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0095')"><img src="noticias/n0095.jpg" alt="Balean A " title="Balean A " id="noti_0095"/></a>Javier Rosas En Culiacán</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0094')"><img src="noticias/n0094.jpg" alt="Poncho Lizarrga" title="Poncho Lizarrga" id="noti_0094"/></a>Da Ejemplo De Ayuda</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0093')"><img src="noticias/n0093.jpg" alt="Beto Peña" title="Beto Peña" id="noti_0093"/></a>Recibe A La Cigüeña</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0092')"><img src="noticias/n0092.jpg" alt="Los Hijos Del Señor" title="Los Hijos Del Señor" id="noti_0092"/></a>Hacen El 1, 2 Con Remmy Valenzuela Y Beto Sierra</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0091')"><img src="noticias/n0091.jpg" alt="Tigres Del Norte" title="Tigres Del Norte" id="noti_0091"/></a>Recibirá Homenaje En El Estadio Azteca</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0090')"><img src="noticias/n0090.jpg" alt="8 Segundos" title="8 Segundos" id="noti_0090"/></a>Te Llevan al Baile...</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0089')"><img src="noticias/n0089.jpg" alt="Germán Montero" title="Germán Montero" id="noti_0089"/></a>Hace El Par Estrena Video Y Sencillo Me Seguirás Buscando</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0088')"><img src="noticias/n0088.jpg" alt="Identidad Grupera" title="Identidad Grupera" id="noti_0088"/></a>Realiza Casting Con Las Plebes Para Tv</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0087')"><img src="noticias/n0087.jpg" alt="Espinoza Paz" title="Espinoza Paz" id="noti_0087"/></a>Es El Más Popular En Redes Sociales</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0086')"><img src="noticias/n0086.jpg" alt="La Trakalosa De Monterrey" title="La Trakalosa De Monterrey" id="noti_0086"/></a>Muestra Su Lado Humano</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0085')"><img src="noticias/n0085.jpg" alt="Los Primos Mx" title="Los Primos Mx" id="noti_0085"/></a>Van A Guatemala</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0084')"><img src="noticias/n0084.jpg" alt="Intocable" title="Intocable" id="noti_0084"/></a>Cantará Para Sus Paisanos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0083')"><img src="noticias/n0083.jpg" alt="Espinoza Paz Y Juanga" title="Espinoza Paz Y Juanga" id="noti_0083"/></a>Hacen Rico Dueto Con El Tema Siempre En Mi Mente</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0082')"><img src="noticias/n0082.jpg" alt="La Original" title="La Original" id="noti_0082"/></a>En Guatemala Sufre Aparatoso Accidente</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0081')"><img src="noticias/n0081.jpg" alt="Javier Rosas" title="Javier Rosas" id="noti_0081"/></a>RECIBIRÁ EL "MICRÓFONO DE ORO 2015"</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0080')"><img src="noticias/n0080.jpg" alt="Su Destino Fue Querer" title="Su Destino Fue Querer" id="noti_0080"/></a>La Vida De Flor Silvestre En Un Documental</li>
+												<li><a href="#" onClick="lPages('noticias.php','n0079')"><img src="noticias/n0079.jpg" alt="De Los Recoditos a Solista" title="De Los Recoditos a Solista" id="noti_0079"/></a>De solista a La Adictiva</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0078')"><img src="noticias/n0078.jpg" alt="Alfredito Olivas" title="Alfredito Olivas" id="noti_0078"/></a>Se Recupera!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0073')"><img src="noticias/n0073.jpg" alt="Huichol Musical" title="Huichol Musical" id="noti_0073"/></a>Se Pone Texano</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0077')"><img src="noticias/n0077.jpg" alt="Pancho Uresti Y Leandro Ríos" title="Pancho Uresti Y Leandro Ríos" id="noti_0077"/></a>Nuevamente Juntos En Video</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0076')"><img src="noticias/n0076.jpg" alt="Paola Preciado" title="Paola Preciado" id="noti_0076"/></a>Debuta Como Cantautora</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0075')"><img src="noticias/n0075.jpg" alt="Alfredito Olivas" title="Alfredito Olivas" id="noti_0075"/></a>Fuera De Peligro Tras Atentado</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0074')"><img src="noticias/n0074.jpg" alt="Chayin Rubio" title="Chayin Rubio" id="noti_0074"/></a>Se Une Al Elenco De Latin Power</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0072')"><img src="noticias/n0072.jpg" alt="Fidel Rueda" title="Fidel Rueda" id="noti_0072"/></a>Número 1 en Nicaragua</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0071')"><img src="noticias/n0071.jpg" alt="El Bebeto" title="El Bebeto" id="noti_0071"/></a>Le da vida a No fue Necesario</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0070')"><img src="noticias/n0070.jpg" alt="PAQUETEPIQUE" title="PAQUETEPIQUE" id="noti_0070"/></a>Ahí nomás señores y señoritas, caramelos y bolitas</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0069')"><img src="noticias/n0069.jpg" alt="Espinoza Paz" title="Espinoza Paz" id="noti_0069"/></a>El Rey de Mazatlán</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0068')"><img src="noticias/n0068.jpg" alt="Max Peraza y su Banadononona" title="Max Peraza y su Banadononona" id="noti_0068"/></a>Están de 10 en itunes</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0067')"><img src="noticias/n0067.jpg" alt="A Poncho Lizárraga" title="A Poncho Lizárraga" id="noti_0067"/></a>Lo Homenajean por sus Grandes Valores.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0066')"><img src="noticias/n0066.jpg" alt="Lupillo Rivnera" title="Lupillo Rivnera" id="noti_0066"/></a>Graba video con tema de José Alfredo Jimenez</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0065')"><img src="noticias/n0065.jpg" alt="PESADO" title="PESADO" id="noti_0065"/></a>Recibió su Estrella en Pharr, Texas</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0064')"><img src="noticias/n0064.jpg" alt="Polo Urías" title="Polo Urías" id="noti_0064"/></a>Se Reencuentra con Rieleros del Norte.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0063')"><img src="noticias/n0063.jpg" alt="Diego Herrera" title="Diego Herrera" id="noti_0063"/></a>Convence En Su Primera Vez</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0062')"><img src="noticias/n0062.jpg" alt="Los Rieleros del Norte" title="Los Rieleros del Norte" id="noti_0062"/></a>Lanza Corrido y Canciones de mi Tierra</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0061')"><img src="noticias/n0061.jpg" alt="El Bebeto es profeta…" title="El Bebeto es profeta…" id="noti_0061"/></a>Repite éxito en La Noria</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0060')"><img src="noticias/n0060.jpg" alt="Toño Lizárraga" title="Toño Lizárraga" id="noti_0060"/></a> Vuelve a Nacer</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0059')"><img src="noticias/n0059.jpg" alt="La Original" title="Festeja sus 50 años" id="noti_0059"/></a>La Original Banda el Limón</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0058')"><img src="noticias/n0058.jpg" alt="El Bebeto" title="El Bebeto" id="noti_0058"/></a>¡Lanza No Fue Necesario y suena en Colombia!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0057')"><img src="noticias/n0057.jpg" alt="América Sierra" title="América Sierra" id="noti_0057"/></a>Seduce y Conquista con Norteño Banda</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0056')"><img src="noticias/n0056.jpg" alt="Intocable" title="Intocable" id="noti_0056"/></a>Llega a sus 20 años de vida</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0055')"><img src="noticias/n0055.jpg" alt="Willie González" title="Willie González" id="noti_0055"/></a>¡Su salsa no es erótica, es sensual!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0054')"><img src="noticias/n0054.jpg" alt="Los Cadenales de Nuevo Léon" title="Los Cadenales de Nuevo Léon" id="noti_0054"/></a>¡Lanzan Nuevo Video!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0053')"><img src="noticias/n0053.jpg" alt="Los Primos Mx" title="Los Primos Mx" id="noti_0053"/></a>Emprenden Romántico Viaje</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0052')"><img src="noticias/n0052.jpg" alt="Merenglass" title="Lanzan DVD/CD En vivo 20 años…" id="noti_0052"/></a>MERENGLASS ES MUCHO MÁS QUE MÚSICA</li>
+                                                <li><a href="#" onclick="lPages('noticias.php','n0051')"><img src="noticias/n0004_tonolizarraga.jpg" alt="Toño Lizárraga" title="Toño Lizárraga" id="noti_0051"/></a>Presente Vuelvo A Nacer</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0050')"><img src="noticias/n0050.jpg" alt="LA INICIATIVA" title="LA INICIATIVA" id="noti_0050"/></a>YA TIENE SU REINA!!!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0049')"><img src="noticias/n0049.jpg" alt="RAÚL Y MEXIA SON…" title="RAÚL Y MEXIA SON…" id="noti_0029"/></a>HIJOS DE TIGRE… PINTITOS!!!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0048')"><img src="noticias/n0048.jpg" alt="La Chiquis Rivera" title="La Chiquis Rivera" id="noti_0048"/></a>Se Lanza de Escritora con Perdón</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0047')"><img src="noticias/n0047.jpg" alt="Lorenzo Méndez" title="Lorenzo Méndez" id="noti_0047"/></a>Explota su Lado Como Empresario</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0046')"><img src="noticias/n0046.jpg" alt="Espinosa Paz" title="Espinoza Paz" id="noti_0046"/></a>Pierde La Pose En Todos Lados</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0045')"><img src="noticias/n0045.jpg" alt="La S.A.C.M" title="La S.A.C.M" id="noti_0045"/></a>Cumplen 70 años</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0044')"><img src="noticias/n0044.jpg" alt="Grupo Arranke" title="Grupo Arranke" id="noti_0044"/></a>Al millón con Piernas de Arete</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0043')"><img src="noticias/n0043.jpg" alt="¡Gran equipo!" title="¡Gran equipo!" id="noti_0043"/></a>Fato compone en exclusiva para Edwin Luna</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0042')"><img src="noticias/n0042.jpg" alt="Inician gran gira" title="Inician gran gira" id="noti_0042"/></a>2015 el año de El Duelo</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0041')"><img src="noticias/n0041.jpg" alt="Edwin Luna No deja La Trakalosa" title="Edwin Luna No deja La Trakalosa" id="noti_0041"/></a>Pero se da sus gustos, cantará con mariachi.</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0040')"><img src="noticias/n0040.jpg" alt="Arturo Roque" title="Las prefiere Sencillas y Natural" id="noti_0040"/></a>Arturo Roque inicia 2015 con fuerza</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0039')"><img src="noticias/n0039.jpg" alt="Arrolladora" title="Por Segundo Año Consecutivo" id="noti_0039"/></a>La Arrolladora abarrotó el Auditorio Nacional</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0038')"><img src="noticias/n0038.jpg" alt="Arturo Valdes" title="Arturo Valdés" id="noti_0038"/></a>Con 10 Kilos Menos</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0037')"><img src="noticias/n0037.jpg" alt="Horacio Palencia" title="Y No Eras Tú" id="noti_0037"/></a>Nueva rola y video de Horacio Palencia</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0036')"><img src="noticias/n0036.jpg" alt="Leo Ibarria" title="Sigue con su Servicio de Soltero" id="noti_0036"/></a>Leo Ibarría lanza con todo Ahora Que Hago</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0035')"><img src="noticias/n0035.jpg" alt="J. Balvin" title="Regguaeton a ritmo de playa" id="noti_0035"/></a>J. Balvin arma relajo en Acapulco</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0034')"><img src="noticias/n0034.jpg" alt="Anny de Sexy" title="La felicidad regresa" id="noti_0034"/></a>¡Anny de Sexy Cumbia está embarazada!</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0033')"><img src="noticias/n0033.jpg" alt="Alejandra Orozco" title="Con Nada Esta Bien" id="noti_0033"/></a>Alejandra Orozco vibra con banda sinaloense</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0032')"><img src="noticias/n0032.jpg" alt="Tierra Sagrada" title="De lo bueno, lo mejor" id="noti_0032"/></a>Tierra Sagrada e Identidad Grupera en convivencia</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0031')"><img src="noticias/n0031.jpg" alt="LAS ESTRELLAS DE SINALOA" title="LAS ESTRELLAS DE SINALOA" id="noti_0031"/></a>GRABARON CON ARMANDO MANZANERO</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0030')"><img src="noticias/n0030.jpg" alt="Saul El Jajuar" title="Que te Quede Claro" id="noti_0030"/></a>Saúl El Jaguar lanza nuevo sencillo </li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0029')"><img src="noticias/n0029.jpg" alt="Max Peraza" title="Nadie Como Tú" id="noti_0029"/></a>Lo más Nuevo de Max Peraza y su Bandononona</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0028')"><img src="noticias/n0028.jpg" alt="BANDA MACHOS" title="MACHOS" id="noti_0028"/></a>PRESENTA “YO SE PERDER”…</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0027')"><img src="noticias/n0027.jpg" alt="LA TRAKALOSA" title="Cantan al lado de Pancho Uresti" id="noti_0027"/></a>LA TRAKALOSA LANZA ADICTO A LA TRISTEZA</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0026')"><img src="noticias/n0026.jpg" alt="FERIA LEON" title="Guanajuato Abre sus Brazos al Turismo" id="noti_0026"/></a>LA FERIA DE LEÓN, DEJARÁ HUELLA</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0025')"><img src="noticias/n0025.jpg" alt="GREEG MORA" title="GREEG MORA" id="noti_0025"/></a>Y SU NUEVO COMANDO</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0024')"><img src="noticias/n0024.jpg" alt="La Leyenda" title="Estrenan video" id="noti_0024"/></a>La Leyenda lanzan La Neta del Planeta</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0023')"><img src="noticias/n0023.jpg" alt="Le Recodo" title="Todo Tuyo" id="noti_0023"/></a>¡El Recodo de nuevo a telenovela!</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0022')"><img src="noticias/n0022.jpg" alt="Saul El Jaguar" title="Tiene Barba Norteña" id="noti_0022"/></a>SAÚL EL JAGUAR DEBUTA COMO EMPRESARIO</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0021')"><img src="noticias/n0021.jpg" alt="Carlos Sarabia" title="Para iniciar el año con todo" id="noti_0021"/></a>CARLOS SARABIA ESTRENA LOOK</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0020')"><img src="noticias/n0020.jpg" alt="PANCHO URESTI" title="¡A SUS 20 AÑOS!" id="noti_0020"/></a>PANCHO URESTI ES SOLISTA Y TRIUNFADOR</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0019')"><img src="noticias/n0019.jpg" alt="LA ADICTIVA" title="En la feria de Los Reyes la Paz" id="noti_0020"/></a>LA ADICTIVA HACE LLENO ESPECTACULAR</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0018')"><img src="noticias/n0018.jpg" alt="Banda MS" title="Banda MS" id="noti_0018"/></a>GRAN ÉXITO DE BANDA MS EN ACAPULCO</li>
+                                                <li><a href="#" onClick="lPages('noticias.php','n0017')"><img src="noticias/n0017.jpg" alt="Llega la Navidad a Identidad Grupera" title="Llega la Navidad a Identidad Grupera" id="noti_0017"/></a>¡Los Auténticos Reyes de la Banda, pusieron nuestro arbolito!</li>
+                                            	<li><a href="#" onClick="lPages('noticias.php','n0016')"><img src="noticias/n0016.jpg" alt="Carlos Sarabia" title="Carlos Sarabia" id="noti_0016"/></a>Inicia la época más bonita del año</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0015')"><img src="noticias/n0015.jpg" alt="¡Aaaaay patorooo!" title="¡Aaaaay patorooo!" id="noti_0015"/></a>Le llega la Navidad a Roberto Jr.</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0014')"><img src="noticias/n0014.jpg" alt="La Leyenda" title="La Leyenda" id="noti_0014"/></a>COMUNICADO ESPECIAL</li>
+                                                <li><a href="#" onclick="lPages('noticias.php','n0013')"><img src="noticias/n0013.jpg" alt="Alejandra Orozco" title="Alejandra Orozco" id="noti_0013"/></a>ESTRENA BANDA Y ROLA</li>
+                                                <li><a href="#" onclick="lPages('noticias.php','n0012')"><img src="noticias/n0012.jpg" alt="Rodeo Bar La Noria" title="Rodeo Bar La Noria" id="noti_0012"/></a>FESTEJA EN GRANDE SU 13º ANIVERSARIO</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0011')"><img src="noticias/n0011.jpg" alt="Ya Nacieron" title="Ya Nacieron" id="noti_0011"/></a>¡YA NACIERON LOS TRILLIZOS DE BETO ZAPATA!</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0010')"><img src="noticias/n0010.jpg" alt="ARRANKE" title="ARRANKE" id="noti_0010"/></a>NO DESCANSA NI EN NAVIDAD&nbsp;&nbsp;</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0009')"><img src="noticias/n0009.jpg" alt="Fidel Rueda" title="Fidel Rueda" id="noti_0009"/></a>REGALO EQUIVOCADO PA LOS QUE SUFREN EN NAVIDAD&nbsp;&nbsp;</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0008')"><img src="noticias/n0008.jpg" alt="LOS RECODITOS" title="Los Recoditos" id="noti_0008"/></a>ANDAN AL MILLÓN… Y PASADITOS&nbsp;&nbsp;</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0007')"><img src="noticias/n0007.jpg" alt="LA RANCHO VIEJO" title="La Rancho Viejo" id="noti_0007"/></a>RECIBE TROFEO POR PARTE DE IDENTIDAD GRUPERA&nbsp;&nbsp;</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0006')"><img src="noticias/n0006_julion.jpg" alt="JULIÓN ÁLVAREZ Y SU NORTEÑO BANDA" title="Julión Álvarez y Su Norteño Banda" id="noti_0006"/></a>OFRECEN CONCIERTO GRATUITO PARA TODOS SUS PAISANOS&nbsp;&nbsp;</li>
+                                            	<li><a href="#" onclick="lPages('noticias.php','n0005')"><img src="noticias/n0005_lavozmexico.jpg" alt="LA VOZ MÉXICO" title="La Voz Mexico" id="noti_0005"/></a>¡JULIÓN ÁLVAREZ Y SU PUPILO GANAN LA VOZ… MÉXICO!&nbsp;&nbsp;</li>
+                                                <li><a href="#" onclick="lPages('noticias.php','n0004')"><img src="noticias/n0004_tonolizarraga.jpg" alt="TOÑO LIZÁRRAGA ¡HA VUELTO A NACER!" title="Toño Lizárraga" id="noti_0004"/></a>TOÑO LIZÁRRAGA ¡HA VUELTO A NACER!&nbsp;&nbsp;</li>
+                                                <li><a href="#" onclick="lPages('noticias.php','n0003')"><img src="noticias/n0003_menolugo.jpg" alt="MEÑO LUGO SE ABRE CAMINO EN LA MÚSICA" title="Meño Lugo" id="noti_0003"/></a>MEÑO LUGO SE ABRE CAMINO EN LA MÚSICA&nbsp;&nbsp;</li>        
+                                                <li><a href="#" onclick="lPages('noticias.php','n0002')"><img src="noticias/n0002_arturoroque.jpg" alt="¡ARTURO ROQUE SE LAS COME DE CUCHARITA!" title="Arturo Roque" id="noti_0002"/></a>¡ARTURO ROQUE SE LAS COME DE CUCHARITA!&nbsp;&nbsp;</li>
+                                                <li><a href="#" onclick="lPages('noticias.php','n0001')"><img src="noticias/n0001_dianareyes.jpg" alt="¡FESTEJA CUMPLE COMO LA HERMOSA NIÑA QUE ES!" title="Diana Reyes" id="noti_0001"/></a>¡FESTEJA CUMPLE COMO LA HERMOSA NIÑA QUE ES!&nbsp;&nbsp;</li-->
+                                            </ul>
+                                        </div>
+                                        <div class="ws_thumbs">
+                                            <div>
+                                            	<a href="#" title="Alfredo Olvidas"><img src="noticias/c.thumbs/n0320.jpg" alt="Alfredo Olvidas"/>Alfredo Olvidas</a>
+                                                <a href="#" title="Edwin Luna Y La Trakalosa"><img src="noticias/c.thumbs/n0319.jpg" alt="Edwin Luna Y La Trakalosa"/>Edwin Luna Y La Trakalosa</a>
+                                                <a href="#" title="El Gigante De América"><img src="noticias/c.thumbs/n0318.jpg" alt="El Gigante De América"/>El Gigante De América</a>
+                                                <a href="#" title="Joss Favela"><img src="noticias/c.thumbs/n0317.jpg" alt="Joss Favela"/>Joss Favela</a>
+                                                <a href="#" title="Banda La Alta Potencia"><img src="noticias/c.thumbs/n0316.jpg" alt="Banda La Alta Potencia"/>Banda La Alta Potencia</a>
+                                                <a href="#" title="Alejandra Orozco"><img src="noticias/c.thumbs/n0315.jpg" alt="Alejandra Orozco"/>Alejandra Orozco</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0314.jpg" alt="El Recodo"/>El Recodo</a>
+                                                <a href="#" title="Real-C Norteño"><img src="noticias/c.thumbs/n0313.jpg" alt="Real-C Norteño"/>Real-C Norteño</a>
+                                                
+                                                <!--a href="#" title="Pequeños Musical"><img src="noticias/c.thumbs/n0312.jpg" alt="Pequeños Musical"/>Pequeños Musical</a>
+                                                <a href="#" title="Horacio Palencia"><img src="noticias/c.thumbs/n0311.jpg" alt="Horacio Palencia"/>Horacio Palencia</a>
+                                                <a href="#" title="Banda Ms"><img src="noticias/c.thumbs/n0310.jpg" alt="Banda Ms"/>Banda Ms</a>
+                                                <a href="#" title="Banda Ms"><img src="noticias/c.thumbs/n0309.jpg" alt="Banda Ms"/>Banda Ms</a>
+                                                <a href="#" title="Ruby Escobar"><img src="noticias/c.thumbs/n0308.jpg" alt="Ruby Escobar"/>Ruby Escobar</a>
+                                                <a href="#" title="Claudio Alcaraz"><img src="noticias/c.thumbs/n0307.jpg" alt="Claudio Alcaraz"/>Claudio Alcaraz</a>
+                                                <a href="#" title="La Tierra Mojada"><img src="noticias/c.thumbs/n0306.jpg" alt="La Tierra Mojada"/>La Tierra Mojada</a>
+                                                <a href="#" title="Remmy Valenzuela"><img src="noticias/c.thumbs/n0305.jpg" alt="Remmy Valenzuela"/>Remmy Valenzuela</a>
+                                                <a href="#" title="Los Recoditos"><img src="noticias/c.thumbs/n0304.jpg" alt="Los Recoditos"/>Los Recoditos</a>
+                                                <a href="#" title="Fievre Looka"><img src="noticias/c.thumbs/n0303.jpg" alt="Fievre Looka"/>Fievre Looka</a>
+                                                <a href="#" title="EL BEBETO"><img src="noticias/c.thumbs/n0302.jpg" alt="EL BEBETO"/>EL BEBETO</a>
+                                                <a href="#" title="Pedro Fernández"><img src="noticias/c.thumbs/n0301.jpg" alt="Pedro Fernández"/>Pedro Fernández</a>
+                                                <a href="#" title="Marco Flores"><img src="noticias/c.thumbs/n0300.jpg" alt="Marco Flores"/>Marco Flores</a>
+                                                <a href="#" title="La Bandononona"><img src="noticias/c.thumbs/n0299.jpg" alt="La Bandononona"/>La Bandononona</a>
+                                                <a href="#" title="Noche De"><img src="noticias/c.thumbs/n0298.jpg" alt="Noche De"/>Noche De</a>
+                                                <a href="#" title="Farid"><img src="noticias/c.thumbs/n0297.jpg" alt="Farid"/>Farid</a>
+                                                <a href="#" title="Claudio Alcaráz"><img src="noticias/c.thumbs/n0296.jpg" alt="Claudio Alcaráz"/>Claudio Alcaráz</a>
+                                                <a href="#" title="Arrolladora"><img src="noticias/c.thumbs/n0295.jpg" alt="Arrolladora"/>Arrolladora</a>
+                                                <a href="#" title="Impacto Sinaloense"><img src="noticias/c.thumbs/n0294.jpg" alt="Impacto Sinaloense"/>Impacto Sinaloense</a>
+                                                <a href="#" title="Se Graba El Video De “Luz”"><img src="noticias/c.thumbs/n0293.jpg" alt="Se Graba El Video De “Luz”"/>Se Graba El Video De “Luz”</a>
+                                                <a href="#" title="Roberto Junior"><img src="noticias/c.thumbs/n0292.jpg" alt="Roberto Junior"/>Roberto Junior</a>
+                                                <a href="#" title="Pancho Y Julio Barraza"><img src="noticias/c.thumbs/n0291.jpg" alt="Pancho Y Julio Barraza"/>Pancho Y Julio Barraza</a>
+                                                <a href="#" title="La Tierra Sagrada"><img src="noticias/c.thumbs/n0290.jpg" alt="La Tierra Sagrada"/>Se Echa Un Shot Sensual</a>
+                                                <a href="#" title="El Komander"><img src="noticias/c.thumbs/n0289.jpg" alt="El Komander"/>El Komander</a>
+                                                <a href="#" title="Espinoza Paz"><img src="noticias/c.thumbs/n0288.jpg" alt="Espinoza Paz"/>Espinoza Paz</a>
+                                                <a href="#" title="La Banda Selección Mx"><img src="noticias/c.thumbs/n0287.jpg" alt="La Banda Selección Mx"/>La Banda Selección Mx</a>
+                                                <a href="#" title="Alejandra Orozco"><img src="noticias/c.thumbs/n0286.jpg" alt="Alejandra Orozco"/>Alejandra Orozco</a>
+                                                <a href="#" title="Claudio Alcaráz"><img src="noticias/c.thumbs/n0285.jpg" alt="Claudio Alcaráz"/>Claudio Alcaráz</a>
+                                                <a href="#" title="Ruby Escobar"><img src="noticias/c.thumbs/n0284.jpg" alt="Ruby Escobar"/>Ruby Escobar</a>
+                                                <a href="#" title="Revolver Cannabis"><img src="noticias/c.thumbs/n0283.jpg" alt="Revolver Cannabis"/>Revolver Cannabis</a>
+                                                <a href="#" title="Súper Lamas Y Fievre Looka"><img src="noticias/c.thumbs/n0282.jpg" alt="Súper Lamas Y Fievre Looka"/>Súper Lamas Y Fievre Looka</a>
+                                                <a href="#" title="El Bebeto"><img src="noticias/c.thumbs/n0281.jpg" alt="El Bebeto"/>El Bebeto</a>
+                                                <a href="#" title="Roberto Junior"><img src="noticias/c.thumbs/n0280.jpg" alt="Roberto Junior"/>Roberto Junior</a>
+                                                <a href="#" title="Edwin Luna Y La Trakalosa"><img src="noticias/c.thumbs/n0279.jpg" alt="Edwin Luna Y La Trakalosa"/>Edwin Luna Y La Trakalosa</a>
+                                                <a href="#" title="Los Hijos Del Señor"><img src="noticias/c.thumbs/n0278.jpg" alt="Los Hijos Del Señor"/>Los Hijos Del Señor</a>
+                                                <a href="#" title="Edwin Luna"><img src="noticias/c.thumbs/n0277.jpg" alt="Edwin Luna"/>Edwin Luna</a>
+                                                <a href="#" title="Remmy Valenzuela"><img src="noticias/c.thumbs/n0276.jpg" alt="Remmy Valenzuela"/></a>
+                                                <a href="#" title="La Incomparable"><img src="noticias/c.thumbs/n0275.jpg" alt="La Incomparable"/>La Incomparable</a>
+                                                <a href="#" title="Toño Lizárraga"><img src="noticias/c.thumbs/n0274.jpg" alt="Toño Lizárraga"/>Toño Lizárraga</a>
+                                                <a href="#" title="Horóscopos de Durango"><img src="noticias/c.thumbs/n0273.jpg" alt="Horóscopos de Durango"/>Horóscopos de Durango</a>
+                                                <a href="#" title="La Noria"><img src="noticias/c.thumbs/n0272.jpg" alt="La Noria"/>La Noria</a>
+                                                <a href="#" title="El Gavilancillo"><img src="noticias/c.thumbs/n0271.jpg" alt="El Gavilancillo"/>El Gavilancillo</a>
+                                                <a href="#" title="Tigres del Norte"><img src="noticias/c.thumbs/n0270.jpg" alt="Tigres del Norte"/>Tigres del Norte</a>
+                                                <a href="#" title="El Bebeto"><img src="noticias/c.thumbs/n0269.jpg" alt="El Bebeto"/>El Bebeto</a>
+                                                <a href="#" title="Camila Fernández"><img src="noticias/c.thumbs/n0268.jpg" alt="Camila Fernández"/>Camila Fernández</a>
+                                                <a href="#" title="Los Cazadores"><img src="noticias/c.thumbs/n0267.jpg" alt="Los Cazadores"/>Los Cazadores</a>
+                                                <a href="#" title="Los Rieleros"><img src="noticias/c.thumbs/n0266.jpg" alt="Los Rieleros"/>Los Rieleros</a>
+                                                <a href="#" title="Los Valedores"><img src="noticias/c.thumbs/n0265.jpg" alt="Los Valedores"/>Los Valedores</a>
+                                                <a href="#" title="Pequeños Musical"><img src="noticias/c.thumbs/n0264.jpg" alt="Pequeños Musical"/>Pequeños Musical</a>
+                                                <a href="#" title="Rafa Becerra"><img src="noticias/c.thumbs/n0263.jpg" alt="Rafa Becerra"/>Rafa Becerra</a>
+                                                <a href="#" title="Juan Gabriel"><img src="noticias/c.thumbs/n0262.jpg" alt="Juan Gabriel"/>Juan Gabriel</a>
+                                                <a href="#" title="Banda Yurirense"><img src="noticias/c.thumbs/n0261.jpg" alt="Banda Yurirense"/>Banda Yurirense</a>
+                                                <a href="#" title="El Chapo De Sinaloa"><img src="noticias/c.thumbs/n0260.jpg" alt="El Chapo De Sinaloa"/>El Chapo De Sinaloa</a>
+                                                <a href="#" title="El Mimoso"><img src="noticias/c.thumbs/n0259.jpg" alt="El Mimoso"/>El Mimoso</a>
+                                                <a href="#" title="Gerardo Ortiz"><img src="noticias/c.thumbs/n0258.jpg" alt="Gerardo Ortiz"/>Gerardo Ortiz</a>
+                                                <a href="#" title="Gerardo Ortiz"><img src="noticias/c.thumbs/n0257.jpg" alt="Gerardo Ortiz"/>Gerardo Ortiz</a>
+                                                <a href="#" title="La Noria Satélite"><img src="noticias/c.thumbs/n0256.jpg" alt="La Noria Satélite"/>La Noria Satélite</a>
+                                                <a href="#" title="Edwin Luna Y La Trakalosa"><img src="noticias/c.thumbs/n0255.jpg" alt="Edwin Luna Y La Trakalosa"/>Edwin Luna Y La Trakalosa</a>
+                                                <a href="#" title="José Manuel Figueroa"><img src="noticias/c.thumbs/n0254.jpg" alt="José Manuel Figueroa"/>José Manuel Figueroa</a>
+                                                <a href="#" title="Carlos Y Jose"><img src="noticias/c.thumbs/n0253.jpg" alt="Carlos Y Jose"/>Carlos Y Jose</a>
+                                                <a href="#" title="Julión Álvarez"><img src="noticias/c.thumbs/n0252.jpg" alt="Julión Álvarez"/>Julión Álvarez</a>
+                                                <a href="#" title="La Santanera"><img src="noticias/c.thumbs/n0251.jpg" alt="La Santanera"/>La Santanera</a>
+                                                <a href="#" title="Luminarias"><img src="noticias/c.thumbs/n0250.jpg" alt="Luminarias"/>Luminarias</a>
+                                                <a href="#" title="Duelo"><img src="noticias/c.thumbs/n0249.jpg" alt="Duelo"/>Duelo</a>
+                                                <a href="#" title="Daddy Yankee"><img src="noticias/c.thumbs/n0249.jpg" alt="Daddy Yankee"/>Daddy Yankee</a>
+                                                <a href="#" title="Premios De La Radio"><img src="noticias/c.thumbs/n0247.jpg" alt="Premios De La Radio"/>Premios De La Radio</a>
+                                                <a href="#" title="Julio Preciado"><img src="noticias/c.thumbs/n0246.jpg" alt="Julio Preciado"/>Julio Preciado</a>
+                                                <a href="#" title="Pesado"><img src="noticias/c.thumbs/n0245.jpg" alt="Pesado"/>Pesado</a>
+                                                <a href="#" title="Jeaneth Guadalupe"><img src="noticias/c.thumbs/n0244.jpg" alt="Jeaneth Guadalupe"/>Jeaneth Guadalupe</a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0243.jpg" alt=""/></a>
+                                                <a href="#" title="German Montero"><img src="noticias/c.thumbs/n0242.jpg" alt="German Montero"/>German Montero</a>
+                                                <a href="#" title="Gianna"><img src="noticias/c.thumbs/n0241.jpg" alt="Gianna"/>Gianna</a>
+                                                <a href="#" title="El Gigante De América"><img src="noticias/c.thumbs/n0239.jpg" alt="El Gigante De América"/>El Gigante De América</a>
+                                                <a href="#" title="En Jalisco"><img src="noticias/c.thumbs/n0238.jpg" alt="En Jalisco"/>En Jalisco</a>
+                                                <a href="#" title="La Adictiva"><img src="noticias/c.thumbs/n0237.jpg" alt="La Adictiva"/>La Adictiva</a>
+                                                <a href="#" title="Max Peraza"><img src="noticias/c.thumbs/n0236.jpg" alt="Max Peraza"/>Max Peraza</a>
+                                                <a href="#" title="La Inolvidable Banda Agua de la Llave"><img src="noticias/c.thumbs/n0235.jpg" alt="La Inolvidable Banda Agua de la Llave"/>La Inolvidable Banda Agua de la Llave</a>
+                                                <a href="#" title="Marco Flores"><img src="noticias/c.thumbs/n0234.jpg" alt="Marco Flores"/>Marco Flores</a>
+                                                <a href="#" title="Julión"><img src="noticias/c.thumbs/n0233.jpg" alt="Julión"/>Julión</a>
+                                                <a href="#" title="Banda Santo Domingo"><img src="noticias/c.thumbs/n0232.jpg" alt="Banda Santo Domingo"/>Banda Santo Domingo</a>
+                                                <a href="#" title="La Mejor"><img src="noticias/c.thumbs/n0231.jpg" alt="La Mejor"/>La Mejor</a>
+                                                <a href="#" title="Fidel Rueda"><img src="noticias/c.thumbs/n0230.jpg" alt="Fidel Rueda"/>Fidel Rueda</a>
+                                                <a href="#" title="Pesado"><img src="noticias/c.thumbs/n0229.jpg" alt="Pesado"/>Pesado</a>
+                                                <a href="#" title="Saúl El Jaguar y Régulo Caro"><img src="noticias/c.thumbs/n0228.jpg" alt="Saúl El Jaguar y Régulo Caro"/>Saúl El Jaguar y Régulo Caro</a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0227.jpg" alt=""/></a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0226.jpg" alt=""/></a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0225.jpg" alt=""/></a>
+                                                <a href="#" title="SEBASTIANES"><img src="noticias/c.thumbs/n0224.jpg" alt="SEBASTIANES"/>SEBASTIANES</a>
+                                                <a href="#" title="Zona Prieta "><img src="noticias/c.thumbs/n0223.jpg" alt="Zona Prieta "/>Zona Prieta </a>
+                                                <a href="#" title="El Gigante De América"><img src="noticias/c.thumbs/n0222.jpg" alt="El Gigante De América"/>El Gigante De América</a>
+                                                <a href="#" title="Bobby Pulido"><img src="noticias/c.thumbs/n0221.jpg" alt="Bobby Pulido"/>Bobby Pulido</a>
+                                                <a href="#" title="Roberto Junior"><img src="noticias/c.thumbs/n0220.jpg" alt="Roberto Junior"/>Roberto Junior</a>
+                                                <a href="#" title="Meño Lugo Viene"><img src="noticias/c.thumbs/n0219.jpg" alt="Meño Lugo Viene"/>Meño Lugo Viene</a>
+                                                <a href="#" title="Charly"><img src="noticias/c.thumbs/n0218.jpg" alt="Charly"/>Charly</a>
+                                                <a href="#" title="Roberto Junior"><img src="noticias/c.thumbs/n0217.jpg" alt="Roberto Junior"/>Roberto Junior</a>
+                                                <a href="#" title="Horóscopos De Durango"><img src="noticias/c.thumbs/n0216.jpg" alt="Horóscopos De Durango"/>Horóscopos De Durango</a>
+                                                <a href="#" title="La Fievre Looka"><img src="noticias/c.thumbs/n0215.jpg" alt="La Fievre Looka"/>La Fievre Looka</a>
+                                                <a href="#" title="Gerardo Ortiz"><img src="noticias/c.thumbs/n0214.jpg" alt="Gerardo Ortiz"/>Gerardo Ortiz</a>
+                                                <a href="#" title="Óscar Cruz"><img src="noticias/c.thumbs/n0213.jpg" alt="Óscar Cruz"/>Óscar Cruz</a>
+                                                <a href="#" title="Jose Julian"><img src="noticias/c.thumbs/n0212.jpg" alt="Jose Julian"/>Jose Julian</a>
+                                                <a href="#" title="El Bebeto… "><img src="noticias/c.thumbs/n0211.jpg" alt="El Bebeto… "/>El Bebeto… </a>
+                                                <a href="#" title="La Leyenda"><img src="noticias/c.thumbs/n0210.jpg" alt="La Leyenda"/>La Leyenda</a>
+                                                <a href="#" title="Premios De La Radio"><img src="noticias/c.thumbs/n0209.jpg" alt="Premios De La Radio"/>Premios De La Radio</a>
+                                                <a href="#" title="Grabaron Su Nuevo Video"><img src="noticias/c.thumbs/n0208.jpg" alt="Grabaron Su Nuevo Video"/>Grabaron Su Nuevo Video</a>
+                                                <a href="#" title="Banda Playa Grande"><img src="noticias/c.thumbs/n0207.jpg" alt="Banda Playa Grande"/>Banda Playa Grande</a>
+                                                <a href="#" title="Voz De Mando"><img src="noticias/c.thumbs/n0206.jpg" alt="Voz De Mando"/>Voz De Mando</a>
+                                                <a href="#" title="Alejandro Fernández"><img src="noticias/c.thumbs/n0205.jpg" alt="Alejandro Fernández"/>Alejandro Fernández</a>
+                                                <a href="#" title="Ada Elorza"><img src="noticias/c.thumbs/n0204.jpg" alt="Ada Elorza"/>Ada Elorza</a>
+                                                <a href="#" title="Es Neta Que Irasema"><img src="noticias/c.thumbs/n0203.jpg" alt="Es Neta Que Irasema"/>Es Neta Que Irasema</a>
+                                                <a href="#" title="David Venegas"><img src="noticias/c.thumbs/n0202.jpg" alt="David Venegas"/>David Venegas</a>
+                                                <a href="#" title="Los Cardenales De Nuevo León"><img src="noticias/c.thumbs/n0201.jpg" alt="Los Cardenales De Nuevo León"/>Los Cardenales De Nuevo León</a>
+                                                <a href="#" title="Julio Preciado"><img src="noticias/c.thumbs/n0200.jpg" alt="Julio Preciado"/>Julio Preciado</a>
+                                                <a href="#" title="Vive Joan Sebastian"><img src="noticias/c.thumbs/n0199.jpg" alt="Vive Joan Sebastian"/>Vive Joan Sebastian</a>
+                                                <a href="#" title="Premios Bandamax 2015"><img src="noticias/c.thumbs/n0198.jpg" alt="Premios Bandamax 2015"/>Premios Bandamax 2015</a>
+                                                <a href="#" title="Expo Compositores"><img src="noticias/c.thumbs/n0197.jpg" alt="Expo Compositores"/>Expo Compositores</a>
+                                                <a href="#" title="Los Recoditos"><img src="noticias/c.thumbs/n0196.jpg" alt="Los Recoditos"/>Los Recoditos</a>
+                                                <a href="#" title="Germán Montero"><img src="noticias/c.thumbs/n0195.jpg" alt="Germán Montero"/>Germán Montero</a>
+                                                <a href="#" title="Claudio Alcaraz"><img src="noticias/c.thumbs/n0194.jpg" alt="Claudio Alcaraz"/>Claudio Alcaraz</a>
+                                                <a href="#" title="Bandamax"><img src="noticias/c.thumbs/n0193.jpg" alt="Bandamax"/>Bandamax</a>
+                                                <a href="#" title="Pesado"><img src="noticias/c.thumbs/n0192.jpg" alt="Pesado"/>Pesado</a>
+                                                <a href="#" title="El Gigante de América"><img src="noticias/c.thumbs/n0191.jpg" alt="El Gigante de América"/>El Gigante de América</a>
+                                                <a href="#" title="Villa 5"><img src="noticias/c.thumbs/n0190.jpg" alt="Villa 5"/>Villa 5</a>
+                                                <a href="#" title="David Zepeda"><img src="noticias/c.thumbs/n0189.jpg" alt="David Zepeda"/>David Zepeda</a>
+                                                <a href="#" title="Joan Sebastian"><img src="noticias/c.thumbs/n0188.jpg" alt="Joan Sebastian"/>Joan Sebastian</a>
+                                                <a href="#" title="Don Chayo"><img src="noticias/c.thumbs/n0187.jpg" alt="Don Chayo"/>Don Chayo</a>
+                                                <a href="#" title="La Trakalosa"><img src="noticias/c.thumbs/n0186.jpg" alt="La Trakalosa"/>La Trakalosa</a>
+                                                <a href="#" title="La Trakalosa"><img src="noticias/c.thumbs/n0185.jpg" alt="La Trakalosa"/>La Trakalosa</a>
+                                                <a href="#" title="La Leyenda"><img src="noticias/c.thumbs/n0184.jpg" alt="La Leyenda"/>La Leyenda</a>
+                                                <a href="#" title="La Trakalosa"><img src="noticias/c.thumbs/n0183.jpg" alt="La Trakalosa"/>La Trakalosa</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0182.jpg" alt="El Recodo"/>El Recodo</a>
+                                                <a href="#" title="Joan Sebastian"><img src="noticias/c.thumbs/n0181.jpg" alt="Joan Sebastian"/>Joan Sebastian</a>
+                                                <a href="#" title="Christian Molina"><img src="noticias/c.thumbs/n0180.jpg" alt="Christian Molina"/>Christian Molina</a>
+                                                <a href="#" title="La Muerte De Joan Sebastian"><img src="noticias/c.thumbs/n0179.jpg" alt="La Muerte De Joan Sebastian"/>La Muerte De Joan Sebastian</a>
+                                                <a href="#" title="Saúl El Jaguar"><img src="noticias/c.thumbs/n0178.jpg" alt="Saúl El Jaguar"/>Saúl El Jaguar</a>
+                                                <a href="#" title="Joan Sebastian"><img src="noticias/c.thumbs/n0177.jpg" alt="Joan Sebastian"/></a>
+                                                <a href="#" title="Edwin Luna Y La Trakalosa"><img src="noticias/c.thumbs/n0176.jpg" alt="Edwin Luna Y La Trakalosa"/>Edwin Luna Y La Trakalosa</a>
+                                                <a href="#" title="Un Nuevo Imperio"><img src="noticias/c.thumbs/n0175.jpg" alt="Un Nuevo Imperio"/>Un Nuevo Imperio</a>
+                                                <a href="#" title="Vicky Y Marisol"><img src="noticias/c.thumbs/n0174.jpg" alt="Vicky Y Marisol"/>Vicky Y Marisol</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0173.jpg" alt="El Recodo"/>El Recodo</a>
+                                                <a href="#" title="Edwin Luna"><img src="noticias/c.thumbs/n0172.jpg" alt="Edwin Luna"/>Edwin Luna</a>
+                                                <a href="#" title="El Komander"><img src="noticias/c.thumbs/n0171.jpg" alt="El Komander"/>El Komander</a>
+                                                <a href="#" title="Anny"><img src="noticias/c.thumbs/n0170.jpg" alt="Anny"/>Anny</a>
+                                                <a href="#" title="La Sonora Dinamita"><img src="noticias/c.thumbs/n0169.jpg" alt="La Sonora Dinamita"/>La Sonora Dinamita</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0168.jpg" alt="El Recodo"/>El Recodo</a>
+                                                <a href="#" title="Edwin Luna "><img src="noticias/c.thumbs/n0167.jpg" alt="Edwin Luna "/>Edwin Luna</a>
+                                                <a href="#" title="El Gigante De América"><img src="noticias/c.thumbs/n0166.jpg" alt="El Gigante De América"/>El Gigante De América</a>
+                                                <a href="#" title="El Yaki"><img src="noticias/c.thumbs/n0165.jpg" alt="El Yaki"/>El Yaki</a>
+                                                <a href="#" title="Arturo Jaimes"><img src="noticias/c.thumbs/n0164.jpg" alt="Arturo Jaimes"/>Arturo Jaimes</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0163.jpg" alt="El Recodo"/></a>
+                                                <a href="#" title="José Julián"><img src="noticias/c.thumbs/n0162.jpg" alt="José Julián"/>José Julián</a>
+                                                <a href="#" title="La Trakalosa"><img src="noticias/c.thumbs/n0161.jpg" alt="La Trakalosa"/>La Trakalosa</a>
+                                                <a href="#" title="Pesado"><img src="noticias/c.thumbs/n0160.jpg" alt="Pesado"/>Pesado</a>
+                                                <a href="#" title="Madrina"><img src="noticias/c.thumbs/n0158.jpg" alt="Madrina"/>Madrina</a>
+                                                <a href="#" title="Huichol Musical"><img src="noticias/c.thumbs/n0157.jpg" alt="Huichol Musical"/>Huichol Musical</a>
+                                                <a href="#" title="El Bebeto Lanza"><img src="noticias/c.thumbs/n0156.jpg" alt="El Bebeto"/>El Bebeto</a>
+                                                <a href="#" title="América Sierra"><img src="noticias/c.thumbs/n0155.jpg" alt="América Sierra"/>América Sierra</a>
+                                                <a href="#" title="Joan Sebastian "><img src="noticias/c.thumbs/n0159.jpg" alt="Joan Sebastian "/>Joan Sebastian </a>
+                                                <a href="#" title="Fidel Rueda"><img src="noticias/c.thumbs/n0149.jpg" alt="Fidel Rueda"/>Fidel Rueda</a>                                                
+                                                <a href="#" title="Alejandro Mariscal"><img src="noticias/c.thumbs/n0154.jpg" alt="Alejandro Mariscal"/>Alejandro Mariscal</a>
+                                                <a href="#" title="Los Primos Mx"><img src="noticias/c.thumbs/n0153.jpg" alt="Los Primos Mx"/>Los Primos Mx</a>
+                                                <a href="#" title="El Gigante De América"><img src="noticias/c.thumbs/n0152.jpg" alt="El Gigante De América"/>El Gigante De América</a>
+                                                <a href="#" title="Salomón Robles"><img src="noticias/c.thumbs/n0151.jpg" alt="Salomón Robles"/>Salomón Robles</a>
+                                                <a href="#" title="Meño Lugo"><img src="noticias/c.thumbs/n0150.jpg" alt="Meño Lugo"/>Meño Lugo</a>
+                                                <a href="#" title="Joan Sebastian"><img src="noticias/c.thumbs/n0148.jpg" alt="Joan Sebastian"/>Joan Sebastian</a>
+                                                <a href="#" title="La Iniciativa"><img src="noticias/c.thumbs/n0147.jpg" alt="La Iniciativa"/>La Iniciativa</a>
+                                                <a href="#" title="Julión Álvarez"><img src="noticias/c.thumbs/n0146.jpg" alt="Julión Álvarez"/>Julión Álvarez</a>
+                                                <a href="#" title="Saúl El Jaguar"><img src="noticias/c.thumbs/n0145.jpg" alt="Saúl El Jaguar"/>Saúl El Jaguar</a>
+                                                <a href="#" title="Gerardo Ortiz"><img src="noticias/c.thumbs/n0144.jpg" alt="Gerardo Ortiz"/>Gerardo Ortiz</a>
+                                                <a href="#" title="La Adictiva"><img src="noticias/c.thumbs/n0143.jpg" alt="La Adictiva"/>La Adictiva</a>
+                                                <a href="#" title="Ramón Ayala Y La Leyenda"><img src="noticias/c.thumbs/n0142.jpg" alt="Ramón Ayala Y La Leyenda"/>Ramón Ayala Y La Leyenda</a>
+                                                <a href="#" title="América Sierra"><img src="noticias/c.thumbs/n0141.jpg" alt="América Sierra"/>América Sierra</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0140.jpg" alt="El Recodo"/>El Recodo</a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0139.jpg" alt=""/></a>
+                                                <a href="#" title="MÚSICA Y VIDA POR CHAPULTEPEC"><img src="noticias/c.thumbs/n0138.jpg" alt="MÚSICA Y VIDA POR CHAPULTEPEC"/>MÚSICA Y VIDA POR CHAPULTEPEC</a>
+                                                <a href="#" title="Jennivive2015"><img src="noticias/c.thumbs/n0137.jpg" alt="Jennivive2015"/>Jennivive2015</a>
+                                                <a href="#" title="Banda Arsenal"><img src="noticias/c.thumbs/n0136.jpg" alt="Banda Arsenal"/>Banda Arsenal</a>
+                                                <a href="#" title="Stereomax"><img src="noticias/c.thumbs/n0135.jpg" alt="Stereomax"/>Stereomax</a>
+                                                <a href="#" title="Auténticos de la Tuba"><img src="noticias/c.thumbs/n0134.jpg" alt="Auténticos de la Tuba"/>Auténticos de la Tuba</a>
+                                                <a href="#" title="TOÑO LIZÁRRAGA"><img src="noticias/c.thumbs/n0133.jpg" alt="TOÑO LIZÁRRAGA"/>TOÑO LIZÁRRAGA</a>
+                                                <a href="#" title="Pesado Canta Con Juan Gabriel"><img src="noticias/c.thumbs/n0132.jpg" alt="Pesado Canta Con Juan Gabriel"/>Pesado Canta Con Juan Gabriel</a>
+                                            	<a href="#" title="La Tierra Sagarada"><img src="noticias/c.thumbs/n0131.jpg" alt="La Tierra Sagarada"/>La Tierra Sagarada</a>
+                                                <a href="#" title="América Sierra"><img src="noticias/c.thumbs/n0130.jpg" alt="América Sierra"/></a>
+                                                <a href="#" title="El Nene Torres"><img src="noticias/c.thumbs/n0129.jpg" alt="El Nene Torres"/>El Nene Torres</a>
+                                                <a href="#" title="Fidel Rueda"><img src="noticias/c.thumbs/n0128.jpg" alt="Fidel Rueda"/>Fidel Rueda</a>
+                                                <a href="#" title="Leo Ibarría"><img src="noticias/c.thumbs/n0127.jpg" alt="Leo Ibarría"/>Leo Ibarría</a>
+                                                <a href="#" title="Los Rieleros Del Norte"><img src="noticias/c.thumbs/n0126.jpg" alt="Los Rieleros Del Norte"/>Los Rieleros Del Norte</a>
+                                                <a href="#" title="La Tierra Sagrada"><img src="noticias/c.thumbs/n0125.jpg" alt="La Tierra Sagrada"/>La Tierra Sagrada</a>
+                                                <a href="#" title="Los Tigres del Norte"><img src="noticias/c.thumbs/n0124.jpg" alt="Los Tigres del Norte"/>Los Tigres del Norte</a>
+                                                <a href="#" title="Liz Clapés"><img src="noticias/c.thumbs/n0123.jpg" alt="Liz Clapés"/>Liz Clapés</a>
+                                                <a href="#" title="Los Sebastianes"><img src="noticias/c.thumbs/n0122.jpg" alt="Los Sebastianes"/>Los Sebastianes</a>
+                                                <a href="#" title="Alberto Barros"><img src="noticias/c.thumbs/n0121.jpg" alt="Alberto Barros"/>Alberto Barros</a>
+                                                <a href="#" title="El Flaco"><img src="noticias/c.thumbs/n0120.jpg" alt="El Flaco"/>El Flaco</a>
+                                                <a href="#" title="Jenni Vive 2015"><img src="noticias/c.thumbs/n0119.jpg" alt="Jenni Vive 2015"/>Jenni Vive 2015</a>
+                                                <a href="#" title="La Adictiva"><img src="noticias/c.thumbs/n0118.jpg" alt="La Adictiva"/>La Adictiva</a>
+                                                <a href="#" title="El Recodo"><img src="noticias/c.thumbs/n0117.jpg" alt="El Recodo"/>El Recodo</a>
+                                                <a href="#" title="Los Cardenales De Nuevo León"><img src="noticias/c.thumbs/n0116.jpg" alt="Los Cardenales De Nuevo León"/>Los Cardenales De Nuevo León</a>
+                                                <a href="#" title="El Gigante De América"><img src="noticias/c.thumbs/n0115.jpg" alt="El Gigante De América"/>El Gigante De América</a>
+                                            	<a href="#" title="Alex Lora"><img src="noticias/c.thumbs/n0114.jpg" alt="Alex Lora"/>Alex Lora</a>
+                                                <a href="#" title="El Yaki"><img src="noticias/c.thumbs/n0113.jpg" alt="El Yaki"/>El Yaki</a>
+                                                <a href="#" title="Exterminador "><img src="noticias/c.thumbs/n0112.jpg" alt="Exterminador "/>Exterminador </a>
+                                            	<a href="#" title="Juntos Para Hacer Ruido"><img src="noticias/c.thumbs/n0111.jpg" alt="Juntos Para Hacer Ruido"/>Juntos Para Hacer Ruido</a>
+                                            	<a href="#" title="Spotify"><img src="noticias/c.thumbs/n0110.jpg" alt="Spotify"/>Spotify</a>
+                                                <a href="#" title="Pesado"><img src="noticias/c.thumbs/n0109.jpg" alt="Pesado"/>Pesado</a>
+                                                <a href="#" title="El Tono de México"><img src="noticias/c.thumbs/n0108.jpg" alt="El Tono de México"/>El Tono de México</a>
+                                                <a href="#" title="Paola Preciado"><img src="noticias/c.thumbs/n0107.jpg" alt="Paola Preciado"/>Paola Preciado</a>
+                                                <a href="#" title="César Navarro"><img src="noticias/c.thumbs/n0106.jpg" alt="César Navarro"/>César Navarro</a>
+                                                <a href="#" title="La Trakalosa"><img src="noticias/c.thumbs/n0105.jpg" alt="La Trakalosa"/>La Trakalosa</a>
+                                                <a href="#" title="Arnoldo Tapia"><img src="noticias/c.thumbs/n0104.jpg" alt="Arnoldo Tapia"/>Arnoldo Tapia</a>
+                                                <a href="#" title="Claudio Alcaráz"><img src="noticias/c.thumbs/n0103.jpg" alt="Claudio Alcaráz"/>Claudio Alcaráz</a>
+                                                <a href="#" title="La Trakalosa"><img src="noticias/c.thumbs/n0102.jpg" alt="La Trakalosa"/>La Trakalosa</a>
+                                                <a href="#" title="Espinoza Paz"><img src="noticias/c.thumbs/n0101.jpg" alt="Espinoza Paz"/>Espinoza Paz</a>
+                                            	<a href="#" title="Lupillo Rivera"><img src="noticias/c.thumbs/n0100.jpg" alt="Lupillo Rivera"/>Lupillo Rivera</a>
+                                                <a href="#" title="Pancho Barraza"><img src="noticias/c.thumbs/n0099.jpg" alt="Pancho Barraza"/>Pancho Barraza</a>
+                                                <a href="#" title="Tigres del Norte"><img src="noticias/c.thumbs/n0098.jpg" alt="Tigres del Norte"/>Tigres del Norte</a>
+                                                <a href="#" title="Rieleros Del Norte"><img src="noticias/c.thumbs/n0097.jpg" alt="Rieleros Del Norte"/>Rieleros Del Norte</a>
+                                            	<a href="#" title="Pancho Uresti"><img src="noticias/c.thumbs/n0096.jpg" alt="Pancho Uresti"/>Pancho Uresti</a>                                         
+                                            	<a href="#" title="Javier Rosas"><img src="noticias/c.thumbs/n0095.jpg" alt="Javier Rosas"/>Javier Rosas</a>
+                                                <a href="#" title="Poncho Lizarrga"><img src="noticias/c.thumbs/n0094.jpg" alt="Poncho Lizarrga"/>Poncho Lizarrga</a>
+                                                <a href="#" title="Beto Peña"><img src="noticias/c.thumbs/n0093.jpg" alt="Beto Peña"/>Beto Peña</a>
+                                                <a href="#" title="Los Hijos Del Señor"><img src="noticias/c.thumbs/n0092.jpg" alt="Los Hijos Del Señor"/>Los Hijos Del Señor</a>
+                                                <a href="#" title="Tigres Del Norte"><img src="noticias/c.thumbs/n0091.jpg" alt="Tigres Del Norte"/>Tigres Del Norte</a>
+                                                <a href="#" title="8 Segundos"><img src="noticias/c.thumbs/n0090.jpg" alt="8 Segundos"/>8 Segundos</a>
+                                                <a href="#" title="Germán Montero"><img src="noticias/c.thumbs/n0089.jpg" alt="Germán Montero"/>Germán Montero</a>
+                                                <a href="#" title="Identidad Grupera"><img src="noticias/c.thumbs/n0088.jpg" alt="Identidad Grupera"/>Identidad Grupera</a>
+                                                <a href="#" title="Espinoza Paz "><img src="noticias/c.thumbs/n0087.jpg" alt="Espinoza Paz "/>Espinoza Paz </a>
+                                                <a href="#" title="La Trakalosa De Monterrey"><img src="noticias/c.thumbs/n0086.jpg" alt="La Trakalosa De Monterrey"/>La Trakalosa De Monterrey</a>
+                                                <a href="#" title="Los Primos Mx"><img src="noticias/c.thumbs/n0085.jpg" alt="Los Primos Mx"/>Los Primos Mx</a>
+                                                <a href="#" title="Intocable"><img src="noticias/c.thumbs/n0084.jpg" alt="Intocable"/>Intocable</a>                                                
+                                                <a href="#" title="Espinoza Paz Y Juanga"><img src="noticias/c.thumbs/n0083.jpg" alt="Espinoza Paz Y Juanga"/>Espinoza Paz Y Juanga</a>
+                                                <a href="#" title="La Original"><img src="noticias/c.thumbs/n0082.jpg" alt="La Original"/>La Original</a>
+                                                <a href="#" title="Javier Rosas"><img src="noticias/c.thumbs/n0081.jpg" alt="Javier Rosas"/>Javier Rosas</a>
+                                                <a href="#" title="Flor Silvestre"><img src="noticias/c.thumbs/n0080.jpg" alt="Flor Silvestre"/>Flor Silvestre</a>
+                                                <a href="#" title="Carlos Sarabia"><img src="noticias/c.thumbs/n0079.jpg" alt="Carlos Sarabia"/>Carlos Sarabia</a>
+                                                <a href="#" title="Alfredito Olivas"><img src="noticias/c.thumbs/n0078.jpg" alt="Alfredito Olivas"/>Alfredito Olivas</a>
+                                                <a href="#" title="Huichol Musical"><img src="noticias/c.thumbs/n0073.jpg" alt="Huichol Musical"/>Huichol Musical</a>
+                                                <a href="#" title="Pancho Uresti Y Leandro Ríos"><img src="noticias/c.thumbs/n0077.jpg" alt="Pancho Uresti Y Leandro Ríos"/>Pancho Uresti Y Leandro Ríos</a>
+                                                <a href="#" title="Paola Preciado"><img src="noticias/c.thumbs/n0076.jpg" alt="Paola Preciado"/>Paola Preciado</a>
+                                                <a href="#" title="Alfredito Olivas"><img src="noticias/c.thumbs/n0075.jpg" alt="Alfredito Olivas"/></a>
+                                                <a href="#" title="Chayin Rubio"><img src="noticias/c.thumbs/n0074.jpg" alt="Chayin Rubio"/>Chayin Rubio</a>
+                                                <a href="#" title="Fidel Rueda"><img src="noticias/c.thumbs/n0072.jpg" alt="Fidel Rueda"/>Fidel Rueda</a>
+                                                <a href="#" title="El Bebeto"><img src="noticias/c.thumbs/n0071.jpg" alt="El Bebeto"/>El Bebeto</a>
+                                                <a href="#" title="PAQUETEPIQUE"><img src="noticias/c.thumbs/n0070.jpg" alt="PAQUETEPIQUE"/>PAQUETEPIQUE</a>
+                                                <a href="#" title="Espinoza Paz"><img src="noticias/c.thumbs/n0069.jpg" alt="Espinoza Paz"/>Espinoza Paz</a>
+                                                <a href="#" title="Max Peraza y su Banadononona"><img src="noticias/c.thumbs/n0068.jpg" alt="Max Peraza y su Banadononona"/>Max Peraza y su Banadononona</a>
+                                                <a href="#" title="A Poncho Lizárraga"><img src="noticias/c.thumbs/n0067.jpg" alt="A Poncho Lizárraga"/>A Poncho Lizárraga</a>
+                                                <a href="#" title="Lupillo Rivnera"><img src="noticias/c.thumbs/n0066.jpg" alt="Lupillo Rivnera"/>Lupillo Rivnera</a>
+                                                <a href="#" title="PESADO"><img src="noticias/c.thumbs/n0065.jpg" alt="PESADO"/>PESADO</a>
+                                                <a href="#" title="Polo Urías"><img src="noticias/c.thumbs/n0064.jpg" alt="Polo Urías"/>Polo Urías</a>
+                                                <a href="#" title="Diego Herrera"><img src="noticias/c.thumbs/n0063.jpg" alt="Diego Herrera"/>Diego Herrera</a>
+                                                <a href="#" title="Los Rieleros del Norte"><img src="noticias/c.thumbs/n0062.jpg" alt="Los Rieleros del Norte"/>Los Rieleros del Norte</a>
+                                                <a href="#" title="El Bebeto es profeta"><img src="noticias/c.thumbs/n0061.jpg" alt="El Bebeto es profeta"/>El Bebeto es profeta</a>
+                                                <a href="#" title="Toño Lizárraga"><img src="noticias/c.thumbs/n0060.jpg" alt="Toño Lizárraga"/>Toño Lizárraga</a>
+                                                <a href="#" title="La Original"><img src="noticias/c.thumbs/n0059.jpg" alt="La Original"/>La Original</a>
+                                                <a href="#" title="El Bebeto"><img src="noticias/c.thumbs/n0058.jpg" alt="El Bebeto"/>El Bebeto</a>
+                                                <a href="#" title="América Sierra"><img src="noticias/c.thumbs/n0057.jpg" alt="América Sierra"/>América Sierra</a>
+                                                <a href="#" title="Intocable"><img src="noticias/c.thumbs/n0056.jpg" alt="Intocable"/>Intocable</a>
+                                                <a href="#" title="Willie González "><img src="noticias/c.thumbs/n0055.jpg" alt="Willie González "/>Willie González </a>
+                                                <a href="#" title="Los Cadenales de Nuevo Léon"><img src="noticias/c.thumbs/n0054.jpg" alt="Los Cadenales de Nuevo Léon"/>Los Cadenales de Nuevo Léon</a>
+                                                <a href="#" title="Los Primos Mx"><img src="noticias/c.thumbs/n0053.jpg" alt="Los Primos Mx"/>Los Primos Mx</a>
+                                                <a href="#" title="Merenglass"><img src="noticias/c.thumbs/n0052.jpg" alt="Merenglass"/>Merenglass</a>
+                                                <a href="#" title="Toño Lizarraga"><img src="noticias/c.thumbs/n0051.jpg" alt="TOÑO LIZÁRRAGA ¡HA VUELTO A NACER!" />TOÑO LIZÁRRAGA ¡HA VUELTO A NACER!</a>
+                                                <a href="#" title="LA INICIATIVA"><img src="noticias/c.thumbs/n0050.jpg" alt="LA INICIATIVA"/>LA INICIATIVA</a>
+                                                <a href="#" title="RAÚL Y MEXIA SON…"><img src="noticias/c.thumbs/n0049.jpg" alt="RAÚL Y MEXIA SON…"/>RAÚL Y MEXIA SON…</a>
+                                                <a href="#" title="La Chiquis Rivera"><img src="noticias/c.thumbs/n0048.jpg" alt="La Chiquis Rivera"/>La Chiquis Rivera</a>
+                                                <a href="#" title="Lorenzo Méndez"><img src="noticias/c.thumbs/n0047.jpg" alt="Lorenzo Méndez"/>Lorenzo Méndez</a>
+                                                <a href="#" title="Espinosa Paz"><img src="noticias/c.thumbs/n0046.jpg" alt="Espinosa Paz"/>Espinosa Paz</a>
+                                                <a href="#" title="La S.A.C.M"><img src="noticias/c.thumbs/n0045.jpg" alt="La S.A.C.M"/>La S.A.C.M</a>
+                                                <a href="#" title="Grupo Arranke"><img src="noticias/c.thumbs/n0044.jpg" alt="Grupo Arranke"/>Grupo Arranke</a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0043.jpg" alt="¡Gran equipo!"/>¡Gran equipo!</a>
+                                                <a href="#" title=""><img src="noticias/c.thumbs/n0042.jpg" alt="Inician gran gira"/>Inician gran gira</a>
+                                                <a href="#" onClick="lPages('noticias.php','n0041')" title=""><img src="noticias/c.thumbs/n0041.jpg" alt="Edwin Luna No deja La Trakalosa"/>Edwin Luna No deja La Trakalosa</a>
+                                                <a href="#" title="Arturo Roque"><img src="noticias/c.thumbs/n0040.jpg" alt="Arturo Roque"/>Arturo Roque</a>
+                                                <a href="#" title="Por segundo año consecutivo "><img src="noticias/c.thumbs/n0039.jpg" alt="Por segundo año consecutivo "/>Por segundo año consecutivo </a>
+                                                <a href="#" title="Arturo Valdés"><img src="noticias/c.thumbs/n0038.jpg" alt="Arturo Valdés"/>Arturo Valdés</a>
+                                                <a href="#" title="Y No Eras Tú"><img src="noticias/c.thumbs/n0037.jpg" alt="Y No Eras Tú"/>Y No Eras Tú</a>
+                                                <a href="#" title="Sigue con su Servicio de Soltero"><img src="noticias/c.thumbs/n0036.jpg" alt="Sigue con su Servicio de Soltero"/>Sigue con su Servicio de Soltero</a>
+                                                <a href="#" title="J. Balvin"><img src="noticias/c.thumbs/n0035.jpg" alt="J. Balvin"/>J. Balvin</a>
+                                                <a href="#" title="Anny de Sexy "><img src="noticias/c.thumbs/n0034.jpg" alt="Anny de Sexy "/>Anny de Sexy </a>
+                                                <a href="#" title="Alejandra Orozco"><img src="noticias/c.thumbs/n0033.jpg" alt="Alejandra Orozco"/>Alejandra Orozco</a>                                                
+                                                <a href="#" title="Tierra Sagrada"><img src="noticias/c.thumbs/n0032.jpg" alt="Tierra Sagrada"/>Tierra Sagrada</a>
+                                                <a href="#" title="ESTRELLAS DE SINALOA"><img src="noticias/c.thumbs/n0031.jpg" alt="ESTRELLAS DE SINALOA"/>ESTRELLAS DE SINALOA</a>
+                                                <a href="#" title="Saul El Jajuar"><img src="noticias/c.thumbs/n0030.jpg" alt="Saul El Jajuar"/>Saul El Jajuar</a>
+                                                <a href="#" title="Max Peraza"><img src="noticias/c.thumbs/n0029.jpg" alt="Max Peraza"/>Max Peraza</a>
+                                            	<a href="#" title="PRESENTA “YO SE PERDER”…"><img src="noticias/c.thumbs/n0028.jpg" alt="PRESENTA “YO SE PERDER”…"/>PRESENTA “YO SE PERDER”…</a>
+                                            	<a href="#" title="Cantan al lado de Pancho Uresti"><img src="noticias/c.thumbs/n0027.jpg" alt="Cantan al lado de Pancho Uresti"/>Cantan al lado de Pancho Uresti</a>
+                                                <a href="#" title="Guanajuato Abre sus Brazos al Turismo"><img src="noticias/c.thumbs/n0026.jpg" alt="Guanajuato Abre sus Brazos al Turismo"/>Guanajuato Abre sus Brazos al Turismo</a>
+                                            	<a href="#" title="GREEG MORA"><img src="noticias/c.thumbs/n0025.jpg" alt="GREEG MORA"/>GREEG MORA</a>
+                                            	<a href="#" title="La Leyenda lanzan La Neta del Planeta"><img src="noticias/c.thumbs/n0024.jpg" alt="La Leyenda lanzan La Neta del Planeta" />La Leyenda lanzan La Neta del Planeta</a>
+                                                <a href="#" title="¡El Recodo de nuevo a telenovela!"><img src="noticias/c.thumbs/n0023.jpg" alt="¡El Recodo de nuevo a telenovela!" />¡El Recodo de nuevo a telenovela!</a>
+                                            	<a href="#" title="SAÚL EL JAGUAR DEBUTA COMO EMPRESARIO"><img src="noticias/c.thumbs/n0022.jpg" alt="SAÚL EL JAGUAR DEBUTA COMO EMPRESARIO" />SAÚL EL JAGUAR DEBUTA COMO EMPRESARIO</a>
+                                            	<a href="#" title="Carlos Sarabia estrena look"><img src="noticias/c.thumbs/n0021.jpg" alt="Carlos Sarabia estrena look" />Carlos Sarabia estrena look</a>
+                                            	<a href="#" title="PANCHO URESTI ES SOLISTA Y TRIUNFADOR"><img src="noticias/c.thumbs/n0020.jpg" alt="PANCHO URESTI ES SOLISTA Y TRIUNFADOR" />PANCHO URESTI ES SOLISTA Y TRIUNFADOR</a>
+                                                <a href="#" title="En la feria de Los Reyes la Paz"><img src="noticias/c.thumbs/n0019.jpg" alt="En la feria de Los Reyes la Paz" />En la feria de Los Reyes la Paz</a>
+                                            	<a href="#" title="GRAN ÉXITO DE BANDA MS EN ACAPULCO"><img src="noticias/c.thumbs/n0018.jpg" alt="GRAN ÉXITO DE BANDA MS EN ACAPULCO" />¡GRAN ÉXITO DE BANDA MS EN ACAPULCO</a>
+                                            	<a href="#" title="Llega la Navidad a Identidad Grupera"><img src="noticias/c.thumbs/n0017.jpg" alt="Llega la Navidad a Identidad Grupera" />¡Los Auténticos Reyes de la Banda, pusieron nuestro arbolito!</a>
+                                            	<a href="#" title="Carlos Sarabia"><img src="noticias/c.thumbs/n0016.jpg" alt="Carlos Sarabia" />Inicia la época más bonita del año</a>
+                                            	<a href="#" title="¡Aaaaay patorooo!"><img src="noticias/c.thumbs/n0015.jpg" alt="¡Aaaaay patorooo!" />Le llega la Navidad a Roberto Jr.</a>
+                                            	<a href="#" title="Alejandra Orozco"><img src="noticias/c.thumbs/n0013.jpg" alt="Alejandra Orozco" />ESTRENA BANDA Y ROLA</a>
+                                                <a href="#" title="Rodeo Bar La Noria"><img src="noticias/c.thumbs/n0012.jpg" alt="Rodeo Bar La Noria" />FESTEJA EN GRANDE SU 13º ANIVERSARIO</a>
+                                            	<a href="#" title="Ya Nacieron"><img src="noticias/c.thumbs/n0011.jpg" alt="Ya Nacieron" />¡YA NACIERON LOS TRILLIZOS DE BETO ZAPATA!</a>
+                                            	<a href="#" title="ARRANKE"><img src="noticias/c.thumbs/n0010.jpg" alt="ARRANKE" />NO DESCANSA NI EN NAVIDAD</a>
+	                                            <a href="#" title="Fidel Rueda"><img src="noticias/c.thumbs/n0009.jpg" alt="Fidel Rueda" />REGALO EQUIVOCADO PA LOS QUE SUFREN EN NAVIDAD</a>
+                                            	<a href="#" title="Los Recoditos"><img src="noticias/c.thumbs/n0008.jpg" alt="ANDAN AL MILLÓN… Y PASADITOS" />ANDAN AL MILLÓN… Y PASADITOS</a>
+	                                            <a href="#" title="La Rancho Viejo"><img src="noticias/c.thumbs/n0007.jpg" alt="RECIBE TROFEO POR PARTE DE IDENTIDAD GRUPERA" />RECIBE TROFEO POR PARTE DE IDENTIDAD GRUPERA</a>
+                                            	<a href="#" title="Julion Alvarez"><img src="noticias/c.thumbs/n0006_julion.jpg" alt="OFRECEN CONCIERTO GRATUITO PARA TODOS SUS PAISANOS" />OFRECEN CONCIERTO GRATUITO PARA TODOS SUS PAISANOS</a>
+                                            	<a href="#" title="La Voz Mexico"><img src="noticias/c.thumbs/n0005_lavozmexico.jpg" alt="¡JULIÓN ÁLVAREZ Y SU PUPILO GANAN LA VOZ… MÉXICO!" />¡JULIÓN ÁLVAREZ Y SU PUPILO GANAN LA VOZ… MÉXICO!</a>
+                                                <a href="#" title="Toño Lizarraga"><img src="noticias/c.thumbs/n0004_tonolizarraga.jpg" alt="TOÑO LIZÁRRAGA ¡HA VUELTO A NACER!" />TOÑO LIZÁRRAGA ¡HA VUELTO A NACER!</a>
+                                                <a href="#" title="Meño Lugo"><img src="noticias/c.thumbs/n0003_menolugo.jpg" alt="MEÑO LUGO SE ABRE CAMINO EN LA MÚSICA" />MEÑO LUGO SE ABRE CAMINO EN LA MÚSICA</a>
+                                                <a href="#" title="Arturo Roque"><img src="noticias/c.thumbs/n0002_arturoroque.jpg" alt="¡ARTURO ROQUE SE LAS COME DE CUCHARITA!" />¡ARTURO ROQUE SE LAS COME DE CUCHARITA!</a>
+                                                <a href="#" title="Diana Reyes"><img src="noticias/c.thumbs/n0001_dianareyes.jpg" alt="¡FESTEJA CUMPLE COMO LA HERMOSA NIÑA QUE ES!" />¡FESTEJA CUMPLE COMO LA HERMOSA NIÑA QUE ES!</a-->
+                                            </div>
+                                        </div>
+                                        <script type="text/javascript" src="noticias/wowslider.js"></script>
+                                        <script type="text/javascript" src="noticias/script_sliders.js"></script>
+                                        <!-- End WOWSlider.com BODY section -->
+                                    </div>
+                                </div>
+                                <table align="center" width="850px" border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td colspan="3" style="height:10px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="height:200px;" align="center" valign="top">
+                                        	<!--a href="#" target="_blank"-->
+                                            <img src="banners/a_b0002.gif" border="0" width="850" height="200" style="outline:none" />
+                                            <!--/a-->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" style="height:15px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="420px" height="30px" align="left" valign="middle" style="background-color:#F00;">
+                                            <font style="font-size:10px; color:#FFF;  padding-left:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold;">
+                                                TV CON IDENTIDAD
+                                            </font>
+                                        </td>
+                                        <td width="10px" height="30px" align="center" valign="top"></td>
+                                        <td width="420px" height="30px" align="left" valign="middle" style="background-color:#F00;">
+                                            <font style="font-size:10px; color:#FFF;  padding-left:10px; font-family:Arial, Helvetica, sans-serif; font-weight:bold;">
+                                                GALERIA CON IDENTIDAD
+                                            </font>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="420px" height="30px" align="left" valign="middle">
+                                            <object width="420" height="250" data="http://nextimechannel.tv/player14/flowplayer.commercial-3.2.16.swf" type="application/x-shockwave-flash">
+                                                <param name="movie" value="http://nextimechannel.tv/player14/flowplayer.commercial-3.2.16.swf" />
+                                                <param name="allowfullscreen" value="true" />
+                                                <param name="allowscriptaccess" value="always" />
+                                                <param name="flashvars" value='config={"clip":{"url":"2-hd","bufferLength":1,"provider":"nuevo"},"plugins":{"nuevo":{"url":"http://nextimechannel.tv/player14/flowplayer.rtmp-3.2.12.swf","netConnectionUrl":"rtmp://nexhd.com/canal95hd"},"controls":{"backgroundGradient":[0.1,0.3,0,0,0],"bufferGradient":"none","sliderColor":"#272727","backgroundColor":"#CCCCCC","sliderGradient":"small","key":"#$a639f6b9cfbd67a83b9","buttonOverColor":"#272727","borderRadius":"0px","buttonColor":"#565656","timeColor":"#CCCCCC","progressColor":"#565656","durationColor":"#ffffff","bufferColor":"#CCCCCC","progressGradient":"medium","opacity":1}},"playlist":[{"url":"canal95hd","bufferLength":1,"provider":"nuevo"}]}' />
+                                                <video id='myVideo' src='http://nexhd.com:1935/canal95hd/canal95hd/playlist.m3u8' controls width="680" height="450" Â /></video>
+                                            </object>
+                                        </td>
+                                        <td width="10px" height="30px" align="center" valign="top"></td>
+                                        <td width="420px" height="250px" align="left" valign="middle">
+                                            <img src="galeria/g0008.gif" width="420" height="250" />
+                                        </td>
+                                    </tr>
+                                	<tr>
+                                        <td colspan="3" style="height:18px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3" width="850px" height="230px" align="left" valign="middle">
+                                            <table align="center" border="0" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td style="width:280px; height:250px;" bgcolor="#000000" align="center" valign="top"></td>
+                                                    <td style="width:5px; height:250px;" valign="top"></td>
+                                                    <td style="width:280px; height:250px;" align="center" valign="top">
+                                                    	<a class="twitter-timeline" href="https://twitter.com/id_grupera" data-widget-id="542080694231760896">Tweets por el @id_grupera.</a>
+														<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                                                    </td>
+                                                   	<td style="width:5px; height:250px;" align="center" valign="top"></td>                                                    
+                                                    <td style="width:280px; height:250px;" align="center" valign="top">
+                                                    	<div class="fb-like-box" data-href="https://www.facebook.com/IdentidadGruperagrupera12" data-width="280" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div>
+                                                        <div id="fb-root"></div>
+                                                        <script>
+                                                            (function(d, s, id) {
+                                                                var js, fjs = d.getElementsByTagName(s)[0];
+                                                                if (d.getElementById(id)) return;
+                                                                js = d.createElement(s); js.id = id;
+                                                                js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&appId=345600235561159&version=v2.0";
+                                                                fjs.parentNode.insertBefore(js, fjs);
+                                                            }(document, 'script', 'facebook-jssdk'));
+                                                        </script>
+                                                    </td>
+                                              	</tr>
+                                          	</table>
+                                       	</td>
+                                    </tr>
+                                </table>
+			              	</section>                     
+                        </td>
+                        <td width="230px" align="center" valign="top">
+                            <div id="revista" align="center" style="background-color:#FC3; position:static; width:220px; height:1200px; margin-right:0px; margin-top:0px;">
+                                <table align="center" border="0" style="padding-top:5px" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="200px" align="center" valign="top">
+                                            <a href="http://issuu.com/identidadgrupera/docs/revista_no_48_diciembre_2015" target="_blank">
+                                                <img src="images/_revista_a.jpg" border="0" width="210" height="273" style="outline:none" />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="height:10px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200px" height="400px" align="center" bgcolor="#FFFFFF" valign="top">
+                                        	<!--a href="http://bit.ly/1EqMYiV" target="_blank"-->
+                                                <img src="banners/a_L0002.gif" border="0" width="100%" height="100%" style="outline:none" />
+                                            <!--/a-->                                    		
+                                       	</td>
+                                  	</tr>
+                                    <tr>
+                                        <td style="height:10px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200px" height="400px" align="center" bgcolor="#FFFFFF" valign="top">                                    		
+                                       	</td>
+                                  	</tr>
+                                    <tr>
+                                        <td style="height:25px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200px" height="20px" align="center" valign="middle">
+                                    		<font style="font-size:12px; font-weight:bold; color: #000;" face="Arial, Helvetica, sans-serif" >
+                                                ERES EL VISITANTE
+                                            </font>
+                                       	</td>
+                                  	</tr>
+                                    <tr>
+                                        <td style="height:10px;" align="center" valign="top"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="200px" height="40px" align="center" bgcolor="#FFFFFF" valign="middle">
+                                        	<img src="http://counter1.allfreecounter.com/private/contadorvisitasgratis.php?c=c45ffe0a67cf1e109092f4fbe4d18273" border="0" title="contador de visitas" alt="contador de visitas">
+                                       	</td>
+                                  	</tr>                                    
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fspace"></div>
+            <div style="background-color: transparent !important; width:45px; height:38px; z-index:1620; position:fixed; bottom:0px; right:80px; margin-bottom:0px;">
+                <table width="45px" height="38px" border="0" style="margin-right:0px;" align="right" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" valign="middle" style="padding-left: 0px; padding-top: 0px;">
+                            <a href="http://www.luiscanom.com" target="_blank">
+                                <img alt='LuisCano' border='0' src='images/logo_luiscano.png' width="45" height="38"/>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div align="left" style="background-color: #F00 !important; width:100%; height:15px; z-index:1500; position: fixed; bottom:0px;  margin-bottom:0px; margin-top: -5px; padding-top:2px; vertical-align:central;">
+                <font style="font-size:10px; font-weight:bold; margin-left:80px; color: #FFF;" face="Arial, Helvetica, sans-serif" >
+                    ©’2014 Revista Indentidad Grupera.
+                </font>
+            </div>
+        </div>
+            </body>	
+</html>

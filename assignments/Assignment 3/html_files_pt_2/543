@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<title>Redirect…</title>
+<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta content='http://www.wife2.masukachi.com/redirect_ios' property='og:url'>
+<meta content='website' property='og:type'>
+<meta content='http://www.wife2.masukachi.com/icon.png' property='og:image'>
+<meta content='10 billion wives' property='og:title'>
+<meta content='Get married 10 billion wives!' property='og:description'>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45702245-19', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    // iPhoneまたは、Androidの場合は振り分けを判断
+	// iphoneならapp storeに飛ばす
+	if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0){
+	location.href = 'https://itunes.apple.com/app/id969657566';
+	}
+	// androidならgoogle playに飛ばす
+	else if (navigator.userAgent.indexOf('Android') > 0)
+  	{
+ 	location.href = 'https://play.google.com/store/apps/details?id=com.masukachi.wife2';
+ 	}
+	// それ以外ならApp storeへ）
+ 	else
+	{
+	location.href = 'https://itunes.apple.com/app/id969657566';
+  	}
+</script>
+</body>
+</html>

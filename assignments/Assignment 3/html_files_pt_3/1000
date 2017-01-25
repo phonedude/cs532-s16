@@ -1,0 +1,1129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+<title>Mary Mikawoz: Artist Website - Collections</title>
+<meta name="description" content="View collections of images from Mary Mikawoz.">
+<link rel='stylesheet' type='text/css' href='/stylesheet.css'>
+<script type='text/javascript' src='/globalscripts.js'>
+</script>
+<script type='text/javascript'>
+
+	function newHttpReq()
+	{
+		var newRequest = null;
+		
+		try
+		{
+			newRequest = new XMLHttpRequest();
+		}
+		catch(trymicrosoft)
+		{
+			try
+			{
+				newRequest = new ActiveXObject("Msxml2.XMLHTTP");
+			}
+			catch(othermicrosoft)
+			{
+				try
+				{
+					newRequest = new ActiveXObject("Microsoft.XMLHTTP");
+				}
+				catch(failed)
+				{
+					newRequest = null;
+				}			
+			}
+		}
+		
+		return newRequest;
+	
+	}	
+	
+	var request = newHttpReq();	
+	
+	function changegallery()
+	{
+		var newgalleryid = document.getElementById('newgallery').value;
+		locationstring = "/galleries.html?tab=artworkgalleries&artworkgalleryid="+newgalleryid;
+		document.location = locationstring;	
+	}
+	
+	
+	function confirmdeletegallery(id)
+	{
+		result = confirm ('Are you sure you want to delete this gallery?');
+		
+		if (result == true)
+		{
+			locationstring = "/galleries.html?deletegalleryid="+id;
+			document.location = locationstring;	
+		}
+		
+	}
+
+	function initiatechange(id,position)
+	{
+		var url = '../queries/querygalleriesartistwebsites.php?initiatechangeid=' + id + '&position=' + position;		
+
+     	if((request.readyState != 4) && (request.readyState != 0))
+     	{
+			request.abort();
+			request = newHttpReq();
+     	}
+
+		request.open('GET',url,true);
+     	request.onreadystatechange = updateinitiatechange;
+     	request.send(null);			
+	
+		return;
+
+	}
+
+	function updateinitiatechange()
+	{
+   
+   		try 
+		{
+			if(request.readyState == 4)
+			{
+			}
+		
+			if(request.status == 200)
+			{
+			}
+		}
+		catch (e)
+		{
+			return;
+		}
+   
+   
+   		if (request.readyState == 4)
+   		{
+   			if(request.status == 200)
+   			{   
+				var response = request.responseText.split(",");
+				document.getElementById('change[' + response[0] + ']').innerHTML = response[1];
+   			}
+   		}
+	}
+
+
+	function changeposition(id)
+	{	
+		var targetposition = document.getElementById('newposition[' + id + ']').value;
+	
+		var url = '../queries/querygalleriesartistwebsites.php?artworkgalleryid=' + id + '&targetposition=' + targetposition;		
+
+     	if((request.readyState != 4) && (request.readyState != 0))
+     	{
+			request.abort();
+			request = newHttpReq();
+     	}
+
+		request.open('GET',url,true);
+     	request.onreadystatechange = updatepage;
+     	request.send(null);				
+
+	}	
+
+
+
+	function cancelposition(id)
+	{	
+
+		var url = '../queries/querygalleriesartistwebsites.php?cancel=true';		
+
+     	if((request.readyState != 4) && (request.readyState != 0))
+     	{
+			request.abort();
+			request = newHttpReq();
+     	}
+
+		request.open('GET',url,true);
+     	request.onreadystatechange = updatepage;
+     	request.send(null);				
+
+	}	
+
+
+
+	function updatepage()
+	{
+   
+   		try 
+		{
+			if(request.readyState == 4)
+			{
+			}
+		
+			if(request.status == 200)
+			{
+			}
+		}
+		catch (e)
+		{
+			return;
+		}
+   
+   
+   		if (request.readyState == 4)
+   		{
+   			if(request.status == 200)
+   			{      			
+				document.getElementById('gallerydiv').innerHTML = request.responseText;
+   			}
+   		}
+	}
+
+	
+</script>
+<style type='text/css'>
+
+	
+</style>
+</head>
+
+<body style='background-color: #FFFFFF; background-image: none; text-align: center;'>
+
+	<style>
+
+	/* Buttons: Standard */
+	a.button, a.button:link, a.button:active, a.button:visited, a.button:hover
+	{
+		float: none;
+		display: inline-block;
+		height: auto;
+		background-image: none;
+		background-color: #DDDDDD;
+		background: -webkit-linear-gradient(#FFFFFF,#DDDDDD);
+		background: -moz-linear-gradient(#FFFFFF,#DDDDDD);
+		background: linear-gradient(#FFFFFF,#DDDDDD);
+		font: 9pt arial;
+		color: #444444;
+		text-align: center;
+		border: 1px solid #AAAAAA;
+		border-radius: 6px;
+		box-shadow: none;
+		padding: 0px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+		margin-left: 2px;
+		margin-right: 2px;
+		cursor: pointer;
+		cursor: hand;
+	}
+	
+	a.button:hover
+	{
+		background: none;
+		background-color: #EEEEEE;
+		border: 1px solid #999999;
+		box-shadow: 0px 6px 5px -5px #CCCCCC;
+	}
+	
+	a.button:active
+	{
+
+	}
+	
+	a.button:first-child
+	{
+		margin-left: none;
+	}
+	
+	a.button:last-child
+	{
+		margin-right: none;
+	}
+	
+	a.button span, a.button:link span, a.button:active span, a.button:visited span, a.button:active span
+	{
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+		background-image: none;
+		background-color: transparent;
+		color: inherit;
+		border: none;
+	}				
+
+	
+		
+	
+	#headercontainerdiv
+	{
+
+	}
+	
+	#header
+	{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	
+	
+	/* Header Logo Div */
+	#headerartistwebsitelogodiv
+	{
+		display: inline-block;
+		width: 210px;
+		vertical-align: middle;
+		order: 1;
+		-webkit-order: 1;
+	}
+					
+	#headerartistwebsitelogodiv > img
+	{
+		float: left;
+		max-height: 64px;
+		padding-top: 0px;
+		border: none;
+	}
+
+	#headerartistwebsitelogotext
+	{
+		display: inline-block;
+		font-size: 16pt;
+		font-family: oswald, arial;
+		text-decoration: none;
+		color: #222222;
+		text-shadow: 2px 2px 5px #CCCCCC;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding: 0px;
+		margin: 0px;
+		vertical-align: middle;
+		max-width: 220px;
+		border: none;
+	}
+	
+	
+	/* Header Custom Div #1 */
+	#headerartistwebsitecustomdiv1
+	{	
+		display: inline-block;
+		width: 100%;
+		max-width: 200px;
+		text-align: center;
+		vertical-align: middle;
+		order: 2;
+		-webkit-order: 2;
+	}				
+	
+	.outerdiv #headerartistwebsitecustomdiv1
+	{
+		display: none;
+	}				
+	
+	
+	/* Header Search Div */
+	#headerartistwebsitesearchdiv
+	{
+		display: inline-block;
+		width: 100%;
+		max-width: 232px;
+		vertical-align: middle;
+		order: 3;
+		-webkit-order: 3;
+	}				
+	
+	
+	/* Header Custom Div #2 */
+	#headerartistwebsitecustomdiv2
+	{
+		display: inline-block;
+		width: 100%;
+		max-width: 250px;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 100%;
+		line-spacing: 0px;
+		order: 4;
+		-webkit-order: 4;
+	}				
+	
+
+	/* Header Shopping Cart Div */
+	#headerartistwebsiteshoppingcartdiv
+	{	
+		display: inline-block;
+		text-align: right;
+		vertical-align: middle;
+		margin-top: 0px;
+		order: 6;
+		-webkit-order: 6;
+	}
+
+	
+	/* Navigation Menu Container */
+	#headernavigationcontainerdiv
+	{
+		box-shadow: 0px 5px 5px #DDDDDD;
+	}
+	
+	.navigationmenu > li > a
+	{
+		display: block;
+		overflow: hidden;
+		height: 18px;
+		margin: 0px;
+		padding: 0px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		padding-left: 15px;
+		padding-right: 15px;
+		background-color: none;
+		color: #FFFFFF;
+		text-align: center;
+		text-decoration: none;
+		font-family: helvetica, arial;
+		font-size: 10pt;
+		font-weight: normal;
+		letter-spacing: 0px;
+		text-shadow: none;
+		background-image: none;
+		background-position: top left;
+		background-repeat: repeat-y;
+		opacity: 1.00;
+		transition: background-color 0.250s;
+		border-left: 1px solid #666666;
+	}
+
+				
+	/* Media Queries */
+	@media screen and (max-width: 1250px)
+	{
+		#headerartistwebsitecustomdiv1
+		{
+			display: none;
+		}
+	}				
+
+	@media screen and (max-width: 760px)
+	{	
+		#headerartistwebsitecustomdiv2
+		{
+			display: none;	
+		}				
+	
+	}
+	
+	@media screen and (max-width: 640px)
+	{					
+		#headerartistwebsiteshoppingcartdiv > p
+		{
+			display: none !important;
+		}
+
+		#headerartistwebsiteshoppingcartdiv > img
+		{
+			display: padding-right: 10px !important;
+		}					
+	}
+	
+	@media screen and (max-width: 560px)
+	{				
+				
+		#headerartistwebsitesearchdiv
+		{
+			display: none;
+			width: 250px;
+			order: 10;
+			-webkit-order: 10;
+			margin: auto;
+			margin-bottom: 25px;
+		}
+	
+	}
+
+	#headerartistwebsitecustomdiv1	{	max-width: calc((100% - 300px) * 0.2);	}
+#headerartistwebsitesearchdiv	{	max-width: calc((100% - 300px) * 0.35);	}
+#headerartistwebsitecustomdiv2	{	max-width: calc((100% - 300px) * 0.25);	}
+#headerartistwebsitelogotext	{	font-family: oswald !important;	}
+#headerartistwebsitelogotext	{	font-size: 18pt !important;	}
+#headerartistwebsitelogotext	{	color: #444444 !important;	}
+#headerartistwebsitelogotext	{	text-shadow: 2px 2px 5px #CCCCCC;	} 
+#headercontainerdiv	{	background-color: #EEEEEE;	}
+#headercontainerdiv	{	background-image: url('https://fineartamerica.com/images/artistwebsiteimages/37049-8-1423873478.gif');	}
+#headercontainerdiv	{	background-position: top left !important;	}
+#headercontainerdiv	{	background-repeat: repeat !important;	}
+#headercontainerdiv	{	background-size: auto !important;	}
+#header	{	padding-top: 20px;	}
+#header	{	padding-bottom: 20px;	}
+#headerartistwebsitecustomdiv1 {	font: 10pt arial; color: #444444;	}
+#headerartistwebsitecustomdiv1 a {	font: 10pt arial; color: #335599;	}
+#headerartistwebsitecustomdiv1	{	font-weight: normal;}
+#headerartistwebsitecustomdiv1 a	{	font-weight: inherit;	}
+#headerartistwebsitecustomdiv1 a	{	text-decoration: underline;	}
+#headersearchtextboxdiv	{	box-shadow: none !important;	}
+#headersearchtextboxdiv	{	box-shadow: 2px 2px 8px #CCCCCC !important;	}
+#headersearchtextboxdiv	{	background-color: #FFFFFF !important;	}
+#searchtagheader	{	color: #222222 !important;`}
+.searchtypeoptionsheader	{	background-color: #8190A5 !important;	}
+#headermagnifyingglass	{	background-color: #FFFFFF !important;	}
+.searchtypeoptionsheader a	{	color: #FFFFFF !important;	}
+.arrowdown			{	border-top: 5px solid #FFFFFF !important; }
+#headerartistwebsitecustomdiv2	{	font: 10pt arial;	color: #222222;}
+#headerartistwebsitecustomdiv2 a	{	font: 10pt arial; color: #222222;	}
+#headerartistwebsitecustomdiv2	{	font-weight: normal;}
+#headerartistwebsitecustomdiv2 a	{	font-weight: inherit;	}
+#headerartistwebsitecustomdiv2 a	{	text-decoration: underline;	}
+#headerartistwebsiteshoppingcartdiv a	{	color: #444444 !important;	}
+#headerartistwebsiteshoppingcartdiv a	{	text-shadow: 2px 2px 5px #CCCCCC !important;	}
+#footercontainerdiv	{	background-color: #1A1E22 !important;	}
+#footer h3	{	font-size: 14pt !important; font-family: oswald !important; font-weight: normal !important; color: #FFFFFF !important; border-bottom: 1px solid #999999 !important;	}
+#footer div:first-child > div p	{	font-size: 11pt !important; font-family: arial !important; color: #646B75 !important;	}
+#footer p a, #footer p a:link, #footer p a:hover	{ font-size: inherit !important; font-family: inherit !important; color: inherit !important;	}
+#footercontainerdiv	{	border-top: 1px solid #222222 !important;	}
+#headernavigationcontainerdiv	{	box-shadow: 0px 2px 5px #CCCCCC !important;	}
+#headernavigationcontainerdiv	{	background-color: #374353 !important;	}
+#headernavigationcontainerdiv	{	border-top: none !important;	}
+#headernavigationcontainerdiv	{	border-bottom: none !important;	}
+.navigationmenu > li > a	{ border-left: 1px solid #666666 !important;	}	
+.navigationmenu > li:hover > a	{	background-color: #6A7476 !important;	}
+.navigationmenu > li > a	{ color: #FFFFFF !important;	}
+.navigationmenu > li:hover > a	{ color: #FFFFFF !important;	}
+#bodyindexartistwebsites	{	background-color: #FFFFFF !important;	}
+#bodyindexartistwebsites	{	background-image: url('') !important;	}
+#bodyindexartistwebsites	{	background-position: top left !important;	}
+#bodyindexartistwebsites	{	background-repeat: top repeat !important;	}
+#bodyindexartistwebsites	{	background-size: auto !important;	}
+#bodyindexartistwebsites h1	{	font-size: 18pt !important; font-family: oswald !important; font-weight: normal !important; color: #444444 !important;	}
+#bodyindexartistwebsites h1	{	text-shadow: 2px 2px 4px #CCCCCC !important;	}
+#bodyindexartistwebsites .subtitle	{	font-size: 10pt !important; font-family: arial !important; font-weight: normal !important; color: #444444 !important;	}
+#bodyindexartistwebsites .subtitle		{	text-shadow: none !important;	}
+#bodyindexartistwebsites #biographydiv p {	font-family: arial !important; font-size: 10pt !important; color: #444444 !important;	}
+#bodyindexartistwebsites #biographydiv a, #bodyindexartistwebsites #biographydiv a:link {	font-family: inherit !important; font-size: inherit !important; color: #335599 !important; text-decoration: underline !important; }
+#bodyindexartistwebsites #joinemaillistdiv a, #bodyindexartistwebsites #joinemaillistdiv a:link	{	color: #335599 !important; text-decoration: underline !important;	}
+#bodyindexartistwebsites .tabmenu, #bodyindexartistwebsites .tabmenu:link, #bodyindexartistwebsites .tabmenu:active, #bodyindexartistwebsites .tabmenu:visited { background-color: #FFFFFF !important; color: #999999 !important;	}
+#bodyindexartistwebsites .tabmenu, #bodyindexartistwebsites .tabmenu:link, #bodyindexartistwebsites .tabmenu:active, #bodyindexartistwebsites .tabmenu:visited { border: 1px solid #CCCCCC !important;	}
+#bodyindexartistwebsites .tabmenuselected, #bodyindexartistwebsites .tabmenuselected:link, #bodyindexartistwebsites .tabmenuselected:active, #bodyindexartistwebsites .tabmenuselected:visited { border: none !important;	}
+#bodyindexartistwebsites .tabmenu	{	box-shadow: 2px 2px 5px #DDDDDD !important;	}
+#bodyindexartistwebsites .imageheadshot	{	border: 1px solid #DDDDDD !important;	}
+#bodyindexartistwebsites .imageheadshot	{	box-shadow: 2px 2px 5px #DDDDDD !important;	}
+#bodyindexartistwebsites .imageheadshot	{	border-radius: 4px !important;	}
+#bodyindexartistwebsites #tabdiv {border-top: 1px solid #CCCCCC; border-bottom: 1px solid #CCCCCC;}
+#bodyindexartistwebsites .tabnormal, #bodyindexartistwebsites .tabnormal:link, #bodyindexartistwebsites .tabnormal:visited, #bodyindexartistwebsites .tabnormal:hover {color: #666666; border-bottom: 3px solid transparent;}
+#bodyindexartistwebsites .tabnormal:hover {border-bottom: 3px solid #444444;}
+#bodyindexartistwebsites .tabselected, #bodyindexartistwebsites .tabselected:link, #bodyindexartistwebsites .tabselected:visited, #bodyindexartistwebsites .tabselected:hover {color: #222222; border-bottom: 3px solid #444444;}
+#bodyindexartistwebsites .tabtitlebar {color: #444444;}
+#bodyindexartistwebsites .flowdiv > a > img	{	border-radius: 2px;	}
+#bodyindexartistwebsites .flowdivtitle3	{	color: #444444 !important;	}
+#bodyindexartistwebsites .flowdivtitle3 p	{	color: #444444 !important;	}
+#bodyindexartistwebsites .flowdiv> a > img	{	box-shadow: 2px 2px 5px #CCCCCC !important;	}
+#bodyindexartistwebsites .gallerydiv > a > img	{	border-radius: 2px;	}
+#bodyindexartistwebsites .gallerydivtitle p	{	color: #444444 !important;	}
+#bodyindexartistwebsites .gallerydiv > a > img	{	box-shadow: 2px 2px 5px #CCCCCC !important;	}
+#bodyindexartistwebsites #aboutdiv p	{ font-size: 10pt !important; font-family: arial !important; color: #444444 !important;	}
+#bodyindexartistwebsites #aboutdiv a, #bodyindexartistwebsites #aboutdiv a:link	{	font-size: inherit !important; font-family: inherit !important; color: #335599 !important; text-decoration: underline !important;	}
+@media screen and (max-width: 1250px)
+{
+#headerartistwebsitesearchdiv	{	max-width: calc((100% - 300px) * 0.5);	}
+#headerartistwebsitecustomdiv2	{	max-width: calc((100% - 300px) * 0.4);	}
+}
+@media screen and (max-width: 760px)
+{
+#headerartistwebsitesearchdiv	{	max-width: calc((100% - 300px) * 0.9);	}
+}
+@media screen and (max-width: 560px)
+{
+#headerartistwebsitesearchdiv	{	max-width: 250px; margin-top: 15px;	}
+}
+</style><div id='headercontainerdiv'>
+
+	<div class='container'>
+	
+		<div id='header'>
+			
+			<div id='headerlogodivnew' style='max-width: 220px'>
+<a id='headerartistwebsitelogotext' href='http://mary-mikawoz.pixels.com/index.html'>Mary Mikawoz Artwork&nbsp;</a>
+</div>
+<script type='text/javascript'>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-41772387-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<div id='headerartistwebsitecustomdiv1'>
+Every purchase includes a <a href='/moneybackguaranteeartistwebsites.html'>money-back guarantee</a>.</div>
+<div id='headerartistwebsitesearchdiv'><div style='position: relative; width: 100%;'>
+<form name='searchformartworkheader' method='post' action='http://mary-mikawoz.pixels.com/shop'>
+<div id='headersearchtextboxdiv' style='float: none; display: inline-block; position: relative; width: 100%; height: 30px; margin-top: 0px; background-color: #FFFFFF; border: none; border-radius: 0px;'>
+<div class='searchtypeoptionsheader' onClick='javascript: showsearchtypeoptionsheader();' style='float: left; width: 80px; height: 100%; background-color: #8190A5; border-right: 1px solid #999999; text-align: center; cursor: pointer; cursor: hand;'>
+<p style='display: inline-block; padding-top: 7px;font: 8pt arial; color: #999999; vertical-align: top;'><a href='javascript: showsearchtypeoptionsheader();' style='font: 8pt arial; color: #FFFFFF; text-decoration: none;'>Keyword</a></p>
+<div class='arrowdown' style='margin-left: 2px; margin-top: 11px;'></div>
+</div>
+<input type='textbox' id='searchtagheader' name='searchtag' style='float: left; width: 50%; width: calc(100% - 144px); width: -webkit-calc(100% - 144px); padding-top: 7px; padding-bottom: 8px; padding-left: 10px; background-color: transparent; border: none; box-shadow: none; outline: none; font: 9pt arial; color: #000000;' value="" placeholder='Search'>
+<div id='headermagnifyingglass' style='float: right; width: 30px; height: 100%; border-left: 1px solid #999999; text-align: center;'>
+<a href='javascript: document.searchformartworkheader.submit();'><img src='https://fineartamerica.com/images/SearchIconBlack.png' style='float: left; max-width: 16px; padding-left: 7px; padding-top: 6px; border: none;'></a>
+</div>
+</div>
+<div style='position: absolute; left: 0px; top: 38px; display: none;'>
+<p style='float: left; width: 125px; font: 8pt arial;'><a href='javascript: showsearchtypeoptions();' style='font: 8pt arial; color: #999999;'>Change Search Type</a></p>
+</div>
+<div id='searchtypeoptionsheaderdiv' class='searchtypeoptionlink' onMouseOut='javascript: hidesearchtypeoptionstimeheader();' style='position: absolute; top: 0px; left: 0px; width: 80px; z-index: 5000000; text-align: center; background-color: #FFFFFF; border: 1px solid #666666; border-radius: 2px; border-top-right-radius: 0px; display: none;'>
+<a href='http://mary-mikawoz.pixels.com/galleries.html?searchtype=keywords' onMouseOver='cancelclosetimersearchtypeoptionsheader();' style='float: left; width: 100%; padding-top: 8px; padding-bottom: 8px; font: 8pt arial; text-decoration: none;'>Keyword</a>
+<a href='http://mary-mikawoz.pixels.com/art/all/all/all?searchtype=title' onMouseOver='cancelclosetimersearchtypeoptionsheader();' style='float: left; width: 100%; padding-top: 8px; padding-bottom: 8px; font: 8pt arial; text-decoration: none;'>Title</a>
+<a href='http://mary-mikawoz.pixels.com/art/all/all/all?searchtype=artistname' onMouseOver='cancelclosetimersearchtypeoptionsheader();' style='float: left; width: 100%; padding-top: 8px; padding-bottom: 8px; font: 8pt arial; text-decoration: none;'>Artist</a>
+<a href='http://mary-mikawoz.pixels.com/art/all/all/all?searchtype=titleartistname' onMouseOver='cancelclosetimersearchtypeoptionsheader();' style='float: left; width: 100%; padding-top: 8px; padding-bottom: 8px; font: 8pt arial; text-decoration: none;'>Title + Artist</a>
+<a href='http://mary-mikawoz.pixels.com/art/all/all/all?searchtype=keywordsartistname' onMouseOver='cancelclosetimersearchtypeoptionsheader();' style='float: left; width: 100%; padding-top: 8px; padding-bottom: 8px; font: 8pt arial; text-decoration: none;'>Keyword + Artist</a>
+</div>
+</form>
+</div>
+</div>
+<div id='headerartistwebsitecustomdiv2'>
+Welcome!</div>
+<div id='headersearchicondivnew'>
+<a href='javascript: showsmartphonesearch();'><img src='https://fineartamerica.com/MagnifyingGlassBlack.png' style='border: none;'></a>
+</div>
+<div id='headerartistwebsiteshoppingcartdiv'>
+<a href='http://mary-mikawoz.pixels.com/shoppingcart.html'><img src='https://fineartamerica.com/images/ShoppingCartIconBlack.png' style='display: inline-block; max-width: 25px; margin-top: 0px; border: none; vertical-align: middle;'></a>
+</div>
+<div style='display: inline-block; width: 100%; height: 0px; background-color: #00FF00; position: relative; z-index: 500;'>
+&nbsp;
+</div>
+			
+		</div>
+		
+	</div>
+	
+
+
+</div>
+<div id='headernavigationcontainerdiv'>	
+	
+	<div class='container'>
+
+		<!-- Main Navigation -->
+		<div id='headernavigationdiv'>
+
+			<div id='headernavigationmenuleftdiv'>
+<ul class='navigationmenu'>
+<li id='mtopthreelines'>
+<a href='http://mary-mikawoz.pixels.com/index.html' onmouseover="javascript: mpreopen2('mthreelines2','mtopthreelines');" onmouseout="javascript: mclosetime();" style='display: block; width: 30px;'>
+<div style='float: left; width: 100%; height: 3px; padding: 0px; overflow: hidden; margin-bottom: 3px; background-color: #FFFFFF; border-radius: 2px;'>
+&nbsp;
+</div>
+<div style='float: left; width: 100%; height: 3px; padding: 0px; overflow: hidden; margin-bottom: 3px; background-color: #FFFFFF; border-radius: 2px;'>
+&nbsp;
+</div>
+<div style='float: left; width: 100%; height: 3px; padding: 0px; overflow: hidden; margin-bottom: 3px; background-color: #FFFFFF; border-radius: 2px;'>
+&nbsp;
+</div>
+</a>
+							
+
+							<!-- Products -->
+							<div class='navigationmenudropdown' id='mthreelines2' onmouseover='mcancelclosetime();' onmouseout='mclosetime();'>
+
+								<div style='float: left; width: 100%; padding-top: 0px; text-align: justify;'>
+
+									<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/all'>Wall Art</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/canvas+prints'>Canvas Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/framed+prints'>Framed Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/metal+prints'>Metal Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/acrylic+prints'>Acrylic Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/prints'>Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/posters'>Posters</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/all'>View All</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/iphone+cases'>Phone Cases</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+cases'>iPhone Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s6+cases'>Galaxy Cases</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/greeting+cards'>Greeting Cards</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/greeting+cards'>Greeting Cards</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/throw+pillows'>Home Decor</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/throw+pillows'>Throw Pillows</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/duvet+covers'>Duvet Covers</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/shower+curtains'>Shower Curtains</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/tote+bags'>Bags</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/tote+bags'>Tote Bags</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/tshirts'>Men's Apparel</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/tshirts'>T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/slim+fit+tshirts'>Slim Fit T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/vneck+tshirts'>V-Neck T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/long+sleeve+tshirts'>Long Sleeve T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/ringer+tshirts'>Baseball T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/tank+tops'>Tank Tops</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/womens+tshirts'>Women's Apparel</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/womens+tshirts'>T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/junior+vneck+tshirts'>V-Neck T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/junior+tshirts'>Junior T-Shirts</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/special+promotions'>Miscellaneous</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/special+promotions'>Limited Time Promotions</a></li>
+</ul>
+</div>
+									
+									<!-- Info -->
+									<div class='headernavigationmenutextdiv'>		
+										
+										<div>
+											<p><a href='http://mary-mikawoz.pixels.com/index.html?tab=about'>Info</a></p>
+										</div>		
+
+										<ul class='headernavigationmenutextlist'>
+										
+											<li><a href='http://mary-mikawoz.pixels.com/index.html?tab=about'>About</a></li>
+											<li><a href='http://mary-mikawoz.pixels.com/news.html'>News</a></li>							
+											<li><a href='http://mary-mikawoz.pixels.com/calendar.html'>Events</a></li>
+											<li><a href='http://mary-mikawoz.pixels.com/myblog.html'>Blog</a></li>
+											
+										</ul>												
+									
+									</div>
+
+									<!-- Contact -->
+									<div class='headernavigationmenutextdiv'>		
+										
+										<div>
+											<p><a href='http://mary-mikawoz.pixels.com/contact.html'>Contact</a></p>
+										</div>		
+
+										<ul class='headernavigationmenutextlist'>
+										
+											<li><a href='http://mary-mikawoz.pixels.com/contact.html'>Contact</a></li>
+											<li><a href='http://mary-mikawoz.pixels.com/subscribewebsiteemaillist.html'>Join E-Mail List</a></li>
+											
+										</ul>												
+									
+									</div>
+
+									<div style='display: inline-block; width: 100%;'>
+										&nbsp;
+									</div>											
+								
+								</div>									
+
+							</div>
+							
+							
+							
+							
+							
+							
+							</li>
+<li id='mtophome'>
+<a href="http://mary-mikawoz.pixels.com/index.html">Home</a>
+</li>
+<li id='mtopshop'>
+<a href="http://mary-mikawoz.pixels.com/shop?sort=featured" onmouseover="javascript: mpreopen2('mshop2','mtopshop');" onmouseout="javascript: mclosetime();">Shop<img src='https://fineartamerica.com/HeaderNavigationArrowDown.png' style='display: none;'></a>
+							
+							<!-- Products -->
+							<div class='navigationmenudropdown' id='mshop2' onmouseover='mcancelclosetime();' onmouseout='mclosetime();'>
+
+								<div style='float: left; width: 100%; padding-top: 0px; text-align: justify;'>
+
+									<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/all'>Wall Art</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/canvas+prints'>Canvas Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/framed+prints'>Framed Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/metal+prints'>Metal Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/acrylic+prints'>Acrylic Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/prints'>Prints</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/posters'>Posters</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/all'>View All</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/iphone+cases'>iPhone Cases</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+6plus+cases'>iPhone 6 Plus Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+6+cases'>iPhone 6 Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+5s+cases'>iPhone 5S Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+5c+cases'>iPhone 5C Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+5+cases'>iPhone 5 Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+4s+cases'>iPhone 4S Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+4+cases'>iPhone 4 Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/iphone+cases'>View All</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s5+cases'>Galaxy Cases</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s6+cases'>Galaxy S6 Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s5+cases'>Galaxy S5 Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s4+cases'>Galaxy S4 Cases</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s5+cases'>View All</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/greeting+cards'>Greeting Cards</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/greeting+cards'>Greeting Cards</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/throw+pillows'>Home Decor</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/throw+pillows'>Throw Pillows</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/duvet+covers'>Duvet Covers</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/shower+curtains'>Shower Curtains</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/tote+bags'>Bags</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/tote+bags'>Tote Bags</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/tshirts'>Men's Apparel</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/tshirts'>T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/slim+fit+tshirts'>Slim Fit T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/vneck+tshirts'>V-Neck T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/long+sleeve+tshirts'>Long Sleeve T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/ringer+tshirts'>Baseball T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/tank+tops'>Tank Tops</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/womens+tshirts'>Women's Apparel</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/womens+tshirts'>T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/junior+vneck+tshirts'>V-Neck T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/junior+tshirts'>Junior T-Shirts</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/youth+tshirts'>Youth Apparel</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/youth+tshirts'>Youth T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/toddler+tshirts'>Toddler T-Shirts</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/shop/baby+onesies'>Baby Onesies</a></li>
+</ul>
+</div>
+<div class='headernavigationmenutextdiv'>
+<div>
+<p><a href='http://mary-mikawoz.pixels.com/shop/special+promotions'>Miscellaneous</a></p>
+</div>
+<ul class='headernavigationmenutextlist'>
+<li><a href='http://mary-mikawoz.pixels.com/shop/special+promotions'>Limited Time Promotions</a></li>
+</ul>
+</div>
+	
+									
+									<div style='display: inline-block; width: 100%;'>
+										&nbsp;
+									</div>											
+								
+								</div>									
+
+							</div>								
+							
+							
+							</li>
+<li id='mtopimages'>
+<a href="http://mary-mikawoz.pixels.com/index.html?tab=images" onmouseover="javascript: mpreopen2('','mtopimages');" onmouseout="javascript: mclosetime();">Images</a>
+</li>
+<li id='mtopgalleries'>
+<a href="http://mary-mikawoz.pixels.com/index.html?tab=galleries" onmouseover="javascript: mpreopen2('','mtopgalleries');" onmouseout="javascript: mclosetime();">Galleries</a>
+</li>
+<li id='mtopsocial' style='position: relative;'>
+<a href="http://mary-mikawoz.pixels.com/index.html?tab=about" onmouseover="javascript: mpreopen2('msocial2','mtopsocial');" onmouseout="javascript: mclosetime();">Info</a>
+<div class='navigationmenudropdown' id='msocial2' onmouseover='mcancelclosetime();' onmouseout='mclosetime();' style=' width: 150px; padding: 15px; margin-left: 1px;'>
+<div class='headernavigationmenutextdiv' style='min-width: 100%; padding: 0px; margin-bottom: 0px;'>
+<ul class='headernavigationmenutextlist' style='padding-top: 0px;'>
+<li><a href='http://mary-mikawoz.pixels.com/index.html?tab=about'>About</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/news.html'>News</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/calendar.html'>Events</a></li>
+<li><a href='http://mary-mikawoz.pixels.com/myblog.html'>Blog</a></li>
+</ul>
+</div>
+</div>
+</li>
+<li id='mtopcontact'>
+<a href="http://mary-mikawoz.pixels.com/contact.html" onmouseover="javascript: mpreopen2('','mtopcontact');" onmouseout="javascript: mclosetime();">Contact</a>
+</li>
+</ul>
+</div>
+<div id='headernavigationmenurightdiv'>
+<ul class='navigationmenu navigationmenuright'>
+<li id='mtoplogin' style='float: right;'>
+<a href='http://mary-mikawoz.pixels.com/controlpanel/index.html?tab=memberhomepage' style='background-image: none; vertical-align: top;' onmouseover='mclose();'>Sign In</a>
+</li>
+</ul>
+</div>			
+		</div>
+
+	</div>
+
+</div>
+
+	
+		
+	<div class='container'>
+		
+		<div id='maindiv' style='display: inline-block; width: 100%; min-height: 800px; padding-top: 40px; padding-bottom: 100px;'>
+<h1 style='float: left; width: 100%; font-size: 28pt; font-family: oswald, arial; font-weight: normal; color: #444444; text-shadow: none; padding-bottom: 8px; border-bottom: 2px solid #999999;'>Collections</h1>
+<div name='gallerydiv' id='gallerydiv' style='float: left; width: 100%; padding-top: 35px;'><div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/indian+ink+gallery'><img src='/images/artworkgallerylogos/indian-ink-gallery-mary-mikawoz-1277928197.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/indian+ink+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Indian Ink Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>13 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/wildlife+photgraphy'><img src='/images/artworkgallerylogos/wildlife-photgraphy-mary-mikawoz-1328982814.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/wildlife+photgraphy' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Wildlife Photgraphy</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>26 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/travel'><img src='/images/artworkgallerylogos/travel-mary-mikawoz-1368214686.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/travel' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Travel</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>66 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/birds+gallery'><img src='/images/artworkgallerylogos/birds-gallery-mary-mikawoz-1446476061.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/birds+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Birds Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>22 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/my+art'><img src='/images/artworkgallerylogos/my-art-mary-mikawoz-1362515611.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/my+art' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>My Art</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>12 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/cloud+and+sky+gallery'><img src='/images/artworkgallerylogos/cloud-and-sky-gallery-mary-mikawoz-1343319653.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/cloud+and+sky+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Cloud and Sky Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>12 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/bugs+and+things+with+wings'><img src='/images/artworkgallerylogos/bugs-and-things-with-wings-mary-mikawoz-1352832102.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/bugs+and+things+with+wings' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Bugs and Things with Wings</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>5 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/architectural'><img src='/images/artworkgallerylogos/architectural-mary-mikawoz-1366742354.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/architectural' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Architectural</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>30 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/waterways'><img src='/images/artworkgallerylogos/waterways-mary-mikawoz-1366742486.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/waterways' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Waterways</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>23 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/religious'><img src='/images/artworkgallerylogos/religious-mary-mikawoz-1368214367.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/religious' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Religious</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>5 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/farms+and+animals'><img src='/images/artworkgallerylogos/farms-and-animals-mary-mikawoz-1386365061.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/farms+and+animals' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Farms and Animals</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>14 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/scenic'><img src='/images/artworkgallerylogos/scenic-mary-mikawoz-1386966351.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/scenic' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Scenic</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>19 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/mixed+media'><img src='/images/artworkgallerylogos/mixed-media-mary-mikawoz-1280155635.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/mixed+media' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Mixed Media</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>4 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/european+gallery'><img src='/images/artworkgallerylogos/european-gallery-mary-mikawoz-1277928249.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/european+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>European Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>18 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/canadiana+gallery'><img src='/images/artworkgallerylogos/canadiana-gallery-mary-mikawoz-1277928267.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/canadiana+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Canadiana Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>73 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/man+versus+nature'><img src='/images/artworkgallerylogos/man-versus-nature-mary-mikawoz-1276524136.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/man+versus+nature' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Man Versus Nature</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>21 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/sit+for+awhile+gallery'><img src='/images/artworkgallerylogos/sit-for-awhile-gallery-mary-mikawoz-1281382265.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/sit+for+awhile+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Sit for Awhile Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>21 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/sunflowers'><img src='/images/artworkgallerylogos/sunflowers-mary-mikawoz-1275948318.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/sunflowers' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Sunflowers</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>3 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/black+and+white+photography'><img src='/images/artworkgallerylogos/black-and-white-photography-mary-mikawoz-1276695473.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/black+and+white+photography' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Black and White Photography</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>3 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/tree+gallery'><img src='/images/artworkgallerylogos/tree-gallery-mary-mikawoz-1276523819.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/tree+gallery' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Tree Gallery</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>18 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/floral'><img src='/images/artworkgallerylogos/floral-mary-mikawoz-1279551429.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/floral' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Floral</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>11 Images</p></div>
+</div>
+<div style='display: inline-block; width: 180px; padding-left: 15px; padding-right: 15px; padding-bottom: 40px; text-align: center;'>
+<a href='/../collections/dogs+and+cats'><img src='/images/artworkgallerylogos/dogs-and-cats-mary-mikawoz-1446579922.jpg' style='display: inline-block; width: 100%; width: calc(100% - 2px); width: -webkit-calc(100% - 2px); border: 1px solid #CCCCCC; border-radius: 0px; box-shadow: none;'></a>
+<div style='float: left; width: 100%; height: 60px; padding-top: 15px; overflow: hidden;'>
+<p style='float: left; width: 100%; font-size: 12pt; font-family: oswald, arial; font-weight: normal; color: #444444; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;'><a href='/../collections/dogs+and+cats' style='font-size: inherit; font-family: inherit; font-weight: inherit; color: inherit; text-decoration: none;'>Dogs and Cats</a></p><p style='float: left; width: 100%; padding-top: 5px; font: 10pt arial; color: #444444;'>1 Image</p></div>
+</div>
+</div></div>
+	
+			
+	</div>		
+		
+	<div id='footercontainerdiv' style='float: left; min-width: 100%; border-top: 1px solid #222222; box-shadow: none; background-color: #1A1E22; text-align: center; padding-bottom: 0px;'>
+<div class='container'>
+<div id='footer'>
+<div style='float: left; width: 100%;'>
+<div>
+<h3>About</h3>
+<p><a href='http://mary-mikawoz.pixels.com/index.html?tab=about'>About</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/contact.html'>Contact</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/news.html'>News</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/myblog.html'>Blog</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/calendar.html'>Events</a></p>
+</div>
+<div>
+<h3>Shop</h3>
+<p><a href='http://mary-mikawoz.pixels.com/shop/canvas+prints'>Canvas Prints</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/framed+prints'>Framed Prints</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/metal+prints'>Metal Prints</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/acrylic+prints'>Acrylic Prints</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/prints'>Prints</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/posters'>Posters</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/greeting+cards'>Greeting Cards</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/iphone+cases'>iPhone Cases</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/galaxy+s5+cases'>Galaxy Cases</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/throw+pillows'>Throw Pillows</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/duvet+covers'>Duvet Covers</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/shower+curtains'>Shower Curtain</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/tote+bags'>Tote Bags</a></p>
+<p><a href='http://mary-mikawoz.pixels.com/shop/tshirts'>T-Shirts</a></p>
+</div>
+<div>
+<h3>Location Settings</h3>
+<p><a href='http://mary-mikawoz.pixels.com/enterzipcode.php'>Beverly Hills, CA (United States)</a></p>
+<p>
+<a href='javascript: togglefootercurrency();'>Currency: <span id='currencylinkfooter' style='display: inline-block; font: inherit; text-decoration: inherit;'>USD ($)</span></a><select id='currencyselectfooter' name='currencyselectfooter' onChange='javascript: window.location = "http://mary-mikawoz.pixels.com/galleries.html?currencyid=" + document.getElementById("currencyselectfooter").value;' style='display: none; width: 70px; padding: 2px; margin-top: 0px; font: 8pt arial; color: #666666; border: none; border-radius: 2px;'>
+<option value='AUD' >AUD ($)</option>
+<option value='CAD' >CAD ($)</option>
+<option value='EUR' >EUR (&euro;)</option>
+<option value='GBP' >GBP (&pound;)</option>
+<option value='JPY' >JPY (&yen;)</option>
+<option value='USD' selected>USD ($)</option>
+</select>
+</p>
+<p>
+<a href='javascript: togglefooterunits();'>Units: <span id='unitslinkfooter' style='display: inline-block; font: inherit; text-decoration: inherit;'>Inches</span></a><select id='unitsselectfooter' name='unitsselectfooter' onChange='javascript: window.location = "http://mary-mikawoz.pixels.com/galleries.html?measurementid=" + document.getElementById("unitsselectfooter").value;' style='display: none; width: 100px; padding: 2px; margin-top: 0px; font: 8pt arial; color: #666666; border: none; border-radius: 2px;'>
+<option value='inches' selected>Inches</option>
+<option value='centimeters' >Centimeters</option>
+</select>
+</p>
+</div>
+<div>
+<h3>Stay Connected</h3>
+<p>Sign up for my e-mail list:</p>
+<div id='footeremaildiv' style='float: left; width: 100%; padding-top: 20px; text-align: center;'>
+<div style='display: inline-block; width: 208px; height: 35px; border: 1px solid #444444; border-radius: 4px; overflow: hidden;'>
+<div style='float: left; min-width: 0px; width: 158px; height: 100%; margin: 0px; padding: 0px; background-color: #FFFFFF;'>
+<form id='footeremailform' method='post' action='http://mary-mikawoz.pixels.com/subscribewebsiteemaillist.html' style='float: left; width: 100%; height: 100%; padding: 0px; margin: 0px;'>
+<input type='hidden' id='memberidtype' name='memberidtype' value='artistid'>
+<input type='hidden' id='memberid' name='memberid' value='37856'>
+<input type='textbox' id='footeremail' name='email' style='float: left; width: 148px; height: 100%; padding-left: 10px; font: 10pt arial; color: #000000; border: none;' placeholder='Your E-Mail Address'>
+</form>
+</div>
+<div onClick='javascript: document.getElementById("footeremailform").submit();' style='float: right; min-width: 0px; width: 50px; height: 100%; margin: 0px; padding: 0px; background-color: #6E7378; text-align: center; cursor: pointer; cursor: hand;'>
+<p style='font: 11pt arial; margin: 0px; padding-top: 8px;'><a href='javascript: document.getElementById("footeremailform").submit();' style='font: 11pt arial !important; color: #FFFFFF !important; text-decoration: none !important;'>Join</a></p>
+</div>
+</div>
+<div style='float: left; width: 100%; text-align: center;'>
+<p style='margin: 0px; padding: 0px; padding-top: 5px; font: 9pt arial;'>Unsubscribe at any time.</p>
+</div>
+</div>
+</div>
+<div style='display: inline-block; width: 100%; padding-bottom: 10px; text-align: center;'>
+<p><a href='http://artistwebsites.com' target='_blank' style='text-decoration: underline;'>Artist Websites</a> powered by <a href='http://fineartamerica.com' target='_blank' style='text-decoration: underline;'>FineArtAmerica.com</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+		
+		
+</body>
+
+</html>
